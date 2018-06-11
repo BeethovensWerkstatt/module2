@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-model href="http://www.music-encoding.org/schema/current/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="3.0.0" xml:id="x68ad7295-58c5-48a0-a321-fcf8a779551f">
+   <meiHead>
+       <fileDesc>
+           <titleStmt>
+               <title>Op.133 &gt; Op.134</title>
+               <respStmt>
+                   <corpName role="res">Beethovens Werkstatt</corpName>
+               </respStmt>
+           </titleStmt>
+           <pubStmt/>
+           <seriesStmt>
+               <title>Beethovens Werkstatt – Second Module</title>
+               <contents>
+                   <p>
+                       This series of files holds information about Beethoven's arrangements of his own works.
+                       While all these works are encoded independently, each pair is addressed by a separate 
+                       meiCorpus file, which points to the related works and holds information about their relations. 
+                   </p>
+               </contents>
+           </seriesStmt>
+           <sourceDesc>
+               <source xml:id="x74402d98-d785-4fb5-b678-c7302ad7c8a9" target="../works/Op.133_GreatFugue_Strings.xml"/>
+               <source xml:id="x202a68a8-99f3-46b7-a6d5-41f8395f84a9" target="../works/Op.134_GreatFugue_Piano.xml">
+                   <notesStmt>
+                       <annot type="additional.measures" plist="../works/Op.134_GreatFugue_Piano.xml#d1e775 ../works/Op.134_GreatFugue_Piano.xml#d1e1049 ../works/Op.134_GreatFugue_Piano.xml#d1e2226"/>
+                   </notesStmt>
+               </source>
+           </sourceDesc>
+       </fileDesc>
+       
+       <!-- todo: clarify if we consider these "things" as independent frbr:works, or just as different expressions -->
+       <!--<workDesc>
+           
+       </workDesc>-->
+       <revisionDesc>
+           <change n="1" isodate="2018-04-10">
+               <respStmt>
+                   <persName>JK</persName>
+               </respStmt>
+               <changeDesc>
+                   <p>File created</p>
+               </changeDesc>
+           </change>
+       </revisionDesc>
+   </meiHead>
+</meiCorpus>
+
