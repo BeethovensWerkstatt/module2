@@ -1,7 +1,7 @@
 var verovio = require('verovio-dev');
 
 let func = (arg) => {
-    console.log(this);
+    alert('hallo wie geht es…');
 };
 
 func();

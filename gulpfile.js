@@ -3,6 +3,7 @@ var zip = require('gulp-zip');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var replace = require('gulp-replace');
+var newer = require('gulp-newer');
 var dateformat = require('dateformat');
 var del = require('del');
 var packageJson = require('./package.json');
@@ -12,7 +13,10 @@ var browserify = require('browserify');
 var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
 var eslint = require('gulp-eslint');
-var gulpIf = require('gulp-if');
+var exist = require('gulp-exist');
+var existConfig = require('./existConfig.json');
+var existClient = exist.createClient(existConfig);
+
 
 /** 
  *  This task loads custom assets, installed via npm, by copying 
@@ -22,14 +26,29 @@ gulp.task('load-assets', function() {
     //include verovio dev    
     gulp.src(['./node_modules/verovio-dev/index.js'])
         .pipe(concat('verovio-toolkit-dev.js'))
+        .pipe(newer('./build/resources/js/'))
         .pipe(gulp.dest('./build/resources/js/'));
 });
 
 //handles html
 gulp.task('html', function(){
+    
     return gulp.src('./source/html/**/*')
+        .pipe(newer('./build/'))
         .pipe(gulp.dest('./build/'));
 });
+
+//deploys html to exist-db
+gulp.task('deploy-html',['html'], function() {
+    gulp.src('**/*.html', {cwd: './build/'})
+        .pipe(existClient.newer({target: "/db/apps/bw-module2/"}))
+        .pipe(existClient.dest({target: '/db/apps/bw-module2/'}));
+})
+
+//watches html for changes
+gulp.task('watch-html',function() {
+    gulp.watch('source/html/**/*', ['deploy-html']);
+})
 
 //compiles scss to css
 gulp.task('css', function(){
@@ -38,10 +57,17 @@ gulp.task('css', function(){
         .pipe(gulp.dest('./build/resources/css'));
 });
 
-function isFixed(file) {
-    // Has ESLint fixed the file contents?
-    return file.eslint != null && file.eslint.fixed;
-}
+//deploys css to exist-db
+gulp.task('deploy-css',['css'], function() {
+    gulp.src('**/*', {cwd: './build/resources/css/'})
+        .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/css/"}))
+        .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/css/'}));
+})
+
+//watches css for changes
+gulp.task('watch-css',function() {
+    gulp.watch('source/sass/**/*', ['deploy-css']);
+})
 
 //handles javascript
 gulp.task('js', function(){
@@ -53,6 +79,23 @@ gulp.task('js', function(){
         .pipe(uglify())
         .pipe(gulp.dest('./build/resources/js/'));
 });
+
+//deploys js to exist-db
+gulp.task('deploy-js',['js'], function() {
+    gulp.src('**/*', {cwd: 'build/resources/js/'})
+        .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/js/"}))
+        .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/js/'}));
+})
+
+//watches js for changes
+gulp.task('watch-js',function() {
+    gulp.watch('source/js/**/*', ['deploy-js']);
+})
+
+function isFixed(file) {
+    // Has ESLint fixed the file contents?
+    return file.eslint != null && file.eslint.fixed;
+}
 
 gulp.task('lint', function() {
     // ESLint ignores files with "node_modules" paths.
@@ -75,23 +118,63 @@ gulp.task('lint', function() {
 //handles xqueries
 gulp.task('xql', function(){
     gulp.src('./source/xql/**/*')
+        .pipe(newer('./build/resources/xql/'))
         .pipe(gulp.dest('./build/resources/xql/'));
     
     gulp.src('./source/xqm/**/*')
+        .pipe(newer('./build/resources/xqm/'))
         .pipe(gulp.dest('./build/resources/xqm/'));
 });
+
+//deploys xql to exist-db
+gulp.task('deploy-xql',['xql'], function() {
+    gulp.src(['xql/**/*','xqm/**/*'], {cwd: './build/resources/'})
+        .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/"}))
+        .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/'}));
+})
+
+//watches xql for changes
+gulp.task('watch-xql',function() {
+    gulp.watch(['source/xql/**/*','source/xqm/**/*'], ['deploy-xql']);
+})
 
 //handles xslt
 gulp.task('xslt', function(){
     return gulp.src('./source/xql/**/*')
+        .pipe(newer('./build/resources/xslt/'))
         .pipe(gulp.dest('./build/resources/xslt/'));
 });
+
+//deploys xslt to exist-db
+gulp.task('deploy-xslt',['xslt'], function() {
+    gulp.src('**/*', {cwd: './build/resources/xslt/'})
+        .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/xslt/"}))
+        .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/xslt/'}));
+})
+
+//watches xslt for changes
+gulp.task('watch-xslt',function() {
+    gulp.watch('source/xslt/**/*', ['deploy-xslt']);
+})
 
 //handles data
 gulp.task('data', function(){
     return gulp.src('./data/**/*')
+        .pipe(newer('./build/content/'))
         .pipe(gulp.dest('./build/content/'));
 });
+
+//deploys data to exist-db
+gulp.task('deploy-data',['data'], function() {
+    gulp.src('**/*', {cwd: 'build/content/'})
+        .pipe(existClient.newer({target: "/db/apps/bw-module2/content/"}))
+        .pipe(existClient.dest({target: '/db/apps/bw-module2/content/'}));
+})
+
+//watches xslt for changes
+gulp.task('watch-data',function() {
+    gulp.watch('data/**/*', ['deploy-data']);
+})
 
 //bump version on patch level
 gulp.task('bump-patch', function () {
@@ -135,6 +218,19 @@ function getPackageJsonVersion() {
     return JSON.parse(fs.readFileSync('./package.json', 'utf8')).version;
 }
 
+ 
+/**
+ * deploys the current build folder into a (local) exist database
+ */
+gulp.task('deploy', function() {
+    return gulp.src('**/*', {cwd: 'build'})
+        .pipe(existClient.newer({target: "/db/apps/bw-module2/"}))
+        .pipe(existClient.dest({target: '/db/apps/bw-module2/'}));
+})
+
+gulp.task('watch', ['watch-html', 'watch-css', 'watch-js','watch-xql','watch-xslt','watch-data']);
+
+
 //creates a dist version
 gulp.task('dist', ['xar-structure', 'html', 'css', 'js', 'xql', 'xslt', 'data','load-assets'], function() {
     gulp.src('./build/**/*')
@@ -154,4 +250,13 @@ gulp.task('dist-patch', ['bump-minor', 'dist']);
 gulp.task('dist-patch', ['bump-major', 'dist']);
 
 
-gulp.task('default', [ 'del', 'bump-patch', 'xar-structure', 'js' ]);
+gulp.task('default', function() {
+    console.log('')
+    console.log('INFO: There is no default task, please run one of the following tasks:');
+    console.log('');
+    console.log('  "gulp dist"       : creates a xar from the current sources');
+    console.log('  "gulp bump-patch" : bumps the semver version of this package at patch level');
+    console.log('  "gulp bump-minor" : bumps the semver version of this package at minor level');
+    console.log('  "gulp bump-major" : bumps the semver version of this package at major level');
+    console.log('');
+});
