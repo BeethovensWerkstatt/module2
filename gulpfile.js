@@ -28,6 +28,10 @@ gulp.task('load-assets', function() {
         .pipe(concat('verovio-toolkit-dev.js'))
         .pipe(newer('./build/resources/js/'))
         .pipe(gulp.dest('./build/resources/js/'));
+        
+    //include spectre.css
+    gulp.src(['./node_modules/spectre.css/dist/**/*.min.css'])
+        .pipe(gulp.dest('./build/resources/css/'))
 });
 
 //handles html
@@ -117,20 +121,24 @@ gulp.task('lint', function() {
 
 //handles xqueries
 gulp.task('xql', function(){
-    gulp.src('./source/xql/**/*')
-        .pipe(newer('./build/resources/xql/'))
-        .pipe(gulp.dest('./build/resources/xql/'));
+    gulp.src('source/xql/**/*')
+        .pipe(newer('build/resources/xql/'))
+        .pipe(gulp.dest('build/resources/xql/'));
     
-    gulp.src('./source/xqm/**/*')
-        .pipe(newer('./build/resources/xqm/'))
-        .pipe(gulp.dest('./build/resources/xqm/'));
+    gulp.src('source/xqm/**/*')
+        .pipe(newer('build/resources/xqm/'))
+        .pipe(gulp.dest('build/resources/xqm/'));
 });
 
 //deploys xql to exist-db
 gulp.task('deploy-xql',['xql'], function() {
-    gulp.src(['xql/**/*','xqm/**/*'], {cwd: './build/resources/'})
-        .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/"}))
-        .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/'}));
+    gulp.src(['**/*'], {cwd: 'build/resources/xql/'})
+        .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/xql/"}))
+        .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/xql/'}));
+        
+    gulp.src(['**/*'], {cwd: 'build/resources/xqm/'})
+        .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/xqm/"}))
+        .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/xqm/'}));
 })
 
 //watches xql for changes
@@ -140,7 +148,7 @@ gulp.task('watch-xql',function() {
 
 //handles xslt
 gulp.task('xslt', function(){
-    return gulp.src('./source/xql/**/*')
+    return gulp.src('./source/xslt/**/*')
         .pipe(newer('./build/resources/xslt/'))
         .pipe(gulp.dest('./build/resources/xslt/'));
 });
@@ -155,6 +163,25 @@ gulp.task('deploy-xslt',['xslt'], function() {
 //watches xslt for changes
 gulp.task('watch-xslt',function() {
     gulp.watch('source/xslt/**/*', ['deploy-xslt']);
+})
+
+//handles pix
+gulp.task('pix', function(){
+    return gulp.src('source/pix/**/*')
+        .pipe(newer('build/resources/pix/'))
+        .pipe(gulp.dest('./build/resources/pix/'));
+});
+
+//deploys pix to exist-db
+gulp.task('deploy-pix',['pix'], function() {
+    gulp.src('**/*', {cwd: 'build/resources/pix/'})
+        .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/pix/"}))
+        .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/pix/'}));
+})
+
+//watches pix for changes
+gulp.task('watch-pix',function() {
+    gulp.watch('source/pix/**/*', ['deploy-pix']);
 })
 
 //handles data
@@ -228,11 +255,11 @@ gulp.task('deploy', function() {
         .pipe(existClient.dest({target: '/db/apps/bw-module2/'}));
 })
 
-gulp.task('watch', ['watch-html', 'watch-css', 'watch-js','watch-xql','watch-xslt','watch-data']);
+gulp.task('watch', ['watch-html', 'watch-css', 'watch-js','watch-xql','watch-xslt','watch-data','watch-pix']);
 
 
 //creates a dist version
-gulp.task('dist', ['xar-structure', 'html', 'css', 'js', 'xql', 'xslt', 'data','load-assets'], function() {
+gulp.task('dist', ['xar-structure', 'html', 'css', 'js', 'xql', 'xslt', 'data','pix','load-assets'], function() {
     gulp.src('./build/**/*')
         .pipe(zip(packageJson.name + '-' + getPackageJsonVersion() + '.xar'))
         .pipe(gulp.dest('./dist'));
