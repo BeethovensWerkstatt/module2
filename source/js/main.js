@@ -160,6 +160,8 @@ function setOptions() {
       	//ignoreLayout: 0,
       	//noLayout: 1,
       	
+      	noFooter: 1, // takes out the "rendered by Verovio" footer
+      	
       	pageWidth: (wi - 20) * 100/ zoom,
       	pageHeight: (he - 20) * 100 / zoom,
       	adjustPageHeight: true,
@@ -178,7 +180,32 @@ function renderMEI(mei) {
     
     //var svg = vrvToolkit.renderData(mei + '\n', options);
     vrvToolkit.loadData(mei + '\n');
+    setOptions();
     maxPage = vrvToolkit.getPageCount();
+};
+
+function selectMode(mode) {
+    
+    var oldActive = document.querySelector('.modeBtn.active');
+    if(oldActive.id === mode) {
+        console.log('INFO: Mode ' + mode + ' is already active')
+        return false;
+    }
+    
+    oldActive.classList.remove('active');
+    document.querySelector('.modeBtn#' + mode).classList.add('active');
+    
+    try {
+        let comparison = document.querySelector('.comparison.active');
+        
+        if(comparison !== null) {
+            loadComparison(comparison.id,mode);    
+        }
+        
+        
+    } catch(err) {
+        console.log('ERROR: Unable to load comparison with mode ' + mode + ': ' + err)
+    }
 };
 
 setListeners();

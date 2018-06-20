@@ -1,0 +1,9 @@
+.file1only *, .file1 .noMatch {
+    fill: red;
+    stroke: red;
+}
+
+.file2only, .file2 .noMatch {
+    fill: green;
+    stroke: green;
+}
