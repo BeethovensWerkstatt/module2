@@ -8,6 +8,13 @@ let maxPage;
 let pageHeight = 2970;
 let pageWidth = 2100;
 
+let colors = ['#eee3ce','#92908c','#623504','#26d6fc','#f4531b','#1b44f4','#859900','#d825da'];
+let activeColor = 0;
+let coloredNotes = {};
+
+let paintMode = true;
+
+
 function setListeners() {
     document.querySelectorAll('.modeBtn').forEach((item,index,list) => {
         item.addEventListener('click',(e) => {
@@ -63,6 +70,35 @@ function setListeners() {
     
 }
 
+function prepareColors() {
+    let swatches = document.querySelectorAll('.colorSwatch');
+    swatches.forEach((swatch,index,list) => {
+        
+        let color = colors[index];
+    
+        swatch.style.backgroundColor = color;
+        
+        let r = parseInt(color.substr(1,2),16);
+        let g = parseInt(color.substr(3,2),16);
+        let b = parseInt(color.substr(5,2),16);
+        let yiq = ((r*299)+(g*587)+(b*114))/1000;
+        let contrastClass = (yiq >= 128) ? 'contrastBlack' : 'contrastWhite';
+        
+        swatch.classList.add(contrastClass);
+        
+        swatch.addEventListener('click',(e) => {
+            activateColor(swatch,index);
+        })
+    })
+}
+
+function activateColor(swatch,index) {
+    let oldSwatch = document.querySelector('.colorSwatch.active');
+    oldSwatch.classList.remove('active');
+    swatch.classList.add('active');
+    activeColor = index;
+}
+
 function getComparisonListing() {
     fetch('./resources/xql/getComparisonListing.xql')
         .then((response) => {
@@ -108,6 +144,9 @@ function activateComparison(id) {
         document.querySelector('#' + id).classList.add('active');
         loadComparison(id);
         
+        //reset coloration
+        coloredNotes = {};
+        
     } catch(err) {
         console.log('ERROR: Unable to activate comparison with ID ' + id + ' (' + err + ')');
     }
@@ -135,6 +174,9 @@ function loadComparison(id,method) {
 }
 
 function loadPage(page) {
+
+    removePageListeners();
+
     document.querySelector('#pageNum').value = page;
     
     let svg = vrvToolkit.renderToSVG(page, options);
@@ -147,6 +189,59 @@ function loadPage(page) {
     
     contentBox.innerHTML = '';
     contentBox.appendChild(box);
+    
+    addPageListeners();
+}
+
+function removePageListeners() {
+    
+    let notes = document.querySelectorAll('#contentBox .note');
+    notes.forEach((note,index,list) => {
+        note.removeEventListener('click',clickNote,false);
+    })
+    
+}
+
+function addPageListeners() {
+    
+    if(!paintMode) {
+        return false;
+    }
+    
+    let notes = document.querySelectorAll('#contentBox .note');
+    notes.forEach((note,index,list) => {
+        note.addEventListener('click',clickNote,false);
+        
+    })
+    
+    //re-add colors
+    
+    for (let noteId in coloredNotes) {
+        try {
+            let note = document.querySelector('#contentBox #' + noteId);
+            let colorIndex = coloredNotes[noteId];
+            
+            note.classList.add('color' + colorIndex);
+            note.style.fill = colors[colorIndex];
+            note.style.stroke = colors[colorIndex];
+            
+        } catch(err) {
+            //console.log('[ERROR] Unable to (re-)color note ' + noteId + ': ' + err);
+        }
+    }
+    
+}
+
+function clickNote(e) {
+    
+    let note = e.currentTarget;
+    
+    note.classList.add('color' + activeColor);
+    note.style.fill = colors[activeColor];
+    note.style.stroke = colors[activeColor];
+    
+    coloredNotes[note.id] = activeColor;
+    
 }
 
 function setOptions() {
@@ -206,7 +301,22 @@ function selectMode(mode) {
     } catch(err) {
         console.log('ERROR: Unable to load comparison with mode ' + mode + ': ' + err)
     }
+    
+    allowPainting(mode === 'plain');
 };
 
+function allowPainting(bool) {
+
+    paintMode = bool;
+
+    if(bool) {
+        document.querySelector('.input-group.colorSwatches').classList.remove('inactive');
+    } else {
+        document.querySelector('.input-group.colorSwatches').classList.add('inactive');
+    }
+    
+}
+
 setListeners();
+prepareColors();
 getComparisonListing();

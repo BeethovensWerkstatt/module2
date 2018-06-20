@@ -109,5 +109,49 @@ body {
             font-size: 1.2em;
             
         }
+        
+        .input-group.colorSwatches {
+            
+            padding: 1em;
+            
+            .colorSwatch {
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                border-radius: .5em;
+                margin: 0 .5em 0 0;
+                border: .5px solid #666666;
+                cursor: pointer;
+                position: relative;
+                
+                &.active:after {
+                    position: absolute;
+                    content: ' ';
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 7px;
+                    left: 4px;
+                    top: 4px;
+                    font-size: 0;
+                }
+                
+                &.contrastBlack.active:after {
+                    background-color: #000000;
+                }
+                &.contrastWhite.active:after {
+                    background-color: #ffffff;
+                }
+            }
+            
+            &.inactive {
+                .colorSwatch {
+                    background-color: #cccccc !important;
+                    
+                    &.active:after {
+                        background-color: transparent !important;
+                    }
+                }
+            }
+        }
     }
 }
