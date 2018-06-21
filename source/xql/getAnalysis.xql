@@ -16,9 +16,8 @@ declare namespace transform="http://exist-db.org/xquery/transform";
 
 declare option exist:serialize "method=xml media-type=text/plain omit-xml-declaration=yes indent=yes";
 
-let $config := doc('/db/apps/mod2/config.xml')
-let $data.basePath := $config//basePath/@url
-let $xslPath := '../xsl/' 
+let $data.basePath := '/db/apps/bw-module2/'
+let $xslPath := '../xslt/' 
 
 let $comparison.id := request:get-parameter('comparisonId','')
 let $method := request:get-parameter('method','')
