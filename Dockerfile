@@ -29,6 +29,7 @@ RUN addgroup module2builder \
 USER module2builder:module2builder
 
 RUN npm install \
+    && cp existConfig.tmpl.json existConfig.json \
     && ./node_modules/.bin/gulp dist
 
 #########################
