@@ -40,9 +40,6 @@ gulp.task('html', function(){
     
     var git = getGitInfo();
     
-    console.log('\n requesting git: ')
-    console.log(git)
-    
     return gulp.src('./source/html/**/*')
         //.pipe(newer('./build/'))
         .pipe(replace('$$git-url$$', git.url))
