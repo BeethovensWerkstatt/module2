@@ -19,6 +19,12 @@
             <section class="navbar-section">
                 <a id="bwLogo" href="https://beethovens-werkstatt.de" class="navbar-brand mr-2">Beethovens Werkstatt</a>
             </section>
+            <section class="navbar-center">
+                <div>
+                    <div class="appTitle">Modul 2</div>
+                    <div id="openModalBtn">info</div>
+                </div>
+            </section>
             <section class="navbar-section">
                 <a id="githubLogo" href="https://github.com/BeethovensWerkstatt/module2" class="btn btn-link">GitHub</a>
             </section>
@@ -71,6 +77,36 @@
                 
             </div>
         </div>
+        
+        <!-- modal with version info and tool description -->
+        <div class="modal modal-lg" id="infoModal">
+            <a id="modalOverlay" class="modal-overlay" aria-label="Close"></a>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <a id="modalCloseTop" class="btn btn-clear float-right" aria-label="Close"></a>
+                    <div class="modal-title h5">Beethovens Werkstatt <small>Modul 2</small></div>
+                    <div id="versionInfo" class="text-gray"><small>Version <a class="text-gray" href="$$git-url$$" target="_blank">$$git-short$$</a><span class="dirty-$$git-dirty$$">, with uncommited changes</span></small></div>
+                </div>
+                <div class="modal-body">
+                    <div class="content">
+                        This prototype is work in progress, and may change at any time. If you want to report feedback, please make sure to include the 
+                        relevant git commit hash ($$git-short$$).<br/>
+                        The purpose of this prototype is to try out concepts for the second module of our project, which deals with Beethoven as an
+                        arranger of his own works. While we tried to trace genetic processes in manuscripts in our first module, we now seek to 
+                        find such traces in printed texts: How did Beethoven arrange his works for other performing forces? To which degree does he keep
+                        the music untouched? These and other questions are explored by comparing the musical texts of re-arrangements
+                        and their template works.<br/>
+                        What you see here is an unprotected view into our workshop. Neither the data or software nor the concepts manifested by them are
+                        our final take on this module. It's just one aspect we'd like to try out. Of course, <a href="mailto:info@music-encoding.org">feedback</a> 
+                        is highly appreciated and helps us to evaluate various approaches. 
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="modalCloseBottom" class="btn btn-primary">close</button>
+                </div>
+            </div>
+        </div>
+        
         <script src="./resources/js/verovio-toolkit-dev.js"/>
         <script src="./resources/js/main.min.js"/>
     </body>

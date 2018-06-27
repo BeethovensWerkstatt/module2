@@ -16,6 +16,7 @@ var eslint = require('gulp-eslint');
 var exist = require('gulp-exist');
 var existConfig = require('./existConfig.json');
 var existClient = exist.createClient(existConfig);
+var git = require('git-rev-sync');
 
 
 /** 
@@ -37,8 +38,16 @@ gulp.task('load-assets', function() {
 //handles html
 gulp.task('html', function(){
     
+    var git = getGitInfo();
+    
+    console.log('\n requesting git: ')
+    console.log(git)
+    
     return gulp.src('./source/html/**/*')
-        .pipe(newer('./build/'))
+        //.pipe(newer('./build/'))
+        .pipe(replace('$$git-url$$', git.url))
+        .pipe(replace('$$git-short$$', git.short))
+        .pipe(replace('$$git-dirty$$', git.dirty))
         .pipe(gulp.dest('./build/'));
 });
 
@@ -243,6 +252,20 @@ gulp.task('del', function() {
 //reading from fs as this prevents caching problems    
 function getPackageJsonVersion() {
     return JSON.parse(fs.readFileSync('./package.json', 'utf8')).version;
+}
+
+gulp.task('git-info',function() {
+    console.log('Git Information: ')
+    console.log(git.short());
+    console.log(git.remoteUrl());
+    console.log(git.isDirty());
+    console.log('link is https://github.com/BeethovensWerkstatt/module2/commit/' + git.short());
+});
+
+function getGitInfo() {
+    return {short: git.short(),
+            url: 'https://github.com/BeethovensWerkstatt/module2/commit/' + git.short(),
+            dirty: git.isDirty()}
 }
 
  

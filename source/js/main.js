@@ -40,6 +40,26 @@ function setListeners() {
         }
     });
     
+    let infoModal = document.querySelector('#infoModal');
+    
+    document.querySelector('#modalCloseTop').addEventListener('click',(e) => {
+        
+        console.log('here?')
+        infoModal.classList.remove('active');
+    });
+    
+    document.querySelector('#modalCloseBottom').addEventListener('click',(e) => {
+        infoModal.classList.remove('active');
+    });
+    
+    document.querySelector('#modalOverlay').addEventListener('click',(e) => {
+        infoModal.classList.remove('active');
+    });
+    
+    document.querySelector('#openModalBtn').addEventListener('click',(e) => {
+        infoModal.classList.add('active');
+    });
+    
     window.addEventListener('resize', (e) => { 
         try {
             // make sure we have loaded a file

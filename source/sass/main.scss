@@ -49,6 +49,13 @@ body {
             height: 42px;
         }
         
+        #openModalBtn {
+            font-size: .8em;
+            font-weight: 100;
+            cursor: pointer;
+            text-align: center;
+        }
+        
         #githubLogo {
             color: transparent;
             background-image: url('../pix/GitHub-Mark-120px-plus.png');
@@ -154,4 +161,19 @@ body {
             }
         }
     }
+
+    
+    #infoModal {
+        
+        #versionInfo {
+            .dirty-false {
+                display: none;
+            }
+            
+            .dirty-true {
+                color: red;
+            }
+        }
+    }
+
 }
