@@ -228,7 +228,7 @@ function addPageListeners() {
         return false;
     }
     
-    let notes = document.querySelectorAll('#contentBox .note');
+    let notes = document.querySelectorAll('#contentBox .note, #contentBox .rest');
     notes.forEach((note,index,list) => {
         note.addEventListener('click',clickNote,false);
         
