@@ -8,7 +8,7 @@ let maxPage;
 let pageHeight = 2970;
 let pageWidth = 2100;
 
-let colors = ['#eee3ce','#92908c','#623504','#26d6fc','#f4531b','#1b44f4','#859900','#d825da'];
+let colors = ['#eee3ce','#92908c','#000000','#26d6fc','#f4531b','#1b44f4','#859900','#d825da'];
 let activeColor = 0;
 let coloredNotes = {};
 
