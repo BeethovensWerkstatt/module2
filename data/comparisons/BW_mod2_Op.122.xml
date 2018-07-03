@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-model href="http://www.music-encoding.org/schema/current/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="3.0.0" xml:id="x938319e7-7485-477a-993f-1ab18a658fe6">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title>Op.122 (Orchesterfassung) zu Op.122 (Klavierauszug)</title>
+                <respStmt>
+                    <corpName role="res">Beethovens Werkstatt</corpName>
+                </respStmt>
+            </titleStmt>
+            <pubStmt/>
+            <seriesStmt>
+                <title>Beethovens Werkstatt – Second Module</title>
+                <contents>
+                    <p>
+                        This series of files holds information about Beethoven's arrangements of his own works.
+                        While all these works are encoded independently, each pair is addressed by a separate 
+                        meiCorpus file, which points to the related works and holds information about their relations. 
+                    </p>
+                </contents>
+            </seriesStmt>
+            <sourceDesc>
+                <source xml:id="xe3b1ad5d-d46f-4688-a255-0d456473563a" target="../works/Op.122_Bundeslied.xml"/>
+                <source xml:id="x5a0910aa-4435-4d39-9aad-bfdf5cbac968" target="../works/Op.122_Klavierauszug.xml"/>
+            </sourceDesc>
+        </fileDesc>
+        
+        <!-- todo: clarify if we consider these "things" as independent frbr:works, or just as different expressions -->
+        <!--<workDesc>
+           
+       </workDesc>-->
+        <revisionDesc>
+            <change n="1" isodate="2018-07-03">
+                <respStmt>
+                    <persName>JK</persName>
+                </respStmt>
+                <changeDesc>
+                    <p>File created</p>
+                </changeDesc>
+            </change>
+        </revisionDesc>
+    </meiHead>
+</meiCorpus>
+
