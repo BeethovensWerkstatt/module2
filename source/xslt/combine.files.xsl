@@ -58,10 +58,10 @@
         <scoreDef xmlns="http://www.music-encoding.org/ns/mei">
             <xsl:apply-templates select="@meter.count | @meter.unit" mode="#current"/>
             <staffGrp label="" symbol="none" barthru="false">
-                <staffGrp symbol="brace">
+                <staffGrp symbol="brace" barthru="true">
                     <xsl:apply-templates select=".//mei:staffDef" mode="first.pass"/>
                 </staffGrp>
-                <staffGrp symbol="brace">
+                <staffGrp symbol="brace" barthru="true">
                     <xsl:apply-templates select="($second.file//mei:scoreDef)[1]//mei:staffDef" mode="first.pass.file.2"/>
                 </staffGrp>
             </staffGrp>
