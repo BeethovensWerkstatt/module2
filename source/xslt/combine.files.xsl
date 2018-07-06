@@ -83,8 +83,8 @@
         <xsl:variable name="this.measure" select="." as="node()"/>
         <xsl:variable name="pos" select="count(preceding::mei:measure)" as="xs:integer"/>
         
-        <!-- hack! -->
-        <xsl:variable name="off" select="if($comparison.file/@xml:id = 'xc59c85ea-f1e9-4a3a-9828-78f818192e04') then(3) else(0)" as="xs:integer"/>
+        <!-- TODO: remove dirty hack! -->
+        <xsl:variable name="off" select="if($comparison.file/@xml:id = 'x68ad7295-58c5-48a0-a321-fcf8a779551f') then(3) else(0)" as="xs:integer"/>
         <xsl:variable name="corresponding.measure" select="($second.file//mei:measure)[$pos + 1 + $off]" as="node()?"/>
         
         <!--<xsl:choose>
@@ -102,8 +102,8 @@
             </xsl:otherwise>
         </xsl:choose>-->
         
-        <!-- hack! -->
-        <xsl:if test="$comparison.file/@xml:id = 'xc59c85ea-f1e9-4a3a-9828-78f818192e04' and count(preceding::mei:measure) = 0">
+        <!-- TODO: remove dirty hack! -->
+        <xsl:if test="$comparison.file/@xml:id = 'x68ad7295-58c5-48a0-a321-fcf8a779551f' and count(preceding::mei:measure) = 0">
             <measure xmlns="http://www.music-encoding.org/ns/mei" n="0">
                 <staff type="file1" n="1">
                     <layer>
