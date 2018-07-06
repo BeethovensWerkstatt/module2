@@ -43,7 +43,8 @@
            <parts>
               <!-- Clarinetto Primo in B -->
               <part n="4">
-                  <scoreDef meter.count="2" meter.unit="2" meter.sym="cut">
+                 <scoreDef meter.count="2" meter.unit="2" meter.sym="cut" key.sig="2f"
+                    key.mode="major">
                      <staffGrp>
                         <staffDef n="1"
                                   xml:id="x74658e5c-3528-4d4f-8769-8a20d6e3b26d"
@@ -8432,7 +8433,8 @@
               </part>
               
               <part n="4">
-                  <scoreDef meter.count="2" meter.unit="2" meter.sym="cut">
+                 <scoreDef meter.count="2" meter.unit="2" meter.sym="cut" key.sig="2f"
+                    key.mode="major">
                      <staffGrp>
                         <staffDef n="1"
                                   xml:id="xf106608a-e08b-4cba-8d33-eef7a5c7b536"

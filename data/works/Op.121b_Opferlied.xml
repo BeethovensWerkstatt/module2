@@ -49,7 +49,8 @@
          <mdiv n="1">
             <parts>
                <part label="Clarinetto Primo">
-                  <scoreDef meter.count="4" meter.unit="4" meter.sym="common">
+                  <scoreDef meter.count="4" meter.unit="4" meter.sym="common" key.sig="4s"
+                     key.mode="major">
                      <staffGrp>
                         <staffDef n="1"
                                   xml:id="x974e7518-3d05-4293-83ae-a117c2d9a6b2"
@@ -3480,7 +3481,8 @@
                   </section>
                </part>
                <part label="Clarinetto Secondo">
-                  <scoreDef meter.count="4" meter.unit="4" meter.sym="common">
+                  <scoreDef meter.count="4" meter.unit="4" meter.sym="common" key.sig="4s"
+                     key.mode="major">
                      <staffGrp>
                         <staffDef n="1"
                                   xml:id="x3dfafea1-4bea-420d-8bdc-4518a560494e"
