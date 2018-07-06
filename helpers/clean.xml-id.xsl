@@ -71,12 +71,16 @@
         <xsl:variable name="scope" select="if($type = 'score') then(ancestor::mei:score) else(ancestor::mei:part)" as="node()"/>
         <xsl:variable name="start.elem" select="$scope//mei:*[@old.id = $old.start]" as="node()?"/>
         
-        <xsl:if test="not($start.elem)">
-            <xsl:message select="'problem with ' || ." terminate="yes"/>
-        </xsl:if>
-        
-        <xsl:message select="'moving @startid ' || . || ' to #' || $start.elem/@xml:id"/>
-        <xsl:attribute name="startid" select="'#' || $start.elem/@xml:id"/>
+        <xsl:choose>
+            <xsl:when test="not($start.elem)">
+                <xsl:next-match/>
+                <xsl:attribute name="todo" select="'bad startid'"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:message select="'moving @startid ' || . || ' to #' || $start.elem/@xml:id"/>
+                <xsl:attribute name="startid" select="'#' || $start.elem/@xml:id"/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="@endid" mode="clean.up">
@@ -86,12 +90,17 @@
         <xsl:variable name="scope" select="if($type = 'score') then(ancestor::mei:score) else(ancestor::mei:part)" as="node()"/>
         <xsl:variable name="end.elem" select="$scope//mei:*[@old.id = $old.end]" as="node()?"/>
         
-        <xsl:if test="not($end.elem)">
-            <xsl:message select="'problem with ' || ." terminate="yes"/>
-        </xsl:if>
+        <xsl:choose>
+            <xsl:when test="not($end.elem)">
+                <xsl:next-match/>
+                <xsl:attribute name="todo" select="'bad endid'"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:message select="'moving  @endid ' || . || ' to #' || $end.elem/@xml:id"/>
+                <xsl:attribute name="endid" select="'#' || $end.elem/@xml:id"/>
+            </xsl:otherwise>
+        </xsl:choose>
         
-        <xsl:attribute name="startid" select="'#' || $end.elem/@xml:id"/>
-        <xsl:message select="'moving  @endid ' || . || ' to #' || $end.elem/@xml:id"/>
     </xsl:template>
     
     <xsl:template match="@plist" mode="clean.up">
