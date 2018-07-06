@@ -285,6 +285,9 @@ function clickNote(e) {
     
     coloredNotes[note.id] = activeColor;
     
+    let showBox = document.querySelector('#noteID');
+    showBox.innerHTML = 'Item clicked:<br/>' + note.id;
+    
 }
 
 function setOptions() {
