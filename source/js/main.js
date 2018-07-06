@@ -14,6 +14,22 @@ let coloredNotes = {};
 
 let paintMode = true;
 
+function activateLoading() {
+    document.querySelector('#loadingIndicator').style.display = 'block';
+    document.querySelector('#loadingError').style.display = 'none';
+    document.querySelector('#firstTimeInstruction').style.display = 'none';
+    document.querySelector('#svgContainer').style.display = 'none';
+    
+}
+
+function finishLoading() {
+    document.querySelector('#loadingIndicator').style.display = 'none';
+    document.querySelector('#svgContainer').style.display = 'block';
+}
+
+function showLoadingError() {
+    document.querySelector('#loadingError').style.display = 'none';
+}
 
 function setListeners() {
     document.querySelectorAll('.modeBtn').forEach((item,index,list) => {
@@ -180,13 +196,21 @@ function loadComparison(id,method) {
     }
     
     console.log('INFO: Requesting comparison ' + id + ' in mode ' + method);
-    
+    activateLoading();
+    console.log('1');
     fetch('./resources/xql/getAnalysis.xql?comparisonId=' + id + '&method=' + method)
         .then((response) => {
+            console.log('2');
             return response.text();
         })
-        .catch(error => console.error('Error:', error))
+        .catch((error) => {
+            console.log('2a');
+            console.error('Error:', error);
+            showLoadingError();
+        })
         .then((mei) => {
+            console.log('3');
+            finishLoading();
             renderMEI(mei);
             loadPage(1);
         });
@@ -196,7 +220,7 @@ function loadComparison(id,method) {
 function loadPage(page) {
 
     removePageListeners();
-
+    
     document.querySelector('#pageNum').value = page;
     
     let svg = vrvToolkit.renderToSVG(page, options);
@@ -205,10 +229,9 @@ function loadPage(page) {
     box.classList.add('svgBox');
     box.innerHTML = svg;
     
-    let contentBox = document.querySelector('#contentBox');
-    
-    contentBox.innerHTML = '';
-    contentBox.appendChild(box);
+    let svgContainer = document.querySelector('#svgContainer');
+    svgContainer.innerHTML = '';
+    svgContainer.appendChild(box);
     
     addPageListeners();
 }

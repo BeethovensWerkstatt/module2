@@ -29,7 +29,28 @@
         right: 0;
         top: 62.5px;
         bottom: 0;
-        overflow: scroll;
+        
+        #loadingIndicator {
+            position: absolute;
+            top: 50%;
+            margin-top: -1rem;
+            left: 0;
+            right: 0;
+            display: none;
+        }
+        
+        #loadingError {
+            display: none;
+        }
+        
+        #svgContainer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: scroll;
+        }
     }
 }
 
