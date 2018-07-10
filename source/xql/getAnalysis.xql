@@ -27,8 +27,8 @@ let $comparison := (collection($data.basePath)//mei:meiCorpus[@xml:id = $compari
 let $comparison.path.tokens := tokenize(document-uri($comparison/root()),'/')
 let $comparison.path := string-join($comparison.path.tokens[position() lt count($comparison.path.tokens)],'/')
 
-let $doc1.path := ($comparison//mei:source)[1]/string(@target)
-let $doc2.path := ($comparison//mei:source)[2]/string(@target)
+let $doc1.path := ($comparison//mei:source)[1]/data(@target)
+let $doc2.path := ($comparison//mei:source)[2]/data(@target)
 
 let $doc1 := doc(concat($comparison.path, '/', $doc1.path))
 let $doc2 := doc(concat($comparison.path, '/', $doc2.path))
