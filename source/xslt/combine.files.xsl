@@ -16,7 +16,7 @@
     <xsl:param name="method"/>
     <!-- allowed values for param $method are:
         'plain' - no special treatment
-        'strictIdentity' - files will be checked for identity in all criteria 
+        'comparison' - files will be checked for identity in all criteria 
     
     -->
     <xsl:include href="compare/identify.identity.xsl"/>
@@ -35,7 +35,7 @@
                 <xsl:when test="$method = 'plain'">
                     <xsl:copy-of select="$merged.files"/>
                 </xsl:when>
-                <xsl:when test="$method = ('strictIdentity','noOctIdentity')">
+                <xsl:when test="$method = 'comparison'">
                     <xsl:variable name="identified.identity" as="node()">
                         <xsl:apply-templates select="$merged.files" mode="add.invariance"/>
                     </xsl:variable>

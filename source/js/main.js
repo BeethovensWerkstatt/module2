@@ -468,6 +468,12 @@ function selectMode(mode) {
     }
     
     allowPainting(mode === 'plain');
+    
+    if(mode === 'comparison') {
+        document.getElementById('varianceOptions').style.display = 'block';
+    } else {
+        document.getElementById('varianceOptions').style.display = 'none';
+    }
 };
 
 function allowPainting(bool) {
@@ -475,9 +481,9 @@ function allowPainting(bool) {
     paintMode = bool;
 
     if(bool) {
-        document.querySelector('.input-group.colorSwatches').classList.remove('inactive');
+        document.querySelector('.input-group.colorSwatches').style.display = 'block';
     } else {
-        document.querySelector('.input-group.colorSwatches').classList.add('inactive');
+        document.querySelector('.input-group.colorSwatches').style.display = 'none';
     }
     
 }

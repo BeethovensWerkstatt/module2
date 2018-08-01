@@ -44,9 +44,7 @@
                             
                             <div class="form-group" id="movementsBox">
                                 <select class="form-select" id="movements">
-                                    <option>Andante</option>
-                                    <option>Allegro</option>
-                                    <option>Lasagna al Forno</option>
+                                    <option>loading data</option>
                                 </select>
                             </div>
                             
@@ -64,8 +62,7 @@
                             <h1 class="sectionLabel">Mode:</h1>
                             <ul class="navigationList">
                                 <li class="modeBtn active" id="plain">Plain (allows custom coloration)</li>
-                                <li class="modeBtn" id="strictIdentity">Strict Identity</li>
-                                <li class="modeBtn" id="noOctIdentity">Weak Identity (ignores oct)</li>
+                                <li class="modeBtn" id="comparison">Identity Comparison</li>
                                 <li class="modeBtn" id="eventDensity">Event Density</li>
                                 <li class="modeBtn" id="relativeChroma">Relative Chroma</li>
                                 <li class="modeBtn" id="krumhansl-1" title="Generates Krumhansl-Schmuckler values for each single measure">Krumhansl-Schmuckler (1)</li>
@@ -83,6 +80,27 @@
                                 <div id="color06" class="colorSwatch"/>
                                 <div id="color07" class="colorSwatch"/>
                                 <div id="color08" class="colorSwatch"/>
+                            </div>
+                            <div id="varianceOptions" style="display: none;">
+                                <div class="topBlock">
+                                    <label>identical</label>
+                                    <div class="monoBlock" id="identical" title="note has been taken over in identical form"></div>
+                                </div>
+                                <div class="topBlock">
+                                    <label>similar</label>
+                                    <label id="durLabel">duration</label>
+                                    <label id="pitchLabel">pitch</label>
+                                    <div class="monoBlock">
+                                      <div class="quarterBlock" id="octDiff_durSame" title="there is a similar note, transposed into a different octave"></div>
+                                      <div class="quarterBlock" id="octSame_durDiff" title="there is a note with similar pitch, but a different duration"></div>
+                                      <div class="quarterBlock" id="octDiff_durDiff" title="there is a note with the same pitch name, but in a different octave and a different duration"></div>
+                                      <div class="quarterBlock" id="transp_durSame" title="there is a note with the same duration, but a completely different pitch"></div>
+                                    </div>
+                                </div>
+                                <div class="topBlock">
+                                    <label>different</label>
+                                    <div class="monoBlock" id="different" title="there is no similarity at all"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

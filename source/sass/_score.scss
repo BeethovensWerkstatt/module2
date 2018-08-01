@@ -1,9 +1,41 @@
-.file1only *, .file1 .noMatch {
+@import 'variables';
+
+/*.file1only *, .file1 .noMatch {
     fill: red;
     stroke: red;
 }
 
-.file2only, .file2 .noMatch {
+.file2only *, .file2 .noMatch {
     fill: green;
     stroke: green;
+}*/
+
+svg .noMatch {
+    fill: $highlightColor_different;
+    stroke: $highlightColor_different;
+}
+
+svg .os {
+    fill: $highlightColor_octDiff_durSame;
+    stroke: $highlightColor_octDiff_durSame;
+}
+
+svg .sd {
+    fill: $highlightColor_octSame_durDiff;
+    stroke: $highlightColor_octSame_durDiff;
+}
+
+svg .od {
+    fill: $highlightColor_octDiff_durDiff;
+    stroke: $highlightColor_octDiff_durDiff;
+}
+
+svg .ts {
+    fill: $highlightColor_transp_durSame;
+    stroke: $highlightColor_transp_durSame;
+}
+
+svg .id {
+    fill: $highlightColor_identical !important;
+    stroke: $highlightColor_identical !important;
 }

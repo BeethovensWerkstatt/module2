@@ -189,15 +189,68 @@ body {
                 }
             }
             
-            &.inactive {
-                .colorSwatch {
-                    background-color: #cccccc !important;
+        }
+        
+        #varianceOptions {
+            .topBlock {
+                float: left;
+                width: 80px;
+                margin: .5em;
+                height: 80px;
+                text-align: center;
+                
+                & > label {
+                    font-size: .8em;
+                    font-weight: 300;
                     
-                    &.active:after {
-                        background-color: transparent !important;
+                    &#durLabel {
+                        display: none;
+                    }
+                    
+                    &#pitchLabel {
+                        display: none;
+                    }
+                }
+                
+                .monoBlock {
+                    width: 3em;
+                    height: 3em;
+                    border: 2px solid #999999;
+                    box-sizing: content-box;
+                    margin: 0 auto;
+                    
+                    &#identical {
+                        background-color: $highlightColor_identical;
+                    }
+                    
+                    &#different {
+                        background-color: $highlightColor_different;
+                    }
+                    
+                    .quarterBlock {
+                        width: 50%;
+                        height: 50%;
+                        float: left;
+                        
+                        &#octDiff_durSame {
+                            background-color: $highlightColor_octDiff_durSame;
+                        }
+                        
+                        &#octSame_durDiff {
+                            background-color: $highlightColor_octSame_durDiff;
+                        }
+                        
+                        &#octDiff_durDiff {
+                            background-color: $highlightColor_octDiff_durDiff;
+                        }
+                        
+                        &#transp_durSame {
+                            background-color: $highlightColor_transp_durSame;
+                        }
                     }
                 }
             }
+            
         }
     }
 

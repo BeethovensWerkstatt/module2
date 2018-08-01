@@ -40,44 +40,68 @@
         <xsl:param name="file" tunnel="yes"/>
         <xsl:param name="file1.pitches" tunnel="yes"/>
         <xsl:param name="file2.pitches" tunnel="yes"/>
-        <xsl:variable name="tstamp" select="             if (@tstamp) then             (@tstamp)             else             (ancestor::mei:*[@tstamp]/@tstamp)"/>
-        <xsl:variable name="tstamp2" select="             if (@tstamp2) then             (@tstamp2)             else             (ancestor::mei:*[@tstamp2]/@tstamp2)"/>
+        <xsl:variable name="tstamp" select="
+            if (@tstamp) 
+            then (@tstamp)
+            else (ancestor::mei:*[@tstamp]/@tstamp)"/>
+        <xsl:variable name="tstamp2" select="             
+            if (@tstamp2) 
+            then (@tstamp2)
+            else (ancestor::mei:*[@tstamp2]/@tstamp2)"/>
         <xsl:variable name="pitch" select="@pitch"/>
         <xsl:variable name="rel.oct" select="@rel.oct"/>
-        <xsl:variable name="hasMatch" as="xs:boolean">
-            <xsl:choose>
-                <xsl:when test="$method = 'strictIdentity'">
-                    <xsl:choose>
-                        <xsl:when test="$file = 'file1' and $file2.pitches/descendant-or-self::custom:pitch[@pitch = $pitch and @tstamp = $tstamp and @rel.oct = $rel.oct and @tstamp2 = $tstamp2]">
-                            <xsl:value-of select="true()"/>
-                        </xsl:when>
-                        <xsl:when test="$file = 'file2' and $file1.pitches/descendant-or-self::custom:pitch[@pitch = $pitch and @tstamp = $tstamp and @rel.oct = $rel.oct and @tstamp2 = $tstamp2]">
-                            <xsl:value-of select="true()"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of select="false()"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:when>
-                <xsl:when test="$method = 'noOctIdentity'">
-                    <xsl:choose>
-                        <xsl:when test="$file = 'file1' and $file2.pitches/descendant-or-self::custom:pitch[@pitch = $pitch and @tstamp = $tstamp and @tstamp2 = $tstamp2]">
-                            <xsl:value-of select="true()"/>
-                        </xsl:when>
-                        <xsl:when test="$file = 'file2' and $file1.pitches/descendant-or-self::custom:pitch[@pitch = $pitch and @tstamp = $tstamp and @tstamp2 = $tstamp2]">
-                            <xsl:value-of select="true()"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of select="false()"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:when>
-            </xsl:choose>
+        
+        <!-- this variable holds the notes that need to be compared -->
+        <xsl:variable name="others" select="if($file = 'file1') then($file2.pitches) else($file1.pitches)" as="node()*"/>
+        
+        <!-- this variable decides which notes are identical / similar to the current note and keeps there IDs -->
+        <xsl:variable name="matches" as="xs:string*">
+            
+            <!-- identical notes -->
+            <xsl:for-each select="$others/descendant-or-self::custom:pitch[@pitch = $pitch and @rel.oct = $rel.oct and @tstamp = $tstamp and @tstamp2 = $tstamp2]">
+                <xsl:value-of select="'id:' || @id"/>
+                <xsl:value-of select="'id'"/>
+            </xsl:for-each>
+            
+            <!-- different octave, same rhythm -->
+            <xsl:for-each select="$others/descendant-or-self::custom:pitch[@pitch = $pitch and not(@rel.oct = $rel.oct) and @tstamp = $tstamp and @tstamp2 = $tstamp2]">
+                <xsl:value-of select="'os:' || @id"/>
+                <xsl:value-of select="'os'"/>
+            </xsl:for-each>
+            
+            <!-- same octave, different rhythm -->
+            <xsl:for-each select="$others/descendant-or-self::custom:pitch[@pitch = $pitch and @rel.oct = $rel.oct and number(@tstamp) lt number($tstamp2) and number(@tstamp2) gt number($tstamp)]">
+                <xsl:value-of select="'sd:' || @id"/>
+                <xsl:value-of select="'sd'"/>
+            </xsl:for-each>
+            
+            <!-- different octave, different rhythm -->
+            <xsl:for-each select="$others/descendant-or-self::custom:pitch[@pitch = $pitch and not(@rel.oct = $rel.oct) and number(@tstamp) lt number($tstamp2) and number(@tstamp2) gt number($tstamp)]">
+                <xsl:value-of select="'od:' || @id"/>
+                <xsl:value-of select="'od'"/>
+            </xsl:for-each>
+            
+            <!-- different pitch, same rhythm -->
+            <xsl:for-each select="$others/descendant-or-self::custom:pitch[not(@pitch = $pitch) and @tstamp = $tstamp and @rel.oct = $rel.oct and @tstamp2 = $tstamp2]">
+                <xsl:value-of select="'ts:' || @id"/>
+                <xsl:value-of select="'ts'"/>
+            </xsl:for-each>
+            
         </xsl:variable>
+        
+        <xsl:variable name="hasMatch" select="count($matches) gt 0" as="xs:boolean"/>
+        
         <xsl:copy>
-            <xsl:if test="not($hasMatch)">
-                <xsl:attribute name="type" select="'noMatch'"/>
-            </xsl:if>
+            <xsl:attribute name="type">
+                <xsl:choose>
+                    <xsl:when test="$hasMatch">
+                        <xsl:value-of select="string-join($matches,' ')"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="'noMatch'"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:attribute>
             <xsl:apply-templates select="node() | @*" mode="#current"/>
         </xsl:copy>
     </xsl:template>

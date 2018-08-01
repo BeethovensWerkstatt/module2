@@ -14,7 +14,7 @@
     <xsl:param name="mode"/>
     <!-- allowed values for param $mode are:
         'plain' - no special treatment
-        'identity' - files need to be "normalized" for a later check for identity 
+        'comparison' - files need to be "normalized" for a later check for identity 
         'krumhansl' - mei:harm with krumhansl schmuckler values are generated for each measure
     
     -->
@@ -51,7 +51,7 @@
                 <xsl:when test="$mode ='plain'">
                     <xsl:copy-of select="$added.tstamps"/>
                 </xsl:when>
-                <xsl:when test="$mode = 'identity'">
+                <xsl:when test="$mode = 'comparison'">
                     <xsl:variable name="determined.key" as="node()">
                         <xsl:apply-templates select="$added.tstamps" mode="determine.key"/>
                     </xsl:variable>
