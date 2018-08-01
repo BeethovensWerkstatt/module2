@@ -146,6 +146,16 @@ body {
             
         }
         
+        #workNavigation .input-group, #workNavigation .form-group {
+            padding: 0 0 .5em 1em;
+            max-width: 15em;
+            
+            .btn-group {
+                margin: 0 1em 0 0;
+            }
+            
+        }
+        
         .input-group.colorSwatches {
             
             padding: 1em;

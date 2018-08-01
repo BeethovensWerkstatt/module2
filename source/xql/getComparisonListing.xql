@@ -21,12 +21,30 @@ let $xslPath := '../xsl/'
 let $comparisons := 
     for $comparison in collection($data.basePath)//mei:meiCorpus
     let $comparison.id := $comparison/@xml:id
-    let $comparison.title := $comparison//mei:fileDesc/mei:titleStmt/mei:title/text()
+    let $comparison.title := $comparison//mei:fileDesc/mei:titleStmt/mei:title[@type='main']/text()
+    let $source1 := doc(document-uri($comparison/root()) || '/../' || $comparison//mei:source[1]/@target)
+    let $source2 := doc(document-uri($comparison/root()) || '/../' || $comparison//mei:source[2]/@target)
+    
+    
+    let $movements := 
+        for $mdiv at $pos in $source1//mei:mdiv
+        let $n := if($mdiv/@n) then($mdiv/@n) else($pos)
+        let $label := $mdiv/@label
+        let $new.label := $source2//mei:mdiv[@n = $n]/@label
+        return
+            '{' ||
+                '"n":"' || $n || '",' ||
+                '"label":"' || $label || '",' ||
+                '"newLabel":"' || $new.label || '"' ||
+            '}'
     
     return
         '{' ||
             '"id":"' || $comparison.id || '",' ||
-            '"title":"' || $comparison.title || '"' ||
+            '"title":"' || $comparison.title || '",' ||
+            '"movements":[' || 
+                string-join($movements,',') ||
+            ']' ||
         '}'
 
 

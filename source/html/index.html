@@ -35,11 +35,32 @@
             <div class="columns">
                 <div id="navigationBox" class="column col-3 col-lg-12">
                     <div class="columns">
-                        <div class="column col-12 col-lg-4 formGroup">
+                        <div id="workSelector" class="column col-12 col-lg-3 formGroup">
                             <h1 class="sectionLabel">Works:</h1>
                             <ul id="comparisonsList" class="navigationList"/>
                         </div>
-                        <div class="column col-12 col-lg-4 formGroup">
+                        <div id="workNavigation" class="column col-12 col-lg-3 formGroup">
+                            <h1 class="sectionLabel">Navigation:</h1>
+                            
+                            <div class="form-group" id="movementsBox">
+                                <select class="form-select" id="movements">
+                                    <option>Andante</option>
+                                    <option>Allegro</option>
+                                    <option>Lasagna al Forno</option>
+                                </select>
+                            </div>
+                            
+                            <div id="pageSelection" class="input-group">
+                                <div class="btn-group">
+                                    <button id="zoomOut" class="btn btn-sm"><i class="icon icon-minus"></i></button>
+                                    <button id="zoomIn" class="btn btn-sm"><i class="icon icon-plus"></i></button>
+                                </div>
+                                <button id="prevPage" class="btn btn-sm"><i class="icon icon-arrow-left"></i></button>
+                                <input id="pageNum" type="text" class="form-input input-sm" placeholder="1" disabled="disabled"></input>
+                                <button id="nextPage" class="btn btn-sm"><i class="icon icon-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div id="modeSelector" class="column col-12 col-lg-3 formGroup">
                             <h1 class="sectionLabel">Mode:</h1>
                             <ul class="navigationList">
                                 <li class="modeBtn active" id="plain">Plain (allows custom coloration)</li>
@@ -49,15 +70,10 @@
                                 <li class="modeBtn" id="relativeChroma">Relative Chroma</li>
                                 <li class="modeBtn" id="krumhansl-1" title="Generates Krumhansl-Schmuckler values for each single measure">Krumhansl-Schmuckler (1)</li>
                                 <li class="modeBtn" id="krumhansl-4" title="Generates Krumhansl-Schmuckler values for a sliding window of 4 measures">Krumhansl-Schmuckler (4)</li>
-                            </ul>                 
+                            </ul>
                         </div>
-                        <div class="column col-12 col-lg-4 formGroup">
-                            <h1 class="sectionLabel">Navigation:</h1>
-                            <div class="input-group">
-                                <button id="prevPage" class="btn btn-primary btn-sm"><i class="icon icon-arrow-left"></i></button>
-                                <input id="pageNum" type="text" class="form-input input-sm" placeholder="1" disabled="disabled"></input>
-                                <button id="nextPage" class="btn btn-primary btn-sm"><i class="icon icon-arrow-right"></i></button>
-                            </div>
+                        <div id="modeOptions" class="column col-12 col-lg-3 formGroup">
+                            <h1 class="sectionLabel">Options:</h1>
                             <div class="input-group colorSwatches">
                                 <div id="color01" class="colorSwatch active"/>
                                 <div id="color02" class="colorSwatch"/>

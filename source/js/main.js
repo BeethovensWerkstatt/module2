@@ -4,7 +4,9 @@ const vrvToolkit = new verovio.toolkit();
 let page = 1;
 let options;
 let maxPage;
+let comparisons = [];
 
+let zoom = 35;
 let pageHeight = 2970;
 let pageWidth = 2100;
 
@@ -38,6 +40,80 @@ function setListeners() {
         })
     });
     
+    //key listeners
+    document.addEventListener('keydown',(e) => {
+        e = e || window.event;
+        
+        if (e.keyCode == '38') {
+            // up arrow
+        }
+        else if (e.keyCode == '40') {
+            // down arrow
+        }
+        else if (e.keyCode == '37') {
+            // left arrow
+            if(page === 1) {
+               return false;
+            } else {
+               page--;
+               loadPage(page);
+            }
+        }
+        else if (e.keyCode == '39') {
+            // right arrow
+            if(page === maxPage) {
+                return false;
+            } else {
+                page++;
+                loadPage(page);
+            }
+        }
+        
+        else if (e.keyCode == '171') {
+            // plus (+)
+            if(zoom < 5 || zoom > 300) {
+                return false;
+            } else {
+                zoom = zoom / 0.9;
+                setOptions();
+                loadPage(page);
+            }
+        }
+        
+        else if (e.keyCode == '173') {
+            // minus (-)
+            if(zoom < 5 || zoom > 300) {
+                return false;
+            } else {
+                zoom = zoom * .9;
+                setOptions();
+                loadPage(page);
+            }
+        }
+    });
+    
+    document.querySelector('#zoomOut').addEventListener('click',(e) => {
+        if(zoom < 5 || zoom > 300) {
+            return false;
+        } else {
+            zoom = zoom * .9;
+            setOptions();
+            loadPage(page);
+        }
+        console.log('clicked zoomOut, new zoom: ' + zoom)
+    });
+    
+    document.querySelector('#zoomIn').addEventListener('click',(e) => {
+        if(zoom < 5 || zoom > 300) {
+            return false;
+        } else {
+            zoom = zoom / 0.9;
+            setOptions();
+            loadPage(page);
+        }
+        console.log('clicked zoomIn, new zoom: ' + zoom)
+    });
+    
     document.querySelector('#prevPage').addEventListener('click',(e) => {
         if(page === 1) {
             return false;
@@ -59,8 +135,6 @@ function setListeners() {
     let infoModal = document.querySelector('#infoModal');
     
     document.querySelector('#modalCloseTop').addEventListener('click',(e) => {
-        
-        console.log('here?')
         infoModal.classList.remove('active');
     });
     
@@ -87,7 +161,7 @@ function setListeners() {
             
             let measure = 0;
             if (page != 1) {
-                measure = document.querySelector('#contentBox .measure').getAttribute('id');
+                measure = document.querySelector('#svgContainer .measure').getAttribute('id');
             }
     
             vrvToolkit.redoLayout();
@@ -141,8 +215,9 @@ function getComparisonListing() {
             return response.json();
         })
         .catch(error => console.error('Error:', error))
-        .then((comparisons) => {
-            console.log(comparisons);
+        .then((loadedComparisons) => {
+            
+            comparisons = loadedComparisons;
             
             for(let i=0;i<comparisons.length;i++) {
                 
@@ -157,20 +232,20 @@ function getComparisonListing() {
             
             document.querySelectorAll('#comparisonsList li').forEach((item,index,list) => {
                 item.addEventListener('click',(e) => {
-                    activateComparison(item.id);
+                    activateComparison(item.id,comparisons[index]);
                 })
             })
         })
 }
 
-function activateComparison(id) {
+function activateComparison(id,comparison) {
     
     //console.log('activating ' + id)
     
     //unload old
     try {
         document.querySelector('.comparison.active').classList.remove('active');
-        document.querySelector('#contentBox').html('');
+        document.querySelector('#svgContainer').innerHTML = '';
     } catch(err) {
         //console.log('ERROR: Unable to deactivate current comparison (' + err + ')');
     }
@@ -189,32 +264,77 @@ function activateComparison(id) {
     
 }
 
-function loadComparison(id,method) {
+function loadComparison(id,method,mdiv) {
 
     if(typeof method === 'undefined') {
         method = document.querySelector('.modeBtn.active').id;
     }
     
-    console.log('INFO: Requesting comparison ' + id + ' in mode ' + method);
+    if(typeof mdiv === 'undefined') {
+        mdiv = '1';
+    }
+    
+    let comparison = comparisons.find((obj) => {
+        return obj.id === id;
+    });
+    
+    let mdivSelector = document.getElementById('movements');
+    mdivSelector.innerHTML = '';
+    
+    if(comparison.movements.length > 1) {
+        document.getElementById('movementsBox').style.display = 'block';
+        for(let i=0; i<comparison.movements.length; i++) {
+            let mdiv = comparison.movements[i];
+            let option = document.createElement('option');
+            option.id = comparison.id + '_mdiv' + mdiv.n;
+            option.classList.add('mdiv')
+            option.innerHTML = mdiv.label;
+            
+            mdivSelector.append(option)
+        }
+        
+        mdivSelector.addEventListener('change',(e) => {
+            let index = mdivSelector.selectedIndex;
+            
+            let mdivN = comparison.movements[index].n;
+            
+            document.querySelector('#svgContainer').innerHTML = '';
+            getFile(id,method,mdivN);
+        });
+        
+        /*document.querySelectorAll('#movements option').forEach((item,index,list) => {
+            item.addEventListener('click',(e) => {
+                activateComparison(item.id,comparison,comparison.movements[index].n);
+            })
+        })*/
+    } else {
+        document.getElementById('movementsBox').style.display = 'none';
+    }
+    
+    getFile(id,method,mdiv);
+    
+}
+
+function getFile(comparisonId,method,mdiv) {
     activateLoading();
-    console.log('1');
-    fetch('./resources/xql/getAnalysis.xql?comparisonId=' + id + '&method=' + method)
+    fetch('./resources/xql/getAnalysis.xql?comparisonId=' + comparisonId + '&method=' + method + '&mdiv=' + mdiv)
         .then((response) => {
-            console.log('2');
             return response.text();
+            console.log(1)
         })
         .catch((error) => {
-            console.log('2a');
-            console.error('Error:', error);
+            console.error('Error loading comparison:', error);
             showLoadingError();
         })
         .then((mei) => {
-            console.log('3');
+            console.log(2)
             finishLoading();
+            console.log(3)
             renderMEI(mei);
+            console.log(4)
             loadPage(1);
+            console.log(5)
         });
-    
 }
 
 function loadPage(page) {
@@ -238,7 +358,7 @@ function loadPage(page) {
 
 function removePageListeners() {
     
-    let notes = document.querySelectorAll('#contentBox .note');
+    let notes = document.querySelectorAll('#svgContainer .note');
     notes.forEach((note,index,list) => {
         note.removeEventListener('click',clickNote,false);
     })
@@ -251,7 +371,7 @@ function addPageListeners() {
         return false;
     }
     
-    let notes = document.querySelectorAll('#contentBox .note, #contentBox .rest');
+    let notes = document.querySelectorAll('#svgContainer .note, #svgContainer .rest');
     notes.forEach((note,index,list) => {
         note.addEventListener('click',clickNote,false);
         
@@ -261,7 +381,7 @@ function addPageListeners() {
     
     for (let noteId in coloredNotes) {
         try {
-            let note = document.querySelector('#contentBox #' + noteId);
+            let note = document.querySelector('#svgContainer #' + noteId);
             let colorIndex = coloredNotes[noteId];
             
             note.classList.add('color' + colorIndex);
@@ -291,7 +411,6 @@ function clickNote(e) {
 }
 
 function setOptions() {
-    let zoom = 35;
     let he = document.getElementById('contentBox')["clientHeight"];
     let wi = document.getElementById('contentBox')["clientWidth"];
     

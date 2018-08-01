@@ -21,6 +21,7 @@ let $xslPath := '../xslt/'
 
 let $comparison.id := request:get-parameter('comparisonId','')
 let $method := request:get-parameter('method','')
+let $mdiv := request:get-parameter('mdiv','')
 
 let $comparison := (collection($data.basePath)//mei:meiCorpus[@xml:id = $comparison.id])[1]
 
@@ -69,11 +70,13 @@ let $doc2 := (collection($data.basePath)//mei:mei[@xml:id = $second.file.id])[1]
 let $doc1.analyzed := transform:transform($doc1,
                doc(concat($xslPath,'analyze.file.xsl')), <parameters>
                    <param name="mode" value="{$analysis.mode}"/>
+                   <param name="mdiv" value="{$mdiv}"/>
                </parameters>)
                
 let $doc2.analyzed := transform:transform($doc2,
                doc(concat($xslPath,'analyze.file.xsl')), <parameters>
                    <param name="mode" value="{$analysis.mode}"/>
+                   <param name="mdiv" value="{$mdiv}"/>
                </parameters>)               
 
 let $merged.files := transform:transform(<root>{$doc1.analyzed}{$doc2.analyzed}{$comparison}</root>,
@@ -84,3 +87,4 @@ let $merged.files := transform:transform(<root>{$doc1.analyzed}{$doc2.analyzed}{
 return 
     
     $merged.files
+    

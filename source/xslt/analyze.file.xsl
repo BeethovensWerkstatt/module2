@@ -18,6 +18,10 @@
         'krumhansl' - mei:harm with krumhansl schmuckler values are generated for each measure
     
     -->
+    
+    <xsl:param name="mdiv"/>
+    
+    <xsl:include href="tools/pick.mdiv.xsl"/>
     <xsl:include href="tools/rescore.parts.xsl"/>
     <xsl:include href="tools/addid.xsl"/>
     <xsl:include href="tools/addtstamps.xsl"/>
@@ -28,8 +32,13 @@
     <xsl:include href="anl/krumhansl.schmuckler.xsl"/>
     <xsl:include href="anl/determine.event.density.xsl"/>
     <xsl:template match="/">
+        <xsl:variable name="picked.mdiv" as="node()">
+            <xsl:apply-templates select="/mei:mei" mode="pick.mdiv">
+                <xsl:with-param name="mdiv" select="$mdiv" tunnel="yes"/>
+            </xsl:apply-templates>
+        </xsl:variable>
         <xsl:variable name="rescored.parts" as="node()">
-            <xsl:apply-templates select="/mei:mei" mode="rescore.parts"/>
+            <xsl:apply-templates select="$picked.mdiv" mode="rescore.parts"/>
         </xsl:variable>
         <xsl:variable name="added.ids" as="node()">
             <xsl:apply-templates select="$rescored.parts" mode="add.id"/>
