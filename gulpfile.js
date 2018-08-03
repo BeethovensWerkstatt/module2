@@ -30,6 +30,11 @@ gulp.task('load-assets', function() {
         .pipe(newer('./build/resources/js/'))
         .pipe(gulp.dest('./build/resources/js/'));
         
+    //include paper.js    
+    gulp.src(['./node_modules/paper/dist/paper-full.min.js'])
+        .pipe(newer('./build/resources/js/'))
+        .pipe(gulp.dest('./build/resources/js/'));
+        
     //include spectre.css
     gulp.src(['./node_modules/spectre.css/dist/**/*.min.css'])
         .pipe(gulp.dest('./build/resources/css/'))
