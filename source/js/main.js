@@ -331,29 +331,99 @@ function getFile(comparisonId,method,mdiv) {
             finishLoading();
             console.log(3)
             renderMEI(mei);
-            console.log(4)
+            console.log('next: loadPage')
             loadPage(1);
-            console.log(5)
+            console.log('finished: loadPage')
         });
 }
 
 function loadPage(page) {
-
+    
+    console.log('starting loadPage(' + page + ')')
+    
     removePageListeners();
+    
+    console.log('removed page listeners')
     
     document.querySelector('#pageNum').value = page;
     
+    console.log('pagenum has been set')
+    
     let svg = vrvToolkit.renderToSVG(page, options);
     
-    let box = document.createElement('div');
+    console.log('svg generated')
+    
+    /*let box = document.createElement('div');
     box.classList.add('svgBox');
     box.innerHTML = svg;
     
     let svgContainer = document.querySelector('#svgContainer');
     svgContainer.innerHTML = '';
-    svgContainer.appendChild(box);
+    svgContainer.appendChild(box);*/
     
-    addPageListeners();
+    let canvas = document.getElementById('svgContainer');
+    paper.setup(canvas);
+    
+    console.log('\ndebug here')
+    console.log('paper:')
+    console.log(paper)
+    console.log('\npaper.project:')
+        
+    console.log(paper.project)
+    
+    let instanceAsync;
+    
+    let instance = new paper.Symbol(paper.project.importSVG(svg, {
+        expandShapes: true,
+        onLoad: (item) => {
+            console.log('SUCCESS while importing SVG to Paper.js')
+            console.log(item)
+            instanceAsync = item;
+        },
+        onError: (err) => {
+            console.log('ERROR while importing SVG to Paper.js: ' + err);
+        }
+    }));
+    
+    console.log('\ninstance:')
+    console.log(instance)
+    
+    console.log('\ninstance.place():')
+    console.log(instance.place)
+    
+    let placedInstance = instance.place(new paper.Point(1, 1));
+    console.log('placedInstance.scaling: ' + placedInstance.scaling);
+    
+    console.log('\nplacedInstance.scale():')
+    console.log(placedInstance.scale)
+    
+    placedInstance.scale(0.01,new paper.Point(1,1))
+    
+    
+    var path = new paper.Path();
+		// Give the stroke a color
+		path.strokeColor = 'black';
+		var start = new paper.Point(100, 100);
+		// Move to start and draw a line from there
+		path.moveTo(start);
+		// Note that the plus operator on Point objects does not work
+		// in JavaScript. Instead, we need to call the add() function:
+		path.lineTo(start.add([ 200, -50 ]));
+    
+    console.log('\nstill here')
+    
+    console.log('\npaper.view:')
+    console.log(paper.view)
+    
+    console.log('\npaper.view.draw:')
+    console.log(paper.view.draw)
+    
+    paper.view.draw();
+    
+    console.log('done')
+    
+    
+    //addPageListeners();
 }
 
 function removePageListeners() {
