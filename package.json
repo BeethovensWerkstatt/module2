@@ -45,8 +45,9 @@
     "gulp-zip": "^4.1.0"
   },
   "dependencies": {
-    "paper": "^0.11.5",
     "spectre.css": "^0.5.2",
+    "svg.connectable.js": "^2.0.1",
+    "svg.js": "^2.6.5",
     "verovio-dev": "^2.0.0-30"
   }
 }

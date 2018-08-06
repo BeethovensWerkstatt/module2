@@ -339,91 +339,18 @@ function getFile(comparisonId,method,mdiv) {
 
 function loadPage(page) {
     
-    console.log('starting loadPage(' + page + ')')
-    
     removePageListeners();
-    
-    console.log('removed page listeners')
-    
     document.querySelector('#pageNum').value = page;
-    
-    console.log('pagenum has been set')
-    
     let svg = vrvToolkit.renderToSVG(page, options);
-    
-    console.log('svg generated')
-    
-    /*let box = document.createElement('div');
-    box.classList.add('svgBox');
-    box.innerHTML = svg;
     
     let svgContainer = document.querySelector('#svgContainer');
     svgContainer.innerHTML = '';
-    svgContainer.appendChild(box);*/
     
-    let canvas = document.getElementById('svgContainer');
-    paper.setup(canvas);
+    let draw = SVG('svgContainer').size('100%', '100%');
+    draw.clear();
+    draw.svg(svg);
     
-    console.log('\ndebug here')
-    console.log('paper:')
-    console.log(paper)
-    console.log('\npaper.project:')
-        
-    console.log(paper.project)
-    
-    let instanceAsync;
-    
-    let instance = new paper.Symbol(paper.project.importSVG(svg, {
-        expandShapes: true,
-        onLoad: (item) => {
-            console.log('SUCCESS while importing SVG to Paper.js')
-            console.log(item)
-            instanceAsync = item;
-        },
-        onError: (err) => {
-            console.log('ERROR while importing SVG to Paper.js: ' + err);
-        }
-    }));
-    
-    console.log('\ninstance:')
-    console.log(instance)
-    
-    console.log('\ninstance.place():')
-    console.log(instance.place)
-    
-    let placedInstance = instance.place(new paper.Point(1, 1));
-    console.log('placedInstance.scaling: ' + placedInstance.scaling);
-    
-    console.log('\nplacedInstance.scale():')
-    console.log(placedInstance.scale)
-    
-    placedInstance.scale(0.01,new paper.Point(1,1))
-    
-    
-    var path = new paper.Path();
-		// Give the stroke a color
-		path.strokeColor = 'black';
-		var start = new paper.Point(100, 100);
-		// Move to start and draw a line from there
-		path.moveTo(start);
-		// Note that the plus operator on Point objects does not work
-		// in JavaScript. Instead, we need to call the add() function:
-		path.lineTo(start.add([ 200, -50 ]));
-    
-    console.log('\nstill here')
-    
-    console.log('\npaper.view:')
-    console.log(paper.view)
-    
-    console.log('\npaper.view.draw:')
-    console.log(paper.view.draw)
-    
-    paper.view.draw();
-    
-    console.log('done')
-    
-    
-    //addPageListeners();
+    addPageListeners();
 }
 
 function removePageListeners() {
@@ -437,30 +364,32 @@ function removePageListeners() {
 
 function addPageListeners() {
     
-    if(!paintMode) {
-        return false;
-    }
-    
     let notes = document.querySelectorAll('#svgContainer .note, #svgContainer .rest');
     notes.forEach((note,index,list) => {
         note.addEventListener('click',clickNote,false);
         
     })
     
-    //re-add colors
-    
-    for (let noteId in coloredNotes) {
-        try {
-            let note = document.querySelector('#svgContainer #' + noteId);
-            let colorIndex = coloredNotes[noteId];
-            
-            note.classList.add('color' + colorIndex);
-            note.style.fill = colors[colorIndex];
-            note.style.stroke = colors[colorIndex];
-            
-        } catch(err) {
-            //console.log('[ERROR] Unable to (re-)color note ' + noteId + ': ' + err);
-        }
+    if(paintMode) {
+        
+        //re-add colors
+        for (let noteId in coloredNotes) {
+            try {
+                let note = document.querySelector('#svgContainer #' + noteId);
+                let colorIndex = coloredNotes[noteId];
+                
+                note.classList.add('color' + colorIndex);
+                note.style.fill = colors[colorIndex];
+                note.style.stroke = colors[colorIndex];
+                
+            } catch(err) {
+                //console.log('[ERROR] Unable to (re-)color note ' + noteId + ': ' + err);
+            }
+        }    
+    } else {
+        
+        
+        
     }
     
 }
@@ -469,11 +398,68 @@ function clickNote(e) {
     
     let note = e.currentTarget;
     
-    note.classList.add('color' + activeColor);
-    note.style.fill = colors[activeColor];
-    note.style.stroke = colors[activeColor];
+    if(paintMode) {
+        note.classList.add('color' + activeColor);
+        note.style.fill = colors[activeColor];
+        note.style.stroke = colors[activeColor];
+        
+        coloredNotes[note.id] = activeColor;       
+    } else {
+        console.log(note.classList)
+        
+        let idMatches = [... note.classList].filter(cl => cl.startsWith('id:'));
+        let osMatches = [... note.classList].filter(cl => cl.startsWith('os:'));
+        let sdMatches = [... note.classList].filter(cl => cl.startsWith('sd:'));
+        let odMatches = [... note.classList].filter(cl => cl.startsWith('od:'));
+        let tsMatches = [... note.classList].filter(cl => cl.startsWith('ts:'));
+        
+        idMatches.forEach(match => {
+            let elem = SVG.get(match.substr(3));
+            let childUse = elem.children()[0];
+            
+            childUse.animate(2000,'<').scale(3,3).after(situation => {
+                childUse.animate(1500,'>').scale(1,1)
+            })
+        })
+        
+        osMatches.forEach(match => {
+            let elem = SVG.get(match.substr(3));
+            let childUse = elem.children()[0];
+            
+            childUse.animate(2000,'<').scale(2,2).after(situation => {
+                childUse.animate(1500,'>').scale(1,1)
+            })
+        })
+        
+        sdMatches.forEach(match => {
+            let elem = SVG.get(match.substr(3));
+            let childUse = elem.children()[0];
+            
+            childUse.animate(2000,'<').scale(2,2).after(situation => {
+                childUse.animate(1500,'>').scale(1,1)
+            })
+        })
+        
+        odMatches.forEach(match => {
+            let elem = SVG.get(match.substr(3));
+            let childUse = elem.children()[0];
+            
+            childUse.animate(2000,'<').scale(2,2).after(situation => {
+                childUse.animate(1500,'>').scale(1,1)
+            })
+        })
+        
+        tsMatches.forEach(match => {
+            let elem = SVG.get(match.substr(3));
+            let childUse = elem.children()[0];
+            
+            childUse.animate(2000,'<').scale(2,2).after(situation => {
+                childUse.animate(1500,'>').scale(1,1)
+            })
+        })
+        
+    }
     
-    coloredNotes[note.id] = activeColor;
     
     let showBox = document.querySelector('#noteID');
     showBox.innerHTML = 'Item clicked:<br/>' + note.id;
