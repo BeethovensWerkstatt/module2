@@ -331,27 +331,24 @@ function getFile(comparisonId,method,mdiv) {
             finishLoading();
             console.log(3)
             renderMEI(mei);
-            console.log(4)
+            console.log('next: loadPage')
             loadPage(1);
-            console.log(5)
+            console.log('finished: loadPage')
         });
 }
 
 function loadPage(page) {
-
+    
     removePageListeners();
-    
     document.querySelector('#pageNum').value = page;
-    
     let svg = vrvToolkit.renderToSVG(page, options);
-    
-    let box = document.createElement('div');
-    box.classList.add('svgBox');
-    box.innerHTML = svg;
     
     let svgContainer = document.querySelector('#svgContainer');
     svgContainer.innerHTML = '';
-    svgContainer.appendChild(box);
+    
+    let draw = SVG('svgContainer').size('100%', '100%');
+    draw.clear();
+    draw.svg(svg);
     
     addPageListeners();
 }
@@ -367,30 +364,32 @@ function removePageListeners() {
 
 function addPageListeners() {
     
-    if(!paintMode) {
-        return false;
-    }
-    
     let notes = document.querySelectorAll('#svgContainer .note, #svgContainer .rest');
     notes.forEach((note,index,list) => {
         note.addEventListener('click',clickNote,false);
         
     })
     
-    //re-add colors
-    
-    for (let noteId in coloredNotes) {
-        try {
-            let note = document.querySelector('#svgContainer #' + noteId);
-            let colorIndex = coloredNotes[noteId];
-            
-            note.classList.add('color' + colorIndex);
-            note.style.fill = colors[colorIndex];
-            note.style.stroke = colors[colorIndex];
-            
-        } catch(err) {
-            //console.log('[ERROR] Unable to (re-)color note ' + noteId + ': ' + err);
-        }
+    if(paintMode) {
+        
+        //re-add colors
+        for (let noteId in coloredNotes) {
+            try {
+                let note = document.querySelector('#svgContainer #' + noteId);
+                let colorIndex = coloredNotes[noteId];
+                
+                note.classList.add('color' + colorIndex);
+                note.style.fill = colors[colorIndex];
+                note.style.stroke = colors[colorIndex];
+                
+            } catch(err) {
+                //console.log('[ERROR] Unable to (re-)color note ' + noteId + ': ' + err);
+            }
+        }    
+    } else {
+        
+        
+        
     }
     
 }
@@ -399,11 +398,68 @@ function clickNote(e) {
     
     let note = e.currentTarget;
     
-    note.classList.add('color' + activeColor);
-    note.style.fill = colors[activeColor];
-    note.style.stroke = colors[activeColor];
+    if(paintMode) {
+        note.classList.add('color' + activeColor);
+        note.style.fill = colors[activeColor];
+        note.style.stroke = colors[activeColor];
+        
+        coloredNotes[note.id] = activeColor;       
+    } else {
+        console.log(note.classList)
+        
+        let idMatches = [... note.classList].filter(cl => cl.startsWith('id:'));
+        let osMatches = [... note.classList].filter(cl => cl.startsWith('os:'));
+        let sdMatches = [... note.classList].filter(cl => cl.startsWith('sd:'));
+        let odMatches = [... note.classList].filter(cl => cl.startsWith('od:'));
+        let tsMatches = [... note.classList].filter(cl => cl.startsWith('ts:'));
+        
+        idMatches.forEach(match => {
+            let elem = SVG.get(match.substr(3));
+            let childUse = elem.children()[0];
+            
+            childUse.animate(2000,'<').scale(3,3).after(situation => {
+                childUse.animate(1500,'>').scale(1,1)
+            })
+        })
+        
+        osMatches.forEach(match => {
+            let elem = SVG.get(match.substr(3));
+            let childUse = elem.children()[0];
+            
+            childUse.animate(2000,'<').scale(2,2).after(situation => {
+                childUse.animate(1500,'>').scale(1,1)
+            })
+        })
+        
+        sdMatches.forEach(match => {
+            let elem = SVG.get(match.substr(3));
+            let childUse = elem.children()[0];
+            
+            childUse.animate(2000,'<').scale(2,2).after(situation => {
+                childUse.animate(1500,'>').scale(1,1)
+            })
+        })
+        
+        odMatches.forEach(match => {
+            let elem = SVG.get(match.substr(3));
+            let childUse = elem.children()[0];
+            
+            childUse.animate(2000,'<').scale(2,2).after(situation => {
+                childUse.animate(1500,'>').scale(1,1)
+            })
+        })
+        
+        tsMatches.forEach(match => {
+            let elem = SVG.get(match.substr(3));
+            let childUse = elem.children()[0];
+            
+            childUse.animate(2000,'<').scale(2,2).after(situation => {
+                childUse.animate(1500,'>').scale(1,1)
+            })
+        })
+        
+    }
     
-    coloredNotes[note.id] = activeColor;
     
     let showBox = document.querySelector('#noteID');
     showBox.innerHTML = 'Item clicked:<br/>' + note.id;
