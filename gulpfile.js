@@ -30,8 +30,13 @@ gulp.task('load-assets', function() {
         .pipe(newer('./build/resources/js/'))
         .pipe(gulp.dest('./build/resources/js/'));
         
-    //include paper.js    
-    gulp.src(['./node_modules/paper/dist/paper-full.min.js'])
+    //include svg.js    
+    gulp.src(['./node_modules/svg.js/dist/svg.min.js'])
+        .pipe(newer('./build/resources/js/'))
+        .pipe(gulp.dest('./build/resources/js/'));
+        
+    //include svg.connectable.js    
+    gulp.src(['./node_modules/svg.connectable.js/dist/svg.connectable.min.js'])
         .pipe(newer('./build/resources/js/'))
         .pipe(gulp.dest('./build/resources/js/'));
         
