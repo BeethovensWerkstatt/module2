@@ -55,6 +55,8 @@
         <xsl:copy-of select="$output"/>
     </xsl:template>
     <xsl:template match="mei:scoreDef" mode="first.pass">
+        <xsl:variable name="pos" select="count(preceding::mei:scoreDef) + 1" as="xs:integer"/>
+        
         <scoreDef xmlns="http://www.music-encoding.org/ns/mei">
             <xsl:apply-templates select="@meter.count | @meter.unit" mode="#current"/>
             <staffGrp label="" symbol="none" barthru="false">
@@ -62,7 +64,7 @@
                     <xsl:apply-templates select=".//mei:staffDef" mode="first.pass"/>
                 </staffGrp>
                 <staffGrp symbol="brace" barthru="true">
-                    <xsl:apply-templates select="($second.file//mei:scoreDef)[1]//mei:staffDef" mode="first.pass.file.2"/>
+                    <xsl:apply-templates select="($second.file//mei:scoreDef)[$pos]//mei:staffDef" mode="first.pass.file.2"/>
                 </staffGrp>
             </staffGrp>
         </scoreDef>
