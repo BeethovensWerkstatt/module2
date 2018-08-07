@@ -15,7 +15,7 @@ svg .noMatch {
     stroke: $highlightColor_different;
 }
 
-svg .os {
+svg .os, svg .os.od {
     fill: $highlightColor_octDiff_durSame;
     stroke: $highlightColor_octDiff_durSame;
 }
