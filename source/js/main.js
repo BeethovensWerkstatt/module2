@@ -150,6 +150,24 @@ function setListeners() {
         infoModal.classList.add('active');
     });
     
+    let layoutOptionsModal = document.querySelector('#layoutOptionsModal');
+    
+    document.querySelector('#layoutOptionsOverlayClose2').addEventListener('click',(e) => {
+        layoutOptionsModal.classList.remove('active');
+    });
+    
+    document.querySelector('#layoutOptionsOverlayClose3').addEventListener('click',(e) => {
+        layoutOptionsModal.classList.remove('active');
+    });
+    
+    document.querySelector('#layoutOptionsOverlayClose1').addEventListener('click',(e) => {
+        layoutOptionsModal.classList.remove('active');
+    });
+    
+    document.querySelector('#layoutOptionsBtn').addEventListener('click',(e) => {
+        layoutOptionsModal.classList.add('active');
+    });
+    
     window.addEventListener('resize', (e) => { 
         try {
             // make sure we have loaded a file
@@ -311,13 +329,23 @@ function loadComparison(id,method,mdiv) {
         document.getElementById('movementsBox').style.display = 'none';
     }
     
-    getFile(id,method,mdiv);
+    let transpositionSetting;
+    
+    let transpositionRadios = document.getElementsByName('transposition');
+    for (let i=0; i < transpositionRadios.length; i++) {
+        if(transpositionRadios[i].checked) {
+            transpositionSetting = transpositionRadios[i].value;
+            break;
+        }
+    }
+    
+    getFile(id,method,mdiv,transpositionSetting);
     
 }
 
-function getFile(comparisonId,method,mdiv) {
+function getFile(comparisonId,method,mdiv, transpose) {
     activateLoading();
-    fetch('./resources/xql/getAnalysis.xql?comparisonId=' + comparisonId + '&method=' + method + '&mdiv=' + mdiv)
+    fetch('./resources/xql/getAnalysis.xql?comparisonId=' + comparisonId + '&method=' + method + '&mdiv=' + mdiv + '&transpose=' + transpose)
         .then((response) => {
             return response.text();
             console.log(1)

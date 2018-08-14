@@ -20,6 +20,13 @@
     -->
     
     <xsl:param name="mdiv"/>
+    <xsl:param name="transpose.mode"/>
+    <!-- allowed values for param $transpose.mode are:
+        'none'
+        'matchFile1'
+        'matchFile2'
+        'C'
+    -->
     
     <xsl:include href="tools/pick.mdiv.xsl"/>
     <xsl:include href="tools/rescore.parts.xsl"/>
@@ -31,6 +38,9 @@
     <xsl:include href="anl/determine.key.xsl"/>
     <xsl:include href="anl/krumhansl.schmuckler.xsl"/>
     <xsl:include href="anl/determine.event.density.xsl"/>
+    
+    <xsl:include href="data/circleOf5.xsl"/>
+    
     <xsl:template match="/">
         <xsl:variable name="picked.mdiv" as="node()">
             <xsl:apply-templates select="/mei:mei" mode="pick.mdiv">
@@ -48,8 +58,17 @@
         </xsl:variable>
         <xsl:variable name="output" as="node()">
             <xsl:choose>
-                <xsl:when test="$mode ='plain'">
+                <xsl:when test="$mode = 'plain' and $transpose.mode = 'none'">
                     <xsl:copy-of select="$added.tstamps"/>
+                </xsl:when>
+                <xsl:when test="$mode = 'plain' and $transpose.mode != 'none'">
+                    <xsl:variable name="determined.key" as="node()">
+                        <xsl:apply-templates select="$added.tstamps" mode="determine.key"/>
+                    </xsl:variable>
+                    <xsl:variable name="determined.pitch" as="node()">
+                        <xsl:apply-templates select="$determined.key" mode="determine.pitch"/>
+                    </xsl:variable>
+                    <xsl:copy-of select="$determined.pitch"/>
                 </xsl:when>
                 <xsl:when test="$mode = 'comparison'">
                     <xsl:variable name="determined.key" as="node()">
@@ -91,7 +110,14 @@
                     <xsl:copy-of select="$got.krumhansl.schmuckler"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:copy-of select="$added.tstamps"/>
+                    <!--<xsl:copy-of select="$added.tstamps"/>-->
+                    <xsl:variable name="determined.key" as="node()">
+                        <xsl:apply-templates select="$added.tstamps" mode="determine.key"/>
+                    </xsl:variable>
+                    <xsl:variable name="determined.pitch" as="node()">
+                        <xsl:apply-templates select="$determined.key" mode="determine.pitch"/>
+                    </xsl:variable>
+                    <xsl:copy-of select="$determined.pitch"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>

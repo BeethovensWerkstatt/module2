@@ -19,13 +19,89 @@
         'comparison' - files will be checked for identity in all criteria 
     
     -->
+    
+    <xsl:param name="transpose.mode"/>
+    
+    <xsl:include href="tools/transpose.xsl"/>
+    <xsl:include href="data/circleOf5.xsl"/>
+    <xsl:include href="data/keyMatrix.xsl"/>
+    
     <xsl:include href="compare/identify.identity.xsl"/>
     <xsl:include href="compare/compare.event.density.xsl"/>
-    <xsl:variable name="first.file" select="//mei:mei[1]" as="node()"/>
-    <xsl:variable name="second.file" select="//mei:mei[2]" as="node()"/>
+    
+    <xsl:variable name="first.file" as="node()">
+        
+        <xsl:choose>
+            <!-- no file shall be transposed -->
+            <xsl:when test="$transpose.mode = 'none'">
+                <xsl:sequence select="//mei:mei[1]"/>
+            </xsl:when>
+            <!-- the other file shall be transposed, not this one -->
+            <xsl:when test="$transpose.mode = 'matchFile1'">
+                <xsl:sequence select="//mei:mei[1]"/>
+            </xsl:when>
+            <!-- this file needs to be transposed to match file 2 -->
+            <xsl:when test="$transpose.mode = 'matchFile2'">
+                
+                <!-- determine other file's key -->
+                <xsl:variable name="target.key" select="(//mei:mei[2]//mei:section)[1]/@base.key" as="xs:string"/>
+                
+                <xsl:apply-templates select="//mei:mei[1]" mode="transpose">
+                    <xsl:with-param name="target.key.name" select="$target.key" tunnel="yes"/>
+                </xsl:apply-templates>
+            </xsl:when>
+            <!-- this file shall be transposed to avoid accidentals as much as possible -->
+            <xsl:when test="$transpose.mode = 'C'">
+                <xsl:apply-templates select="//mei:mei[1]" mode="transpose">
+                    <xsl:with-param name="target.key.name" select="'C'" tunnel="yes"/>
+                </xsl:apply-templates>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:sequence select="//mei:mei[1]"/>
+            </xsl:otherwise>
+        </xsl:choose>
+        
+    </xsl:variable>
+    <xsl:variable name="second.file" as="node()">
+        
+        <xsl:choose>
+            <!-- no file shall be transposed -->
+            <xsl:when test="$transpose.mode = 'none'">
+                <xsl:sequence select="//mei:mei[2]"/>
+            </xsl:when>
+            <!-- the other file shall be transposed, not this one -->
+            <xsl:when test="$transpose.mode = 'matchFile1'">
+                
+                <!-- determine other file's key first -->
+                <xsl:variable name="target.key" select="(//mei:mei[1]//mei:section)[1]/@base.key" as="xs:string"/>
+                
+                <xsl:apply-templates select="//mei:mei[2]" mode="transpose">
+                    <xsl:with-param name="target.key.name" select="$target.key" tunnel="yes"/>
+                </xsl:apply-templates>
+                
+            </xsl:when>
+            <!-- this file needs to be transposed to match file 2 -->
+            <xsl:when test="$transpose.mode = 'matchFile2'">
+                
+                <xsl:sequence select="//mei:mei[2]"/>
+                
+            </xsl:when>
+            <!-- this file shall be transposed to avoid accidentals as much as possible -->
+            <xsl:when test="$transpose.mode = 'C'">
+                <xsl:apply-templates select="//mei:mei[2]" mode="transpose">
+                    <xsl:with-param name="target.key.name" select="'C'" tunnel="yes"/>
+                </xsl:apply-templates>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:sequence select="//mei:mei[2]"/>
+            </xsl:otherwise>
+        </xsl:choose>
+        
+    </xsl:variable>
     <xsl:variable name="comparison.file" select="//mei:meiCorpus[1]" as="node()"/>
     <xsl:variable name="first.file.staff.count" select="count(($first.file//mei:scoreDef)[1]//mei:staffDef)" as="xs:integer"/>
     <xsl:variable name="second.file.staff.count" select="count(($second.file//mei:scoreDef)[1]//mei:staffDef)" as="xs:integer"/>
+    
     <xsl:template match="/">
         <xsl:variable name="merged.files" as="node()">
             <xsl:apply-templates select="$first.file" mode="first.pass"/>
@@ -54,6 +130,7 @@
         </xsl:variable>
         <xsl:copy-of select="$output"/>
     </xsl:template>
+    
     <xsl:template match="mei:scoreDef" mode="first.pass">
         <xsl:variable name="pos" select="count(preceding::mei:scoreDef) + 1" as="xs:integer"/>
         
@@ -69,18 +146,21 @@
             </staffGrp>
         </scoreDef>
     </xsl:template>
+    
     <xsl:template match="mei:staffDef" mode="first.pass">
         <xsl:copy>
             <xsl:apply-templates select="ancestor::mei:scoreDef/@key.sig" mode="#current"/>
             <xsl:apply-templates select="node() | @*" mode="#current"/>
         </xsl:copy>
     </xsl:template>
+    
     <xsl:template match="mei:staffDef" mode="first.pass.file.2">
         <xsl:copy>
             <xsl:apply-templates select="ancestor::mei:scoreDef/@key.sig" mode="#current"/>
             <xsl:apply-templates select="node() | @*" mode="#current"/>
         </xsl:copy>
     </xsl:template>
+    
     <xsl:template match="mei:measure" mode="first.pass">
         <xsl:variable name="this.measure" select="." as="node()"/>
         <xsl:variable name="pos" select="count(preceding::mei:measure)" as="xs:integer"/>
