@@ -40,6 +40,11 @@ gulp.task('load-assets', function() {
         .pipe(newer('./build/resources/js/'))
         .pipe(gulp.dest('./build/resources/js/'));
         
+    //include d3    
+    gulp.src(['./node_modules/d3/dist/d3.min.js'])
+        .pipe(newer('./build/resources/js/'))
+        .pipe(gulp.dest('./build/resources/js/'));
+        
     //include spectre.css
     gulp.src(['./node_modules/spectre.css/dist/**/*.min.css'])
         .pipe(gulp.dest('./build/resources/css/'))

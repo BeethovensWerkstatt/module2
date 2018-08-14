@@ -16,6 +16,8 @@ let coloredNotes = {};
 
 let paintMode = true;
 
+let sunburstObject = {};
+
 function activateLoading() {
     document.querySelector('#loadingIndicator').style.display = 'block';
     document.querySelector('#loadingError').style.display = 'none';
@@ -348,20 +350,16 @@ function getFile(comparisonId,method,mdiv, transpose) {
     fetch('./resources/xql/getAnalysis.xql?comparisonId=' + comparisonId + '&method=' + method + '&mdiv=' + mdiv + '&transpose=' + transpose)
         .then((response) => {
             return response.text();
-            console.log(1)
         })
         .catch((error) => {
             console.error('Error loading comparison:', error);
             showLoadingError();
         })
         .then((mei) => {
-            console.log(2)
+            //todo: check if result is really ok…
             finishLoading();
-            console.log(3)
             renderMEI(mei);
-            console.log('next: loadPage')
             loadPage(1);
-            console.log('finished: loadPage')
         });
 }
 
@@ -572,6 +570,203 @@ function allowPainting(bool) {
     
 }
 
+function setupSunburst() {
+
+    console.log('setupSunburst()')
+
+    let width = 300;
+    let height = 300;
+    let radius = (Math.min(width, height) / 2) - 10;
+    let centerRadius = 0.4 * radius;
+    let backCircleRadius = 0.1 * radius;
+    
+    sunburstObject.width = width;
+    sunburstObject.height = height;
+    sunburstObject.radius = radius;
+    sunburstObject.centerRadius = centerRadius;
+    sunburstObject.backCircleRadius = backCircleRadius;
+    
+    let data = {
+        "name": "A",
+        "children": [
+          { "name": "B", "value": 25 },
+          {
+            "name": "C",
+            "children": [{ "name": "D", "value": 10 }, { "name": "E", "value": 15 }, { "name": "F", "value": 10 }]
+          },
+          { "name": "G", "value": 15 },
+          {
+            "name": "H",
+            "children": [{ "name": "I", "value": 20 }, { "name": "J", "value": 10 }]
+          },
+          { "name": "K", "value": 10 }
+        ]
+      };
+    
+    sunburstObject.data = data;
+    
+    /*let formatNumber = d3.format(",d");
+    
+    let x = d3.scaleLinear()
+        .range([0, 2 * Math.PI]);
+    
+    let y = d3.scaleSqrt()
+        .range([0, radius]);
+    
+    let color = d3.scaleOrdinal.range(["#A07A19", "#AC30C0", "#EB9A72", "#BA86F5", "#EA22A8"]);*/
+    //d3.scale.category20c();
+    
+    
+    
+    
+    /*let partition = d3.partition()
+        .value(function(d) { return d.size; });
+    
+    let arc = d3.svg.arc()
+        .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x))); })
+        .endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x + d.dx))); })
+        .innerRadius(function(d) { return Math.max(0, y(d.y)); })
+        .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });*/
+    
+    let svg = d3.select('#sunburst').append('svg')
+        .attr('width', width)
+        .attr('height', height);
+        
+    let g = svg.append('g')
+        .attr('id','sunburstG')
+        .attr('transform', 'translate(' + width / 2 + ',' + (height / 2) + ')');
+     
+    sunburstObject.g = g;   
+    
+    let colorScale = d3.scaleOrdinal().range([
+        "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"
+    ]);
+    let xScale = d3.scaleLinear().range([0, 2 * Math.PI]);
+    let rScale = d3.scaleLinear().range([0.4 * radius, radius]);
+    
+    sunburstObject.colorScale = colorScale;
+    sunburstObject.xScale = xScale;
+    sunburstObject.rScale = rScale;
+    
+    /*d3.json('flare.json', function(error, root) {
+      if (error) throw error;
+    
+      svg.selectAll('path')
+          .data(partition.nodes(root))
+          .enter().append('path')
+          .attr('d', arc)
+          .style('fill', function(d) { return color((d.children ? d : d.parent).name); })
+          .on('click', sunburstClick)
+          .append('title')
+          .text(function(d) { return d.name + '\n' + formatNumber(d.value); });
+    });*/
+    
+    /*d3.select(self.frameElement).style('height', height + 'px');*/
+    
+    let root = d3.hierarchy(data);
+    root.sum(function(d) { return d.value; })
+        .sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+        
+    let partition = d3.partition();
+    partition(root);
+    
+    let arc = d3.arc()
+        .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, xScale(d.x0))); })
+        .endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, xScale(d.x1))); })
+        .innerRadius(function(d) { return Math.max(0, rScale(d.y0)); })
+        .outerRadius(function(d) { return Math.max(0, rScale(d.y1)); });
+    
+    sunburstObject.arc = arc;
+    
+    g.selectAll("path")
+        .data(root.descendants())
+        .enter()
+        .append("path")
+        .attr("d", arc)
+        .attr('stroke', '#fff')
+        .attr("fill", function(d) {
+          while(d.depth > 1) d = d.parent;
+          if(d.depth == 0) return "lightgray";
+          return colorScale(d.value);
+        })
+        .attr("opacity", 0.8)
+        .on("click", sunburstClick)
+        .append("title")
+        .text(function(d) { return d.data.name + "\n" + d.value; });
+     
+      g.selectAll("text")
+        .data(root.descendants())
+        .enter()
+        .append("text")
+        .attr("fill", "black")
+        .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+        .attr("dy", "5px")
+        .attr("font", "10px")
+        .attr("text-anchor", "middle")
+        .on("click", sunburstClick)
+        .text(function(d) { return d.data.name; });
+    
+    console.log('finished setting up sunburst')
+    
+}
+
+function sunburstClick(d) {
+    
+    console.log('starting sunburstClick')
+    
+    /*svg.transition()
+        .duration(750)
+        .tween('scale', function() {
+            let xd = d3.interpolate(x.domain(), [d.x, d.x + d.dx]);
+            let yd = d3.interpolate(y.domain(), [d.y, 1]);
+            let yr = d3.interpolate(y.range(), [d.y ? 20 : 0, radius]);
+            
+            return function(t) { x.domain(xd(t)); y.domain(yd(t)).range(yr(t)); };
+        })
+        .selectAll('path')
+        .attrTween('d', function(d) { return function() { return arc(d); }; });*/
+    var tween = sunburstObject.g.transition()
+      .duration(500)
+      .tween("scale", function() {
+        var xdomain = d3.interpolate(sunburstObject.xScale.domain(), [d.x0, d.x1]);
+        var ydomain = d3.interpolate(sunburstObject.rScale.domain(), [d.y0, 1]);
+        var yrange = d3.interpolate(sunburstObject.rScale.range(), [d.y0 ? sunburstObject.backCircleRadius : sunburstObject.centerRadius, sunburstObject.radius]);
+        return function(t) {
+          sunburstObject.xScale.domain(xdomain(t));
+          sunburstObject.rScale.domain(ydomain(t)).range(yrange(t));
+        };
+      });
+ 
+    tween.selectAll("path")
+      .attrTween("d", function(d) {
+        return function() {
+          return sunburstObject.arc(d);
+        };
+      });
+ 
+    tween.selectAll("text")
+      .attrTween("transform", function(d) {
+        return function() {
+          return "translate(" + sunburstObject.arc.centroid(d) + ")";
+        };
+      })
+      .attrTween("opacity", function(d) {
+        return function() {
+          return(sunburstObject.xScale(d.x0) < 2 * Math.PI) && (sunburstObject.xScale(d.x1) > 0.0) && (sunburstObject.rScale(d.y1) > 0.0) ? 1.0 : 0;
+        };
+      })
+      .attrTween("font", function(d) {
+        return function() {
+          return(sunburstObject.xScale(d.x0) < 2 * Math.PI) && (sunburstObject.xScale(d.x1) > 0.0) && (sunburstObject.rScale(d.y1) > 0.0) ? "10px" : 1e-6;
+        };
+      });
+      
+      console.log('finished sunburstClick')
+}
+
+console.log('1')
+setupSunburst();
+console.log('2')
 setListeners();
 prepareColors();
 getComparisonListing();
