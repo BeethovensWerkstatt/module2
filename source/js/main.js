@@ -106,7 +106,6 @@ function setListeners() {
             setOptions();
             loadPage(page);
         }
-        console.log('clicked zoomOut, new zoom: ' + zoom)
     });
     
     document.querySelector('#zoomIn').addEventListener('click',(e) => {
@@ -117,7 +116,6 @@ function setListeners() {
             setOptions();
             loadPage(page);
         }
-        console.log('clicked zoomIn, new zoom: ' + zoom)
     });
     
     document.querySelector('#prevPage').addEventListener('click',(e) => {
@@ -196,7 +194,6 @@ function setListeners() {
             }
             loadPage(page);
             
-            console.log('layout redone')
         } catch(err) {
             console.log('ERROR: Unable to redo Verovio layout: ' + err);
         }
@@ -364,16 +361,15 @@ function getFile(comparisonId,method,mdiv, transpose) {
             finishLoading();
             renderMEI(mei);
             loadPage(1);
-            console.log('me in')
             sunburstLoadData(mei);
-            console.log('\n\nme out!!')
         });
 }
 
-function loadPage(page) {
+function loadPage(newPage) {
     
     removePageListeners();
-    document.querySelector('#pageNum').value = page;
+    page = newPage;
+    document.querySelector('#pageNum').value = newPage;
     let svg = vrvToolkit.renderToSVG(page, options);
     
     let svgContainer = document.querySelector('#svgContainer');
@@ -438,7 +434,6 @@ function clickNote(e) {
         
         coloredNotes[note.id] = activeColor;       
     } else {
-        console.log(note.classList)
         
         let idMatches = [... note.classList].filter(cl => cl.startsWith('id:'));
         let osMatches = [... note.classList].filter(cl => cl.startsWith('os:'));
@@ -584,13 +579,11 @@ function allowPainting(bool) {
 
 function setupSunburst() {
 
-    console.log('setupSunburst()')
-
-    let width = 200;
-    let height = 200;
+    let width = 300;
+    let height = 300;
     let radius = (Math.min(width, height) / 2) - 10;
-    let centerRadius = 0.4 * radius;
-    let backCircleRadius = 0.1 * radius;
+    let centerRadius = 0.3 * radius;
+    let backCircleRadius = 0.15 * radius;
     
     sunburstObject.width = width;
     sunburstObject.height = height;
@@ -645,8 +638,6 @@ function sunburstRemoveData() {
 //load data into sunburst
 function sunburstLoadData(mei) {
     
-    console.log('loading sunburst data')
-    
     let data = buildSunburstDataFromMEI(mei);
     sunburstObject.data = data;
     
@@ -664,19 +655,51 @@ function sunburstLoadData(mei) {
         .append('path').classed('sunburstPath',true)
         .attr('d', sunburstObject.arc)
         .attr('stroke', function(d) {
+        
+            if(d.data.idLevel !== 'undefined' && d.data.level === 'measure' && d.data.idLevel < 1) {
+                return 'rgb(255,' + d.data.idLevel * 255 + ',' + d.data.idLevel * 255 + ')';
+            } else {
+                return '#bbbbbb';
+            } 
+        
             while(d.depth > 1) d = d.parent;
             if(d.depth == 0) return 'lightgray';
             return d3.color(sunburstObject.colorScale(d.value)).darker(.5);
         })
         .attr('fill', function(d) {
+            
+            if(d.data.idLevel !== 'undefined' && d.data.level === 'measure' && d.data.idLevel < 1) {
+                return 'rgb(255,' + d.data.idLevel * 255 + ',' + d.data.idLevel * 255 + ')';
+            } else if(d.data.level === 'measure' && d.parent.data.n % 2 === 0) {
+                return '#cccccc';
+            } else if(d.data.level === 'measure' && d.parent.data.n % 2 === 1) {
+                return '#e5e5e5';
+            } else if(d.data.level === 'section' && d.data.n % 2 === 0) {
+                return '#cccccc';
+            } else if(d.data.level === 'section' && d.data.n % 2 === 1) {
+                return '#e5e5e5';
+            } 
+            
             while(d.depth > 1) d = d.parent;
-            if(d.depth == 0) return 'lightgray';
+            if(d.depth == 0) {
+                return 'lightgray';
+            } 
             return sunburstObject.colorScale(d.value);
         })
         .attr('opacity', 0.8)
         .on('click', sunburstClick)
         .append('title')
-        .text(function(d) { return d.data.name; });
+        .text(function(d) { 
+            if(d.data.level === 'measure' && typeof d.data.idLevel !== 'undefined') {
+                return 'Measure ' + d.data.n + '\nid:' + d.data.idLevel + '\nsim:' + d.data.simLevel + '\ndiff:' + d.data.diffLevel; 
+            } else if(d.data.level === 'measure') {
+                return 'Measure ' + d.data.n;
+            } else if(d.data.level === 'section') {
+                return 'Section ' + d.data.n;
+            }
+            return d.data.name;
+        });
+            
     } catch(err) {
         console.error('error1: ' + err)
     }
@@ -697,8 +720,6 @@ function sunburstLoadData(mei) {
         console.error('error2: ' + err)
     }*/
     
-    console.log('finished setting up sunburst')
-    
 }
 
 function buildSunburstDataFromMEI(mei) {
@@ -706,7 +727,7 @@ function buildSunburstDataFromMEI(mei) {
     let oParser = new DOMParser();
     let oDOM = oParser.parseFromString(mei, "application/xml");
     // print the name of the root element or error message
-    console.log(oDOM.documentElement.nodeName == "parsererror" ? "error while parsing" : oDOM.documentElement.nodeName);
+    //console.log(oDOM.documentElement.nodeName == "parsererror" ? "error while parsing" : oDOM.documentElement.nodeName);
     
     try {
         
@@ -722,10 +743,10 @@ function buildSunburstDataFromMEI(mei) {
         let sections = score.querySelectorAll('section');
         for (let i=0;i<sections.length;i++) {
             
-            let label = i + 1;
+            let n = i + 1;
             let section = sections[i];
             let sectionObj = {
-                name: 'Section ' + label,
+                n: n,
                 level: 'section',
                 children: []
             }
@@ -735,10 +756,16 @@ function buildSunburstDataFromMEI(mei) {
                 
                 let measure = measures[j];
                 let measureObj = {
-                    name: 'Measure ' + measure.getAttribute('n'),
+                    n: measure.getAttribute('n'),
                     level: 'measure',
                     id: measure.getAttribute('xml:id'),
                     value: 1
+                }
+                
+                if(measure.hasAttribute('differenceLevel')) {
+                    measureObj.diffLevel = measure.getAttribute('differenceLevel');
+                    measureObj.simLevel = measure.getAttribute('similarityLevel');
+                    measureObj.idLevel = measure.getAttribute('identityLevel');
                 }
                 
                 sectionObj.children.push(measureObj);
@@ -756,9 +783,18 @@ function buildSunburstDataFromMEI(mei) {
 
 function sunburstClick(d) {
     
-    console.log('starting sunburstClick')
+    if(d.data.level === 'measure') {
+        try {
+            openPageByElementID(d.data.id);
+        } catch(err) {
+            console.log('error when opening measure: ' + err)
+        }
+        
+        sunburstClick(d.parent);
+        return true;
+    }
     
-    var tween = sunburstObject.g.transition()
+    let tween = sunburstObject.g.transition()
       .duration(500)
       .tween('scale', function() {
         let xdomain = d3.interpolate(sunburstObject.xScale.domain(), [d.x0, d.x1]);
@@ -793,25 +829,10 @@ function sunburstClick(d) {
           return(sunburstObject.xScale(d.x0) < 2 * Math.PI) && (sunburstObject.xScale(d.x1) > 0.0) && (sunburstObject.rScale(d.y1) > 0.0) ? '10px' : 1e-6;
         };
       });
-      
-    console.log(d)
-    if(d.data.level === 'measure') {
-        console.log('in here')
-        try {
-            console.log('looking for ' + d.data)
-            openPageByElementID(d.data.id);
-        } catch(err) {
-            console.log('error when opening measure: ' + err)
-        }
-        
-    }
-      
-    console.log('finished sunburstClick')
+    
 }
 
-console.log('1')
 setupSunburst();
-console.log('2')
 setListeners();
 prepareColors();
 getComparisonListing();
