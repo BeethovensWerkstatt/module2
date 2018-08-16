@@ -16,12 +16,18 @@ let coloredNotes = {};
 
 let paintMode = true;
 
+let sunburstObject = {};
+
+//set MEI namespace
+d3.namespaces.mei = 'http://www.music-encoding.org/ns/mei';
+
 function activateLoading() {
     document.querySelector('#loadingIndicator').style.display = 'block';
     document.querySelector('#loadingError').style.display = 'none';
     document.querySelector('#firstTimeInstruction').style.display = 'none';
     document.querySelector('#svgContainer').style.display = 'none';
     
+    sunburstRemoveData();
 }
 
 function finishLoading() {
@@ -100,7 +106,6 @@ function setListeners() {
             setOptions();
             loadPage(page);
         }
-        console.log('clicked zoomOut, new zoom: ' + zoom)
     });
     
     document.querySelector('#zoomIn').addEventListener('click',(e) => {
@@ -111,7 +116,6 @@ function setListeners() {
             setOptions();
             loadPage(page);
         }
-        console.log('clicked zoomIn, new zoom: ' + zoom)
     });
     
     document.querySelector('#prevPage').addEventListener('click',(e) => {
@@ -190,7 +194,6 @@ function setListeners() {
             }
             loadPage(page);
             
-            console.log('layout redone')
         } catch(err) {
             console.log('ERROR: Unable to redo Verovio layout: ' + err);
         }
@@ -348,27 +351,25 @@ function getFile(comparisonId,method,mdiv, transpose) {
     fetch('./resources/xql/getAnalysis.xql?comparisonId=' + comparisonId + '&method=' + method + '&mdiv=' + mdiv + '&transpose=' + transpose)
         .then((response) => {
             return response.text();
-            console.log(1)
         })
         .catch((error) => {
             console.error('Error loading comparison:', error);
             showLoadingError();
         })
         .then((mei) => {
-            console.log(2)
+            //todo: check if result is really ok…
             finishLoading();
-            console.log(3)
             renderMEI(mei);
-            console.log('next: loadPage')
             loadPage(1);
-            console.log('finished: loadPage')
+            sunburstLoadData(mei);
         });
 }
 
-function loadPage(page) {
+function loadPage(newPage) {
     
     removePageListeners();
-    document.querySelector('#pageNum').value = page;
+    page = newPage;
+    document.querySelector('#pageNum').value = newPage;
     let svg = vrvToolkit.renderToSVG(page, options);
     
     let svgContainer = document.querySelector('#svgContainer');
@@ -433,7 +434,6 @@ function clickNote(e) {
         
         coloredNotes[note.id] = activeColor;       
     } else {
-        console.log(note.classList)
         
         let idMatches = [... note.classList].filter(cl => cl.startsWith('id:'));
         let osMatches = [... note.classList].filter(cl => cl.startsWith('os:'));
@@ -492,6 +492,11 @@ function clickNote(e) {
     let showBox = document.querySelector('#noteID');
     showBox.innerHTML = 'Item clicked:<br/>' + note.id;
     
+}
+
+function openPageByElementID(id) {
+    let page = vrvToolkit.getPageWithElement(id);
+    loadPage(page);
 }
 
 function setOptions() {
@@ -572,6 +577,262 @@ function allowPainting(bool) {
     
 }
 
+function setupSunburst() {
+
+    let width = 300;
+    let height = 300;
+    let radius = (Math.min(width, height) / 2) - 10;
+    let centerRadius = 0.3 * radius;
+    let backCircleRadius = 0.15 * radius;
+    
+    sunburstObject.width = width;
+    sunburstObject.height = height;
+    sunburstObject.radius = radius;
+    sunburstObject.centerRadius = centerRadius;
+    sunburstObject.backCircleRadius = backCircleRadius;
+    
+    let svg = d3.select('#sunburst').append('svg')
+        .attr('width', width)
+        .attr('height', height);
+        
+    let g = svg.append('g')
+        .attr('id','sunburstG')
+        .attr('transform', 'translate(' + width / 2 + ',' + (height / 2) + ')');
+    
+    sunburstObject.svg = svg;
+    sunburstObject.g = g;   
+    
+    let colorScale = d3.scaleOrdinal().range([
+        '#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf'
+    ]);
+    let xScale = d3.scaleLinear().range([0, 2 * Math.PI]);
+    let rScale = d3.scaleLinear().range([0.4 * radius, radius]);
+    
+    sunburstObject.colorScale = colorScale;
+    sunburstObject.xScale = xScale;
+    sunburstObject.rScale = rScale;
+    
+    let arc = d3.arc()
+        .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, xScale(d.x0))); })
+        .endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, xScale(d.x1))); })
+        .innerRadius(function(d) { return Math.max(0, rScale(d.y0)); })
+        .outerRadius(function(d) { return Math.max(0, rScale(d.y1)); });
+    
+    sunburstObject.arc = arc;
+    
+    
+    
+}
+
+//empty sunburst diagram
+function sunburstRemoveData() {
+    try {
+        if(typeof sunburstObject.g !== 'undefined') {
+            sunburstObject.g.selectAll('.sunburstPath').remove();    
+        }
+    } catch(err) {
+        console.error('ERROR: Unable to empty sunburst diagram: ' + err);
+    }    
+}
+
+//load data into sunburst
+function sunburstLoadData(mei) {
+    
+    let data = buildSunburstDataFromMEI(mei);
+    sunburstObject.data = data;
+    
+    let root = d3.hierarchy(data);
+    root.sum(function(d) { return d.value; })
+        .sort(function(a, b) { return 1.5 });
+    
+    let partition = d3.partition();
+    partition(root);
+    
+    try {
+        sunburstObject.g.selectAll('path')
+        .data(root.descendants())
+        .enter()
+        .append('path').classed('sunburstPath',true)
+        .attr('d', sunburstObject.arc)
+        .attr('stroke', function(d) {
+        
+            if(d.data.idLevel !== 'undefined' && d.data.level === 'measure' && d.data.idLevel < 1) {
+                return 'rgb(255,' + d.data.idLevel * 255 + ',' + d.data.idLevel * 255 + ')';
+            } else {
+                return '#bbbbbb';
+            } 
+        
+            while(d.depth > 1) d = d.parent;
+            if(d.depth == 0) return 'lightgray';
+            return d3.color(sunburstObject.colorScale(d.value)).darker(.5);
+        })
+        .attr('fill', function(d) {
+            
+            if(d.data.idLevel !== 'undefined' && d.data.level === 'measure' && d.data.idLevel < 1) {
+                return 'rgb(255,' + d.data.idLevel * 255 + ',' + d.data.idLevel * 255 + ')';
+            } else if(d.data.level === 'measure' && d.parent.data.n % 2 === 0) {
+                return '#cccccc';
+            } else if(d.data.level === 'measure' && d.parent.data.n % 2 === 1) {
+                return '#e5e5e5';
+            } else if(d.data.level === 'section' && d.data.n % 2 === 0) {
+                return '#cccccc';
+            } else if(d.data.level === 'section' && d.data.n % 2 === 1) {
+                return '#e5e5e5';
+            } 
+            
+            while(d.depth > 1) d = d.parent;
+            if(d.depth == 0) {
+                return 'lightgray';
+            } 
+            return sunburstObject.colorScale(d.value);
+        })
+        .attr('opacity', 0.8)
+        .on('click', sunburstClick)
+        .append('title')
+        .text(function(d) { 
+            if(d.data.level === 'measure' && typeof d.data.idLevel !== 'undefined') {
+                return 'Measure ' + d.data.n + '\nid:' + d.data.idLevel + '\nsim:' + d.data.simLevel + '\ndiff:' + d.data.diffLevel; 
+            } else if(d.data.level === 'measure') {
+                return 'Measure ' + d.data.n;
+            } else if(d.data.level === 'section') {
+                return 'Section ' + d.data.n;
+            }
+            return d.data.name;
+        });
+            
+    } catch(err) {
+        console.error('error1: ' + err)
+    }
+    
+    /*try {
+        sunburstObject.g.selectAll('text')
+        .data(root.descendants())
+        .enter()
+        .append('text')
+        .attr('fill', 'black')
+        .attr('transform', function(d) { return 'translate(' + sunburstObject.arc.centroid(d) + ')'; })
+        .attr('dy', '5px')
+        .attr('font', '10px')
+        .attr('text-anchor', 'middle')
+        .on('click', sunburstClick)
+        .text(function(d) { return d.data.name; });
+    } catch(err) {
+        console.error('error2: ' + err)
+    }*/
+    
+}
+
+function buildSunburstDataFromMEI(mei) {
+    
+    let oParser = new DOMParser();
+    let oDOM = oParser.parseFromString(mei, "application/xml");
+    // print the name of the root element or error message
+    //console.log(oDOM.documentElement.nodeName == "parsererror" ? "error while parsing" : oDOM.documentElement.nodeName);
+    
+    try {
+        
+        let meiDoc = oDOM.documentElement;
+        
+        let score = meiDoc.querySelector('score');
+        let obj = {
+            name: score.parentNode.getAttribute('label'),
+            level: 'mdiv',
+            children: []
+        }
+        
+        let sections = score.querySelectorAll('section');
+        for (let i=0;i<sections.length;i++) {
+            
+            let n = i + 1;
+            let section = sections[i];
+            let sectionObj = {
+                n: n,
+                level: 'section',
+                children: []
+            }
+            
+            let measures = section.querySelectorAll('measure');
+            for(let j=0;j<measures.length;j++) {
+                
+                let measure = measures[j];
+                let measureObj = {
+                    n: measure.getAttribute('n'),
+                    level: 'measure',
+                    id: measure.getAttribute('xml:id'),
+                    value: 1
+                }
+                
+                if(measure.hasAttribute('differenceLevel')) {
+                    measureObj.diffLevel = measure.getAttribute('differenceLevel');
+                    measureObj.simLevel = measure.getAttribute('similarityLevel');
+                    measureObj.idLevel = measure.getAttribute('identityLevel');
+                }
+                
+                sectionObj.children.push(measureObj);
+            }
+            
+            obj.children.push(sectionObj);
+            
+        }
+        
+        return obj;
+    } catch(err) {
+        console.log('error:buildSunburstDataFromMEI ' + err)
+    }
+}
+
+function sunburstClick(d) {
+    
+    if(d.data.level === 'measure') {
+        try {
+            openPageByElementID(d.data.id);
+        } catch(err) {
+            console.log('error when opening measure: ' + err)
+        }
+        
+        sunburstClick(d.parent);
+        return true;
+    }
+    
+    let tween = sunburstObject.g.transition()
+      .duration(500)
+      .tween('scale', function() {
+        let xdomain = d3.interpolate(sunburstObject.xScale.domain(), [d.x0, d.x1]);
+        let ydomain = d3.interpolate(sunburstObject.rScale.domain(), [d.y0, 1]);
+        let yrange = d3.interpolate(sunburstObject.rScale.range(), [d.y0 ? sunburstObject.backCircleRadius : sunburstObject.centerRadius, sunburstObject.radius]);
+        return function(t) {
+          sunburstObject.xScale.domain(xdomain(t));
+          sunburstObject.rScale.domain(ydomain(t)).range(yrange(t));
+        };
+      });
+ 
+    tween.selectAll('path')
+      .attrTween('d', function(d) {
+        return function() {
+          return sunburstObject.arc(d);
+        };
+      });
+ 
+    tween.selectAll('text')
+      .attrTween('transform', function(d) {
+        return function() {
+          return 'translate(' + sunburstObject.arc.centroid(d) + ')';
+        };
+      })
+      .attrTween('opacity', function(d) {
+        return function() {
+          return(sunburstObject.xScale(d.x0) < 2 * Math.PI) && (sunburstObject.xScale(d.x1) > 0.0) && (sunburstObject.rScale(d.y1) > 0.0) ? 1.0 : 0;
+        };
+      })
+      .attrTween('font', function(d) {
+        return function() {
+          return(sunburstObject.xScale(d.x0) < 2 * Math.PI) && (sunburstObject.xScale(d.x1) > 0.0) && (sunburstObject.rScale(d.y1) > 0.0) ? '10px' : 1e-6;
+        };
+      });
+    
+}
+
+setupSunburst();
 setListeners();
 prepareColors();
 getComparisonListing();

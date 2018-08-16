@@ -29,6 +29,8 @@
     <xsl:include href="compare/identify.identity.xsl"/>
     <xsl:include href="compare/compare.event.density.xsl"/>
     
+    <xsl:include href="compare/determine.variation.xsl"/>
+    
     <xsl:variable name="first.file" as="node()">
         
         <xsl:choose>
@@ -115,7 +117,10 @@
                     <xsl:variable name="identified.identity" as="node()">
                         <xsl:apply-templates select="$merged.files" mode="add.invariance"/>
                     </xsl:variable>
-                    <xsl:copy-of select="$identified.identity"/>
+                    <xsl:variable name="determined.variation" as="node()">
+                        <xsl:apply-templates select="$identified.identity" mode="determine.variantion"/>
+                    </xsl:variable>
+                    <xsl:copy-of select="$determined.variation"/>
                 </xsl:when>
                 <xsl:when test="$method = 'eventDensity'">
                     <xsl:variable name="compared.event.density" as="node()">
