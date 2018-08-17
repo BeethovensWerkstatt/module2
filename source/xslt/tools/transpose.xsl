@@ -218,10 +218,10 @@
                 <xsl:value-of select="'up'"/>
             </xsl:when>
             <xsl:when test="$index.start.key lt $index.target.key and ($index.target.key - $index.start.key lt 4)">
-                <xsl:value-of select="'down'"/>
+                <xsl:value-of select="'up'"/>
             </xsl:when>
             <xsl:when test="$index.start.key lt $index.target.key and ($index.target.key - $index.start.key ge 4)">
-                <xsl:value-of select="'up'"/>
+                <xsl:value-of select="'down'"/>
             </xsl:when>
             <!-- default -->
             <xsl:otherwise>
