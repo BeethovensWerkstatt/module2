@@ -657,7 +657,14 @@ function sunburstLoadData(mei) {
         .attr('stroke', function(d) {
         
             if(d.data.idLevel !== 'undefined' && d.data.level === 'measure' && d.data.idLevel < 1) {
-                return 'rgb(255,' + d.data.idLevel * 255 + ',' + d.data.idLevel * 255 + ')';
+                //return 'rgb(' + (240 - d.data.diffLevel * 240) +',0,' + (240 - d.data.simLevel * 240) + ')';
+                
+                let h = Math.round(240 + (120 * Number(d.data.diffLevel) / (Number(d.data.diffLevel) + Number(d.data.simLevel) + Number(0.0001))));
+                let s = '80%';
+                let l = Math.round((.5 + Number(d.data.idLevel) / 2) * 100) + '%';
+                let hsl = 'hsl(' + h + ',' + s + ',' + l + ')'; 
+                
+                return  hsl;
             } else {
                 return '#bbbbbb';
             } 
@@ -669,7 +676,14 @@ function sunburstLoadData(mei) {
         .attr('fill', function(d) {
             
             if(d.data.idLevel !== 'undefined' && d.data.level === 'measure' && d.data.idLevel < 1) {
-                return 'rgb(255,' + d.data.idLevel * 255 + ',' + d.data.idLevel * 255 + ')';
+                //return 'rgb(' + (240 - d.data.diffLevel * 240) +',0,' + (240 - d.data.simLevel * 240) + ')';
+                let h = Math.round(240 + (120 * Number(d.data.diffLevel) / (Number(d.data.diffLevel) + Number(d.data.simLevel) + Number(0.0001))));
+                let s = '80%';
+                let l = Math.round((.5 + Number(d.data.idLevel) / 2) * 100) + '%';
+                let hsl = 'hsl(' + h + ',' + s + ',' + l + ')'; 
+                
+                return  hsl;
+            
             } else if(d.data.level === 'measure' && d.parent.data.n % 2 === 0) {
                 return '#cccccc';
             } else if(d.data.level === 'measure' && d.parent.data.n % 2 === 1) {
