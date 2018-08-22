@@ -15,14 +15,9 @@ svg .noMatch {
     stroke: $highlightColor_different;
 }
 
-svg .os, svg .os.od {
-    fill: $highlightColor_octDiff_durSame;
-    stroke: $highlightColor_octDiff_durSame;
-}
-
-svg .sd {
-    fill: $highlightColor_octSame_durDiff;
-    stroke: $highlightColor_octSame_durDiff;
+svg .ts {
+    fill: $highlightColor_transp_durSame;
+    stroke: $highlightColor_transp_durSame;
 }
 
 svg .od {
@@ -30,9 +25,14 @@ svg .od {
     stroke: $highlightColor_octDiff_durDiff;
 }
 
-svg .ts {
-    fill: $highlightColor_transp_durSame;
-    stroke: $highlightColor_transp_durSame;
+svg .sd {
+    fill: $highlightColor_octSame_durDiff;
+    stroke: $highlightColor_octSame_durDiff;
+}
+
+svg .os, svg .os.od {
+    fill: $highlightColor_octDiff_durSame;
+    stroke: $highlightColor_octDiff_durSame;
 }
 
 svg .id {
