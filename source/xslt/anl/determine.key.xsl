@@ -14,7 +14,7 @@
     
     <!-- 
         Ziel: //mei:section/@base.key
-        Format: C-Dur = C; C-moll = c; eb Eb G#  
+        Format: C-Dur = C; C-moll = Cm; Cis-Dur: C#; Ces-Dur: Cb
     
     
     -->
@@ -52,7 +52,48 @@
         <xsl:message select="'Indentified section as key ' || $key"/>
         <xsl:copy>
             <xsl:attribute name="base.key" select="$key"/>
-            <xsl:apply-templates select="node() | @*" mode="#current"/>
+            <xsl:apply-templates select="node() | @*" mode="#current">
+                <xsl:with-param name="base.key" select="$key" tunnel="yes" as="xs:string"/>
+                <xsl:with-param name="relevant.scoreDef" select="$relevant.scoreDef" tunnel="yes" as="node()"/>
+            </xsl:apply-templates>
         </xsl:copy>
+    </xsl:template>
+    <xsl:template match="mei:staff" mode="determine.key">
+        <xsl:param name="relevant.scoreDef" as="node()" tunnel="yes"/>
+        
+        <xsl:variable name="current.n" select="@n" as="xs:string"/>
+        
+        <xsl:choose>
+            <!-- transposing instrument -->
+            <xsl:when test="$relevant.scoreDef//mei:staffDef[@n = $current.n][@key.sig][@key.sig != $relevant.scoreDef/@key.sig]">
+                <xsl:variable name="staff.key.sig" select="$relevant.scoreDef//mei:staffDef[@n = $current.n]/@key.sig" as="xs:string"/>
+                
+                <xsl:variable name="relevant.key.elem" as="node()">
+                    <xsl:choose>
+                        <xsl:when test="$relevant.scoreDef/@key.mode='major'">
+                            <xsl:sequence select="$circle.of.fifths//key:major[@sig = $staff.key.sig]"/>
+                        </xsl:when>
+                        <xsl:when test="$relevant.scoreDef/@key.mode='minor'">
+                            <xsl:sequence select="$circle.of.fifths//key:minor[@sig = $staff.key.sig]"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:message terminate="yes" select="'ERROR: Currently, only major and minor modes are supported.'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>
+                <xsl:variable name="key" select="$relevant.key.elem/@name" as="xs:string">
+                    <!-- todo: here was a test if that's really the right key. We could look for a Krumhansl-Schmuckler-Evaluation -->
+                </xsl:variable>
+                
+                <xsl:copy>
+                    <xsl:apply-templates select="@*" mode="#current"/>
+                    <xsl:attribute name="staff.key" select="$key"/>
+                    <xsl:apply-templates select="node()" mode="#current"/>
+                </xsl:copy>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:next-match/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 </xsl:stylesheet>
