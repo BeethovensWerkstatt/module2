@@ -112,7 +112,37 @@
         <xsl:variable name="pitches" select="('c','d','e','f','g','a','b')" as="xs:string+"/>
         <xsl:variable name="index.of.key" select="index-of($pitches,lower-case(substring($key,1,1)))" as="xs:integer"/>
         <xsl:variable name="index.of.pname" select="index-of($pitches,$note/@pname)" as="xs:integer"/>
-        <xsl:variable name="oct.mod" select="if($index.of.pname lt $index.of.key) then(-1) else(0)" as="xs:integer"/>
+        <xsl:variable name="oct.mod" as="xs:integer">
+            <xsl:choose>
+                <xsl:when test="$index.of.key = 1">
+                    <xsl:value-of select="0"/>
+                </xsl:when>
+                <xsl:when test="$index.of.key = 2 and $index.of.pname = 7">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>
+                <xsl:when test="$index.of.key = 3 and $index.of.pname lt 3">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>
+                <xsl:when test="$index.of.key = 4 and $index.of.pname lt 4">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>
+                <xsl:when test="$index.of.key = 5 and $index.of.pname ge 5">
+                    <xsl:value-of select="1"/>
+                </xsl:when>
+                <xsl:when test="$index.of.key = 6 and $index.of.pname ge 6">
+                    <xsl:value-of select="1"/>
+                </xsl:when>
+                <xsl:when test="$index.of.key = 7 and $index.of.pname = 7">
+                    <xsl:value-of select="1"/>
+                </xsl:when>
+                <!--<xsl:when test="$index.of.pname lt $index.of.key">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>-->
+                <xsl:otherwise>
+                    <xsl:value-of select="0"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
         <xsl:variable name="output" select="string($note/number(@oct) + $oct.mod)" as="xs:string"/>
         <xsl:value-of select="$output"/>
     </xsl:function>
