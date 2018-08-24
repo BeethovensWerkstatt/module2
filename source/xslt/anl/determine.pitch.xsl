@@ -1,4 +1,4 @@
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:custom="none" xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:uuid="http://www.uuid.org" exclude-result-prefixes="xs math xd mei custom uuid" version="3.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:key="none" xmlns:custom="none" xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:uuid="http://www.uuid.org" exclude-result-prefixes="xs math xd mei custom uuid" version="3.0">
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p>
@@ -8,7 +8,9 @@
             <xd:p/>
         </xd:desc>
     </xd:doc>
-    <xsl:include href="../data/keyMatrix.xsl"/>
+    
+    <!-- requires circleOf5.xsl -->
+    
     <xsl:template match="mei:measure" mode="determine.pitch">
         <xsl:variable name="added.normalized.pitch" as="node()*">
             <xsl:apply-templates select="child::node()" mode="determine.pitch_add.normalized.pitch"/>
@@ -24,7 +26,7 @@
         </xsl:copy>
     </xsl:template>
     <xsl:template match="mei:note" mode="determine.pitch_add.normalized.pitch">
-        <xsl:variable name="key" select="ancestor::mei:section[@base.key]/@base.key" as="xs:string"/>
+        <xsl:variable name="key" select="if(ancestor::mei:staff/@staff.key) then(ancestor::mei:staff/@staff.key) else(ancestor::mei:section[@base.key]/@base.key)" as="xs:string"/>
         <xsl:copy>
             <xsl:attribute name="pitch" select="custom:qualifyPitch(., $key)"/>
             <xsl:attribute name="rel.oct" select="custom:determineOct(., $key)"/>
@@ -51,107 +53,58 @@
     <xsl:function name="custom:qualifyPitch" as="xs:string">
         <xsl:param name="note" as="node()" required="yes"/>
         <xsl:param name="key" as="xs:string" required="yes"/>
-        <xsl:variable name="mode" as="xs:string">
-            <xsl:choose>
-                <xsl:when test="matches(substring($key,1,1),'[A-G]')">major</xsl:when>
-                <xsl:when test="matches(substring($key,1,1),'[a-g]')">minor</xsl:when>
-                <xsl:otherwise>
-                    <xsl:message terminate="yes" select="'ERROR: Unable to identify key mode'"/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
-        <xsl:variable name="base.step" as="xs:double">
-            <xsl:choose>
-                <xsl:when test="$mode = 'major'">
-                    <xsl:value-of select="number($key.matrix//custom:major/custom:base.steps/@*[local-name() = $note/@pname])"/>
-                </xsl:when>
-                <xsl:when test="$mode = 'minor'">
-                    <xsl:value-of select="number($key.matrix//custom:minor/custom:base.steps/@*[local-name() = $note/@pname])"/>
-                </xsl:when>
-            </xsl:choose>
-        </xsl:variable>
-        <xsl:variable name="relevant.key" as="node()">
-            <xsl:choose>
-                <xsl:when test="$mode = 'major'">
-                    <!-- major -->
-                    <xsl:sequence select="$key.matrix//custom:major/custom:key[@base = lower-case(substring($key,1,1))]"/>
-                </xsl:when>
-                <xsl:when test="$mode = 'minor'">
-                    <!-- minor -->
-                    <xsl:sequence select="$key.matrix//custom:minor/custom:key[@base = lower-case(substring($key,1,1))]"/>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:message terminate="yes" select="'ERROR: Unable to identify relevant key'"/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
-        <xsl:variable name="key.step.offset" select="number($relevant.key/@step.offset)" as="xs:double"/>
-        <xsl:variable name="step" select="if($base.step + $key.step.offset lt 1) then($base.step + $key.step.offset + 7) else($base.step + $key.step.offset)" as="xs:double"/>
-        <xsl:variable name="pname.baseAccid" select="number($relevant.key/@*[local-name() = $note/@pname])" as="xs:double"/>
-        <xsl:variable name="key.accid.modifier" as="xs:integer">
-            <xsl:choose>
-                <xsl:when test="string-length($key) = 1">
-                    <xsl:value-of select="0"/>
-                </xsl:when>
-                <xsl:when test="substring($key,2) = 'bb'">
-                    <xsl:value-of select="-2"/>
-                </xsl:when>
-                <xsl:when test="substring($key,2) = 'b'">
-                    <xsl:value-of select="-1"/>
-                </xsl:when>
-                <xsl:when test="substring($key,2) = '##'">
-                    <xsl:value-of select="2"/>
-                </xsl:when>
-                <xsl:when test="substring($key,2) = '#'">
-                    <xsl:value-of select="1"/>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:message terminate="yes" select="'Unable to parse key ' || $key"/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
-        <xsl:variable name="accid.value" as="xs:double">
+        
+        <xsl:variable name="key.elem" select="$circle.of.fifths//key:*[@name = $key]" as="node()"/>
+        
+        <xsl:variable name="base.step" select="number($key.elem//@*[local-name() = $note/@pname])" as="xs:double"/>
+        
+        <xsl:variable name="local.accid.name" as="xs:string">
             <xsl:choose>
                 <xsl:when test="$note/@accid">
-                    <xsl:value-of select="number($key.matrix//custom:accid.mod/@*[local-name() = string($note/@accid)]) + ($pname.baseAccid * -1)"/>
+                    <xsl:value-of select="$note/@accid"/>
                 </xsl:when>
                 <xsl:when test="$note/@accid.ges">
-                    <xsl:value-of select="number($key.matrix//custom:accid.mod/@*[local-name() = string($note/@accid.ges)]) + ($pname.baseAccid * -1)"/>
+                    <xsl:value-of select="$note/@accid.ges"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="$pname.baseAccid + $key.accid.modifier"/>
+                    <xsl:value-of select="'n'"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="resulting.mod" as="xs:string">
+        <xsl:variable name="local.accid.value" select="$accidental.values/descendant-or-self::key:accid.value/number(@*[local-name() = $local.accid.name])" as="xs:double"/>
+        
+        <xsl:variable name="regular.accid.value" select="number($key.elem/parent::key:pos/@*[local-name() = $note/@pname])" as="xs:double"/>
+        <xsl:variable name="accid.diff" select="$local.accid.value - $regular.accid.value" as="xs:double"/>
+        
+        <xsl:variable name="step.mod" as="xs:string">
             <xsl:choose>
-                <xsl:when test="$accid.value = -3">
+                <xsl:when test="$accid.diff = -3">
                     <xsl:value-of select="'---'"/>
                 </xsl:when>
-                <xsl:when test="$accid.value = -2">
+                <xsl:when test="$accid.diff = -2">
                     <xsl:value-of select="'--'"/>
                 </xsl:when>
-                <xsl:when test="$accid.value = -1">
+                <xsl:when test="$accid.diff = -1">
                     <xsl:value-of select="'-'"/>
                 </xsl:when>
-                <xsl:when test="$accid.value = 0">
+                <xsl:when test="$accid.diff = 0">
                     <xsl:value-of select="''"/>
                 </xsl:when>
-                <xsl:when test="$accid.value = 1">
+                <xsl:when test="$accid.diff = 1">
                     <xsl:value-of select="'+'"/>
                 </xsl:when>
-                <xsl:when test="$accid.value = 2">
+                <xsl:when test="$accid.diff = 2">
                     <xsl:value-of select="'++'"/>
                 </xsl:when>
-                <xsl:when test="$accid.value = 3">
+                <xsl:when test="$accid.diff = 3">
                     <xsl:value-of select="'+++'"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="$accid.value"/>
+                    <xsl:value-of select="''"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:value-of select="concat(string($step),$resulting.mod)"/>
+        <xsl:value-of select="concat($base.step,$step.mod)"/>
     </xsl:function>
     <xsl:function name="custom:determineOct" as="xs:string">
         <xsl:param name="note" as="node()" required="yes"/>
@@ -159,7 +112,37 @@
         <xsl:variable name="pitches" select="('c','d','e','f','g','a','b')" as="xs:string+"/>
         <xsl:variable name="index.of.key" select="index-of($pitches,lower-case(substring($key,1,1)))" as="xs:integer"/>
         <xsl:variable name="index.of.pname" select="index-of($pitches,$note/@pname)" as="xs:integer"/>
-        <xsl:variable name="oct.mod" select="if($index.of.pname lt $index.of.key) then(-1) else(0)" as="xs:integer"/>
+        <xsl:variable name="oct.mod" as="xs:integer">
+            <xsl:choose>
+                <xsl:when test="$index.of.key = 1">
+                    <xsl:value-of select="0"/>
+                </xsl:when>
+                <xsl:when test="$index.of.key = 2 and $index.of.pname = 7">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>
+                <xsl:when test="$index.of.key = 3 and $index.of.pname lt 3">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>
+                <xsl:when test="$index.of.key = 4 and $index.of.pname lt 4">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>
+                <xsl:when test="$index.of.key = 5 and $index.of.pname ge 5">
+                    <xsl:value-of select="1"/>
+                </xsl:when>
+                <xsl:when test="$index.of.key = 6 and $index.of.pname ge 6">
+                    <xsl:value-of select="1"/>
+                </xsl:when>
+                <xsl:when test="$index.of.key = 7 and $index.of.pname = 7">
+                    <xsl:value-of select="1"/>
+                </xsl:when>
+                <!--<xsl:when test="$index.of.pname lt $index.of.key">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>-->
+                <xsl:otherwise>
+                    <xsl:value-of select="0"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
         <xsl:variable name="output" select="string($note/number(@oct) + $oct.mod)" as="xs:string"/>
         <xsl:value-of select="$output"/>
     </xsl:function>
