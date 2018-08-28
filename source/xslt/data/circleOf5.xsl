@@ -15,6 +15,10 @@
         </xd:desc>
     </xd:doc>
     
+    <xsl:variable name="accidental.values" as="node()">
+        <key:accid.value s="1" f="-1" x="2" ss="2" ff="-2" xs="3" tb="-3" n="0" nf="-1" ns="1"/>
+    </xsl:variable>
+    
     <xsl:variable name="circle.of.fifths" as="node()">
         
         <key:circle5>
