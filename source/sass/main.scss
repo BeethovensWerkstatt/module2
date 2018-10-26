@@ -2,6 +2,9 @@
 @import 'fonts';
 @import 'variables';
 
+$colorVariant1: #3ce644;
+$colorVariant2: #f51d1d;
+
 // Import full Spectre source code
 @import "node_modules/spectre.css/src/spectre";
 
@@ -45,6 +48,64 @@
         
         #svgContainer {
             overflow: scroll;
+            
+            .melodicContourNote {
+                /*opacity: .5;*/
+                
+                stroke-width: 2;
+                stroke: #999999;
+                fill: none;
+                
+                mix-blend-mode: color-burn;
+                
+                &.variant1 {
+                    stroke: $colorVariant1;
+                }
+                
+                &.variant2 {
+                    stroke: $colorVariant2;
+                }
+            }
+            
+            .hovering {
+                opacity: 1;
+                stroke-width: 3;
+            }
+            
+            .melodicContourStaffLine {
+                opacity: .5;
+                
+                stroke-width: .5;
+                stroke: #999999;
+                fill: none;
+                
+                &.cline {
+                    opacity: .8;
+                    stroke: #333333;
+                }
+            }
+            
+            .melodicContourBarline {
+                opacity: .5;
+                
+                stroke-width: .8;
+                stroke: #333333;
+                fill: none;
+                
+            }
+            
+            .dot.variant1 {
+                fill: $colorVariant1;
+                opacity:1;
+            } 
+            .dot.variant2 {
+                fill: $colorVariant2;
+                opacity:1;
+            } 
+            
+            .dot-halo {
+                opacity: 1;
+            }
         }
     }
 }

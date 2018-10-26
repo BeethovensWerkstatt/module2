@@ -1,4 +1,4 @@
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:bw="http://www.beethovens-werkstatt.de/ns/bw" xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" exclude-result-prefixes="xs xd math mei bw" version="3.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:bw="http://www.beethovens-werkstatt.de/ns/bw" xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xlink="http://www.w3.org/1999/xlink" exclude-result-prefixes="xs xd math mei bw xlink" version="3.0">
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p>
@@ -34,6 +34,10 @@
     <xsl:variable name="first.file" as="node()">
         
         <xsl:choose>
+            <!-- no transposing for melodicComparison on file 1 (this is a hack!) -->
+            <xsl:when test="$method = 'melodicComparison'">
+                <xsl:sequence select="//mei:mei[1]"/>
+            </xsl:when>
             <!-- no file shall be transposed -->
             <xsl:when test="$transpose.mode = 'none'">
                 <xsl:sequence select="//mei:mei[1]"/>
@@ -67,6 +71,17 @@
     <xsl:variable name="second.file" as="node()">
         
         <xsl:choose>
+            <!-- no transposing for melodicComparison on file 1 (this is a hack!) -->
+            <xsl:when test="$method = 'melodicComparison'">
+                <xsl:choose>
+                    <xsl:when test="$comparison.file/@xml:id = 'x418650e0-d899-4e3d-bff3-f7d459e1d5d7'">
+                        <xsl:apply-templates select="//mei:mei[2]" mode="special.transpose"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:sequence select="//mei:mei[2]"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
             <!-- no file shall be transposed -->
             <xsl:when test="$transpose.mode = 'none'">
                 <xsl:sequence select="//mei:mei[2]"/>
@@ -105,30 +120,71 @@
     <xsl:variable name="second.file.staff.count" select="count(($second.file//mei:scoreDef)[1]//mei:staffDef)" as="xs:integer"/>
     
     <xsl:template match="/">
-        <xsl:variable name="merged.files" as="node()">
-            <xsl:apply-templates select="$first.file" mode="first.pass"/>
-        </xsl:variable>
         <xsl:variable name="output" as="node()">
             <xsl:choose>
                 <xsl:when test="$method = 'plain'">
+                    <xsl:variable name="merged.files" as="node()">
+                        <xsl:apply-templates select="$first.file" mode="first.pass"/>
+                    </xsl:variable>
                     <xsl:copy-of select="$merged.files"/>
                 </xsl:when>
                 <xsl:when test="$method = 'comparison'">
+                    <xsl:variable name="merged.files" as="node()">
+                        <xsl:apply-templates select="$first.file" mode="first.pass"/>
+                    </xsl:variable>
                     <xsl:variable name="identified.identity" as="node()">
                         <xsl:apply-templates select="$merged.files" mode="add.invariance"/>
                     </xsl:variable>
                     <xsl:variable name="determined.variation" as="node()">
-                        <xsl:apply-templates select="$identified.identity" mode="determine.variantion"/>
+                        <xsl:apply-templates select="$identified.identity" mode="determine.variation"/>
                     </xsl:variable>
                     <xsl:copy-of select="$determined.variation"/>
                 </xsl:when>
+                <xsl:when test="$method = 'melodicComparison'">
+                    
+                    <results>
+                            
+                        <file n="1">
+                            <xsl:apply-templates select="$first.file//mdiv/@*" mode="#current"/>
+                            <xsl:choose>
+                                <xsl:when test="$comparison.file/@xml:id = 'x68ad7295-58c5-48a0-a321-fcf8a779551f'">
+                                    <xsl:copy-of select="$second.file//mdiv/measure[position() lt 4]"/>
+                                    <xsl:variable name="offset" select="1.625" as="xs:double"/>
+                                    <xsl:apply-templates select="$first.file//mdiv/measure" mode="special.pushing">
+                                        <xsl:with-param name="offset" select="$offset" tunnel="yes"/>
+                                    </xsl:apply-templates>
+                                    <xsl:apply-templates select="$first.file//mdiv/staff" mode="special.pushing">
+                                        <xsl:with-param name="offset" select="$offset" tunnel="yes"/>
+                                    </xsl:apply-templates>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:copy-of select="$first.file//mdiv/measure"/>
+                                    <xsl:copy-of select="$first.file//mdiv/staff"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </file>
+                        <file n="2">
+                            <xsl:apply-templates select="$second.file//mdiv/@*" mode="#current"/>
+                            <xsl:copy-of select="$second.file//mdiv/measure"/>
+                            <xsl:copy-of select="$second.file//mdiv/staff"/>
+                        </file>
+                        
+                    </results>
+                    
+                </xsl:when>
                 <xsl:when test="$method = 'eventDensity'">
+                    <xsl:variable name="merged.files" as="node()">
+                        <xsl:apply-templates select="$first.file" mode="first.pass"/>
+                    </xsl:variable>
                     <xsl:variable name="compared.event.density" as="node()">
                         <xsl:apply-templates select="$merged.files" mode="compare.event.density"/>
                     </xsl:variable>
                     <xsl:copy-of select="$compared.event.density"/>
                 </xsl:when>
                 <xsl:otherwise>
+                    <xsl:variable name="merged.files" as="node()">
+                        <xsl:apply-templates select="$first.file" mode="first.pass"/>
+                    </xsl:variable>
                     <xsl:copy-of select="$merged.files"/>
                 </xsl:otherwise>
             </xsl:choose>
@@ -287,6 +343,19 @@
         <xsl:attribute name="staff" select="$current.n + $first.file.staff.count"/>
     </xsl:template>
     
+    <xsl:template match="@start" mode="special.pushing">
+        <xsl:param name="offset" tunnel="yes"/>
+        <xsl:attribute name="start" select="if(string(number(.)) != 'NaN') then(number(.) + $offset) else(.)"/>
+    </xsl:template>
+    
+    <xsl:template match="@end" mode="special.pushing">
+        <xsl:param name="offset" tunnel="yes"/>
+        <xsl:attribute name="end" select="if(string(number(.)) != 'NaN') then(number(.) + $offset) else(.)"/>
+    </xsl:template>
+    
+    <xsl:template match="*:measure/@n" mode="special.pushing">
+        <xsl:attribute name="n" select="number(.) + 2"/>
+    </xsl:template>
     
     <!-- generic copy template -->
     <xsl:template match="node() | @*" mode="#all">

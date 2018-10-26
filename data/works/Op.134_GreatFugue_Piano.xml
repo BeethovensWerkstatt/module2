@@ -29651,7 +29651,7 @@
                   <measure n="144" xml:id="x4f75f40c-86bc-4d1d-80fd-ba40818f3b26">
                      <staff n="1">
                         <layer n="1">
-                           <tuplet xml:id="x02812ac0-258d-4ad0-9036-fbce4dc78a69">
+                           <tuplet xml:id="x02812ac0-258d-4ad0-9036-fbce4dc78a69" num="3" numbase="2">
                               <beam xml:id="xcd5dedc0-7364-4fd5-b22f-0cfaae4986c9">
                                  <note xml:id="xdcfa436b-0ab5-4ecb-87e1-6a5e4b648c74"
                                        pname="g"
@@ -30773,7 +30773,7 @@
                      <staff n="2">
                         <layer n="1">
                            <!-- hier müsste Triolenziffe über der Triole stehen. -->
-                           <tuplet xml:id="x2a63b37d-ad64-43df-83f2-694164d09cf4">
+                           <tuplet xml:id="x2a63b37d-ad64-43df-83f2-694164d09cf4" num="3" numbase="2">
                               <rest xml:id="x7feb2bb6-14eb-4169-9042-c87a6a06aa3b" dur="8"/>
                               <beam xml:id="xb92e516e-e8d5-4216-89b9-eaa643117202">
                                  <note xml:id="x0ecd8aa9-d74f-4701-83fd-160e4d9e5401"

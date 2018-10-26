@@ -230,5 +230,10 @@
         </xsl:choose>
     </xsl:function>
     
+    <!-- this is a hack for op.14 -->
+    <xsl:template match="@pnum" mode="special.transpose">
+        <xsl:attribute name="pnum" select="if(string(.) != '') then(string(xs:integer(.) - 1)) else(.)"/>
+    </xsl:template>
+    
     
 </xsl:stylesheet>

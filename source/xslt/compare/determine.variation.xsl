@@ -12,7 +12,7 @@
     
     
     
-    <xsl:template match="mei:measure" mode="determine.variantion">
+    <xsl:template match="mei:measure" mode="determine.variation">
         
         <xsl:variable name="all.durations" as="xs:double*">
             <xsl:for-each select=".//mei:*[local-name() = ('note') and ancestor-or-self::mei:*/@tstamp and ancestor-or-self::mei:*/@tstamp2]">

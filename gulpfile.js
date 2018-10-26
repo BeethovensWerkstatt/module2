@@ -110,6 +110,12 @@ gulp.task('deploy-js',['js'], function() {
     gulp.src('**/*', {cwd: 'build/resources/js/'})
         .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/js/"}))
         .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/js/'}));
+        
+    gulp.src(['./source/js/main.js'])
+        .pipe(babel())
+        .pipe(concat('main.min.js'))
+        .pipe(uglify())
+        .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/js/'}));
 })
 
 //watches js for changes
