@@ -1,4 +1,7 @@
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:custom="none" xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:uuid="http://www.uuid.org" exclude-result-prefixes="xs math xd mei custom uuid" version="3.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei"
+    xmlns:custom="none" xmlns:math="http://www.w3.org/2005/xpath-functions/math"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+    xmlns:uuid="java:java.util.UUID" exclude-result-prefixes="xs math xd mei custom uuid" version="3.0">
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p>
@@ -29,7 +32,7 @@
         <xsl:variable name="seed">
             <xsl:comment select="count($elem/preceding::node())"/>
         </xsl:variable>
-        <xsl:variable name="uuid" select="uuid:get-uuid()"/>
+        <xsl:variable name="uuid" select="uuid:randomUUID()"/>
         <xsl:value-of select="'x' || $uuid"/>
     </xsl:function>
 </xsl:stylesheet>
