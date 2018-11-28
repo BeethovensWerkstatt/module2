@@ -22,10 +22,12 @@
   },
   "homepage": "https://github.com/BeethovensWerkstatt/module2#readme",
   "devDependencies": {
-    "babel-core": "~6.26.3",
+    "@babel/preset-env": "^7.1.6",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-plugin-transform-object-rest-spread": "~6.26.0",
     "babel-preset-es2015": "~6.24.1",
+    "babelify": "^8.0.0",
     "browserify": "^16.2.2",
     "dateformat": "^3.0.3",
     "del": "^3.0.0",
@@ -42,7 +44,10 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-zip": "^4.1.0"
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-zip": "^4.1.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
     "d3": "^5.5.0",

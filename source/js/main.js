@@ -1,25 +1,19 @@
-//const verovio = require('verovio-dev');
-
-// create Verovio toolkit instance
+const verovio = require('../../node_modules/verovio-dev/index.js').init(256);
 const vrvToolkit = new verovio.toolkit();
 
-// global variables
 let page = 1;
 let options;
 let maxPage;
 let comparisons = [];
 
-// verovio parameters
 let zoom = 35;
 let pageHeight = 2970;
 let pageWidth = 2100;
 
-// colors for individual analysis
 let colors = ['#eee3ce','#92908c','#000000','#26d6fc','#f4531b','#1b44f4','#859900','#d825da'];
 let activeColor = 0;
 let coloredNotes = {};
 
-// status of coloring
 let paintMode = true;
 
 let sunburstObject = {};
@@ -27,7 +21,6 @@ let sunburstObject = {};
 //set MEI namespace
 d3.namespaces.mei = 'http://www.music-encoding.org/ns/mei';
 
-// set app into loading mode
 function activateLoading() {
     document.querySelector('#loadingIndicator').style.display = 'block';
     document.querySelector('#loadingError').style.display = 'none';
@@ -46,9 +39,7 @@ function showLoadingError() {
     document.querySelector('#loadingError').style.display = 'none';
 }
 
-
 function setListeners() {
-    // set listeners for mode selection buttons
     document.querySelectorAll('.modeBtn').forEach((item,index,list) => {
         item.addEventListener('click',(e) => {
             selectMode(item.id);
@@ -107,7 +98,6 @@ function setListeners() {
         }
     });
     
-    // listeners for navigation   
     document.querySelector('#zoomOut').addEventListener('click',(e) => {
         if(zoom < 5 || zoom > 300) {
             return false;
@@ -146,7 +136,6 @@ function setListeners() {
         }
     });
     
-    // add functionality for info modal
     let infoModal = document.querySelector('#infoModal');
     
     document.querySelector('#modalCloseTop').addEventListener('click',(e) => {
@@ -183,8 +172,6 @@ function setListeners() {
         layoutOptionsModal.classList.add('active');
     });
     
-    // makes sure, verovio fits into window
-    // TODO: fix
     window.addEventListener('resize', (e) => { 
         try {
             // make sure we have loaded a file
@@ -214,7 +201,6 @@ function setListeners() {
     
 }
 
-//this function sets up the HTML and JS for individual color analysis in plain mode
 function prepareColors() {
     let swatches = document.querySelectorAll('.colorSwatch');
     swatches.forEach((swatch,index,list) => {
@@ -223,7 +209,6 @@ function prepareColors() {
     
         swatch.style.backgroundColor = color;
         
-        //set color of little marking point (depends on picked color)
         let r = parseInt(color.substr(1,2),16);
         let g = parseInt(color.substr(3,2),16);
         let b = parseInt(color.substr(5,2),16);
@@ -238,7 +223,6 @@ function prepareColors() {
     })
 }
 
-// this function de-activates the old and activates the new chosen color in plain
 function activateColor(swatch,index) {
     let oldSwatch = document.querySelector('.colorSwatch.active');
     oldSwatch.classList.remove('active');
@@ -246,9 +230,7 @@ function activateColor(swatch,index) {
     activeColor = index;
 }
 
-// load work comparison labels (and more)
 function getComparisonListing() {
-    // get the data out of the xql
     fetch('./resources/xql/getComparisonListing.xql')
         .then((response) => {
             return response.json();
@@ -258,7 +240,6 @@ function getComparisonListing() {
             
             comparisons = loadedComparisons;
             
-            // loop over every item
             for(let i=0;i<comparisons.length;i++) {
                 
                 let comparison = comparisons[i];
@@ -270,7 +251,6 @@ function getComparisonListing() {
                 document.querySelector('#comparisonsList').append(li)
             }
             
-            // when clicking on a work, activate its comparison
             document.querySelectorAll('#comparisonsList li').forEach((item,index,list) => {
                 item.addEventListener('click',(e) => {
                     activateComparison(item.id,comparisons[index]);
@@ -279,7 +259,6 @@ function getComparisonListing() {
         })
 }
 
-// adjust the GUI
 function activateComparison(id,comparison) {
     
     //console.log('activating ' + id)
@@ -306,29 +285,23 @@ function activateComparison(id,comparison) {
     
 }
 
-// gets the id from activateComparison()
 function loadComparison(id,method,mdiv) {
 
-    // means: default is plain (if nothing was selected before)
     if(typeof method === 'undefined') {
         method = document.querySelector('.modeBtn.active').id;
     }
     
-    // default mdiv is the first movement (works in the app only for Op.14/1, because only here are more than one movements)
     if(typeof mdiv === 'undefined') {
         mdiv = '1';
     }
     
-    //get the comparison object out of the array with the id, we just handed over
     let comparison = comparisons.find((obj) => {
         return obj.id === id;
     });
     
-    // "Navigation"
     let mdivSelector = document.getElementById('movements');
     mdivSelector.innerHTML = '';
     
-    // if we have more than 1 movement, add dropdown menu for the movements
     if(comparison.movements.length > 1) {
         document.getElementById('movementsBox').style.display = 'block';
         for(let i=0; i<comparison.movements.length; i++) {
@@ -355,12 +328,10 @@ function loadComparison(id,method,mdiv) {
                 activateComparison(item.id,comparison,comparison.movements[index].n);
             })
         })*/
-    // make dropdowm menu for movements invisible, if we have just one movement    
     } else {
         document.getElementById('movementsBox').style.display = 'none';
     }
     
-    // variable, that captures the current value of the radioButton
     let transpositionSetting;
     
     let transpositionRadios = document.getElementsByName('transposition');
@@ -371,17 +342,15 @@ function loadComparison(id,method,mdiv) {
         }
     }
     
-    // get the file from server (id = comparison-file, method = plain || density etc, mdiv = movement, transpositionSetting = one of four possibilities)
     getFile(id,method,mdiv,transpositionSetting);
     
 }
 
-// finally get the data :)
 function getFile(comparisonId,method,mdiv, transpose) {
     activateLoading();
     fetch('./resources/xql/getAnalysis.xql?comparisonId=' + comparisonId + '&method=' + method + '&mdiv=' + mdiv + '&transpose=' + transpose)
         .then((response) => {
-            return response.text(); // give the XML
+            return response.text();
         })
         .catch((error) => {
             console.error('Error loading comparison:', error);
@@ -404,8 +373,6 @@ function getFile(comparisonId,method,mdiv, transpose) {
             
         });
 }
-
-/* START OF MELODIC COMPARISON */
 
 function displayMelodicComparison(rawData) {
     
@@ -871,7 +838,6 @@ function drawSemiConnectedLines(svg,line,duration,data,x,y) {
         })
     }
     
-    //thickens the melodic contour line of first line 
     for(let i=0;i<variant1.staves.length;i++) {
         let currentStaff = variant1.staves[i];
         
@@ -893,7 +859,6 @@ function drawSemiConnectedLines(svg,line,duration,data,x,y) {
             .text((d, j) => {return 'Variant 1\nStaff ' + (i + 1) + ((currentStaff.label !== '')? '\n' + currentStaff.label : '')})
     }
     
-    //thickens the melodic contour line of second line 
     for(let i=0;i<variant2.staves.length;i++) {
         let currentStaff = variant2.staves[i];
         
@@ -925,20 +890,16 @@ function drawSemiConnectedLines(svg,line,duration,data,x,y) {
     
 }
 
-/* END OF MELODIC COMPARISON */
-
-// load one page to render with Verovio
 function loadPage(newPage) {
     
     removePageListeners();
     page = newPage;
-    document.querySelector('#pageNum').value = newPage; // ('#pageNum').value is the label with the information about the current page
+    document.querySelector('#pageNum').value = newPage;
     let svg = vrvToolkit.renderToSVG(page, options);
     
     let svgContainer = document.querySelector('#svgContainer');
-    svgContainer.innerHTML = ''; // empty the container
+    svgContainer.innerHTML = '';
     
-    // make svg container ready to draw on it
     let draw = SVG('svgContainer').size('100%', '100%');
     draw.clear();
     draw.svg(svg);
@@ -950,7 +911,6 @@ function loadPage(newPage) {
     addPageListeners();
 }
 
-// remove listener before page turn
 function removePageListeners() {
     
     let notes = document.querySelectorAll('#svgContainer .note');
@@ -960,10 +920,8 @@ function removePageListeners() {
     
 }
 
-// add Listeners for everything on the page (note, rest, color)
 function addPageListeners() {
     
-    // get every note and rest on the page in the SVG
     let notes = document.querySelectorAll('#svgContainer .note, #svgContainer .rest');
     notes.forEach((note,index,list) => {
         note.addEventListener('click',clickNote,false);
@@ -994,13 +952,10 @@ function addPageListeners() {
     
 }
 
-// function does "something" with a clicked note (details see below)
 function clickNote(e) {
     
-    // currently clicked note
     let note = e.currentTarget;
     
-    // in active paint mode color the clicked notes
     if(paintMode) {
         note.classList.add('color' + activeColor);
         note.style.fill = colors[activeColor];
@@ -1009,13 +964,12 @@ function clickNote(e) {
         coloredNotes[note.id] = activeColor;       
     } else {
         
-        let idMatches = [... note.classList].filter(cl => cl.startsWith('id:')); //identical notes
-        let osMatches = [... note.classList].filter(cl => cl.startsWith('os:')); // octave similarity
-        let sdMatches = [... note.classList].filter(cl => cl.startsWith('sd:')); // same duration
-        let odMatches = [... note.classList].filter(cl => cl.startsWith('od:')); // ??
-        let tsMatches = [... note.classList].filter(cl => cl.startsWith('ts:')); // ??
+        let idMatches = [... note.classList].filter(cl => cl.startsWith('id:'));
+        let osMatches = [... note.classList].filter(cl => cl.startsWith('os:'));
+        let sdMatches = [... note.classList].filter(cl => cl.startsWith('sd:'));
+        let odMatches = [... note.classList].filter(cl => cl.startsWith('od:'));
+        let tsMatches = [... note.classList].filter(cl => cl.startsWith('ts:'));
         
-        // creates the "Riesen-Bubble"
         idMatches.forEach(match => {
             let elem = SVG.get(match.substr(3));
             let childUse = elem.children()[0];
@@ -1069,13 +1023,11 @@ function clickNote(e) {
     
 }
 
-// provides the approximate position of the note in focus after zooming in/out
 function openPageByElementID(id) {
     let page = vrvToolkit.getPageWithElement(id);
     loadPage(page);
 }
 
-// Verovio options without parameters (global variables instead)
 function setOptions() {
     let he = document.getElementById('contentBox')["clientHeight"];
     let wi = document.getElementById('contentBox')["clientWidth"];
@@ -1110,7 +1062,6 @@ function renderMEI(mei) {
     maxPage = vrvToolkit.getPageCount();
 };
 
-// function to select mode (e.g. plain, identity...)
 function selectMode(mode) {
     
     var oldActive = document.querySelector('.modeBtn.active');
@@ -1119,13 +1070,13 @@ function selectMode(mode) {
         return false;
     }
     
-    oldActive.classList.remove('active'); // delete old mode from active
-    document.querySelector('.modeBtn#' + mode).classList.add('active'); // set new mode active
+    oldActive.classList.remove('active');
+    document.querySelector('.modeBtn#' + mode).classList.add('active');
     
     try {
         let comparison = document.querySelector('.comparison.active');
         
-        if(comparison !== null) { //if we do have a comparison
+        if(comparison !== null) {
             loadComparison(comparison.id,mode);    
         }
         
@@ -1155,7 +1106,6 @@ function allowPainting(bool) {
     
 }
 
-// todo: explanation by johannes (we will see if it happens...)
 function setupSunburst() {
 
     let width = 300;
