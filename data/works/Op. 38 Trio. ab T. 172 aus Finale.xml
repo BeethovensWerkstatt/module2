@@ -706,10 +706,10 @@
                             <tie xml:id="tie-0000000433155164" startid="#note-0000000894730405" endid="#note-0000001857058687" />
                             <dynam xml:id="dir-0000000412330068" place="below" staff="3" startid="#note-0000002056880293">cresc.</dynam>
                             <dynam xml:id="dir-0000001891320008" place="below" staff="4" startid="#note-0000001384451772">cresc.</dynam>
-                            <slur xml:id="slur-0000001533789134" startid="#note-0000000909265551" endid="#note-0000001611393115"  />
+                            <slur xml:id="slur-0000001533789134" startid="#note-0000001611393115" endid="#note-0000001972815958"  />
                             <slur xml:id="slur-0000001903774837" startid="#note-0000000394346126" endid="#note-0000000099656911"  />
-                            <slur xml:id="slur-0000000408741459" startid="#note-0000001094673504" endid="#note-0000001333023556"  />
-                            <slur xml:id="slur-0000000855683237" startid="#note-0000001634540913" endid="#note-0000001120080004"  />
+                            <slur xml:id="slur-0000000408741459" startid="#note-0000001094673504" endid="#note-0000001120080004"  />
+                            <slur xml:id="slur-0000000855683237" startid="#note-0000001634540913" endid="#note-0000001333023556"  />
                         </measure>
                         <measure xml:id="measure-0000001164538419" n="181">
                             <staff xml:id="staff-0000000775347031" n="1">
@@ -766,7 +766,7 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000000197175794" n="5">
-                                <layer xml:id="layer-0000000883725192" n="2">
+                                <layer xml:id="layer-0000000883725192" n="1">
                                     <chord xml:id="chord-0000001621259097" dur="4" >
                                         <note xml:id="note-0000001120080004" oct="2" pname="c" />
                                         <note xml:id="note-0000001333023556" oct="3" pname="c" />
@@ -882,28 +882,29 @@
                                     </chord>
                                     <rest xml:id="rest-0000002116504204" dur="4" />
                                     <rest xml:id="rest-0000000712661245" dur="2" />
+                                    <clef xml:id="clef-0000001341458138" shape="G" line="2" tstamp="4.5"/>
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000001402543111" n="5">
                                 <layer xml:id="layer-0000000054231849" n="2">
+                                    <chord xml:id="chord-0000001712015024" dur="8" >
+                                        <note xml:id="note-0000000053575384" oct="1" pname="b" accid.ges="f" />
+                                        <note xml:id="note-0000001825587410" oct="2" pname="b" accid.ges="f" />
+                                    </chord>
                                     <beam xml:id="beam-0000000429608022">
-                                        <chord xml:id="chord-0000001712015024" dur="8" >
-                                            <note xml:id="note-0000000053575384" oct="1" pname="b" accid.ges="f" />
-                                            <note xml:id="note-0000001825587410" oct="2" pname="b" accid.ges="f" />
-                                        </chord>
                                         <note xml:id="note-0000001561180328" dur="8" oct="3" pname="b"  accid.ges="f">
-                                            <supplied><artic xml:id="artic-0000002010820377" artic="stacc" /></supplied>
+                                            <artic xml:id="artic-0000002010820377" artic="stacc" />
                                         </note>
                                         <note xml:id="note-0000002078214457" dur="8" oct="3" pname="b"  accid.ges="f">
-                                            <supplied><artic xml:id="artic-0000000650980381" artic="stacc" /></supplied>
+                                            <artic xml:id="artic-0000000650980381" artic="stacc" />
                                         </note>
                                         <note xml:id="note-0000001884056557" dur="8" oct="3" pname="a"  accid.ges="f">
-                                            <supplied><artic xml:id="artic-0000000142840219" artic="stacc" /></supplied>
+                                            <artic xml:id="artic-0000000142840219" artic="stacc" />
                                         </note>
                                     </beam>
                                     <beam xml:id="beam-0000001238641170">
                                         <note xml:id="note-0000001091443480" dur="8" oct="3" pname="g" >
-                                            <supplied><artic xml:id="artic-0000001492891647" artic="stacc" /></supplied>
+                                            <artic xml:id="artic-0000001492891647" artic="stacc" />
                                         </note>
                                         <note xml:id="note-0000000493455949" dur="8" oct="3" pname="b"  accid.ges="f">
                                             <supplied><artic xml:id="artic-0000001514103800" artic="stacc" /></supplied>
@@ -953,30 +954,25 @@
                             </staff>
                             <staff xml:id="staff-0000000762905376" n="4">
                                 <layer xml:id="layer-0000001525491775" n="1">
-                                    <clef xml:id="clef-0000001341458138" shape="G" line="2" />
                                     <note xml:id="note-0000001684188034" dots="1" dur="4" oct="5" pname="b"  accid.ges="f" />
                                     <beam xml:id="beam-0000001591647594">
                                         <note xml:id="note-0000002146717842" dur="16" oct="6" pname="c"  />
                                         <note xml:id="note-0000000248204856" dur="16" oct="6" pname="d"  />
                                     </beam>
                                     <beam xml:id="beam-0000001635471693">
-                                        <chord xml:id="chord-0000000191282183" dur="8" >
-                                            <artic xml:id="artic-0000002117757516" artic="stacc" />
+                                        <chord xml:id="chord-0000000191282183" dur="8" artic="stacc">
                                             <note xml:id="note-0000001929802642" oct="5" pname="g" />
                                             <note xml:id="note-0000001777708663" oct="6" pname="e" accid.ges="f" />
                                         </chord>
-                                        <chord xml:id="chord-0000001644308941" dur="8" >
-                                            <artic xml:id="artic-0000001203377561" artic="stacc" />
+                                        <chord xml:id="chord-0000001644308941" dur="8" artic="stacc">
                                             <note xml:id="note-0000001989061164" oct="5" pname="g" />
                                             <note xml:id="note-0000001394024634" oct="6" pname="e" accid.ges="f" />
                                         </chord>
-                                        <chord xml:id="chord-0000000130392185" dur="8" >
-                                            <artic xml:id="artic-0000001259025755" artic="stacc" />
+                                        <chord xml:id="chord-0000000130392185" dur="8" artic="stacc">
                                             <note xml:id="note-0000000071263496" oct="5" pname="g" />
                                             <note xml:id="note-0000001991669899" oct="6" pname="e" accid.ges="f" />
                                         </chord>
-                                        <chord xml:id="chord-0000000017682798" dur="8" >
-                                            <artic xml:id="artic-0000001679625548" artic="stacc" />
+                                        <chord xml:id="chord-0000000017682798" dur="8" artic="stacc">
                                             <note xml:id="note-0000000163398469" oct="5" pname="g" />
                                             <note xml:id="note-0000000891458184" oct="6" pname="e" accid.ges="f" />
                                         </chord>
@@ -984,7 +980,7 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000000655047190" n="5">
-                                <layer xml:id="layer-0000000569530178" n="2">
+                                <layer xml:id="layer-0000000569530178" n="1">
                                     <beam xml:id="beam-0000001228277417">
                                         <note xml:id="note-0000001176812295" dur="8" oct="2" pname="b"  accid.ges="f">
                                             <artic xml:id="artic-0000000207791566" artic="stacc" />
@@ -1239,7 +1235,7 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000000074545501" n="5">
-                                <layer xml:id="layer-0000002055108120" n="2">
+                                <layer xml:id="layer-0000002055108120" n="1">
                                     <beam xml:id="beam-0000000800489487">
                                         <note xml:id="note-0000000435981718" dur="8" oct="2" pname="b"  accid.ges="f">
                                             <artic xml:id="artic-0000000178171438" artic="stacc" />
@@ -1469,7 +1465,7 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000001430522059" n="5">
-                                <layer xml:id="layer-0000000107012034" n="2">
+                                <layer xml:id="layer-0000000107012034" n="1">
                                     <chord xml:id="chord-0000000639363051" dur="4" >
                                         <artic xml:id="artic-0000001124856343" artic="stacc" />
                                         <note xml:id="note-0000000512575411" oct="1" pname="b" accid.ges="f" />
@@ -1486,6 +1482,7 @@
                                         <note xml:id="note-0000000069773354" oct="2" pname="b" accid.ges="f" />
                                     </chord>
                                     <rest xml:id="rest-0000001411237068" dur="4" />
+                                    <clef xml:id="clef-0000000471810886" shape="G" line="2" tstamp="4.5" />
                                 </layer>
                             </staff>
                             <dynam staff="4" startid="#note-0000001222476722" place="below">p</dynam>
@@ -1518,7 +1515,6 @@
                             </staff>
                             <staff xml:id="staff-0000000350895426" n="5">
                                 <layer xml:id="layer-0000001378294328" n="1">
-                                    <clef xml:id="clef-0000000471810886" shape="G" line="2" />
                                     <chord xml:id="chord-0000000474231711" dur="2" >
                                         <artic xml:id="artic-0000001612164860" artic="stacciss" />
                                         <note xml:id="note-0000002119334142" oct="4" pname="e" accid.ges="f" />
@@ -1559,7 +1555,7 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000001725235975" n="5">
-                                <layer xml:id="layer-0000001652328176" n="2">
+                                <layer xml:id="layer-0000001652328176" n="1">
                                     <chord xml:id="chord-0000000001173777" dur="2" >
                                         <artic xml:id="artic-0000001190450162" artic="stacciss" />
                                         <note xml:id="note-0000001423814878" oct="4" pname="g" />
@@ -1606,7 +1602,7 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000000951332856" n="5">
-                                <layer xml:id="layer-0000002050751671" n="2">
+                                <layer xml:id="layer-0000002050751671" n="1">
                                     <chord xml:id="chord-0000001814962765" dur="4" >
                                         <artic xml:id="artic-0000001513883642" artic="stacc" />
                                         <note xml:id="note-0000001384923720" oct="4" pname="e" accid.ges="f" />
@@ -1632,7 +1628,6 @@
                                 </layer>
                             </staff>
                         </measure>
-                        
                         <measure xml:id="measure-0000000344323024" n="191">
                             <staff xml:id="staff-0000001951978409" n="1">
                                 <layer xml:id="layer-0000000245664230" n="1">
@@ -1682,7 +1677,7 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000002116395526" n="5">
-                                <layer xml:id="layer-0000001489830994" n="2">
+                                <layer xml:id="layer-0000001489830994" n="1">
                                     <chord xml:id="chord-0000001592379861" dur="4" >
                                         <supplied><artic xml:id="artic-0000001415575491" artic="stacc" /></supplied>
                                         <note xml:id="note-0000000920432928" oct="3" pname="b" accid.ges="f" />
@@ -1690,6 +1685,7 @@
                                     </chord>
                                     <rest xml:id="rest-0000000881772619" dur="4" />
                                     <rest xml:id="rest-0000001305059555" dur="2" />
+                                    <clef xml:id="clef-0000002073195148" shape="F" line="4" tstamp="4.5"/>
                                 </layer>
                             </staff>
                             <dynam xml:id="dynam-0000000172899302" place="below" staff="1" startid="#note-0000000974696633">p</dynam>
@@ -1743,8 +1739,7 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000002142576934" n="5">
-                                <layer xml:id="layer-0000000309455872" n="1">
-                                    <clef xml:id="clef-0000002073195148" shape="F" line="4" />
+                                <layer xml:id="layer-0000000309455872" n="1"> 
                                     <chord xml:id="chord-0000001909619887" dur="4" >
                                         <note xml:id="note-0000002094352252" oct="2" pname="e" accid.ges="f" />
                                         <note xml:id="note-0000001273537479" oct="3" pname="e" accid.ges="f" />
@@ -1810,7 +1805,7 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000001444979195" n="5">
-                                <layer xml:id="layer-0000001431648699" n="2">
+                                <layer xml:id="layer-0000001431648699" n="1">
                                     <chord xml:id="chord-0000000332246386" dur="4" >
                                         <note xml:id="note-0000000833451408" oct="2" pname="g" />
                                         <note xml:id="note-0000000300224980" oct="3" pname="g" />
@@ -1903,7 +1898,7 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000001605772683" n="5">
-                                <layer xml:id="layer-0000000329406068" n="2">
+                                <layer xml:id="layer-0000000329406068" n="1">
                                     <chord xml:id="chord-0000001112714918" dur="4" >
                                         <supplied><artic xml:id="artic-0000000473658200" artic="stacc" /></supplied>
                                         <note xml:id="note-0000002085205874" oct="2" pname="e" accid.ges="f" />
@@ -1927,7 +1922,6 @@
                                 </layer>
                             </staff>
                         </measure>
-                        
                         <measure xml:id="measure-0000000752020999" n="195">
                             <staff xml:id="staff-0000001393841057" n="1">
                                 <layer xml:id="layer-0000001295205987" n="1">
@@ -1971,7 +1965,7 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000000090857331" n="5">
-                                <layer xml:id="layer-0000002079955675" n="2">
+                                <layer xml:id="layer-0000002079955675" n="1">
                                     <chord xml:id="chord-0000000367149243" dur="4" >
                                         <note xml:id="note-0000000592632580" oct="1" pname="b" accid.ges="f" />
                                         <note xml:id="note-0000001304400346" oct="2" pname="b" accid.ges="f" />
@@ -1999,6 +1993,7 @@
                             <staff xml:id="staff-0000001136861698" n="3">
                                 <layer xml:id="layer-0000000752624101" n="1">
                                     <mRest xml:id="mrest-0000000678652827" />
+                                    <clef xml:id="clef-0000001024831968" shape="C" line="4" tstamp="4.5"/>
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000000634884199" n="4">
@@ -2020,7 +2015,7 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000001370548849" n="5">
-                                <layer xml:id="layer-0000002067819698" n="2">
+                                <layer xml:id="layer-0000002067819698" n="1">
                                     <beam xml:id="beam-0000000215518479">
                                         <note xml:id="note-0000000218316757" dur="8" oct="2" pname="b"  accid.ges="f" />
                                         <note xml:id="note-0000000644846384" dur="8" oct="3" pname="d"  />
@@ -2034,7 +2029,7 @@
                                         <note xml:id="note-0000001131373646" dur="8" oct="3" pname="d"  />
                                     </beam>
                                 </layer>
-                                <layer xml:id="layer-0000000045093401" n="3">
+                                <layer xml:id="layer-0000000045093401" n="2">
                                     <note xml:id="note-0000002063166298" dur="1" oct="2" pname="a" accid.ges="f" />
                                 </layer>
                             </staff>
@@ -2060,7 +2055,6 @@
                             </staff>
                             <staff xml:id="staff-0000001676224943" n="3">
                                 <layer xml:id="layer-0000001685816211" n="1">
-                                    <clef xml:id="clef-0000001024831968" shape="C" line="4" />
                                     <note xml:id="note-0000000393062810" dur="2" oct="4" pname="e"  accid.ges="f" />
                                     <note xml:id="note-0000000996150625" dots="1" dur="4" oct="4" pname="g"  />
                                     <note xml:id="note-0000000887944570" dur="8" oct="4" pname="e"  accid.ges="f" />
@@ -2074,7 +2068,7 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000001670670636" n="5">
-                                <layer xml:id="layer-0000001237028363" n="2">
+                                <layer xml:id="layer-0000001237028363" n="1">
                                     <beam xml:id="beam-0000000880672578">
                                         <note xml:id="note-0000000897996858" dur="8" oct="2" pname="b"  accid.ges="f" />
                                         <note xml:id="note-0000001832281783" dur="8" oct="3" pname="e"  accid.ges="f" />
@@ -2088,7 +2082,7 @@
                                         <note xml:id="note-0000001220756857" dur="8" oct="3" pname="e"  accid.ges="f" />
                                     </beam>
                                 </layer>
-                                <layer xml:id="layer-0000001771050135" n="3">
+                                <layer xml:id="layer-0000001771050135" n="2">
                                     <note xml:id="note-0000001242606193" dur="1" oct="2" pname="g" />
                                 </layer>
                             </staff>
