@@ -10,26 +10,22 @@ var packageJson = require('./package.json');
 var bump = require('gulp-bump');
 var fs = require('fs');
 var browserify = require('browserify');
-var babel = require('gulp-babel');
-var uglify = require('gulp-uglify');
+var babelify = require("babelify");
+var uglify = require('gulp-uglify-es').default;
 var eslint = require('gulp-eslint');
 var exist = require('gulp-exist');
 var existConfig = require('./existConfig.json');
 var existClient = exist.createClient(existConfig);
 var git = require('git-rev-sync');
-
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
 
 /** 
  *  This task loads custom assets, installed via npm, by copying 
  *  them to the corresponding folders in the build directory.
  */
 gulp.task('load-assets', function() {
-    //include verovio dev    
-    gulp.src(['./node_modules/verovio-dev/index.js'])
-        .pipe(concat('verovio-toolkit-dev.js'))
-        .pipe(newer('./build/resources/js/'))
-        .pipe(gulp.dest('./build/resources/js/'));
-        
+    
     //include svg.js    
     gulp.src(['./node_modules/svg.js/dist/svg.min.js'])
         .pipe(newer('./build/resources/js/'))
@@ -97,25 +93,26 @@ gulp.task('watch-css',function() {
 //handles javascript
 gulp.task('js', function(){
     
-    //compile javascript
-    gulp.src(['./source/js/main.js'])
-        .pipe(babel())
-        .pipe(concat('main.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./build/resources/js/'));
+    browserify('./source/js/main.js')
+        .transform('babelify')
+        .bundle()
+        .on('error', function (err) { console.log('Error: ' + err.message); })
+        .pipe(fs.createWriteStream('./build/resources/js/main.min.js'));
+
 });
 
 //deploys js to exist-db
-gulp.task('deploy-js',['js'], function() {
-    gulp.src('**/*', {cwd: 'build/resources/js/'})
-        .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/js/"}))
+gulp.task('deploy-js',function() {
+    
+    browserify('./source/js/main.js')
+        .transform('babelify')
+        .bundle()
+        .pipe(source('main.js'))
+        .pipe(buffer())
+        .pipe(concat('main.min.js'))
+        //.pipe(uglify()).on('error', function (err) { console.log('Error:4 ' + err.message); })  //-> this takes too long, as Verovio is already minified
         .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/js/'}));
         
-    gulp.src(['./source/js/main.js'])
-        .pipe(babel())
-        .pipe(concat('main.min.js'))
-        .pipe(uglify())
-        .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/js/'}));
 })
 
 //watches js for changes

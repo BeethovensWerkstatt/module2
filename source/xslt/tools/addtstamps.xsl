@@ -12,8 +12,8 @@
     </xd:doc>
     <xsl:output method="xml" indent="yes"/>
     <xsl:template match="mei:measure" mode="add.tstamps">
-        <xsl:variable name="meter.count" select="(preceding::mei:scoreDef[@meter.count])[1]/@meter.count cast as xs:integer" as="xs:integer"/>
-        <xsl:variable name="meter.unit" select="(preceding::mei:scoreDef[@meter.unit])[1]/@meter.unit cast as xs:integer" as="xs:integer"/>
+        <xsl:variable name="meter.count" select="preceding::mei:scoreDef[@meter.count][1]/xs:integer(@meter.count)" as="xs:integer"/>
+        <xsl:variable name="meter.unit" select="preceding::mei:scoreDef[@meter.unit][1]/xs:integer(@meter.unit)" as="xs:integer"/>
         <xsl:copy>
             <xsl:attribute name="meter.count" select="$meter.count"/>
             <xsl:attribute name="meter.unit" select="$meter.unit"/>
