@@ -19,6 +19,7 @@ var existClient = exist.createClient(existConfig);
 var git = require('git-rev-sync');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
+var runSequence = require('run-sequence').use(gulp);
 
 /** 
  *  This task loads custom assets, installed via npm, by copying 
@@ -61,7 +62,7 @@ gulp.task('html', function(){
 
 //deploys html to exist-db
 gulp.task('deploy-html',['html'], function() {
-    gulp.src('**/*.html', {cwd: './build/'})
+    return gulp.src('**/*.html', {cwd: './build/'})
         .pipe(existClient.newer({target: "/db/apps/bw-module2/"}))
         .pipe(existClient.dest({target: '/db/apps/bw-module2/'}));
 })
@@ -80,7 +81,7 @@ gulp.task('css', function(){
 
 //deploys css to exist-db
 gulp.task('deploy-css',['css'], function() {
-    gulp.src('**/*', {cwd: './build/resources/css/'})
+    return gulp.src('**/*', {cwd: './build/resources/css/'})
         .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/css/"}))
         .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/css/'}));
 })
@@ -93,18 +94,23 @@ gulp.task('watch-css',function() {
 //handles javascript
 gulp.task('js', function(){
     
-    browserify('./source/js/main.js')
+    return browserify('./source/js/main.js')
         .transform('babelify')
         .bundle()
-        .on('error', function (err) { console.log('Error: ' + err.message); })
-        .pipe(fs.createWriteStream('./build/resources/js/main.min.js'));
+        .pipe(source('main.js'))
+        .pipe(buffer())
+        .pipe(concat('main.min.js'))
+        //.pipe(uglify())
+        .pipe(gulp.dest('./build/resources/js/'));
+        //.on('error', function (err) { console.log('Error: ' + err.message); })
+        //.pipe(fs.createWriteStream('./build/resources/js/main.min.js'));
 
 });
 
 //deploys js to exist-db
 gulp.task('deploy-js',function() {
     
-    browserify('./source/js/main.js')
+    return browserify('./source/js/main.js')
         .transform('babelify')
         .bundle()
         .pipe(source('main.js'))
@@ -145,24 +151,26 @@ gulp.task('lint', function() {
 
 //handles xqueries
 gulp.task('xql', function(){
-    gulp.src('source/xql/**/*')
-        .pipe(newer('build/resources/xql/'))
-        .pipe(gulp.dest('build/resources/xql/'));
     
     gulp.src('source/xqm/**/*')
         .pipe(newer('build/resources/xqm/'))
         .pipe(gulp.dest('build/resources/xqm/'));
+        
+    return gulp.src('source/xql/**/*')
+        .pipe(newer('build/resources/xql/'))
+        .pipe(gulp.dest('build/resources/xql/'));
 });
 
 //deploys xql to exist-db
 gulp.task('deploy-xql',['xql'], function() {
-    gulp.src(['**/*'], {cwd: 'build/resources/xql/'})
-        .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/xql/"}))
-        .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/xql/'}));
         
     gulp.src(['**/*'], {cwd: 'build/resources/xqm/'})
         .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/xqm/"}))
         .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/xqm/'}));
+        
+    return gulp.src(['**/*'], {cwd: 'build/resources/xql/'})
+        .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/xql/"}))
+        .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/xql/'}));
 })
 
 //watches xql for changes
@@ -179,7 +187,7 @@ gulp.task('xslt', function(){
 
 //deploys xslt to exist-db
 gulp.task('deploy-xslt',['xslt'], function() {
-    gulp.src('**/*', {cwd: './build/resources/xslt/'})
+    return gulp.src('**/*', {cwd: './build/resources/xslt/'})
         .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/xslt/"}))
         .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/xslt/'}));
 })
@@ -198,7 +206,7 @@ gulp.task('pix', function(){
 
 //deploys pix to exist-db
 gulp.task('deploy-pix',['pix'], function() {
-    gulp.src('**/*', {cwd: 'build/resources/pix/'})
+    return gulp.src('**/*', {cwd: 'build/resources/pix/'})
         .pipe(existClient.newer({target: "/db/apps/bw-module2/resources/pix/"}))
         .pipe(existClient.dest({target: '/db/apps/bw-module2/resources/pix/'}));
 })
@@ -217,7 +225,7 @@ gulp.task('data', function(){
 
 //deploys data to exist-db
 gulp.task('deploy-data',['data'], function() {
-    gulp.src('**/*', {cwd: 'build/content/'})
+    return gulp.src('**/*', {cwd: 'build/content/'})
         .pipe(existClient.newer({target: "/db/apps/bw-module2/content/"}))
         .pipe(existClient.dest({target: '/db/apps/bw-module2/content/'}));
 })
@@ -250,7 +258,7 @@ gulp.task('bump-major', function () {
 
 //set up basic xar structure
 gulp.task('xar-structure', function() {
-    gulp.src(['./source/eXist-db/**/*'])
+    return gulp.src(['./source/eXist-db/**/*'])
         .pipe(replace('$$deployed$$', dateformat(Date.now(), 'isoUtcDateTime')))
         .pipe(replace('$$version$$', getPackageJsonVersion()))
         .pipe(replace('$$desc$$', packageJson.description))
@@ -296,13 +304,17 @@ gulp.task('deploy', function() {
 gulp.task('watch', ['watch-html', 'watch-css', 'watch-js','watch-xql','watch-xslt','watch-data','watch-pix']);
 
 
-//creates a dist version
-gulp.task('dist', ['xar-structure', 'html', 'css', 'js', 'xql', 'xslt', 'data','pix','load-assets'], function() {
-    gulp.src('./build/**/*')
+gulp.task('dist-finish', function() {
+    return gulp.src('./build/**/*')
         .pipe(zip(packageJson.name + '-' + getPackageJsonVersion() + '.xar'))
         .pipe(gulp.dest('./dist'));
-        
-    console.log('done building xar')
+})
+
+//creates a dist version
+gulp.task('dist', function(stoppingSignal) {
+
+    runSequence('xar-structure', ['html', 'css', 'js', 'xql', 'xslt', 'data','pix','load-assets'],'dist-finish',stoppingSignal);
+    
 });
 
 //creates a dist version with a version bump at patch level
