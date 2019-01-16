@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="4.0.0" xml:id="x418650e0-d899-4e3d-bff3-f7d459e1d5d7">
+<meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="4.0.0" xml:id="x1da457dc-18a2-4a4f-b84b-07b0d499ff67">
     <meiHead>
         <fileDesc>
             <titleStmt>
-                <title>Op. 20 zu Op. 38</title>
+                <title type="main">Op.20 → 38 (Septett / Trio)</title>
                 <respStmt>
                     <corpName role="res">Beethovens Werkstatt</corpName>
                 </respStmt>
