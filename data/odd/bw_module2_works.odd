@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI  xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0"
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Data Model specification for Beethovens Werkstatt – Module 2</title>
+                <respStmt>
+                    <resp>Authored by</resp>
+                    <name xml:id="KH">Kristin Herold</name>
+                    <name xml:id="JK">Johannes Kepper</name>
+                </respStmt>
+                <respStmt>
+                    <resp>In collaboration with</resp>
+                    <name xml:id="BRA">Bernhard R. Appel</name>
+                    <name xml:id="SC">Susanne Cox</name>
+                    <name xml:id="AM">Andreas Münzmay</name>
+                    <name xml:id="EN">Elisa Novara</name>
+                    <name xml:id="RS">Richard Sänger</name>
+                    <name xml:id="JV">Joachim Veit</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p/>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change n="1" when="2019-01-28" who="#KH #JK">
+                <desc>Initial setup of the ODD.</desc>
+            </change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <schemaSpec ident="mei" start="mei" prefix="mei_" ns="http://www.music-encoding.org/ns/mei">
+                
+                <!-- Declare MEI and XLink namespaces for use in Schematron -->
+                <constraintSpec ident="set_ns" scheme="isoschematron" mode="add">
+                    <constraint>
+                        <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="mei"
+                            uri="http://www.music-encoding.org/ns/mei"/>
+                        <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="xlink"
+                            uri="http://www.w3.org/1999/xlink"/>
+                    </constraint>
+                </constraintSpec>
+                
+                <moduleRef key="MEI"/>
+                <moduleRef key="MEI.analytical"/>
+                <moduleRef key="MEI.cmn" except="beamSpan beatRpt bend bracketSpan halfmRpt meterSig meterSigGrp mRpt mRpt2 mSpace multiRpt tupletSpan"/>
+                <moduleRef key="MEI.cmnOrnaments"/>
+                <moduleRef key="MEI.frbr"/>
+                <moduleRef key="MEI.gestural"/>
+                <moduleRef key="MEI.harmony" include="harm"/>
+                <moduleRef key="MEI.header" include="componentList altId appInfo application attUsage availability change changeDesc classDecls classification dedication editionsStmt editorialDecl encodingDesc fileDesc langUsage meiHead notesStmt perfMedium perfRes prefResList physDesc physMedium plateNum projectDesc pubStmt revisionDesc segmentation seriesStmt source sourceDesc tagsDecl tagUsage titleStmt unpub work workList"/>
+                <moduleRef key="MEI.namesdates" include="corpName geogName persName roleName"/>
+                <moduleRef key="MEI.ptrref"/>
+                <moduleRef key="MEI.shared"
+                    include="address annot bibl biblList biblScope biblStruct body castGrp castItem castList chord clef clefGrp date desc dir dynam ending expansion head identifier label layer layerDef mdiv mei music name note p part parts physLoc pubPlace relation relationList repository resp respStmt rest role roleDesc score scoreDef section space staff staffDef staffGrp syl tempo title titlePage"/>
+                <moduleRef key="MEI.visual"/>
+                
+                <elementSpec ident="mdiv" module="MEI.shared" mode="change">
+                    
+                    <constraintSpec ident="check_meter" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:scoreDef">
+                                <sch:let name="context" value="ancestor::mei:*[local-name() = ('score','part')][1]"/>
+                                <sch:assert test="(exists(@meter.count) and exists(@meter.unit)) or ($context//mei:scoreDef[1]/@meter.count and $context//mei:scoreDef[1]/@meter.unit)">
+                                    The first scoreDef in an mdiv needs @meter.count and @meter.unit.
+                                </sch:assert>
+                                <sch:assert test="not(.//mei:staffDef[@meter.count or @meter.unit])">
+                                    StaffDefs are not supposed to have @meter.count or @meter.unit. 
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_key" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:scoreDef">
+                                <sch:let name="context" value="ancestor::mei:*[local-name() = ('score','part')][1]"/>
+                                <sch:assert test="(exists(@key.sig) and exists(@key.mode)) or ($context//mei:scoreDef[1]/@key.sig and $context//mei:scoreDef[1]/@key.mode)">
+                                    The first scoreDef in an mdiv needs @key.sig and @key.mode.
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                </elementSpec>
+                
+            </schemaSpec>
+        </body>
+    </text>
+</TEI>
