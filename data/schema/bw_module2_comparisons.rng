@@ -1,0 +1,4051 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:tei="http://www.tei-c.org/ns/1.0"
+         xmlns:teix="http://www.tei-c.org/ns/Examples"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+         ns="http://www.music-encoding.org/ns/mei"><!--
+Schema generated from ODD source 2019-01-28T11:11:03Z. .
+TEI Edition: Version 4.0.0
+TEI Edition Location: http://www.tei-c.org/Vault/P5//
+  
+--><!---->
+   <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="tei"
+           uri="http://www.tei-c.org/ns/1.0"/>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-data.ARTICULATION-warn_deprecated-constraint-rule-1">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@artic">
+          <sch:assert role="warning"
+                     test="not(contains(., 'marc-stacc')) and not(contains(., 'ten-stacc'))">"<sch:value-of select="."/>" contains a deprecated value.</sch:assert>
+        </sch:rule>
+   </pattern>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-data.ARTICULATION-warn_deprecated-constraint-rule-2">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@artic.ges">
+          <sch:assert role="warning"
+                     test="not(contains(., 'marc-stacc')) and not(contains(., 'ten-stacc'))">"<sch:value-of select="."/>" contains a deprecated value.</sch:assert>
+        </sch:rule>
+   </pattern>
+   <define name="mei_data.BEAT">
+      <data type="decimal">
+         <param name="minInclusive">0</param>
+      </data>
+   </define>
+   <define name="mei_data.BOOLEAN">
+      <choice>
+         <value>true</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">True.</a:documentation>
+         <value>false</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">False.</a:documentation>
+      </choice>
+   </define>
+   <define name="mei_data.CERTAINTY">
+      <choice>
+         <value>high</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">High certainty.</a:documentation>
+         <value>medium</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Medium certainty.</a:documentation>
+         <value>low</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Low certainty.</a:documentation>
+         <value>unknown</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An unknown level of certainty.</a:documentation>
+      </choice>
+   </define>
+   <define name="mei_data.CONFIDENCE">
+      <data type="decimal">
+         <param name="minInclusive">0</param>
+         <param name="maxInclusive">1</param>
+      </data>
+   </define>
+   <define name="mei_data.DURATION">
+      <empty/>
+   </define>
+   <define name="mei_data.ISODATE">
+      <choice>
+         <data type="date"/>
+         <data type="gYear"/>
+         <data type="gMonth"/>
+         <data type="gDay"/>
+         <data type="gYearMonth"/>
+         <data type="gMonthDay"/>
+         <data type="time"/>
+         <data type="dateTime"/>
+         <data type="token">
+            <param name="pattern">[0-9.,DHMPRSTWYZ/:+\-]+</param>
+         </data>
+      </choice>
+   </define>
+   <define name="mei_data.MEASUREBEAT">
+      <data type="token">
+         <param name="pattern">([0-9]+m\s*\+\s*)?[0-9]+(\.?[0-9]*)?</param>
+      </data>
+   </define>
+   <define name="mei_data.MODSRELATIONSHIP">
+      <choice>
+         <value>preceding</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Temporal predecessor of the resource.</a:documentation>
+         <value>succeeding</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Temporal successor to the resource.</a:documentation>
+         <value>original</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Original form of the resource.</a:documentation>
+         <value>host</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Parent containing the resource.</a:documentation>
+         <value>constituent</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Intellectual or physical component of the resource.</a:documentation>
+         <value>otherVersion</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Version of the resource's intellectual content not changed enough to be a different work.</a:documentation>
+         <value>otherFormat</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Version of the resource in a different physical format.</a:documentation>
+         <value>isReferencedBy</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Published bibliographic description, review, abstract, or index of the resource's content.</a:documentation>
+         <value>references</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Cited or referred to in the resource.</a:documentation>
+      </choice>
+   </define>
+   <define name="mei_data.NMTOKEN">
+      <data type="NMTOKEN"/>
+   </define>
+   <define name="mei_data.RELATIONSHIP">
+      <choice>
+         <ref name="mei_data.FRBRRELATIONSHIP"/>
+         <ref name="mei_data.MODSRELATIONSHIP"/>
+         <ref name="mei_data.NMTOKEN"/>
+      </choice>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-data.STAFFREL-between_requires_adjacent_staves-constraint-rule-3">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="mei:*[@place eq 'between']">
+          <sch:assert test="count(tokenize(normalize-space(string(@staff)), '\s+')) = 2">The @staff
+            attribute must contain 2 numerically-adjacent integer values.</sch:assert>
+          <sch:let name="tokenizedStaff"
+                  value="tokenize(normalize-space(string(@staff)), '\s+')"/>
+          <sch:let name="maxValue"
+                  value="max((number($tokenizedStaff[1]), number($tokenizedStaff[2])))"/>
+          <sch:let name="minValue"
+                  value="min((number($tokenizedStaff[1]), number($tokenizedStaff[2])))"/>
+          <sch:assert test="$maxValue - $minValue = 1">Staves <sch:value-of select="$minValue"/> and
+            <sch:value-of select="$maxValue"/> are not adjacent.</sch:assert>
+        </sch:rule>
+   </pattern>
+   <define name="mei_data.URI">
+      <data type="anyURI"/>
+   </define>
+   <define name="mei_data.WORD">
+      <data type="token">
+         <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})*</param>
+      </data>
+   </define>
+   <define name="mei_data.FRBRRELATIONSHIP">
+      <choice>
+         <value>hasAbridgement</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is an abridgement, condensation, or expurgation of the current entity.</a:documentation>
+         <value>isAbridgementOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasAbridgement.</a:documentation>
+         <value>hasAdaptation</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is an adaptation, paraphrase, free translation, variation (music), harmonization (music), or fantasy (music) of the current entity.</a:documentation>
+         <value>isAdaptationOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasAdaptation.</a:documentation>
+         <value>hasAlternate</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is an alternate format or simultaneously released edition of the current entity.</a:documentation>
+         <value>isAlternateOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasAlternate.</a:documentation>
+         <value>hasArrangement</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is an arrangement (music) of the current entity.</a:documentation>
+         <value>isArrangementOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasArrangement.</a:documentation>
+         <value>hasComplement</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is a cadenza, libretto, choreography, ending for unfinished work, incidental music, or musical setting of a text of the current entity.</a:documentation>
+         <value>isComplementOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasComplement.</a:documentation>
+         <value>hasEmbodiment</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is a physical embodiment of the current abstract entity; describes the expression-to-manifestation relationship.</a:documentation>
+         <value>isEmbodimentOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasEmbodiment.</a:documentation>
+         <value>hasExemplar</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is an exemplar of the class of things represented by the current entity; describes the manifestation-to-item relationship.</a:documentation>
+         <value>isExemplarOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasExamplar.</a:documentation>
+         <value>hasImitation</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is a parody, imitation, or travesty of the current entity.</a:documentation>
+         <value>isImitationOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasImitation.</a:documentation>
+         <value>hasPart</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is a chapter, section, part, etc.; volume of a multivolume manifestation; volume/issue of serial; intellectual part of a multi-part work; illustration for a text; sound aspect of a film; soundtrack for a film on separate medium; soundtrack for a film embedded in film; monograph in a series; physical component of a particular copy; the binding of a book of the current entity.</a:documentation>
+         <value>isPartOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasPart.</a:documentation>
+         <value>hasRealization</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is a realization of the current entity; describes the work-to-expression relationship.</a:documentation>
+         <value>isRealizationOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasRealization.</a:documentation>
+         <value>hasReconfiguration</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target has been reconfigured: bound with, split into, extracted from the current entity.</a:documentation>
+         <value>isReconfigurationOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasReconfiguration.</a:documentation>
+         <value>hasReproduction</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is a reproduction, microreproduction, macroreproduction, reprint, photo-offset reprint, or facsimile of the current entity.</a:documentation>
+         <value>isReproductionOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasReproduction.</a:documentation>
+         <value>hasRevision</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is a revised edition, enlarged edition, or new state (graphic) of the current entity.</a:documentation>
+         <value>isRevisionOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasRevision.</a:documentation>
+         <value>hasSuccessor</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is a sequel or succeeding work of the current entity.</a:documentation>
+         <value>isSuccessorOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasSuccessor.</a:documentation>
+         <value>hasSummarization</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is a digest or abstract of the current entity.</a:documentation>
+         <value>isSummarizationOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasSummarization.</a:documentation>
+         <value>hasSupplement</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is an index, concordance, teacher's guide, gloss, supplement, or appendix of the current entity.</a:documentation>
+         <value>isSupplementOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasSupplement.</a:documentation>
+         <value>hasTransformation</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is a dramatization, novelization, versification, or screenplay of the current entity.</a:documentation>
+         <value>isTransformationOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasTransformation.</a:documentation>
+         <value>hasTranslation</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is a literal translation or transcription (music) of the current entity.</a:documentation>
+         <value>isTranslationOf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasTranslation.</a:documentation>
+      </choice>
+   </define>
+   <define name="mei_macro.availabilityPart">
+      <choice>
+         <group>
+            <zeroOrMore>
+               <ref name="mei_model.headLike"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <ref name="mei_model.addressLike"/>
+                  <ref name="mei_model.dateLike"/>
+                  <ref name="mei_model.identifierLike"/>
+               </choice>
+            </zeroOrMore>
+         </group>
+         <text/>
+      </choice>
+   </define>
+   <define name="mei_macro.bibldescPart">
+      <optional>
+         <ref name="mei_pubStmt"/>
+      </optional>
+      <zeroOrMore>
+         <ref name="mei_physDesc"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_physLoc"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_seriesStmt"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_macro.struc-unstrucContent">
+      <choice>
+         <group>
+            <zeroOrMore>
+               <ref name="mei_model.headLike"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mei_model.pLike"/>
+            </zeroOrMore>
+         </group>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike.limited"/>
+            </choice>
+         </zeroOrMore>
+      </choice>
+   </define>
+   <define name="mei_macro.titlePart">
+      <zeroOrMore>
+         <choice>
+            <ref name="mei_model.addressLike"/>
+            <ref name="mei_model.addressPart"/>
+            <ref name="mei_model.annotLike"/>
+            <ref name="mei_model.biblLike"/>
+            <ref name="mei_model.dateLike"/>
+            <ref name="mei_model.editorialLike"/>
+            <ref name="mei_model.identifierLike"/>
+            <ref name="mei_model.lbLike"/>
+            <ref name="mei_model.locrefLike"/>
+            <ref name="mei_model.measurementLike"/>
+            <ref name="mei_model.nameLike"/>
+            <ref name="mei_model.nameLike.label"/>
+            <ref name="mei_model.pbLike"/>
+            <ref name="mei_model.rendLike"/>
+         </choice>
+      </zeroOrMore>
+   </define>
+   <define name="mei_meiCorpus">
+      <element name="meiCorpus">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MEI corpus) – A group of related MEI documents, consisting of a header for the group, and one or more mei elements, each with its own complete header.</a:documentation>
+         <ref name="mei_meiHead"/>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.meiVersion.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_model.expressionLike">
+      <choice>
+         <ref name="mei_expression"/>
+      </choice>
+   </define>
+   <define name="mei_model.itemLike">
+      <choice>
+         <ref name="mei_item"/>
+      </choice>
+   </define>
+   <define name="mei_model.manifestationLike">
+      <choice>
+         <ref name="mei_manifestation"/>
+      </choice>
+   </define>
+   <define name="mei_expression">
+      <element name="expression">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Intellectual or artistic realization of a work.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.identifierLike"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="mei_model.titleLike"/>
+         </oneOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.respLikePart"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.workIdent"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="mei_langUsage"/>
+         </optional>
+         <optional>
+            <ref name="mei_perfMedium"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="mei_biblList"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="mei_notesStmt"/>
+         </optional>
+         <optional>
+            <ref name="mei_classification"/>
+         </optional>
+         <optional>
+            <ref name="mei_componentList"/>
+         </optional>
+         <optional>
+            <ref name="mei_relationList"/>
+         </optional>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.authorized.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.dataPointing.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_expressionList">
+      <element name="expressionList">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gathers bibliographic expression entities.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.expressionLike"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_item">
+      <element name="item">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Single instance or exemplar of a source/manifestation.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.identifierLike"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="mei_availability"/>
+         </optional>
+         <optional>
+            <ref name="mei_physDesc"/>
+         </optional>
+         <optional>
+            <ref name="mei_physLoc"/>
+         </optional>
+         <optional>
+            <ref name="mei_notesStmt"/>
+         </optional>
+         <optional>
+            <ref name="mei_classification"/>
+         </optional>
+         <optional>
+            <ref name="mei_componentList"/>
+         </optional>
+         <optional>
+            <ref name="mei_relationList"/>
+         </optional>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.authorized.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.dataPointing.attributes"/>
+         <ref name="mei_att.pointing.attributes"/>
+         <ref name="mei_att.targetEval.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_itemList">
+      <element name="itemList">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gathers bibliographic item entities.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.itemLike"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_manifestation">
+      <element name="manifestation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A bibliographic description of a physical embodiment of an expression of a work.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <empty/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.identifierLike"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="mei_titleStmt"/>
+         </optional>
+         <ref name="mei_macro.bibldescPart"/>
+         <optional>
+            <ref name="mei_langUsage"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="mei_biblList"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="mei_notesStmt"/>
+         </optional>
+         <optional>
+            <ref name="mei_classification"/>
+         </optional>
+         <optional>
+            <ref name="mei_itemList"/>
+         </optional>
+         <optional>
+            <ref name="mei_componentList"/>
+         </optional>
+         <optional>
+            <ref name="mei_relationList"/>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-manifestation-check_singleton-constraint-rule-4">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mei:manifestation[@singleton eq 'true']">
+               <sch:assert test="not(mei:itemList)">Item children are not permitted when @singleton
+            equals "true".</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.authorized.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.dataPointing.attributes"/>
+         <ref name="mei_att.pointing.attributes"/>
+         <ref name="mei_att.recordType.attributes"/>
+         <ref name="mei_att.targetEval.attributes"/>
+         <optional>
+            <attribute name="singleton">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="mei_data.BOOLEAN"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_manifestationList">
+      <element name="manifestationList">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A container for the descriptions of physical embodiments of an expression of a work.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="mei_model.manifestationLike"/>
+         </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_att.recordType.attributes">
+      <ref name="mei_att.recordType.attribute.recordtype"/>
+   </define>
+   <define name="mei_att.recordType.attribute.recordtype">
+      <optional>
+         <attribute name="recordtype">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>a</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Language material.</a:documentation>
+               <value>c</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Notated music.</a:documentation>
+               <value>d</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Manuscript notated music.</a:documentation>
+               <value>e</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Non-manuscript cartographic material.</a:documentation>
+               <value>f</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Manuscript cartographic material.</a:documentation>
+               <value>g</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Projected medium.</a:documentation>
+               <value>i</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Nonmusical sound recording.</a:documentation>
+               <value>j</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Musical sound recording.</a:documentation>
+               <value>k</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Two-dimensional nonprojectable graphic.</a:documentation>
+               <value>m</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Computer file.</a:documentation>
+               <value>o</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Kit.</a:documentation>
+               <value>p</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Mixed materials.</a:documentation>
+               <value>r</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Three-dimensional artifact or naturally occurring object.</a:documentation>
+               <value>t</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Manuscript language material. </a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_model.editorialDeclPart">
+      <choice>
+         <ref name="mei_segmentation"/>
+      </choice>
+   </define>
+   <define name="mei_model.physDescPart">
+      <choice>
+         <ref name="mei_physMedium"/>
+         <ref name="mei_plateNum"/>
+         <ref name="mei_model.incipLike"/>
+         <ref name="mei_titlePage"/>
+      </choice>
+   </define>
+   <define name="mei_model.pubStmtPart">
+      <choice>
+         <ref name="mei_availability"/>
+         <ref name="mei_model.addressLike"/>
+         <ref name="mei_model.dateLike"/>
+         <ref name="mei_model.identifierLike"/>
+         <ref name="mei_pubPlace"/>
+         <ref name="mei_respStmt"/>
+      </choice>
+   </define>
+   <define name="mei_model.workIdent">
+      <choice>
+         <ref name="mei_model.incipLike"/>
+      </choice>
+   </define>
+   <define name="mei_model.workLike">
+      <choice>
+         <ref name="mei_work"/>
+      </choice>
+   </define>
+   <define name="mei_componentList">
+      <element name="componentList">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Container for intellectual or physical component parts of a bibliographic entity.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <choice>
+            <choice>
+               <zeroOrMore>
+                  <ref name="mei_model.workLike"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="mei_model.expressionLike"/>
+               </zeroOrMore>
+            </choice>
+            <choice>
+               <zeroOrMore>
+                  <ref name="mei_model.manifestationLike"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="mei_model.itemLike"/>
+               </zeroOrMore>
+            </choice>
+         </choice>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-componentList-checkComponentList-constraint-rule-5">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mei:componentList">
+               <sch:assert test="every $i in ./child::mei:*[not(local-name()='head')] satisfies              $i/local-name() eq ./parent::mei:*/local-name()">Only child elements of the same name as the parent of the componentList are
+            allowed.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-componentList-checkComponents-constraint-rule-6">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mei:componentList[mei:*[@comptype]]">
+               <sch:assert role="warning"
+                           test="count(mei:*[@comptype]) = count(mei:*[local-name() ne 'head'])">When any child
+            element has a comptype attribute, it is recommended that comptype appear on all child
+            elements.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_altId">
+      <element name="altId">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(alternative identifier) – May contain a bibliographic identifier that does not fit within the meiHead element's id attribute, for example because the identifier does not fit the definition of an XML id or because multiple identifiers are needed.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.lbLike"/>
+               <ref name="mei_model.rendLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_appInfo">
+      <element name="appInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(application information) – Groups information about applications which have acted upon the MEI file.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_application"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_application">
+      <element name="application">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides information about an application which has acted upon the current document.</a:documentation>
+         <oneOrMore>
+            <ref name="mei_name"/>
+         </oneOrMore>
+         <choice>
+            <zeroOrMore>
+               <ref name="mei_model.locrefLike"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mei_model.pLike"/>
+            </zeroOrMore>
+         </choice>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.datable.attributes"/>
+         <optional>
+            <attribute name="version">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Supplies a version number for an application, independent of its identifier or display name.</a:documentation>
+               <data type="NMTOKEN"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_attUsage">
+      <element name="attUsage">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Documents the usage of a specific attribute of the element.</a:documentation>
+         <optional>
+            <ref name="mei_desc"/>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-attUsage-context_attribute_requires_content-constraint-rule-7">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="@context">
+               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@context attribute should
+            contain an XPath expression.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <attribute name="name">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of the attribute.</a:documentation>
+            <ref name="mei_data.NMTOKEN"/>
+         </attribute>
+         <optional>
+            <attribute name="context">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Circumstances in which the element appears, an XPath expression.</a:documentation>
+               <data type="string"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_availability">
+      <element name="availability">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Groups elements that describe the availability of and access to a bibliographic item, including an MEI-encoded document.</a:documentation>
+         <ref name="mei_macro.availabilityPart"/>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.dataPointing.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_change">
+      <element name="change">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Individual change within the revision description.</a:documentation>
+         <optional>
+            <ref name="mei_respStmt"/>
+         </optional>
+         <ref name="mei_changeDesc"/>
+         <optional>
+            <ref name="mei_model.dateLike"/>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-change-check_change-constraint-rule-8">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mei:change">
+               <sch:assert test="@isodate or mei:date">The date of the change must be recorded in an
+            isodate attribute or date element.</sch:assert>
+               <sch:assert test="@resp or mei:respStmt[mei:name or mei:corpName or mei:persName]"
+                           role="warning">It is recommended that the agent responsible for the change be recorded
+            in a resp attribute or in a name, corpName, or persName element in the respStmt
+            element.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.datable.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_changeDesc">
+      <element name="changeDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(change description) – Description of a revision of the MEI file.</a:documentation>
+         <oneOrMore>
+            <ref name="mei_model.pLike"/>
+         </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_classDecls">
+      <element name="classDecls">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Groups information which describes the nature or topic of an entity.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_classification">
+      <element name="classification">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Groups information which describes the nature or topic of an entity.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.dataPointing.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_dedication">
+      <element name="dedication">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a dedicatory statement.</a:documentation>
+         <choice>
+            <group>
+               <zeroOrMore>
+                  <ref name="mei_model.headLike"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="mei_model.textComponentLike"/>
+               </zeroOrMore>
+            </group>
+            <zeroOrMore>
+               <choice>
+                  <text/>
+                  <ref name="mei_model.textPhraseLike.limited"/>
+               </choice>
+            </zeroOrMore>
+         </choice>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_editorialDecl">
+      <element name="editorialDecl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(editorial declaration) – Used to provide details of editorial principles and practices applied during the encoding of musical text.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <choice>
+            <oneOrMore>
+               <ref name="mei_model.pLike"/>
+            </oneOrMore>
+            <group>
+               <oneOrMore>
+                  <ref name="mei_model.editorialDeclPart"/>
+               </oneOrMore>
+               <zeroOrMore>
+                  <ref name="mei_model.pLike"/>
+               </zeroOrMore>
+            </group>
+         </choice>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.dataPointing.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_encodingDesc">
+      <element name="encodingDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(encoding description) – Documents the relationship between an electronic file and the source or sources from which it was derived as well as applications used in the encoding/editing process.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="mei_appInfo"/>
+         </optional>
+         <optional>
+            <ref name="mei_editorialDecl"/>
+         </optional>
+         <optional>
+            <ref name="mei_projectDesc"/>
+         </optional>
+         <optional>
+            <ref name="mei_tagsDecl"/>
+         </optional>
+         <optional>
+            <ref name="mei_classDecls"/>
+         </optional>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_fileDesc">
+      <element name="fileDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(file description) – Contains a full bibliographic description of the MEI file.</a:documentation>
+         <ref name="mei_titleStmt"/>
+         <ref name="mei_pubStmt"/>
+         <optional>
+            <ref name="mei_seriesStmt"/>
+         </optional>
+         <optional>
+            <ref name="mei_notesStmt"/>
+         </optional>
+         <optional>
+            <ref name="mei_sourceDesc"/>
+         </optional>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_langUsage">
+      <element name="langUsage">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language usage) – Groups elements describing the languages, sub-languages, dialects, etc., represented within the encoded resource.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.dataPointing.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_meiHead">
+      <element name="meiHead">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MEI header) – Supplies the descriptive and declarative metadata prefixed to every MEI-conformant text.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_altId"/>
+         </zeroOrMore>
+         <ref name="mei_fileDesc"/>
+         <optional>
+            <ref name="mei_encodingDesc"/>
+         </optional>
+         <optional>
+            <ref name="mei_workList"/>
+         </optional>
+         <optional>
+            <ref name="mei_manifestationList"/>
+         </optional>
+         <optional>
+            <ref name="mei_revisionDesc"/>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-meiHead-check_meiHead_type-constraint-rule-9">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mei:meiHead[@type eq 'music']">
+               <sch:assert test="ancestor::mei:mei">The meiHead type attribute can have the value 'music'
+            only when the document element is "mei".</sch:assert>
+            </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-meiHead-check_meiHead_type-constraint-rule-10">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mei:meiHead[@type eq 'corpus']">
+               <sch:assert test="ancestor::mei:meiCorpus">The meiHead type attribute can have the value
+            'corpus' only when the document element is "meiCorpus".</sch:assert>
+            </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-meiHead-check_meiHead_type-constraint-rule-11">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mei:meiHead[@type eq 'independent']">
+               <sch:assert test="not(ancestor::mei:*)">The meiHead type attribute can have the value
+            'independent' only when the document element is "meiHead".</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.basic.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.labelled.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.meiVersion.attributes"/>
+         <ref name="mei_att.responsibility.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the kind of document to which the header is attached, for example whether it is a corpus or individual text.</a:documentation>
+               <choice>
+                  <value>music</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Header is attached to a music document.</a:documentation>
+                  <value>corpus</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Header is attached to a corpus.</a:documentation>
+                  <value>independent</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Header is independent; i.e., not attached to either a music or a corpus document.</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_notesStmt">
+      <element name="notesStmt">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(notes statement)– Collects any notes providing information about a text additional to that recorded in other parts of the bibliographic description.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="mei_model.annotLike"/>
+         </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_perfMedium">
+      <element name="perfMedium">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(performance medium) – Indicates the number and character of the performing forces used in a musical composition.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.annotLike"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.authorized.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_perfRes">
+      <element name="perfRes">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(performance resource) – Name of an instrument on which a performer plays, a performer's voice range, or a standard performing ensemble designation.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike.limited"/>
+               <ref name="mei_perfRes"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.authorized.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <optional>
+            <attribute name="count">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the number of performers.</a:documentation>
+               <data type="positiveInteger"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="solo">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Marks this instrument or vocal part as a soloist. Do not use this attribute for a solo instrument which is not accompanied.</a:documentation>
+               <ref name="mei_data.BOOLEAN"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_physDesc">
+      <element name="physDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(physical description) – Container for information about the appearance, construction, or handling of physical materials, such as their dimension, quantity, color, style, and technique of creation.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.pLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.physDescPart"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_physMedium">
+      <element name="physMedium">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(physical medium) – Records the physical materials used in the source, such as ink and paper.</a:documentation>
+         <ref name="mei_macro.struc-unstrucContent"/>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.authorized.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_plateNum">
+      <element name="plateNum">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(plate number) – Designation assigned to a resource by a music publisher, usually printed at the bottom of each page, and sometimes appearing also on the title page.</a:documentation>
+         <ref name="mei_macro.struc-unstrucContent"/>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_projectDesc">
+      <element name="projectDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(project description) – Project-level meta-data describing the aim or purpose for which the electronic file was encoded, funding agencies, etc. together with any other relevant information concerning the process by which it was assembled or collected.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="mei_model.pLike"/>
+         </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.dataPointing.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_pubStmt">
+      <element name="pubStmt">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication statement) – Container for information regarding the publication or distribution of a bibliographic item, including the publisher's name and address, the date of publication, and other relevant details.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <choice>
+            <optional>
+               <ref name="mei_unpub"/>
+            </optional>
+            <zeroOrMore>
+               <ref name="mei_model.pubStmtPart"/>
+            </zeroOrMore>
+         </choice>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_revisionDesc">
+      <element name="revisionDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(revision description) – Container for information about alterations that have been made to an MEI file.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="mei_change"/>
+         </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_segmentation">
+      <element name="segmentation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the principles according to which the musical text has been segmented, for example into movements, sections, etc.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="mei_model.pLike"/>
+         </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.dataPointing.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_seriesStmt">
+      <element name="seriesStmt">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(series statement) – Groups information about the series, if any, to which a publication belongs.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="mei_model.titleLike"/>
+         </oneOrMore>
+         <zeroOrMore>
+            <choice>
+               <ref name="mei_model.respLikePart"/>
+               <ref name="mei_respStmt"/>
+            </choice>
+         </zeroOrMore>
+         <zeroOrMore>
+            <choice>
+               <ref name="mei_model.identifierLike"/>
+               <ref name="mei_biblScope"/>
+               <ref name="mei_seriesStmt"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_source">
+      <element name="source">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A bibliographic description of a source used in the creation of the electronic file.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <empty/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.biblLike"/>
+         </zeroOrMore>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-source-check_source_target-constraint-rule-12">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mei:source/@target">
+               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@target attribute should
+            have content.</sch:assert>
+               <sch:assert role="warning"
+                           test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[local-name()              eq 'source' or local-name() eq 'manifestation']/@xml:id or matches($i, '^([a-z]+://|\.{1,2}/)')">Each value in @target should correspond to the @xml:id attribute of a source or
+            manifestation element or be an external URI.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.authorized.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.dataPointing.attributes"/>
+         <ref name="mei_att.pointing.attributes"/>
+         <ref name="mei_att.recordType.attributes"/>
+         <ref name="mei_att.targetEval.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_sourceDesc">
+      <element name="sourceDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(source description) – A container for the descriptions of the source(s) used in the creation of the electronic file.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="mei_source"/>
+         </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_tagsDecl">
+      <element name="tagsDecl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(tagging declaration) – Provides detailed information about the tagging applied to a document.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="mei_desc"/>
+         </optional>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_titleStmt">
+      <element name="titleStmt">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(title statement) – Container for title and responsibility meta-data.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="mei_model.titleLike"/>
+         </oneOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.respLike"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_unpub">
+      <element name="unpub">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(unpublished) – Used to explicitly indicate that a bibliographic resource is unpublished.</a:documentation>
+         <text/>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_work">
+      <element name="work">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a detailed description of a work — a distinct intellectual or artistic creation — specifically its history, language use, and high-level musical attributes (e.g., key, tempo, meter, medium of performance, and intended duration).</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.identifierLike"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="mei_model.titleLike"/>
+         </oneOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.respLikePart"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.workIdent"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="mei_langUsage"/>
+         </optional>
+         <optional>
+            <ref name="mei_perfMedium"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="mei_biblList"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="mei_notesStmt"/>
+         </optional>
+         <optional>
+            <ref name="mei_classification"/>
+         </optional>
+         <optional>
+            <ref name="mei_expressionList"/>
+         </optional>
+         <optional>
+            <ref name="mei_componentList"/>
+         </optional>
+         <optional>
+            <ref name="mei_relationList"/>
+         </optional>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.authorized.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.dataPointing.attributes"/>
+         <ref name="mei_att.pointing.attributes"/>
+         <ref name="mei_att.targetEval.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_workList">
+      <element name="workList">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(work list) – Grouping mechanism for information describing non-bibliographic aspects of a text.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="mei_work"/>
+         </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_model.addressPart">
+      <choice>
+         <ref name="mei_model.geogNamePart"/>
+      </choice>
+   </define>
+   <define name="mei_model.addressPart_alternation">
+      <choice>
+         <ref name="mei_model.geogNamePart_alternation"/>
+      </choice>
+   </define>
+   <define name="mei_model.addressPart_sequence">
+      <ref name="mei_model.geogNamePart_sequence"/>
+   </define>
+   <define name="mei_model.addressPart_sequenceOptional">
+      <optional>
+         <ref name="mei_model.geogNamePart_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="mei_model.addressPart_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_model.geogNamePart_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.addressPart_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_model.geogNamePart_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.geogNamePart">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.geogNamePart_alternation">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.geogNamePart_sequence">
+      <empty/>
+   </define>
+   <define name="mei_model.geogNamePart_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="mei_model.geogNamePart_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="mei_model.geogNamePart_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.nameLike.agent">
+      <choice>
+         <ref name="mei_corpName"/>
+         <ref name="mei_persName"/>
+      </choice>
+   </define>
+   <define name="mei_model.nameLike.agent_alternation">
+      <choice>
+         <ref name="mei_corpName"/>
+         <ref name="mei_persName"/>
+      </choice>
+   </define>
+   <define name="mei_model.nameLike.agent_sequence">
+      <ref name="mei_corpName"/>
+      <ref name="mei_persName"/>
+   </define>
+   <define name="mei_model.nameLike.agent_sequenceOptional">
+      <optional>
+         <ref name="mei_corpName"/>
+      </optional>
+      <optional>
+         <ref name="mei_persName"/>
+      </optional>
+   </define>
+   <define name="mei_model.nameLike.agent_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_corpName"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_persName"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.nameLike.agent_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_corpName"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_persName"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.nameLike.geogName">
+      <choice>
+         <ref name="mei_geogName"/>
+      </choice>
+   </define>
+   <define name="mei_model.nameLike.geogName_alternation">
+      <choice>
+         <ref name="mei_geogName"/>
+      </choice>
+   </define>
+   <define name="mei_model.nameLike.geogName_sequence">
+      <ref name="mei_geogName"/>
+   </define>
+   <define name="mei_model.nameLike.geogName_sequenceOptional">
+      <optional>
+         <ref name="mei_geogName"/>
+      </optional>
+   </define>
+   <define name="mei_model.nameLike.geogName_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_geogName"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.nameLike.geogName_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_geogName"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.nameLike.label">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.nameLike.label_alternation">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.nameLike.label_sequence">
+      <empty/>
+   </define>
+   <define name="mei_model.nameLike.label_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="mei_model.nameLike.label_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="mei_model.nameLike.label_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.nameLike.place">
+      <choice>
+         <ref name="mei_model.nameLike.geogName"/>
+         <ref name="mei_model.repositoryLike"/>
+      </choice>
+   </define>
+   <define name="mei_model.nameLike.place_alternation">
+      <choice>
+         <ref name="mei_model.nameLike.geogName_alternation"/>
+         <ref name="mei_model.repositoryLike_alternation"/>
+      </choice>
+   </define>
+   <define name="mei_model.nameLike.place_sequence">
+      <ref name="mei_model.nameLike.geogName_sequence"/>
+      <ref name="mei_model.repositoryLike_sequence"/>
+   </define>
+   <define name="mei_model.nameLike.place_sequenceOptional">
+      <optional>
+         <ref name="mei_model.nameLike.geogName_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.repositoryLike_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="mei_model.nameLike.place_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_model.nameLike.geogName_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.repositoryLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.nameLike.place_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_model.nameLike.geogName_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.repositoryLike_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.persNamePart">
+      <choice>
+         <ref name="mei_roleName"/>
+      </choice>
+   </define>
+   <define name="mei_corpName">
+      <element name="corpName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corporate name) – Identifies an organization or group of people that acts as a single entity.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.name.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_geogName">
+      <element name="geogName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(geographic name) – The proper noun designation for a place, natural feature, or political jurisdiction.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.name.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_persName">
+      <element name="persName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal name) – Designation for an individual, including any or all of that individual's forenames, surnames, honorific titles, and added names.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike"/>
+               <ref name="mei_model.persNamePart"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.name.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_roleName">
+      <element name="roleName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(role name) – Contains a name component which indicates that the referent has a particular role or position in society, such as an official title or rank.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.name.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_model.locrefLike">
+      <choice>
+         <ref name="mei_ptr"/>
+         <ref name="mei_ref"/>
+      </choice>
+   </define>
+   <define name="mei_model.locrefLike_alternation">
+      <choice>
+         <ref name="mei_ptr"/>
+         <ref name="mei_ref"/>
+      </choice>
+   </define>
+   <define name="mei_model.locrefLike_sequence">
+      <ref name="mei_ptr"/>
+      <ref name="mei_ref"/>
+   </define>
+   <define name="mei_model.locrefLike_sequenceOptional">
+      <optional>
+         <ref name="mei_ptr"/>
+      </optional>
+      <optional>
+         <ref name="mei_ref"/>
+      </optional>
+   </define>
+   <define name="mei_model.locrefLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_ptr"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_ref"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.locrefLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_ptr"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_ref"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_ptr">
+      <element name="ptr">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pointer) – Defines a traversible pointer to another location, using only attributes to describe the destination.</a:documentation>
+         <empty/>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.internetMedia.attributes"/>
+         <ref name="mei_att.metadataPointing.attributes"/>
+         <ref name="mei_att.pointing.attributes"/>
+         <ref name="mei_att.targetEval.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_ref">
+      <element name="ref">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) – Defines a traversible reference to another location. May contain text and sub-elements that describe the destination.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.internetMedia.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.metadataPointing.attributes"/>
+         <ref name="mei_att.pointing.attributes"/>
+         <ref name="mei_att.targetEval.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_att.annot.log.attributes">
+      <ref name="mei_att.duration.additive.attributes"/>
+      <ref name="mei_att.layerIdent.attributes"/>
+      <ref name="mei_att.partIdent.attributes"/>
+      <ref name="mei_att.staffIdent.attributes"/>
+      <ref name="mei_att.startEndId.attributes"/>
+      <ref name="mei_att.timestamp.logical.attributes"/>
+      <ref name="mei_att.timestamp2.logical.attributes"/>
+   </define>
+   <define name="mei_att.audience.attributes">
+      <ref name="mei_att.audience.attribute.audience"/>
+   </define>
+   <define name="mei_att.audience.attribute.audience">
+      <optional>
+         <attribute name="audience">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The intended audience.</a:documentation>
+            <choice>
+               <value>private</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Internal use only.</a:documentation>
+               <value>public</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Available to all audiences.</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.authorized.attributes">
+      <ref name="mei_att.canonical.attributes"/>
+      <ref name="mei_att.authorized.attribute.auth"/>
+      <ref name="mei_att.authorized.attribute.auth.uri"/>
+   </define>
+   <define name="mei_att.authorized.attribute.auth">
+      <optional>
+         <attribute name="auth">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A name or label associated with a controlled vocabulary or other authoritative source for this element or its content.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.authorized.attribute.auth.uri">
+      <optional>
+         <attribute name="auth.uri">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A web-accessible location of the controlled vocabulary or other authoritative source of identification or definition for this element or its content. This attribute may contain a complete URI or a partial URI which is completed by the value of the codedval attribute.</a:documentation>
+            <ref name="mei_data.URI"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.basic.attributes">
+      <ref name="mei_att.id.attributes"/>
+      <ref name="mei_att.basic.attribute.xmlbase"/>
+   </define>
+   <define name="mei_att.basic.attribute.xmlbase">
+      <optional>
+         <attribute name="xml:base">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a base URI reference with which applications can resolve relative URI references into absolute URI references.</a:documentation>
+            <ref name="mei_data.URI"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.bibl.attributes">
+      <ref name="mei_att.bibl.attribute.analog"/>
+   </define>
+   <define name="mei_att.bibl.attribute.analog">
+      <optional>
+         <attribute name="analog">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a reference to a field or element in another descriptive encoding system to which this MEI element is comparable.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.calendared.attributes">
+      <ref name="mei_att.calendared.attribute.calendar"/>
+   </define>
+   <define name="mei_att.calendared.attribute.calendar">
+      <optional>
+         <attribute name="calendar">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the calendar system to which a date belongs, for example, Gregorian, Julian, Roman, Mosaic, Revolutionary, Islamic, etc.</a:documentation>
+            <data type="NMTOKEN"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.canonical.attributes">
+      <ref name="mei_att.canonical.attribute.codedval"/>
+   </define>
+   <define name="mei_att.canonical.attribute.codedval">
+      <optional>
+         <attribute name="codedval">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A value that represents or identifies other data. Often, it is a primary key in the database or a unique value in the coded list identified by the auth or auth.uri attributes.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="NMTOKEN"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.classed.attributes">
+      <ref name="mei_att.classed.attribute.class"/>
+   </define>
+   <define name="mei_att.classed.attribute.class">
+      <optional>
+         <attribute name="class">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains one or more URIs which denote classification terms that apply to the entity bearing this attribute.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.classed-class-check_classURI-constraint-rule-14">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@class">
+              <sch:assert test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:category/@xml:id or matches($i, '^([a-z]+://|\.{1,2}/)')">The value in @class must either correspond to the @xml:id attribute of a category
+                element or be an external URL.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.common.attributes">
+      <ref name="mei_att.basic.attributes"/>
+      <ref name="mei_att.labelled.attributes"/>
+      <ref name="mei_att.linking.attributes"/>
+      <ref name="mei_att.nNumberLike.attributes"/>
+      <ref name="mei_att.responsibility.attributes"/>
+      <ref name="mei_att.typed.attributes"/>
+   </define>
+   <define name="mei_att.datable.attributes">
+      <ref name="mei_att.datable.attribute.enddate"/>
+      <ref name="mei_att.datable.attribute.isodate"/>
+      <ref name="mei_att.datable.attribute.notafter"/>
+      <ref name="mei_att.datable.attribute.notbefore"/>
+      <ref name="mei_att.datable.attribute.startdate"/>
+   </define>
+   <define name="mei_att.datable.attribute.enddate">
+      <optional>
+         <attribute name="enddate">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains the end point of a date range in standard ISO form.</a:documentation>
+            <ref name="mei_data.ISODATE"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.datable.attribute.isodate">
+      <optional>
+         <attribute name="isodate">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides the value of a textual date in standard ISO form.</a:documentation>
+            <ref name="mei_data.ISODATE"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.datable.attribute.notafter">
+      <optional>
+         <attribute name="notafter">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains an upper boundary for an uncertain date in standard ISO form.</a:documentation>
+            <ref name="mei_data.ISODATE"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.datable.attribute.notbefore">
+      <optional>
+         <attribute name="notbefore">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a lower boundary, in standard ISO form, for an uncertain date.</a:documentation>
+            <ref name="mei_data.ISODATE"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.datable.attribute.startdate">
+      <optional>
+         <attribute name="startdate">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains the starting point of a date range in standard ISO form.</a:documentation>
+            <ref name="mei_data.ISODATE"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.dataPointing.attributes">
+      <ref name="mei_att.dataPointing.attribute.data"/>
+   </define>
+   <define name="mei_att.dataPointing.attribute.data">
+      <optional>
+         <attribute name="data">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to link metadata elements to one or more data-containing elements.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.dataPointing-data-check_dataTarget-constraint-rule-15">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@data">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@data attribute should
+                have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[ancestor::mei:music]/@xml:id">The value in @data should correspond to the @xml:id attribute of a descendant of
+                the music element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.metadataPointing.attributes">
+      <ref name="mei_att.metadataPointing.attribute.decls"/>
+   </define>
+   <define name="mei_att.metadataPointing.attribute.decls">
+      <optional>
+         <attribute name="decls">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies one or more metadata elements (other than classification terms) within the header, which are understood to apply to the element bearing this attribute and its content.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.metadataPointing-decls-check_declsTarget-constraint-rule-16">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@decls">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@decls attribute
+                should have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[ancestor::mei:meiHead]/@xml:id">Each value in @decls should correspond to the @xml:id attribute of an element
+                within the metadata header.</sch:assert>
+              <sch:assert test="every $i in tokenize(., '\s+') satisfies not(substring($i,2)=//mei:term/@xml:id)">No value in @decls should correspond to the @xml:id attribute of a classification
+                term. Use @class for this purpose.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.duration.additive.attributes">
+      <ref name="mei_att.duration.additive.attribute.dur"/>
+   </define>
+   <define name="mei_att.duration.additive.attribute.dur">
+      <optional>
+         <attribute name="dur">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">When a duration cannot be represented as a single power-of-two value, multiple space-separated values that add up to the total duration may be used.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.DURATION"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.evidence.attributes">
+      <ref name="mei_att.evidence.attribute.cert"/>
+      <ref name="mei_att.evidence.attribute.evidence"/>
+   </define>
+   <define name="mei_att.evidence.attribute.cert">
+      <optional>
+         <attribute name="cert">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Signifies the degree of certainty or precision associated with a feature.</a:documentation>
+            <ref name="mei_data.CERTAINTY"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.evidence.attribute.evidence">
+      <optional>
+         <attribute name="evidence">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the nature of the evidence supporting the reliability or accuracy of the intervention or interpretation.
+Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentation>
+            <choice>
+               <value>internal</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">There is evidence within the document to support the intervention.</a:documentation>
+               <value>external</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">There is evidence outside the document to support the intervention.</a:documentation>
+               <value>conjecture</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The assertion has been made by the editor, cataloguer, or scholar on the basis of their expertise.</a:documentation>
+               <data type="NMTOKEN"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.extent.attributes">
+      <ref name="mei_att.measurement.attributes"/>
+      <ref name="mei_att.ranging.attributes"/>
+      <ref name="mei_att.extent.attribute.extent"/>
+   </define>
+   <define name="mei_att.extent.attribute.extent">
+      <optional>
+         <attribute name="extent">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures a measurement, count, or description. When extent contains a numeric value, use the unit attribute to indicate the measurement unit.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.extent-extent-check_extent-constraint-rule-17">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@extent[matches(normalize-space(.), '^\d+(\.\d+)?$')]">
+              <sch:assert role="warning" test="../@unit">The @unit attribute is
+                recommended.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.extent-extent-check_extent-constraint-rule-18">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@extent[matches(., '\d+(\.\d+)?\s')]">
+              <sch:assert role="warning" test="../@unit">Separation into value (@extent) and unit
+                (@unit) is recommended.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.filing.attributes">
+      <ref name="mei_att.filing.attribute.nonfiling"/>
+   </define>
+   <define name="mei_att.filing.attribute.nonfiling">
+      <optional>
+         <attribute name="nonfiling">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds the number of initial characters (such as those constituting an article or preposition) that should not be used for sorting a title or name.</a:documentation>
+            <data type="positiveInteger"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.id.attributes">
+      <ref name="mei_att.id.attribute.xmlid"/>
+   </define>
+   <define name="mei_att.id.attribute.xmlid">
+      <optional>
+         <attribute name="xml:id">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Regularizes the naming of an element and thus facilitates building links between it and other resources. Each id attribute within a document must have a unique value.</a:documentation>
+            <data type="ID"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.internetMedia.attributes">
+      <ref name="mei_att.internetMedia.attribute.mimetype"/>
+   </define>
+   <define name="mei_att.internetMedia.attribute.mimetype">
+      <optional>
+         <attribute name="mimetype">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the applicable MIME (multimedia internet mail extension) type. The value should be a valid MIME media type defined by the Internet Engineering Task Force in RFC 2046.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.labelled.attributes">
+      <ref name="mei_att.labelled.attribute.label"/>
+   </define>
+   <define name="mei_att.labelled.attribute.label">
+      <optional>
+         <attribute name="label">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures text to be used to generate a label for the element to which it's attached, a "tool tip" or prefatory text, for example. Should not be used to record document content.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.lang.attributes">
+      <ref name="mei_att.lang.attribute.xmllang"/>
+      <ref name="mei_att.lang.attribute.translit"/>
+   </define>
+   <define name="mei_att.lang.attribute.xmllang">
+      <optional>
+         <attribute name="xml:lang">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the language of the element's content. The values for this attribute are language 'tags' as defined in BCP 47. All language tags that make use of private use sub-tags must be documented in a corresponding language element in the MEI header whose id attribute is the same as the language tag's value.</a:documentation>
+            <data type="language"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.lang.attribute.translit">
+      <optional>
+         <attribute name="translit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the transliteration technique used.</a:documentation>
+            <data type="NMTOKEN"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.layerIdent.attributes">
+      <ref name="mei_att.layerIdent.attribute.layer"/>
+   </define>
+   <define name="mei_att.layerIdent.attribute.layer">
+      <optional>
+         <attribute name="layer">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the layer to which a feature applies.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="positiveInteger"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.linking.attributes">
+      <ref name="mei_att.linking.attribute.copyof"/>
+      <ref name="mei_att.linking.attribute.corresp"/>
+      <ref name="mei_att.linking.attribute.follows"/>
+      <ref name="mei_att.linking.attribute.next"/>
+      <ref name="mei_att.linking.attribute.precedes"/>
+      <ref name="mei_att.linking.attribute.prev"/>
+      <ref name="mei_att.linking.attribute.sameas"/>
+      <ref name="mei_att.linking.attribute.synch"/>
+   </define>
+   <define name="mei_att.linking.attribute.copyof">
+      <optional>
+         <attribute name="copyof">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Points to an element of which the current element is a copy.</a:documentation>
+            <ref name="mei_data.URI"/>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.linking-copyof-When_copyof_element_empty-constraint-rule-19">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="mei:*[@copyof]">
+              <sch:assert test="count(child::*[not(comment() or processing-instruction())]) = 0">An
+                element with a copyof attribute can only have comment or processing instruction
+                descendents.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.linking-copyof-check_copyofTarget-constraint-rule-20">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@copyof">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@copyof attribute
+                should have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">The
+                value in @copyof should correspond to the @xml:id attribute of an
+                element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.linking.attribute.corresp">
+      <optional>
+         <attribute name="corresp">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to point to other elements that correspond to this one in a generic fashion.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.linking-corresp-check_correspTarget-constraint-rule-21">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@corresp">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@corresp attribute
+                should have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
+                value in @corresp should correspond to the @xml:id attribute of an
+                element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.linking.attribute.follows">
+      <optional>
+         <attribute name="follows">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to one or more events in a user-defined collection that are known to be predecessors of the current element.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.linking-follows-check_followsTarget-constraint-rule-22">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@follows">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@follows attribute
+                should have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
+                value in @follows must correspond to the @xml:id attribute of an
+                element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.linking.attribute.next">
+      <optional>
+         <attribute name="next">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to point to the next event(s) in a user-defined collection.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.linking-next-check_nextTarget-constraint-rule-23">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@next">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@next attribute should
+                have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
+                value in @next should correspond to the @xml:id attribute of an
+                element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.linking.attribute.precedes">
+      <optional>
+         <attribute name="precedes">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Points to one or more events in a user-defined collection that are known to be successors of the current element.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.linking-precedes-check_precedesTarget-constraint-rule-24">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@precedes">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@precedes attribute
+                should have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
+                value in @precedes must correspond to the @xml:id attribute of an
+                element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.linking.attribute.prev">
+      <optional>
+         <attribute name="prev">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Points to the previous event(s) in a user-defined collection.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.linking-prev-check_prevTarget-constraint-rule-25">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@prev">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@prev attribute should
+                have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
+                value in @prev should correspond to the @xml:id attribute of an
+                element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.linking.attribute.sameas">
+      <optional>
+         <attribute name="sameas">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Points to an element that is the same as the current element but is not a literal copy of the current element.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.linking-sameas-check_sameasTarget-constraint-rule-26">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@sameas">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@sameas attribute
+                should have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
+                value in @sameas should correspond to the @xml:id attribute of an
+                element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.linking.attribute.synch">
+      <optional>
+         <attribute name="synch">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Points to elements that are synchronous with the current element.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.linking-synch-check_synchTarget-constraint-rule-27">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@synch">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@synch attribute
+                should have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
+                value in @synch should correspond to the @xml:id attribute of an
+                element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.measurement.attributes">
+      <ref name="mei_att.measurement.attribute.unit"/>
+   </define>
+   <define name="mei_att.measurement.attribute.unit">
+      <optional>
+         <attribute name="unit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the unit of measurement.
+Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] ft; 8] m; 9] mm; 10] page; 11] pc; 12] pt; 13] px; 14] rad; 15] record; 16] vol; 17] vu</a:documentation>
+            <choice>
+               <value>byte</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Byte.</a:documentation>
+               <value>char</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Character.</a:documentation>
+               <value>cm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Centimeter.</a:documentation>
+               <value>deg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Degree.</a:documentation>
+               <value>in</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Inch.</a:documentation>
+               <value>issue</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Serial issue.</a:documentation>
+               <value>ft</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Foot.</a:documentation>
+               <value>m</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Meter.</a:documentation>
+               <value>mm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Millimeter.</a:documentation>
+               <value>page</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Page.</a:documentation>
+               <value>pc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pica.</a:documentation>
+               <value>pt</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Point.</a:documentation>
+               <value>px</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pixel.</a:documentation>
+               <value>rad</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Radian.</a:documentation>
+               <value>record</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Record.</a:documentation>
+               <value>vol</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Serial volume.</a:documentation>
+               <value>vu</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">MEI virtual unit.</a:documentation>
+               <data type="NMTOKEN"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.meiVersion.attributes">
+      <ref name="mei_att.meiVersion.attribute.meiversion"/>
+   </define>
+   <define name="mei_att.meiVersion.attribute.meiversion">
+      <optional>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="meiversion"
+                    a:defaultValue="4.0.0">
+            <a:documentation>Specifies a generic MEI version label.</a:documentation>
+            <choice>
+               <value>4.0.0</value>
+               <a:documentation>This version of MEI.</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.name.attributes">
+      <ref name="mei_att.authorized.attributes"/>
+      <ref name="mei_att.datable.attributes"/>
+      <ref name="mei_att.filing.attributes"/>
+      <ref name="mei_att.name.attribute.nymref"/>
+      <ref name="mei_att.name.attribute.role"/>
+   </define>
+   <define name="mei_att.name.attribute.nymref">
+      <optional>
+         <attribute name="nymref">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record a pointer to the regularized form of the name elsewhere in the document.</a:documentation>
+            <ref name="mei_data.URI"/>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.name-nymref-check_nymrefTarget-constraint-rule-28">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@nymref">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@nymref attribute
+                should have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">The
+                value in @nymref should correspond to the @xml:id attribute of an
+                element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.name.attribute.role">
+      <optional>
+         <attribute name="role">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to specify further information about the entity referenced by this name, for example, the occupation of a person or the status of a place.</a:documentation>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.nNumberLike.attributes">
+      <ref name="mei_att.nNumberLike.attribute.n"/>
+   </define>
+   <define name="mei_att.nNumberLike.attribute.n">
+      <optional>
+         <attribute name="n">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a number-like designation that indicates an element's position in a sequence of similar elements. May not contain space characters.</a:documentation>
+            <ref name="mei_data.WORD"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.partIdent.attributes">
+      <ref name="mei_att.partIdent.attribute.part"/>
+      <ref name="mei_att.partIdent.attribute.partstaff"/>
+   </define>
+   <define name="mei_att.partIdent.attribute.part">
+      <optional>
+         <attribute name="part">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the part in which the current feature should appear. Use '%all' when the feature should occur in every part.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">(%all|#[\i][\c]+)</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.partIdent-part-check_part_attr_all-constraint-rule-29">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@part[some $i in tokenize(., '\s+') satisfies (matches($i, '^%all$'))]">
+              <sch:assert test="count(tokenize(., '\s+')) = 1">'%all' cannot be mixed with other
+                values.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.partIdent.attribute.partstaff">
+      <optional>
+         <attribute name="partstaff">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Signifies the part staff on which a notated feature occurs. Use '%all' when the feature should occur on every staff.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">(%all|\d+(-\d+)?)</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.partIdent-partstaff-check_partstaff_attr_all-constraint-rule-30">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@partstaff[some $i in tokenize(., '\s+') satisfies (matches($i, '^%all$'))]">
+              <sch:assert test="count(tokenize(., '\s+')) = 1">'%all' cannot be mixed with other
+                values.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.plist.attributes">
+      <ref name="mei_att.plist.attribute.plist"/>
+   </define>
+   <define name="mei_att.plist.attribute.plist">
+      <optional>
+         <attribute name="plist">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">When the target attribute is present, plist identifies the active participants; that is, those entities pointed "from", in a relationship with the specified target(s). When the target attribute is not present, it identifies participants in a mutual relationship.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.plist-plist-check_plistTarget-constraint-rule-31">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@plist">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@plist attribute
+                should have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
+                value in @plist should correspond to the @xml:id attribute of an
+                element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.pointing.attributes">
+      <ref name="mei_att.pointing.attribute.xlinkactuate"/>
+      <ref name="mei_att.pointing.attribute.xlinkrole"/>
+      <ref name="mei_att.pointing.attribute.xlinkshow"/>
+      <ref name="mei_att.pointing.attribute.target"/>
+      <ref name="mei_att.pointing.attribute.targettype"/>
+   </define>
+   <define name="mei_att.pointing.attribute.xlinkactuate">
+      <optional>
+         <attribute name="xlink:actuate">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines whether a link occurs automatically or must be requested by the user.</a:documentation>
+            <choice>
+               <value>onLoad</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Load the target resource(s) immediately.</a:documentation>
+               <value>onRequest</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Load the target resource(s) upon user request.</a:documentation>
+               <value>none</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Do not permit loading of the target resource(s).</a:documentation>
+               <value>other</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Behavior other than allowed by the other values of this attribute.</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.pointing.attribute.xlinkrole">
+      <optional>
+         <attribute name="xlink:role">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Characterization of the relationship between resources. The value of the role attribute must be a URI.</a:documentation>
+            <ref name="mei_data.URI"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.pointing.attribute.xlinkshow">
+      <optional>
+         <attribute name="xlink:show">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines how a remote resource is rendered.</a:documentation>
+            <choice>
+               <value>new</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Open in a new window.</a:documentation>
+               <value>replace</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Load the referenced resource in the same window.</a:documentation>
+               <value>embed</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Embed the referenced resource at the point of the link.</a:documentation>
+               <value>none</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Do not permit traversal to the referenced resource.</a:documentation>
+               <value>other</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Behavior other than permitted by the other values of this attribute.</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.pointing.attribute.target">
+      <optional>
+         <attribute name="target">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies passive participants in a relationship; that is, the entities pointed "to".</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.pointing.attribute.targettype">
+      <optional>
+         <attribute name="targettype">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Characterization of target resource(s) using any convenient classification scheme or typology.</a:documentation>
+            <data type="NMTOKEN"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.ranging.attributes">
+      <ref name="mei_att.ranging.attribute.atleast"/>
+      <ref name="mei_att.ranging.attribute.atmost"/>
+      <ref name="mei_att.ranging.attribute.min"/>
+      <ref name="mei_att.ranging.attribute.max"/>
+      <ref name="mei_att.ranging.attribute.confidence"/>
+   </define>
+   <define name="mei_att.ranging.attribute.atleast">
+      <optional>
+         <attribute name="atleast">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives a minimum estimated value for an approximate measurement.</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.ranging.attribute.atmost">
+      <optional>
+         <attribute name="atmost">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives a maximum estimated value for an approximate measurement.</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.ranging.attribute.min">
+      <optional>
+         <attribute name="min">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Where the measurement summarizes more than one observation or a range of values, supplies the minimum value observed.</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.ranging.attribute.max">
+      <optional>
+         <attribute name="max">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Where the measurement summarizes more than one observation or a range of values, supplies the maximum value observed.</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.ranging.attribute.confidence">
+      <optional>
+         <attribute name="confidence">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the degree of statistical confidence (between zero and one) that a value falls within the range specified by min and max, or the proportion of observed values that fall within that range.</a:documentation>
+            <ref name="mei_data.CONFIDENCE"/>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.ranging-confidence-check_confidence-constraint-rule-32">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="mei:*[@confidence]">
+              <sch:assert test="@min and @max">The attributes @min and @max are required when
+                @confidence is present.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.responsibility.attributes">
+      <ref name="mei_att.responsibility.attribute.resp"/>
+   </define>
+   <define name="mei_att.responsibility.attribute.resp">
+      <optional>
+         <attribute name="resp">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the agent(s) responsible for some aspect of the text's transcription, editing, or encoding. Its value must point to one or more identifiers declared in the document header.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.responsibility-resp-check_respTarget-constraint-rule-33">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@resp">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@resp attribute should
+                have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[ancestor::mei:meiHead]/@xml:id">The value in @resp should correspond to the @xml:id attribute of an element within
+                the metadata header.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.source.attributes">
+      <ref name="mei_att.source.attribute.source"/>
+   </define>
+   <define name="mei_att.source.attribute.source">
+      <optional>
+         <attribute name="source">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a list of one or more pointers indicating the sources which attest to a given reading. Each value should correspond to the ID of a source or manifestationelement located in the document header.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.source-source-check_sourceTarget-constraint-rule-34">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@source">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@source attribute
+                should have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[local-name() eq 'source' or local-name() eq 'manifestation']/@xml:id">Each value in @source should correspond to the @xml:id attribute of a source or
+                manifestation element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.staffIdent.attributes">
+      <ref name="mei_att.staffIdent.attribute.staff"/>
+   </define>
+   <define name="mei_att.staffIdent.attribute.staff">
+      <optional>
+         <attribute name="staff">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Signifies the staff on which a notated event occurs or to which a control event applies. Mandatory when applicable.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="positiveInteger"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.startEndId.attributes">
+      <ref name="mei_att.startId.attributes"/>
+      <ref name="mei_att.startEndId.attribute.endid"/>
+   </define>
+   <define name="mei_att.startEndId.attribute.endid">
+      <optional>
+         <attribute name="endid">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the final element in a sequence of events to which the feature applies.</a:documentation>
+            <ref name="mei_data.URI"/>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.startEndId-endid-check_endidTarget-constraint-rule-35">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@endid">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@endid attribute
+                should have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">The
+                value in @endid should correspond to the @xml:id attribute of an
+                element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.startId.attributes">
+      <ref name="mei_att.startId.attribute.startid"/>
+   </define>
+   <define name="mei_att.startId.attribute.startid">
+      <optional>
+         <attribute name="startid">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds a reference to the first element in a sequence of events to which the feature applies.</a:documentation>
+            <ref name="mei_data.URI"/>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.startId-startid-check_startidTarget-constraint-rule-36">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@startid">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@startid attribute
+                should have content.</sch:assert>
+              <sch:assert role="warning"
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">The
+                value in @startid should correspond to the @xml:id attribute of an
+                element.</sch:assert>
+            </sch:rule>
+   </pattern>
+   <define name="mei_att.targetEval.attributes">
+      <ref name="mei_att.targetEval.attribute.evaluate"/>
+   </define>
+   <define name="mei_att.targetEval.attribute.evaluate">
+      <optional>
+         <attribute name="evaluate">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the intended meaning when a participant in a relationship is itself a pointer.</a:documentation>
+            <choice>
+               <value>all</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">If an element pointed to is itself a pointer, then the target of that pointer will be taken, and so on, until an element is found which is not a pointer.</a:documentation>
+               <value>one</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">If an element pointed to is itself a pointer, then its target (whether a pointer or not) is taken as the target of this pointer.</a:documentation>
+               <value>none</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">No further evaluation of targets is carried out beyond that needed to find the element(s) specified in plist or target attribute.</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.timestamp.logical.attributes">
+      <ref name="mei_att.timestamp.logical.attribute.tstamp"/>
+   </define>
+   <define name="mei_att.timestamp.logical.attribute.tstamp">
+      <optional>
+         <attribute name="tstamp">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes the onset time in terms of musical time, i.e., beats[.fractional beat part], as expressed in the written time signature.</a:documentation>
+            <ref name="mei_data.BEAT"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.timestamp2.logical.attributes">
+      <ref name="mei_att.timestamp2.logical.attribute.tstamp2"/>
+   </define>
+   <define name="mei_att.timestamp2.logical.attribute.tstamp2">
+      <optional>
+         <attribute name="tstamp2">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes the ending point of an event, i.e., a count of measures plus a beat location in the ending measure.</a:documentation>
+            <ref name="mei_data.MEASUREBEAT"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.typed.attributes">
+      <ref name="mei_att.classed.attributes"/>
+      <ref name="mei_att.typed.attribute.type"/>
+   </define>
+   <define name="mei_att.typed.attribute.type">
+      <optional>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Designation which characterizes the element in some sense, using any convenient classification scheme or typology that employs single-token labels.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="NMTOKEN"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.xy.attributes">
+      <ref name="mei_att.xy.attribute.x"/>
+      <ref name="mei_att.xy.attribute.y"/>
+   </define>
+   <define name="mei_att.xy.attribute.x">
+      <optional>
+         <attribute name="x">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes an x coordinate for a feature in an output coordinate system. When it is necessary to record the placement of a feature in a facsimile image, use the facs attribute.</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.xy.attribute.y">
+      <optional>
+         <attribute name="y">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes a y coordinate for a feature in an output coordinate system. When it is necessary to record the placement of a feature in a facsimile image, use the facs attribute.</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_model.addressLike">
+      <choice>
+         <ref name="mei_address"/>
+      </choice>
+   </define>
+   <define name="mei_model.addressLike_alternation">
+      <choice>
+         <ref name="mei_address"/>
+      </choice>
+   </define>
+   <define name="mei_model.addressLike_sequence">
+      <ref name="mei_address"/>
+   </define>
+   <define name="mei_model.addressLike_sequenceOptional">
+      <optional>
+         <ref name="mei_address"/>
+      </optional>
+   </define>
+   <define name="mei_model.addressLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_address"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.addressLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_address"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.annotLike">
+      <choice>
+         <ref name="mei_annot"/>
+      </choice>
+   </define>
+   <define name="mei_model.annotLike_alternation">
+      <choice>
+         <ref name="mei_annot"/>
+      </choice>
+   </define>
+   <define name="mei_model.annotLike_sequence">
+      <ref name="mei_annot"/>
+   </define>
+   <define name="mei_model.annotLike_sequenceOptional">
+      <optional>
+         <ref name="mei_annot"/>
+      </optional>
+   </define>
+   <define name="mei_model.annotLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_annot"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.annotLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_annot"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.biblLike">
+      <choice>
+         <ref name="mei_bibl"/>
+         <ref name="mei_biblStruct"/>
+      </choice>
+   </define>
+   <define name="mei_model.biblLike_alternation">
+      <choice>
+         <ref name="mei_bibl"/>
+         <ref name="mei_biblStruct"/>
+      </choice>
+   </define>
+   <define name="mei_model.biblLike_sequence">
+      <ref name="mei_bibl"/>
+      <ref name="mei_biblStruct"/>
+   </define>
+   <define name="mei_model.biblLike_sequenceOptional">
+      <optional>
+         <ref name="mei_bibl"/>
+      </optional>
+      <optional>
+         <ref name="mei_biblStruct"/>
+      </optional>
+   </define>
+   <define name="mei_model.biblLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_bibl"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_biblStruct"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.biblLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_bibl"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_biblStruct"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.biblPart">
+      <choice>
+         <ref name="mei_model.editionLike"/>
+         <ref name="mei_model.respLike"/>
+         <ref name="mei_biblScope"/>
+         <ref name="mei_physLoc"/>
+      </choice>
+   </define>
+   <define name="mei_model.dateLike">
+      <choice>
+         <ref name="mei_date"/>
+      </choice>
+   </define>
+   <define name="mei_model.dateLike_alternation">
+      <choice>
+         <ref name="mei_date"/>
+      </choice>
+   </define>
+   <define name="mei_model.dateLike_sequence">
+      <ref name="mei_date"/>
+   </define>
+   <define name="mei_model.dateLike_sequenceOptional">
+      <optional>
+         <ref name="mei_date"/>
+      </optional>
+   </define>
+   <define name="mei_model.dateLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_date"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.dateLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_date"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.dimLike">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.dimLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.dimLike_sequence">
+      <empty/>
+   </define>
+   <define name="mei_model.dimLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="mei_model.dimLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="mei_model.dimLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.editionLike">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.editorialLike">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.editorialLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.editorialLike_sequence">
+      <empty/>
+   </define>
+   <define name="mei_model.editorialLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="mei_model.editorialLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="mei_model.editorialLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.headLike">
+      <choice>
+         <ref name="mei_head"/>
+      </choice>
+   </define>
+   <define name="mei_model.identifierLike">
+      <choice>
+         <ref name="mei_identifier"/>
+      </choice>
+   </define>
+   <define name="mei_model.identifierLike_alternation">
+      <choice>
+         <ref name="mei_identifier"/>
+      </choice>
+   </define>
+   <define name="mei_model.identifierLike_sequence">
+      <ref name="mei_identifier"/>
+   </define>
+   <define name="mei_model.identifierLike_sequenceOptional">
+      <optional>
+         <ref name="mei_identifier"/>
+      </optional>
+   </define>
+   <define name="mei_model.identifierLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_identifier"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.identifierLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_identifier"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.imprintPart">
+      <choice>
+         <ref name="mei_pubPlace"/>
+      </choice>
+   </define>
+   <define name="mei_model.incipLike">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.lbLike">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.lbLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.lbLike_sequence">
+      <empty/>
+   </define>
+   <define name="mei_model.lbLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="mei_model.lbLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="mei_model.lbLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.measurementLike">
+      <choice>
+         <ref name="mei_model.numLike"/>
+      </choice>
+   </define>
+   <define name="mei_model.measurementLike_alternation">
+      <choice>
+         <ref name="mei_model.numLike_alternation"/>
+      </choice>
+   </define>
+   <define name="mei_model.measurementLike_sequence">
+      <ref name="mei_model.numLike_sequence"/>
+   </define>
+   <define name="mei_model.measurementLike_sequenceOptional">
+      <optional>
+         <ref name="mei_model.numLike_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="mei_model.measurementLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_model.numLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.measurementLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_model.numLike_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.milestoneLike.text">
+      <choice>
+         <ref name="mei_model.lbLike"/>
+         <ref name="mei_model.pbLike"/>
+      </choice>
+   </define>
+   <define name="mei_model.nameLike">
+      <choice>
+         <ref name="mei_model.nameLike.agent"/>
+         <ref name="mei_model.nameLike.place"/>
+         <ref name="mei_name"/>
+      </choice>
+   </define>
+   <define name="mei_model.nameLike_alternation">
+      <choice>
+         <ref name="mei_model.nameLike.agent_alternation"/>
+         <ref name="mei_model.nameLike.place_alternation"/>
+         <ref name="mei_name"/>
+      </choice>
+   </define>
+   <define name="mei_model.nameLike_sequence">
+      <ref name="mei_model.nameLike.agent_sequence"/>
+      <ref name="mei_model.nameLike.place_sequence"/>
+      <ref name="mei_name"/>
+   </define>
+   <define name="mei_model.nameLike_sequenceOptional">
+      <optional>
+         <ref name="mei_model.nameLike.agent_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.nameLike.place_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_name"/>
+      </optional>
+   </define>
+   <define name="mei_model.nameLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_model.nameLike.agent_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.nameLike.place_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_name"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.nameLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_model.nameLike.agent_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.nameLike.place_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_name"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.numLike">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.numLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.numLike_sequence">
+      <empty/>
+   </define>
+   <define name="mei_model.numLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="mei_model.numLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="mei_model.numLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.paracontentPart">
+      <choice>
+         <ref name="mei_model.textPhraseLike"/>
+      </choice>
+   </define>
+   <define name="mei_model.pbLike">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.pbLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.pbLike_sequence">
+      <empty/>
+   </define>
+   <define name="mei_model.pbLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="mei_model.pbLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="mei_model.pbLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.pLike">
+      <choice>
+         <ref name="mei_p"/>
+      </choice>
+   </define>
+   <define name="mei_model.relationLike">
+      <choice>
+         <ref name="mei_relation"/>
+         <ref name="mei_relationList"/>
+      </choice>
+   </define>
+   <define name="mei_model.relationLike_alternation">
+      <choice>
+         <ref name="mei_relation"/>
+         <ref name="mei_relationList"/>
+      </choice>
+   </define>
+   <define name="mei_model.relationLike_sequence">
+      <ref name="mei_relation"/>
+      <ref name="mei_relationList"/>
+   </define>
+   <define name="mei_model.relationLike_sequenceOptional">
+      <optional>
+         <ref name="mei_relation"/>
+      </optional>
+      <optional>
+         <ref name="mei_relationList"/>
+      </optional>
+   </define>
+   <define name="mei_model.relationLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_relation"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_relationList"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.relationLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_relation"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_relationList"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.rendLike">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.rendLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.rendLike_sequence">
+      <empty/>
+   </define>
+   <define name="mei_model.rendLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="mei_model.rendLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="mei_model.rendLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.repositoryLike">
+      <choice>
+         <ref name="mei_repository"/>
+      </choice>
+   </define>
+   <define name="mei_model.repositoryLike_alternation">
+      <choice>
+         <ref name="mei_repository"/>
+      </choice>
+   </define>
+   <define name="mei_model.repositoryLike_sequence">
+      <ref name="mei_repository"/>
+   </define>
+   <define name="mei_model.repositoryLike_sequenceOptional">
+      <optional>
+         <ref name="mei_repository"/>
+      </optional>
+   </define>
+   <define name="mei_model.repositoryLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_repository"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.repositoryLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_repository"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.respLike">
+      <choice>
+         <ref name="mei_model.respLikePart"/>
+         <ref name="mei_respStmt"/>
+      </choice>
+   </define>
+   <define name="mei_model.respLikePart">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.respLikePart_alternation">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.respLikePart_sequence">
+      <empty/>
+   </define>
+   <define name="mei_model.respLikePart_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="mei_model.respLikePart_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="mei_model.respLikePart_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="mei_model.textComponentLike">
+      <choice>
+         <ref name="mei_model.pLike"/>
+      </choice>
+   </define>
+   <define name="mei_model.textPhraseLike">
+      <choice>
+         <ref name="mei_model.pbLike"/>
+         <ref name="mei_model.textPhraseLike.limited"/>
+      </choice>
+   </define>
+   <define name="mei_model.textPhraseLike.limited">
+      <choice>
+         <ref name="mei_model.addressPart"/>
+         <ref name="mei_model.nameLike.label"/>
+         <ref name="mei_model.locrefLike"/>
+         <ref name="mei_model.addressLike"/>
+         <ref name="mei_model.annotLike"/>
+         <ref name="mei_model.biblLike"/>
+         <ref name="mei_model.dateLike"/>
+         <ref name="mei_model.dimLike"/>
+         <ref name="mei_model.editorialLike"/>
+         <ref name="mei_model.identifierLike"/>
+         <ref name="mei_model.lbLike"/>
+         <ref name="mei_model.measurementLike"/>
+         <ref name="mei_model.nameLike"/>
+         <ref name="mei_model.relationLike"/>
+         <ref name="mei_model.rendLike"/>
+         <ref name="mei_model.titleLike"/>
+      </choice>
+   </define>
+   <define name="mei_model.textPhraseLike.limited_alternation">
+      <choice>
+         <ref name="mei_model.addressPart_alternation"/>
+         <ref name="mei_model.nameLike.label_alternation"/>
+         <ref name="mei_model.locrefLike_alternation"/>
+         <ref name="mei_model.addressLike_alternation"/>
+         <ref name="mei_model.annotLike_alternation"/>
+         <ref name="mei_model.biblLike_alternation"/>
+         <ref name="mei_model.dateLike_alternation"/>
+         <ref name="mei_model.dimLike_alternation"/>
+         <ref name="mei_model.editorialLike_alternation"/>
+         <ref name="mei_model.identifierLike_alternation"/>
+         <ref name="mei_model.lbLike_alternation"/>
+         <ref name="mei_model.measurementLike_alternation"/>
+         <ref name="mei_model.nameLike_alternation"/>
+         <ref name="mei_model.relationLike_alternation"/>
+         <ref name="mei_model.rendLike_alternation"/>
+         <ref name="mei_model.titleLike_alternation"/>
+      </choice>
+   </define>
+   <define name="mei_model.textPhraseLike.limited_sequence">
+      <ref name="mei_model.addressPart_sequence"/>
+      <ref name="mei_model.nameLike.label_sequence"/>
+      <ref name="mei_model.locrefLike_sequence"/>
+      <ref name="mei_model.addressLike_sequence"/>
+      <ref name="mei_model.annotLike_sequence"/>
+      <ref name="mei_model.biblLike_sequence"/>
+      <ref name="mei_model.dateLike_sequence"/>
+      <ref name="mei_model.dimLike_sequence"/>
+      <ref name="mei_model.editorialLike_sequence"/>
+      <ref name="mei_model.identifierLike_sequence"/>
+      <ref name="mei_model.lbLike_sequence"/>
+      <ref name="mei_model.measurementLike_sequence"/>
+      <ref name="mei_model.nameLike_sequence"/>
+      <ref name="mei_model.relationLike_sequence"/>
+      <ref name="mei_model.rendLike_sequence"/>
+      <ref name="mei_model.titleLike_sequence"/>
+   </define>
+   <define name="mei_model.textPhraseLike.limited_sequenceOptional">
+      <optional>
+         <ref name="mei_model.addressPart_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.nameLike.label_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.locrefLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.addressLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.annotLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.biblLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.dateLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.dimLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.editorialLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.identifierLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.lbLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.measurementLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.nameLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.relationLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.rendLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.titleLike_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="mei_model.textPhraseLike.limited_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_model.addressPart_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.nameLike.label_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.locrefLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.addressLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.annotLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.biblLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.dateLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.dimLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.editorialLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.identifierLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.lbLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.measurementLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.nameLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.relationLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.rendLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.titleLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.textPhraseLike.limited_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_model.addressPart_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.nameLike.label_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.locrefLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.addressLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.annotLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.biblLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.dateLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.dimLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.editorialLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.identifierLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.lbLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.measurementLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.nameLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.relationLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.rendLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.titleLike_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.titleLike">
+      <choice>
+         <ref name="mei_title"/>
+      </choice>
+   </define>
+   <define name="mei_model.titleLike_alternation">
+      <choice>
+         <ref name="mei_title"/>
+      </choice>
+   </define>
+   <define name="mei_model.titleLike_sequence">
+      <ref name="mei_title"/>
+   </define>
+   <define name="mei_model.titleLike_sequenceOptional">
+      <optional>
+         <ref name="mei_title"/>
+      </optional>
+   </define>
+   <define name="mei_model.titleLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_title"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.titleLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_title"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.titlePagePart">
+      <choice>
+         <ref name="mei_availability"/>
+         <ref name="mei_dedication"/>
+         <ref name="mei_perfMedium"/>
+         <ref name="mei_plateNum"/>
+         <ref name="mei_model.dateLike"/>
+         <ref name="mei_model.editionLike"/>
+         <ref name="mei_model.identifierLike"/>
+         <ref name="mei_model.respLikePart"/>
+         <ref name="mei_model.titleLike"/>
+      </choice>
+   </define>
+   <define name="mei_address">
+      <element name="address">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a postal address, for example of a publisher, an organization, or an individual.</a:documentation>
+         <choice>
+            <oneOrMore>
+               <ref name="mei_model.addressPart"/>
+            </oneOrMore>
+         </choice>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_annot">
+      <element name="annot">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(annotation) – Provides a statement explaining the text or indicating the basis for an assertion.</a:documentation>
+         <choice>
+            <group>
+               <zeroOrMore>
+                  <ref name="mei_model.headLike"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="mei_model.textComponentLike"/>
+               </zeroOrMore>
+            </group>
+            <zeroOrMore>
+               <choice>
+                  <text/>
+                  <ref name="mei_model.textPhraseLike"/>
+               </choice>
+            </zeroOrMore>
+         </choice>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-annot-Check_annot_data-constraint-rule-37">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mei:annot[@data]">
+               <sch:assert test="ancestor::mei:notesStmt">The @data attribute may only occur on an
+            annotation within the notesStmt element.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.annot.log.attributes"/>
+         <ref name="mei_att.audience.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.dataPointing.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.plist.attributes"/>
+         <ref name="mei_att.source.attributes"/>
+         <ref name="mei_att.targetEval.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_bibl">
+      <element name="bibl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bibliographic reference) – Provides a loosely-structured bibliographic citation in which the sub-components may or may not be explicitly marked.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.biblPart"/>
+               <ref name="mei_model.imprintPart"/>
+               <ref name="mei_model.textPhraseLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.pointing.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_biblList">
+      <element name="biblList">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">List of bibliographic references.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <choice>
+               <group>
+                  <ref name="mei_model.biblLike"/>
+               </group>
+               <ref name="mei_biblList"/>
+            </choice>
+         </zeroOrMore>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-biblList-checkBiblLabels-constraint-rule-38">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mei:biblList[mei:label]">
+               <sch:assert role="warning" test="count(mei:label) = count(mei:bibl)">When labels are used,
+            usually each bibliographic item has one.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_biblScope">
+      <element name="biblScope">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(scope of citation) – Defines the scope of a bibliographic reference, for example as a list of page numbers, or a named subdivision of a larger work.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike.limited"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.extent.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <optional>
+            <attribute name="from">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="token"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="to">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="token"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_biblStruct">
+      <element name="biblStruct">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(structured bibliographic citation) – Contains a bibliographic citation in which bibliographic sub-elements must appear in a specified order.</a:documentation>
+         <group>
+            <zeroOrMore>
+               <choice>
+                  <ref name="mei_model.annotLike"/>
+                  <ref name="mei_identifier"/>
+               </choice>
+            </zeroOrMore>
+         </group>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.dataPointing.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.pointing.attributes"/>
+         <ref name="mei_att.recordType.attributes"/>
+         <ref name="mei_att.targetEval.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_date">
+      <element name="date">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A string identifying a point in time or the time period between two such points.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.calendared.attributes"/>
+         <ref name="mei_att.datable.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_desc">
+      <element name="desc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description) – Container for text that briefly describes the feature to which it is attached, including its intended usage, purpose, or application as appropriate.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike.limited"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.source.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_head">
+      <element name="head">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(heading) – Contains any heading, for example, the title of a section of text, or the heading of a list.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.xy.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_identifier">
+      <element name="identifier">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An alpha-numeric string that establishes the identity of the described material.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.authorized.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_name">
+      <element name="name">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Proper noun or noun phrase.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike"/>
+            </choice>
+         </zeroOrMore>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-name-nameParts-constraint-rule-39">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mei:name">
+               <sch:assert role="warning" test="not(mei:geogName or mei:persName or mei:corpName)">Recommended practice is to use name elements to capture sub-parts of a generic
+            name.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.basic.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.classed.attributes"/>
+         <ref name="mei_att.labelled.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.linking.attributes"/>
+         <ref name="mei_att.name.attributes"/>
+         <ref name="mei_att.nNumberLike.attributes"/>
+         <ref name="mei_att.responsibility.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Characterizes the name in some sense, using any convenient classification scheme or typology that employs single-token labels.
+Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5] style; 6] time</a:documentation>
+               <choice>
+                  <value>person</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A personal name.</a:documentation>
+                  <value>corporation</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of a corporate body.</a:documentation>
+                  <value>location</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of a location.</a:documentation>
+                  <value>process</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of a process or software application.</a:documentation>
+                  <value>style</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of a musical style; i.e., form, genre, technique, etc.</a:documentation>
+                  <value>time</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of a period of time.</a:documentation>
+                  <data type="NMTOKENS"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_p">
+      <element name="p">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(paragraph) – One or more text phrases that form a logical prose passage.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.paracontentPart"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.metadataPointing.attributes"/>
+         <ref name="mei_att.xy.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_physLoc">
+      <element name="physLoc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(physical location) – Groups information about the current physical location of a bibliographic item, such as the repository in which it is located and its shelf mark(s), and its previous locations.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <group>
+               <ref name="mei_model.repositoryLike"/>
+               <zeroOrMore>
+                  <ref name="mei_model.identifierLike"/>
+               </zeroOrMore>
+            </group>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_pubPlace">
+      <element name="pubPlace">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication place) – Name of the place where a bibliographic item was published.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike.limited"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_relation">
+      <element name="relation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes a relationship or linkage amongst entities.</a:documentation>
+         <empty/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-relation-FRBR_relation-constraint-rule-40">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mei:relationList/mei:relation[parent::mei:work or parent::mei:expression or                        parent::mei:source or parent::mei:item]">
+               <sch:assert test="matches(@rel, 'hasAbridgement') or             matches(@rel, 'hasAbridgement') or             matches(@rel, 'isAbridgementOf') or             matches(@rel, 'hasAdaptation') or             matches(@rel, 'isAdaptationOf') or             matches(@rel, 'hasAlternate') or             matches(@rel, 'isAlternateOf') or             matches(@rel, 'hasArrangement') or             matches(@rel, 'isArrangementOf') or             matches(@rel, 'hasComplement') or             matches(@rel, 'isComplementOf') or             matches(@rel, 'hasEmbodiment') or             matches(@rel, 'isEmbodimentOf') or             matches(@rel, 'hasExemplar') or             matches(@rel, 'isExemplarOf') or             matches(@rel, 'hasImitation') or             matches(@rel, 'isImitationOf') or             matches(@rel, 'hasPart') or             matches(@rel, 'isPartOf') or             matches(@rel, 'hasRealization') or             matches(@rel, 'isRealizationOf') or             matches(@rel, 'hasReconfiguration') or             matches(@rel, 'isReconfigurationOf') or             matches(@rel, 'hasReproduction') or             matches(@rel, 'isReproductionOf') or             matches(@rel, 'hasRevision') or             matches(@rel, 'isRevisionOf') or             matches(@rel, 'hasSuccessor') or             matches(@rel, 'isSuccessorOf') or             matches(@rel, 'hasSummarization') or             matches(@rel, 'isSummarizationOf') or             matches(@rel, 'hasSupplement') or             matches(@rel, 'isSupplementOf') or             matches(@rel, 'hasTransformation') or             matches(@rel, 'isTransformationOf') or             matches(@rel, 'hasTranslation') or             matches(@rel, 'isTranslationOf')">Within work, expression, source, or item, the value of the rel attribute must match one
+            of the following: hasAbridgement, isAbridgementOf, hasAdaptation, isAdaptationOf,
+            hasAlternate, isAlternateOf, hasArrangement, isArrangementOf, hasComplement,
+            isComplementOf, hasEmbodiment, isEmbodimentOf, hasExemplar, isExemplarOf, hasImitation,
+            isImitationOf, hasPart, isPartOf, hasRealization, isRealizationOf, hasReconfiguration,
+            isReconfigurationOf, hasReproduction, isReproductionOf, hasRevision, isRevisionOf,
+            hasSuccessor, isSuccessorOf, hasSummarization, isSummarizationOf, hasSupplement,
+            isSupplementOf, hasTransformation, isTransformationOf, hasTranslation,
+            isTranslationOf</sch:assert>
+               <sch:assert test="@target">Within work, expression, source or item, the target attribute
+            must be present.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.authorized.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.datable.attributes"/>
+         <ref name="mei_att.evidence.attributes"/>
+         <ref name="mei_att.plist.attributes"/>
+         <ref name="mei_att.pointing.attributes"/>
+         <ref name="mei_att.targetEval.attributes"/>
+         <attribute name="rel">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the relationship between the entities identified by the plist and target attributes.</a:documentation>
+            <ref name="mei_data.RELATIONSHIP"/>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_relationList">
+      <element name="relationList">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gathers relation elements.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.relationLike"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_repository">
+      <element name="repository">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Institution, agency, or individual which holds a bibliographic item.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike.limited"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.name.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_resp">
+      <element name="resp">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility) – A phrase describing the nature of intellectual responsibility.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike.limited"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.authorized.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.datable.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_respStmt">
+      <element name="respStmt">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility statement) – Transcription of text that names one or more individuals, groups, or in rare cases, mechanical processes, responsible for creation, realization, production, funding, or distribution of the intellectual or artistic content.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <choice>
+               <ref name="mei_name"/>
+               <ref name="mei_resp"/>
+               <ref name="mei_model.nameLike.agent"/>
+            </choice>
+         </zeroOrMore>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-respStmt-check_respStmt-constraint-rule-41">
+            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mei:respStmt[not(ancestor::mei:change)]">
+               <sch:assert test="(mei:resp and (mei:name or mei:corpName or mei:persName)) or              count(mei:*[@role]) = count(mei:*) and count(mei:*) &gt; 0"
+                           role="warning">At least one element pair (a resp element and a name-like element) is
+            recommended. Alternatively, each name-like element may have a @role
+            attribute.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_title">
+      <element name="title">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Title of a bibliographic entity.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_macro.titlePart"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.authorized.attributes"/>
+         <ref name="mei_att.basic.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.classed.attributes"/>
+         <ref name="mei_att.filing.attributes"/>
+         <ref name="mei_att.labelled.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.linking.attributes"/>
+         <ref name="mei_att.nNumberLike.attributes"/>
+         <ref name="mei_att.responsibility.attributes"/>
+         <optional>
+            <attribute name="level">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the bibliographic level of the title.</a:documentation>
+               <choice>
+                  <value>a</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Analyzed component, such as an article or chapter, within a larger bibliographic entity.</a:documentation>
+                  <value>c</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Collection. A group of items that were not originally published, distributed, or produced together.</a:documentation>
+                  <value>d</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Subunit of a collection, e.g. item, folder, box, archival series, subgroup, or subcollection.</a:documentation>
+                  <value>i</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Integrating resource, such as a continuously updated loose-leaf service or Web site.</a:documentation>
+                  <value>m</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Monograph.</a:documentation>
+                  <value>j</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Journal.</a:documentation>
+                  <value>s</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Series.</a:documentation>
+                  <value>u</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Unpublished (including theses and dissertations unless published by a commercial press).</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Characterizes the title in some sense, using any convenient classification scheme or typology that employs single-token labels.
+Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternative; 5] translated; 6] uniform; 7] desc</a:documentation>
+               <choice>
+                  <value>main</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Main title.</a:documentation>
+                  <value>subordinate</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Subtitle or title of part.</a:documentation>
+                  <value>abbreviated</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Abbreviated form of title.</a:documentation>
+                  <value>alternative</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Alternate title by which the item is also known.</a:documentation>
+                  <value>translated</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Translated form of title.</a:documentation>
+                  <value>uniform</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Collective title.</a:documentation>
+                  <value>desc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Descriptive paraphrase of the work.</a:documentation>
+                  <data type="NMTOKENS"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_titlePage">
+      <element name="titlePage">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a transcription of the title page of a text.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <choice>
+               <ref name="mei_model.imprintPart"/>
+               <ref name="mei_model.milestoneLike.text"/>
+               <ref name="mei_model.textComponentLike"/>
+               <ref name="mei_model.titlePagePart"/>
+            </choice>
+         </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <start>
+      <choice>
+         <ref name="mei_meiCorpus"/>
+      </choice>
+   </start>
+   <ns xmlns="http://purl.oclc.org/dsdl/schematron"
+       prefix="mei"
+       uri="http://www.music-encoding.org/ns/mei"/> 
+   <ns xmlns="http://purl.oclc.org/dsdl/schematron"
+       prefix="xlink"
+       uri="http://www.w3.org/1999/xlink"/>
+</grammar>
