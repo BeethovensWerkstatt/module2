@@ -364,7 +364,7 @@ function getFile(comparisonId,method,mdiv, transpose) {
             if(method !== 'melodicComparison') {
                 renderMEI(data);
                 loadPage(1);
-                sunburstLoadData(data);
+                sunburstLoadData(data,method);
             } else {
                 displayMelodicComparison(data);
             }
@@ -1092,6 +1092,8 @@ function selectMode(mode) {
     } else {
         document.getElementById('varianceOptions').style.display = 'none';
     }
+    
+    document.querySelector('.contentBox').setAttribute('mode',mode);
 };
 
 function allowPainting(bool) {
@@ -1165,7 +1167,7 @@ function sunburstRemoveData() {
 }
 
 //load data into sunburst
-function sunburstLoadData(mei) {
+function sunburstLoadData(mei,method) {
     
     let data = buildSunburstDataFromMEI(mei);
     sunburstObject.data = data;
@@ -1185,7 +1187,15 @@ function sunburstLoadData(mei) {
         .attr('d', sunburstObject.arc)
         .attr('stroke', function(d) {
         
-            if(d.data.idLevel !== 'undefined' && d.data.level === 'measure' && d.data.idLevel < 1) {
+            if(method === 'geneticComparison') {
+                let h = Math.round(0 + (120 * Number(d.data.addedLevel) / (Number(d.data.removedLevel) + Number(d.data.simLevel) + Number(0.0001))));
+                let s = '80%';
+                let l = Math.round((.5 + Number(d.data.idLevel) / 2) * 100) + '%';
+                let hsl = 'hsl(' + h + ',' + s + ',' + l + ')'; 
+                
+                return hsl;
+            }
+            else if(d.data.idLevel !== 'undefined' && d.data.level === 'measure' && d.data.idLevel < 1) {
                 //return 'rgb(' + (240 - d.data.diffLevel * 240) +',0,' + (240 - d.data.simLevel * 240) + ')';
                 
                 let h = Math.round(240 + (120 * Number(d.data.diffLevel) / (Number(d.data.diffLevel) + Number(d.data.simLevel) + Number(0.0001))));
@@ -1193,7 +1203,7 @@ function sunburstLoadData(mei) {
                 let l = Math.round((.5 + Number(d.data.idLevel) / 2) * 100) + '%';
                 let hsl = 'hsl(' + h + ',' + s + ',' + l + ')'; 
                 
-                return  hsl;
+                return hsl;
             } else {
                 return '#bbbbbb';
             } 
@@ -1204,7 +1214,15 @@ function sunburstLoadData(mei) {
         })
         .attr('fill', function(d) {
             
-            if(d.data.idLevel !== 'undefined' && d.data.level === 'measure' && d.data.idLevel < 1) {
+            if(method === 'geneticComparison') {
+                let h = Math.round(0 + (120 * Number(d.data.addedLevel) / (Number(d.data.removedLevel) + Number(d.data.simLevel) + Number(0.0001))));
+                let s = '80%';
+                let l = Math.round((.5 + Number(d.data.idLevel) / 2) * 100) + '%';
+                let hsl = 'hsl(' + h + ',' + s + ',' + l + ')'; 
+                
+                return hsl;
+            }
+            else if(d.data.idLevel !== 'undefined' && d.data.level === 'measure' && d.data.idLevel < 1) {
                 //return 'rgb(' + (240 - d.data.diffLevel * 240) +',0,' + (240 - d.data.simLevel * 240) + ')';
                 let h = Math.round(240 + (120 * Number(d.data.diffLevel) / (Number(d.data.diffLevel) + Number(d.data.simLevel) + Number(0.0001))));
                 let s = '80%';
@@ -1309,6 +1327,11 @@ function buildSunburstDataFromMEI(mei) {
                     measureObj.diffLevel = measure.getAttribute('differenceLevel');
                     measureObj.simLevel = measure.getAttribute('similarityLevel');
                     measureObj.idLevel = measure.getAttribute('identityLevel');
+                }
+                
+                if(measure.hasAttribute('removedLevel')) {
+                    measureObj.removedLevel = measure.getAttribute('removedLevel');
+                    measureObj.addedLevel = measure.getAttribute('addedLevel');
                 }
                 
                 sectionObj.children.push(measureObj);

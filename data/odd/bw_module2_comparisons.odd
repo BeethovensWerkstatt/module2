@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI  xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0"
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Data Model specification for Beethovens Werkstatt – Module 2</title>
+                <title type="sub">Comparison Files</title>
+                <respStmt>
+                    <resp>Authored by</resp>
+                    <name xml:id="KH">Kristin Herold</name>
+                    <name xml:id="JK">Johannes Kepper</name>
+                </respStmt>
+                <respStmt>
+                    <resp>In collaboration with</resp>
+                    <name xml:id="BRA">Bernhard R. Appel</name>
+                    <name xml:id="SC">Susanne Cox</name>
+                    <name xml:id="AM">Andreas Münzmay</name>
+                    <name xml:id="EN">Elisa Novara</name>
+                    <name xml:id="RS">Richard Sänger</name>
+                    <name xml:id="JV">Joachim Veit</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p/>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change n="1" when="2019-01-28" who="#KH #JK">
+                <desc>Initial setup of the ODD.</desc>
+            </change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <schemaSpec ident="mei" start="meiCorpus" prefix="mei_" ns="http://www.music-encoding.org/ns/mei">
+                
+                <!-- Declare MEI and XLink namespaces for use in Schematron -->
+                <constraintSpec ident="set_ns" scheme="isoschematron" mode="add">
+                    <constraint>
+                        <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="mei"
+                            uri="http://www.music-encoding.org/ns/mei"/>
+                        <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="xlink"
+                            uri="http://www.w3.org/1999/xlink"/>
+                    </constraint>
+                </constraintSpec>
+                
+                <moduleRef key="MEI"/>
+                <moduleRef key="MEI.corpus"/>
+                <moduleRef key="MEI.frbr"/>
+                <moduleRef key="MEI.header" include="componentList altId appInfo application attUsage availability change changeDesc classDecls classification contents dedication editionsStmt editorialDecl encodingDesc fileDesc langUsage meiHead notesStmt perfMedium perfRes prefResList physDesc physMedium plateNum projectDesc pubStmt revisionDesc segmentation seriesStmt source sourceDesc tagsDecl tagUsage titleStmt unpub work workList"/>
+                <moduleRef key="MEI.namesdates" include="corpName geogName persName roleName"/>
+                <moduleRef key="MEI.ptrref"/>
+                <moduleRef key="MEI.shared"
+                    include="address annot bibl biblList biblScope biblStruct date desc head identifier name p physLoc pubPlace relation relationList repository resp respStmt title titlePage"/>
+                
+            </schemaSpec>
+        </body>
+    </text>
+</TEI>

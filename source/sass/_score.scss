@@ -39,3 +39,13 @@ svg .id {
     fill: $highlightColor_identical !important;
     stroke: $highlightColor_identical !important;
 }
+
+svg .file1 .noMatch, svg .file1 .ts, svg .file1 .od, svg .file1 .sd, svg .file1 .os {
+    fill: $colorVariant1;
+    stroke: $colorVariant1;
+}
+
+svg .file2 .noMatch, svg .file2 .ts, svg .file2 .od, svg .file2 .sd, svg .file2 .os {
+    fill: $colorVariant2;
+    stroke: $colorVariant2;
+}
