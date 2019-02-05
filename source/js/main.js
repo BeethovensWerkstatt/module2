@@ -1093,7 +1093,7 @@ function selectMode(mode) {
         document.getElementById('varianceOptions').style.display = 'none';
     }
     
-    document.querySelector('.contentBox').setAttribute('mode',mode);
+    document.querySelector('#contentBox').setAttribute('data-mode',mode);
 };
 
 function allowPainting(bool) {
