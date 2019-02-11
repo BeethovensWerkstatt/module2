@@ -57,6 +57,7 @@
                 <moduleRef key="MEI.gestural"/>
                 <moduleRef key="MEI.harmony" include="harm"/>
                 <moduleRef key="MEI.header" include="componentList altId appInfo application attUsage availability change changeDesc classDecls classification dedication editionsStmt editorialDecl encodingDesc fileDesc langUsage meiHead notesStmt perfMedium perfRes prefResList physDesc physMedium plateNum projectDesc pubStmt revisionDesc segmentation seriesStmt source sourceDesc tagsDecl tagUsage titleStmt unpub work workList"/>
+                <moduleRef key="MEI.lyrics"/>
                 <moduleRef key="MEI.namesdates" include="corpName geogName persName roleName"/>
                 <moduleRef key="MEI.ptrref"/>
                 <moduleRef key="MEI.shared"

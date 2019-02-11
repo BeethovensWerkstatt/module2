@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2019-01-28T11:03:54Z. .
+Schema generated from ODD source 2019-02-11T09:22:54Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -1907,6 +1907,9 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.refrain.anl.attributes">
+      <empty/>
+   </define>
    <define name="mei_att.reh.anl.attributes">
       <empty/>
    </define>
@@ -1964,6 +1967,12 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
       <empty/>
    </define>
    <define name="mei_att.turn.anl.attributes">
+      <empty/>
+   </define>
+   <define name="mei_att.verse.anl.attributes">
+      <empty/>
+   </define>
+   <define name="mei_att.volta.anl.attributes">
       <empty/>
    </define>
    <define name="mei_att.arpeg.log.attributes">
@@ -4288,6 +4297,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.pedal.ges.attributes">
       <ref name="mei_att.timestamp2.gestural.attributes"/>
    </define>
+   <define name="mei_att.refrain.ges.attributes">
+      <empty/>
+   </define>
    <define name="mei_att.reh.ges.attributes">
       <empty/>
    </define>
@@ -4411,6 +4423,12 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <ref name="mei_att.duration.gestural.attributes"/>
    </define>
    <define name="mei_att.turn.ges.attributes">
+      <empty/>
+   </define>
+   <define name="mei_att.verse.ges.attributes">
+      <empty/>
+   </define>
+   <define name="mei_att.volta.ges.attributes">
       <empty/>
    </define>
    <define name="mei_att.harm.log.attributes">
@@ -5344,6 +5362,110 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             <ref name="mei_work"/>
          </oneOrMore>
          <ref name="mei_att.common.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_att.refrain.log.attributes">
+      <empty/>
+   </define>
+   <define name="mei_att.verse.log.attributes">
+      <empty/>
+   </define>
+   <define name="mei_att.volta.log.attributes">
+      <empty/>
+   </define>
+   <define name="mei_model.verseLike">
+      <choice>
+         <ref name="mei_refrain"/>
+         <ref name="mei_verse"/>
+      </choice>
+   </define>
+   <define name="mei_refrain">
+      <element name="refrain">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Recurring lyrics, especially at the end of each verse or stanza of a poem or song lyrics; a chorus.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="mei_dir"/>
+               <ref name="mei_dynam"/>
+               <ref name="mei_tempo"/>
+               <ref name="mei_space"/>
+            </choice>
+         </zeroOrMore>
+         <oneOrMore>
+            <choice>
+               <ref name="mei_volta"/>
+               <ref name="mei_model.sylLike"/>
+            </choice>
+         </oneOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.lbLike"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.refrain.log.attributes"/>
+         <ref name="mei_att.refrain.vis.attributes"/>
+         <ref name="mei_att.refrain.ges.attributes"/>
+         <ref name="mei_att.refrain.anl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_verse">
+      <element name="verse">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Division of a poem or song lyrics, sometimes having a fixed length, meter or rhyme scheme; a stanza.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_label"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <choice>
+               <ref name="mei_dir"/>
+               <ref name="mei_dynam"/>
+               <ref name="mei_tempo"/>
+               <ref name="mei_space"/>
+            </choice>
+         </zeroOrMore>
+         <oneOrMore>
+            <choice>
+               <ref name="mei_volta"/>
+               <ref name="mei_model.sylLike"/>
+            </choice>
+         </oneOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.lbLike"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.verse.log.attributes"/>
+         <ref name="mei_att.verse.vis.attributes"/>
+         <ref name="mei_att.verse.ges.attributes"/>
+         <ref name="mei_att.verse.anl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_volta">
+      <element name="volta">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sung text for a specific iteration of a repeated section of music.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="mei_dir"/>
+               <ref name="mei_dynam"/>
+               <ref name="mei_tempo"/>
+               <ref name="mei_space"/>
+            </choice>
+         </zeroOrMore>
+         <oneOrMore>
+            <choice>
+               <ref name="mei_model.sylLike"/>
+            </choice>
+         </oneOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.lbLike"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.volta.log.attributes"/>
+         <ref name="mei_att.volta.vis.attributes"/>
+         <ref name="mei_att.volta.ges.attributes"/>
+         <ref name="mei_att.volta.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8686,6 +8808,28 @@ Suggested values include: 1] smufl</a:documentation>
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.voltaGroupingSym.attributes">
+      <ref name="mei_att.voltaGroupingSym.attribute.voltasym"/>
+   </define>
+   <define name="mei_att.voltaGroupingSym.attribute.voltasym">
+      <optional>
+         <attribute name="voltasym">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the symbol used to group lyrics.</a:documentation>
+            <choice>
+               <value>brace</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Curved symbol, i.e., {.</a:documentation>
+               <value>bracket</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Square symbol, i.e., [, but with curved/angled top and bottom segments.</a:documentation>
+               <value>bracketsq</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Square symbol, i.e., [, with horizontal top and bottom segments.</a:documentation>
+               <value>line</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Line symbol, i.e., |, (wide) line without top and bottom curved/horizontal segments.</a:documentation>
+               <value>none</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Grouping symbol missing.</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.width.attributes">
       <ref name="mei_att.width.attribute.width"/>
    </define>
@@ -9920,6 +10064,7 @@ Suggested values include: 1] smufl</a:documentation>
             <choice>
                <ref name="mei_model.chordPart"/>
                <ref name="mei_model.sylLike"/>
+               <ref name="mei_model.verseLike"/>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
@@ -10362,6 +10507,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <zeroOrMore>
             <choice>
                <ref name="mei_model.noteModifierLike"/>
+               <ref name="mei_model.verseLike"/>
                <ref name="mei_model.sylLike"/>
             </choice>
          </zeroOrMore>
@@ -11619,6 +11765,15 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.refrain.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
+      <ref name="mei_att.placement.attributes"/>
+      <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.to.attributes"/>
+      <ref name="mei_att.visualOffset.vo.attributes"/>
+      <ref name="mei_att.voltaGroupingSym.attributes"/>
+      <ref name="mei_att.xy.attributes"/>
+   </define>
    <define name="mei_att.reh.vis.attributes">
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.placement.attributes"/>
@@ -11868,6 +12023,22 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       <ref name="mei_att.placement.attributes"/>
       <ref name="mei_att.typography.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.xy.attributes"/>
+   </define>
+   <define name="mei_att.verse.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
+      <ref name="mei_att.placement.attributes"/>
+      <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.to.attributes"/>
+      <ref name="mei_att.visualOffset.vo.attributes"/>
+      <ref name="mei_att.voltaGroupingSym.attributes"/>
+      <ref name="mei_att.xy.attributes"/>
+   </define>
+   <define name="mei_att.volta.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
+      <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.to.attributes"/>
+      <ref name="mei_att.visualOffset.vo.attributes"/>
       <ref name="mei_att.xy.attributes"/>
    </define>
    <start>
