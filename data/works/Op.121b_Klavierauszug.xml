@@ -86,7 +86,7 @@
                                key.sig="4s"
                                n="1"
                                lines="5">
-                        <label>Voce Solo. SOPRANO</label>
+                        <label>Voce Solo. SOPRANO.</label>
                      </staffDef>
                      <staffGrp xml:id="x56c7a999-52c4-4e2e-a879-893d75eaa858" symbol="bracket">
                         <staffDef xml:id="x8724fc7a-537c-43f5-9b3d-7e8700e46f63"
@@ -8396,26 +8396,14 @@
                             place="above"
                             staff="2"
                             startid="#x2a234e93-bede-4c78-8969-b7a4162eeb7c">pp</dynam>
-                     <slur xml:id="x8e683237-7e8f-4fe7-b6ee-9a15f295fca7"
-                           startid="#xb8f921ea-2c9a-4cb4-a7e0-0ca28d2ee2c0"
-                           endid="#x7fbdc44d-074b-4e25-90b1-d9cb4441fec3"
-                           curvedir="below"/>
                      <dynam xml:id="x5620749c-3df8-44d8-a3df-5243088f00b1"
                             place="above"
                             staff="4"
                             startid="#xc7098b95-6dfb-4d41-a99d-a55d1058dd71">pp</dynam>
-                     <slur xml:id="xc61781fa-ae1b-4793-9255-6fa893078943"
-                           startid="#xc7098b95-6dfb-4d41-a99d-a55d1058dd71"
-                           endid="#x0a810f3d-1334-4d7d-b1a7-5f7df2553d7e"
-                           curvedir="above"/>
                      <dynam xml:id="x121427a0-1c8f-48ec-97ce-8de0f25d08ad"
                             place="above"
                             staff="5"
                             startid="#xab2ab8e5-8082-494a-9cec-e37449c6dad0">pp</dynam>
-                     <slur xml:id="x2fbba56a-d70f-4e85-bcac-d1664da76f47"
-                           startid="#xab2ab8e5-8082-494a-9cec-e37449c6dad0"
-                           endid="#x205e3803-0063-4429-95ee-79d25bf10cdc"
-                           curvedir="above"/>
                      <dynam xml:id="x59fbab90-9b5b-4461-a88a-8702b9f4a764"
                             place="below"
                             staff="6"
@@ -15562,7 +15550,7 @@
                            curvedir="above"/>
                      <hairpin xml:id="xa450fac5-31e8-465b-815b-58adb7250f1c" startid="#x62c2c7e2-049c-43b8-a88c-79810d24dc1e" endid="#x9645f6fb-738f-4a10-9609-66e3075e8042" form="dim" place="above" staff="2"/>
                      <hairpin form="dim" place="above" staff="3" startid="#x5bc1411d-cfec-45fb-bf76-85b80278b576" endid="#xa0efccf1-cd1b-48b7-bd1f-f8bf39aff77b"/>
-                     <hairpin form="dim" place="above" staff="4" startid="#xaaa93b25-aeec-4783-b367-71a94f9d2829" endid="#xfacf907c-96d6-426c-ac44-ddb28defb59d"/>
+                     <hairpin form="dim" place="above" staff="4" startid="#xaaa93b25-aeec-4783-b367-71a94f9d2829" endid="#xfb903c05-77dd-449a-956e-114a409d7df5"/>
                      <hairpin form="dim" place="above" staff="5" startid="#x42117081-96a0-4bdf-9e5c-98354d5e9282" endid="#x30a7cf35-f874-494b-b8a0-a8b7b9e0f74e"/>
                   </measure>
                   <measure xml:id="x5717739d-d8f0-47e0-ab31-7f83736a26ba" n="64">
