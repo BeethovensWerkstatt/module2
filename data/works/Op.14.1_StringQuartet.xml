@@ -6,25 +6,38 @@
      meiversion="4.0.0">
    <meiHead>
       <fileDesc>
+         
          <titleStmt>
-            <title label="movement">Op. 14 String Quartet, 1 Complete Score</title>
+            <title type="main" label="movement">Op. 14 String Quartet, 1 Complete Score</title>
+            <title type="subordinate">an electronic transcription</title>
             <respStmt>
+               <resp auth.uri="http://id.loc.gov/vocabulary/relators.html" codedval="cmp"/>
                <persName auth.uri="http://d-nb.info/gnd" codedval="118508288">Ludwig van
                   Beethoven</persName>
             </respStmt>
          </titleStmt>
+         
          <pubStmt/>
          <sourceDesc>
             <source>
                <bibl>
-                  <title/>
-                  <annot>
-                     <title>Quartett</title>
-                     Bearbeitet nach der Klavier-Sontae E-dur Op.14 No.1 von
+                  <title type="main">Quatuor pour deux Violons Alto et Violoncelle, </title>
+                  <respStmt>
+                     <resp auth.uri="http://id.loc.gov/vocabulary/relators.html" codedval="cmp arr"/>
+                     <persName auth.uri="http://d-nb.info/gnd" codedval="118508288">Ludwig van
+                        Beethoven</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp auth.uri="http://id.loc.gov/vocabulary/relators.html" codedval="dte"/>
+                     <persName>Madame la Barone de Braun</persName>
+                  </respStmt>
+                  <annot n="1">
+                     Bearbeitet nach der Klavier-Sonate E-dur Op.14 No.1 von
                      Beethoven selbst.</annot>
                </bibl>
             </source>
          </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <appInfo>
@@ -32,6 +45,11 @@
                <name>mei30To40.xsl</name>
             </application>
          </appInfo>
+         <editorialDecl>
+            <p>
+               <annot n="1">Notentext nach Originalausgabe in Finale gesetzt. Nach Export als MusicXML in MEI überführt.</annot>
+            </p>
+         </editorialDecl>
       </encodingDesc>
       <revisionDesc>
          <change n="1">
@@ -52,13 +70,22 @@
          </change>
          <change n="3" resp="#app_201938165301533">
             <respStmt>
-               <persName>KH</persName>
+               <persName auth.uri="https://github.com/" codedval="krHERO">KH</persName>
             </respStmt>
             <changeDesc>
                <p>Converted to MEI version 4.0.0 using mei30To40.xsl, version
                 1.0 beta</p>
             </changeDesc>
             <date isodate="2019-02-07"/>
+         </change>
+         <change n="4">
+            <respStmt>
+               <persName auth.uri="https://github.com/" codedval="krHERO">KH</persName>
+            </respStmt>
+            <changeDesc>
+               <p>corrections</p>
+            </changeDesc>
+            <date isodate="2019-02-13"/>
          </change>
       </revisionDesc>
    </meiHead>
@@ -79,7 +106,6 @@
                                   clef.line="2"
                                   clef.shape="G">
                            <label>Violine</label>
-                           <labelAbbr>Vl.</labelAbbr>
                         </staffDef>
                      </staffGrp>
                   </scoreDef>
@@ -46000,8 +46026,8 @@
                                           accid.ges="f"/>
                                  </tuplet>
                               </beam>
-                              <beam xml:id="xf0b924de-a981-404e-b882-b046025a46e4">
-                                 <note xml:id="x7acb2a1c-684f-4a70-8333-088070b5f17b"
+                              <tuplet xml:id="xf0b924de-a981-404e-b882-b046025a46e4" num="3" numbase="2">
+                                 <beam xml:id="x59461b79-b964-4a13-ae7f-755401ac7837"><note xml:id="x7acb2a1c-684f-4a70-8333-088070b5f17b"
                                        pname="d"
                                        oct="5"
                                        dur="8"
@@ -46015,9 +46041,10 @@
                                        pname="d"
                                        oct="5"
                                        dur="8"
-                                       stem.dir="down"/>
-                              </beam>
-                              <bTrem xml:id="x374c16a8-77fc-418d-a525-155558ac14f0">
+                                       stem.dir="down"/></beam>
+                              </tuplet>
+                              <tuplet xml:id="xdc3ef300-2aa4-463a-9b77-684ae04b6de8" num="3" numbase="2">
+                                 <bTrem xml:id="x374c16a8-77fc-418d-a525-155558ac14f0">
                                  <note xml:id="xd3b7183a-3b32-4d9f-9ed7-c5af63774315"
                                        dots="1"
                                        stem.mod="1slash"
@@ -46025,30 +46052,10 @@
                                        oct="5"
                                        dur="8"
                                        stem.dir="down"/>
-                              </bTrem>
+                                 </bTrem>
+                              </tuplet>
                            </layer>
                         </staff>
-                        <tupletSpan xml:id="xd790ab55-9b86-4701-a0a1-ff691d8bb22b"
-                                    tstamp="2"
-                                    startid="#x7acb2a1c-684f-4a70-8333-088070b5f17b"
-                                    num="3"
-                                    numbase="2"
-                                    num.format="count"
-                                    num.place="below"
-                                    tstamp2="0m+2.3333"
-                                    endid="#xac698da0-0442-4bed-a062-c2971d0e7b5a"
-                                    staff="1"/>
-                        <tupletSpan xml:id="xdc3ef300-2aa4-463a-9b77-684ae04b6de8"
-                                    tstamp="2.5"
-                                    startid="#xd3b7183a-3b32-4d9f-9ed7-c5af63774315"
-                                    num="3"
-                                    numbase="2"
-                                    num.format="count"
-                                    num.place="below"
-                                    tstamp2="0m+2.8333"
-                                    endid="#d1e4236"
-                                    todo="bad endid"
-                                    staff="1"/>
                      </measure>
                      <measure n="58" xml:id="xf46d6f3a-8524-4e66-9c1c-2bd3d9ffc264">
                         <staff n="1">
@@ -49183,8 +49190,8 @@
                      <measure n="118" xml:id="x6d64240f-5216-4373-ae16-be5c81d3a3bf">
                         <staff n="1">
                            <layer n="1">
-                              <beam xml:id="x4f84614a-60d1-4414-92b5-54de23cafd83">
-                                 <note xml:id="x677f6a9f-d4a1-411a-bd7d-26666e507c7a"
+                              <tuplet xml:id="x4f84614a-60d1-4414-92b5-54de23cafd83" num="3" numbase="2">
+                                 <beam xml:id="x197cd38c-92aa-47ef-9ce0-eacc72ebaabb"><note xml:id="x677f6a9f-d4a1-411a-bd7d-26666e507c7a"
                                        pname="b"
                                        oct="4"
                                        dur="8"
@@ -49201,10 +49208,10 @@
                                        oct="4"
                                        dur="8"
                                        stem.dir="down"
-                                       accid.ges="f"/>
-                              </beam>
-                              <beam xml:id="xa4270bad-4fc4-4d96-9def-b412038221ff">
-                                 <note xml:id="x8ba7727e-2043-4dd3-88dc-76fe049f983e"
+                                       accid.ges="f"/></beam>
+                              </tuplet>
+                              <tuplet xml:id="xa4270bad-4fc4-4d96-9def-b412038221ff" num="3" numbase="2">
+                                 <beam xml:id="x4605a182-ab40-4fb2-a243-6e9405100289"><note xml:id="x8ba7727e-2043-4dd3-88dc-76fe049f983e"
                                        pname="b"
                                        oct="4"
                                        dur="8"
@@ -49221,9 +49228,10 @@
                                        oct="4"
                                        dur="8"
                                        stem.dir="down"
-                                       accid.ges="f"/>
-                              </beam>
-                              <bTrem xml:id="x5c02d80d-78ea-4005-8de2-d09a620a9d94" unitdur="8">
+                                       accid.ges="f"/></beam>
+                              </tuplet>
+                              <tuplet xml:id="xb4a5e1f6-0d3a-4c39-b5f6-ea71db3ae0b0" num="3" numbase="2">
+                                 <bTrem xml:id="x5c02d80d-78ea-4005-8de2-d09a620a9d94" unitdur="8">
                                  <chord dots="1"
                                         xml:id="xf64e2a2a-1eb5-4945-a68d-4a7f03b89a2b"
                                         dur="4"
@@ -49235,23 +49243,10 @@
                                           oct="4"
                                           accid.ges="f"/>
                                  </chord>
-                              </bTrem>
-                              <!-- <beam>
-                                 <chord xml:id="d1293e1" dur="8" stem.dir="up">
-                                    <note xml:id="d1e12047" pname="g" oct="4"/>
-                                    <note xml:id="d1e12070" pname="b" oct="4" accid.ges="f"/>
-                                 </chord>
-                                 <chord xml:id="d1297e1" dur="8" stem.dir="up">
-                                    <note xml:id="d1e12092" pname="g" oct="4"/>
-                                    <note xml:id="d1e12114" pname="b" oct="4" accid.ges="f"/>
-                                 </chord>
-                                 <chord xml:id="d1301e1" dur="8" stem.dir="up">
-                                    <note xml:id="d1e12136" pname="g" oct="4"/>
-                                    <note xml:id="d1e12159" pname="b" oct="4" accid.ges="f"/>
-                                 </chord>
-                              </beam>-->
-                              <beam xml:id="x1a2dc68c-8db6-44da-a559-bdf808776ff0">
-                                 <chord xml:id="x6d0571a7-8a95-4ba3-a74a-3441c4511ae4"
+                                 </bTrem>
+                              </tuplet>
+                              <tuplet xml:id="x1a2dc68c-8db6-44da-a559-bdf808776ff0" num="3" numbase="2">
+                                 <beam xml:id="x43d76bb5-7cc8-4a0e-ad33-10c83865e539"><chord xml:id="x6d0571a7-8a95-4ba3-a74a-3441c4511ae4"
                                         dur="8"
                                         stem.dir="up">
                                     <note xml:id="xef0cd49b-2f65-4ddf-9609-5c1f966ae6f6" pname="g" oct="4"/>
@@ -49277,8 +49272,8 @@
                                           pname="b"
                                           oct="4"
                                           accid.ges="f"/>
-                                 </chord>
-                              </beam>
+                                 </chord></beam>
+                              </tuplet>
                            </layer>
                         </staff>
                         <dynam xml:id="xa84cc279-c1ea-4002-81a3-5982e49ae3be"
@@ -49287,47 +49282,6 @@
                                staff="1">
                            sf
                         </dynam>
-                        <tupletSpan xml:id="xf0fb2a93-fa91-4195-b64d-40c0456d0b0c"
-                                    tstamp="1"
-                                    startid="#x677f6a9f-d4a1-411a-bd7d-26666e507c7a"
-                                    num="3"
-                                    numbase="2"
-                                    num.format="count"
-                                    num.place="below"
-                                    tstamp2="0m+1.3333"
-                                    endid="#xcb117c1b-9e5a-4e67-9985-9d0918477ad4"
-                                    staff="1"/>
-                        <tupletSpan xml:id="x6d6c8e3b-6abb-49d5-b689-843cc72a3f65"
-                                    tstamp="1.5"
-                                    startid="#x8ba7727e-2043-4dd3-88dc-76fe049f983e"
-                                    num="3"
-                                    numbase="2"
-                                    num.format="count"
-                                    num.place="below"
-                                    tstamp2="0m+1.8333"
-                                    endid="#xe9fadd9e-9c64-42d3-a1cb-3c40f3b25cf9"
-                                    staff="1"/>
-                        <tupletSpan xml:id="x2f1c9dd9-f795-4ee0-876f-24895e5efa10"
-                                    tstamp="2"
-                                    startid="#xf28f4c67-f969-42a7-a1f3-93133e80bf5f"
-                                    num="3"
-                                    numbase="2"
-                                    num.format="count"
-                                    num.place="above"
-                                    tstamp2="0m+2.3333"
-                                    endid="#d1e12136"
-                                    todo="bad endid"
-                                    staff="1"/>
-                        <tupletSpan xml:id="xf13c1e0f-7e1e-4eef-a4ff-2114959c47e6"
-                                    tstamp="2.5"
-                                    startid="#xef0cd49b-2f65-4ddf-9609-5c1f966ae6f6"
-                                    num="3"
-                                    numbase="2"
-                                    num.format="count"
-                                    num.place="above"
-                                    tstamp2="0m+2.8333"
-                                    endid="#xdaa1346d-5462-4741-b3e5-f31d58053e6d"
-                                    staff="1"/>
                      </measure>
                      <measure n="119" xml:id="x221ca10f-a3b1-4685-bcf8-4da00de4d7cb">
                         <staff n="1">
