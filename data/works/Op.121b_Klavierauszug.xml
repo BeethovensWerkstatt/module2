@@ -495,8 +495,9 @@
                         <layer xml:id="xc942d158-42ac-497a-b462-5dccf3b51079" n="3">
                            <space xml:id="x3f61332d-867a-4168-9847-5d5fee37d399" dur="2"/>
                            <space xml:id="xb2861fb8-f3e9-4e18-a448-96f841810375" dur="4"/>
-                           <note xml:id="xb6eb7423-bef0-44d9-b497-0ba692736ae2" dur="4" oct="3"
-                              pname="f" accid.ges="s" stem.dir="up"/>
+                           <space xml:id="aldfgjaoreitzg" dur="8"/>
+                           <note xml:id="xb6eb7423-bef0-44d9-b497-0ba692736ae2" dur="8" oct="3"
+                              pname="f" accid.ges="s" stem.dir="up"/> <!-- Fehler: in der OA steht Viertel, stillschweigend zu Achtel korrigiert-->
                         </layer>
                         <layer xml:id="xf7bacb44-2361-483d-9507-54b71e8c2960" n="4">
                            <chord xml:id="xfcdd806c-c564-485e-8ab2-7fa6e3b342b3" dur="8"
@@ -841,7 +842,7 @@
                         </layer>
                      </staff>
                      <dir xml:id="x26c2f48e-81b8-44a1-a09c-6f1182a06f42" place="below" staff="6"
-                        startid="#x130c95da-1aff-4fb2-9218-d8dbfda22b88">cres</dir>
+                        startid="#x130c95da-1aff-4fb2-9218-d8dbfda22b88" endid="#x4a6be5da-86f8-4b56-851d-1e4e92d157b2">cres</dir> <!-- Fortsetzungsstriche des cres werden nicht angezeigt -->
                   </measure>
                   <measure xml:id="xd2308d42-b7aa-4dc2-9570-a6f3325bc133" n="6">
                      <staff xml:id="xb4ddd083-e52d-4b30-b9b7-f78553f2db02" n="1">
@@ -862,11 +863,7 @@
                                  </verse>
                               </note>
                               <note xml:id="x8926607f-9836-416c-a755-1617f198d8d5" dur="16" oct="4"
-                                 pname="b" stem.dir="up">
-                                 <verse xml:id="rtzhstudju" n="1">
-                                    <syl xml:id="jhkdhjdghjdghk" con="u"/>
-                                 </verse> <!-- oder ohne? -->
-                              </note>
+                                 pname="b" stem.dir="up"/>
                               <note xml:id="x188d477a-013b-427a-8e0b-054f19b1ef0e" dur="16" oct="4"
                                  pname="g" accid.ges="s" stem.dir="up">
                                  <verse xml:id="x93134638-a2b8-4044-a3ab-5e7099c6e427" n="1">
@@ -951,6 +948,8 @@
                               <note xml:id="xeed9a7d4-0e9b-43f8-933c-87d896898c73" dur="8" oct="4"
                                  pname="e" stem.dir="down"/>
                            </beam>
+                           <rest xml:id="slfghjoairtz" dur="8" ploc="a"
+                              oloc="5"/>
                            <beam xml:id="xc6affa7c-665c-4427-9822-bdeaa2ab4faa">
                               <note xml:id="x6e4f89ad-f5ed-4be0-b170-51a5b7793fe2" dur="8" oct="4"
                                  pname="d" accid.ges="s" stem.dir="down"/>
@@ -1178,6 +1177,8 @@
                      </staff>
                      <dir xml:id="x859fb174-10ff-4721-afe4-44388508bd05" place="below" staff="6"
                         startid="#x166a786e-9ef4-45c3-bbe9-15209841c163">cres</dir>
+                     <dynam xml:id="liugktzsdjsdk" place="above" staff="7"
+                        startid="#xc649e018-0b98-458e-94c3-af0b2b096c2d">p</dynam>
                   </measure>
                   <measure xml:id="x80cd5a10-2e18-4ed5-872b-de3ca057f1c3" n="8">
                      <staff xml:id="x147f6d01-ad81-4935-9e3f-219da1eb1080" n="1">
@@ -1312,7 +1313,7 @@
                         startid="#xe78fb392-75cf-4614-b10c-dd9221dc0428"
                         endid="#xb2f34c54-f2ca-410a-ace3-140338b62680"/>
                      <dir xml:id="x9a6489bf-20a7-4f76-993d-ae7cdde1af13" place="above" staff="7"
-                        startid="#x7a9842df-2177-4604-8515-506bdf16f88b">cres</dir>
+                        startid="#x7a9842df-2177-4604-8515-506bdf16f88b" endid="#x4a16a201-bf76-43bd-9718-acb3f0256c23">cres</dir> <!-- Fortsetzungsstriche des cres werden nicht angezeigt -->
                   </measure>
                   <measure xml:id="xaf1e9352-a2df-4e03-ba78-fe7b2de310c2" n="9">
                      <staff xml:id="x0f86c491-9920-4a52-98b6-2581d3768385" n="1">
@@ -1665,7 +1666,7 @@
                         startid="#xf50ca0d4-e0de-4383-b7f8-2f913084e400"
                         endid="#x8570e66c-5345-4a8c-ba69-3d41cbfce6e7"/>
                      <dir xml:id="x116914da-fc2d-4e2f-b792-455d2d5f4c89" place="below" staff="6"
-                        startid="#x8f147805-a8a7-4a09-a57b-372ad73dba19">cres</dir>
+                        startid="#x8f147805-a8a7-4a09-a57b-372ad73dba19" endid="#xa54851a4-6122-496d-99d8-f7bb4c736ee4">cres</dir> <!-- Fortsetzungsstriche des cres werden nicht angezeigt -->
                      <slur xml:id="x6c13c6e6-4ceb-4aaa-978d-621f17fc3534"
                         startid="#xa79ff897-f081-4470-b8ee-219b1612311f"
                         endid="#x665316c3-6ce8-490c-9645-23fb7df1097c" curvedir="above"/>
@@ -2137,7 +2138,7 @@
                         startid="#xf9a00e3e-825e-433c-930e-41e0fa05d8a3"
                         endid="#xcb971559-8cac-4b8e-8b62-5d00c3546d74" curvedir="below"/>
                      <dir xml:id="xb0577daf-5015-46d5-b191-a3da00be76ce" place="below" staff="6"
-                        startid="#x320de3ac-21dc-4758-bd81-650c9c44c3b6">cres</dir>
+                        startid="#x320de3ac-21dc-4758-bd81-650c9c44c3b6" endid="#x4eb7727d-c85a-4119-a043-541e1f681ac5">cres</dir> <!-- Fortsetzungsstriche des cres werden nicht angezeigt -->
                   </measure>
                   <measure xml:id="x628f0d1b-f4dd-4207-9c6f-7526ff38b509" n="14">
                      <staff xml:id="xd85239c6-0770-456e-89d8-4503c4497125" n="1">
@@ -2439,6 +2440,8 @@
                      <tie xml:id="x849ae27b-1a5c-4af4-8c56-2d270d6f8cc9"
                         startid="#xa7ec3ac1-f50d-445a-b73d-2d20835d8243"
                         endid="#x8d83bf6d-fa72-44e5-97be-2cedb4593efc"/>
+                     <dir xml:id="ljfghaüoruiztajkfg" place="below" staff="6"
+                        startid="#x997100d1-1fcf-425e-ad63-e24269e35079" endid="#x2f8661f1-ee34-4a6d-a185-f69ffb24f45f">cres</dir> <!-- Fortsetzungsstriche des cres werden nicht angezeigt -->
                   </measure>
                   <measure xml:id="xfed91a47-d9d7-4a40-809d-b716c22c1f5d" n="16">
                      <staff xml:id="x20ad5ede-8d96-4942-9010-753686aa3903" n="1">
