@@ -1,61 +1,102 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Repositories/BeethovensWerkstatt/schemata/rng/bw_data.model_2014_rev1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Repositories/BeethovensWerkstatt/schemata/rng/bw_data.model_2014_rev1.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-model href="../schema/bw_module2_works.rng" type="application/xml" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/bw_module2_works.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <mei xmlns="http://www.music-encoding.org/ns/mei"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     meiversion="2013">
+     meiversion="4.0.0">
    <meiHead>
       <fileDesc>
          <titleStmt>
-            <title>Op. 122</title>
+            <title type="main">Op. 122 - Bundeslied (Partitur)</title>
+            <title type="subordinate">an electronic transcription</title>
             <respStmt>
-               <persName role="composer">L. v. Beethoven</persName>
+               <resp auth.uri="http://id.loc.gov/vocabulary/relators.html" codedval="cmp"/>
+               <persName auth.uri="http://d-nb.info/gnd" codedval="118508288">Ludwig van Beethoven</persName>
             </respStmt>
          </titleStmt>
          <pubStmt/>
          <sourceDesc>
             <source>
-               <titleStmt>
-                  <title>Op. 122</title>
+               <bibl>
+                  <title type="main">Op. 122</title>
                   <respStmt>
-                     <persName role="composer">L. v. Beethoven</persName>
+                     <resp auth.uri="http://id.loc.gov/vocabulary/relators.html" codedval="cmp"/>
+                     <persName auth.uri="http://d-nb.info/gnd" codedval="118508288">Ludwig van Beethoven</persName>
                   </respStmt>
-               </titleStmt>
-               <pubStmt/>
+                  <physLoc>
+                     <repository>Beethoven-Haus Bonn</repository>
+                  </physLoc>
+               </bibl>
             </source>
          </sourceDesc>
       </fileDesc>
-      <encodingDesc/>
+      <encodingDesc>
+         <appInfo>
+            <application version="v1.0_beta" xml:id="app_201949133939667">
+               <name>mei30To40.xsl</name>
+            </application>
+         </appInfo>
+         <editorialDecl>
+            <p>
+               <annot n="1">Scans der OA aus dem Beethovenhaus: aus Finale generierte MusicXML-Daten die in MEI konvertiert (MusicXMLToMEI-xslt) wurden</annot>
+            </p>
+         </editorialDecl>
+      </encodingDesc>
       <revisionDesc>
          <change n="1">
-            <respStmt/>
+            <respStmt>
+               <persName>MH</persName>
+            </respStmt>
             <changeDesc>
                <p>Transcoded from a MusicXML version 3.0 file using an XSLT stylesheet (musicxml2mei
                   v. 3.0).</p>
             </changeDesc>
-            <date>2016-11-28</date>
+            <date isodate="2016-11-28"/>
+         </change>
+         <change n="2">
+            <respStmt>
+               <persName auth.uri="https://github.com/" codedval="krHERO">KH</persName>
+            </respStmt>
+            <changeDesc>
+               <p>Converted to version 3.0.0 using mei21To30.xsl, version
+                  1.0 beta</p>
+            </changeDesc>
+            <date isodate="2019-02-18"/>
+         </change>
+         <change n="3" resp="#app_201949133939667">
+            <respStmt>
+               <persName auth.uri="https://github.com/" codedval="krHERO">KH</persName>
+            </respStmt>
+            <changeDesc>
+               <p>Converted to MEI version 4.0.0 using mei30To40.xsl, version
+                1.0 beta</p>
+            </changeDesc>
+            <date isodate="2019-02-18"/>
          </change>
       </revisionDesc>
    </meiHead>
    <music>
       <body>
          <mdiv>
-           <parts>
-              <!-- Clarinetto Primo in B -->
-              <part n="4">
-                 <scoreDef meter.count="2" meter.unit="2" meter.sym="cut" key.sig="2f"
-                    key.mode="major">
+            <parts><!-- Clarinetto Primo in B -->
+               <part n="4">
+                  <scoreDef meter.count="2"
+                            meter.unit="2"
+                            meter.sym="cut"
+                            key.sig="2f"
+                            key.mode="major">
                      <staffGrp>
                         <staffDef n="1"
                                   xml:id="x74658e5c-3528-4d4f-8769-8a20d6e3b26d"
-                                  label="Clarinetto Primo in B"
                                   lines="5"
                                   clef.line="2"
                                   clef.shape="G"
                                   key.sig="0"
                                   key.mode="major"
                                   trans.semi="-2"
-                                  trans.diat="-1"/>
+                                  trans.diat="-1">
+                           <label>Clarinetto Primo in B</label>
+                        </staffDef>
                      </staffGrp>
                   </scoreDef>
                   <section>
@@ -8430,22 +8471,25 @@
                                  form="norm"/>
                      </measure>
                   </section>
-              </part>
-              
-              <part n="4">
-                 <scoreDef meter.count="2" meter.unit="2" meter.sym="cut" key.sig="2f"
-                    key.mode="major">
+               </part>
+               <part n="4">
+                  <scoreDef meter.count="2"
+                            meter.unit="2"
+                            meter.sym="cut"
+                            key.sig="2f"
+                            key.mode="major">
                      <staffGrp>
                         <staffDef n="1"
                                   xml:id="xf106608a-e08b-4cba-8d33-eef7a5c7b536"
-                                  label="Clarinetto Secondo in B"
                                   lines="5"
                                   clef.line="2"
                                   clef.shape="G"
                                   key.sig="0"
                                   key.mode="major"
                                   trans.semi="-2"
-                                  trans.diat="-1"/>
+                                  trans.diat="-1">
+                           <label>Clarinetto Secondo in B</label>
+                        </staffDef>
                      </staffGrp>
                   </scoreDef>
                   <section>
@@ -10040,7 +10084,6 @@
                            </layer>
                         </staff>
                      </measure>
-                 
                      <measure n="48" xml:id="x2cb4986c-7866-42ab-b43b-37caa1b3b94d">
                         <staff n="1">
                            <layer n="1">
@@ -16293,7 +16336,6 @@
                      </measure>
                   </section>
                </part>
-               
                <part n="5">
                   <scoreDef meter.count="2"
                             meter.unit="2"
@@ -16303,10 +16345,11 @@
                      <staffGrp>
                         <staffDef n="1"
                                   xml:id="x411f0f8d-0e96-464e-9d3e-6593e2c7fb5d"
-                                  label="Fagotto Primo"
                                   lines="5"
                                   clef.line="4"
-                                  clef.shape="F"/>
+                                  clef.shape="F">
+                           <label>Fagotto Primo</label>
+                        </staffDef>
                      </staffGrp>
                   </scoreDef>
                   <section>
@@ -24155,7 +24198,6 @@
                      </measure>
                   </section>
                </part>
-               
                <part n="6">
                   <scoreDef meter.count="2"
                             meter.unit="2"
@@ -24165,11 +24207,12 @@
                      <staffGrp>
                         <staffDef n="1"
                                   xml:id="x0d248957-9da0-4d69-960f-a2ddfde434da"
-                                  label="Fagotto Secondo"
-                                  label.abbr="Fag."
                                   lines="5"
                                   clef.line="4"
-                                  clef.shape="F"/>
+                                  clef.shape="F">
+                           <label>Fagotto Secondo</label>
+                           <labelAbbr>Fag.</labelAbbr>
+                        </staffDef>
                      </staffGrp>
                   </scoreDef>
                   <section>
@@ -32268,7 +32311,6 @@
                      </measure>
                   </section>
                </part>
-               
                <part n="7">
                   <scoreDef meter.count="2"
                             meter.unit="2"
@@ -32281,8 +32323,9 @@
                                   lines="5"
                                   clef.line="2"
                                   key.sig="0"
-                                  label="Corno Primo in b"
-                                  clef.shape="G"/>
+                                  clef.shape="G">
+                           <label>Corno Primo in b</label>
+                        </staffDef>
                      </staffGrp>
                   </scoreDef>
                   <section>
@@ -37740,8 +37783,7 @@
                      </measure>
                   </section>
                </part>
-              
-              <part n="8">
+               <part n="8">
                   <scoreDef meter.count="2"
                             meter.unit="2"
                             meter.sym="cut"
@@ -37750,11 +37792,12 @@
                      <staffGrp>
                         <staffDef n="1"
                                   xml:id="x59b22f39-4a7f-4ac8-8c80-abada3a7393b"
-                                  label="Corno Secondo in b"
                                   lines="5"
                                   key.sig="0"
                                   clef.line="2"
-                                  clef.shape="G"/>
+                                  clef.shape="G">
+                           <label>Corno Secondo in b</label>
+                        </staffDef>
                      </staffGrp>
                   </scoreDef>
                   <section>
@@ -43179,7 +43222,6 @@
                      </measure>
                   </section>
                </part>
-               
                <part n="1">
                   <scoreDef meter.count="2"
                             meter.unit="2"
@@ -43189,10 +43231,11 @@
                      <staffGrp>
                         <staffDef n="1"
                                   xml:id="xa4bed68b-52c2-4e77-97a5-cefc9e29eadb"
-                                  label="Sopran"
                                   lines="5"
                                   clef.line="2"
-                                  clef.shape="G"/>
+                                  clef.shape="G">
+                           <label>Sopran</label>
+                        </staffDef>
                      </staffGrp>
                   </scoreDef>
                   <section>
@@ -48517,7 +48560,6 @@
                      </measure>
                   </section>
                </part>
-               
                <part n="2">
                   <scoreDef meter.count="2"
                             meter.unit="2"
@@ -54031,7 +54073,6 @@
                      </measure>
                   </section>
                </part>
-               
                <part n="3">
                   <scoreDef meter.count="4"
                             meter.unit="4"
@@ -54041,10 +54082,11 @@
                      <staffGrp>
                         <staffDef n="1"
                                   xml:id="xe37db1c7-1acc-475d-bf05-e8483878fbf5"
-                                  label="Choro"
                                   lines="5"
                                   clef.line="2"
-                                  clef.shape="G"/>
+                                  clef.shape="G">
+                           <label>Choro</label>
+                        </staffDef>
                      </staffGrp>
                   </scoreDef>
                   <section>
@@ -55888,9 +55930,8 @@
                         </staff>
                      </measure>
                   </section>
-               </part>  
-              
-           </parts>
+               </part>
+            </parts>
          </mdiv>
       </body>
    </music>
