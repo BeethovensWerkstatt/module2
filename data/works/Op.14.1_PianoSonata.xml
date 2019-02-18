@@ -30388,12 +30388,7 @@
                   </measure>
                </section>
                <section>
-                  <scoreDef key.sig="1s">
-                     <staffGrp>
-                        <staffDef n="1" key.sig="1s"/>
-                        <staffDef n="2" key.sig="1s"/>
-                     </staffGrp>
-                  </scoreDef>
+                  <scoreDef key.sig="1s" key.mode="major"/>                  
                   <measure n="47" xml:id="x0a49ff7b-ea0c-4fe8-ab42-eff1b6561635">
                      <staff n="1">
                         <layer n="1">
