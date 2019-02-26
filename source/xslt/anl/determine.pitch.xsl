@@ -114,30 +114,9 @@
         <xsl:variable name="index.of.pname" select="index-of($pitches,$note/@pname)" as="xs:integer"/>
         <xsl:variable name="oct.mod" as="xs:integer">
             <xsl:choose>
-                <xsl:when test="$index.of.key = 1">
-                    <xsl:value-of select="0"/>
-                </xsl:when>
-                <xsl:when test="$index.of.key = 2 and $index.of.pname = 7">
+                <xsl:when test="$index.of.pname lt $index.of.key">
                     <xsl:value-of select="-1"/>
                 </xsl:when>
-                <xsl:when test="$index.of.key = 3 and $index.of.pname lt 3">
-                    <xsl:value-of select="-1"/>
-                </xsl:when>
-                <xsl:when test="$index.of.key = 4 and $index.of.pname lt 4">
-                    <xsl:value-of select="-1"/>
-                </xsl:when>
-                <xsl:when test="$index.of.key = 5 and $index.of.pname ge 5">
-                    <xsl:value-of select="1"/>
-                </xsl:when>
-                <xsl:when test="$index.of.key = 6 and $index.of.pname ge 6">
-                    <xsl:value-of select="1"/>
-                </xsl:when>
-                <xsl:when test="$index.of.key = 7 and $index.of.pname = 7">
-                    <xsl:value-of select="1"/>
-                </xsl:when>
-                <!--<xsl:when test="$index.of.pname lt $index.of.key">
-                    <xsl:value-of select="-1"/>
-                </xsl:when>-->
                 <xsl:otherwise>
                     <xsl:value-of select="0"/>
                 </xsl:otherwise>
