@@ -58,37 +58,43 @@
         <xsl:variable name="matches" as="xs:string*">
             
             <!-- identical notes -->
+            <!-- Invarianz: Tonbuchstabe, Oktavlage und Tondauer identisch -->
             <xsl:for-each select="$others/descendant-or-self::custom:pitch[@pitch = $pitch and @rel.oct = $rel.oct and @tstamp = $tstamp and @tstamp2 = $tstamp2]">
                 <xsl:value-of select="'id:' || @id"/>
                 <xsl:value-of select="'id'"/>
             </xsl:for-each>
             
             <!-- different octave, same rhythm -->
+            <!-- Oktav-Varianz: Oktavlage weicht ab, Tonbuchstabe und Tondauer identisch -->
             <xsl:for-each select="$others/descendant-or-self::custom:pitch[@pitch = $pitch and not(@rel.oct = $rel.oct) and @tstamp = $tstamp and @tstamp2 = $tstamp2]">
                 <xsl:value-of select="'os:' || @id"/>
                 <xsl:value-of select="'os'"/>
             </xsl:for-each>
             
             <!-- same octave, different rhythm -->
+            <!-- Tondauer-Varianz: Tonbuchstabe und Oktavlage identisch, Tondauer weicht ab -->
             <xsl:for-each select="$others/descendant-or-self::custom:pitch[@pitch = $pitch and @rel.oct = $rel.oct and number(@tstamp) lt number($tstamp2) and number(@tstamp2) gt number($tstamp)]">
                 <xsl:value-of select="'sd:' || @id"/>
                 <xsl:value-of select="'sd'"/>
             </xsl:for-each>
             
             <!-- different octave, different rhythm -->
+            <!-- Tondauer-Oktav-Varianz: Tonbuchstabe identisch, Oktavlage und Tondauer weichen ab -->
             <xsl:for-each select="$others/descendant-or-self::custom:pitch[@pitch = $pitch and not(@rel.oct = $rel.oct) and number(@tstamp) lt number($tstamp2) and number(@tstamp2) gt number($tstamp)]">
                 <xsl:value-of select="'od:' || @id"/>
                 <xsl:value-of select="'od'"/>
             </xsl:for-each>
             
             <!-- different pitch, same rhythm -->
-            <xsl:for-each select="$others/descendant-or-self::custom:pitch[not(@pitch = $pitch) and @tstamp = $tstamp and @rel.oct = $rel.oct and @tstamp2 = $tstamp2]">
+            <!-- Tonhöhen-Varianz: Tondauer identisch, Tonbuchstabe weicht ab, Oktavlage beliebig -->
+            <xsl:for-each select="$others/descendant-or-self::custom:pitch[not(@pitch = $pitch) and @tstamp = $tstamp and @tstamp2 = $tstamp2]"><!-- contained same @rel.oct condition, which is nonsense -->
                 <xsl:value-of select="'ts:' || @id"/>
                 <xsl:value-of select="'ts'"/>
             </xsl:for-each>
             
         </xsl:variable>
         
+        <!-- Differenz -->
         <xsl:variable name="hasMatch" select="count($matches) gt 0" as="xs:boolean"/>
         
         <xsl:copy>
