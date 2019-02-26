@@ -36,7 +36,7 @@
                 <div id="navigationBox" class="column col-3 col-lg-12">
                     <div class="columns">
                         <div id="workSelector" class="column col-12 col-lg-3 formGroup">
-                            <h1 class="sectionLabel">Works:</h1>
+                            <h1 class="sectionLabel">Fassungsvergleiche:</h1>
                             <ul id="comparisonsList" class="navigationList"/>
                         </div>
                         <div id="workNavigation" class="column col-12 col-lg-3 formGroup">
@@ -45,7 +45,7 @@
                             
                             <div class="form-group" id="movementsBox">
                                 <select class="form-select" id="movements">
-                                    <option>loading data</option>
+                                    <option>lade daten</option>
                                 </select>
                             </div>
                             
@@ -61,20 +61,23 @@
                             <div id="sunburst"></div>
                         </div>
                         <div id="modeSelector" class="column col-12 col-lg-3 formGroup">
-                            <h1 class="sectionLabel">Mode:</h1>
+                            <h1 class="sectionLabel">Modus:</h1>
                             <ul class="navigationList">
-                                <li class="modeBtn active" id="plain">Plain (allows custom coloration)</li>
-                                <li class="modeBtn" id="comparison">Identity Comparison</li>
-                                <li class="modeBtn" id="geneticComparison">Genetic Comparison</li>
-                                <li class="modeBtn" id="melodicComparison">Melodic Comparison</li>
-                                <li class="modeBtn" id="eventDensity">Event Density</li>
-                                <li class="modeBtn" id="relativeChroma">Relative Chroma</li>
-                                <li class="modeBtn" id="krumhansl-1" title="Generates Krumhansl-Schmuckler values for each single measure">Krumhansl-Schmuckler (1)</li>
-                                <li class="modeBtn" id="krumhansl-4" title="Generates Krumhansl-Schmuckler values for a sliding window of 4 measures">Krumhansl-Schmuckler (4)</li>
+                                <li class="modeBtn active" id="plain">Fassungs-Synopse</li><!-- Plain comparison -->
+                                <li class="modeBtn" id="comparison">Einzelnoten-Vergleich</li><!-- Single Note Comparison -->
+                                <li class="modeBtn" id="geneticComparison">Genetischer Vergleich</li><!-- Genetic Comparison -->
+                                <li class="modeBtn" id="melodicComparison">Stimmenkontur-Vergleich</li><!-- Melodic Line Comparison -->
+                                <li class="modeBtn" id="eventDensity">Ereignisdichte-Vergleich</li><!-- Event Density Comparison -->
+                                
+                                <!--
+                                    <li class="modeBtn" id="relativeChroma">Relative Chroma</li>
+                                    <li class="modeBtn" id="krumhansl-1" title="Generates Krumhansl-Schmuckler values for each single measure">Krumhansl-Schmuckler (1)</li>
+                                    <li class="modeBtn" id="krumhansl-4" title="Generates Krumhansl-Schmuckler values for a sliding window of 4 measures">Krumhansl-Schmuckler (4)</li>
+                                -->
                             </ul>
                         </div>
                         <div id="modeOptions" class="column col-12 col-lg-3 formGroup">
-                            <h1 class="sectionLabel">Options:</h1>
+                            <h1 class="sectionLabel">Optionen:</h1>
                             <div class="input-group colorSwatches">
                                 <div id="color01" class="colorSwatch active"/>
                                 <div id="color02" class="colorSwatch"/>
@@ -87,23 +90,23 @@
                             </div>
                             <div id="varianceOptions" style="display: none;">
                                 <div class="topBlock">
-                                    <label>identical</label>
-                                    <div class="monoBlock" id="identical" title="note has been taken over in identical form"></div>
+                                    <label>Invarianz</label>
+                                    <div class="monoBlock" id="identical" title="Die Note findet sich unverändert auch in der Vergleichsfassung."></div>
                                 </div>
                                 <div class="topBlock">
-                                    <label>similar</label>
-                                    <label id="durLabel">duration</label>
-                                    <label id="pitchLabel">pitch</label>
+                                    <label>Varianz</label>
+                                    <label id="durLabel">Dauer</label>
+                                    <label id="pitchLabel">Tonbuchstabe</label>
                                     <div class="monoBlock">
-                                      <div class="quarterBlock" id="octDiff_durSame" title="there is a similar note, transposed into a different octave"></div>
-                                      <div class="quarterBlock" id="octSame_durDiff" title="there is a note with similar pitch, but a different duration"></div>
-                                      <div class="quarterBlock" id="octDiff_durDiff" title="there is a note with the same pitch name, but in a different octave and a different duration"></div>
-                                      <div class="quarterBlock" id="transp_durSame" title="there is a note with the same duration, but a completely different pitch"></div>
+                                      <div class="quarterBlock" id="octDiff_durSame" title="In der Vergleichsfassung gibt es die gleiche Note nur in einer anderen Oktave."></div>
+                                      <div class="quarterBlock" id="octSame_durDiff" title="In der Vergleichsfassung gibt es eine Note mit gleicher Tonhöhe, aber anderer Tondauer."></div>
+                                      <div class="quarterBlock" id="octDiff_durDiff" title="In der Vergleichsfassung gibt es die Note mit gleichem Tonbuchstaben, aber in einer anderen Oktave und abweichender Tondauer."></div>
+                                      <div class="quarterBlock" id="transp_durSame" title="In der Vergleichsfassung gibt es eine Note mit gleicher Tondauer, aber abweichendem Tonbuchstaben."></div>
                                     </div>
                                 </div>
                                 <div class="topBlock">
                                     <label>different</label>
-                                    <div class="monoBlock" id="different" title="there is no similarity at all"></div>
+                                    <div class="monoBlock" id="different" title="In der Vergleichsfassung gibt es keine Noten, die anhand der untersuchten Parameter Tonbuchstabe, Oktavlage und Tondauer ähnlich sind."></div>
                                 </div>
                             </div>
                         </div>
@@ -114,14 +117,15 @@
                         <div class="loading loading-lg"></div>
                     </div>
                     <div id="loadingError" class="toast toast-error">
-                        The comparison you've requested could not be loaded.
+                        <!-- The comparison you've requested could not be loaded. -->
+                        Der gewünschte Werkvergleich konnte nicht geladen werden.
                     </div>
                     <div id="firstTimeInstruction" class="empty">
                         <div class="empty-icon">
                             <i class="icon icon-message"></i>
                         </div>
-                        <p class="empty-title h5">Welcome</p>
-                        <p class="empty-subtitle">You need to select a work in order to start.</p>
+                        <p class="empty-title h5">Herzlich Willkommen</p>
+                        <p class="empty-subtitle">Sie müssen einen Fassungsvergleich auswählen, um zu beginnen.</p>
                     </div>
                     
                     <div id="svgContainer"></div>
@@ -141,20 +145,20 @@
                 </div>
                 <div class="modal-body">
                     <div class="content">
-                        This prototype is work in progress, and may change at any time. If you want to report feedback, please make sure to include the 
-                        relevant git commit hash ($$git-short$$).<br/>
-                        The purpose of this prototype is to try out concepts for the second module of our project, which deals with Beethoven as an
-                        arranger of his own works. While we tried to trace genetic processes in manuscripts in our first module, we now seek to 
-                        find such traces in printed texts: How did Beethoven arrange his works for other performing forces? To which degree does he keep
-                        the music untouched? These and other questions are explored by comparing the musical texts of re-arrangements
-                        and their template works.<br/>
-                        What you see here is an unprotected view into our workshop. Neither the data or software nor the concepts manifested by them are
-                        our final take on this module. It's just one aspect we'd like to try out. Of course, <a href="mailto:info@beethovens-werkstatt.de">feedback</a> 
-                        is highly appreciated and helps us to evaluate various approaches. 
+                        Dieser Prototyp ist noch in Arbeit und kann sich jederzeit ändern. Wenn Sie Feedback melden möchten, stellen Sie bitte sicher, dass Sie die Information zum  
+                        git commit hash ($$git-short$$) angeben.<br/>
+                        Der Zweck dieses Prototyps ist es, Konzepte für das zweite Modul unseres Projekts zu erproben, das sich mit Beethoven als Bearbeiter eigener Werke beschäftigt. 
+                        Während wir in unserem ersten Modul versucht haben, genetische Prozesse in Manuskripten nachzuvollziehen, versuchen wir nun, solche Spuren in gedruckten Texten 
+                        zu finden: Wie hat Beethoven seine Werke für andere Besetzungen arrangiert? Inwieweit hält er sich an die Vorlage? Diese und andere Fragen werden durch den 
+                        Vergleich der musikalischen Texte von Vorlagen und Arrangements untersucht.
+                        <br/>
+                        Was Sie hier sehen, ist ein ungeschützter Blick in unsere Werkstatt. Weder die Daten oder die Software noch die Konzepte, die darin umgesetzt werden, entsprechen 
+                        unseren Zielvorstellungen für eine Umsetzung in diesem Modul. Es ist nur ein Aspekt, den wir gerne ausprobieren würden. Natürlich freuen wir uns über <a href="mailto:info@beethovens-werkstatt.de">Feedback</a>, 
+                        mit dem wir unterschiedliche Ansätze evaluieren können. 
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button id="modalCloseBottom" class="btn btn-primary">close</button>
+                    <button id="modalCloseBottom" class="btn btn-primary">schließen</button>
                 </div>
             </div>
         </div>
@@ -165,7 +169,7 @@
             <div class="modal-container">
                 <div class="modal-header">
                     <a id="layoutOptionsOverlayClose2" class="btn btn-clear float-right" aria-label="Close"></a>
-                    <div class="modal-title h5">Display Settings</div>
+                    <div class="modal-title h5">Darstellungsoptionen</div>
                 </div>
                 <div class="modal-body">
                     <div class="content">
@@ -173,28 +177,28 @@
                             <label class="form-label">Transposition</label>
                             <label class="form-radio">
                                 <input type="radio" value="none" name="transposition" checked="checked"></input>
-                                    <i class="form-icon"></i> None (preserve original keys)
+                                    <i class="form-icon"></i> keine (originale Schlüsselung beibehalten)
                             </label>
                             <label class="form-radio">
                                 <input type="radio" value="matchFile1" name="transposition"></input>
-                                    <i class="form-icon"></i> File 1 (transpose file 2)
+                                    <i class="form-icon"></i> Fassung 1 (transponiert ggf. die bearbeitete Fassung)
                             </label>
                             <label class="form-radio">
                                 <input type="radio" value="matchFile2" name="transposition"></input>
-                                    <i class="form-icon"></i> File 2 (transpose file 1)
+                                    <i class="form-icon"></i> Fassung 2 (transponiert ggf. die Vorlage)
                             </label>
                             <label class="form-radio">
                                 <input type="radio" value="C" name="transposition"></input>
-                                    <i class="form-icon"></i> C Major (remove accidentals)
+                                    <i class="form-icon"></i> C-Dur (vermeidet Vorzeichen)
                             </label>
                         </div>
                         <div class="toast">
-                            When changing these settings, you need to manually reload your current work.
+                            Wenn Sie diese Einstellungen anpassen, müssen Sie ggf. den aktuellen Fassungsvergleich durch Klick auf den Titel erneut laden.
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button id="layoutOptionsOverlayClose3" class="btn btn-primary">close</button>
+                    <button id="layoutOptionsOverlayClose3" class="btn btn-primary">schließen</button>
                 </div>
             </div>
         </div>
