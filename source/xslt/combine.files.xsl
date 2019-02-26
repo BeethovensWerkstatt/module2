@@ -197,11 +197,11 @@
         
         <scoreDef xmlns="http://www.music-encoding.org/ns/mei">
             <xsl:apply-templates select="@meter.count | @meter.unit" mode="#current"/>
-            <staffGrp label="" symbol="none" barthru="false">
-                <staffGrp symbol="brace" barthru="true">
+            <staffGrp label="" symbol="none" bar.thru="false">
+                <staffGrp symbol="brace" bar.thru="true">
                     <xsl:apply-templates select=".//mei:staffDef" mode="first.pass"/>
                 </staffGrp>
-                <staffGrp symbol="brace" barthru="true">
+                <staffGrp symbol="brace" bar.thru="true">
                     <xsl:apply-templates select="($second.file//mei:scoreDef)[$pos]//mei:staffDef" mode="first.pass.file.2"/>
                 </staffGrp>
             </staffGrp>
