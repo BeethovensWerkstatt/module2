@@ -2,9 +2,10 @@
 <?xml-model href="http://www.music-encoding.org/schema/current/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="3.0.0" xml:id="x938319e7-7485-477a-993f-1ab18a658fe6">
     <meiHead>
-        <fileDesc>
+        <fileDesc n="122">
             <titleStmt>
-                <title type="main">Op.122 (Bundeslied)</title>
+                <title type="main">Bundeslied Op.122</title>
+                <title type="target">und Bearbeitung als Klavierauszug</title>
                 <title>Orchestral Version to Piano Reduction</title>
                 <respStmt>
                     <corpName role="res">Beethovens Werkstatt</corpName>

@@ -174,21 +174,33 @@ body {
                 padding: 0;
                 
                 li {
-                    padding: 0 0 0 1em;
-                    margin: 0;
+                    padding: .3em 0 .3em 1em;
+                    margin: 0.3em 0;
                     font-weight: 300;
                     position: relative;
                     cursor: pointer;
+                    border: .5px solid #666666;
+                    border-radius: 5px;
+                    
+                    span.originalVersion {
+                        display: block;
+                    }
+                    
+                    span.targetVersion {
+                        display: block;
+                        font-size: 90%;
+                        margin-left: 1em;
+                    }
                     
                     &.active {
                     
                         font-weight: 500;
-                    
-                        &:before {
+                        background-color: #4b48d666;
+                        /*&:before {
                             position: absolute;
                             left: .2em;
                             content: '‣'
-                        }
+                        }*/
                     }
                 }
             }

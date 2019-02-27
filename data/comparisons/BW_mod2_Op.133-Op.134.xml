@@ -2,9 +2,10 @@
 <?xml-model href="http://www.music-encoding.org/schema/current/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="3.0.0" xml:id="x68ad7295-58c5-48a0-a321-fcf8a779551f">
    <meiHead>
-       <fileDesc>
+       <fileDesc n="133">
            <titleStmt>
-               <title type="main">Op.133 → 134 (Große Fuge)</title>
+               <title type="main">Große Fuge Op.133</title>
+               <title type="target">und Bearbeitung für Klavier à 4 Op.134</title>
                <title>String Quartet to 4hd Piano</title>
                <respStmt>
                    <corpName role="res">Beethovens Werkstatt</corpName>

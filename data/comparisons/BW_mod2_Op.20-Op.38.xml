@@ -2,9 +2,10 @@
 <?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="4.0.0" xml:id="x1da457dc-18a2-4a4f-b84b-07b0d499ff67">
     <meiHead>
-        <fileDesc>
+        <fileDesc n="20">
             <titleStmt>
-                <title type="main">Op.20 → 38 (Septett / Trio)</title>
+                <title type="main">Septett Op.20</title>
+                <title type="target">und Bearbeitung als Trio Op.38</title>
                 <respStmt>
                     <corpName role="res">Beethovens Werkstatt</corpName>
                 </respStmt>

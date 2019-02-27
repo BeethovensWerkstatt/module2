@@ -2,9 +2,10 @@
 <?xml-model href="http://www.music-encoding.org/schema/current/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="3.0.0" xml:id="x2d67ecf0-b3be-4342-b1ca-437652ac8ae2">
    <meiHead>
-      <fileDesc>
+      <fileDesc n="121">
          <titleStmt>
-            <title type="main">Op.121b (Opferlied)</title>
+            <title type="main">Opferlied Op.121b</title>
+            <title type="target">und Bearbeitung als Klavierauszug</title>
             <title>Orchestral Version to Piano Reduction</title>
             <respStmt>
                <corpName role="res">Beethovens Werkstatt</corpName>

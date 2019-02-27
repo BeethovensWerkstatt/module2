@@ -20,8 +20,10 @@ let $xslPath := '../xsl/'
 
 let $comparisons := 
     for $comparison in collection($data.basePath)//mei:meiCorpus
+    order by $comparison//mei:fileDesc/number(@n)
     let $comparison.id := $comparison/@xml:id
     let $comparison.title := $comparison//mei:fileDesc/mei:titleStmt/mei:title[@type='main']/text()
+    let $comparison.target := $comparison//mei:fileDesc/mei:titleStmt/mei:title[@type='target']/text()
     let $source1 := doc(document-uri($comparison/root()) || '/../' || $comparison//mei:source[1]/@target)
     let $source2 := doc(document-uri($comparison/root()) || '/../' || $comparison//mei:source[2]/@target)
     
@@ -42,6 +44,7 @@ let $comparisons :=
         '{' ||
             '"id":"' || $comparison.id || '",' ||
             '"title":"' || $comparison.title || '",' ||
+            '"target":"' || $comparison.target || '",' ||
             '"movements":[' || 
                 string-join($movements,',') ||
             ']' ||

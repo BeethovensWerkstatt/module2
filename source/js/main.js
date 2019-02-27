@@ -246,7 +246,17 @@ function getComparisonListing() {
                 let li = document.createElement('li');
                 li.id = comparison.id;
                 li.classList.add('comparison')
-                li.innerHTML = comparison.title;
+                
+                let titleSpan = document.createElement('span');
+                titleSpan.classList.add('originalVersion');
+                titleSpan.innerHTML = comparison.title;
+                
+                let targetSpan = document.createElement('span');
+                targetSpan.classList.add('targetVersion');
+                targetSpan.innerHTML = comparison.target;
+                
+                li.append(titleSpan);
+                li.append(targetSpan);
                 
                 document.querySelector('#comparisonsList').append(li)
             }

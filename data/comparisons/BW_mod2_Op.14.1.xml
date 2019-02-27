@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-model href="http://www.music-encoding.org/schema/current/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="3.0.0" xml:id="x418650e0-d899-4e3d-bff3-f7d459e1d5d7">
+<?xml-model href="../schema/bw_module2_comparisons.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schema/bw_module2_comparisons.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="4.0.0" xml:id="x418650e0-d899-4e3d-bff3-f7d459e1d5d7">
    <meiHead>
-      <fileDesc>
+      <fileDesc n="14">
          <titleStmt>
-            <title type="main">Op.14/1 (Klaviersonate / Streichquartett)</title>
+            <title type="main">Klaviersonate E-Dur Op.14/1</title>
+            <title type="target">und Bearbeitung als Streichquartett F-Dur</title>
             <title>Piano Sonata to String Quartet</title>
             <respStmt>
                <corpName role="res">Beethovens Werkstatt</corpName>
