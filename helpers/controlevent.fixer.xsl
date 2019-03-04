@@ -35,6 +35,9 @@
         <xsl:variable name="controlevents.linked" as="node()*">
             <xsl:apply-templates select="$added.tstamps" mode="controlevent.linking"/>
         </xsl:variable>
+        
+        <!-- @todo-johannes: aufräumer-xsl schreiben (tstamp, tstamp2, meter.count, meter.unit usw.) -->
+        
         <xsl:copy-of select="$controlevents.linked"/>
     </xsl:template>
     
