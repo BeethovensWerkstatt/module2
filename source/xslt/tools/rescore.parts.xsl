@@ -52,6 +52,7 @@
                 <xsl:variable name="number.mod" select=". - 1" as="xs:integer"/>
                 <xsl:apply-templates select="$this.measure" mode="rescore.parts.clone">
                     <xsl:with-param name="number.mod" select="$number.mod" tunnel="yes"/>
+                    <xsl:with-param name="rescore.parts.remove.controlevents" select="true()" as="xs:boolean" tunnel="yes"/>
                 </xsl:apply-templates>
             </xsl:for-each>
         </xsl:if>
@@ -64,6 +65,15 @@
     <xsl:template match="@xml:id" mode="rescore.parts.clone"/>
     <xsl:template match="mei:multiRest" mode="rescore.parts.prep rescore.parts.clone">
         <mRest xmlns="http://www.music-encoding.org/ns/mei"/>
+    </xsl:template>
+    <xsl:template match="mei:measure/mei:*[not(local-name() = 'staff')]" mode="rescore.parts.clone">
+        <xsl:param name="rescore.parts.remove.controlevents" as="xs:boolean" tunnel="yes"/>
+        <xsl:choose>
+            <xsl:when test="$rescore.parts.remove.controlevents"/>
+            <xsl:otherwise>
+                <xsl:next-match/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <!-- actual merging -->
