@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2019-03-04T15:10:47Z. .
+Schema generated from ODD source 2019-03-04T16:15:00Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -10491,7 +10491,7 @@ Suggested values include: 1] smufl</a:documentation>
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:fermata">
                                 <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
-                                    fermata elements are supposed to have a @startid fermata.
+                                    fermata elements are supposed to have a @startid only.
                                 </sch:assert>
                             </sch:rule>
          </pattern>
@@ -10524,7 +10524,7 @@ Suggested values include: 1] smufl</a:documentation>
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:tempo">
                                 <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
-                                    tempo elements are supposed to have a @startid tempo.
+                                    tempo elements are supposed to have a @startid only.
                                 </sch:assert>
                             </sch:rule>
          </pattern>
@@ -10546,7 +10546,7 @@ Suggested values include: 1] smufl</a:documentation>
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:trill">
                                 <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
-                                    trill elements are supposed to have a @startid trill.
+                                    trill elements are supposed to have a @startid only.
                                 </sch:assert>
                             </sch:rule>
          </pattern>

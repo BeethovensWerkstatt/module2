@@ -115,7 +115,7 @@
                             </sch:rule>
                             <sch:rule context="mei:fermata">
                                 <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
-                                    fermata elements are supposed to have a @startid fermata.
+                                    fermata elements are supposed to have a @startid only.
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:hairpin">
@@ -130,7 +130,7 @@
                             </sch:rule>
                             <sch:rule context="mei:tempo">
                                 <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
-                                    tempo elements are supposed to have a @startid tempo.
+                                    tempo elements are supposed to have a @startid only.
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:tie">
@@ -140,7 +140,7 @@
                             </sch:rule>
                             <sch:rule context="mei:trill">
                                 <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
-                                    trill elements are supposed to have a @startid trill.
+                                    trill elements are supposed to have a @startid only.
                                 </sch:assert>
                             </sch:rule>
                         </constraint>
