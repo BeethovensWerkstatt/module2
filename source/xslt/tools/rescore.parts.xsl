@@ -130,9 +130,9 @@
         <xsl:attribute name="staff" select="$new.n"/>
     </xsl:template>
     <xsl:template match="mei:tempo" mode="rescore.parts">
-        <xsl:param name="remove.tempo" as="xs:boolean"/>
+        <xsl:param name="remove.tempo" tunnel="yes" as="xs:boolean?"/>
         <xsl:choose>
-            <xsl:when test="$remove.tempo"/>
+            <xsl:when test="exists($remove.tempo) and $remove.tempo = true()"/>
             <xsl:otherwise>
                 <xsl:next-match/>
             </xsl:otherwise>
