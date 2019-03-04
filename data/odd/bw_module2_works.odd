@@ -91,6 +91,61 @@
                         </constraint>
                     </constraintSpec>
                     
+                    <constraintSpec ident="check_tstamp2" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="@tstamp2">
+                                <sch:assert test="contains(.,'m+')">
+                                    tstamp2 values always need a measure reference. If targeting at the same measure as the start, add '0m+' in front.
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_controlevents" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:dir">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
+                                    dir elements are supposed to have a @startid only.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:dynam">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
+                                    dynam elements are supposed to have a @startid only.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:fermata">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
+                                    fermata elements are supposed to have a @startid fermata.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:hairpin">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and @endid and @startid">
+                                    hairpin elements are supposed to have a @startid and @endid.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:slur">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and @endid and @startid">
+                                    slur elements are supposed to have a @startid and @endid.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:tempo">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
+                                    tempo elements are supposed to have a @startid tempo.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:tie">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and @endid and @startid">
+                                    tie elements are supposed to have a @startid and @endid.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:trill">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
+                                    trill elements are supposed to have a @startid trill.
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
                 </elementSpec>
                 
             </schemaSpec>
