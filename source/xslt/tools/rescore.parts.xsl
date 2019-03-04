@@ -113,6 +113,7 @@
                     <xsl:when test="$matching.measure">
                         <xsl:apply-templates select="$matching.measure/mei:*[local-name() != 'staff']" mode="rescore.parts">
                             <xsl:with-param name="new.n" select="$new.n" tunnel="yes"/>
+                            <xsl:with-param name="remove.tempo" select="xs:boolean($new.n != 1)" tunnel="yes" as="xs:boolean"/>
                         </xsl:apply-templates>
                     </xsl:when>
                     <xsl:otherwise/>
@@ -127,5 +128,14 @@
     <xsl:template match="@staff" mode="rescore.parts">
         <xsl:param name="new.n" tunnel="yes"/>
         <xsl:attribute name="staff" select="$new.n"/>
+    </xsl:template>
+    <xsl:template match="mei:tempo" mode="rescore.parts">
+        <xsl:param name="remove.tempo" as="xs:boolean"/>
+        <xsl:choose>
+            <xsl:when test="$remove.tempo"/>
+            <xsl:otherwise>
+                <xsl:next-match/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 </xsl:stylesheet>
