@@ -1029,7 +1029,7 @@
                      <slur xml:id="xe7510098-988c-4350-9693-d5edb3888418"
                            staff="1"
                            tstamp="2"
-                           tstamp2="4"
+                           tstamp2="0m+4"
                            startid="#xfeea5789-bddd-40a2-83f0-c72567cc35f0"
                            endid="#x54dfe646-5b6c-4598-ade9-2957e610baea"
                            curvedir="below"/>
@@ -2764,8 +2764,14 @@
                               form="cres"
                               staff="1"
                               tstamp="3"
-                              tstamp2="4"
+                              tstamp2="0m+4"
                               place="below"/>
+                      <hairpin xml:id="x09cfc05c-c177-45a9-9bee-96e2163a24f3"
+                          form="dim"
+                          staff="1"
+                          tstamp="0"
+                          tstamp2="1m+2"
+                          place="below"/>
                   </measure>
                   <measure n="26" xml:id="x5e74142f-cca1-48ea-ae34-baa91a3b51d6">
                      <staff n="1">
@@ -2857,12 +2863,6 @@
                            <mSpace xml:id="x38f5e61d-6c3c-4155-bdc5-33257b8495e3"/>
                         </layer>
                      </staff>
-                     <hairpin xml:id="x09cfc05c-c177-45a9-9bee-96e2163a24f3"
-                              form="dim"
-                              staff="1"
-                              tstamp="0"
-                              tstamp2="2"
-                              place="below"/>
                   </measure>
                   <measure n="27" xml:id="x27bb058a-23a1-4219-994f-efb89e71f9c1">
                      <staff n="1">
@@ -3033,13 +3033,13 @@
                      <hairpin xml:id="xb7da860c-8d0a-4be6-bac7-1bd32c221065"
                               form="cres"
                               tstamp="3"
-                              tstamp2="4"
+                              tstamp2="0m+4"
                               place="below"
                               staff="1"/>
                      <hairpin xml:id="x98f82da2-6634-43db-99fb-7f0980c3a634"
                               form="dim"
                               tstamp="4"
-                              tstamp2="4"
+                              tstamp2="1m+1"
                               place="below"
                               staff="1"/>
                   </measure>
@@ -3353,8 +3353,8 @@
                      <hairpin xml:id="x0d466d91-0946-410b-a3a6-ce11a9bed8f9"
                               form="cres"
                               staff="1"
-                              tstamp="0"
-                              tstamp2="4"
+                              tstamp="1"
+                              tstamp2="1m+1"
                               place="below"/>
                   </measure>
                   <measure n="34" xml:id="xb7c3b155-14d1-45f0-85c5-372946bca230">
@@ -3450,8 +3450,8 @@
                      <hairpin xml:id="x8a46829b-1692-4090-b77a-ed3facb311cd"
                               form="dim"
                               staff="1"
-                              tstamp="0"
-                              tstamp2="2"
+                              tstamp="1"
+                              tstamp2="0m+2"
                               place="below"/>
                      <!--<slur startid="#d791e1" endid="#d1e8200" curvedir="above" staff="1"/>-->
                      <dir xml:id="xe23afe0b-86f9-4dee-8063-0b8989a14295"
@@ -3682,10 +3682,16 @@
                      </staff>
                      <hairpin xml:id="xc9cee828-c3ee-4580-b1d1-4f0c08eaeea2"
                               form="cres"
-                              tstamp="0"
-                              tstamp2="4"
+                              tstamp="1"
+                              tstamp2="0m+4"
                               staff="1"
                               place="below"/>
+                      <hairpin xml:id="x122a11bf-0833-4d43-ab8c-9475082d9466"
+                          form="dim"
+                          staff="1"
+                          tstamp="4"
+                          tstamp2="1m+1"
+                          place="below"/>
                   </measure>
                   <measure n="38" xml:id="xc360515c-3dba-4cc6-b8b8-0c7ee27ec9a9">
                      <staff n="1">
@@ -3798,12 +3804,6 @@
                            </beam>
                         </layer>
                      </staff>
-                     <hairpin xml:id="x122a11bf-0833-4d43-ab8c-9475082d9466"
-                              form="dim"
-                              staff="1"
-                              tstamp="0"
-                              tstamp2="2"
-                              place="below"/>
                      <dynam xml:id="xa7a9b194-d947-49d4-9315-063cf41f7b54"
                             staff="1"
                             tstamp="3"
@@ -6456,7 +6456,7 @@
                               staff="1"
                               layer="1"
                               tstamp="1"
-                              tstamp2="3"
+                              tstamp2="0m+3"
                               curvedir="above"/>
                         <slur xml:id="x7b11aa4c-c9c5-404d-bdc3-819eac964acd"
                               staff="1"
@@ -7812,7 +7812,7 @@
                      <dynam xml:id="x0651a047-f3a9-4529-85ce-a97079415487"
                             staff="1"
                             tstamp="2"
-                            tstamp2="3"
+                            
                             place="below">cres</dynam>
                      <slur xml:id="xa65f9bb0-50b0-453a-a86b-1e2d8aa34989"
                            startid="#x7f387030-bde0-4127-a392-b22c27d127b0"
@@ -8147,7 +8147,7 @@
                      <dynam xml:id="x365fc65e-9933-456e-9d26-6e865cbfca4e"
                             staff="1"
                             tstamp="2"
-                            tstamp2="3"
+                            
                             place="below">cres</dynam>
                   </measure>
                   <!-- nächste Seite -->
@@ -9473,7 +9473,7 @@
                      <dynam xml:id="xe6224c00-adca-4e2f-a455-3cab4436b8ca"
                             staff="1"
                             tstamp="1"
-                            tstamp2="3"
+                            
                             place="below">cres</dynam>
                   </measure>
                   <!-- nächste Seite -->
@@ -10715,7 +10715,7 @@
                      <dynam xml:id="x492d8dc8-cc2b-46e7-bb10-2d08bc0dc089"
                             staff="1"
                             tstamp="2"
-                            tstamp2="3"
+                            
                             place="within">decres:</dynam>
                      <slur xml:id="xc4b1980e-a2e3-4b93-8827-4d1c5d02917b"
                            staff="1"
@@ -11336,7 +11336,7 @@
                               staff="1"
                               form="dim"
                               tstamp="2"
-                              tstamp2="4"
+                              tstamp2="0m+4"
                               place="below"/>
                   </measure>
                   <!-- <measure n="x">
@@ -12199,7 +12199,7 @@
                      <dynam xml:id="xdc47d72f-aa32-4eb6-b7ce-cbe80e1e5d7d"
                             staff="1"
                             tstamp="1"
-                            tstamp2="3"
+                            
                             place="within">decres:</dynam>
                      <slur xml:id="x4c2c77b0-c2e1-4036-a934-13981e693aa4"
                            startid="#xd4de7e2f-1efd-40bf-97d1-b8ca63fb7c3e"
@@ -12555,7 +12555,7 @@
                      <dynam xml:id="x3e4cff06-5ca3-4747-a2a0-cabd1e1bfa5b"
                             staff="2"
                             tstamp="1"
-                            tstamp2="2"
+                            
                             place="above">cres</dynam>
                      <slur xml:id="x56210b7f-a39f-4af1-b092-7195bc73b3a1"
                            startid="#xfc30e632-1849-4051-8793-5d68f3b87c03"
@@ -13621,8 +13621,14 @@
                               form="cres"
                               staff="1"
                               tstamp="3"
-                              tstamp2="4.5"
+                              tstamp2="0m+4"
                               place="below"/>
+                      <hairpin xml:id="xefff9ccb-3ad7-48bc-9b95-116e7ed3e612"
+                          form="dim"
+                          staff="1"
+                          tstamp="4"
+                          tstamp2="1m+2"
+                          place="below"/>
                   </measure>
                   <!--  -->
                   <measure n="118" xml:id="x76eff41b-b97a-4ac0-b7a7-e471a3e08912">
@@ -13724,12 +13730,6 @@
                            startid="#x721bcc60-b3bb-4175-a5f2-927f36374692"
                            endid="#x328eda91-298d-4da9-9165-b2aa79149f1a"
                            curvedir="below"/>
-                     <hairpin xml:id="xefff9ccb-3ad7-48bc-9b95-116e7ed3e612"
-                              form="dim"
-                              staff="1"
-                              tstamp="0"
-                              tstamp2="2"
-                              place="below"/>
                   </measure>
                   <measure n="119" xml:id="x90992ece-ee1e-4db5-aebb-ca9016ea2367">
                      <staff n="1">
@@ -13887,16 +13887,21 @@
                      <hairpin xml:id="xaa128a9c-d5af-470b-80e8-6407ad971e2c"
                               staff="1"
                               form="cres"
-                              tstamp="3"
-                              tstamp2="4.5"
+                              tstamp="1"
+                              tstamp2="0m+4"
                               place="below"/>
                      <slur xml:id="xa3d3cde9-7d69-4d09-811b-73c5d62bea51"
                            staff="1"
                            startid="#x5d0c41f5-dd42-4c50-a318-7049f975fa97"
                            endid="#x30413110-05b5-4232-a8e7-145439ae8214"
                            curvedir="below"/>
+                      <hairpin xml:id="x80c97eaf-41e4-4dc9-9b89-d3442078c7ee"
+                          staff="1"
+                          form="dim"
+                          tstamp="4"
+                          tstamp2="1m+1"
+                          place="below"/>
                   </measure>
-                  <!--  -->
                   <measure n="122" xml:id="x89653fa3-6895-4f6c-bcc3-d43b32de7f5d">
                      <staff n="1">
                         <layer n="1">
@@ -13960,12 +13965,6 @@
                            </beam>
                         </layer>
                      </staff>
-                     <hairpin xml:id="x80c97eaf-41e4-4dc9-9b89-d3442078c7ee"
-                              staff="1"
-                              form="dim"
-                              tstamp="0"
-                              tstamp2="2.5"
-                              place="below"/>
                      <slur xml:id="x20440ebe-9b6b-4fe5-aaf2-7da1b3b00d13"
                            staff="1"
                            startid="#x3a9059e0-2754-42ce-bd1d-9d48ed012fa2"
@@ -14205,9 +14204,15 @@
                      <hairpin xml:id="x848f8e45-0f81-4cac-b29c-8d5cb0d62421"
                               form="cres"
                               staff="1"
-                              tstamp="0"
-                              tstamp2="4.5"
+                              tstamp="1"
+                              tstamp2="0m+4"
                               place="below"/>
+                      <hairpin xml:id="xc3cda693-5358-4d59-aecf-03287deb8fa8"
+                          form="dim"
+                          tstamp="4"
+                          tstamp2="1m+2"
+                          place="below"
+                          staff="1"/>
                   </measure>
                   <measure n="126" xml:id="xe4e2f126-8f40-4673-bf60-0f7d9f718657">
                      <staff n="1">
@@ -14303,12 +14308,6 @@
                            startid="#x4fd64b2b-c9ee-4c59-a31e-79348eae8e67"
                            endid="#x4f59b9c8-2ac5-4361-ae5c-f0122fab3e06"
                            curvedir="above"/>
-                     <hairpin xml:id="xc3cda693-5358-4d59-aecf-03287deb8fa8"
-                              form="dim"
-                              tstamp="0"
-                              tstamp2="2"
-                              place="below"
-                              staff="1"/>
                      <slur xml:id="x3e9da291-fda4-4641-9d57-c5587b21da66"
                            staff="1"
                            startid="#x893b8c3e-a25a-4104-ae69-2f5b0175f334"
@@ -14534,7 +14533,7 @@
                               form="cres"
                               staff="1"
                               tstamp="1"
-                              tstamp2="4.5"
+                              tstamp2="0m+4"
                               place="below"/>
                      <slur xml:id="xc8c46789-2870-4746-8eef-66f35904c507"
                            staff="2"
@@ -14655,7 +14654,7 @@
                               form="dim"
                               staff="1"
                               tstamp="1"
-                              tstamp2="2"
+                              tstamp2="0m+2"
                               place="below"/>
                      <slur xml:id="xfa192fda-e790-443e-bba8-6903d131b079"
                            staff="2"
@@ -18172,7 +18171,7 @@
                      <dynam xml:id="x53d7fe40-bf97-46f8-b348-680cadf1f84d"
                             staff="2"
                             tstamp="1"
-                            tstamp2="3"
+                            
                             place="above">decres:</dynam>
                   </measure>
                   <measure n="161" xml:id="x3678b528-e11c-4b25-b749-d74396462720">
@@ -19210,7 +19209,7 @@
                      <slur xml:id="x3bad1889-85ae-488e-879c-e7c377b29278"
                            staff="1"
                            tstamp="1"
-                           tstamp2="3"
+                           tstamp2="0m+3"
                            curvedir="above"/>
                      <slur xml:id="xf203af99-73f5-4c64-a1c9-77f6fbeab89d"
                            staff="2"
@@ -20507,7 +20506,7 @@
                               form="dim"
                               staff="1"
                               tstamp="2"
-                              tstamp2="3"
+                              tstamp2="1m+1"
                               place="below"/>
                   </measure>
                   <measure n="32" xml:id="x4136e183-0db0-4d3c-b9de-86eb804b78a8">
@@ -20643,8 +20642,6 @@
                            startid="#xeeddbf29-2352-4059-85db-64ba62d5f3d9"
                            endid="#x96277d26-7076-49fb-bf3c-73f1de07bcb5"
                            staff="2"
-                           tstamp="1"
-                           tstamp2="3"
                            curvedir="above"/>
                   </measure>
                   <measure n="34" xml:id="x09be7fef-6c20-47a7-add2-3952ad1634d4">
@@ -24540,7 +24537,7 @@
                      <dynam xml:id="xb8bcf98c-63c4-4614-aa7f-bf33fcf7110c"
                             staff="1"
                             tstamp="2"
-                            tstamp2="1m+2"
+                            
                             place="below">decres:</dynam>
                   </measure>
                   <measure n="98" xml:id="x43b12c92-1b98-4c32-8aba-235ea7b09084">
@@ -25182,7 +25179,7 @@
                      <dynam xml:id="x3da101f7-bc17-4c77-8b71-e732f71bd1d8"
                             staff="1"
                             tstamp="3"
-                            tstamp2="1m+2">decres:</dynam>
+                            >decres:</dynam>
                   </measure>
                   <measure n="110">
                      <staff n="1">
@@ -33808,7 +33805,7 @@
                      <dynam xml:id="xe87071f6-1a1a-442d-af62-cbdcf4857cbd"
                             staff="1"
                             tstamp="1"
-                            tstamp2="3"
+                            
                             place="below">decres:</dynam>
                   </measure>
                   <measure n="74" xml:id="x215e3955-1e3f-4ae8-9a7f-e1f15ffbba76">
