@@ -104,13 +104,13 @@
                     <constraintSpec ident="check_controlevents" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:dir">
-                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
-                                    dir elements are supposed to have a @startid only.
+                                <sch:assert test="not(@tstamp2) and (@tstamp) and not(@endid) and not@startid">
+                                    dir elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:dynam">
-                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
-                                    dynam elements are supposed to have a @startid only.
+                                <sch:assert test="not(@tstamp2) and (@tstamp) and not(@endid) and not@startid">
+                                    dynam elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:fermata">
@@ -119,8 +119,8 @@
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:hairpin">
-                                <sch:assert test="not(@tstamp2) and not(@tstamp) and @endid and @startid">
-                                    hairpin elements are supposed to have a @startid and @endid.
+                                <sch:assert test="(@tstamp2) and (@tstamp) and not@endid and not@startid">
+                                    hairpin elements are supposed to have a @tstamp and @tstamp2.
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:slur">
@@ -129,8 +129,8 @@
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:tempo">
-                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
-                                    tempo elements are supposed to have a @startid only.
+                                <sch:assert test="not(@tstamp2) and (@tstamp) and not(@endid) and not@startid">
+                                    tempo elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:tie">
