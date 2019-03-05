@@ -61,7 +61,7 @@
                 <moduleRef key="MEI.namesdates" include="corpName geogName persName roleName"/>
                 <moduleRef key="MEI.ptrref"/>
                 <moduleRef key="MEI.shared"
-                    include="address annot barLine bibl biblList biblScope biblStruct body castGrp castItem castList chord clef clefGrp date desc dir dynam ending expansion head identifier label layer layerDef mdiv mei music name note p part parts physLoc pubPlace relation relationList repository resp respStmt rest role roleDesc score scoreDef section space staff staffDef staffGrp syl tempo title titlePage"/>
+                    include="address annot barLine bibl biblList biblScope biblStruct body castGrp castItem castList chord clef clefGrp date desc dir dynam ending expansion head identifier label labelAbbr layer layerDef mdiv mei music name note p part parts physLoc pubPlace relation relationList repository resp respStmt rest role roleDesc score scoreDef section space staff staffDef staffGrp syl tempo title titlePage"/>
                 <moduleRef key="MEI.visual"/>
                 
                 <elementSpec ident="mdiv" module="MEI.shared" mode="change">

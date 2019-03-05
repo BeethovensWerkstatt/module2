@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2019-03-04T16:15:00Z. .
+Schema generated from ODD source 2019-03-05T07:26:41Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -5422,6 +5422,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             <ref name="mei_label"/>
          </zeroOrMore>
          <zeroOrMore>
+            <ref name="mei_labelAbbr"/>
+         </zeroOrMore>
+         <zeroOrMore>
             <choice>
                <ref name="mei_dir"/>
                <ref name="mei_dynam"/>
@@ -9167,6 +9170,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_model.labelLike">
       <choice>
          <ref name="mei_label"/>
+         <ref name="mei_labelAbbr"/>
       </choice>
    </define>
    <define name="mei_model.layerDefLike">
@@ -10347,6 +10351,21 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_label">
       <element name="label">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A container for document text that identifies the feature to which it is attached. For a "tool tip" or other generated label, use the label attribute.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike.limited"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.source.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_labelAbbr">
+      <element name="labelAbbr">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A label on the pages following the first.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
