@@ -37,11 +37,12 @@
             <xsl:apply-templates select="node() | @*" mode="#current"/>
             <change xmlns="http://www.music-encoding.org/ns/mei" n="{$new.n}">
                 <respStmt>
-                    <persName>KH</persName>
+                    <persName auth.uri="https://github.com/" codedval="krHERO">Kristin Herold</persName>
                 </respStmt>
                 <changeDesc>
                     <p>Deleted mei:sb-elements and mei:pb-elements, got rid of rend-elements but keep its contents,
-                       renamed mSpace-elements to mRest-elements; utilizing dataCleanUp.xsl</p>
+                        renamed mSpace-elements to mRest-elements, moved accid-attributes from accid-elements to note-elements, 
+                        moved artic-attributes from artic-elements to note-elements; utilizing dataCleanUp.xsl</p>
                 </changeDesc>
                 <date isodate="{substring(string(current-date()),1,10)}"/>
             </change>
@@ -80,7 +81,7 @@
     
     <xd:doc>
         <xd:desc>move accid-attributes from accid-elements to note-elements, 
-            move artic-attributes from artic-elements to note-elements and delete artic-elements</xd:desc>
+            move artic-attributes from artic-elements to note-elements</xd:desc>
     </xd:doc>    
     <xsl:template match="mei:note">
         <xsl:copy>
