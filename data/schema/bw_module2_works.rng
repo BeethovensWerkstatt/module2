@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2019-03-05T09:55:02Z. .
+Schema generated from ODD source 2019-03-05T11:02:08Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -10487,7 +10487,7 @@ Suggested values include: 1] smufl</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:dir">
-                                <sch:assert test="not(@tstamp2) and (@tstamp) and not(@endid) and not@startid">
+                                <sch:assert test="not(@tstamp2) and @tstamp and not(@endid) and not(@startid)">
                                     dir elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>
@@ -10498,7 +10498,7 @@ Suggested values include: 1] smufl</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:dynam">
-                                <sch:assert test="not(@tstamp2) and (@tstamp) and not(@endid) and not@startid">
+                                <sch:assert test="not(@tstamp2) and @tstamp and not(@endid) and not(@startid)">
                                     dynam elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>
@@ -10520,7 +10520,7 @@ Suggested values include: 1] smufl</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:hairpin">
-                                <sch:assert test="(@tstamp2) and (@tstamp) and not@endid and not@startid">
+                                <sch:assert test="@tstamp2 and @tstamp and not(@endid) and not(@startid)">
                                     hairpin elements are supposed to have a @tstamp and @tstamp2.
                                 </sch:assert>
                             </sch:rule>
@@ -10542,7 +10542,7 @@ Suggested values include: 1] smufl</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:tempo">
-                                <sch:assert test="not(@tstamp2) and (@tstamp) and not(@endid) and not@startid">
+                                <sch:assert test="not(@tstamp2) and @tstamp and not(@endid) and not(@startid)">
                                     tempo elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>

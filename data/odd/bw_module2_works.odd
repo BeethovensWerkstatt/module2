@@ -104,12 +104,12 @@
                     <constraintSpec ident="check_controlevents" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:dir">
-                                <sch:assert test="not(@tstamp2) and (@tstamp) and not(@endid) and not@startid">
+                                <sch:assert test="not(@tstamp2) and @tstamp and not(@endid) and not(@startid)">
                                     dir elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:dynam">
-                                <sch:assert test="not(@tstamp2) and (@tstamp) and not(@endid) and not@startid">
+                                <sch:assert test="not(@tstamp2) and @tstamp and not(@endid) and not(@startid)">
                                     dynam elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>
@@ -119,7 +119,7 @@
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:hairpin">
-                                <sch:assert test="(@tstamp2) and (@tstamp) and not@endid and not@startid">
+                                <sch:assert test="@tstamp2 and @tstamp and not(@endid) and not(@startid)">
                                     hairpin elements are supposed to have a @tstamp and @tstamp2.
                                 </sch:assert>
                             </sch:rule>
@@ -129,7 +129,7 @@
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:tempo">
-                                <sch:assert test="not(@tstamp2) and (@tstamp) and not(@endid) and not@startid">
+                                <sch:assert test="not(@tstamp2) and @tstamp and not(@endid) and not(@startid)">
                                     tempo elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>
