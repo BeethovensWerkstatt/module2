@@ -59,7 +59,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="@xml:id" mode="first.run">
+    <xsl:template match="mei:music//@xml:id" mode="first.run">
         <xsl:attribute name="xml:id" select="'x' || uuid:randomUUID()"/>
         <xsl:attribute name="old.id" select="."/>
     </xsl:template>
