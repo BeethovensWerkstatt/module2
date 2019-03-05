@@ -35,8 +35,16 @@
         <xsl:variable name="controlevents.linked" as="node()*">
             <xsl:apply-templates select="$added.tstamps" mode="controlevent.linking"/>
         </xsl:variable>
-        <xsl:copy-of select="$controlevents.linked"/>
+        <xsl:variable name="cleaned" as="node()*">
+            <xsl:apply-templates select="$controlevents.linked" mode="final.cleanup"/>
+        </xsl:variable>
+        <xsl:copy-of select="$cleaned"/>
     </xsl:template>
+    
+    <xsl:template match="mei:measure/@meter.count" mode="final.cleanup"/>
+    <xsl:template match="mei:measure/@meter.unit" mode="final.cleanup"/>
+    <xsl:template match="mei:staff//@tstamp" mode="final.cleanup"/>
+    <xsl:template match="mei:staff//@tstamp2" mode="final.cleanup"/>
     
     <xd:doc>
         <xd:desc>
