@@ -5885,7 +5885,7 @@
                   <!-- nächste Seite -->
                   <measure n="56" xml:id="x014863c1-5a02-4d67-9690-2a63ca178e2d">
                      <staff n="1">
-                        <layer>
+                        <layer n="1">
                            <mRest xml:id="xf2ac3bf8-2dc5-4de3-a1ec-55270cd12b44"/>
                         </layer>
                         <layer n="2">
@@ -6236,7 +6236,7 @@
                   </measure>
                   <measure n="60" xml:id="x0b93cb57-2c91-488d-9919-649912529eba">
                      <staff n="1">
-                        <layer>
+                        <layer n="1">
                            <mSpace xml:id="x10d6c354-7edd-4551-aeae-4672cbb7e29d"/>
                         </layer>
                      </staff>
@@ -24890,7 +24890,7 @@
                         </layer>
                      </staff>
                      <staff n="2">
-                        <layer>
+                        <layer n="1">
                            <mRest xml:id="x9f68162b-414a-4088-aac1-98fb095811d2"/>
                         </layer>
                      </staff>
@@ -25115,7 +25115,7 @@
                         </layer>
                      </staff>
                      <staff n="2">
-                        <layer>
+                        <layer n="1">
                            <mRest xml:id="x2d2c1ad1-449e-4ed6-941e-02eb12ffd3d0"/>
                         </layer>
                      </staff>
@@ -25417,12 +25417,12 @@
                   </measure>
                   <measure n="116" right="end">
                      <staff n="1">
-                        <layer>
+                        <layer n="1">
                            <mRest xml:id="xde7544e0-785f-49ce-98ee-a4ed8860f9f6" fermata="above"/>
                         </layer>
                      </staff>
                      <staff n="2">
-                        <layer>
+                        <layer n="1">
                            <mRest xml:id="x3feb8a37-fa0a-4efe-83e7-f072549d6e73" fermata="above"/>
                         </layer>
                      </staff>
