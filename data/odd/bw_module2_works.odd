@@ -61,7 +61,7 @@
                 <moduleRef key="MEI.namesdates" include="corpName geogName persName roleName"/>
                 <moduleRef key="MEI.ptrref"/>
                 <moduleRef key="MEI.shared"
-                    include="address annot barLine bibl biblList biblScope biblStruct body castGrp castItem castList chord clef clefGrp date desc dir dynam ending expansion head identifier label layer layerDef mdiv mei music name note p part parts physLoc pubPlace relation relationList repository resp respStmt rest role roleDesc score scoreDef section space staff staffDef staffGrp syl tempo title titlePage"/>
+                    include="address annot barLine bibl biblList biblScope biblStruct body castGrp castItem castList chord clef clefGrp date desc dir dynam ending expansion head identifier label labelAbbr layer layerDef mdiv mei music name note p part parts physLoc pubPlace relation relationList repository resp respStmt rest role roleDesc score scoreDef section space staff staffDef staffGrp syl tempo title titlePage"/>
                 <moduleRef key="MEI.visual"/>
                 
                 <elementSpec ident="mdiv" module="MEI.shared" mode="change">
@@ -86,6 +86,61 @@
                                 <sch:let name="context" value="ancestor::mei:*[local-name() = ('score','part')][1]"/>
                                 <sch:assert test="(exists(@key.sig) and exists(@key.mode)) or ($context//mei:scoreDef[1]/@key.sig and $context//mei:scoreDef[1]/@key.mode)">
                                     The first scoreDef in an mdiv needs @key.sig and @key.mode.
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_tstamp2" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="@tstamp2">
+                                <sch:assert test="contains(.,'m+')">
+                                    tstamp2 values always need a measure reference. If targeting at the same measure as the start, add '0m+' in front.
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_controlevents" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:dir">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
+                                    dir elements are supposed to have a @startid only.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:dynam">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
+                                    dynam elements are supposed to have a @startid only.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:fermata">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
+                                    fermata elements are supposed to have a @startid only.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:hairpin">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and @endid and @startid">
+                                    hairpin elements are supposed to have a @startid and @endid.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:slur">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and @endid and @startid">
+                                    slur elements are supposed to have a @startid and @endid.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:tempo">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
+                                    tempo elements are supposed to have a @startid only.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:tie">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and @endid and @startid">
+                                    tie elements are supposed to have a @startid and @endid.
+                                </sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:trill">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
+                                    trill elements are supposed to have a @startid only.
                                 </sch:assert>
                             </sch:rule>
                         </constraint>
