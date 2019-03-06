@@ -83,11 +83,11 @@
     <xd:doc>
         <xd:desc>This template ensures that no information is duplicated</xd:desc>
     </xd:doc>
-    <xsl:template match="mei:*[@tie]" mode="cleanup">
-        <xsl:variable name="tied.elem.ref" select="'#' || @xml:id" as="xs:string"/>
+    <xsl:template match="@tie" mode="cleanup">
+        <xsl:variable name="tied.elem.ref" select="'#' || parent::mei:*/@xml:id" as="xs:string"/>
         
         <xsl:choose>
-            <xsl:when test="@tie = 'i'">
+            <xsl:when test=". = 'i'">
                 <xsl:choose>
                     <xsl:when test="ancestor::mei:mdiv//mei:tie[@startid = $tied.elem.ref]"/>
                     <xsl:otherwise>
@@ -95,7 +95,7 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
-            <xsl:when test="@tie = 'm'">
+            <xsl:when test=". = 'm'">
                 <xsl:choose>
                     <xsl:when test="ancestor::mei:mdiv//mei:tie[@startid = $tied.elem.ref] and ancestor::mei:mdiv//mei:tie[@endid = $tied.elem.ref]"/>
                     <xsl:otherwise>
@@ -103,7 +103,7 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
-            <xsl:when test="@tie = 't'">
+            <xsl:when test=". = 't'">
                 <xsl:choose>
                     <xsl:when test="ancestor::mei:mdiv//mei:tie[@endid = $tied.elem.ref]"/>
                     <xsl:otherwise>
