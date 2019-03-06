@@ -151,6 +151,7 @@
                 <classSpec type="atts" ident="att.note.anl.cmn" mode="delete"> 
                 </classSpec>
                 
+                <!-- todo schema-regel, die prüft ob beide noten denselben namen und oktave haben -->
                 
             </schemaSpec>
         </body>
