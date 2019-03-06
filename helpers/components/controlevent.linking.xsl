@@ -451,6 +451,16 @@
                                 </xsl:if>
                             </xsl:if>
                         </xsl:when>
+                        <xsl:when test="$start.elem/ancestor::mei:chord and $start.elem/ancestor::mei:chord/@tstamp">
+                            <xsl:attribute name="tstamp" select="$start.elem/ancestor::mei:chord/@tstamp"/>
+                            <xsl:if test="not(parent::mei:*/@staff)">
+                                <xsl:variable name="staff" select="$start.elem/ancestor::mei:staff" as="node()"/>
+                                <xsl:attribute name="staff" select="$staff/@n"/>
+                                <xsl:if test="count($staff/mei:layer) gt 1 and $start.elem/ancestor::mei:layer/@n">
+                                    <xsl:attribute name="layer" select="$start.elem/ancestor::mei:layer/@n"/>
+                                </xsl:if>
+                            </xsl:if>
+                        </xsl:when>
                         <xsl:otherwise>
                             <xsl:message select="'WARNING (controlevent.linking): ' || local-name($start.elem)
                                 || '#' || $start.elem/@xml:id || ' pointed at as @startid from ' 
