@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2019-03-05T11:02:08Z. .
+Schema generated from ODD source 2019-03-06T09:53:12Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -735,16 +735,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Bold or heavy.</a:documentation>
          <value>normal</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Not bold.</a:documentation>
-      </choice>
-   </define>
-   <define name="mei_data.GLISSANDO">
-      <choice>
-         <value>i</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">First note/chord in glissando.</a:documentation>
-         <value>m</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Note/chord that's neither first nor last in glissando.</a:documentation>
-         <value>t</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Last note in glissando.</a:documentation>
       </choice>
    </define>
    <define name="mei_data.GRACE">
@@ -1880,7 +1870,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
       <ref name="mei_att.harmonicFunction.attributes"/>
       <ref name="mei_att.intervalMelodic.attributes"/>
       <ref name="mei_att.melodicFunction.attributes"/>
-      <ref name="mei_att.note.anl.cmn.attributes"/>
       <ref name="mei_att.pitchClass.attributes"/>
       <ref name="mei_att.solfa.attributes"/>
    </define>
@@ -2226,17 +2215,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          </attribute>
       </optional>
    </define>
-   <define name="mei_att.glissPresent.attributes">
-      <ref name="mei_att.glissPresent.attribute.gliss"/>
-   </define>
-   <define name="mei_att.glissPresent.attribute.gliss">
-      <optional>
-         <attribute name="gliss">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates that this element participates in a glissando. If visual information about the glissando needs to be recorded, then a gliss element should be employed instead.</a:documentation>
-            <ref name="mei_data.GLISSANDO"/>
-         </attribute>
-      </optional>
-   </define>
    <define name="mei_att.gliss.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.duration.additive.attributes"/>
@@ -2497,17 +2475,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    <define name="mei_att.multiRest.log.attributes">
       <ref name="mei_att.event.attributes"/>
       <ref name="mei_att.numbered.attributes"/>
-   </define>
-   <define name="mei_att.note.anl.cmn.attributes">
-      <ref name="mei_att.beamPresent.attributes"/>
-      <ref name="mei_att.fermataPresent.attributes"/>
-      <ref name="mei_att.glissPresent.attributes"/>
-      <ref name="mei_att.lvPresent.attributes"/>
-      <ref name="mei_att.ornamPresent.attributes"/>
-      <ref name="mei_att.slurPresent.attributes"/>
-      <ref name="mei_att.sylText.attributes"/>
-      <ref name="mei_att.tiePresent.attributes"/>
-      <ref name="mei_att.tupletPresent.attributes"/>
    </define>
    <define name="mei_att.note.log.cmn.attributes">
       <ref name="mei_att.graced.attributes"/>
