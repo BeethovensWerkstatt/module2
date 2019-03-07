@@ -114,6 +114,14 @@
         <xsl:variable name="index.of.pname" select="index-of($pitches,$note/@pname)" as="xs:integer"/>
         <xsl:variable name="oct.mod" as="xs:integer">
             <xsl:choose>
+                <!-- in keys of A / B, pitches in the upper range will be treated as one octave higher… -->
+                <xsl:when test="$index.of.key ge 6 and $index.of.pname ge $index.of.key">
+                    <xsl:value-of select="+1"/>
+                </xsl:when>
+                <!-- …or as in the same octave -->
+                <xsl:when test="$index.of.key ge 6">
+                    <xsl:value-of select="0"/>
+                </xsl:when>
                 <xsl:when test="$index.of.pname lt $index.of.key">
                     <xsl:value-of select="-1"/>
                 </xsl:when>
