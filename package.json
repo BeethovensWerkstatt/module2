@@ -1,11 +1,7 @@
 {
-  "name": "module2",
-  "version": "0.0.3",
-  "description": "Software Prototype for the second module of Beethovens Werkstatt",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "bw-modul2",
+  "version": "0.1.3",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BeethovensWerkstatt/module2.git"
@@ -16,45 +12,97 @@
     "Beethovens Werkstatt"
   ],
   "author": "Johannes Kepper",
+  "contributors":[
+    { "name" : "Johannes Kepper",
+      "email" : "kepper@edirom.de",
+      "url" : "https://github.com/kepper"}
+  ],
   "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/BeethovensWerkstatt/module2/issues"
   },
   "homepage": "https://github.com/BeethovensWerkstatt/module2#readme",
-  "devDependencies": {
-    "@babel/preset-env": "^7.1.6",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.3",
-    "babel-plugin-transform-object-rest-spread": "~6.26.0",
-    "babel-preset-es2015": "~6.24.1",
-    "babelify": "^8.0.0",
-    "browserify": "^16.2.2",
-    "dateformat": "^3.0.3",
-    "del": "^3.0.0",
-    "fs": "0.0.2",
-    "git-rev-sync": "^1.12.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.1",
-    "gulp-bump": "^3.1.1",
-    "gulp-cli": "^2.0.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^4.0.2",
-    "gulp-exist": "^2.0.0",
-    "gulp-newer": "^1.4.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.0",
-    "gulp-uglify-es": "^1.0.4",
-    "gulp-zip": "^4.1.0",
-    "run-sequence": "^2.2.1",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service lint && vue-cli-service build && gulp xar-structure && gulp data && gulp buildXar",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "d3": "^5.5.0",
-    "spectre.css": "^0.5.2",
-    "svg.connectable.js": "^2.0.1",
-    "svg.js": "^2.6.5",
-    "verovio-dev": "^2.0.0-30"
+    "vue": "^2.6.6",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-eslint": "^3.0.1",
+    "@vue/cli-plugin-unit-jest": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "dateformat": "^3.0.3",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "fs": "0.0.1-security",
+    "git-rev-sync": "^1.12.0",
+    "gulp": "^4.0.0",
+    "gulp-bump": "^3.1.3",
+    "gulp-exist": "^3.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-zip": "^4.2.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
+    "testMatch": [
+      "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
+    ],
+    "testURL": "http://localhost/"
   }
 }
