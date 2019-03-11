@@ -14011,7 +14011,11 @@
                                   xml:id="x19a08349-a78f-4882-8d71-fdac47d4542a"
                                   lines="5"
                                   clef.line="2"
-                                  clef.shape="G">
+                                  clef.shape="G"
+                                  trans.semi="4"
+                                  trans.diat="2"
+                                  key.sig="0"
+                                  key.mode="major">
                            <label>Corno Primo in E</label>
                         </staffDef>
                      </staffGrp>
@@ -16711,7 +16715,11 @@
                                   xml:id="xd08d3d5a-31ab-4046-8bd5-2cb1c2c6f3d7"
                                   lines="5"
                                   clef.line="2"
-                                  clef.shape="G">
+                                  clef.shape="G"
+                                  trans.semi="4"
+                                  trans.diat="2"
+                                  key.sig="0"
+                                  key.mode="major">
                            <label>Corno Secondo</label>
                         </staffDef>
                      </staffGrp>
