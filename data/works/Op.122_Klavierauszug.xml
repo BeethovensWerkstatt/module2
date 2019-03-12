@@ -2,7 +2,7 @@
 <?xml-model href="../schema/bw_module2_works.rng" type="application/xml" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../schema/bw_module2_works.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.0">
-   <meiHead meiversion="4.0.0">
+   <meiHead>
       <fileDesc>
          <titleStmt>
             <title type="main">Op. 122 - Bundeslied (Klavierauszug)</title>
@@ -93,7 +93,7 @@
          </change>
       </revisionDesc>
    </meiHead>
-   <music meiversion="4.0.0">
+   <music>
       <body>
          <mdiv xml:id="x09846ea0-c336-4f5f-bef5-da4900d6ae24">
             <score xml:id="x456f4adb-0223-4f1f-b439-7d9e2ddb7c64">
@@ -111,8 +111,8 @@
                                   key.sig="2f"
                                   n="1"
                                   lines="5">
-                           <label xml:id="x6d224887-ff8e-4c50-bfce-4070fc2b7bba">Tenore Solo</label>
-                           <labelAbbr xml:id="x3d723d6e-32f8-4119-a7e5-8e2268fe32f6">Ten solo</labelAbbr>
+                           <label xml:id="x6d224887-ff8e-4c50-bfce-4070fc2b7bba">Sologesang I</label>
+                           <labelAbbr xml:id="x3d723d6e-32f8-4119-a7e5-8e2268fe32f6">Gsg I</labelAbbr>
                         </staffDef>
                         <staffDef xml:id="x191349df-aaab-4abf-bbd7-ac920c08edf4"
                                   clef.shape="G"
@@ -120,8 +120,8 @@
                                   key.sig="2f"
                                   n="2"
                                   lines="5">
-                           <label xml:id="x92f5c5d2-aa79-43e7-84d3-fd18fb6e823e">Basso Solo</label>
-                           <labelAbbr xml:id="x66e7937d-128f-4bc6-89f3-96f454e140f7">Bs solo</labelAbbr>
+                           <label xml:id="x92f5c5d2-aa79-43e7-84d3-fd18fb6e823e">Sologesang II</label>
+                           <labelAbbr xml:id="x66e7937d-128f-4bc6-89f3-96f454e140f7">Gsg II</labelAbbr>
                         </staffDef>
                         <staffDef xml:id="xc2f957d0-e38e-45f9-8df3-02d44f00f246"
                                   clef.shape="G"
@@ -129,15 +129,15 @@
                                   key.sig="2f"
                                   n="3"
                                   lines="5">
-                           <label xml:id="xeca67313-85e4-4458-b059-049d9f96081b">Basso tutti</label>
-                           <labelAbbr xml:id="x2a5d5c9d-6ae5-44a4-8b02-67dcc886549c">Bs tutti</labelAbbr>
+                           <label xml:id="xeca67313-85e4-4458-b059-049d9f96081b">dreistimmiger Chor</label>
+                           <labelAbbr xml:id="x2a5d5c9d-6ae5-44a4-8b02-67dcc886549c">Chor</labelAbbr>
                         </staffDef>
                      </staffGrp>
                      <staffGrp xml:id="xb0e593b7-fbb1-40c8-af38-20dfb2fe041b"
                                symbol="brace"
                                bar.thru="true">
                         <label xml:id="xc2e86519-728c-4a98-a1da-7a461cf82b6d">Pianoforte</label>
-                        <labelAbbr xml:id="xdbca1544-1186-4a27-9853-adfd64dac863">Pfte.</labelAbbr>
+                        <labelAbbr xml:id="xdbca1544-1186-4a27-9853-adfd64dac863">Pfte</labelAbbr>
                         <staffDef xml:id="x0fd8bc94-cbc0-48ce-bd3c-51f455ab6c53"
                                   clef.shape="G"
                                   clef.line="2"
