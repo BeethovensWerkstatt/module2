@@ -87,6 +87,7 @@
                <p n="4">convert tupletSpans to tuplets; utilizing convert.tupletSpan.xsl</p>
                <p n="5">convert fermata attributes to elements; utilizing convert.fermata2elem.xsl</p>
                <p n="6">convert tie attributes to elements, utilizing convert.tie2elem.xsl</p>
+               <p n="7">corrected "Dreistimmiger Chor" to "dreistimmiger Chor"</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -53551,7 +53552,7 @@
                                   lines="5"
                                   clef.line="2"
                                   clef.shape="G">
-                           <label xml:id="xc7fb2b9b-1ca8-4eb4-97da-2f30abc47360">Dreistimmiger Chor</label>
+                           <label xml:id="xc7fb2b9b-1ca8-4eb4-97da-2f30abc47360">dreistimmiger Chor</label>
                            <labelAbbr xml:id="xec891ae3-2ecd-4e8a-a751-f591d0185c74">Chor</labelAbbr>
                         </staffDef>
                      </staffGrp>
