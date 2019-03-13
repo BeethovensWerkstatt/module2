@@ -1158,7 +1158,6 @@
                   <measure n="10" xml:id="x0e7c4621-d76f-4486-a0ab-8399e586d96d">
                      <staff xml:id="x6cbbcfe6-a581-4950-b911-a648f1ef8a04" n="1">
                         <layer xml:id="x26fa4bae-924b-4195-9f70-90be4cb1e179" n="1">
-                           <space xml:id="xaffbcd03-e9f9-42e0-bb54-8a6249815d80" dur="4" dots="1"/>
                            <note xml:id="xf07d29ff-27e3-419e-9a33-4dae9af12261"
                                  pname="b"
                                  oct="4"
@@ -1385,7 +1384,6 @@
                                  staff="2"/>
                         </layer>
                      </staff>
-                     <!-- Zählung getrickst, damit das Rendering aussieht wie in der OA  -->
                      <staff xml:id="x43d53991-7ca6-433d-b8fc-c147ba4a587d" n="2">
                         <layer xml:id="x4dfa559e-3b80-47e8-a1c5-f801074a5207" n="1">
                            <note xml:id="x56542f23-6824-482b-8c9e-38103a165f99"
@@ -1400,10 +1398,8 @@
                                  dur="4"
                                  stem.dir="down"
                                  accid.ges="s"/>
-                           <space xml:id="x49f192cc-e993-4bd4-a29e-10e9161dcd8f" dur="4"/>
                         </layer>
                         <layer xml:id="x097239a5-19bf-4bb5-b051-fdbd225f434d" n="2">
-                           <space xml:id="xc1ced176-dbc7-4014-a3c4-39dda9585973" dur="8"/>
                            <note xml:id="x29ec93f2-3706-4e59-b737-b47c4f998170"
                                  pname="b"
                                  oct="2"
@@ -1415,7 +1411,6 @@
                                  oct="2"
                                  dur="4"
                                  stem.dir="up"/>
-                           <space xml:id="xd8560db3-ca10-48f7-b906-af6111a29f69" dur="8"/>
                            <note xml:id="x16f3ff16-fdea-4c22-9a7f-d81b3150f660"
                                  pname="a"
                                  accid="n"
@@ -2696,7 +2691,7 @@
                         <layer xml:id="x73dcdad5-12dd-466c-8b8e-4c476afbe986" n="1">
                            <note xml:id="x28e15269-b5dc-43fc-bb7f-9f896d02f848"
                                  pname="f"
-                                 accid="ss"
+                                 accid="x"
                                  oct="5"
                                  dur="4"
                                  stem.dir="up"/>
@@ -2770,7 +2765,7 @@
                       <hairpin xml:id="x2b79d297-7a16-4880-951f-7d95fc5c6b6a"
                               form="dim"
                               staff="1"
-                              tstamp="0"
+                              tstamp="4"
                               tstamp2="1m+2"
                               place="below"/>
                      <tie xml:id="xb4c31656-7bde-46c0-9fb2-63194c87d319"
