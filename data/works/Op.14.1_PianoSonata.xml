@@ -30451,7 +30451,7 @@
                                        oct="4"
                                        dur="8"
                                        stem.dir="up"
-                                       artic="stacc">
+                                       artic="stacc" accid.ges="s">
                                     
                                  </note>
                                  <note xml:id="x75cbcc43-6d01-419d-92c9-e0db1d28d999"
@@ -34536,13 +34536,11 @@
                           startid="#x7cac1fe2-aaf0-40ee-a7b3-f96beb84573b"
                           endid="#xfe2de493-d27c-4be3-b727-fa061730eafa"/>
                   </measure>
+                     <scoreDef xml:id="x2daa1d7c-b1fd-4e7a-b0b6-23309d499a06" key.sig="4s" key.mode="major"/><!-- tonart an den beginn des taktes gesetzt -->
                   <measure n="83" xml:id="xaf784df7-3230-4f5a-be09-41fd5dfeada3">
                         <staff xml:id="x7517b3f5-e628-4be1-8617-e90ff51d4305" n="1">
                         <layer xml:id="x47b0f8af-fb7c-4e96-80ed-5474c70fb21a" n="1">
                            <note xml:id="xdfcdb679-7378-4678-82c5-04b7217a7b3f" pname="b" oct="5" dur="2" stem.dir="down"/> 
-                        </layer>
-                        <staffDef xml:id="xca6642f4-d563-41bf-8b8d-c49235562bd0" key.sig="4s"/>   
-                        <layer xml:id="x47d033e7-9aef-4fea-99b6-bb78417ec9c3" n="1" sameas="#x47b0f8af-fb7c-4e96-80ed-5474c70fb21a">
                               <note xml:id="x1a175cf8-db13-4e46-b052-96ff981effcb" pname="b" oct="4" dur="4" stem.dir="down"/>
                            <chord xml:id="xdbaedf03-ae6e-4497-a69b-501f5793a7b9" dur="4" stem.dir="down">
                               <note xml:id="xdad7a735-caa7-4793-968d-3cd4b772cbfa" pname="d" oct="4" accid.ges="s"/>
@@ -34558,9 +34556,6 @@
                               <note xml:id="x8915c3dd-4e4e-446e-9fd4-620f727254c9" pname="b" oct="1"/>
                               <note xml:id="x5d1d3996-34d4-4ffe-bf0d-e2209dbf0a73" pname="b" oct="2"/>
                            </chord>
-                        </layer>
-                        <staffDef xml:id="x81817110-724d-428c-a57c-ae50421621ad" key.sig="4s"/>
-                        <layer xml:id="xfe86f6f4-e4ab-49f9-a051-d3486d427fc6" n="1" sameas="#xd0bd73b8-a3aa-4f65-8618-50076a536c9d">
                            <tuplet xml:id="xe4887acf-5913-4b9a-abe2-8059fe3a190f" num="3" num.visible="false" numbase="2">
                               <beam xml:id="x684a8adc-7fa6-4a3a-abe4-1f4088e75e86">
                                  <note xml:id="xb2e56e4c-90d6-4690-aa33-b332d05c78f8" pname="g" oct="3" dur="8" stem.dir="down" accid.ges="s"/>
