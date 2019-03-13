@@ -7130,7 +7130,7 @@
                            </layer>
                         </staff>
                         <hairpin xml:id="xb4f77dbd-a295-4d17-aa9c-e4c16480261b"
-                                 tstamp="1" tstamp2="4"
+                                 tstamp="1" tstamp2="0m+4"
                                  place="below"
                                  staff="1"
                                  form="cres"/>
@@ -12464,7 +12464,6 @@
                                     stem.dir="up"/>
                            </layer>
                            <layer xml:id="xdfcfabb9-3a91-4ad0-ba8c-9b0f75eb8588" n="2">
-                              <space xml:id="xbea6b679-f5f2-4b62-a22c-d653b68c033c" dur="2"/>
                               <note xml:id="xc1178bf6-0abf-4603-aa55-d87f60386a44"
                                     pname="c"
                                     oct="3"
@@ -25151,11 +25150,10 @@
                                place="below"
                                staff="1"> sf </dynam>
                         <hairpin xml:id="xbadbcb6e-58ec-4eef-a621-f8c62eed0878"
-                                 tstamp="1.5"
+                                 tstamp="3" tstamp2="1m+4.5"
                                  place="below"
                                  staff="1"
-                                 form="dim"
-                                 endid="#x478d8764-dc99-4bb0-a647-08e4a3df17dc"/>
+                                 form="dim"/>
                         <tie xml:id="xe6cee573-80aa-4b09-beff-b9acf5f18bd5"
                              staff="1"
                              startid="#xe653eec1-cc20-4bb1-9f68-7500fea8748d"
@@ -28952,14 +28950,7 @@
                   <section xml:id="x9358947d-1c1f-4c47-a225-f94b95cf1a0e" n="2">
                      <scoreDef xml:id="xc4a1152b-ab7a-4bc9-bf8e-717976763803"
                                key.sig="5f"
-                               key.mode="major">
-                        <staffGrp xml:id="x73176a4a-38fe-4c15-a27f-46ddb2212cfc">
-                           <staffDef xml:id="x10e6cebb-15b6-4449-b9cd-f3540bf5007b"
-                                     n="1"
-                                     key.sig="5f"
-                                     meter.count="3"
-                                     meter.unit="4"/>
-                        </staffGrp>
+                               key.mode="major" meter.count="3" meter.unit="4">
                      </scoreDef>
                      <measure n="63"
                               xml:id="xe6d4fd12-1af6-456b-a5a8-32f738425c02"
@@ -33913,7 +33904,7 @@
                         </staff>
                         <dir xml:id="x97087771-f271-46b1-a9e7-6a2a05a60918"
                              place="below"
-                             staff="1">
+                             staff="1" tstamp="1">
                            cres
                         </dir>
                         <tie xml:id="xa9d67917-5664-44d0-ae86-0ffc9f1847be"
@@ -34291,7 +34282,7 @@
                         </staff>
                         <dir xml:id="xc4cbfd09-fe0c-4cb8-8358-f02fd0a55a3b"
                              place="above"
-                             staff="1">
+                             staff="1" tstamp="1">
                            cres
                         </dir>
                         <tie xml:id="xf84c259e-572a-4b84-a7e7-41f8a20a82f7"
@@ -45268,15 +45259,23 @@
                                  </beam>
                               </tuplet>
                               <tuplet xml:id="x747bafb3-e712-48f7-b0ad-e086eb5f48d1" num="3" numbase="2">
-                                 <bTrem xml:id="xf6195c78-26c6-4ba0-8eef-5730e476aa07" dots="1" dur="8">
+                                 <beam xml:id="xf6195c78-26c6-4ba0-8eef-5730e476aa07">
                                     <note xml:id="xcf4b713e-bb0f-44ca-949a-5a3255fd3e9f"
-                                          dots="1"
-                                          stem.mod="1slash"
                                           pname="d"
                                           oct="5"
                                           dur="8"
                                           stem.dir="down"/>
-                                 </bTrem>
+                                    <note xml:id="x33269401-1b3f-4d3e-94ed-2dce8b1350a9"
+                                       pname="d"
+                                       oct="5"
+                                       dur="8"
+                                       stem.dir="down"/>
+                                    <note xml:id="xf99ed11d-011c-4a66-8296-d662286b11b4"
+                                       pname="d"
+                                       oct="5"
+                                       dur="8"
+                                       stem.dir="down"/>
+                                 </beam>
                               </tuplet>
                            </layer>
                         </staff>
