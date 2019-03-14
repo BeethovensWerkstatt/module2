@@ -103,6 +103,26 @@
         
     </xsl:template>
     
+    <xsl:template match="@sameas" mode="clean.up">
+        <xsl:param name="type" tunnel="yes" as="xs:string"/>
+        
+        <xsl:variable name="old.sameas" select="replace(.,'#','')" as="xs:string"/>
+        <xsl:variable name="scope" select="if($type = 'score') then(ancestor::mei:score) else(ancestor::mei:part)" as="node()"/>
+        <xsl:variable name="same.elem" select="$scope//mei:*[@old.id = $old.sameas]" as="node()?"/>
+        
+        <xsl:choose>
+            <xsl:when test="not($same.elem)">
+                <xsl:next-match/>
+                <xsl:attribute name="todo" select="'bad sameas'"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:message select="'moving  @sameas ' || . || ' to #' || $same.elem/@xml:id"/>
+                <xsl:attribute name="sameas" select="'#' || $same.elem/@xml:id"/>
+            </xsl:otherwise>
+        </xsl:choose>
+        
+    </xsl:template>
+    
     <xsl:template match="@plist" mode="clean.up">
         <xsl:param name="type" tunnel="yes" as="xs:string"/>
         
