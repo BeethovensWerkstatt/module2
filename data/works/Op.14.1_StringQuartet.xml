@@ -2249,9 +2249,9 @@
                               staff="1"/>
                      </measure>
                   </section>
-                  <section xml:id="x360933d1-4cc4-4bff-8c45-e12d507ea9d6">
+                  
                      <ending xml:id="xf146108b-d0a7-4683-9353-f52051e75ae4" n="1" label="1">
-                        <measure n="61"
+                        <measure n="61" label="61a"
                                  xml:id="x91d6532e-c236-4f54-9b80-d38ab9676b2f"
                                  right="rptend">
                            <staff xml:id="x0b0f0738-7e67-4897-8eec-2d79c6d1cd4e" n="1">
@@ -2275,7 +2275,7 @@
                         </measure>
                      </ending>
                      <ending xml:id="xfc8df6cc-afee-4a29-9e40-032cdf1e4743" n="2" label="2">
-                        <measure n="62" xml:id="x13caa6a2-8f49-4ad5-81ca-3869b4ea6681">
+                        <measure n="61" label="61b" xml:id="x13caa6a2-8f49-4ad5-81ca-3869b4ea6681">
                            <staff xml:id="x5f2c9586-7580-41dc-a3d1-8c371d25b8ae" n="1">
                               <layer xml:id="x539caab9-9be8-4c36-b6ee-9915c8472a3d" n="1">
                                  <note xml:id="xe1cdd9d5-6cfc-43f3-b21a-f1283ca9fcdb"
@@ -2301,10 +2301,10 @@
                                  staff="1"/>
                         </measure>
                      </ending>
-                  </section>
+                  
                   <!-- Taktzählung (OA zählt Wiederholung als einen?? -->
                   <section xml:id="xda2edb5a-edd7-4e37-a999-378ce298e166">
-                     <measure n="63" xml:id="xac7e89e3-69ba-4325-be12-f468c56e2b94">
+                     <measure n="62" xml:id="xac7e89e3-69ba-4325-be12-f468c56e2b94">
                         <staff xml:id="x6b65b689-aad8-4276-8a44-55a123d1bf21" n="1">
                            <layer xml:id="x4979780f-7c6c-477f-8ed0-41fa6e1a7c6b" n="1">
                               <note xml:id="x0c5cf873-de98-4c1d-a84f-b9be78044621"
@@ -2326,7 +2326,7 @@
                              startid="#x034e49dd-c339-4799-ba78-045a56b73288"
                              endid="#xeb539a74-0c7d-46f5-bf42-25ce477ce679"/>
                      </measure>
-                     <measure n="64" xml:id="x59d3cf21-b262-4e3f-a7ca-c405911ee03f">
+                     <measure n="63" xml:id="x59d3cf21-b262-4e3f-a7ca-c405911ee03f">
                         <staff xml:id="x9643c7c9-ab08-41de-b9bb-6a36a15ff817" n="1">
                            <layer xml:id="x06bded59-2c1d-4158-bfe0-cc903f8f8982" n="1">
                               <note xml:id="xeb539a74-0c7d-46f5-bf42-25ce477ce679"
@@ -2349,7 +2349,7 @@
                                place="below"
                                staff="1">cres</dynam>
                      </measure>
-                     <measure n="65" xml:id="x813f0ca8-ea82-4e86-815a-f864030e0e71">
+                     <measure n="64" xml:id="x813f0ca8-ea82-4e86-815a-f864030e0e71">
                         <staff xml:id="x32dbd5f2-ea70-414e-bbc9-dfe409633d9c" n="1">
                            <layer xml:id="xbc9a734e-b200-4122-aa0f-c76173304996" n="1">
                               <note xml:id="xfbb391f7-5a72-4ee4-b731-ebe91bdb9137"
@@ -2370,7 +2370,7 @@
                            </layer>
                         </staff>
                      </measure>
-                     <measure n="66" xml:id="xe27b5ffc-970c-4416-bf8a-353f87950119">
+                     <measure n="65" xml:id="xe27b5ffc-970c-4416-bf8a-353f87950119">
                         <staff xml:id="xc7b6b55a-8270-4e95-bbf6-139660c5e7e0" n="1">
                            <layer xml:id="x393aaace-4852-4d5a-9991-576630b51be9" n="1">
                               <note xml:id="x55cd592e-5eee-4772-96d8-cf714f84132c"
@@ -2407,7 +2407,7 @@
                               endid="#x84f27480-8993-4331-ba3c-547884e2a5d1"
                               staff="1"/>
                      </measure>
-                     <measure n="67" xml:id="x54e263dc-d948-48ab-acc5-30d78bc1d5cd">
+                     <measure n="66" xml:id="x54e263dc-d948-48ab-acc5-30d78bc1d5cd">
                         <staff xml:id="x600abdb5-9eb7-43c7-b3b8-f7ed20e3a44f" n="1">
                            <layer xml:id="x6893c204-adb0-4251-b4c0-e5fac7db908a" n="1">
                               <beam xml:id="x482c4b92-6621-4ad2-852a-83640b8ec6a8">
@@ -2461,7 +2461,7 @@
                            </layer>
                         </staff>
                      </measure>
-                     <measure n="68" xml:id="x203bd03d-0f05-414a-a8bc-f2caa3b05f11">
+                     <measure n="67" xml:id="x203bd03d-0f05-414a-a8bc-f2caa3b05f11">
                         <staff xml:id="xc3f2144c-98be-4738-a2b4-5fce4fe1dda1" n="1">
                            <layer xml:id="x5b8fd7ec-dfd7-4d18-8d35-89624f181301" n="1">
                               <note xml:id="xc170c939-a1c7-407d-8e8a-46704757dca4"
@@ -2498,7 +2498,7 @@
                               endid="#x09f2e961-5be5-420a-97b7-4e544445b76b"
                               staff="1"/>
                      </measure>
-                     <measure n="69" xml:id="x184134fa-e635-48d7-a76b-a7dd4487db10">
+                     <measure n="68" xml:id="x184134fa-e635-48d7-a76b-a7dd4487db10">
                         <staff xml:id="xc174d053-70bd-45e0-ad55-6f78b9c17ba3" n="1">
                            <layer xml:id="x2afc0a0e-8c19-4241-ba38-6eac0bac455b" n="1">
                               <beam xml:id="x2015c42c-d937-489c-a33d-7a11717415b2">
@@ -2552,7 +2552,7 @@
                            </layer>
                         </staff>
                      </measure>
-                     <measure n="70" xml:id="xd3c95a2d-c1a2-4406-b214-a954f1d7bd77">
+                     <measure n="69" xml:id="xd3c95a2d-c1a2-4406-b214-a954f1d7bd77">
                         <staff xml:id="x0e0c4b46-8eb2-4665-b54e-4278e6d5e054" n="1">
                            <layer xml:id="xff81067f-3a7c-44b2-8a64-c5db1651e64b" n="1">
                               <note xml:id="xed812d70-ce9e-495f-8047-a8ce18f86949"
@@ -2602,7 +2602,7 @@
                              startid="#xed812d70-ce9e-495f-8047-a8ce18f86949"
                              endid="#x2678af3f-661f-4c21-b9ee-fa261f891c3d"/>
                      </measure>
-                     <measure n="71" xml:id="x7ee64aad-e120-4e52-a7a8-d832075565a2">
+                     <measure n="70" xml:id="x7ee64aad-e120-4e52-a7a8-d832075565a2">
                         <staff xml:id="xce8b2b73-9ac4-437e-8716-a6bb4c93057c" n="1">
                            <layer xml:id="x4cfdf12a-7633-4c77-bd96-a42b9bc3ccf0" n="1">
                               <beam xml:id="xf0399e8c-0e11-4d20-8fbe-43439c59d9b8">
@@ -2656,7 +2656,7 @@
                            </layer>
                         </staff>
                      </measure>
-                     <measure n="72" xml:id="x69668a8a-41c5-406d-bec6-7ff40202a240">
+                     <measure n="71" xml:id="x69668a8a-41c5-406d-bec6-7ff40202a240">
                         <staff xml:id="x4263101a-6f97-491f-894b-0974b4c789ee" n="1">
                            <layer xml:id="xcd56cb66-80ad-4844-836d-bb27851cf5ce" n="1">
                               <note xml:id="xd828c9b5-45f1-4af1-8724-8bbc36dbcc2e"
@@ -2691,7 +2691,7 @@
                               endid="#xf7136f38-685c-41ce-8666-c6b725d24087"
                               staff="1"/>
                      </measure>
-                     <measure n="73" xml:id="x7e552f47-10e4-4d10-8f2c-ce2172d2fce6">
+                     <measure n="72" xml:id="x7e552f47-10e4-4d10-8f2c-ce2172d2fce6">
                         <staff xml:id="x3f2c3c7b-2205-4041-b767-63eb7557900f" n="1">
                            <layer xml:id="xd2e78789-17b9-48cf-900c-e9ff84f8c717" n="1">
                               <beam xml:id="xb27f40f2-7525-4647-ac9f-22f0b1278e21">
@@ -2745,7 +2745,7 @@
                            </layer>
                         </staff>
                      </measure>
-                     <measure n="74" xml:id="x0507ee7a-a38b-465a-bc28-27dee1c20bef">
+                     <measure n="73" xml:id="x0507ee7a-a38b-465a-bc28-27dee1c20bef">
                         <staff xml:id="xb02fa0fb-c248-4361-9869-6ba6814f1cdc" n="1">
                            <layer xml:id="x65e92c3b-df97-495e-a42f-bdf1566e547e" n="1">
                               <note xml:id="x0576ad6d-9437-43bf-b09a-df54a05ae69a"
@@ -2779,7 +2779,7 @@
                               endid="#xe9bd6fea-766f-47f9-af31-faeb7a42d0c2"
                               staff="1"/>
                      </measure>
-                     <measure n="75" xml:id="x124d71d2-c74c-42dc-9ec4-77e7c1760ee5">
+                     <measure n="74" xml:id="x124d71d2-c74c-42dc-9ec4-77e7c1760ee5">
                         <staff xml:id="x9a119a73-056c-4943-a362-373ed9b41036" n="1">
                            <layer xml:id="x321b638c-b48d-463c-ab7e-5cbb39ab04da" n="1">
                               <note xml:id="xd59f58f2-a149-4422-953b-453e738909c1"
@@ -2806,7 +2806,7 @@
                               endid="#xad29c7fa-c06d-4b37-8651-379425419c38"
                               staff="1"/>
                      </measure>
-                     <measure n="76" xml:id="x10bce679-05a0-4910-9811-3c0f53148f43">
+                     <measure n="75" xml:id="x10bce679-05a0-4910-9811-3c0f53148f43">
                         <staff xml:id="x98e34bf8-6c88-4ba6-bcf3-d1cdd5b9c23a" n="1">
                            <layer xml:id="x98ceb82b-7d34-495e-9a0d-906518cf74e8" n="1">
                               <note xml:id="xe8c367cd-920b-4257-a003-9be2ffa17371"
@@ -2841,7 +2841,7 @@
                               endid="#x9d4fafbb-72ae-4642-bf9b-d6a5ae819a91"
                               staff="1"/>
                      </measure>
-                     <measure n="77" xml:id="x2dfcfac9-7d80-4c19-b141-a981743b94b1">
+                     <measure n="76" xml:id="x2dfcfac9-7d80-4c19-b141-a981743b94b1">
                         <staff xml:id="xffd633bf-f106-4a5f-9653-3cd976a16acd" n="1">
                            <layer xml:id="xeb200f76-b37b-4dab-a6ce-e339bb00b7c7" n="1">
                               <beam xml:id="x2ecf255a-bb18-4a11-949f-0d2c2186171a">
@@ -2898,7 +2898,7 @@
                               endid="#x15f3e352-fb71-42a1-a1fc-45cadaeebc0c"
                               staff="1"/>
                      </measure>
-                     <measure n="78" xml:id="x0b651f4e-0084-49e8-b3ff-1aa5e8d0e7bc">
+                     <measure n="77" xml:id="x0b651f4e-0084-49e8-b3ff-1aa5e8d0e7bc">
                         <staff xml:id="x00077f92-2aac-4933-aeab-9dc02f79b6c8" n="1">
                            <layer xml:id="x528a7932-7dc9-4e9c-b06b-10feb83817ed" n="1">
                               <note xml:id="xba52fe25-67d0-4ca6-aae4-69c86f0698ff"
@@ -2932,7 +2932,7 @@
                               endid="#xe68eb4ee-1830-415e-b635-e610d0f54fa0"
                               staff="1"/>
                      </measure>
-                     <measure n="79" xml:id="x6c463310-01f7-4e77-b3ea-65ed00abe987">
+                     <measure n="78" xml:id="x6c463310-01f7-4e77-b3ea-65ed00abe987">
                         <staff xml:id="xfb40350a-7acf-4a3f-b539-882682937ce2" n="1">
                            <layer xml:id="xd5afddb5-9078-4b01-812a-663b7f546cc8" n="1">
                               <beam xml:id="x954e9913-7ec4-4d35-890d-17dd7adbc77a">
@@ -2987,7 +2987,7 @@
                               endid="#x5c2b3a8c-809e-4444-9816-69ac9cddb882"
                               staff="1"/>
                      </measure>
-                     <measure n="80" xml:id="xfc45dae8-1131-4c82-b6d6-7602e554819d">
+                     <measure n="79" xml:id="xfc45dae8-1131-4c82-b6d6-7602e554819d">
                         <staff xml:id="x5f76f7ef-9abc-4ec2-88f1-2e7198dbfe32" n="1">
                            <layer xml:id="x7d72c4f6-26a4-4b6a-9d7b-c2ac22a29517" n="1">
                               <note xml:id="xb4f8130e-b1fd-416d-b5ec-ab783b875d8f"
@@ -3013,7 +3013,7 @@
                               endid="#xd669426e-adb4-4a9d-9065-d0ffbd2b0b49"
                               staff="1"/>
                      </measure>
-                     <measure n="81" xml:id="xdc09e4c8-6780-4569-8f70-8cd5e18a8922">
+                     <measure n="80" xml:id="xdc09e4c8-6780-4569-8f70-8cd5e18a8922">
                         <staff xml:id="x4223982c-21ee-4566-8624-5e3d08a6de38" n="1">
                            <layer xml:id="xb5e41bce-da0a-45d3-b6cb-220e3cd6e4b7" n="1">
                               <note xml:id="xf0bc5532-8b44-4051-9bb5-41eee1f21d97"
@@ -3056,7 +3056,7 @@
                              startid="#xf0bc5532-8b44-4051-9bb5-41eee1f21d97"
                              endid="#x4a65f472-6cf7-40c0-ac80-c4ece68aaae4"/>
                      </measure>
-                     <measure n="82" xml:id="xa43281b7-a8d0-4e3b-a258-ef50a6288eca">
+                     <measure n="81" xml:id="xa43281b7-a8d0-4e3b-a258-ef50a6288eca">
                         <staff xml:id="x2af2107e-7759-44b6-87b0-34acd0af43ea" n="1">
                            <layer xml:id="xe137b630-5437-4349-995c-ec43dc2abdbc" n="1">
                               <note xml:id="xc5bf83da-1cfb-4a7a-baa3-d6d0229bea0f"
@@ -3073,7 +3073,7 @@
                                place="below"
                                staff="1">p</dynam>
                      </measure>
-                     <measure n="83" xml:id="x50af33df-bc46-400c-85f8-300cfc599832">
+                     <measure n="82" xml:id="x50af33df-bc46-400c-85f8-300cfc599832">
                         <staff xml:id="x2af3939a-7acd-4902-b422-8363541f65a4" n="1">
                            <layer xml:id="x6f850c3a-e59e-4147-9654-89a207bc88b5" n="1">
                               <multiRest xml:id="x61d38c1c-db71-474b-afa1-70d0eaa977c5" num="2"/>
@@ -8090,9 +8090,9 @@
                         </staff>
                      </measure>
                   </section>
-                  <section xml:id="x00392081-9fe2-416c-a391-89529bb74fad">
+                  
                      <ending xml:id="x6a28958b-162e-47a3-8f4a-0da74e6786d2" n="1">
-                        <measure n="61_I"
+                           <measure n="61" label="61a"
                                  xml:id="x7aa3e784-4349-4820-bd36-ab88b7700430"
                                  right="rptend">
                            <staff xml:id="xfa63a2db-4c66-42cc-8f8a-2c22a279ce85" n="1">
@@ -8146,7 +8146,7 @@
                         </measure>
                      </ending>
                      <ending xml:id="xebc0cf9e-1d6b-475d-9e08-61dfd659fa02" n="2">
-                        <measure n="62_II" xml:id="x73fba431-9393-43a9-9c3f-b42cac5ee03f">
+                        <measure n="61" label="61b" xml:id="x73fba431-9393-43a9-9c3f-b42cac5ee03f">
                            <staff xml:id="x858b8fb4-cfed-4033-9392-e0105bdb7efd" n="1">
                               <layer xml:id="xa9f9fc7e-77b8-4fb4-88fd-82a0bd59e672" n="1">
                                  <beam xml:id="x4fb08960-4c07-4461-ac34-3cfa378eb9ee">
@@ -8197,7 +8197,7 @@
                                   staff="1"> p </dynam>
                         </measure>
                      </ending>
-                  </section>
+                  
                   <section xml:id="x467b34df-aab5-4c29-b1df-b14a623cfb97">
                      <measure n="62" xml:id="x40371230-b48e-4da5-b23e-3403abe93930">
                         <staff xml:id="x3d882ef9-2007-4f10-9ccf-687b968caee3" n="1">
@@ -13917,9 +13917,9 @@
                         </staff>
                      </measure>
                   </section>
-                  <section xml:id="x8d838e15-f8b9-4049-abf4-4aeee156d036">
+                  
                      <ending xml:id="x9c5f3c15-ab74-4b9e-8118-62a0300ef004" n="1">
-                        <measure n="60a"
+                        <measure n="61" label="61a"
                                  xml:id="x81236488-a21f-42b7-a94a-53299effdeb8"
                                  right="rptend">
                            <staff xml:id="xe1c0a6d0-0778-4be6-b99c-84297c317bad" n="1">
@@ -13975,7 +13975,7 @@
                         </measure>
                      </ending>
                      <ending xml:id="x914d434a-e73d-4de8-9a98-fa7d1533d35f" n="2">
-                        <measure n="61" xml:id="x91c8d456-7c1a-47d6-b27c-9ed675545ef0">
+                        <measure n="61" label="61b" xml:id="x91c8d456-7c1a-47d6-b27c-9ed675545ef0">
                            <staff xml:id="x69a77e83-5673-428a-80b9-98a00c9b8a48" n="1">
                               <layer xml:id="x82006e7d-6c12-4dfc-9613-d6d7d36aa142" n="1">
                                  <beam xml:id="x22d1a57e-e363-4082-b82e-3ba6c0ed3a83">
@@ -14028,7 +14028,7 @@
                      </dynam>
                         </measure>
                      </ending>
-                  </section>
+                  
                   <section xml:id="x13fd4b6a-1ba2-4105-a094-a14634660115">
                      <measure n="62" xml:id="x0c701959-06bc-4a54-9529-3537df85c5db">
                         <staff xml:id="x7db38201-8f41-464d-9c8d-5462ccaf55de" n="1">
@@ -18541,8 +18541,6 @@
                         </staff>
                         <tempo xml:id="xbc2bd1e1-006e-4cb9-90cf-9b1259356402" tstamp="1" staff="1">Allo moderato</tempo>
                      </measure>
-                  </section>
-                  <section xml:id="xa3b160b4-fee8-4ea5-8d74-151c531731bb">
                      <measure n="2"
                               xml:id="x8512abce-1f29-4907-9128-5a6784492b19"
                               left="rptstart">
@@ -20388,10 +20386,10 @@
                            </layer>
                         </staff>
                      </measure>
-                  </section>
-                  <section xml:id="xa31debae-cebd-41c6-a9d6-f44936576fe4">
+               </section>
+                  
                      <ending xml:id="xcdefaa1f-a9c1-4fa8-96e9-036743f18d56" n="1">
-                        <measure n="60a"
+                        <measure n="61" label="61a"
                                  xml:id="x7e012180-18ce-4060-8550-3b59936e7f81"
                                  right="rptend">
                            <staff xml:id="x136ced79-fe24-4797-b552-95da3ffb2fc9" n="1">
@@ -20447,7 +20445,7 @@
                         </measure>
                      </ending>
                      <ending xml:id="xf1930073-c383-46cc-a729-a465c4fabc57" n="2">
-                        <measure n="61" xml:id="x65d02bfe-52aa-4836-8678-6e83121bb5fa">
+                        <measure n="61" label="61b" xml:id="x65d02bfe-52aa-4836-8678-6e83121bb5fa">
                            <staff xml:id="xe9306902-21a1-44e4-ad19-23e4356fcc98" n="1">
                               <layer xml:id="xdfab2444-e6ad-4211-aba4-72a1823c834d" n="1">
                                  <beam xml:id="x6394d9d4-a3ec-4c87-99a0-e9d211baa1d1">
@@ -20500,7 +20498,7 @@
                         </dynam>
                         </measure>
                      </ending>
-                  </section>
+                  
                   <section xml:id="xfa9e4f88-0bec-4729-b1de-8c6e37e24461">
                      <measure n="62" xml:id="x147b8f2f-2799-4004-aab8-b4f44a23788b">
                         <staff xml:id="x4cc497a0-f17c-43ab-b09d-c0026425bf29" n="1">
