@@ -101,7 +101,7 @@
                         <persName auth.uri="https://github.com/" codedval="Susanne Cox">Susanne Cox</persName>
                   </respStmt>
                   <changeDesc>
-                        <p>Korrekturen nach OA im Cello umgesetzt</p>
+                        <p>Korrekturen nach OA in Viola und Cello umgesetzt</p>
                   </changeDesc>
                   <date isodate="2019-03-19"/>
             </change>
@@ -12064,7 +12064,7 @@
                   <scoreDef xml:id="x33312ddb-6470-4a5d-96df-66b561a0e16e"
                             meter.count="4"
                             meter.unit="4"
-                            meter.sym="common"
+                            meter.sym="cut"
                             key.sig="1f"
                             key.mode="major">
                      <staffGrp xml:id="xfb269b10-b4fe-4d38-838d-5d6824d37e2e">
@@ -12318,7 +12318,8 @@
                                     pname="c"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up" 
+                                    artic="stacciss"/>
                               <rest xml:id="xbe3e2c98-6b78-459e-af9b-6d75644c60d1" dur="4"/>
                            </layer>
                         </staff>
@@ -12326,6 +12327,11 @@
                                tstamp="1"
                                place="below"
                                staff="1">p</dynam>
+                           <slur xml:id="x648ae6eb-ef57-41ee-b4d0-a02cf8f60421"
+                                 startid="#xcfd696e8-e3ae-4895-9551-0680235f1304"
+                                 curvedir="below"
+                                 endid="#xbf71246f-f05d-4063-a7d7-c8b75920281f"
+                                 staff="1"/>
                         <!--<slur startid="#d1e614" curvedir="above" endid="#d1e764" staff="1"/>-->
                      </measure>
                      <measure n="7" xml:id="x5b16d1f7-66cf-41a7-b4a2-ba6365e77a55">
@@ -12496,7 +12502,8 @@
                            <layer xml:id="xca8c72b3-dac5-40c7-813b-478695270864" n="1">
                               <chord xml:id="x72fd56b5-6adc-4211-a629-8a129aab85f8"
                                      dur="4"
-                                     stem.dir="up">
+                                     stem.dir="up" 
+                                     artic="stacc">
                                  
                                  <note xml:id="xd3abcee0-7e9d-49c0-9dc0-c42fdfffcb24" pname="f" oct="3"/>
                                  <note xml:id="x65b63b11-012d-4fce-ad3e-eb5591bedadb" pname="a" oct="3"/>
@@ -12534,7 +12541,7 @@
                         <slur xml:id="x666359e5-6c43-47e8-bdb6-7ce2a5b0c4da"
                               startid="#xc831931b-4bfc-4517-a424-7aa40a91f4ee"
                               curvedir="above"
-                              endid="#x8f91079b-fecd-44e2-a2c0-0be9b19bba2c"
+                              endid="#xd3016ebe-5ea5-4b1a-af40-4924126ec6d1"
                               staff="1"/>
                      </measure>
                      <measure n="13" xml:id="xb082fa83-4af7-4acf-ac4d-bb905644955e">
@@ -12685,8 +12692,8 @@
                               endid="#x34ee2c73-e275-4674-a3a6-cccb0f8410b0"
                               staff="1"/>
                         <dynam xml:id="xf3bbd638-d409-4bdc-ad5e-0f5a7cb3b1be"
-                               tstamp="4"
-                               place="above"
+                               tstamp="3"
+                               place="below"
                                staff="1">sf</dynam>
                      </measure>
                      <measure n="17" xml:id="xea9da93d-c569-420a-858d-4d199fda5b04">
@@ -12814,7 +12821,7 @@
                            </layer>
                         </staff>
                         <slur xml:id="x04547b57-9786-4b81-af64-0bc3770e49a4"
-                              startid="#x78ec0cfa-34d7-404a-a34c-18f3260357c6"
+                              startid="#x6fc20c4b-644b-48ae-96b4-d66222f3eab2"
                               curvedir="above"
                               endid="#x9ac94d1f-aba1-4027-acaa-fcd96d122598"
                               staff="1"/>
@@ -12834,7 +12841,8 @@
                               <rest xml:id="xe2161250-4279-43ae-9b01-3fc5014c6c52" dur="4"/>
                               <chord xml:id="xa058c777-1c04-4b07-891f-d0055bc11203"
                                      dur="4"
-                                     stem.dir="down">
+                                     stem.dir="down" 
+                                     artic="stacciss">
                                  
                                  <note xml:id="x1c0e16c1-abf5-4ca0-95be-2812f4497aa9" pname="g" oct="3"/>
                                  <note xml:id="x020e4348-2732-461b-a6e6-e373388500b3" pname="g" oct="4"/>
@@ -13033,7 +13041,7 @@
                                  place="below"
                                  staff="1"
                                  form="cres"
-                                 tstamp2="1m+1"/>
+                                 tstamp2="0m+5"/>
                         <tie xml:id="xabd77ac4-9c0b-47fc-b419-c3166ddf287d"
                              staff="1"
                              startid="#x8ef2e69d-e0ec-4313-9311-c84497c17a5f"
@@ -13056,11 +13064,16 @@
                            </layer>
                         </staff>
                         <hairpin xml:id="xee751231-5a23-4e19-bc9d-307bdf56f9c6"
-                                 tstamp="1"
+                                 tstamp="0"
                                  place="below"
                                  staff="1"
                                  form="dim"
-                                 tstamp2="0m+2.5"/>
+                                 tstamp2="0m+2"/>
+                           <slur xml:id="x523e3f38-ef05-443a-86f7-f1ab10a8e460"
+                                 startid="#xc4f6029d-c934-43d5-8a6e-0e12ce30e3c8"
+                                 curvedir="above"
+                                 endid="#x9c773d20-1491-48ba-93e7-2eedf346e40e"
+                                 staff="1"/>
                      </measure>
                      <measure n="35" xml:id="x8cef59be-ba0a-4315-ad38-58fb6497119a">
                         <staff xml:id="x1e4af868-9d97-47f7-971e-ae4b7d4285f6" n="1">
@@ -13126,7 +13139,7 @@
                                  place="below"
                                  staff="1"
                                  form="cres"
-                                 tstamp2="1m+1"/>
+                                 tstamp2="0m+5"/>
                         <tie xml:id="x97c56e1d-8006-4fc6-b3cc-713452eaec16"
                              staff="1"
                              startid="#x82d7bd9d-da01-40a9-a7ff-489c92c1c626"
@@ -13150,11 +13163,16 @@
                            </layer>
                         </staff>
                         <hairpin xml:id="x5d5a5901-bd4b-4202-842b-08c328e60206"
-                                 tstamp="1"
+                                 tstamp="0"
                                  place="below"
                                  staff="1"
                                  form="dim"
-                                 tstamp2="0m+2.75"/>
+                                 tstamp2="0m+2"/>
+                           <slur xml:id="x21e49555-b265-4fe8-be93-803e83182956"
+                                 startid="#x2a22ca72-c0e9-41a5-aa31-177c824926f7"
+                                 curvedir="above"
+                                 endid="#xf707eb86-2db5-40b6-841b-d288f9feaf1a"
+                                 staff="1"/>
                      </measure>
                      <measure n="39" xml:id="xa45dcd25-0e0b-476e-bd88-2e707fce994a">
                         <staff xml:id="x7e83d0a8-e7e3-448f-baed-c9920df5325e" n="1">
@@ -13230,7 +13248,7 @@
                                        oct="4"
                                        dur="8"
                                        stem.dir="down"
-                                       artic="stacc">
+                                       artic="stacciss">
                                     
                                  </note>
                                  <note xml:id="xb6fef8b9-2f98-45f1-b692-39ce212ed0bf"
@@ -13238,7 +13256,7 @@
                                        oct="4"
                                        dur="8"
                                        stem.dir="down"
-                                       artic="stacc">
+                                       artic="stacciss">
                                     
                                  </note>
                               </beam>
@@ -13447,7 +13465,8 @@
                                     pname="c"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up" 
+                                    artic="stacciss"/>
                               <note xml:id="x2268d15e-965e-4e30-a2b4-7a2cae9314ea"
                                     pname="c"
                                     oct="4"
@@ -13463,7 +13482,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x7e86c726-8046-4a02-86fd-f3b170f52aa7"
-                               tstamp="2"
+                               tstamp="1"
                                place="below"
                                staff="1">
                        sf
@@ -13476,7 +13495,7 @@
                         <slur xml:id="x7b84735b-2ed0-43ad-9ec3-ec7060a2835a"
                               startid="#x631bb896-0fcc-4186-a05c-d2955ca9d461"
                               curvedir="above"
-                              endid="#x631bb896-0fcc-4186-a05c-d2955ca9d461"
+                              endid="#xd9baf99e-9b91-4771-ba84-95593b2885d4"
                               staff="1"/>
                      </measure>
                      <measure n="48" xml:id="x651b0971-5202-41b7-bc12-611cfa4651c2">
@@ -13510,8 +13529,8 @@
                         sf
                      </dynam>
                         <slur xml:id="xf7409edc-7b34-4fae-bf8d-e82f8ee8068d"
-                              startid="#x835d5629-c6f4-43ec-b76b-fde3df46f42c"
-                              curvedir="above"
+                              startid="#x5b67e425-772c-4215-aed6-b9c3775f37db"
+                              curvedir="below"
                               endid="#x40d3bb63-4386-4e5d-a1de-9b23f4989bc5"
                               staff="1"/>
                      </measure>
@@ -13522,7 +13541,8 @@
                                     pname="c"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up" 
+                                    artic="stacc"/>
                               <note xml:id="xfc516dc7-e172-4b5d-8c2d-2bda4952b299"
                                     pname="c"
                                     oct="4"
@@ -13653,7 +13673,7 @@
                         <dynam xml:id="x0a53cd31-f2ef-463e-a216-3b1392c1b269"
                                tstamp="1"
                                place="below"
-                               staff="1">fp
+                               staff="1">sfp
                      </dynam>
                      </measure>
                      <measure n="54" xml:id="x79d5d803-daa7-4fa3-a56e-bd0cd72f8e2f">
@@ -13670,7 +13690,8 @@
                               </note>
                               <chord xml:id="x2b56fea7-3445-4b97-adae-25148b6bb021"
                                      dur="4"
-                                     stem.dir="down">
+                                     stem.dir="down" 
+                                     artic="stacc">
                                  
                                  <note xml:id="x541c2e9b-5edb-4fa2-b414-57e33c239a47"
                                        pname="b"
@@ -13680,7 +13701,8 @@
                               </chord>
                               <chord xml:id="x665c335a-787e-47c4-8202-7672970a9ea2"
                                      dur="4"
-                                     stem.dir="down">
+                                     stem.dir="down" 
+                                     artic="stacc">
                                  
                                  <note xml:id="x9bbc7dde-d3e9-47c4-9a79-bd598b9e8556" pname="c" oct="4"/>
                                  <note xml:id="x2cc38532-ada5-4cce-aee7-3fe23a90d4f6" pname="e" oct="4"/>
@@ -14140,7 +14162,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xbf38c7bc-e697-46eb-8745-989749338ca0"
-                               tstamp="1.5"
+                               tstamp="1"
                                place="below"
                                staff="1">
                         cres
@@ -14190,11 +14212,6 @@
                               </beam>
                            </layer>
                         </staff>
-                        <dynam xml:id="x864420e8-526d-45c7-99e3-4e90023f013d"
-                               tstamp="5"
-                               place="below"
-                               staff="1">f
-                     </dynam>
                      </measure>
                      <measure n="65" xml:id="x880de500-404c-4345-b155-2ff6b55ad11c">
                         <staff xml:id="x23676a29-3e17-4a50-b988-fa8a4f0cefa7" n="1">
@@ -14253,11 +14270,11 @@
                               </beam>
                               <beam xml:id="x9ad99ff2-aa38-4fb7-8454-a583e379906f">
                                  <note xml:id="x9a4e27a1-fdd4-439a-9c3a-0ca7ddfa70b2"
-                                       pname="d"
+                                       pname="d" 
+                                       accid="f"
                                        oct="4"
                                        dur="16"
-                                       stem.dir="down"
-                                       accid.ges="f"/>
+                                       stem.dir="down"/>
                                  <note xml:id="xd1f76d4c-c749-4452-843f-3f75f7d88c36"
                                        pname="d"
                                        oct="4"
@@ -14306,7 +14323,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x51db68f8-ec4e-4f06-8f4c-f8bcc0b80e9e"
-                               tstamp="0"
+                               tstamp="1.25"
                                place="above"
                                staff="1">
                         p
@@ -15265,13 +15282,12 @@
                                place="below"
                                staff="1">
                        fp
-                     </dynam>
-                        <dir xml:id="xe63a759d-32b8-4704-bf2f-050bf2a1fa71"
+                     </dynam> 
+                           <!-- <dir xml:id="xe63a759d-32b8-4704-bf2f-050bf2a1fa71"
                              tstamp="3"
                              staff="1"
-                             place="below">V.S.</dir>
-                     </measure>
-                     
+                             place="below">V.S.</dir> -->
+                     </measure> 
                      <measure n="76" xml:id="x2250c78d-a0a4-4eab-91d9-be072b76a317">
                         <staff xml:id="x84a505c2-5216-4289-b81f-2e3b9b8f6e70" n="1">
                            <layer xml:id="x2c59ac18-b0f1-4b11-ba3e-b2373e8352f3" n="1">
@@ -15485,7 +15501,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x0b97f43a-db82-4c39-a6cd-4ceacfd490cb"
-                               tstamp="1.5"
+                               tstamp="1.25"
                                place="below"
                                staff="1">
                         cres
@@ -15711,6 +15727,12 @@
                                staff="1">
                        p
                      </dynam>
+                           <dynam xml:id="x969274ca-1ba1-4abc-b384-39cea827a024"
+                                 tstamp="3"
+                                 place="below"
+                                 staff="1">
+                                 cres
+                           </dynam>
                         <slur xml:id="x1819cb1e-faea-4452-98c4-59469b99b99e"
                               startid="#xfb8f58e8-8d5f-4f16-9bea-fa0ac529deb9"
                               curvedir="below"
@@ -15951,7 +15973,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x8b01d1f6-bc59-448b-a8ca-af81c27771b8"
-                               tstamp="3.25"
+                               tstamp="3"
                                place="below"
                                staff="1">
                        sf
@@ -16015,7 +16037,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x6653f620-b42b-4998-81c3-3c47a2c8b34b"
-                               tstamp="2"
+                               tstamp="3"
                                place="below"
                                staff="1">
                         f
@@ -16095,7 +16117,8 @@
                                        accid.ges="f"/>
                               </beam>
                               <note xml:id="xea6785d0-4a0b-4e6a-97aa-4c63c64ade34"
-                                    pname="c"
+                                    pname="c" 
+                                    artic="stacc"
                                     oct="4"
                                     dur="4"
                                     stem.dir="up"/>
@@ -16162,7 +16185,8 @@
                                     pname="a"
                                     oct="3"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up" 
+                                    artic="stacciss"/>
                               <rest xml:id="xa517d8b1-e417-4433-9476-9ef27a21e35f" dur="8"/>
                               <note xml:id="xa2587e09-e300-41b1-b07f-25154ed841f7"
                                     pname="a"
@@ -16258,7 +16282,6 @@
                                     stem.dir="up"/>
                            </layer>
                            <layer xml:id="xbcb3ed19-6392-4167-8439-b71812009e0e" n="2">
-                              <space xml:id="x9028c661-2dc4-4fb0-a506-0f8ce3be9474" dur="2"/>
                               <note xml:id="x11f9349e-3da4-4e9d-b6cb-8a1ca2ebc79b"
                                     pname="c"
                                     oct="3"
@@ -16568,6 +16591,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
+                           <dynam xml:id="x5ab74999-25d1-47ce-a8f1-392590886011"
+                                 tstamp="3"
+                                 place="below"
+                                 staff="1">
+                                 sf
+                           </dynam>   
                         <slur xml:id="xc747b340-ba70-4793-809f-36fbdc90befa"
                               startid="#xa5de87ed-1de4-445c-bbe2-c2eb6536fb7a"
                               curvedir="below"
@@ -16688,7 +16717,8 @@
                                     pname="c"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="down"/>
+                                    stem.dir="down" 
+                                    artic="stacciss"/>
                               <rest xml:id="xc6f43a9b-513c-4f65-8bc4-389fc52792d3" dur="4"/>
                            </layer>
                         </staff>
@@ -16712,7 +16742,8 @@
                                     pname="c"
                                     oct="3"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up" 
+                                    artic="stacc"/>
                               <rest xml:id="x29893474-85cd-4a0e-b418-73b46a217d70" dur="4"/>
                               <rest xml:id="x5b662ee8-73d9-44d5-8fdf-dd7f26ee0bf9" dur="2"/>
                            </layer>
@@ -16761,7 +16792,8 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"
-                                    accid.ges="f"/>
+                                    accid.ges="f" 
+                                    artic="stacciss"/>
                               <rest xml:id="x1d971005-28b8-4379-af69-bd85b0bbdd99" dur="4"/>
                               <rest xml:id="x3ea41b19-b2f4-461e-9c50-e3dd8fac4991" dur="2"/>
                            </layer>
@@ -16937,7 +16969,8 @@
                                     dur="2"
                                     stem.dir="down"/>
                               <note xml:id="xdaa641b0-00c7-42db-9895-066a73a12739"
-                                    pname="c"
+                                    pname="c" 
+                                    accid="n"
                                     oct="5"
                                     dur="4"
                                     stem.dir="down"/>
@@ -17081,7 +17114,7 @@
                         <slur xml:id="x22c1eea5-bff1-42f3-a53f-e8d1fe77ba4a"
                               startid="#x620bc358-0e26-45e3-b666-7cdd66876d7c"
                               curvedir="above"
-                              endid="#x9e64bff7-82e8-4aad-a0a8-fbbcfad15138"
+                              endid="#xea4a8e38-be85-446a-b8d8-7a53b4919435"
                               staff="1"/>
                         <tie xml:id="x75400209-741f-406e-be6e-871a50c094ef"
                              staff="1"
@@ -19082,8 +19115,8 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x0f9c75e4-c69f-47db-984c-ca38b59daa4b"
-                               tstamp="3"
-                               place="above"
+                               tstamp="3.5"
+                               place="below"
                                staff="1">
                            sf
                         </dynam>
