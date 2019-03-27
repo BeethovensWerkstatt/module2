@@ -4156,10 +4156,10 @@
                                  dur="8" stem.dir="down" accid.ges="s"/>
                               <rest xml:id="x8dacd270-d350-47a1-8db1-0461aae4d344" dur="8"/>
                               <rest xml:id="xe18b8d6e-9dc6-4937-97d2-7c5a353c78c0" dur="4"/>
+                              <clef xml:id="x37f71ccc-49d6-42fc-91d2-02ceb6b60454" shape="C"
+                                 line="4"/>
                            </layer>
                         </staff>
-                        <staffDef xml:id="x6abd449f-1c5a-4eff-95f4-bff126c56439" n="1" clef.line="4"
-                           clef.shape="C"/>
                      </measure>
 
                      <measure n="22" xml:id="xebaae7e8-f4dd-46ce-b9e9-08c0889e1843">
@@ -5982,10 +5982,10 @@
                               <note xml:id="x1118dfb6-4a4a-4bcf-93c3-0ed042bee5c0" pname="e" oct="3"
                                  dur="4" stem.dir="down"/>
                               <rest xml:id="xc3344a49-f187-4ec5-ab70-62aec3496029" dur="4"/>
+                              <clef xml:id="xb5efd1c0-aeef-49ae-9531-3f73e023cbed" shape="C"
+                                 line="4"/>
                            </layer>
                         </staff>
-                        <staffDef xml:id="x23a510ad-8f8c-4ea6-ab23-76f431427e8d" n="1" clef.line="4"
-                           clef.shape="C"> </staffDef>
                      </measure>
 
                      <measure n="22" xml:id="xd65b2d61-e902-4339-ab55-8aea621184f1">
@@ -6229,7 +6229,7 @@
                                  dur="4" stem.dir="down"/>
                               <note xml:id="x0ae4c727-2ecc-4c8b-a1fe-7ca32e70d155" pname="e" oct="3"
                                  dur="8" stem.dir="down"/>
-                              <clef xml:id="x37f71ccc-49d6-42fc-91d2-02ceb6b60454" shape="C"
+                              <clef xml:id="x8b4691ae-f000-490f-a8e7-4b80932f255e" shape="C"
                                  line="4"/>
                               <beam xml:id="x8c74b6e4-9aac-4383-a6fe-b1763e7a48bd">
                                  <note xml:id="xe90a34a9-e187-4545-9d98-8587c21e2b60" pname="g"
@@ -6682,8 +6682,21 @@
                                  <note xml:id="x7f7e6c7d-e5f4-421d-9cb6-d46f952d9d11" pname="e"
                                     oct="3" dur="8" stem.dir="down"/>
                               </beam>
-                              <note xml:id="xe874bc35-b37c-4674-a0b9-9b6a8dd48222" pname="d" oct="3"
-                                 dur="2" stem.dir="down" stem.mod="1slash" accid.ges="s"/>
+                              <beam xml:id="x578af7e3-a62c-4cbb-88b5-f41c360f6ac9"> 
+                               <note xml:id="xe874bc35-b37c-4674-a0b9-9b6a8dd48222" pname="d" oct="3"
+                                 dur="8" stem.dir="down"  accid.ges="s"/>
+                                 <note xml:id="x20ad7135-5c5f-4ccd-8f41-216f0ed20fd8" 
+                                    pname="d" 
+                                    oct="3"
+                                    dur="8" 
+                                    stem.dir="down" 
+                                    accid.ges="s"/>
+                                 <note xml:id="xc55930c8-e3cd-4cbe-a4f4-2d34b88781cc" pname="d" oct="3"
+                                    dur="8" stem.dir="down" accid.ges="s"/>
+                                 <note xml:id="xb614324f-3153-4573-9dc0-8ba2e6bd977a" pname="d" oct="3"
+                                    dur="8" stem.dir="down" accid.ges="s"/>
+                              </beam>
+                             
                            </layer>
                         </staff>
                         <dir xml:id="xf4539cbd-75c9-49e2-8ea2-d46f62d804dc" tstamp="2" place="below"
@@ -6801,12 +6814,12 @@
                               <note xml:id="x04856315-a526-4dab-a61a-803e03852d8b" pname="e" oct="3"
                                  dur="4" stem.dir="down"/>
                               <rest xml:id="x8ff8ad75-f667-49dc-be7d-48ef75698780" dur="4"/>
+                              <clef xml:id="xd34434c5-47b0-4f61-b826-264c084e19f7" shape="C"
+                                 line="4"/>
                            </layer>
                         </staff>
                      </measure>
-                     <staffDef xml:id="xcfa38dcb-aa99-47d7-8a29-cba30dd76459" n="1" clef.line="4"
-                        clef.shape="C"/>
-                     <measure n="57" xml:id="xcf200a5e-c5a8-4312-8e2f-1acded866340">
+                      <measure n="57" xml:id="xcf200a5e-c5a8-4312-8e2f-1acded866340">
                         <staff xml:id="xef4f9350-4816-474f-a7f7-db32dca9da0e" n="1">
                            <layer xml:id="x6ce859c5-d735-4a1e-98ab-311f4fc460cd" n="1">
                               <rest xml:id="xf7782726-acd8-4b64-8ab2-57e39faf1447" dur="8"/>
@@ -7118,6 +7131,8 @@
                                  <note xml:id="x56a63563-996c-438e-af52-f7ed46413892" pname="c"
                                     oct="4" dur="8" stem.dir="up" accid.ges="s"/>
                               </beam>
+                              <clef xml:id="x2ab1332b-ea4f-4ee0-89fe-39f3768cb1c4" shape="F"
+                                 line="4"/>
                            </layer>
                         </staff>
                         <slur xml:id="xc8af25b9-4fc3-4935-8536-1e1a3292179e"
@@ -7127,8 +7142,6 @@
                            startid="#xe017ed2d-8c23-4215-b36e-a1733e393f7e"
                            endid="#x52816288-8734-4dff-bc78-c4beb1c07b6e"/>
                      </measure>
-                     <staffDef xml:id="x2b4dea3b-8600-43f6-ae1e-cd9593c5b268" n="1" clef.line="4"
-                        clef.shape="F"/>
                      <measure n="70" xml:id="xfee9e5ab-e574-4217-b4f3-331739fdf690">
                         <staff xml:id="x8e76e091-589e-4d28-b7ab-fb4cb774843b" n="1">
                            <layer xml:id="xee831210-e396-4d06-ad85-5bc3e9af27b9" n="1">
@@ -7247,9 +7260,7 @@
                         <fermata xml:id="x3b88e081-9e09-46aa-a1d5-91b97ceadf56" staff="1"
                            startid="#x4c38b010-b0ef-4d8e-823f-2c58e456a62f" place="above"
                            form="norm"/>
-                        <fermata xml:id="x2fdcb453-e85f-496d-b528-0780a197db59" staff="1"
-                           startid="#x4c38b010-b0ef-4d8e-823f-2c58e456a62f" place="above"/>
-                     </measure>
+                      </measure>
                   </section>
                </part>
                <part xml:id="xdd5192f2-61d2-42ba-97e4-5e29241b4020" label="Corno I in E">
