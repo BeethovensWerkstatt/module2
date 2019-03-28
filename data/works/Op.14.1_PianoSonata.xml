@@ -119,6 +119,15 @@
                   </changeDesc>
                   <date isodate="2019-03-21"/>
             </change>
+            <change n="8">
+                  <respStmt>
+                        <persName auth.uri="https://github.com/" codedval="Susanne Cox">Susanne Cox</persName>
+                  </respStmt>
+                  <changeDesc>
+                        <p>1. Satz nach OA korrigiert</p>
+                  </changeDesc>
+                  <date isodate="2019-03-28"/>
+            </change>
       </revisionDesc>
    </meiHead>
    <music>
@@ -11210,7 +11219,7 @@
                                  dur="4"
                                  stem.dir="down"/>
                            <rest xml:id="x6e5e07b0-aec7-4ef1-b170-445e3d7ee579" dur="4"/>
-                           <clef xml:id="x9406b9c2-826a-44db-a474-3f938f6342da" shape="G" line="2"/>
+                              <clef xml:id="x9406b9c2-826a-44db-a474-3f938f6342da" shape="G" line="2"/>
                         </layer>
                      </staff>
                      <staff xml:id="xf966692c-2377-4c7f-8283-b365f56ef595" n="2">
@@ -15756,7 +15765,8 @@
                               <note xml:id="xee462680-e0f1-4a6c-86d3-5cef63ee0361"
                                     pname="g"
                                     oct="4"
-                                    accid.ges="s"/>
+                                    accid.ges="s" 
+                                    artic="stacc"/>
                            </chord>
                            <chord xml:id="x8b8bb804-b794-4b2a-830f-2aa600cb4564"
                                   dur="4"
@@ -15767,11 +15777,9 @@
                               <note xml:id="x1b139336-53f5-47b2-970c-e9477eaedf15"
                                     pname="f"
                                     oct="4"
-                                    accid.ges="s"/>
+                                    accid.ges="s"
+                                    artic="stacc"/>
                            </chord>
-                        </layer>
-                        <layer xml:id="x686beaa8-c729-4840-89cc-226b58d68763" n="2">
-                           <mRest xml:id="x2ad14e2f-1311-4433-b224-0d72fca2b42d"/>
                         </layer>
                      </staff>
                   </measure>
@@ -15837,7 +15845,7 @@
                            <rest xml:id="x5b1694cb-9edd-4c3b-a1cb-8ef4f2f77d13" dur="4"/>
                            <chord xml:id="xe42600d3-f79f-43a8-a8d0-43a05e6776d0"
                                   dur="4"
-                                  stem.dir="down">
+                                  stem.dir="down" artic="stacc">
                               
                               
                               <note xml:id="x6675b355-9ee4-46ca-a6af-3f0a695ca930"
@@ -15848,7 +15856,8 @@
                            </chord>
                            <chord xml:id="x46f3728d-8b87-47f8-bc0b-98fb2913371e"
                                   dur="4"
-                                  stem.dir="down">
+                                  stem.dir="down" 
+                                  artic="stacc">
                               
                               
                               <note xml:id="x7c8a3dce-2356-44d4-a206-1d4bc8a69195"
@@ -15862,15 +15871,13 @@
                            </chord>
                            <chord xml:id="x600eefde-f3c9-4e09-a377-add3bdac095e"
                                   dur="4"
-                                  stem.dir="down">
+                                  stem.dir="down" 
+                                  artic="stacc">
                               
                               
                               <note xml:id="xaeeea6f6-ce64-4e25-89f7-24178adb4d94" pname="e" oct="3"/>
                               <note xml:id="xa70fe8c8-7236-4996-af8a-c7d10a56288d" pname="e" oct="4"/>
                            </chord>
-                        </layer>
-                        <layer xml:id="x3bf36e85-3559-40a2-80cb-68c5cd222694" n="2">
-                           <mRest xml:id="x92d85098-0aa2-4931-a6b3-4ea990e72412"/>
                         </layer>
                      </staff>
                      <dynam xml:id="x06b0c403-a8aa-438b-add1-b5af58069e75"
@@ -15949,8 +15956,7 @@
                                  pname="e"
                                  oct="4"
                                  dur="4"
-                                 stem.dir="up"
-                                 artic="stacc">
+                                 stem.dir="up">
                               
                            </note>
                            <note xml:id="xe7d3bc04-aaf7-45fe-b0c9-408cf6925af2"
@@ -15958,8 +15964,7 @@
                                  oct="4"
                                  dur="4"
                                  stem.dir="up"
-                                 accid.ges="s"
-                                 artic="stacc">
+                                 accid.ges="s">
                               
                            </note>
                         </layer>
@@ -15973,8 +15978,7 @@
                                  pname="b"
                                  oct="3"
                                  dur="4"
-                                 stem.dir="down"
-                                 artic="stacc">
+                                 stem.dir="down">
                               
                            </note>
                            <note xml:id="xa18e2ccb-9477-4d64-98ac-1283e36b4608"
@@ -16060,9 +16064,6 @@
                                  
                               </note>
                            </chord>
-                        </layer>
-                        <layer xml:id="x22822d71-4299-4564-bb5d-b043f5d46673" n="2">
-                           <mRest xml:id="xcad6a541-d88c-4823-89ca-c4658250f3bc"/>
                         </layer>
                      </staff>
                      <staff xml:id="x3a13600f-d946-4fb6-bebc-d6dcef7eaa0e" n="2">
@@ -16153,9 +16154,6 @@
                            </chord>
                            <rest xml:id="xd9f5b3b4-bd2d-458b-8a6c-8e1326f4ed2c" dur="2"/>
                         </layer>
-                        <layer xml:id="x95c24085-a0e6-4680-b48c-8e8f052bc265" n="2">
-                           <mRest xml:id="xe1d75ed1-8f8a-48fe-aa84-d352892b79a1"/>
-                        </layer>
                      </staff>
                      <staff xml:id="x63c776db-ce66-4270-85d3-7a97687a329b" n="2">
                         <layer xml:id="x649c61eb-1145-4eea-9de4-5dcab6bf6e2c" n="2">
@@ -16184,6 +16182,10 @@
                            <rest xml:id="x9c639dce-cfb1-498d-9959-632b9a5ca5c4" dur="2"/>
                         </layer>
                      </staff>
+                        <dynam xml:id="xbada309d-661f-4769-83d9-2dbf5f69f558"
+                              staff="1"
+                              tstamp="1"
+                              place="below">sf</dynam>
                   </measure>
                   <!--  -->
                   <measure n="148" xml:id="x7eb2c021-647d-4850-8c35-e1c509be85d6">
@@ -16204,9 +16206,6 @@
                            </chord>
                            <rest xml:id="x78837f17-52c2-478e-8d98-317b80da7f88" dur="2"/>
                         </layer>
-                        <layer xml:id="x5a10323b-88c1-4241-a976-ee7f5df5f32b" n="2">
-                           <mRest xml:id="xdb92a3b5-5977-45b3-9e8d-5f3d9ba7f168"/>
-                        </layer>
                      </staff>
                      <staff xml:id="x055e2254-8530-49b6-ae7f-5ff6de1b9b48" n="2">
                         <layer xml:id="xd2988fb0-eeff-487b-8486-d0e085c319bd" n="1">
@@ -16219,28 +16218,21 @@
                            <rest xml:id="x2f3ab835-9f58-401a-85ee-70a661d93f9a" dur="4"/>
                            <rest xml:id="x15d58336-9d6f-4343-9e72-0ddf7af6f3b2" dur="2"/>
                         </layer>
-                        <layer xml:id="xcb60b4e6-8b4c-4371-bed2-81dc1067a725" n="2">
-                           <mRest xml:id="xea862c02-83a5-4e73-801d-dd1eea0cb98e"/>
-                        </layer>
                      </staff>
                      <dynam xml:id="xc3a15b56-7aaa-4590-b6f0-177ecfcfa994"
                             staff="1"
-                            tstamp="1"
+                            tstamp="1.5"
                             place="below">p</dynam>
                      <slur xml:id="xd8a49d98-ec8c-4d89-b568-c61310e592e5"
                            staff="1"
                            startid="#x75c48a82-8a07-4cf8-85cd-e30c90d28214"
                            endid="#x860ad30f-8ae8-404c-85d6-42589cdff214"
                            curvedir="above"/>
-                     <dynam xml:id="x0c915861-5b9a-41d8-bb85-56e88fb0b3a1"
-                            staff="1"
-                            place="below"
-                            tstamp="1">sf</dynam>
                   </measure>
                   <measure n="149" xml:id="xafcc4878-aab5-4001-b4d5-51f0689da96d">
                      <staff xml:id="xaf3e18db-1930-49bd-8e62-ca21a05680b2" n="1">
                         <layer xml:id="xcbef5600-3ff5-498f-9bbd-7f15625312c7" n="1">
-                           <space xml:id="x697fff4a-dfa8-42d5-95f3-61ff49d938e0" dur="8"/>
+                              <rest xml:id="x697fff4a-dfa8-42d5-95f3-61ff49d938e0" dur="8" staff="2"/>
                            <beam xml:id="xcfddd429-0f22-446e-be4d-a07e6092bfe7">
                               <chord xml:id="x2b2f3d08-155e-4651-be3f-3e3b5f7cea7a"
                                      dur="8"
@@ -16285,7 +16277,7 @@
                                  <note xml:id="x53cd592c-9c39-4c57-ad02-b6c3c89892af" pname="e" oct="4"/>
                               </chord>
                            </beam>
-                           <space xml:id="x33f0dfaf-c522-477e-96f4-4b7091f031d9" dur="8"/>
+                              <rest xml:id="x33f0dfaf-c522-477e-96f4-4b7091f031d9" dur="8" staff="2"/>
                            <beam xml:id="x3db596dc-0e88-443e-a6a9-115e6495fdda">
                               <chord xml:id="x9093ed9d-414f-4c2b-8a96-63038316d757"
                                      dur="8"
@@ -16331,9 +16323,6 @@
                               </chord>
                            </beam>
                         </layer>
-                        <layer xml:id="xcf641112-93f8-4146-8dbe-54f22aadea16" n="2">
-                           <mRest xml:id="xf00c92cc-51c3-4c9f-82d1-ecfec12a5fa0"/>
-                        </layer>
                      </staff>
                      <staff xml:id="xbcd69d54-8c2a-4d3f-93ee-f2f311cfab82" n="2">
                         <layer xml:id="x894428bc-afa2-4e3b-92ff-f236dd00f624" n="1">
@@ -16347,9 +16336,6 @@
                                  oct="2"
                                  dur="2"
                                  stem.dir="down"/>
-                        </layer>
-                        <layer xml:id="x846d9407-0fa8-47ba-9bdb-b3731801419a" n="2">
-                           <mRest xml:id="x065da67a-0d28-4b8f-a861-eefb0cfb455c"/>
                         </layer>
                      </staff>
                      <dynam xml:id="xb01ad228-0c8e-41d2-b0a8-65722ae313bd"
@@ -16365,7 +16351,7 @@
                   <measure n="150" xml:id="x68ccc18c-1fa1-4fd5-90f4-50540cc1d9c4">
                      <staff xml:id="x22ac0421-695c-49e4-8a15-f8fd5f53ede9" n="1">
                         <layer xml:id="xa4c3c2c7-5c04-4bd5-9dc0-45a999c37fe5" n="1">
-                           <space xml:id="xb0055a9a-1198-4eaf-8d29-7d787faf3d54" dur="8"/>
+                              <rest xml:id="xb0055a9a-1198-4eaf-8d29-7d787faf3d54" dur="8" staff="2"/>
                            <beam xml:id="x632c6960-5fc9-4b1c-abc0-b2531678ca6e">
                               <chord xml:id="x943b2724-5ee8-491c-815b-2189ab8c8a9d"
                                      dur="8"
@@ -16407,7 +16393,7 @@
                                  <note xml:id="x215950ea-accd-432b-90fd-f87513a9f7ed" pname="e" oct="4"/>
                               </chord>
                            </beam>
-                           <space xml:id="xb1acb5f8-f03c-48ea-bc13-a18a20e2447b" dur="8"/>
+                              <rest xml:id="x3b589c9f-eac2-4617-aa48-20f5f192c050" dur="8" staff="2"/>
                            <beam xml:id="xab9bb4c8-1744-4091-b89d-bc409fbd666f">
                               <chord xml:id="xdbb60ab5-665b-44bc-a845-0c9d3218f40a"
                                      dur="8"
@@ -16450,9 +16436,6 @@
                               </chord>
                            </beam>
                         </layer>
-                        <layer xml:id="x30f8c874-a030-448a-ab84-fa725ce966f1" n="2">
-                           <mRest xml:id="x36bf1de5-2af9-4271-9ef3-4102dea3c05b"/>
-                        </layer>
                      </staff>
                      <staff xml:id="xcb10e096-a61b-4355-9781-c439e092f935" n="2">
                         <layer xml:id="x37d79795-dbc6-494c-b27a-7a574aa9e2e7" n="1">
@@ -16469,15 +16452,12 @@
                                  stem.dir="down"
                                  accid.ges="s"/>
                         </layer>
-                        <layer xml:id="x018aa55f-b822-4669-bbf7-12b7b1995856" n="2">
-                           <mRest xml:id="xf1683b62-d836-45df-be56-88abd15cb580"/>
-                        </layer>
                      </staff>
                   </measure>
                   <measure n="151" xml:id="x7b9fa804-4d04-4f51-b90a-9f31516dcf91">
                      <staff xml:id="xf8049427-2d01-4873-9080-06a4606e798a" n="1">
                         <layer xml:id="x1d8b4b5d-5b2d-45a4-a38a-fe4cc42f775d" n="1">
-                           <space xml:id="xe02c433c-7b7f-4ea8-ae53-fae9ec768ff2" dur="8" staff="2"/>
+                              <rest xml:id="xe02c433c-7b7f-4ea8-ae53-fae9ec768ff2" dur="8" staff="2"/>
                            <beam xml:id="x01ecd54f-17b0-47a9-96b6-dc6ee5f4fbf5">
                               <chord xml:id="x9323ae7b-a8ef-40c2-a684-d0c444939d4a"
                                      dur="8"
@@ -16522,7 +16502,7 @@
                                  <note xml:id="x142b20f2-2ae9-44d5-9e7c-d0737982a2f7" pname="e" oct="4"/>
                               </chord>
                            </beam>
-                           <space xml:id="xf3efc3f3-a689-4687-9a1f-5ab052142437" dur="8" staff="2"/>
+                              <rest xml:id="x33cd7fd1-e6d7-4658-91e1-194713885005" dur="8" staff="2"/>
                            <beam xml:id="x3d38dea3-ea97-4d20-bb81-cb3946d86582">
                               <chord xml:id="xbb1c79be-7bcf-46f7-87dc-039a22484bea"
                                      dur="8"
@@ -16568,9 +16548,6 @@
                               </chord>
                            </beam>
                         </layer>
-                        <layer xml:id="x8183cf2f-13a7-4112-beb9-03474634aef6" n="2">
-                           <mRest xml:id="xb968ef4d-ee65-4e37-86e7-e081f978117b"/>
-                        </layer>
                      </staff>
                      <staff xml:id="xc14840f7-3866-419f-afc0-2e629852f614" n="2">
                         <layer xml:id="x25d19cb6-dc60-48ac-bff6-8f21c3b62453" n="1">
@@ -16585,9 +16562,6 @@
                                  dur="2"
                                  stem.dir="down"/>
                         </layer>
-                        <layer xml:id="xdbdf5f58-e688-4422-966c-82801294f2f3" n="2">
-                           <mRest xml:id="xc4818434-92ce-4d47-999a-02efa94ec811"/>
-                        </layer>
                      </staff>
                      <slur xml:id="x79d87163-832f-4582-8dd6-02296274015a"
                            startid="#xaa74b647-b8e0-4097-a6f2-e1abfc862aeb"
@@ -16597,7 +16571,7 @@
                   <measure n="152" xml:id="x56fafc0e-ee10-46cb-84ec-8371ae7dd85c">
                      <staff xml:id="x7cdef7ff-ff3c-405c-838c-2df868e43645" n="1">
                         <layer xml:id="x1169b131-2461-473d-9d5a-f51d14652ee6" n="1">
-                           <space xml:id="x9dfebfe5-46ef-4953-9d56-29d82b6c2f01" dur="8" staff="2"/>
+                              <rest xml:id="x9dfebfe5-46ef-4953-9d56-29d82b6c2f01" dur="8" staff="2"/>
                            <beam xml:id="xabf74806-0920-41d0-aac8-7f84924cdc51">
                               <chord xml:id="x9f56e757-3db9-49c4-affc-0be9aba5d1b6"
                                      dur="8"
@@ -16639,7 +16613,7 @@
                                  <note xml:id="x8bdbbede-29ea-4055-be98-3185e23962e2" pname="e" oct="4"/>
                               </chord>
                            </beam>
-                           <space xml:id="xe6fc3f7d-b351-49d3-a926-7f102382e65c" dur="8" staff="2"/>
+                              <rest xml:id="xe6fc3f7d-b351-49d3-a926-7f102382e65c" dur="8" staff="2"/>
                            <beam xml:id="xe9a2d09f-2842-4539-a588-eea7e966885f">
                               <chord xml:id="x3678abd5-9f6b-4e23-b72b-799bbfc4579a"
                                      dur="8"
@@ -16717,15 +16691,20 @@
                            </chord>
                         </layer>
                      </staff>
+                        <slur xml:id="xb8f26ae7-628b-48dc-a4c1-3d4cc7ec2e69"
+                              staff="2"
+                              startid="#x22db6681-4785-4da1-a5a1-9bc04e31d675"
+                              endid="#xbc4fb80b-ee0b-4cfa-8fc2-d7eb6530ef43"
+                              curvedir="below"/>
                      <dynam xml:id="x5bff9145-2d91-465d-95f1-80204bce80da"
                             staff="2"
                             tstamp="3"
-                            place="above">sf</dynam>
+                            place="below">sf</dynam>
                   </measure>
                   <measure n="153" xml:id="xbe3aa95e-99a3-4e7f-9231-3987cc730eda">
                      <staff xml:id="x0eac714a-ef1d-4b12-8769-5d91d2f6a8cb" n="1">
                         <layer xml:id="x4aa4bb54-cd68-4f32-b562-12cfbae3f416" n="1">
-                           <space xml:id="x54d133a2-9ed6-4d05-b3e7-ad8d077e4907" dur="8" staff="2"/>
+                              <rest xml:id="x54d133a2-9ed6-4d05-b3e7-ad8d077e4907" dur="8" staff="2"/>
                            <beam xml:id="x37fd3a10-f8e5-4191-9f01-d4cf2d814fa0">
                               <chord xml:id="x73b8b392-aae3-4f14-96eb-df17c428ef90"
                                      dur="8"
@@ -16770,7 +16749,7 @@
                                  <note xml:id="x63ad8bd9-cfef-4482-a37e-ab3c65e9eb5d" pname="e" oct="4"/>
                               </chord>
                            </beam>
-                           <space xml:id="x4fec83c2-7484-4a82-adff-25b08f53aa0d" dur="8" staff="2"/>
+                              <rest xml:id="x4e88b85b-03b4-466b-80bf-4c572db634d8" dur="8" staff="2"/>
                            <beam xml:id="xd9a8a1c9-d80e-4eec-ae82-adc60cd87d58">
                               <chord xml:id="xffd425d7-c5b4-4d1a-9746-bbd9530ca307"
                                      dur="8"
@@ -16846,15 +16825,12 @@
                                     oct="2"/>
                            </chord>
                         </layer>
-                        <layer xml:id="x078df644-643c-4657-a5cb-813a5f7bbbdd" n="2">
-                           <mRest xml:id="xf45f8562-b528-4b79-9075-2801adc3a43c"/>
-                        </layer>
                      </staff>
-                     <tie xml:id="x8e94bd10-95b6-4d4f-a8a5-a1c7c805fa18"
-                          staff="2"
-                          startid="#x434f15c1-1671-47c1-a8fd-3ae724a2e698"
-                          endid="#x64e87960-2a39-4c6d-bd1c-2c1464a8ab95"
-                          curvedir="above"/>
+                        <slur xml:id="x8e94bd10-95b6-4d4f-a8a5-a1c7c805fa18"
+                              staff="2"
+                              startid="#x434f15c1-1671-47c1-a8fd-3ae724a2e698"
+                              endid="#x64e87960-2a39-4c6d-bd1c-2c1464a8ab95"
+                              curvedir="above"/>
                      <dynam xml:id="x2f52e555-784c-45a4-996b-82f766a7f7bd"
                             staff="2"
                             tstamp="3"
@@ -16863,7 +16839,7 @@
                   <measure n="154" xml:id="xeb757aae-1e63-4b34-a890-0b49a46325be">
                      <staff xml:id="xe008b416-f4d7-4723-95fb-3b1f8baa178d" n="1">
                         <layer xml:id="x47879ab3-db8f-4da7-a088-ded79d40bab2" n="1">
-                           <space xml:id="x1b2a6628-a787-46c7-b4e6-262f85fa1889" dur="8" staff="2"/>
+                              <rest xml:id="x1b2a6628-a787-46c7-b4e6-262f85fa1889" dur="8" staff="2"/>
                            <beam xml:id="xe95e3506-7eae-4d30-a05d-f3d64bdd5c18">
                               <chord xml:id="x3dfea4c4-888f-4cdb-9445-7ff97db5de4c"
                                      dur="8"
@@ -16908,7 +16884,7 @@
                                  <note xml:id="xa7d332de-9c2b-4300-9b63-2e18c6ed2395" pname="e" oct="4"/>
                               </chord>
                            </beam>
-                           <space xml:id="xb050f7e4-824f-45fb-9618-15f41eaa8401" dur="8" staff="2"/>
+                              <rest xml:id="xb050f7e4-824f-45fb-9618-15f41eaa8401" dur="8" staff="2"/>
                            <beam xml:id="x60d7e2a1-5f03-4231-8426-b8a0c2f437b3">
                               <chord xml:id="x03724bf1-4680-4b1d-be98-201ce16aca52"
                                      dur="8"
@@ -16963,9 +16939,6 @@
                               </chord>
                            </beam>
                         </layer>
-                        <layer xml:id="x8fd9581f-13c1-48d7-976e-0befdff0d23e" n="2">
-                           <mRest xml:id="xb9283475-83a6-4180-9688-72a8ded86efa"/>
-                        </layer>
                      </staff>
                      <staff xml:id="x87c0667c-bbd5-4cb7-8b9f-c03ce74f0a42" n="2">
                         <layer xml:id="x0f3fc99c-d884-4679-b6f1-5cf1dae8c8f3" n="1">
@@ -17001,7 +16974,7 @@
                   <measure n="155" xml:id="x89fb0280-0110-4d27-8685-3061cbe5b6ff">
                      <staff xml:id="x7406f6a5-2945-41c3-9664-cf8c4a6f6941" n="1">
                         <layer xml:id="x50d0529f-e78c-4e64-80be-24e56df5553a" n="1">
-                           <space xml:id="x200ef374-64cb-467e-a22c-72d90d4208c2" dur="8" staff="2"/>
+                              <rest xml:id="x200ef374-64cb-467e-a22c-72d90d4208c2" dur="8" staff="2"/>
                            <beam xml:id="xaa161d2d-4131-4246-b8f9-72bb36c7faed">
                               <chord xml:id="x987d8604-e2ed-4063-9a75-405326132aab"
                                      dur="8"
@@ -17046,7 +17019,7 @@
                                  <note xml:id="xee50700b-9ab6-4142-8e9a-4b157cad769d" pname="e" oct="4"/>
                               </chord>
                            </beam>
-                           <space xml:id="xc46f11d2-92fc-41c2-8a26-68f6bd0e1176" dur="8" staff="2"/>
+                              <rest xml:id="xc46f11d2-92fc-41c2-8a26-68f6bd0e1176" dur="8" staff="2"/>
                            <beam xml:id="x11543590-3269-4f50-8c4c-c92631e16faf">
                               <chord xml:id="x8c4c3668-9dbe-41ba-a4b8-e9fddefae2cc"
                                      dur="8"
@@ -17101,9 +17074,6 @@
                               </chord>
                            </beam>
                         </layer>
-                        <layer xml:id="x10fbc695-8379-44d0-845b-26adb311d56f" n="2">
-                           <mRest xml:id="xf575f727-4733-4f21-a5c8-180887d8c730"/>
-                        </layer>
                      </staff>
                      <staff xml:id="x055a4efc-db4b-4cb1-aab4-f8bda80151d8" n="2">
                         <layer xml:id="xc2ceee62-300b-46cd-a741-fbc0d2f71dd5" n="1">
@@ -17124,9 +17094,6 @@
                                     accid="s"
                                     oct="2"/>
                            </chord>
-                        </layer>
-                        <layer xml:id="x3409d518-b574-4832-85a7-5b54f5317dcc" n="2">
-                           <mRest xml:id="x6327e277-d079-4a5f-a93c-3f3cfe9c3d29"/>
                         </layer>
                      </staff>
                      <dynam xml:id="xa108138f-ff43-492e-abc6-2f772173f0b3"
@@ -17149,7 +17116,7 @@
                                  stem.dir="up"/>
                         </layer>
                         <layer xml:id="x6f47f336-562d-4c86-a460-f47f83b931a9" n="2">
-                           <space xml:id="x0fd4294c-5b78-431d-ad59-11e4cdba3a79" dur="8" staff="2"/>
+                              <rest xml:id="x0fd4294c-5b78-431d-ad59-11e4cdba3a79" dur="8" staff="2"/>
                            <beam xml:id="x9ae721b7-8114-443b-90a2-6484153317e1">
                               <chord xml:id="xed2e6976-dbed-4312-b151-0fbc504eb8f1"
                                      dur="8"
@@ -17261,9 +17228,6 @@
                                        accid.ges="s"/>
                               </chord>
                            </beam>
-                        </layer>
-                        <layer xml:id="xe9e8c27d-cd31-4747-b1ea-138f46819f9c" n="2">
-                           <mRest xml:id="xf7d7499b-fca9-41cd-9fb8-5baff7006520"/>
                         </layer>
                      </staff>
                      <slur xml:id="xbd4021b2-8487-49a5-8ccf-e72e2f5adddc"
@@ -17405,9 +17369,6 @@
                                        accid.ges="s"/>
                               </chord>
                            </beam>
-                        </layer>
-                        <layer xml:id="xf2695b8b-be44-4835-a271-74652d7dd532" n="2">
-                           <mRest xml:id="x3d6da22e-c9e1-452c-9ce1-fcab28dac7cc"/>
                         </layer>
                      </staff>
                   </measure>
@@ -17679,9 +17640,6 @@
                                        accid.ges="s"/>
                               </chord>
                            </beam>
-                        </layer>
-                        <layer xml:id="xa412310a-b39c-4ef1-9228-642a2b3b10fb" n="2">
-                           <mRest xml:id="x3cb3eddd-25c0-4c33-b932-29a61cdc4162"/>
                         </layer>
                      </staff>
                   </measure>
@@ -17967,9 +17925,6 @@
                               </chord>
                            </beam>
                         </layer>
-                        <layer xml:id="x0de72149-a1e9-4a08-b550-1c9764809130" n="2">
-                           <mRest xml:id="xcc988477-fb10-4f23-be11-4b1e0e7947b9"/>
-                        </layer>
                      </staff>
                   </measure>
                   <measure n="162" xml:id="x1492cae6-5096-46bf-a2c6-26947d80ccbf">
@@ -18130,9 +18085,6 @@
                               </chord>
                            </beam>
                         </layer>
-                        <layer xml:id="x7798d94f-4477-4448-a50e-3f08596c4845" n="2">
-                           <mRest xml:id="x798db9f8-e7e9-4d5f-8c81-c6eec5da55da"/>
-                        </layer>
                      </staff>
                      <dynam xml:id="x24d8f100-fbc5-426c-abb4-ecac6d8ca48c"
                             staff="1"
@@ -18179,9 +18131,6 @@
                               <note xml:id="x5df31c45-a65d-4633-8e03-a3d5071e73a1" pname="e" oct="3"/>
                            </chord>
                            <rest xml:id="x1f74ce9a-144e-4f81-8c17-2f5e3ba0cf84" dur="2"/>
-                        </layer>
-                        <layer xml:id="x3e75595e-ae81-49d1-9d72-9be35516d239" n="2">
-                           <mRest xml:id="x700cb6c9-17ba-4fb3-90a3-44529fe937b7"/>
                         </layer>
                      </staff>
                   </measure>
