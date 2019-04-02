@@ -34935,7 +34935,7 @@
                                  place="above"
                                  staff="1"
                                  form="dim"
-                                 tstamp2="0m+4"/>
+                                 tstamp2="0m+3"/>
                      </measure>
                      <measure n="8" xml:id="x3e54a815-037b-4fb9-af01-d2db2efa4aa2">
                         <staff xml:id="x0e64560b-4c0a-4a2d-9db3-d2490f930198" n="1">
@@ -35012,10 +35012,6 @@
                              staff="1">
                           cres
                         </dir>
-                        <tie xml:id="x85f7aaa0-00a8-42bb-b4ae-5362f9f02931"
-                             staff="1"
-                             startid="#x73e43d30-db75-45eb-84a4-8b6fbace3556"
-                             endid="#x2269a73c-321f-4e69-a66a-2101479663b3"/>
                         <tie xml:id="x49242de1-0927-46d5-8329-ce4d254bca1f"
                              staff="1"
                              startid="#xe46de93e-e900-4445-afcb-11444803119c"
@@ -35052,10 +35048,6 @@
                                     stem.dir="up"/>
                            </layer>
                         </staff>
-                        <tie xml:id="x4296179f-cb62-4ab4-bdbc-c8e88f42b1d8"
-                             staff="1"
-                             startid="#x6e48451c-1308-4a79-8e7c-1592ebdb1629"
-                             endid="#x42187352-2e09-42f4-a82e-e4304e98c367"/>
                         <tie xml:id="x52104b19-7b6d-4433-9d29-66f83a74583e"
                              staff="1"
                              startid="#xf9e5b222-cafd-4565-9aa6-0462dada597a"
@@ -43755,7 +43747,7 @@
                                  place="above"
                                  staff="1"
                                  form="cres"
-                                 tstamp2="0m+1.8958"/>
+                                 tstamp2="0m+2"/>
                         <dynam xml:id="xbe8d44cc-f4f0-43f8-9704-18811613d128"
                                tstamp="1.5"
                                place="below"
@@ -49531,7 +49523,7 @@
                            </layer>
                         </staff>
                         <dir xml:id="x0743ec82-2530-4a43-869c-57aa657310e4"
-                             tstamp="2"
+                             tstamp="1.5"
                              place="above"
                              staff="1">cres</dir>
                      </measure>
@@ -49690,7 +49682,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x52ad8d94-9b23-4b14-a9be-8313db6dded2"
-                               tstamp="1"
+                               tstamp="0.5"
                                place="below"
                                staff="1">
                            p
@@ -49701,23 +49693,23 @@
                               endid="#x5b731d2e-79cd-419f-bdbb-3b39520e4741"
                               staff="1"/>
                         <hairpin xml:id="x2ffccec5-c922-4bb6-9d10-e185b6f62932"
-                                 tstamp="1"
+                                 tstamp="1.5"
                                  place="below"
                                  staff="1"
                                  form="cres"
                                  tstamp2="0m+2"/>
                         <dynam xml:id="xe8173823-3545-4d07-ae42-a45a01b11b7e"
-                               tstamp="2"
+                               tstamp="1"
                                place="below"
                                staff="1">
                            sf
                         </dynam>
                         <hairpin xml:id="xc0a4e5ba-4257-47f5-98e4-3f62e5dde534"
-                                 tstamp="2.5"
+                                 tstamp="2"
                                  place="below"
                                  staff="1"
                                  form="dim"
-                                 tstamp2="0m+4"/>
+                                 tstamp2="0m+2.5"/>
                      </measure>
                      <measure n="8" xml:id="x896941c5-8d67-478e-ac69-a50563a29ae9">
                         <staff xml:id="xd4608fcd-e026-4a17-9be7-1947cc95cfa4" n="1">
