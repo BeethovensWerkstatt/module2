@@ -36773,9 +36773,6 @@
                               <note xml:id="x3f954ec5-f636-4250-87e8-3c22a2e6310a" pname="e" oct="5"/>
                            </chord>
                         </layer>
-                        <layer xml:id="xfb4ab5f3-0a70-49ad-b2d9-114d857f3b32" n="2">
-                           <mRest xml:id="x720f5791-ce3d-4681-833c-9bb3eb190287"/>
-                        </layer>
                      </staff>
                      <staff xml:id="xd51e2148-d507-41a5-844d-b06b828f698f" n="2">
                         <layer xml:id="x8a423f0c-4935-45e6-bb12-112b7350ff15" n="1">
@@ -36873,9 +36870,6 @@
                                        accid.ges="s"/>
                               </beam>
                            </tuplet>
-                        </layer>
-                        <layer xml:id="x003bc5f8-f9f7-404a-8c0a-5e772bc88ded" n="2">
-                           <mRest xml:id="xd134386a-e89f-47d6-9072-a861e917ceb4"/>
                         </layer>
                      </staff>
                      <dynam xml:id="x74f87288-8669-45b6-9e94-1c30ed39ab9e"
@@ -37431,9 +37425,6 @@
                                     oct="4"/>
                            </chord>
                         </layer>
-                        <layer xml:id="x87c6b3fa-f8d0-4795-8991-38b75e263ce0" n="2">
-                           <mRest xml:id="x4b405159-744c-4d93-8b49-496286fff15f"/>
-                        </layer>
                      </staff>
                      <staff xml:id="x81e75497-b66b-46fc-ae68-c6877deaa775" n="2">
                         <layer xml:id="xe5da703c-e50a-428d-a3be-2d7ae148f1b1" n="1">
@@ -37473,9 +37464,6 @@
                                     accid="s"
                                     oct="3"/>
                            </chord>
-                        </layer>
-                        <layer xml:id="x9bd3edba-968a-42c0-bd10-ec31a3816a2b" n="2">
-                           <mRest xml:id="xd74b86d3-cf34-4075-83ac-c5ba50ac9d6c"/>
                         </layer>
                      </staff>
                      <tie xml:id="x515eb614-d383-4096-99ec-12c0203f1b41"
@@ -37629,9 +37617,6 @@
                               
                            </note>
                         </layer>
-                        <layer xml:id="x2e2c4a55-01bb-44f0-a160-d20d510bf28c" n="2">
-                           <mRest xml:id="x22a3bd2e-d258-4be4-af8d-4b1fe2d198f6"/>
-                        </layer>
                      </staff>
                      <staff xml:id="x8d84eefb-326c-412a-bdaf-3dc4bc192958" n="2">
                         <layer xml:id="xc8e188f0-934a-4375-9c08-ccb3c10dd519" n="1">
@@ -37665,9 +37650,6 @@
                               <note xml:id="x3b04695b-7892-40ab-8166-f058f489214d" pname="a" oct="2"/>
                               <note xml:id="x4b782547-c13b-4d75-bb46-48d9d0cbd1c2" pname="a" oct="3"/>
                            </chord>
-                        </layer>
-                        <layer xml:id="x3620cea8-2f71-4118-bbcc-89a1542cd26e" n="2">
-                           <mRest xml:id="x81479658-a8bd-4d3e-9db1-fc3a8af86fed"/>
                         </layer>
                      </staff>
                   </measure>
@@ -38736,9 +38718,6 @@
                                     accid.ges="s"/>
                            </beam>
                         </layer>
-                        <layer xml:id="x442824a2-84bb-41e8-9dbd-385b64fdb033" n="2">
-                           <mRest xml:id="xe7d8646d-133b-46eb-95cc-3200a246ce0e"/>
-                        </layer>
                      </staff>
                      <staff xml:id="x69d60abb-8599-4c91-bea6-ad20d1a33aab" n="2">
                         <layer xml:id="xa09c21eb-a20a-46ae-a457-6eccc9b82c2f" n="1">
@@ -38836,9 +38815,6 @@
                                        stem.dir="up"/>
                               </beam>
                            </tuplet>
-                        </layer>
-                        <layer xml:id="xffb2302d-d44c-4883-9563-ab6ca09c3653" n="2">
-                           <mRest xml:id="xef78f654-cfe2-4939-842f-d2929e283403"/>
                         </layer>
                      </staff>
                      <slur xml:id="xc0234ddf-3c1b-461f-9ead-9d620eed1240"
