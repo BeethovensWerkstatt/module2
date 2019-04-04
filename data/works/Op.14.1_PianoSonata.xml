@@ -128,6 +128,15 @@
                   </changeDesc>
                   <date isodate="2019-03-28"/>
             </change>
+            <change n="9">
+                  <respStmt>
+                        <persName auth.uri="https://github.com/" codedval="Susanne Cox">Susanne Cox</persName>
+                  </respStmt>
+                  <changeDesc>
+                        <p>3. Satz nach OA korrigiert</p>
+                  </changeDesc>
+                  <date isodate="2019-04-04"/>
+            </change>
       </revisionDesc>
    </meiHead>
    <music>
@@ -25331,14 +25340,14 @@
                            </chord>
                            <chord xml:id="x9bac77f8-80f1-4c94-81d3-04f8ad882933"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="xada70b77-f99a-4aa1-8178-0b8ffeb7596e" pname="a" oct="4"/>
                               <note xml:id="xd6002a66-6b98-4df4-ab24-ea87a4b3f4c1" pname="a" oct="5"/>
                            </chord>
                            <chord xml:id="xaefa7440-39a6-4565-8697-89c8eb7c138b"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="xb508fcfb-1bbf-456d-891b-d08600ffd0fc" pname="a" oct="4"/>
                               <note xml:id="x7c5ab815-47fc-43ed-b88f-161882f676dc" pname="a" oct="5"/>
@@ -25455,28 +25464,28 @@
                         <layer xml:id="x8fe606ce-bbb0-4c3f-b59d-d7d14b234164" n="1">
                            <chord xml:id="x322a37f2-6084-4865-bb68-017d614c7f89"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x1e63e300-7ad1-4b50-8620-278a3c393a2f" pname="a" oct="4"/>
                               <note xml:id="xcc447c05-1ab3-4a21-959e-1ddf3d5bb8c0" pname="a" oct="5"/>
                            </chord>
                            <chord xml:id="x065516f0-fa54-4427-ae1a-1bfdcc87a452"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x781c46c8-3bb9-463d-af29-a89f7e4f187c" pname="a" oct="4"/>
                               <note xml:id="x18c1b26e-44dc-4ea2-8970-0cd0aa787273" pname="a" oct="5"/>
                            </chord>
                            <chord xml:id="xff7f5fa2-1247-480b-92f4-50a51581145a"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x32daffc3-f821-47e1-aa82-502126fcb60d" pname="a" oct="4"/>
                               <note xml:id="xb5706f54-551c-4677-a0b1-9af918c38441" pname="a" oct="5"/>
                            </chord>
                            <chord xml:id="xdf2f312a-9f38-4b71-b7f2-cd1d40a37528"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x4f1bef5b-bfd3-4efa-93e9-4730ed46cb8d" pname="a" oct="4"/>
                               <note xml:id="xb5c19615-f2ab-4853-984a-852c9da23726" pname="a" oct="5"/>
@@ -26075,14 +26084,14 @@
                            </chord>
                            <chord xml:id="x7e24d4f8-9eb5-479d-ba57-7ea3ee9f08ed"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x8940d5b4-b134-4b22-8f96-26db5f6ff7a8" pname="e" oct="4"/>
                               <note xml:id="xbb19fc5b-732b-4361-b331-61fd5feeb167" pname="e" oct="5"/>
                            </chord>
                            <chord xml:id="x4bc1c821-998a-4efd-b2a9-5948059a1765"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x56d4fa18-05f2-4a24-af77-4c13868a7612" pname="e" oct="4"/>
                               <note xml:id="xbefe0090-e2ea-4c24-a33a-9853fd3f8f30" pname="e" oct="5"/>
@@ -26218,14 +26227,14 @@
                            </chord>
                            <chord xml:id="x58d5b8ef-34b9-4882-8722-1cf42f06a56e"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="xfd8df05e-a2cd-4482-bb61-34f72d5138c6" pname="a" oct="4"/>
                               <note xml:id="x820b200e-ef0b-47fe-b9b0-54ed60ae95ab" pname="a" oct="5"/>
                            </chord>
                            <chord xml:id="xf172e289-572d-425f-ab28-60caf734bcf0"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x081c104c-ad14-4805-809b-dfdbc40a7dbb" pname="a" oct="4"/>
                               <note xml:id="x34978eba-b088-45b2-af4f-dc77bf6cb7bc" pname="a" oct="5"/>
@@ -26342,28 +26351,28 @@
                         <layer xml:id="x47e3041f-31cf-4871-a5b4-f6322a932839" n="1">
                            <chord xml:id="x9144962d-6cbc-47b2-9127-d510a5ce7279"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacciss">
                               
                               <note xml:id="x2ed3f7ab-15b8-48c3-a350-3415c8c49959" pname="a" oct="4"/>
                               <note xml:id="x8ccfc0b2-3e61-46ee-ac66-c8629c4c0ddd" pname="a" oct="5"/>
                            </chord>
                            <chord xml:id="xeede8652-cb64-481f-b285-7a02c926b09d"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacciss">
                               
                               <note xml:id="xe602e766-3804-4685-b911-25de5f616a6a" pname="a" oct="4"/>
                               <note xml:id="xeef0e677-8374-4ddc-8448-81333d24f6b2" pname="a" oct="5"/>
                            </chord>
                            <chord xml:id="x552ce804-7350-4c87-9f32-e72a6b5a371e"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacciss">
                               
                               <note xml:id="x338ecab8-36a8-47e9-b67b-e8bc22d609dd" pname="a" oct="4"/>
                               <note xml:id="x67c27b0c-30db-43ed-96fa-e6323cfc474a" pname="a" oct="5"/>
                            </chord>
                            <chord xml:id="x8a898264-baa8-4d28-a28a-03e4cab98d85"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacciss">
                               
                               <note xml:id="x39b5f884-74c0-4f9c-bc4a-486583ad891f" pname="a" oct="4"/>
                               <note xml:id="xb3579e43-f96f-4df1-a473-4b05a29039b9" pname="a" oct="5"/>
@@ -27336,7 +27345,7 @@
                         <layer xml:id="xfea4041d-3262-42f0-8ed8-f671eb1d667b" n="1">
                            <chord xml:id="x6e2111c3-3440-42d7-a842-7b690a2bf871"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x00838b6a-4356-4563-8477-a88d0f23cdc0"
                                     pname="f"
@@ -27349,7 +27358,7 @@
                            </chord>
                            <chord xml:id="xbfd2ceae-50b2-4a25-917a-b25a45df6f47"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="xf0f95bd4-1be7-40b2-9aae-cf4b52c7e98c"
                                     pname="g"
@@ -27362,14 +27371,14 @@
                            </chord>
                            <chord xml:id="xef9a2d76-9d13-4856-b29a-0dd1e9c5cc6c"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x046e576b-6e72-4cc8-b256-73905d8279e6" pname="e" oct="2"/>
                               <note xml:id="x325e6462-84b9-4f6f-8253-98e23478f41b" pname="e" oct="3"/>
                            </chord>
                            <chord xml:id="xe711c0df-4a4e-458f-ba58-86e2f444b3be"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="xa5b076c3-04c5-4536-bd90-2aa1501c2ba5"
                                     pname="f"
@@ -27392,7 +27401,7 @@
                             place="above"/>
                      <dynam xml:id="xf4743625-2a16-4f40-95cb-67d9ca821fe0"
                             staff="1"
-                            tstamp="0.5"
+                            tstamp="1"
                             place="below">f</dynam>
                      <slur xml:id="x297f761a-4fee-4273-b147-867b5ad82846"
                            staff="1"
@@ -28021,14 +28030,14 @@
                            </chord>
                            <chord xml:id="x889fbe63-9118-454a-be4d-2f84eed6025f"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x87a86487-6dca-4271-8952-12fed190b754" pname="e" oct="4"/>
                               <note xml:id="xe37e6749-6272-4f5c-a937-b16b68154890" pname="e" oct="5"/>
                            </chord>
                            <chord xml:id="x45ea39f1-a453-4c29-b047-c42a0ac5c2b1"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="xc7acf7a9-1f8f-4dcd-ac5c-0a5635865bcf" pname="e" oct="4"/>
                               <note xml:id="xa98a016e-8564-4d91-b6fd-ce13cf2852d7" pname="e" oct="5"/>
@@ -28163,14 +28172,14 @@
                            </chord>
                            <chord xml:id="x5f92d296-8635-4442-aa62-c55835130e26"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x785ba138-cc2c-40af-82da-627d74bc1bdc" pname="a" oct="4"/>
                               <note xml:id="xdb48a14f-1b32-420d-9ee7-f76533dba706" pname="a" oct="5"/>
                            </chord>
                            <chord xml:id="x05b0fb90-9be7-4709-9a71-bc9ec11ad9fc"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x75a2a8d9-d056-4c82-b403-42807b814f79" pname="a" oct="4"/>
                               <note xml:id="x7ca463e9-88fd-4b22-b0a3-e0f0458e1522" pname="a" oct="5"/>
@@ -28286,28 +28295,28 @@
                         <layer xml:id="x1b131e4a-6938-4a32-8daf-a97d7e9b0847" n="1">
                            <chord xml:id="xd56c8b8d-0e0f-4006-afbc-27410c9a30f7"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x9eb339b2-1b15-4198-8f29-abc53159da65" pname="a" oct="4"/>
                               <note xml:id="x2d20e8ba-6776-48c9-ba09-eeac9e1f0c77" pname="a" oct="5"/>
                            </chord>
                            <chord xml:id="x95b80f52-fc05-456d-aa0a-0b63ae1e3c88"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x3c9a7826-5cb3-4fac-b38e-3ec27f1b7f6f" pname="a" oct="4"/>
                               <note xml:id="x92605cca-b79b-46da-add8-9663f6eaec64" pname="a" oct="5"/>
                            </chord>
                            <chord xml:id="xfaa94134-1213-4c76-ac97-d24ae67e711e"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x5d499eb8-b8c3-46dd-b060-eccb1fed7688" pname="a" oct="4"/>
                               <note xml:id="x211b3a98-f721-44ef-b71c-1c53d9a7cf67" pname="a" oct="5"/>
                            </chord>
                            <chord xml:id="xba8a30d2-7193-46d6-853e-ffa8dde040d3"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x2cea8f6b-4e62-42d8-90b9-59a288ac84ac" pname="a" oct="4"/>
                               <note xml:id="xfc286a50-e130-4803-81c2-f76e96f6e4c6" pname="a" oct="5"/>
@@ -28901,14 +28910,14 @@
                            </chord>
                            <chord xml:id="x87eb0783-4341-4782-a0fb-626e24d3d043"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x4a498324-7616-49b8-8c9d-58f867594ac3" pname="e" oct="4"/>
                               <note xml:id="x0639ecf5-4dbb-4e29-9530-686e02cd9eb3" pname="e" oct="5"/>
                            </chord>
                            <chord xml:id="x7179daaf-7d87-4299-9811-8a6e6d434a34"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="xd6d1b63d-b15c-4835-af61-83c8e48c439a" pname="e" oct="4"/>
                               <note xml:id="xaaa5d342-6cf2-4e85-be66-a1a72f394b44" pname="e" oct="5"/>
@@ -29166,7 +29175,7 @@
                         <layer xml:id="xca5e02e2-7ef7-498d-b6f6-7869fb3035e6" n="1">
                            <chord xml:id="x9df40f5f-c424-413b-80fc-c2d739d67146"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="xc02b005e-f792-4911-b74d-454550ba9a1c"
                                     pname="c"
@@ -29179,7 +29188,7 @@
                            </chord>
                            <chord xml:id="x6b0f6d29-043e-4bc3-99dd-72b6b353ab1a"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="xc2a184cf-775f-44a4-9479-5045985b5627"
                                     pname="c"
@@ -29192,7 +29201,7 @@
                            </chord>
                            <chord xml:id="x0c1946ae-81c7-434d-b351-b8c587e4699d"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="x631fdf3e-aa65-4a1f-a6cf-b8f485d44158"
                                     pname="c"
@@ -29205,7 +29214,7 @@
                            </chord>
                            <chord xml:id="x2bb5a8b9-e71b-432a-ac95-cb82654fb961"
                                   dur="4"
-                                  stem.dir="up">
+                                  stem.dir="up" artic="stacc">
                               
                               <note xml:id="xd993c08c-3f8c-490a-9335-7bbaf64e7ab1"
                                     pname="c"
@@ -29778,7 +29787,7 @@
                   <measure n="46" xml:id="xdffa8b5c-690c-4cb3-8371-e6f3b274d5bf">
                      <staff xml:id="x2cbdac6b-b83f-4b9c-93ed-6825341227ae" n="1">
                         <layer xml:id="x5fb9e745-a4cd-4df3-861f-3df8830b124a" n="1">
-                           <mRest xml:id="x1f470e03-0314-439b-8773-00e8b48344d9"/>
+                              <space xml:id="xc065f37a-6560-4c8e-8ca9-1f95130f2447" dur="1"/>
                         </layer>
                      </staff>
                      <staff xml:id="xb2988148-5959-409f-8653-22d0912c25c3" n="2">
@@ -29907,7 +29916,7 @@
                   <measure n="47" xml:id="x5a84e4ba-151f-4ff1-bfe1-0323f0e86d72">
                      <staff xml:id="xdbf5160a-6ffc-4e81-b4ec-0153af014355" n="1">
                         <layer xml:id="x32a55bcc-236a-43c7-bf98-1e0f8638cf55" n="1">
-                           <mRest xml:id="x9c6db704-4623-4d39-abc0-b83ee7923940"/>
+                              <space xml:id="xe901c0ea-b8a4-4aa6-8c77-1b2f8a55508a" dur="1"/>
                         </layer>
                      </staff>
                      <staff xml:id="xbf87d1a5-0071-4f6a-a0c4-f34cb0fd5baf" n="2">
@@ -30035,16 +30044,13 @@
                         </layer>
                      </staff>
                      <dynam xml:id="x54cc7e4d-8c95-425a-a76c-a777200f0c43"
-                            staff="1"
+                            staff="2"
                             tstamp="1"
-                            place="below">f</dynam>
+                            place="above">f</dynam>
                   </measure>
                   <measure n="48" xml:id="x7ead6ebc-12bd-481b-a5a4-eaabb0a548dc">
                      <staff xml:id="xdfe79edc-33c2-4860-9bf1-bb494caa4839" n="1">
-                        <layer xml:id="x7449c5cc-ae83-47b8-9436-3d5446f55120" n="1">
-                           <mRest xml:id="x5b3f7602-537b-47de-8fdc-9976f55d1009"/>
-                        </layer>
-                        <layer xml:id="x9bbd6207-f2dd-45df-b6a4-968a8f63263a" n="2">
+                        <layer xml:id="x9bbd6207-f2dd-45df-b6a4-968a8f63263a" n="1">
                            <space xml:id="xca88049d-965d-4c60-8c34-0602dccae2ed" dur="2"/>
                            <tuplet xml:id="x065aff75-7279-4d6b-9aa4-4b16024fb74d"
                                    numbase="2"
