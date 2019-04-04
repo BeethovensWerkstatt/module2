@@ -3760,7 +3760,7 @@
                                  oct="5"
                                  dur="4"
                                  stem.dir="up"
-                                 accid.ges="s"/>
+                                 accid.ges="s" artic="stacc"/>
                         </layer>
                         <layer xml:id="xbc3d82fa-9739-40b2-9b12-8667be6418fa" n="2">
                            <note xml:id="x83428dae-ef28-4f8e-a3ae-2f11d73bea01"
@@ -32201,7 +32201,7 @@
                   <measure n="66" xml:id="xfe746f88-a2ed-4e87-a103-828b209f142e">
                      <staff xml:id="x992d1a53-5b81-46a2-9246-4245ff72d852" n="1">
                         <layer xml:id="x3afd139a-e87f-4a02-9618-52eec6b59540" n="1">
-                           <mRest xml:id="xa0edc45e-353f-48a1-b9dc-462bb86f39d1"/>
+                              <space xml:id="x3075116a-5d80-467c-a2a6-0e18f2224747" dur="1"/>
                         </layer>
                      </staff>
                      <staff xml:id="x2d7ee497-33ae-4efb-953b-c223ef8d944b" n="2">
@@ -32313,9 +32313,9 @@
                         </layer>
                      </staff>
                      <dynam xml:id="x951c50ee-e520-4e02-9269-71dea2bce64d"
-                            staff="1"
+                            staff="2"
                             tstamp="1"
-                            place="below">p</dynam>
+                            place="above">p</dynam>
                   </measure>
                   <measure n="67" xml:id="x8ef2f269-c707-4d19-88c7-e630e971cfc3">
                      <staff xml:id="x620049e7-9faf-4195-a4ba-3f861c9a74d8" n="1">
