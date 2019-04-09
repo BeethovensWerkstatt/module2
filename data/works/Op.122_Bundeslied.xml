@@ -91,6 +91,7 @@
                <p n="8">corrections part 1 (Clarinetto I in B), part 2 (Clarinetto II in B), part 3 (Fagotto I), part 4 (Fagotto II) according to paper-proofreading.</p>
                <p n="9">corrections part 5 (Corni I in B), part 6 (Corni II in B), part 7 (Sologesang I), part 8 (Sologesang II) and part 9 (dreistimmiger Chor) according to paper-proofreading.</p>
                <p n="9">minor corrections. Key-Change-Test.</p>
+               <p n="9">All Clef-Changes (Fg I and II) which where encoded as separate staffDefs changed to clef-changes within the measures.</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -16766,7 +16767,7 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"/>
-                              <clef xml:id="u267555a6-a370-4431-920a-febe35ea4d78" line="4" shape="F" tstamp="3.5"/>
+                              <clef xml:id="u267555a6-a370-4431-920a-febe35ea4d78" line="4" shape="F" />
                            </layer>
                         </staff>
                         <dynam xml:id="x9fef7131-6aae-48cd-a5aa-0f1d4a68525e"
@@ -16784,10 +16785,6 @@
                            p
                         </dynam>
                      </measure>
-                     <staffDef xml:id="xf603ddd5-99fc-4c11-be1f-6cc5d2cb56a0"
-                               n="1"
-                               clef.line="4"
-                               clef.shape="F"/>
                      <measure n="20" xml:id="xd8c11b82-a28a-453b-99cc-bd53da132693">
                         <staff xml:id="x89681ad7-fea3-4e81-9279-3f8f44d860cd" n="1">
                            <layer xml:id="x78cb396b-a46a-4965-8fd6-07092a3101a1" n="1">
@@ -18167,6 +18164,7 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"/>
+                              <clef xml:id="u2c0957ed-13e8-4c4f-ad7c-76360f064f9b" line="4" shape="F"/>
                            </layer>
                         </staff>
                         <dynam xml:id="x1576c53d-4b15-4e50-aa30-99e92392971c"
@@ -18184,10 +18182,6 @@
                            p
                         </dynam>
                      </measure>
-                     <staffDef xml:id="xb8549232-2def-4cc4-97fd-9ca52d3fbb17"
-                               n="1"
-                               clef.line="4"
-                               clef.shape="F"/>
                      <measure n="60" xml:id="x4e5b96fc-68d9-48b6-b5ce-e63c8d4110e9">
                         <staff xml:id="x7cbfe93b-bb0a-4a54-a87c-44cf2e93535a" n="1">
                            <layer xml:id="x940829e1-ebf3-40f1-9cc5-3b972d38c38c" n="1">
@@ -19550,6 +19544,7 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"/>
+                              <clef xml:id="u2cc92343-0f77-4d6b-89fa-d9232b1f1311" line="4" shape="F"/>
                            </layer>
                         </staff>
                         <dynam xml:id="xa1c75a48-a1b4-4cd0-88ac-07c3311a2460"
@@ -19567,10 +19562,6 @@
                            p
                         </dynam>
                      </measure>
-                     <staffDef xml:id="xc08fbc3e-d860-4748-b8c6-3d969cc52770"
-                               n="1"
-                               clef.line="4"
-                               clef.shape="F"/>
                      <measure n="100" xml:id="xa57cbc42-29a7-4e3c-9f5b-c2e7bf1468da">
                         <staff xml:id="xe6b9fe14-d58f-4938-964f-e650cda8b5e4" n="1">
                            <layer xml:id="x23e99e33-bbeb-4033-84d7-457447794755" n="1">
@@ -20860,7 +20851,7 @@
                         <staff xml:id="x27689366-1154-44c0-9921-fbd4c40dce93" n="1">
                            <layer xml:id="xe1a4ea14-a0cf-4d26-83bc-5fd98398bffb" n="1">
                               <note xml:id="x9dfa4ea1-13ab-4db4-939b-487a7c6cb351"
-                                    pname="d"
+                                    pname="c"
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"/>
@@ -20925,13 +20916,10 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"/>
+                              <clef xml:id="udba91045-2694-42e1-9818-97a5cc237af6" line="4" shape="F"/>
                            </layer>
                         </staff>
                      </measure>
-                     <staffDef xml:id="xd143fc24-a272-47df-ad41-823c4a18d5e3"
-                               n="1"
-                               clef.line="4"
-                               clef.shape="F"/>
                      <measure n="140" xml:id="xaca00510-a252-4895-9176-69dddfe9a553">
                         <staff xml:id="x5a271fa0-7bc1-43be-a4fb-b95535b5f3b9" n="1">
                            <layer xml:id="x2dc77148-0ce5-49fb-ae3e-f2f406cab694" n="1">
@@ -22279,6 +22267,7 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"/>
+                              <clef xml:id="udbcad8d6-0791-4af7-ad46-c9f0dd426ca7" line="4" shape="F"/>
                            </layer>
                         </staff>
                         <dynam xml:id="x68006795-3af4-4b86-9724-cf804bfc8d7c"
@@ -22296,10 +22285,6 @@
                            p
                         </dynam>
                      </measure>
-                     <staffDef xml:id="xfb4851ac-c2a5-4bf3-87f4-98974333dbe9"
-                               n="1"
-                               clef.line="4"
-                               clef.shape="F"/>
                      <measure n="180" xml:id="xbe72aa94-1de3-49cc-8ad6-fd218e5fd572">
                         <staff xml:id="x6543b5bd-5dd8-49ee-aee0-0d262164cd63" n="1">
                            <layer xml:id="x2fd7cff6-2534-466a-98bd-78fa81788ee5" n="1">
@@ -24568,6 +24553,7 @@
                                     dur="4"
                                     stem.dir="down"
                                     accid.ges="f"/>
+                              <clef xml:id="uf952fa1d-3a14-4705-8cd1-70fffdc5e6c7" line="4" shape="F"/>
                            </layer>
                         </staff>
                         <dynam xml:id="xf3f19965-9a48-4340-ac30-36398b9afed2"
@@ -24585,10 +24571,6 @@
                            p
                         </dynam>
                      </measure>
-                     <staffDef xml:id="xbb806a58-edde-4ec2-baa1-b1587b88102f"
-                               n="1"
-                               clef.line="4"
-                               clef.shape="F"/>
                      <measure n="20" xml:id="x0c5e7d4d-f336-49a1-bdf0-50f96767e248">
                         <staff xml:id="x2009fca6-08bb-4b8a-899d-2bac9c1e58df" n="1">
                            <layer xml:id="xd805be30-56cf-4a3c-a73e-56f74d469456" n="1">
@@ -25992,6 +25974,7 @@
                                     dur="4"
                                     stem.dir="down"
                                     accid.ges="f"/>
+                              <clef xml:id="u99645e1c-5914-46d6-a343-ba962d0953c1" line="4" shape="F"/>
                            </layer>
                         </staff>
                         <dynam xml:id="xd705b472-908d-4233-b3e8-dc11e348192b"
@@ -26009,10 +25992,6 @@
                            p
                         </dynam>
                      </measure>
-                     <staffDef xml:id="xd8ed625d-64d8-4c69-808a-6d960833ce6a"
-                               n="1"
-                               clef.line="4"
-                               clef.shape="F"/>
                      <measure n="60" xml:id="x4a25f479-ebcf-42c8-a502-c5f574306fa2">
                         <staff xml:id="x72cbb9fa-2b06-4999-8058-13e9bbd3ea8c" n="1">
                            <layer xml:id="xe498c0ae-c2f9-47a6-8514-4b4a74b3cb82" n="1">
@@ -27417,6 +27396,7 @@
                                     dur="4"
                                     stem.dir="down"
                                     accid.ges="f"/>
+                              <clef xml:id="u91e49b7c-c9c8-484a-bdb0-8718cab7c363" line="4" shape="F"/>
                            </layer>
                         </staff>
                         <dynam xml:id="xdc5e04fd-bea6-4332-83a9-72529a0edb77"
@@ -27434,10 +27414,6 @@
                            p
                         </dynam>
                      </measure>
-                     <staffDef xml:id="xcf5387e3-79d5-493a-9b91-79785f47fada"
-                               n="1"
-                               clef.line="4"
-                               clef.shape="F"/>
                      <measure n="100" xml:id="x1b4250dd-09fc-43a3-800d-c9e881a542ab">
                         <staff xml:id="x06a7887a-356b-4c52-9e92-d59ce6de23e2" n="1">
                            <layer xml:id="x24fb4063-cb85-4af5-b58d-04bc82231a8d" n="1">
@@ -28834,6 +28810,7 @@
                                     dur="4"
                                     stem.dir="down"
                                     accid.ges="f"/>
+                              <clef xml:id="ud6483c8c-d8e1-451d-b325-2c62d55024b9" line="4" shape="F"/>
                            </layer>
                         </staff>
                         <dynam xml:id="xaf6515ec-1e28-4fe4-8ef9-188eb97fdae1"
@@ -28851,10 +28828,6 @@
                            p
                         </dynam>
                      </measure>
-                     <staffDef xml:id="x17e33d6a-0c30-4907-9d4f-cd7a3ea706f5"
-                               n="1"
-                               clef.line="4"
-                               clef.shape="F"/>
                      <measure n="140" xml:id="xb9f5a220-2093-413a-973f-529950882eb1">
                         <staff xml:id="xd45f3dab-0c74-45e4-9b9a-6197efc44850" n="1">
                            <layer xml:id="x08487cba-9ecb-44b8-a183-e8bf470c8e52" n="1">
@@ -30251,6 +30224,7 @@
                                     dur="4"
                                     stem.dir="down"
                                     accid.ges="f"/>
+                              <clef xml:id="u7a9f5f46-e0a1-448f-aadf-a82e6599585d" line="4" shape="F"/>
                            </layer>
                         </staff>
                         <dynam xml:id="x6a54b4cb-edae-4470-aeaa-76543c9706f0"
@@ -30268,10 +30242,6 @@
                            p
                         </dynam>
                      </measure>
-                     <staffDef xml:id="xb7fe0072-e3ca-4910-bf5f-80d9429cde08"
-                               n="1"
-                               clef.line="4"
-                               clef.shape="F"/>
                      <measure n="180" xml:id="x1663eca8-6539-4eb9-92cf-c679177dad87">
                         <staff xml:id="x5f67fa58-b36e-4985-9548-e9b393fe08e4" n="1">
                            <layer xml:id="xa8b4a41f-e67c-47ff-857f-4c40a3e5e88b" n="1">
