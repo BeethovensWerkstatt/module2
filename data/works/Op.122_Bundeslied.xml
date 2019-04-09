@@ -90,6 +90,7 @@
                <p n="7">corrected "Dreistimmiger Chor" to "dreistimmiger Chor"</p>
                <p n="8">corrections part 1 (Clarinetto I in B), part 2 (Clarinetto II in B), part 3 (Fagotto I), part 4 (Fagotto II) according to paper-proofreading.</p>
                <p n="9">corrections part 5 (Corni I in B), part 6 (Corni II in B), part 7 (Sologesang I), part 8 (Sologesang II) and part 9 (dreistimmiger Chor) according to paper-proofreading.</p>
+               <p n="9">minor corrections. Key-Change-Test.</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -411,13 +412,6 @@
                                staff="1">
                            f
                         </dynam>
-                        <dynam xml:id="xb2ac9947-f25d-4877-b23e-887ae22eb970"
-                               label="direction"
-                               tstamp="3"
-                               place="below"
-                               staff="1">
-                           sf
-                        </dynam>
                      </measure>
                      <measure n="10" xml:id="x565d1b21-fab6-4fa6-bc18-25c5ca0a15b8">
                         <staff xml:id="x7dff358f-bbcc-4295-947d-51b47bfc7b01" n="1">
@@ -436,6 +430,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
+                        <dynam xml:id="xb2ac9947-f25d-4877-b23e-887ae22eb970"
+                           label="direction"
+                           tstamp="1"
+                           place="below"
+                           staff="1">
+                           sf
+                        </dynam>
                         <dynam xml:id="xb06ef073-e7f8-4a7e-869f-b7f3d4980883"
                                label="direction"
                                tstamp="2.5"
@@ -16145,7 +16146,7 @@
                              place="above"
                              staff="1"
                              label="words">
-                           In rascher geschwinder Bewegung.
+                           In rascher geschwinder Bewegung
                         </dir>
                         <dynam xml:id="x6d99ec90-90c7-4c5f-9ec4-85fd737e3386"
                                tstamp="1"
@@ -16765,6 +16766,7 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"/>
+                              <clef xml:id="u267555a6-a370-4431-920a-febe35ea4d78" line="4" shape="F" tstamp="3.5"/>
                            </layer>
                         </staff>
                         <dynam xml:id="x9fef7131-6aae-48cd-a5aa-0f1d4a68525e"
@@ -23949,7 +23951,7 @@
                            place="above"
                            staff="1"
                            label="words">
-                           In rascher geschwinder Bewegung.
+                           In rascher geschwinder Bewegung
                         </dir>
                      </measure>
                      <measure n="1" xml:id="x98c3793b-8345-4e90-aa3f-3c6427badcc7">
@@ -31916,7 +31918,7 @@
                              place="above"
                              staff="1"
                              label="words">
-                           In rascher geschwinder Bewegung.
+                           In rascher geschwinder Bewegung
                         </dir>
                         <dynam xml:id="x700852f5-f947-4701-ab93-53f9999bd042"
                                tstamp="1"
@@ -37417,7 +37419,7 @@
                            place="above"
                            staff="1"
                            label="words">
-                           In rascher geschwinder Bewegung.
+                           In rascher geschwinder Bewegung
                         </dir>
                      </measure>
                      <measure n="1" xml:id="xbcd1cc12-596b-4cef-ba2a-04d8a1ebfe8a">
@@ -42893,7 +42895,7 @@
                              tstamp="1"
                              place="above"
                              staff="1">
-                           In rascher geschwinder Bewegung.
+                           In rascher geschwinder Bewegung
                         </dir>
                      </measure>
                      <measure n="1" xml:id="x68366c2a-315e-4c8e-87b7-7b593693d256">
@@ -48271,7 +48273,7 @@
                            tstamp="1"
                            place="above"
                            staff="1">
-                           In rascher geschwinder Bewegung.
+                           In rascher geschwinder Bewegung
                         </dir>
                      </measure>
                      <measure n="1" xml:id="x78ad6f76-fc83-4dd0-8fb8-fc0994607381">
@@ -48372,7 +48374,7 @@
                                  <verse xml:id="x71c72ef2-f2a2-4abd-bd26-f79435019de9" n="1">
                                     <syl xml:id="xd2d08742-6473-4cce-97e8-3b7c5baf2eaa"
                                          con="u"
-                                         halign="left">erhöt</syl>
+                                         halign="left">erhöht</syl>
                                  </verse>
                               </note>
                            </layer>
@@ -53785,7 +53787,7 @@
                            tstamp="1"
                            place="above"
                            staff="1">
-                           In rascher geschwinder Bewegung.
+                           In rascher geschwinder Bewegung
                         </dir>
                      </measure>
                      <measure n="1" xml:id="x891a71df-491f-4200-87b6-9e5eda081ef5">
