@@ -3083,10 +3083,6 @@
                            </beam>
                         </layer>
                      </staff>
-                     <slur xml:id="u040beeaf-38b3-4b33-b902-88ed27ffbaba"
-                        startid="#xb9ed025d-8e2e-4b6c-a21f-edc6022e0c5a"
-                        endid="#xe8c6253d-c414-415a-8dca-74bb1b29fbe5"
-                        curvedir="above"/> 
                      <staff xml:id="x12fade36-6b35-4ae9-97ca-6b42e4f060da" n="3">
                         <layer xml:id="x06a6e8dd-d716-4e3f-a855-533a81b08ac2" n="1">
                            <mRest xml:id="xe80bb401-f610-4300-aa11-3a6ae875745c" tstamp="1"/>
@@ -3193,21 +3189,25 @@
                             place="below"
                             staff="4"
                             tstamp="1">fp</dynam>
+                     <slur xml:id="u040beeaf-38b3-4b33-b902-88ed27ffbaba"
+                        startid="#xb9ed025d-8e2e-4b6c-a21f-edc6022e0c5a"
+                        endid="#x5a1d3bad-ff2d-4f7f-a3df-98de9208881a"
+                        curvedir="above"/> 
                      <slur xml:id="x258cdc7b-11f8-446f-a0b3-48590562aaf2"
                            startid="#x7e7cf0d3-870e-43d6-bd95-4948a31eb43f"
                            endid="#x5dff3caf-812a-4e67-8226-88ebdd990ec3"
-                           curvedir="above"/>
+                           curvedir="below"/>
                      <slur xml:id="x38355e5a-e968-4797-88a7-e598e11786b3"
-                           startid="#x7e7cf0d3-870e-43d6-bd95-4948a31eb43f"
-                           endid="#x5dff3caf-812a-4e67-8226-88ebdd990ec3"
+                        startid="#x172c15be-d533-46fd-af6d-dfd8b3027ac3"
+                        endid="#x99c4c995-c112-47e6-86e7-96fa05f21c0a"
                            curvedir="above"/>
                      <slur xml:id="x49d17cb3-19d6-4548-809f-87ae7b855d55"
                            startid="#xd4d11609-4e16-4144-9091-9976ca9822b9"
                            endid="#xcbf0a688-fc3c-47f3-9010-a759057bb19c"
-                           curvedir="above"/>
+                           curvedir="below"/>
                      <slur xml:id="xa90f231d-cf2a-431e-946b-836b7b4a851b"
-                           startid="#xd4d11609-4e16-4144-9091-9976ca9822b9"
-                           endid="#xcbf0a688-fc3c-47f3-9010-a759057bb19c"
+                        startid="#x3b6c8dee-7668-4972-b172-6980d0ddab8d"
+                        endid="#x7d595fbc-9f6c-4635-9bfb-fc7788c94f48"
                            curvedir="above"/>
                   </measure>
                   <measure xml:id="x0af8a788-9973-4bfd-bb0d-2bfb0e341432" n="23">
@@ -7080,7 +7080,7 @@
                      <slur xml:id="u190f6863-2cb2-4cd4-b034-703186bd4709"
                         startid="#xf3d6ab06-95b6-4c18-83c0-e1c2cbe5c773"
                         endid="#x55e4222a-3108-42fc-84d7-7a2e6ac86c7f"
-                        curvedir="above"/>
+                        curvedir="below"/>
                   </measure>
                   <measure xml:id="x33f468f2-5cb3-4cc2-a3b8-b763fd09f55d" n="51">
                      <staff xml:id="x065e2978-3a15-41fa-ba01-5c19bbe8c2a4" n="1">
@@ -10745,15 +10745,15 @@
                      <slur xml:id="x235af290-5bae-4fb5-835a-67ac1dde4df4"
                            startid="#x9defcf98-d662-45f7-98a5-719bb5fd4242"
                            endid="#x30aeb2e6-ccf8-4bab-8aae-b27ad4382b06"
-                           curvedir="above"/>
+                           curvedir="below"/>
                      <slur xml:id="x670105eb-5701-4f84-b7d5-3c67f62244a7"
                         startid="#x0225f5b0-e107-4df2-8321-1a5539749f12"
                         endid="#x06ac90ce-0e13-40b8-a18e-32925d1d1ec1"
-                           curvedir="below"/>
+                           curvedir="above"/>
                      <slur xml:id="x3d523c00-d3ba-42df-a2b2-2c439a180597"
                            startid="#x579a83bc-8e14-4159-9af7-703ee8a99080"
                            endid="#x8ecbc60b-0974-4e02-9b86-b272398062ae"
-                           curvedir="above"/>
+                           curvedir="below"/>
                      <slur xml:id="x5525c973-7153-4915-a577-ddf237d60171"
                         startid="#x4a8975d5-e67f-4a56-b9bc-684da4528635"
                         endid="#x2dfe3851-1ba8-4895-9567-c702db8b9488"
@@ -11627,12 +11627,12 @@
                               <note xml:id="x1c983d4e-f61c-4883-b8d4-1069a19d15fd"
                                     oct="3"
                                     pname="e"
-                                    accid="f"/>
+                                    accid.ges="f"/>
                               <note xml:id="x5c695846-fa65-4463-b2e4-166d114fabab" oct="3" pname="g"/>
                               <note xml:id="xb23db2e5-6c30-4fad-82ea-8e78e2ff1c66"
                                     oct="3"
                                     pname="b"
-                                    accid="f"/>
+                                    accid.ges="f"/>
                            </chord>
                            <chord xml:id="x46f8b196-c835-434d-bfe6-a57fa9806a2e"
                                   dur="4"
@@ -11732,11 +11732,11 @@
                               <note xml:id="x829df541-3546-4be4-abcd-06a7b359d0dc"
                                     oct="2"
                                     pname="e"
-                                    accid.ges="f"/>
+                                    accid="f"/>
                               <note xml:id="x83a8132a-a492-4038-997b-3f5e50b1a3cc"
                                     oct="3"
                                     pname="e"
-                                    accid.ges="f"/>
+                                    accid="f"/>
                            </chord>
                            <chord xml:id="xc1204a70-5840-4f1a-97bf-861bb282c31d"
                                   dur="4"
@@ -13132,7 +13132,7 @@
                                  stem.dir="down"
                                  tstamp="1">
                               <verse xml:id="xf269d77e-f3bb-4973-ab8f-2769e7057901" n="1">
-                                 <syl xml:id="x993a1df8-8b35-40a6-a34d-f3723f95e55d">drin.</syl>
+                                 <syl xml:id="x993a1df8-8b35-40a6-a34d-f3723f95e55d">drin?</syl>
                               </verse>
                            </note>
                            <note xml:id="x97f73fe7-a3e6-40b3-85ae-e545647490e5"
@@ -22473,10 +22473,10 @@
                      <slur xml:id="x0e63c65e-a203-4054-8444-77d678ea254c"
                            startid="#xacfd4964-03f2-403b-bfa6-3c3f2f8c9311"
                            endid="#xdb5174b8-b87a-46cb-a31a-6544676c08b8"
-                           curvedir="above"/>
+                           curvedir="below"/>
                      <slur xml:id="xa2138e94-18c0-4bbd-b0ac-4b453b0c85ff"
-                           startid="#xacfd4964-03f2-403b-bfa6-3c3f2f8c9311"
-                           endid="#xdb5174b8-b87a-46cb-a31a-6544676c08b8"
+                        startid="#xcd5048a0-33cb-4e3e-b7f7-ab1498f19cb8"
+                        endid="#x89620ccb-28a8-4916-9884-175944db947f"
                            curvedir="above"/>
                      <slur xml:id="xbcad0966-5039-401d-b87b-5c24f720edb0"
                            startid="#xbbe5a9fc-56fd-4aae-8f7f-8f81d113cdbd"
@@ -22485,10 +22485,10 @@
                      <slur xml:id="xec95d8a3-ae43-4ba5-b4a2-762efaccf230"
                            startid="#xcc4de2dc-fa6f-452e-8a1a-f15452c9a83f"
                            endid="#x62ad0463-f53e-4c6a-9459-8ca4420aa022"
-                           curvedir="above"/>
+                           curvedir="below"/>
                      <slur xml:id="x07d9eb35-01bc-4748-b48d-ba90be3760a1"
-                           startid="#xcc4de2dc-fa6f-452e-8a1a-f15452c9a83f"
-                           endid="#x62ad0463-f53e-4c6a-9459-8ca4420aa022"
+                        startid="#x57e11348-9554-48b1-bbe9-9743956e1d98"
+                        endid="#xd8da94e2-782c-4eea-a10a-6f271265c9f9"
                            curvedir="above"/>
                   </measure>
                   <measure xml:id="x2c259018-315c-4f5b-91e2-c059a22b0628" n="151">
