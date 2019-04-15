@@ -27567,6 +27567,10 @@
                               <multiRest xml:id="x4e062253-fe38-4cc0-bc88-0b4d74abc26d" n="2" num="2"/>
                            </layer>
                         </staff>
+                           <tempo xml:id="x947c9796-33e8-4d2b-a15f-843dcf85de22"
+                                 tstamp="1"
+                                 place="above"
+                                 staff="1">Allegretto</tempo>   
                      </measure>
                      <measure n="3" xml:id="x5dd15ef8-7302-4794-9b62-8ff3dc725591">
                         <staff xml:id="x078062ce-6d77-40dd-a6ff-e6dc3af0a1ad" n="1">
@@ -29210,6 +29214,11 @@
                               curvedir="below"
                               endid="#x49e8b2c0-b75b-461d-b913-f4a73d05fedf"
                               staff="1"/>
+                           <dir xml:id="xb7005544-ee4e-4afe-88f5-4e668073f9ff"
+                                 staff="1"
+                                 tstamp="1"
+                                 place="above">Maggiore.</dir>
+                           
                      </measure>
                      <measure n="64" xml:id="x5d41999e-c481-42dd-8bdc-3a6671590821">
                         <staff xml:id="xffeb2b6b-4835-4cab-bf6f-e16b08eb00ee" n="1">
@@ -29862,6 +29871,11 @@
                               curvedir="below"
                               endid="#xcdfd3b95-0b63-4e37-9020-f9e39f959601"
                               staff="1"/>
+                           <dir xml:id="xd6b64ac3-2c75-48db-a277-4c8821431463"
+                                 tstamp="1"
+                                 place="above"
+                                 staff="1">Coda.</dir>
+                           
                      </measure>
                      <measure n="102" xml:id="x3783e045-fb20-44f5-8253-b65cfd7dc7e2">
                         <staff xml:id="xd18003b1-80a4-4e48-b463-8635d5cafc8c" n="1">
@@ -30128,10 +30142,10 @@
                               <multiRest xml:id="x553926e6-b545-4c11-93a4-f1d0f5cacd8f" num="1"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x77f7f57e-f184-42e8-ae5f-d08aa74bc37e"
-                             tstamp="1"
-                             staff="1"
-                             label="Allegretto">Allegretto</dir>
+                           <tempo xml:id="x92bb0766-3c7b-4be5-993e-8d11854bc77d"
+                                 tstamp="1"
+                                 place="above"
+                                 staff="1">Allegretto</tempo>
                      </measure>
                      <measure n="2" xml:id="xb302ee27-8bb0-4dd1-b7fb-e44c3839693c">
                         <staff xml:id="xdcc29c1e-fd3d-4e24-9666-dff938157b98" n="1">
@@ -30347,7 +30361,7 @@
                            </layer>
                         </staff>
                         <dir xml:id="xb491c6f1-cefb-44f8-9408-db1871f6bcf8"
-                             tstamp="2"
+                             tstamp="3"
                              place="above"
                              staff="1">cres</dir>
                      </measure>
@@ -30383,11 +30397,11 @@
                           sf
                         </dynam>
                         <hairpin xml:id="xf36e1175-a697-46c8-9a30-703a471ce94b"
-                                 tstamp="1"
+                                 tstamp="0.9"
                                  place="above"
                                  staff="1"
                                  form="dim"
-                                 tstamp2="1m+3"/>
+                                 tstamp2="1m+2"/>
                         <slur xml:id="xbd4e0d80-51c6-424e-a894-26e8ce0cd1d3"
                               startid="#x97e7d661-016d-47df-b066-759173a5696d"
                               curvedir="above"
@@ -30527,7 +30541,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xcdf4e23f-2110-4253-a1cb-f6f671fb9be7"
-                               tstamp="4"
+                               tstamp="1"
                                place="below"
                                staff="1">
                           sf
@@ -30765,7 +30779,7 @@
                         <slur xml:id="xa786df72-bc9b-436a-a72a-bfce832724e9"
                               startid="#xe4776c40-6452-47ea-9fe5-cbb3e9271234"
                               curvedir="below"
-                              endid="#x770e8b98-843a-4b5c-ba22-8fa316173167"
+                              endid="#xfe60dafd-4f2f-481a-a5ed-5449a8c98369"
                               staff="1"/>
                      </measure>
                      <measure n="30" xml:id="xa39f47a4-a0ff-44cc-ada6-68e2c6ef16c8">
@@ -31160,7 +31174,7 @@
                              staff="1">cres</dir>
                         <slur xml:id="x43d9520d-3bc1-49f3-9bb7-ec2357e5db3d"
                               startid="#x2223c042-b76f-49c2-ab89-7a939360b33c"
-                              curvedir="above"
+                              curvedir="below"
                               endid="#xf3c0a088-20f5-4881-a59a-833140491357"
                               staff="1"/>
                      </measure>
@@ -31475,7 +31489,7 @@
                                     pname="c"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="down"/>
+                                    stem.dir="down" artic="stacc"/>
                               <beam xml:id="xbf745d64-8465-4838-a569-aa76cf71acc0">
                                  <note xml:id="xd5f7cd78-e6e4-48d4-8ba2-46f183029fb2"
                                        pname="d"
@@ -31517,7 +31531,7 @@
                                     pname="c"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="down"/>
+                                    stem.dir="down" artic="stacc"/>
                               <rest xml:id="xebb1b165-cccd-4255-af7c-71cc85771030" dur="4"/>
                               <rest xml:id="x2da53493-e5ac-4fdf-b2c7-dc84f32933ad" dur="4"/>
                            </layer>
@@ -31609,6 +31623,11 @@
                               curvedir="below"
                               endid="#x58abb410-c72d-4f47-af22-ecf937ef2a6d"
                               staff="1"/>
+                           <dir xml:id="x28e493e9-30a8-4b9d-b641-d264a2f45c60"
+                                 staff="1"
+                                 tstamp="1"
+                                 place="above">Maggiore</dir>
+                           
                      </measure>
                      <measure n="64" xml:id="x3c150a4b-9e29-42a2-99ca-6c89cae4d54c">
                         <staff xml:id="xcf4a5655-c14d-40d7-9fe5-e24ddf4b4eb2" n="1">
@@ -31794,9 +31813,14 @@
                         </staff>
                         <slur xml:id="x2cae07a8-25e2-4d13-875a-4cc71dcc5842"
                               startid="#x6e26b1b6-8cc3-4509-8c5d-07ea63c5c03e"
-                              curvedir="above"
+                              curvedir="below"
                               endid="#x38be8c35-09f7-4a8c-a414-c13f8317d1cc"
                               staff="1"/>
+                           <dir xml:id="xd59a79df-9fd5-42e5-a82b-0088a283302f"
+                                 tstamp="1.5"
+                                 place="below"
+                                 staff="1">cres</dir>
+                           
                      </measure>
                      <measure n="78"
                               xml:id="xd7962254-ccb9-468a-99f8-55e995302a2d"
@@ -31804,11 +31828,10 @@
                         <staff xml:id="x5a559016-4276-4e03-9ef3-f3c3576b6b8b" n="1">
                            <layer xml:id="xa705189e-a9cb-4743-ba6e-09fe27eae418" n="1">
                               <note xml:id="x279b505f-1a31-4476-80ee-5d5ec2db9f1a"
-                                    pname="g"
+                                    pname="g" accid="f"
                                     oct="3"
                                     dur="4"
-                                    stem.dir="up"
-                                    accid.ges="f"/>
+                                    stem.dir="up"/>
                               <note xml:id="x5be1c02e-4849-48a4-873f-dea7f91b3773"
                                     pname="f"
                                     oct="3"
@@ -31842,6 +31865,11 @@
                               curvedir="below"
                               endid="#xbfe2b9ef-7e9d-4860-846b-8797fa047c0c"
                               staff="1"/>
+                           <dynam xml:id="x95e1f1e3-c21b-4f65-9ff0-007c10824370"
+                                 tstamp="1"
+                                 place="above"
+                                 staff="1">p  </dynam>
+                           
                      </measure>
                      <measure n="80" xml:id="x9934da63-2d38-4ed7-931e-e9d890f7f06b">
                         <staff xml:id="xcaccfd37-cd0d-4cc7-9ea5-2975c13e1eb9" n="1">
@@ -32149,7 +32177,7 @@
                               endid="#xb2816d20-8a2a-4e15-ae5d-1acf2e7cf642"
                               staff="1"/>
                         <dir xml:id="xdb361a32-7eec-48cf-a02c-647dda39402e"
-                             tstamp="4"
+                             tstamp="3"
                              place="above"
                              staff="1">cres</dir>
                      </measure>
@@ -32185,15 +32213,15 @@
                            p
                         </dynam>
                         <slur xml:id="x2c47dde6-6db3-4e63-b6d5-c4c2572eed98"
-                              startid="#x3de51316-f77e-43c9-a301-dc05a90d9c95"
+                              startid="#x8483b1f1-4fb1-4afc-9f69-68af8156ec68"
                               curvedir="above"
-                              endid="#xf8aa581a-305c-45ff-ab56-893b4d31bb91"
+                              endid="#xc2a81f7d-7d63-4d18-a020-856a66316384"
                               staff="1"/>
-                        <slur xml:id="x5b4b8ba9-6f75-4a25-9813-81175d915da5"
-                              startid="#x3de51316-f77e-43c9-a301-dc05a90d9c95"
-                              curvedir="above"
-                              endid="#xf8aa581a-305c-45ff-ab56-893b4d31bb91"
-                              staff="1"/>
+                           <tie xml:id="x3107cab1-2820-4565-b12e-0f354d5699e2"
+                                 staff="1"
+                                 startid="#x3de51316-f77e-43c9-a301-dc05a90d9c95"
+                                 endid="#xf8aa581a-305c-45ff-ab56-893b4d31bb91"/>
+                           
                      </measure>
                      <measure n="100" xml:id="x3a0c1fc4-77fb-4f45-9077-49fd80759cb8" right="dbl">
                         <staff xml:id="x086dabab-a14d-484f-8bdf-a4ca93423ae4" n="1">
@@ -32403,6 +32431,12 @@
                              staff="1"
                              startid="#x14da0bc5-8d56-4d47-9039-db96b745bdc2"
                              endid="#x37a65d3e-18d9-4f51-bebf-4a52c8df88c9"/>
+                           <hairpin xml:id="x2bdc3ac4-7e03-4163-9556-df964e8784f7"
+                                 tstamp="2.5" tstamp2="1m+2"
+                                 place="above"
+                                 staff="1"
+                                 form="dim"/>
+                           
                      </measure>
                      <measure n="112" xml:id="x546ede2f-4cb6-4d63-995d-abd3d7cbdea1">
                         <staff xml:id="x9f65f477-1f4d-4386-837c-dfc5ba8b2e6e" n="1">
@@ -32433,7 +32467,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x280e4650-5f37-4be5-b5e1-d72e6b40fbac"
-                               tstamp="2"
+                               tstamp="1"
                                place="below"
                                staff="1">
                            p
