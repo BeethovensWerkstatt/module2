@@ -89,8 +89,9 @@
                   ensure data consistency; utilizing controlevent.fixer.xsl</p>
                <p n="5">convert tupletSpans to tuplets; utilizing convert.tupletSpan.xsl</p>
                <p n="6">corrections part 1, 2, 3, 4 and 5 according to paper-proofreading.</p>
-               <p n="7"> minor corrections (mainly slurs) from measure 1 to 185.</p>
-               <p n="8"> corrections (sextolen, slurs and staxx) from measure 185f., 197f. and 209f.</p>
+               <p n="7">minor corrections (mainly slurs) from measure 1 to 185.</p>
+               <p n="8">corrections (sextolen, slurs and staxx) from measure 185f., 197f. and 209f.</p>
+               <p n="9">corrections after paper-proofreading number 2.</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -26272,7 +26273,7 @@
                               <note xml:id="x263f6d47-cf8c-46fa-8109-b0460c2fff8b" oct="3" pname="f"/>
                            </chord>
                            <beam xml:id="x22241720-1ce9-450a-87fd-7a5cbc6e5158">
-                              <tuplet xml:id="xdcf1082b-0f8c-4f4e-b39f-569f703b8365" num="3" numbase="2" num.place.="above">
+                              <tuplet xml:id="xdcf1082b-0f8c-4f4e-b39f-569f703b8365" num="3" numbase="2" num.place="above">
                                  <note xml:id="xf8351aa1-14c1-4d49-8c5d-ad2e9317bb01"
                                        dur="8"
                                        oct="3"
