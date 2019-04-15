@@ -2713,7 +2713,7 @@
                                  stem.dir="up"
                                  tstamp="2"/>
                            <beam xml:id="xd195d174-e58d-4c0a-9357-c148f93d29c9">
-                              <tuplet xml:id="x0b33a14e-0a01-4c93-8c98-59906faa13fd" num="3" numbase="2">
+                              <tuplet xml:id="x0b33a14e-0a01-4c93-8c98-59906faa13fd" num="3" numbase="2" num.place="below">
                                  <note xml:id="x4656b2ef-b0a4-4740-9f17-34a5f9f2a396"
                                        dur="8"
                                        oct="4"
@@ -2766,7 +2766,7 @@
                               <note xml:id="x044a84d2-1253-4d0e-81c6-88307a88f5a1" oct="3" pname="f"/>
                            </chord>
                            <beam xml:id="x92085a89-0228-4870-9207-2d3b6c5609af">
-                              <tuplet xml:id="x26ca2ff7-815a-4ea8-91e8-0a6160a44c86" num="3" numbase="2">
+                              <tuplet xml:id="x26ca2ff7-815a-4ea8-91e8-0a6160a44c86" num="3" numbase="2" num.place="above">
                                  <note xml:id="xd46071cf-341c-4c9b-8172-5998059a7b11"
                                        dur="8"
                                        oct="3"
@@ -3195,14 +3195,15 @@
                         startid="#xb9ed025d-8e2e-4b6c-a21f-edc6022e0c5a"
                         endid="#x5a1d3bad-ff2d-4f7f-a3df-98de9208881a"
                         curvedir="above"/> 
+                     
+                     <slur xml:id="x38355e5a-e968-4797-88a7-e598e11786b3"
+                        startid="#x172c15be-d533-46fd-af6d-dfd8b3027ac3"
+                        endid="#x99c4c995-c112-47e6-86e7-96fa05f21c0a"
+                        curvedir="above" />
                      <slur xml:id="x258cdc7b-11f8-446f-a0b3-48590562aaf2"
                            startid="#x7e7cf0d3-870e-43d6-bd95-4948a31eb43f"
                            endid="#x5dff3caf-812a-4e67-8226-88ebdd990ec3"
                            curvedir="below"/>
-                     <slur xml:id="x38355e5a-e968-4797-88a7-e598e11786b3"
-                        startid="#x172c15be-d533-46fd-af6d-dfd8b3027ac3"
-                        endid="#x99c4c995-c112-47e6-86e7-96fa05f21c0a"
-                           curvedir="above"/>
                      <slur xml:id="x49d17cb3-19d6-4548-809f-87ae7b855d55"
                            startid="#xd4d11609-4e16-4144-9091-9976ca9822b9"
                            endid="#xcbf0a688-fc3c-47f3-9010-a759057bb19c"
@@ -3392,7 +3393,7 @@
                             staff="4"
                             tstamp="1">fp</dynam>
                   </measure>
-                  <!-- Hier wäre eine Systemklammer ab T. 144 vor Zz 4, die alle Gesänge als Chor zusammenfasst wie in der OA wünschenswert -->
+                  <!-- Hier wäre eine Systemklammer ab T. 24 vor Zz 4, die alle Gesänge als Chor zusammenfasst wie in der OA wünschenswert -->
                   <measure xml:id="x5441b549-8502-4ccb-85d2-5362ffefda64" n="24">
                      <staff xml:id="x4246a2d2-054f-4a46-a296-b04429fd692b" n="1">
                         <layer xml:id="x126ead8b-a7a5-4e1e-ac5d-c47ff21b44ad" n="1">
@@ -4325,7 +4326,7 @@
                                  stem.dir="up"
                                  tstamp="2"/>
                            <beam xml:id="x1e3d3f99-3248-47d6-941f-9405629bca67">
-                              <tuplet xml:id="xce8ecff8-5186-4137-8826-8bdba9ea5ca7" num="3" numbase="2">
+                              <tuplet xml:id="xce8ecff8-5186-4137-8826-8bdba9ea5ca7" num="3" numbase="2" num.place="below">
                                  <note xml:id="x60501156-8334-4d2c-bfd8-06009273bdab"
                                        dur="8"
                                        oct="4"
@@ -4369,7 +4370,7 @@
                                  stem.dir="down"
                                  tstamp="2"/>
                            <beam xml:id="x6f55b2e5-34fe-4bc0-a2a2-b9eee5bc5c4e">
-                              <tuplet xml:id="x20444a9d-76ca-499d-aff3-e0923f8870db" num="3" numbase="2">
+                              <tuplet xml:id="x20444a9d-76ca-499d-aff3-e0923f8870db" num="3" numbase="2" num.place="above">
                                  <note xml:id="x122831d9-a002-436c-b993-7ffe63f26600"
                                        dur="8"
                                        oct="3"
@@ -4625,7 +4626,7 @@
                                  stem.dir="down"
                                  tstamp="1">
                               <verse xml:id="x1bc0aba7-65e9-4cde-8db9-1fb7cfe2f150" n="1">
-                                 <syl xml:id="x40cf5eff-58a4-4f38-9dba-a9df4ad0d63a" con="u">Flammen,</syl>
+                                 <syl xml:id="x40cf5eff-58a4-4f38-9dba-a9df4ad0d63a" wordpos="i" con="d">Flam</syl>
                               </verse>
                            </note>
                            <note xml:id="x8d8f0a19-6a9d-4f25-8cb4-43e000c28d46"
@@ -4635,7 +4636,7 @@
                                  stem.dir="down"
                                  tstamp="2">
                               <verse xml:id="x17edb93c-6cc5-4935-9ccb-e77118c843c3" n="1">
-                                 <syl xml:id="x0b2127c3-a6eb-4f30-a84e-3867141825c9" con="u"/>
+                                 <syl xml:id="x0b2127c3-a6eb-4f30-a84e-3867141825c9" wordpos="t">men,</syl>
                               </verse>
                            </note>
                            <beam xml:id="x5918ae7f-17e9-4dec-8f02-1445d97f90a8">
@@ -4672,7 +4673,7 @@
                                  stem.dir="down"
                                  tstamp="1">
                               <verse xml:id="x0f102193-e3e4-4b00-8a1a-6adfdda85d65" n="1">
-                                 <syl xml:id="xe17a5c87-9ac7-4de4-930b-ae48d8733667" con="u">Flammen,</syl>
+                                 <syl xml:id="xe17a5c87-9ac7-4de4-930b-ae48d8733667" wordpos="i" con="d">Flam</syl>
                               </verse>
                            </note>
                            <note xml:id="x9df94c48-26a2-42a6-8293-a8553009369d"
@@ -4689,7 +4690,7 @@
                                  stem.dir="down"
                                  tstamp="2">
                               <verse xml:id="x57fb5914-c347-4d55-8496-5180264d1b6c" n="1">
-                                 <syl xml:id="xe4e7af51-bb83-4e84-9e91-65d803f17c72" con="u"/>
+                                 <syl xml:id="xe4e7af51-bb83-4e84-9e91-65d803f17c72" wordpos="t">men,</syl>
                               </verse>
                            </note>
                            <beam xml:id="x5ee94afb-6646-4d11-b3d0-444166442bd3">
@@ -4866,23 +4867,23 @@
                      <slur xml:id="xbbecab73-fb57-40f3-8644-8ce99d46567a"
                            startid="#xadd20a85-0dba-4b7b-a5d8-ce337ccb2f08"
                            endid="#xf75bbc60-4558-47d9-8ee8-9da9388efd3e"
-                           curvedir="above"/>
+                           curvedir="below"/>
                      <slur xml:id="x5b54c661-1afc-4940-a677-04f9db7b487d"
                         startid="#xa4fed481-6e1f-41fc-a883-da45fe8fff89"
                         endid="#xc62f4545-8e1e-42db-9f59-efe603de56a7"
-                           curvedir="below"/>
-                     <slur xml:id="x2ab39a0b-184c-4f12-ab44-4c20de553a7a"
-                           startid="#x0a51b782-50c9-4130-9032-cbe97150d580"
-                           endid="#x6ae372d6-91af-40bd-a1e5-853ad46a9a9d"
-                           curvedir="above"/>
-                     <slur xml:id="xf366960d-8d4b-426f-a2dc-1d868c861dbb"
-                        startid="#x0b6101d1-ce86-444c-9936-88f3e1eff95f"
-                        endid="#x0b7ee1b0-867d-422e-9b5c-f931915a0ddd"
-                           curvedir="above"/>
+                        curvedir="above"/>
                      <slur xml:id="xd441a7ef-d00e-4a4a-99c1-1437737151ab"
                         startid="#x2cbe2aa8-6fa3-4860-89bd-f367a7ca50b5"
                         endid="#x0b545d49-b73f-4b4a-a347-bbada7ccec91"
                         curvedir="above"/>
+                     <slur xml:id="x2ab39a0b-184c-4f12-ab44-4c20de553a7a"
+                           startid="#x0a51b782-50c9-4130-9032-cbe97150d580"
+                           endid="#x6ae372d6-91af-40bd-a1e5-853ad46a9a9d"
+                           curvedir="below"/>
+                     <slur xml:id="xf366960d-8d4b-426f-a2dc-1d868c861dbb"
+                        startid="#x0b6101d1-ce86-444c-9936-88f3e1eff95f"
+                        endid="#x0b7ee1b0-867d-422e-9b5c-f931915a0ddd"
+                           curvedir="above"/>
                   </measure>
                   <measure xml:id="x86cafefa-85cd-4f06-8657-3bfb089a13fa" n="31">
                      <staff xml:id="x4487571a-4b25-4068-afe9-aa61242c1df6" n="1">
@@ -8594,7 +8595,7 @@
                                  stem.dir="up"
                                  tstamp="2"/>
                            <beam xml:id="x120c2e07-5354-4db9-aa02-11b0d2c99495">
-                              <tuplet xml:id="x4d128b3e-5577-421f-bb40-37caa5bd8c9f" num="3" numbase="2">
+                              <tuplet xml:id="x4d128b3e-5577-421f-bb40-37caa5bd8c9f" num="3" numbase="2" num.place="below">
                                  <note xml:id="xee360cb7-8e97-4643-937e-1dc9e512a5a2"
                                        dur="8"
                                        oct="4"
@@ -8641,7 +8642,7 @@
                               <note xml:id="x415cc624-de09-472b-b292-5925044959bb" oct="3" pname="f"/>
                            </chord>
                            <beam xml:id="x199f2ba4-503d-4d3a-8bd4-9896b736f8b9">
-                              <tuplet xml:id="x40cd04aa-bff9-4e92-b7a3-0821b5be3482" num="3" numbase="2">
+                              <tuplet xml:id="x40cd04aa-bff9-4e92-b7a3-0821b5be3482" num="3" numbase="2" num.place="above">
                                  <note xml:id="x7a0c8cd8-cab1-4615-8dc4-e53a63e48a84"
                                        dur="8"
                                        oct="3"
@@ -9073,19 +9074,19 @@
                      <slur xml:id="x0d3d7c02-b9ab-4153-a766-1fd09f49a61d"
                            startid="#xc7075b8c-d839-40f9-a943-39b794f0b061"
                            endid="#xc9d89a64-c848-45d6-ade7-857e99029e42"
-                           curvedir="above"/>
+                           curvedir="below"/>
                      <slur xml:id="x8e190712-273e-4433-8880-a5722338c540"
                         startid="#xab4a9a5a-1ed6-49bb-9c13-b515e29cdcb0"
                         endid="#xb99ac7a3-1425-4386-85c6-57f112923846"
-                           curvedir="below"/>
+                           curvedir="above"/>
                      <slur xml:id="xf8c28f73-2ca4-4b4f-af0f-f481afd49873"
                            startid="#x7e044b44-8ed7-48a5-84fe-4d9157cd5185"
                            endid="#xb26ef1ae-0c87-42b6-aa78-d947705a82bd"
-                           curvedir="above"/>
+                           curvedir="below"/>
                      <slur xml:id="x6a686a1f-5090-409e-a710-c6cfb41d7cb9"
                         startid="#x3de4da58-7c26-4d00-97cc-7b940245af3d"
                         endid="#x24888d1e-5cfd-4ea8-bea5-2d274b96d8b3"
-                           curvedir="below"/>
+                           curvedir="above"/>
                   </measure>
                   <measure xml:id="x7ba09bae-8930-4931-ad6b-a66d96a435f3" n="63">
                      <staff xml:id="x6dc53370-0dcd-4c80-9f5b-8266ccf418d8" n="1">
@@ -9267,7 +9268,7 @@
                             staff="4"
                             tstamp="1">fp</dynam>
                   </measure>
-                  <!-- Hier wäre eine Systemklammer ab T. 144 vor Zz 4, die alle Gesänge als Chor zusammenfasst wie in der OA wünschenswert -->
+                  <!-- Hier wäre eine Systemklammer ab T. 64 vor Zz 4, die alle Gesänge als Chor zusammenfasst wie in der OA wünschenswert -->
                   <measure xml:id="xae2eb7e0-307c-4e45-a285-cc120e974fe4" n="64">
                      <staff xml:id="x1465d109-57b3-4dca-957b-f50210731605" n="1">
                         <layer xml:id="xc968212f-c5fc-4f08-a4ba-f92672972a69" n="1">
@@ -9620,8 +9621,8 @@
                                   dur="4"
                                   stem.dir="down"
                                   tstamp="2.5">
-                              <note xml:id="x1bc45f96-0777-4641-b4e1-4945e3db83b9" oct="4" pname="a"/>
-                              <note xml:id="xf286726b-28bd-4deb-b2b7-d46399b8b60b" oct="5" pname="c"/>
+                              <note xml:id="x1bc45f96-0777-4641-b4e1-4945e3db83b9" oct="4" pname="b"/>
+                              <note xml:id="xf286726b-28bd-4deb-b2b7-d46399b8b60b" oct="5" pname="d"/>
                            </chord>
                         </layer>
                      </staff>
@@ -10206,7 +10207,7 @@
                                  stem.dir="up"
                                  tstamp="2"/>
                            <beam xml:id="xfce857d9-d070-4998-9d37-844df4571609">
-                              <tuplet xml:id="x7642680c-3885-44ee-ac72-1f85de39b6be" num="3" numbase="2">
+                              <tuplet xml:id="x7642680c-3885-44ee-ac72-1f85de39b6be" num="3" numbase="2" num.place="below">
                                  <note xml:id="xab22b109-84aa-4335-baa4-98073ba03a73"
                                        dur="8"
                                        oct="4"
@@ -10250,7 +10251,7 @@
                                  stem.dir="down"
                                  tstamp="2"/>
                            <beam xml:id="xd4987153-035f-4e50-8a74-b21bb138f31e">
-                              <tuplet xml:id="xa3489b3e-0de7-464f-8afd-154fa98ea4e6" num="3" numbase="2">
+                              <tuplet xml:id="xa3489b3e-0de7-464f-8afd-154fa98ea4e6" num="3" numbase="2" num.place="above">
                                  <note xml:id="x393f3adf-d0e5-4e65-b17d-4ca55fadf70c"
                                        dur="8"
                                        oct="3"
@@ -10751,7 +10752,11 @@
                      <slur xml:id="x670105eb-5701-4f84-b7d5-3c67f62244a7"
                         startid="#x0225f5b0-e107-4df2-8321-1a5539749f12"
                         endid="#x06ac90ce-0e13-40b8-a18e-32925d1d1ec1"
-                           curvedir="above"/>
+                        curvedir="above"/>
+                     <slur xml:id="u689975c5-db0e-46ff-8628-e027ab934bbf"
+                        startid="#x691a0149-b034-40d7-8882-8c460dc67242"
+                        endid="#x64838719-d35f-486b-b9a0-22c476eaee02"
+                        curvedir="above"/>
                      <slur xml:id="x3d523c00-d3ba-42df-a2b2-2c439a180597"
                            startid="#x579a83bc-8e14-4159-9af7-703ee8a99080"
                            endid="#x8ecbc60b-0974-4e02-9b86-b272398062ae"
@@ -13134,6 +13139,7 @@
                                  stem.dir="down"
                                  tstamp="1">
                               <verse xml:id="xf269d77e-f3bb-4973-ab8f-2769e7057901" n="1">
+                                 <!-- Das folgende Fragezeichen ist in der OA ein vertikal gespiegeltes Fragezeichen, dass in der Codierung als Fragezeichen interpretiert wurde -->
                                  <syl xml:id="x993a1df8-8b35-40a6-a34d-f3723f95e55d">drin?</syl>
                               </verse>
                            </note>
@@ -13159,6 +13165,7 @@
                                  stem.dir="up"
                                  tstamp="1">
                               <verse xml:id="x19a068b4-f5ae-4359-be7d-57a76732cf6c" n="1">
+                                 <!-- Das folgende Fragezeichen ist in der OA ein vertikal gespiegeltes Fragezeichen, dass in der Codierung als Fragezeichen interpretiert wurde -->
                                  <syl xml:id="xe88a5477-e844-4b27-a73a-764dc22550c6">drin?</syl>
                               </verse>
                            </note>
@@ -14439,7 +14446,7 @@
                            <note xml:id="x93f9b551-bbf3-47d8-9c69-f7fbf3d59ea1"
                                  dur="4"
                                  oct="4"
-                                 pname="d"
+                                 pname="f"
                                  stem.dir="up"
                                  tstamp="2.5">
                               <verse xml:id="xeb6c1e9c-ca65-4a30-a92a-b9754c31fa41" n="1">
@@ -14475,7 +14482,7 @@
                                  stem.dir="up"
                                  tstamp="2"/>
                            <beam xml:id="x85551265-69c7-4466-a6c6-07861ec1a6d2">
-                              <tuplet xml:id="x74a68e0d-2d48-49c1-ad8a-1f63df0a0bb4" num="3" numbase="2">
+                              <tuplet xml:id="x74a68e0d-2d48-49c1-ad8a-1f63df0a0bb4" num="3" numbase="2" num.place="below">
                                  <note xml:id="xb78cc4a5-42c3-4d1f-a104-ba9f4da252da"
                                        dur="8"
                                        oct="4"
@@ -14522,7 +14529,7 @@
                               <note xml:id="xa9c98e92-645e-4fe4-b3c1-7fd40e093033" oct="3" pname="f"/>
                            </chord>
                            <beam xml:id="x87bd5937-129d-45fb-9d6f-888e33d73eb3">
-                              <tuplet xml:id="x38dc8886-07dc-4d3f-bbc9-3f1ac4ff7b7e" num="3" numbase="2">
+                              <tuplet xml:id="x38dc8886-07dc-4d3f-bbc9-3f1ac4ff7b7e" num="3" numbase="2" num.place="below">
                                  <note xml:id="xd1861d70-7a80-46bf-85f3-b8cdc719328c"
                                        dur="8"
                                        oct="3"
@@ -15050,7 +15057,7 @@
                            <note xml:id="x228c03af-0bac-485d-9933-11819f8cd1bd"
                                  dur="4"
                                  oct="4"
-                                 pname="a"
+                                 pname="f"
                                  stem.dir="up"
                                  tstamp="2.5">
                               <verse xml:id="x4593ef8b-d899-4171-ac7d-8dee38c38c64" n="1">
@@ -15148,7 +15155,7 @@
                             staff="4"
                             tstamp="1">fp</dynam>
                   </measure>
-                  <!-- Hier wäre eine Systemklammer ab T. 144 vor Zz 4, die alle Gesänge als Chor zusammenfasst wie in der OA wünschenswert -->
+                  <!-- Hier wäre eine Systemklammer ab T. 104 vor Zz 4, die alle Gesänge als Chor zusammenfasst wie in der OA wünschenswert -->
                   <measure xml:id="x72491fc2-afd4-4e5c-a96e-6c2cf3b7a495" n="104">
                      <staff xml:id="x0f105002-895e-4790-a24b-f443c8180711" n="1">
                         <layer xml:id="x89ef0f8c-5472-4324-add8-4ad1fee8e981" n="1">
@@ -15181,7 +15188,7 @@
                            <note xml:id="x11677ddb-85f8-4877-91b5-470230926efd"
                                  dur="2"
                                  oct="4"
-                                 pname="g"
+                                 pname="d"
                                  stem.dir="up"
                                  tstamp="1">
                               <verse xml:id="x301a48d8-801e-41c3-b1d8-6c9eccaf7a20" n="1">
@@ -15747,6 +15754,10 @@
                                  tstamp="2.5"/>
                         </layer>
                      </staff>
+                     <slur xml:id="ub5168dfe-f1d2-4518-8d93-6608345dc568"
+                        startid="#xe6fc150c-625c-4d85-95c8-83c32c8ac23f"
+                        endid="#xb7e96ea7-26a8-4770-8688-027d378f941f"
+                        curvedir="below"/>
                      <slur xml:id="xa11b25ef-31a7-48d5-acd8-ce9f23fc895c"
                            startid="#xd0ae8a06-b657-4a06-b437-31a5e4b869c6"
                            endid="#x3c38ffa1-a7a2-4820-a068-8b212b783926"
@@ -16082,7 +16093,7 @@
                                  stem.dir="up"
                                  tstamp="2"/>
                            <beam xml:id="xd941a16e-1905-4e0b-836a-58a515d9b971">
-                              <tuplet xml:id="x3fff5a1e-f5f5-4d40-8830-d262259d198c" num="3" numbase="2">
+                              <tuplet xml:id="x3fff5a1e-f5f5-4d40-8830-d262259d198c" num="3" numbase="2" num.place="below">
                                  <note xml:id="x7f4d4755-fc67-4322-be67-318f2f4d3023"
                                        dur="8"
                                        oct="4"
@@ -16126,7 +16137,7 @@
                                  stem.dir="down"
                                  tstamp="2"/>
                            <beam xml:id="x277b6d8b-1c1a-461d-9820-e82f908f710f">
-                              <tuplet xml:id="xdc3bf94e-1e37-4daf-bbb7-ae07720b842d" num="3" numbase="2">
+                              <tuplet xml:id="xdc3bf94e-1e37-4daf-bbb7-ae07720b842d" num="3" numbase="2" num.place="above">
                                  <note xml:id="x6339d583-d737-4b79-abf6-46722ae70cc1"
                                        dur="8"
                                        oct="3"
@@ -16682,7 +16693,7 @@
                                  stem.dir="down"
                                  tstamp="2.5">
                               <verse xml:id="xf268c03d-9681-420c-ba60-e878fdf2493c" n="1">
-                                 <syl xml:id="x50d0e503-b560-4338-a181-e118aca62d5e" con="u">gestört.</syl>
+                                 <syl xml:id="x50d0e503-b560-4338-a181-e118aca62d5e" wordpos="i" con="d">ge</syl>
                               </verse>
                            </note>
                         </layer>
@@ -16723,11 +16734,11 @@
                            <note xml:id="xba709feb-b501-4262-b86a-60d9a8d84d62"
                                  dur="4"
                                  oct="4"
-                                 pname="a"
+                                 pname="f"
                                  stem.dir="up"
                                  tstamp="2.5">
                               <verse xml:id="xd3be8a38-9b0d-40c5-9979-c0ef9d28ceed" n="1">
-                                 <syl xml:id="x13c0a8d4-c1a9-495d-b841-c7d6e8c57475" con="u">gestörst.</syl>
+                                 <syl xml:id="x13c0a8d4-c1a9-495d-b841-c7d6e8c57475" wordpos="i" con="d">ge</syl>
                               </verse>
                            </note>
                         </layer>
@@ -16873,7 +16884,7 @@
                                  stem.dir="down"
                                  tstamp="1">
                               <verse xml:id="x2c005b46-fdab-4089-832b-f5d9e4baa353" n="1">
-                                 <syl xml:id="x2bba460c-e7ad-450f-bf2c-e1e681afcf11" con="u"/>
+                                 <syl xml:id="x2bba460c-e7ad-450f-bf2c-e1e681afcf11" wordpos="t">stört.</syl>
                               </verse>
                            </note>
                            <rest xml:id="x35fc091b-deca-4ff4-a8bd-511898cb0de4" dur="2" tstamp="2"/>
@@ -16888,7 +16899,7 @@
                                  stem.dir="up"
                                  tstamp="1">
                               <verse xml:id="x6035cc31-583d-46b0-8198-7638f9ca2c7f" n="1">
-                                 <syl xml:id="xf3a3d03a-d011-44ac-bbe2-29aaa37c135b" con="u"/>
+                                 <syl xml:id="xf3a3d03a-d011-44ac-bbe2-29aaa37c135b" wordpos="t">stört.</syl>
                               </verse>
                            </note>
                            <rest xml:id="x3a66b75f-314e-43d7-a624-4dbb7db98cea" dur="2" tstamp="2"/>
@@ -17081,6 +17092,10 @@
                            </chord>
                         </layer>
                      </staff>
+                     <dynam xml:id="u518f1273-b089-4f46-9053-6a97786ad659"
+                        place="below"
+                        staff="4"
+                        tstamp="1">sf</dynam>
                   </measure>
                   <measure xml:id="xd0878d52-dacf-4866-81f1-e6fe7438d674" n="114">
                      <staff xml:id="x1e9c5e0a-05f1-495b-ac1d-f7b39804e06b" n="1">
@@ -17828,7 +17843,7 @@
                      <dynam xml:id="uffcb74ec-55fc-44c3-85a4-125be1864e87"
                         place="below"
                         staff="4"
-                        tstamp="2">p</dynam>
+                        tstamp="1.5">p</dynam>
                   </measure>
                   <measure xml:id="xa58e2415-dd42-452b-9ebe-5ec27ae31b1c" n="121">
                      <staff xml:id="xa389ce8b-1bba-4771-b9ae-69d7f159595e" n="1">
@@ -20331,7 +20346,7 @@
                                  stem.dir="up"
                                  tstamp="2"/>
                            <beam xml:id="xa939e8a2-3370-4523-9992-1ec78bc2427c">
-                              <tuplet xml:id="x78702b9e-5e0b-4ff8-8692-d082568750d1" num="3" numbase="2">
+                              <tuplet xml:id="x78702b9e-5e0b-4ff8-8692-d082568750d1" num="3" numbase="2" num.place="below">
                                  <note xml:id="xa84d734c-a194-4b61-a7d7-171421c038fd"
                                        dur="8"
                                        oct="4"
@@ -20378,7 +20393,7 @@
                               <note xml:id="x66b799f9-8a50-4a79-9362-04ea0a8121cc" oct="3" pname="f"/>
                            </chord>
                            <beam xml:id="x39d45b7b-93df-42a9-bd0b-b82335fceca7">
-                              <tuplet xml:id="x3ae650b2-ab15-43e6-8572-fbe24b26cde3" num="3" numbase="2">
+                              <tuplet xml:id="x3ae650b2-ab15-43e6-8572-fbe24b26cde3" num="3" numbase="2" num.place="above">
                                  <note xml:id="x5fded2a6-4cab-4d52-ab7b-b16f35a0dc4b"
                                        dur="8"
                                        oct="3"
@@ -20810,18 +20825,18 @@
                      <slur xml:id="x9ad60d35-1624-4e98-bbad-8c373301e2de"
                            startid="#x07e88a86-0084-4b75-a66b-631dce1e95c2"
                            endid="#x7f9dfc49-26ab-4e9f-8563-8768239b163c"
-                           curvedir="above"/>
+                           curvedir="below"/>
                      <slur xml:id="xc1ab439f-6deb-4dba-a9c6-580fb7af5e86"
-                           startid="#x07e88a86-0084-4b75-a66b-631dce1e95c2"
-                           endid="#x7f9dfc49-26ab-4e9f-8563-8768239b163c"
+                        startid="#x6a472faa-c47b-4e7a-a66c-897a7253caa8"
+                        endid="#xa04b0f8f-e9d5-45fb-8b6f-f49db4c62682"
                            curvedir="above"/>
                      <slur xml:id="xca540c54-2190-4bf3-90c6-b53898d65baf"
                            startid="#x842a826c-d250-4e12-baee-2faf5396db75"
                            endid="#xf39f52d4-cc4f-4a19-8671-870e8ee840e2"
-                           curvedir="above"/>
+                           curvedir="below"/>
                      <slur xml:id="x9a39fd17-cfb5-457d-9786-27f82df69b32"
-                           startid="#x842a826c-d250-4e12-baee-2faf5396db75"
-                           endid="#xf39f52d4-cc4f-4a19-8671-870e8ee840e2"
+                        startid="#x2ee244ce-85e1-44bc-b064-871d178d13e6"
+                        endid="#x057d9384-e4cb-49c8-87e5-480dbb809011"
                            curvedir="above"/>
                   </measure>
                   <measure xml:id="x2616d651-16cc-462e-8494-d71154122c1b" n="143">
@@ -21595,6 +21610,10 @@
                                  tstamp="2.5"/>
                         </layer>
                      </staff>
+                     <slur xml:id="ue058b9d7-e84c-408d-a154-08b7717f25a5"
+                        startid="#x516f304c-b4dc-4310-815c-6f7a8540b731"
+                        endid="#x823e9e38-0c20-44fd-ad24-aa1e5b2e0e06"
+                        curvedir="below"/>
                      <slur xml:id="xf6923fc3-8a27-4f5d-84ac-bd0b6b1295e5"
                            startid="#xc3093a2b-2877-412a-9a91-1b45191efd68"
                            endid="#xc43db4ed-7063-4585-8352-0dca1cddf574"
@@ -21934,7 +21953,7 @@
                                  stem.dir="up"
                                  tstamp="2"/>
                            <beam xml:id="x2e1e3f12-b446-406c-ab50-30eaac146d2b">
-                              <tuplet xml:id="x428e8431-95b3-43ea-a5f2-20c6a893c3eb" num="3" numbase="2">
+                              <tuplet xml:id="x428e8431-95b3-43ea-a5f2-20c6a893c3eb" num="3" numbase="2" num.place="below">
                                  <note xml:id="xa560be51-5a13-4980-a7f7-80b58a9b87b1"
                                        dur="8"
                                        oct="4"
@@ -21978,7 +21997,7 @@
                                  stem.dir="down"
                                  tstamp="2"/>
                            <beam xml:id="xea684b63-8ee0-4a7c-84be-8da5a86e570c">
-                              <tuplet xml:id="xe4305cfb-6cb1-4d4e-a5e1-455077d35895" num="3" numbase="2">
+                              <tuplet xml:id="xe4305cfb-6cb1-4d4e-a5e1-455077d35895" num="3" numbase="2" num.place="above">
                                  <note xml:id="x885ba48a-a2fb-4e48-b9b0-198f9e091218"
                                        dur="8"
                                        oct="3"
@@ -26206,7 +26225,7 @@
                                  stem.dir="up"
                                  tstamp="2"/>
                            <beam xml:id="xa47dc391-4165-403b-9781-854bd21d9126">
-                              <tuplet xml:id="xc35c0401-5083-42cb-b39f-069c6adcf3e0" num="3" numbase="2">
+                              <tuplet xml:id="xc35c0401-5083-42cb-b39f-069c6adcf3e0" num="3" numbase="2" num.place="below">
                                  <note xml:id="x0e23426a-7c8a-4416-9a4d-664ceba3f98f"
                                        dur="8"
                                        oct="4"
@@ -26253,7 +26272,7 @@
                               <note xml:id="x263f6d47-cf8c-46fa-8109-b0460c2fff8b" oct="3" pname="f"/>
                            </chord>
                            <beam xml:id="x22241720-1ce9-450a-87fd-7a5cbc6e5158">
-                              <tuplet xml:id="xdcf1082b-0f8c-4f4e-b39f-569f703b8365" num="3" numbase="2">
+                              <tuplet xml:id="xdcf1082b-0f8c-4f4e-b39f-569f703b8365" num="3" numbase="2" num.place.="above">
                                  <note xml:id="xf8351aa1-14c1-4d49-8c5d-ad2e9317bb01"
                                        dur="8"
                                        oct="3"
@@ -26465,10 +26484,6 @@
                            </chord>
                         </layer>
                      </staff>
-                     <dynam xml:id="x72c79114-774f-4a01-b230-c3b843e23321"
-                            place="below"
-                            staff="4"
-                            tstamp="1">fp</dynam>
                   </measure>
                   <measure xml:id="x532c998f-b63b-4846-a92d-65857893897f" n="182">
                      <staff xml:id="x86f58613-a24a-4804-832c-5aa1af6ab044" n="1">
@@ -26686,15 +26701,7 @@
                            startid="#x28ac1339-f682-41d7-83ae-040359005ddb"
                            endid="#x84c16e8e-69cb-4399-bb99-59c4af130aee"
                            curvedir="above"/>
-                     <slur xml:id="x0ff7aff6-9ef9-4ee1-a209-9992b5a87fb5"
-                           startid="#x28ac1339-f682-41d7-83ae-040359005ddb"
-                           endid="#x84c16e8e-69cb-4399-bb99-59c4af130aee"
-                           curvedir="above"/>
                      <slur xml:id="x3989310d-02f1-412a-ba45-cc6fec61537c"
-                           startid="#xb34a339d-c6b9-4308-b4d4-b5706992ed31"
-                           endid="#x309fb654-46f7-4ec1-9cfc-806759677d90"
-                           curvedir="above"/>
-                     <slur xml:id="x89811ac6-43b0-4305-9c9e-aba0a0c16621"
                            startid="#xb34a339d-c6b9-4308-b4d4-b5706992ed31"
                            endid="#x309fb654-46f7-4ec1-9cfc-806759677d90"
                            curvedir="above"/>
@@ -27062,8 +27069,11 @@
                            </chord>
                         </layer>
                      </staff>
+                     <dynam xml:id="ueb8572df-1719-47ba-9eea-016696cc9e12"
+                        place="below"
+                        staff="4"
+                        tstamp="1">fp</dynam>
                   </measure>
-                  
                   <measure xml:id="xabb8b9e7-d756-4c52-bfda-8b0edc89e508" n="185">
                      <staff xml:id="x389b7567-c837-4a01-b3f8-422bbf9b7832" n="1">
                         <layer xml:id="xd574c6d3-4c68-4983-b476-dd51db1484b8" n="1">
@@ -27891,7 +27901,7 @@
                             staff="4"
                             tstamp="1">fp</dynam>
                   </measure>
-                  <!-- Hier wäre eine Systemklammer ab T. 144 vor Zz 4, die alle Gesänge als Chor zusammenfasst wie in der OA wünschenswert -->
+                  <!-- Hier wäre eine Systemklammer ab T. 188 vor Zz 4, die alle Gesänge als Chor zusammenfasst wie in der OA wünschenswert -->
                   <measure xml:id="x6242c93b-e31d-4a67-a534-f55f3717d4df" n="188">
                      <staff xml:id="x112a26af-bdb5-43bd-9edc-ba9f4152db21" n="1">
                         <layer xml:id="x6bd57882-c1a2-4d72-a151-9a4b45edd75b" n="1">
@@ -28824,7 +28834,7 @@
                                  stem.dir="up"
                                  tstamp="2"/>
                            <beam xml:id="xfae5e379-dff2-4565-a599-ba1ad32427bc">
-                              <tuplet xml:id="xddae2f87-c31c-4070-b6dd-580511c01d91" num="3" numbase="2">
+                              <tuplet xml:id="xddae2f87-c31c-4070-b6dd-580511c01d91" num="3" numbase="2" num.place="below">
                                  <note xml:id="xc0a8c42c-b110-4e15-bfff-563665fb3ceb"
                                        dur="8"
                                        oct="4"
@@ -28868,7 +28878,7 @@
                                  stem.dir="down"
                                  tstamp="2"/>
                            <beam xml:id="x5b25018d-5988-47de-a9d6-576c8fea9a23">
-                              <tuplet xml:id="x20d1dab0-2b38-4646-90f2-9b889df0e3fa" num="3" numbase="2">
+                              <tuplet xml:id="x20d1dab0-2b38-4646-90f2-9b889df0e3fa" num="3" numbase="2" num.place="above">
                                  <note xml:id="x17bf884b-6d38-469e-b1ea-88bedea3f2ed"
                                        dur="8"
                                        oct="3"
@@ -29354,6 +29364,14 @@
                            </chord>
                         </layer>
                      </staff>
+                     <slur xml:id="ud6bb4794-3d55-4455-ba5f-ab4226109074"
+                        startid="#xbc3cc5d0-5828-447a-8323-0ac84331b58d"
+                        endid="#x0a7d2510-0e3a-47f2-b15c-869bb2e230c9"
+                        curvedir="above"/>
+                     <slur xml:id="uf1f08f58-4377-484c-8bd0-5651bffee822"
+                        startid="#x92fcd424-3673-476d-8a56-261a154b50aa"
+                        endid="#x7288181a-14ba-4c88-baf5-1aa52619a93b"
+                        curvedir="above"/>
                      <slur xml:id="x1a68fb2c-27ab-4ced-bbf8-332b2fcf2ff1"
                            startid="#x82b3226f-b8db-48f0-afd7-23ad06bdc9e1"
                            endid="#x36f0b1dd-6d6a-4935-a467-dfd532b3fcb6"
@@ -29365,7 +29383,7 @@
                      <slur xml:id="xd5d251f5-0a7c-4b6d-bdeb-fe1ec1b12670"
                            startid="#x90c4ebf0-3624-4c39-9678-2a7657d25706"
                            endid="#xb7040989-b10c-4fbb-a5b7-dac484e0b044"
-                           curvedir="below"/>
+                           curvedir="above"/>
                      <slur xml:id="xce081c26-f35a-43c5-bcda-7b2692bae1d8"
                            startid="#x2559a616-ece7-4a2e-90f7-17b411bd5d23"
                            endid="#xf34dda5f-12b9-4251-8c35-8411795a036e"
@@ -29658,7 +29676,7 @@
                            <note xml:id="x589bb167-cd08-4644-b478-0c42ffcd0d6a"
                                  dur="4"
                                  oct="5"
-                                 pname="d"
+                                 pname="c"
                                  stem.dir="down"
                                  tstamp="2.5">
                               <verse xml:id="x0e3f1bd9-7e1a-40d0-ab66-8b5c53e2e73e" n="1">
@@ -31273,6 +31291,7 @@
                               <note xml:id="xba548554-0766-4913-a9b7-e81b3170e4d6" oct="6" pname="d"/>
                            </chord>
                            <rest xml:id="x2c0a455d-512d-4236-9800-6f0ed0b44455" dur="8" tstamp="1.5"/>
+                           <!-- Der folgende Akkord scheint fehlerhaft zu sein, steht aber tatsächlich so in der OA. -->
                            <chord xml:id="x992f70fb-a9c9-44e7-a990-ead914cb618f"
                                   dur="8"
                                   stem.dir="down"
