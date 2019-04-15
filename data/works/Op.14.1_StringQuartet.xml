@@ -30397,7 +30397,7 @@
                           sf
                         </dynam>
                         <hairpin xml:id="xf36e1175-a697-46c8-9a30-703a471ce94b"
-                                 tstamp="0.9"
+                                 tstamp="1"
                                  place="above"
                                  staff="1"
                                  form="dim"
@@ -32553,11 +32553,15 @@
                           p
                         </dynam>
                         <dir xml:id="x4ae53a0b-06b3-43c4-90e2-0e46e3cf58c2"
-                             tstamp="4"
+                             tstamp="3.5"
                              place="below"
                              staff="1">
                           cres
                         </dir>
+                           <tempo xml:id="xe566b1e8-7928-43f0-b4b5-9b88b7521f43"
+                                 tstamp="1"
+                                 place="above"
+                                 staff="1">Allegretto</tempo>
                      </measure>
                      <measure n="2" xml:id="x72fbdce0-09e0-44fd-9afc-167c06f2514e">
                         <staff xml:id="x9c326a19-b6e4-463c-b203-bcbab8bd62d4" n="1">
@@ -32586,7 +32590,7 @@
                         </staff>
                         <dynam xml:id="x9ddb99ab-5036-4ce6-878e-d9bd63d92926"
                                tstamp="1"
-                               place="below"
+                               place="above"
                                staff="1">
                           sfp
                         </dynam>
@@ -32781,7 +32785,7 @@
                                  place="below"
                                  staff="1"
                                  form="dim"
-                                 tstamp="2"
+                                 tstamp="1"
                                  tstamp2="1m+2"/>
                      </measure>
                      <measure n="12" xml:id="xf2ccf856-09bf-4464-ad0e-6ed5b186d40f">
@@ -33157,7 +33161,7 @@
                            </layer>
                         </staff>
                         <dir xml:id="x8a210e13-f0e8-462f-8faf-01566dcde74f"
-                             tstamp="1"
+                             tstamp="0.5"
                              place="below"
                              staff="1">
                           cres
@@ -33175,7 +33179,7 @@
                            </layer>
                         </staff>
                         <dir xml:id="x200d1f13-a8da-484a-9f2e-26d2f77352d9"
-                             tstamp="1"
+                             tstamp="1.5"
                              place="below"
                              staff="1">
                            decres
@@ -33202,6 +33206,11 @@
                                  startid="#x54cb44c2-075a-429e-a814-5ccb18ec30d8"
                                  place="above"
                                  form="norm"/>
+                           <dynam xml:id="xb95ae5c7-72cd-474b-87d2-22191bf1710c"
+                                 tstamp="1"
+                                 place="below"
+                                 staff="1">p  </dynam>
+                           
                      </measure>
                      <measure n="33" xml:id="x25552f7c-a7f0-45a9-bb14-70a3cb481b8d">
                         <staff xml:id="x8c83c63d-2d03-4d28-ae0e-f80fc2805fb1" n="1">
@@ -33281,6 +33290,19 @@
                              staff="1"
                              startid="#xad98e838-7b2c-48dc-b787-d372a771d5eb"
                              endid="#xe018ef48-9006-4031-a26a-7f1bf6659b04"/>
+                           <dynam xml:id="x793ec6b2-f009-4989-97f0-f62456352056"
+                                 tstamp="1"
+                                 place="below"
+                                 staff="1">
+                                 sf
+                           </dynam>
+                           <hairpin xml:id="xdf92ccd6-fa03-45c1-8a92-cbeaf6c66367"
+                                 tstamp="2"
+                                 place="below"
+                                 staff="1"
+                                 form="dim"
+                                 tstamp2="1m+3"/>
+                           
                      </measure>
                      <measure n="36" xml:id="xc394b371-d2cb-4b48-9aa1-a51ca6b02291">
                         <staff xml:id="x67ca49bd-1d07-4a9b-9b7d-47df5b77af24" n="1">
@@ -33351,6 +33373,12 @@
                               curvedir="above"
                               endid="#x8b430146-04e5-4059-b79c-157a0c134ff7"
                               staff="1"/>
+                           <dynam xml:id="xe00d32b2-e802-4eb3-8ec4-3193c2cce7a4"
+                                 tstamp="1"
+                                 place="below"
+                                 staff="1">
+                                 p
+                           </dynam>
                      </measure>
                      <measure n="38" xml:id="x5135a1d8-8812-450c-8c78-8ae192ed8679">
                         <staff xml:id="xf9388047-0d43-46bb-820d-5927a33b326d" n="1">
@@ -33476,6 +33504,13 @@
                              staff="1"
                              startid="#x100d29ae-0d71-4efc-b694-b97f3eb39ef9"
                              endid="#x4312d7dc-baa2-4336-b30d-4922756a0e7e"/>
+                           <dynam xml:id="xcf70881a-816f-4856-9abd-074a5c135d4d"
+                                 tstamp="2"
+                                 place="below"
+                                 staff="1">
+                                 sf
+                           </dynam>
+                           
                      </measure>
                      <measure n="44" xml:id="x88c26b84-4956-4270-a21e-f8389e58ad3c">
                         <staff xml:id="xa9314acc-782a-425d-91f9-43fc9ff28d61" n="1">
@@ -33510,6 +33545,12 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
+                           <dynam xml:id="x0e4af2e4-a227-4170-9ce6-8e5a36fedeaf"
+                                 tstamp="2"
+                                 place="below"
+                                 staff="1">
+                                 sf
+                           </dynam>
                      </measure>
                      <measure n="46" xml:id="x23a5ec18-c491-4b7b-a58e-8bef90d5b041">
                         <staff xml:id="x0acc48ff-c5ec-474e-8b87-82432e31838d" n="1">
@@ -33531,6 +33572,12 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
+                           <dynam xml:id="xdffe81d7-0991-474e-b0d0-bb33871f1da9"
+                                 tstamp="2"
+                                 place="below"
+                                 staff="1">
+                                 sf
+                           </dynam>
                      </measure>
                      <measure n="47" xml:id="x83328858-7705-46e4-ad21-e84722c96d8b">
                         <staff xml:id="xd8f24d74-6033-4666-a1de-481b98c7aac8" n="1">
@@ -33567,8 +33614,8 @@
                         </dir>
                         <hairpin xml:id="x4c384304-2d29-4772-91e7-9517e5ea6e01"
                                  place="above"
-                                 tstamp="2.5"
-                                 tstamp2="1m+3"
+                                 tstamp="3"
+                                 tstamp2="0m+4"
                                  staff="1"
                                  form="cres"/>
                         <slur xml:id="x57a8f787-2744-4bec-a623-fb510defb218"
@@ -33599,6 +33646,13 @@
                               <rest xml:id="xc77bbf82-8f14-4d31-bc03-9f55395f897d" dur="4"/>
                            </layer>
                         </staff>
+                           <dynam xml:id="x56c1bf5c-5142-4a53-a021-94be0324a45e"
+                                 tstamp="1"
+                                 place="below"
+                                 staff="1">
+                                 p
+                           </dynam>
+                           
                      </measure>
                      <measure n="50" xml:id="xf48f7199-d0e7-4a54-bdda-023141d1f7d7">
                         <staff xml:id="x49131a48-108d-41e9-acb4-8bda89fb996e" n="1">
@@ -33878,6 +33932,11 @@
                              staff="1"
                              startid="#x2d424b16-c781-405c-b80e-0fdaf615c084"
                              endid="#xdbd5260a-0c0a-442c-8d4d-b7ff8ba5806a"/>
+                           <dir xml:id="x54e894e4-537a-4dc7-9f18-b0fd49fb8f7c"
+                                 staff="1"
+                                 tstamp="1"
+                                 place="above">Maggiore</dir>
+                           
                      </measure>
                      <measure n="64" xml:id="x8da5e97e-bb74-490b-bf7c-16d23360a990">
                         <staff xml:id="x1b31a69a-eded-4c1e-b904-4025d68c3850" n="1">
@@ -34118,6 +34177,13 @@
                              staff="1"
                              startid="#x80188dfc-7701-4421-b78f-e6997a243793"
                              endid="#xb66d0cee-5959-487f-8a59-0d516836c885"/>
+                           <dynam xml:id="xcc562ddb-b144-4e0d-b256-3b2f980dde68"
+                                 tstamp="1"
+                                 place="below"
+                                 staff="1">
+                                 p
+                           </dynam>
+                           
                      </measure>
                      <measure n="80" xml:id="x137c42f5-adab-4c1a-8fd4-c742a6fdf97c">
                         <staff xml:id="x0ee5fec4-67af-4ff7-8686-98e85f4b7a7f" n="1">
@@ -34270,6 +34336,13 @@
                               curvedir="below"
                               endid="#x3f672107-bb88-4082-9e69-886322333ad1"
                               staff="1"/>
+                           <dynam xml:id="x9bb9440b-d55a-4170-ac06-11209c721156"
+                                 tstamp="1"
+                                 place="below"
+                                 staff="1">
+                                 p
+                           </dynam>
+                           
                      </measure>
                      <measure n="90" xml:id="x1e47f578-6cd0-4124-be3c-d54c3c825905">
                         <staff xml:id="xe90c4296-8f34-4351-9180-57159d10860b" n="1">
@@ -34376,6 +34449,11 @@
                              staff="1"
                              startid="#xd65585bc-0c7d-4333-8945-8255209a6a7b"
                              endid="#xc4cdcb7b-8a81-4ad4-896b-ee865d2b512c"/>
+                           <dir xml:id="x8558e3a7-e279-43d8-94a4-0a22721245f3"
+                                 tstamp="1"
+                                 place="below"
+                                 staff="1">cres</dir>
+                           
                      </measure>
                      <measure n="98" xml:id="x7d59cfbf-bfc3-4e42-830f-f3a1a583598e">
                         <staff xml:id="xf4a2cf7b-30da-479d-9fbe-a4f3fc9a70d4" n="1">
@@ -34405,6 +34483,13 @@
                              staff="1"
                              startid="#x3d457800-77f3-4831-909a-5ed470b0bbd7"
                              endid="#xb181c7f9-10c4-45bb-8231-c8660483f9d1"/>
+                           <dynam xml:id="xbea93656-0ac0-470f-a877-37070d19088e"
+                                 tstamp="1"
+                                 place="below"
+                                 staff="1">
+                                 p
+                           </dynam>
+                           
                      </measure>
                      <measure n="100" xml:id="x96a457f5-7b0e-4269-af0b-b5e85580b6d1" right="end">
                         <staff xml:id="xf45e92db-e0d4-4f71-a5d0-8c31e0cab8c0" n="1">
@@ -34451,6 +34536,11 @@
                               curvedir="below"
                               endid="#x04756248-d994-4b09-a8a6-11f026b869e5"
                               staff="1"/>
+                           <dir xml:id="xf5499324-26b1-4d65-8ddf-f75ac7f64ec8"
+                                 tstamp="1"
+                                 place="above"
+                                 staff="1">Coda.</dir>
+                           
                      </measure>
                      <measure n="102" xml:id="x0b0b0976-1962-49f9-a6fb-5e119cf0bb60">
                         <staff xml:id="xddf59179-bfa4-49ab-9892-5c03f61085a4" n="1">
@@ -34473,7 +34563,7 @@
                                     oct="2"
                                     dur="4"
                                     stem.dir="up"
-                                    accid.ges="f"/>
+                                    accid.ges="f" artic="stacc"/>
                               <rest xml:id="x4168746c-1a43-49ee-b11d-96e9e38191a3" dur="4"/>
                               <rest xml:id="xe4291b10-28d0-4d84-a67e-92a63d2cf39f" dur="4"/>
                            </layer>
@@ -34528,7 +34618,7 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"
-                                    accid.ges="f"/>
+                                    accid.ges="f" artic="stacc"/>
                               <rest xml:id="x8d6c484d-62e4-48b4-819a-ea55551b0055" dur="4"/>
                               <rest xml:id="x3b5cbf42-0b27-4593-91dd-39c9df5d4920" dur="4"/>
                            </layer>
@@ -34545,12 +34635,11 @@
                         <staff xml:id="x9bcfc5f3-b490-421a-a889-8dd971641002" n="1">
                            <layer xml:id="x90880c4c-4a49-4d10-abab-6bd326ac3b06" n="1">
                               <note xml:id="x0a82d293-9bf4-4f3a-b9f6-1a2783574d2e"
-                                    pname="d"
+                                    pname="d" accid="f"
                                     oct="3"
                                     dur="2"
                                     dots="1"
-                                    stem.dir="down"
-                                    accid.ges="f"/>
+                                    stem.dir="down"/>
                            </layer>
                         </staff>
                         <dir xml:id="xc4cbfd09-fe0c-4cb8-8358-f02fd0a55a3b"
