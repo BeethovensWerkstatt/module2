@@ -67,6 +67,7 @@
             <!-- transposing instrument -->
             <xsl:when test="$relevant.scoreDef//mei:staffDef[@n = $current.n][@key.sig][@key.sig != $relevant.scoreDef/@key.sig]">
                 <xsl:variable name="staff.key.sig" select="$relevant.scoreDef//mei:staffDef[@n = $current.n]/@key.sig" as="xs:string"/>
+                <xsl:variable name="staff.trans.semi" select="$relevant.scoreDef//mei:staffDef[@n = $current.n]/@trans.semi" as="xs:string"/>
                 
                 <xsl:variable name="relevant.key.elem" as="node()">
                     <xsl:choose>
@@ -88,6 +89,7 @@
                 <xsl:copy>
                     <xsl:apply-templates select="@*" mode="#current"/>
                     <xsl:attribute name="staff.key" select="$key"/>
+                    <xsl:attribute name="trans.semi" select="$staff.trans.semi"/>
                     <xsl:apply-templates select="node()" mode="#current"/>
                 </xsl:copy>
             </xsl:when>
