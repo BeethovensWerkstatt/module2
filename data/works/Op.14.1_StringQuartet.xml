@@ -9063,7 +9063,7 @@
                                  <chord xml:id="x10da6620-d35d-446b-aabf-6671eee23d45"
                                         dur="2"
                                         stem.dir="up"
-                                        stem.mod="2slash">
+                                        stem.mod="2slash" >
                                     <note xml:id="x3ee12b18-7092-4469-bdd7-16d4ede6c0a9"
                                           pname="b"
                                           oct="3"
@@ -18711,7 +18711,7 @@
                                  tstamp="1"
                                  place="below"
                                  staff="1">p  </dynam>
-                           <dir xml:id="xbc2bd1e1-006e-4cb9-90cf-9b1259356402" tstamp="1" staff="1">Allo moderato</dir>
+                           <dir xml:id="xbc2bd1e1-006e-4cb9-90cf-9b1259356402" tstamp="1" staff="1" place="above">Allo moderato</dir>
                      </measure>
                      <measure n="2"
                               xml:id="x8512abce-1f29-4907-9128-5a6784492b19"
@@ -27196,6 +27196,11 @@
                              tstamp="1"
                              place="above"
                              staff="1">Coda</dir>
+                           <dir xml:id="x43aae218-5b61-4e96-9632-64ccc6dc01ef"
+                                 staff="1"
+                                 place="below"
+                                 tstamp="1">Da Capo Allegretto e poi la Coda</dir>
+                           
                         <slur xml:id="x591c4674-e088-451f-ab3a-3505b75cbc52"
                               startid="#xfa5bd537-d69b-4f77-b2d9-7d7e1ccc645b"
                               curvedir="below"
@@ -29882,6 +29887,10 @@
                                  tstamp="1"
                                  place="above"
                                  staff="1">Coda.</dir>
+                           <dir xml:id="x2b69ecc9-60ae-47f5-9bf3-11e24c71ad97"
+                                 staff="1"
+                                 place="below"
+                                 tstamp="1">D: C: Allegretto e poi la Coda.</dir>
                            
                      </measure>
                      <measure n="102" xml:id="x3783e045-fb20-44f5-8253-b65cfd7dc7e2">
@@ -32277,6 +32286,11 @@
                              tstamp="1"
                              place="above"
                              staff="1">Coda.</dir>
+                           <dir xml:id="xb5b0b3d6-bb00-4b2c-a2d3-d6866dcdd5db"
+                                 staff="1"
+                                 place="below"
+                                 tstamp="1">D: C: Allegretto e poi la Coda.</dir>
+                           
                         <dynam xml:id="xe973f988-6e2e-497e-9bfa-d9680c8e72f4"
                                tstamp="1"
                                place="below"
@@ -34547,6 +34561,10 @@
                                  tstamp="1"
                                  place="above"
                                  staff="1">Coda.</dir>
+                           <dir xml:id="x79c82bd6-0ae7-4940-8120-227dee19540e"
+                                 staff="1"
+                                 place="below"
+                                 tstamp="1">Da Capo Allegretto e poi la Coda</dir>
                            
                      </measure>
                      <measure n="102" xml:id="x0b0b0976-1962-49f9-a6fb-5e119cf0bb60">
