@@ -92,6 +92,7 @@
                <p n="9">corrections part 5 (Corni I in B), part 6 (Corni II in B), part 7 (Sologesang I), part 8 (Sologesang II) and part 9 (dreistimmiger Chor) according to paper-proofreading.</p>
                <p n="9">minor corrections. Key-Change-Test.</p>
                <p n="9">All Clef-Changes (Fg I and II) which where encoded as separate staffDefs changed to clef-changes within the measures.</p>
+               <p n="10">second corrections: part 1.</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -780,7 +781,7 @@
                                  <tuplet xml:id="x0c81efd8-587f-4025-a0ac-bd3857b30bd5"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count" num.place="below">
                                     <note xml:id="xc35de590-60b6-4eb3-8dfa-ebe071440163"
                                           pname="g"
                                           oct="4"
@@ -1099,7 +1100,7 @@
                                  <tuplet xml:id="xfc26800e-7f8d-4a6a-b051-8688391165be"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count" num.place="below">
                                     <note xml:id="xfae0917d-b0a3-4e9b-a62e-69bb1acc24e9"
                                           pname="g"
                                           oct="4"
@@ -2157,7 +2158,7 @@
                         <staff xml:id="x2fcc6177-08f1-4b9a-96bf-137aa2d9cebe" n="1">
                            <layer xml:id="xa566ccf6-842f-44f2-844d-5309d15a742b" n="1">
                               <note xml:id="x310d4d23-1480-4f7c-8c95-60393aff7378"
-                                    pname="e"
+                                    pname="d"
                                     oct="5"
                                     dur="4"
                                     stem.dir="down"/>
@@ -2175,7 +2176,7 @@
                                  <tuplet xml:id="xe5603524-bfe2-4c8e-ae76-2ce052d053a1"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count" num.place="below">
                                     <note xml:id="x2d8da666-f23f-4dda-88fb-b810c6cc14a1"
                                           pname="g"
                                           oct="4"
@@ -2494,7 +2495,7 @@
                                  <tuplet xml:id="x42b7fcf3-3915-46d8-8325-fbc67f9c6a77"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count" num.place="below">
                                     <note xml:id="x50640ec4-e9d1-406c-851e-3a73d542e10c"
                                           pname="g"
                                           oct="4"
@@ -3546,7 +3547,7 @@
                                  <tuplet xml:id="x8cd1d612-e48c-4a6f-b9b6-7e62159ad421"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count" num.place="below">
                                     <note xml:id="xd3ef41cb-988c-41b0-b0f7-0c55840a4921"
                                           pname="g"
                                           oct="4"
@@ -3865,7 +3866,7 @@
                                  <tuplet xml:id="x58b483f9-ae2d-4229-b03d-61dfe0e41d5c"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count" num.place="below">
                                     <note xml:id="xd65fa2d5-5834-433f-9133-fb8b5358baa7"
                                           pname="g"
                                           oct="4"
@@ -4910,7 +4911,7 @@
                                  <tuplet xml:id="x647b5626-55c2-4cdf-9829-7ea3bbe12a69"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count" num.place="below">
                                     <note xml:id="x6ccd71ad-0c73-499a-aa8c-ffd209789797"
                                           pname="g"
                                           oct="4"
@@ -5234,7 +5235,7 @@
                                  <tuplet xml:id="x6e1198f0-0bdc-4d9b-af23-10b0b03c0f7c"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count" num.place="below">
                                     <note xml:id="x19f5aca5-270c-472b-9c1a-5748bb80b281"
                                           pname="g"
                                           oct="4"
@@ -6274,7 +6275,7 @@
                                  <tuplet xml:id="x2e8fb9ab-84f9-4ec4-bacc-61a3d2ce8e7a"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count" num.place="below">
                                     <note xml:id="xcfd0a904-7789-4e0a-8e32-7859a8127a50"
                                           pname="g"
                                           oct="4"
@@ -6467,12 +6468,13 @@
                         <staff xml:id="x6b89ba9e-fb50-45ff-b572-f5bfbcd74c8e" n="1">
                            <layer xml:id="xcba01b0d-0ad5-43b2-a3b6-df6c00a4cab6" n="1">
                               <beam xml:id="x1a2f76e9-1952-4cf3-877f-b3aee01b5d70">
-                                 <tuplet xml:id="x87325784-5168-4641-bdf6-67ce9d196afb" num="3" numbase="2">
+                                 <tuplet xml:id="x87325784-5168-4641-bdf6-67ce9d196afb" num="6" numbase="4" num.visible="false">
                                     <note xml:id="x9c691f31-14d9-4cf4-897b-1fd1c9cfa7e1"
                                           pname="g"
                                           oct="5"
                                           dur="16"
-                                          stem.dir="up"/>
+                                          stem.dir="up"
+                                          artic="stacciss"/>
                                     <note xml:id="x20fb736e-b10c-4891-9af2-a940391a1412"
                                           pname="e"
                                           oct="5"
@@ -6483,8 +6485,6 @@
                                           oct="5"
                                           dur="16"
                                           stem.dir="up"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x78e4a144-c461-4817-8df2-1d7ee29f0668" num="3" numbase="2">
                                     <note xml:id="xebca0bdc-d4d8-4792-86ea-b06938e1ddc6"
                                           pname="g"
                                           oct="4"
@@ -6506,7 +6506,7 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="xbfdd1937-52d2-45c1-ac41-e0e4af35364e">
-                                 <tuplet xml:id="x3a2bfd63-88df-4030-8bfc-6d120365517f" num="3" numbase="2">
+                                 <tuplet xml:id="x3a2bfd63-88df-4030-8bfc-6d120365517f" num="6" numbase="4" num.visible="false">
                                     <note xml:id="xf2b8df19-97b0-4e77-8616-12ff3474edc0"
                                           pname="g"
                                           oct="3"
@@ -6522,8 +6522,6 @@
                                           oct="4"
                                           dur="16"
                                           stem.dir="up"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x2e477050-021e-4145-8982-1f2b553ada81" num="3" numbase="2">
                                     <note xml:id="x42fb7444-07dd-45fb-9a8b-3bf025288d2f"
                                           pname="g"
                                           oct="4"
@@ -6542,7 +6540,7 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="xa8c9f87f-a0e1-4fe3-b2ef-cee970c4f38d">
-                                 <tuplet xml:id="xbcd6384d-7365-40c8-a085-82a2f588711d" num="3" numbase="2">
+                                 <tuplet xml:id="xbcd6384d-7365-40c8-a085-82a2f588711d" num="6" numbase="4" num.visible="false">
                                     <note xml:id="xa36709f4-f0e7-499e-a868-aadb6a5ac35a"
                                           pname="g"
                                           oct="5"
@@ -6561,13 +6559,12 @@
                                           oct="6"
                                           dur="16"
                                           stem.dir="down"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x77688baa-519d-4201-8f34-ca2bdee429a2" num="3" numbase="2">
                                     <note xml:id="x99b25b8d-02fe-4ed1-a1a9-f96998695b02"
                                           pname="g"
                                           oct="6"
                                           dur="16"
-                                          stem.dir="down"/>
+                                          stem.dir="down"
+                                          artic="stacciss"/>
                                     <note xml:id="x15ea17a7-5329-48bc-9477-7ee286a194ee"
                                           pname="c"
                                           oct="5"
@@ -6581,12 +6578,12 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="x41b596a3-27a1-4bfa-af56-d73c87ca476d">
-                                 <tuplet xml:id="xbc7e66b8-b37a-46d9-834f-cb665cebb8a1" num="3" numbase="2">
+                                 <tuplet xml:id="xbc7e66b8-b37a-46d9-834f-cb665cebb8a1" num="6" numbase="4" num.visible="false">
                                     <note xml:id="xefc4e5c0-be82-487c-b0b7-b5db0ac748ac"
                                           pname="g"
                                           oct="5"
                                           dur="16"
-                                          stem.dir="down"/>
+                                          stem.dir="down"/><!-- diese Note hat kein @artic="staccis" -->
                                     <note xml:id="x3ca7e3bf-00e9-4cca-b2d5-a67658042c6b"
                                           pname="e"
                                           oct="5"
@@ -6597,16 +6594,12 @@
                                           oct="5"
                                           dur="16"
                                           stem.dir="down"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x1b04466b-e6d7-4c01-a592-1b7294b338c2" num="3" numbase="2">
                                     <note xml:id="x7eb2b886-b0c4-487b-bada-19a90bf3c5eb"
                                           pname="g"
                                           oct="4"
                                           dur="16"
                                           stem.dir="down"
-                                          artic="stacciss">
-                                       
-                                    </note>
+                                          artic="stacciss"/>
                                     <note xml:id="x00d19f4a-5878-4b56-8e75-37b7a30e7a25"
                                           pname="c"
                                           oct="5"
@@ -6680,15 +6673,13 @@
                         <staff xml:id="x071f26a1-e1a1-479b-9821-5031c8fd49db" n="1">
                            <layer xml:id="x860c3b70-2878-4b04-a0a8-000ead6365de" n="1">
                               <beam xml:id="x9b408102-edb7-46bc-a449-792b4b878b47">
-                                 <tuplet xml:id="x63819630-75f6-4afc-93db-a305ba4ba7a7" num="3" numbase="2">
+                                 <tuplet xml:id="x63819630-75f6-4afc-93db-a305ba4ba7a7" num="6" numbase="4" num.visible="false">
                                     <note xml:id="x771446d1-6de6-4eaa-8e2f-eeff60a07feb"
                                           pname="g"
                                           oct="5"
                                           dur="16"
                                           stem.dir="up"
-                                          artic="stacciss">
-                                       
-                                    </note>
+                                          artic="stacciss"/>
                                     <note xml:id="x4f8e25a1-ae48-4681-a9b7-23fcc80913ef"
                                           pname="d"
                                           oct="5"
@@ -6699,21 +6690,17 @@
                                           oct="4"
                                           dur="16"
                                           stem.dir="up"/>
-                                 </tuplet>
-                                 <tuplet xml:id="xa1a194e2-a4cd-40cc-80b2-f95f98155483" num="3" numbase="2">
                                     <note xml:id="x034f75a5-412d-4678-96cf-6f61c25c37e4"
                                           pname="g"
                                           oct="4"
                                           dur="16"
-                                          stem.dir="up"/>
+                                          stem.dir="up"
+                                          artic="stacciss"/>
                                     <note xml:id="xb7039778-8fcc-41ab-85ef-0f9fba1fdf2b"
                                           pname="d"
                                           oct="4"
                                           dur="16"
-                                          stem.dir="up"
-                                          artic="stacciss">
-                                       
-                                    </note>
+                                          stem.dir="up"/>
                                     <note xml:id="x058e30a5-9b3d-4568-8ad9-82c2018a29f4"
                                           pname="b"
                                           oct="3"
@@ -6722,12 +6709,13 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="x27b8d6da-f712-47e9-b20e-a5a8d7749d1e">
-                                 <tuplet xml:id="x45b791cc-9d12-45b7-81bf-00e53ecfd55c" num="3" numbase="2">
+                                 <tuplet xml:id="x45b791cc-9d12-45b7-81bf-00e53ecfd55c" num="6" numbase="4" num.visible="false">
                                     <note xml:id="xcf7a6a21-6172-4fcc-9f02-59b79ae838be"
                                           pname="g"
                                           oct="3"
                                           dur="16"
-                                          stem.dir="up"/>
+                                          stem.dir="up"
+                                          artic="stacciss"/>
                                     <note xml:id="xf1d469b3-043b-4907-baf2-f3388385c202"
                                           pname="b"
                                           oct="3"
@@ -6738,13 +6726,12 @@
                                           oct="4"
                                           dur="16"
                                           stem.dir="up"/>
-                                 </tuplet>
-                                 <tuplet xml:id="xd0cb0974-dbc1-4df3-b833-837d1bcc0e25" num="3" numbase="2">
                                     <note xml:id="x349b32bf-5bf0-4535-924e-d67d608ec619"
                                           pname="g"
                                           oct="4"
                                           dur="16"
-                                          stem.dir="up"/>
+                                          stem.dir="up"
+                                          artic="stacciss"/>
                                     <note xml:id="x949cada0-271c-4df8-8a5f-4db020037506"
                                           pname="b"
                                           oct="4"
@@ -6758,12 +6745,13 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="xca61ae37-8c6b-4fb5-be14-7e64693d0414">
-                                 <tuplet xml:id="x3985f8d8-3236-4ce9-ae0f-9a162732570b" num="3" numbase="2">
+                                 <tuplet xml:id="x3985f8d8-3236-4ce9-ae0f-9a162732570b" num="6" numbase="4" num.visible="false">
                                     <note xml:id="xb37bd200-47b1-4f1f-b1c4-10861c00c6d4"
                                           pname="g"
                                           oct="5"
                                           dur="16"
-                                          stem.dir="down"/>
+                                          stem.dir="down"
+                                          artic="stacciss"/>
                                     <note xml:id="x2e08b767-06f0-4c7c-8743-9b1442aaa419"
                                           pname="b"
                                           oct="5"
@@ -6774,8 +6762,6 @@
                                           oct="6"
                                           dur="16"
                                           stem.dir="down"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x81b63981-0894-4b1f-8167-db6c9c5bec2a" num="3" numbase="2">
                                     <note xml:id="x7a3d2333-a4fb-4ae2-b803-f185a99b94e8"
                                           pname="g"
                                           oct="6"
@@ -6795,7 +6781,7 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="xebb149bc-5bc1-4d1d-8241-418a0a8e51aa">
-                                 <tuplet xml:id="x8c444a44-252c-4f73-84f3-9dafd7b04e87" num="3" numbase="2">
+                                 <tuplet xml:id="x8c444a44-252c-4f73-84f3-9dafd7b04e87" num="6" numbase="4" num.visible="false">
                                     <note xml:id="x4e1f2f4c-15a8-4596-b521-bd0d363fc17a"
                                           pname="d"
                                           oct="4"
@@ -6812,8 +6798,6 @@
                                           oct="4"
                                           dur="16"
                                           stem.dir="up"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x8b134cbb-2e2c-4a53-894c-83b3506ca661" num="3" numbase="2">
                                     <note xml:id="x57510704-d091-4ac0-b065-32d7e6f903c6"
                                           pname="d"
                                           oct="5"
@@ -6843,17 +6827,17 @@
                         <slur xml:id="x655af56b-cd9f-413a-b2fd-c5a52c0b3457"
                               startid="#x4f8e25a1-ae48-4681-a9b7-23fcc80913ef"
                               curvedir="below"
-                              endid="#x034f75a5-412d-4678-96cf-6f61c25c37e4"
+                              endid="#x7a7d8454-c5b1-4979-91c5-2e0b8057c6a3"
                               staff="1"/>
                         <slur xml:id="xe12dd3bf-89c4-4856-aeb7-8c72b8499e1d"
-                              startid="#x058e30a5-9b3d-4568-8ad9-82c2018a29f4"
+                           startid="#xb7039778-8fcc-41ab-85ef-0f9fba1fdf2b"
                               curvedir="below"
-                              endid="#xcf7a6a21-6172-4fcc-9f02-59b79ae838be"
+                              endid="#x058e30a5-9b3d-4568-8ad9-82c2018a29f4"
                               staff="1"/>
                         <slur xml:id="x5d0d3a45-8d03-4007-b8bb-d548518a2fea"
                               startid="#xf1d469b3-043b-4907-baf2-f3388385c202"
                               curvedir="below"
-                              endid="#x349b32bf-5bf0-4535-924e-d67d608ec619"
+                              endid="#x58767d33-64bf-406c-8b18-6c1f9f8617fd"
                               staff="1"/>
                         <slur xml:id="x3c752741-5f93-47fc-b81d-d410bca1cd62"
                               startid="#x949cada0-271c-4df8-8a5f-4db020037506"
@@ -7099,7 +7083,8 @@
                                  <tuplet xml:id="xcb13b3fd-8780-4437-bd22-58616a233bd4"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count"
+                                         num.place="below">
                                     <note xml:id="xf53269cf-1d66-40c5-a506-106195a840e7"
                                           pname="g"
                                           oct="4"
@@ -7277,7 +7262,7 @@
                         <staff xml:id="xa3d9992f-2f86-4c02-ba69-88dde834f50f" n="1">
                            <layer xml:id="x77396f63-1232-4cfe-b296-13cf23834817" n="1">
                               <beam xml:id="x9bea0265-79ef-48aa-bc0d-fbc6036aea91">
-                                 <tuplet xml:id="x064c004a-4ede-4269-a0aa-03c95d21f6fb" num="3" numbase="2">
+                                 <tuplet xml:id="x064c004a-4ede-4269-a0aa-03c95d21f6fb" num="6" numbase="4" num.visible="false">
                                     <note xml:id="xdc190cdb-834b-4a51-863d-4fe4aaae1192"
                                           pname="g"
                                           oct="5"
@@ -7294,8 +7279,6 @@
                                           oct="5"
                                           dur="16"
                                           stem.dir="up"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x73788f41-4c0a-44d7-8ba3-08d31b21128c" num="3" numbase="2">
                                     <note xml:id="xa90158cd-dacb-4870-892b-7cde6aaab893"
                                           pname="g"
                                           oct="4"
@@ -7317,7 +7300,7 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="xd9bab310-513e-4314-84aa-0ce115c39465">
-                                 <tuplet xml:id="xa5c779cd-e4a2-42cb-b187-72496ebf0c2a" num="3" numbase="2">
+                                 <tuplet xml:id="xa5c779cd-e4a2-42cb-b187-72496ebf0c2a" num="6" numbase="4" num.visible="false">
                                     <note xml:id="x52393046-5e58-4efc-bd30-6e2e68521c1c"
                                           pname="g"
                                           oct="3"
@@ -7333,8 +7316,6 @@
                                           oct="4"
                                           dur="16"
                                           stem.dir="up"/>
-                                 </tuplet>
-                                 <tuplet xml:id="xeaf1c4bf-8991-4a0f-b3cd-f180ad524f5f" num="3" numbase="2">
                                     <note xml:id="x28fc9847-94ab-4144-8776-deb9c4113fc0"
                                           pname="g"
                                           oct="4"
@@ -7353,7 +7334,7 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="xe847f871-07d6-4485-8bcf-bd2dbe9fb362">
-                                 <tuplet xml:id="x641a9aef-d641-47a2-b8aa-a4f4ef716222" num="3" numbase="2">
+                                 <tuplet xml:id="x641a9aef-d641-47a2-b8aa-a4f4ef716222" num="6" numbase="4" num.visible="false">
                                     <note xml:id="x053ad067-0bc4-40f8-85cd-61b024ec6011"
                                           pname="g"
                                           oct="5"
@@ -7372,8 +7353,6 @@
                                           oct="6"
                                           dur="16"
                                           stem.dir="down"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x6c1e5d30-a5a2-423b-9897-40966d679441" num="3" numbase="2">
                                     <note xml:id="xdc35f382-a0ff-45be-8c26-2d7d60860756"
                                           pname="g"
                                           oct="6"
@@ -7393,7 +7372,7 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="x0c7c5e9d-e3f4-425e-b12a-65ee51335255">
-                                 <tuplet xml:id="x9f154e7a-dd22-459b-8dc1-a6b678edce74" num="3" numbase="2">
+                                 <tuplet xml:id="x9f154e7a-dd22-459b-8dc1-a6b678edce74" num="6" numbase="4" num.visible="false">
                                     <note xml:id="x23c0b412-7679-4701-bc4b-632a054cfd4c"
                                           pname="g"
                                           oct="5"
@@ -7410,8 +7389,6 @@
                                           oct="5"
                                           dur="16"
                                           stem.dir="down"/>
-                                 </tuplet>
-                                 <tuplet xml:id="xf34629b8-6d3b-4a37-be23-26cd26363ae7" num="3" numbase="2">
                                     <note xml:id="x359c6a43-6644-4c3a-a5b1-5ff5d458d8bd"
                                           pname="g"
                                           oct="4"
@@ -7493,7 +7470,7 @@
                         <staff xml:id="xae5e99a5-7906-41f1-bd77-d5411b4c197c" n="1">
                            <layer xml:id="x97f3274a-cf45-4275-8811-f94476818c22" n="1">
                               <beam xml:id="x6b107acf-2590-4f85-b625-e9a7877e73d0">
-                                 <tuplet xml:id="x50d909b2-d726-4dc9-ab64-e72f8a034da7" num="3" numbase="2">
+                                 <tuplet xml:id="x50d909b2-d726-4dc9-ab64-e72f8a034da7" num="6" numbase="4" num.visible="false">
                                     <note xml:id="xc4ccb54a-dd84-4fe5-8629-f8f119b4c2ca"
                                           pname="g"
                                           oct="5"
@@ -7512,8 +7489,6 @@
                                           oct="4"
                                           dur="16"
                                           stem.dir="up"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x9d5be6e3-89e3-40fc-b00d-dc9f058a5e6b" num="3" numbase="2">
                                     <note xml:id="xd9f031c7-26b7-43ef-9bab-d548d98c7293"
                                           pname="g"
                                           oct="4"
@@ -7535,7 +7510,7 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="x9e5209d2-9734-4aaf-ad7d-c5dacfdf00cd">
-                                 <tuplet xml:id="xe69092ca-7a9b-4616-ac42-821e0631e34b" num="3" numbase="2">
+                                 <tuplet xml:id="xe69092ca-7a9b-4616-ac42-821e0631e34b" num="6" numbase="4" num.visible="false">
                                     <note xml:id="x16da9888-7b78-474f-bf9b-c22a07cbf514"
                                           pname="g"
                                           oct="3"
@@ -7551,8 +7526,6 @@
                                           oct="4"
                                           dur="16"
                                           stem.dir="up"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x0afc8b63-250c-42a8-940b-9dbfa2f49824" num="3" numbase="2">
                                     <note xml:id="xcd599854-0c0a-435c-ad1d-74f5ec6061ae"
                                           pname="g"
                                           oct="4"
@@ -7571,7 +7544,7 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="x81b061dd-8a1d-4deb-a719-016a254c79f6">
-                                 <tuplet xml:id="xb64cece8-4fe9-4cce-a249-0a57447c0bcf" num="3" numbase="2">
+                                 <tuplet xml:id="xb64cece8-4fe9-4cce-a249-0a57447c0bcf" num="6" numbase="4" num.visible="false">
                                     <note xml:id="x9476e2c0-016e-4a66-aa9d-02f2e7bed071"
                                           pname="g"
                                           oct="5"
@@ -7588,8 +7561,6 @@
                                           oct="6"
                                           dur="16"
                                           stem.dir="down"/>
-                                 </tuplet>
-                                 <tuplet xml:id="xac25ebd5-d727-4bae-a1ef-43192fc5fa5d" num="3" numbase="2">
                                     <note xml:id="x7a149243-784e-4994-9a0e-496e4a93e736"
                                           pname="g"
                                           oct="6"
@@ -7609,7 +7580,7 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="x5d08dd81-7f11-4ec8-b4f8-604d455b84bf">
-                                 <tuplet xml:id="x3b7426d5-d221-431d-9cad-25b016b13650" num="3" numbase="2">
+                                 <tuplet xml:id="x3b7426d5-d221-431d-9cad-25b016b13650" num="6" numbase="4" num.visible="false">
                                     <note xml:id="xd435e22d-1654-4be1-b840-223c2ed82e63"
                                           pname="d"
                                           oct="4"
@@ -7625,8 +7596,6 @@
                                           oct="4"
                                           dur="16"
                                           stem.dir="up"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x59280956-d420-49a3-a985-aff8dc4e1ad3" num="3" numbase="2">
                                     <note xml:id="xdd7ca040-55d4-45b5-a7df-b1164069d366"
                                           pname="d"
                                           oct="5"
@@ -7719,6 +7688,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
+                        <dir xml:id="ua754a1ce-beb5-4a1c-847e-c6516099f0d1"
+                           tstamp="1"
+                           place="above"
+                           staff="1"
+                           label="words">
+                           Tempo 1o
+                        </dir>
                      </measure>
                      <measure n="200" xml:id="xc5fa78f0-2101-4e70-ad9a-84c4c20452f5">
                         <staff xml:id="x18e1c034-e2ce-42f8-84fb-c0658c2cd29d" n="1">
