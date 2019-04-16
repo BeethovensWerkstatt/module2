@@ -93,6 +93,7 @@
                <p n="9">minor corrections. Key-Change-Test.</p>
                <p n="9">All Clef-Changes (Fg I and II) which where encoded as separate staffDefs changed to clef-changes within the measures.</p>
                <p n="10">second corrections: part 1.</p>
+               <p n="11">second corrections: part 2.</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -8966,7 +8967,8 @@
                                  <tuplet xml:id="xd3dc82f1-8611-4723-989e-14204ac8c23b"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count"
+                                         num.place="below">
                                     <note xml:id="xfbbca8bb-8d5a-493a-8cb4-e0b8a565e37f"
                                           pname="g"
                                           oct="4"
@@ -9286,7 +9288,8 @@
                                  <tuplet xml:id="x40e23ee6-7f2a-4022-93f7-90df353867e3"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count"
+                                         num.place="below">
                                     <note xml:id="x7792b94e-71de-4c4e-8159-52569e397181"
                                           pname="g"
                                           oct="4"
@@ -9418,7 +9421,7 @@
                                place="below"
                                staff="1">
                            ff
-                        </dynam>
+                        </dynam><!-- sic – statt sf wie in allen anderen Stimmen. Fehler OA. -->
                      </measure>
                      <measure n="32" xml:id="xa4713edd-ce96-4b70-801a-d462c1cf0845">
                         <staff xml:id="x5f8a0335-6cda-4b83-8ab2-54d5b074f63b" n="1">
@@ -9479,7 +9482,7 @@
                                place="below"
                                staff="1">
                            f
-                        </dynam>
+                        </dynam> <!-- sic – statt sf wie in allen anderen Stimmen. Fehler OA. -->
                      </measure>
                      <measure n="34" xml:id="xb56e8313-69f5-4174-a6fc-0f99a8adb4c1">
                         <staff xml:id="xd288cdfb-6425-47a1-a405-ce2889253eb4" n="1">
@@ -10303,7 +10306,8 @@
                                  <tuplet xml:id="x04b4567c-32dc-4564-a3de-cdc0687d097f"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count"
+                                         num.place="below">
                                     <note xml:id="xfff4f265-a025-4613-8ebc-d03ea48ac91c"
                                           pname="g"
                                           oct="4"
@@ -10623,7 +10627,8 @@
                                  <tuplet xml:id="x60b9bf42-d42d-4a53-b5f0-a7beff9b3da0"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count"
+                                         num.place="below">
                                     <note xml:id="xc11565ea-96c4-4cfb-92c5-8159858fd2d4"
                                           pname="g"
                                           oct="4"
@@ -11641,7 +11646,8 @@
                                  <tuplet xml:id="xcccb76f7-c7ff-49f8-b732-ed27251ca390"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count"
+                                         num.place="below">
                                     <note xml:id="x6124ac58-913b-419e-b479-e247d1f9e32f"
                                           pname="g"
                                           oct="4"
@@ -11961,7 +11967,8 @@
                                  <tuplet xml:id="x0124ac82-030b-49e9-9f4a-c9046420dd9b"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count"
+                                         num.place="below">
                                     <note xml:id="x328d4401-49c5-42ba-81d3-5cee88128eef"
                                           pname="g"
                                           oct="4"
@@ -12978,7 +12985,8 @@
                                  <tuplet xml:id="x0fd19755-a816-4482-bdac-b69206bc9509"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count"
+                                         num.place="below">
                                     <note xml:id="x4de75602-525a-477f-b4ea-05f1fcd23ec3"
                                           pname="g"
                                           oct="4"
@@ -13298,7 +13306,8 @@
                                  <tuplet xml:id="xbcd8a70a-49e0-468a-a52e-1d29107bf3fe"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count"
+                                         num.place="below">
                                     <note xml:id="xd5d69a5f-f23e-4d28-bb82-f9e7668aac02"
                                           pname="g"
                                           oct="4"
@@ -14315,7 +14324,8 @@
                                  <tuplet xml:id="x0c52c99d-f234-4c38-84c0-3f43dd4ffc90"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count"
+                                         num.place="below">
                                     <note xml:id="xc8b31b44-acfd-4878-9b23-fe4ded1d3106"
                                           pname="g"
                                           oct="4"
@@ -14797,7 +14807,8 @@
                                  <tuplet xml:id="x11864309-5b9a-49ab-a607-9ab39061e143"
                                          num="3"
                                          numbase="2"
-                                         num.format="count">
+                                         num.format="count"
+                                         num.place="below">
                                     <note xml:id="x34d52f8d-a29b-4d5c-aeb7-5dcdb88d5603"
                                           pname="g"
                                           oct="4"
@@ -15362,15 +15373,13 @@
                         <staff xml:id="x2cb340b9-5f7d-4dcf-8d91-bc5399820f39" n="1">
                            <layer xml:id="x73b79914-dd69-4316-a8d9-0160332fe307" n="1">
                               <beam xml:id="x0ec07d59-3723-4944-b0df-d9076557e103">
-                                 <tuplet xml:id="x36b2eec9-f80a-4412-a771-75cc5270b1d7" num="3" numbase="2">
+                                 <tuplet xml:id="x36b2eec9-f80a-4412-a771-75cc5270b1d7" num="6" numbase="4" num.visible="false">
                                     <note xml:id="x31d65748-e52b-4194-8bb2-7f7f14cb73b4"
                                           pname="g"
                                           oct="5"
                                           dur="16"
                                           stem.dir="down"
-                                          artic="stacciss">
-                                       
-                                    </note>
+                                          artic="stacciss"/>
                                     <note xml:id="x61353536-7595-4303-964b-ef60059b09c2"
                                           pname="e"
                                           oct="5"
@@ -15381,16 +15390,12 @@
                                           oct="5"
                                           dur="16"
                                           stem.dir="down"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x6e8d72cd-daad-4653-8891-0daf1426aaff" num="3" numbase="2">
                                     <note xml:id="x8e398f69-25e5-42f5-a383-9e06c4b707d0"
                                           pname="g"
                                           oct="4"
                                           dur="16"
                                           stem.dir="down"
-                                          artic="stacciss">
-                                       
-                                    </note>
+                                          artic="stacciss"/>
                                     <note xml:id="x1bf0e4be-5c09-4f80-8ced-b0a27819374e"
                                           pname="c"
                                           oct="5"
@@ -15404,15 +15409,13 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="x4c4c1922-8e18-45a7-a3f6-0a1f6574a4cb">
-                                 <tuplet xml:id="xd414f862-6f5b-4055-9e3e-12a573c903b7" num="3" numbase="2">
+                                 <tuplet xml:id="xd414f862-6f5b-4055-9e3e-12a573c903b7" num="6" numbase="4" num.visible="false">
                                     <note xml:id="x8afdc5bc-e263-4082-8746-f1f6cfb5ae77"
                                           pname="g"
                                           oct="5"
                                           dur="16"
                                           stem.dir="down"
-                                          artic="stacciss">
-                                       
-                                    </note>
+                                          artic="stacciss"/>
                                     <note xml:id="x0021329f-442f-4f5f-a8cc-0247074ae18d"
                                           pname="e"
                                           oct="5"
@@ -15423,16 +15426,12 @@
                                           oct="5"
                                           dur="16"
                                           stem.dir="down"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x0fb5f700-f0b7-42e0-9fb2-238f0110dc93" num="3" numbase="2">
                                     <note xml:id="xfe35ad5e-7586-4b5a-bf1a-03d4aec49ce7"
                                           pname="g"
                                           oct="4"
                                           dur="16"
                                           stem.dir="down"
-                                          artic="stacciss">
-                                       
-                                    </note>
+                                          artic="stacciss"/>
                                     <note xml:id="x06dcfca7-f665-457f-8453-bbc866443305"
                                           pname="c"
                                           oct="5"
@@ -15446,15 +15445,13 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="x8b058e8e-112f-47bb-8ccc-3a9d00bd5515">
-                                 <tuplet xml:id="xbfad3321-fc30-4c22-853f-3a690b74fe2c" num="3" numbase="2">
+                                 <tuplet xml:id="xbfad3321-fc30-4c22-853f-3a690b74fe2c" num="6" numbase="4" num.visible="false">
                                     <note xml:id="x694c0bd6-9111-49ff-ae52-98fab5da8e58"
                                           pname="g"
                                           oct="5"
                                           dur="16"
                                           stem.dir="down"
-                                          artic="stacciss">
-                                       
-                                    </note>
+                                          artic="stacciss"/>
                                     <note xml:id="x30f28b45-13c4-403f-b0bd-97353d5b2420"
                                           pname="e"
                                           oct="5"
@@ -15465,16 +15462,12 @@
                                           oct="5"
                                           dur="16"
                                           stem.dir="down"/>
-                                 </tuplet>
-                                 <tuplet xml:id="x54f7a388-cbf8-45c3-9a4f-e26743a9d742" num="3" numbase="2">
                                     <note xml:id="x8ccf4fc1-7e77-4220-a6b2-1b9483b521f9"
                                           pname="g"
                                           oct="4"
                                           dur="16"
                                           stem.dir="down"
-                                          artic="stacciss">
-                                       
-                                    </note>
+                                          artic="stacciss"/>
                                     <note xml:id="x9e53ff85-3b2d-47d3-9e12-4bcdf12e1e65"
                                           pname="c"
                                           oct="5"
@@ -15488,15 +15481,13 @@
                                  </tuplet>
                               </beam>
                               <beam xml:id="x7e08277f-4f44-41a1-970d-a40fbd052983">
-                                 <tuplet xml:id="xa9750950-56db-4738-81d8-d887dc0ca535" num="3" numbase="2">
+                                 <tuplet xml:id="xa9750950-56db-4738-81d8-d887dc0ca535" num="6" numbase="4" num.visible="false">
                                     <note xml:id="x358b7d79-c1a4-4712-a80f-c2f63b8c46d6"
                                           pname="g"
                                           oct="5"
                                           dur="16"
                                           stem.dir="down"
-                                          artic="stacciss">
-                                       
-                                    </note>
+                                          artic="stacciss"/>
                                     <note xml:id="x1c356c18-1b44-4001-96c0-4f25492541e5"
                                           pname="e"
                                           oct="5"
@@ -15507,16 +15498,12 @@
                                           oct="5"
                                           dur="16"
                                           stem.dir="down"/>
-                                 </tuplet>
-                                 <tuplet xml:id="xebd0116e-c745-45c3-a40c-795799c77727" num="3" numbase="2">
                                     <note xml:id="x9fb5a1f3-c0c6-4be3-8e63-d8436f82d794"
                                           pname="g"
                                           oct="4"
                                           dur="16"
                                           stem.dir="down"
-                                          artic="stacciss">
-                                       
-                                    </note>
+                                          artic="stacciss"/>
                                     <note xml:id="xe7b5fdac-9692-4c60-bc77-dfa9c2c18ae3"
                                           pname="c"
                                           oct="5"
