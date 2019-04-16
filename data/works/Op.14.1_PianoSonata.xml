@@ -137,6 +137,15 @@
                   </changeDesc>
                   <date isodate="2019-04-04"/>
             </change>
+            <change n="10">
+                  <respStmt>
+                        <persName auth.uri="https://github.com/" codedval="Susanne Cox">Susanne Cox</persName>
+                  </respStmt>
+                  <changeDesc>
+                        <p>2. Satz nach OA korrigiert</p>
+                  </changeDesc>
+                  <date isodate="2019-04-15"/>
+            </change>
       </revisionDesc>
    </meiHead>
    <music>
@@ -264,6 +273,7 @@
                            endid="#xb76afe52-6e12-4105-9cf4-e445a1b5b9b0"
                            curvedir="above"
                            staff="1"/>
+                        <dir xml:id="x931c8499-7bdd-454f-bccc-500efe191ec4" place="above" staff="1" tstamp="1">Allegro.</dir>
                   </measure>
                   <measure n="2"
                            xml:id="xe32bc8df-2a69-4e68-8b13-3f069e0d3e01"
@@ -18250,10 +18260,10 @@
                            startid="#xf2398445-a796-4b7e-8369-6c88f39345a6"
                            endid="#xaf005747-af15-436f-b563-e7dc3777ca00"
                            curvedir="above"/>
-                        <tempo xml:id="x926d2a72-2356-4fbd-b387-386d9e5f143e"
+                        <dir xml:id="x926d2a72-2356-4fbd-b387-386d9e5f143e"
                               tstamp="1"
                               place="above"
-                              staff="1">Allegretto</tempo>
+                              staff="1">Allegretto</dir>
                   </measure>
                   <measure n="2" xml:id="xe9e2f8da-8096-42c5-a5c9-8e9aa47a4535">
                      <staff xml:id="xaf942a13-677f-4250-b45b-f1b3476d07c9" n="1">
@@ -25187,6 +25197,7 @@
                             staff="1"
                             tstamp="1"
                             place="below">p</dynam>
+                        <dir xml:id="xb9cf2553-6c1e-41c7-a371-6fa3e96178fe" tstamp="1" staff="1" place="above">Rondo Allegro Comodo</dir>
                   </measure>
                   <measure n="1" xml:id="xd83ff2f4-1a98-48a0-971e-64adbea7b34f">
                      <staff xml:id="x68f371f2-6e15-40e0-b92e-ac1d439097bf" n="1">
