@@ -202,7 +202,13 @@
                     <xsl:apply-templates select=".//mei:staffDef" mode="first.pass"/>
                 </staffGrp>
                 <staffGrp symbol="brace" bar.thru="true">
-                    <xsl:apply-templates select="($second.file//mei:scoreDef)[$pos]//mei:staffDef" mode="first.pass.file.2"/>
+                    <xsl:variable name="second.file.staffDefs" select="($second.file//mei:scoreDef)[$pos]//mei:staffDef" as="node()+"/>
+                    <xsl:apply-templates select="($second.file.staffDefs)[1]" mode="first.pass.file.2">
+                        <xsl:with-param name="add.spacing" select="true()" as="xs:boolean" tunnel="yes"/>
+                    </xsl:apply-templates>
+                    <xsl:apply-templates select="($second.file.staffDefs)[position() gt 1]" mode="first.pass.file.2">
+                        <xsl:with-param name="add.spacing" select="false()" as="xs:boolean" tunnel="yes"/>
+                    </xsl:apply-templates>
                 </staffGrp>
             </staffGrp>
         </scoreDef>
@@ -217,7 +223,11 @@
     </xsl:template>
     
     <xsl:template match="mei:staffDef" mode="first.pass.file.2">
+        <xsl:param name="add.spacing" tunnel="yes" as="xs:boolean?"/>
         <xsl:copy>
+            <xsl:if test="exists($add.spacing) and $add.spacing = true()">
+                <xsl:attribute name="spacing" select="'40vu'"/>
+            </xsl:if>
             <xsl:apply-templates select="ancestor::mei:scoreDef/@key.sig" mode="#current"/>
             <xsl:apply-templates select="node() | @*" mode="#current"/>
         </xsl:copy>
