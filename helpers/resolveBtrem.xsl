@@ -30,28 +30,67 @@
         
         <xsl:choose>
             <xsl:when test="not(@dots)">
-                <xsl:apply-templates select="$child" mode="keep.id">
-                    <xsl:with-param name="dur" select="$unitdur" tunnel="yes"/>
-                </xsl:apply-templates>
-                
-                <xsl:for-each select="(2 to $repeats)">
-                    <xsl:apply-templates select="$child" mode="adjust.id">
+                <xsl:variable name="nodes" as="node()+">
+                    <xsl:apply-templates select="$child" mode="keep.id">
                         <xsl:with-param name="dur" select="$unitdur" tunnel="yes"/>
                     </xsl:apply-templates>
-                </xsl:for-each>
+                    
+                    <xsl:for-each select="(2 to $repeats)">
+                        <xsl:apply-templates select="$child" mode="adjust.id">
+                            <xsl:with-param name="dur" select="$unitdur" tunnel="yes"/>
+                        </xsl:apply-templates>
+                    </xsl:for-each>
+                </xsl:variable>
+                
+                <xsl:choose>
+                    <xsl:when test="count($nodes) = 2">
+                        <beam xmlns="http://www.music-encoding.org/ns/mei" xml:id="n{uuid:randomUUID()}">
+                            <xsl:sequence select="$nodes"/>
+                        </beam>
+                    </xsl:when>
+                    <xsl:when test="count($nodes) = 4">
+                        <beam xmlns="http://www.music-encoding.org/ns/mei" xml:id="n{uuid:randomUUID()}">
+                            <xsl:sequence select="$nodes"/>
+                        </beam>
+                    </xsl:when>
+                    <xsl:when test="count($nodes) = 8">
+                        <beam xmlns="http://www.music-encoding.org/ns/mei" xml:id="n{uuid:randomUUID()}">
+                            <xsl:sequence select="$nodes[position() lt 5]"/>
+                        </beam>
+                        <beam xmlns="http://www.music-encoding.org/ns/mei" xml:id="n{uuid:randomUUID()}">
+                            <xsl:sequence select="$nodes[position() gt 4]"/>
+                        </beam>
+                    </xsl:when>
+                    <xsl:when test="count($nodes) = 12">
+                        <beam xmlns="http://www.music-encoding.org/ns/mei" xml:id="n{uuid:randomUUID()}">
+                            <xsl:sequence select="$nodes[position() lt 5]"/>
+                        </beam>
+                        <beam xmlns="http://www.music-encoding.org/ns/mei" xml:id="n{uuid:randomUUID()}">
+                            <xsl:sequence select="$nodes[position() gt 4 and position() lt 9]"/>
+                        </beam>
+                        <beam xmlns="http://www.music-encoding.org/ns/mei" xml:id="n{uuid:randomUUID()}">
+                            <xsl:sequence select="$nodes[position() gt 8]"/>
+                        </beam>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:sequence select="$nodes"/>
+                    </xsl:otherwise>
+                </xsl:choose>
                 
             </xsl:when>
             <xsl:otherwise>
-                <tuplet xmlns="http://www.music-encoding.org/ns/mei" xml:id="t{uuid:randomUUID()}" num="3" numbase="2" num.visible="false">
-                    <xsl:apply-templates select="$child">
-                        <xsl:with-param name="dur" select="$unitdur" tunnel="yes"/>
-                    </xsl:apply-templates>
-                    <xsl:apply-templates select="$child" mode="adjust.id">
-                        <xsl:with-param name="dur" select="$unitdur" tunnel="yes"/>
-                    </xsl:apply-templates>
-                    <xsl:apply-templates select="$child" mode="adjust.id">
-                        <xsl:with-param name="dur" select="$unitdur" tunnel="yes"/>
-                    </xsl:apply-templates>
+                <tuplet xmlns="http://www.music-encoding.org/ns/mei" xml:id="t{uuid:randomUUID()}" num="3" numbase="2" num.visible="false" bracket.visible="false">
+                    <beam xml:id="b{uuid:randomUUID()}">
+                        <xsl:apply-templates select="$child" mode="keep.id">
+                            <xsl:with-param name="dur" select="$unitdur" tunnel="yes"/>
+                        </xsl:apply-templates>
+                        <xsl:apply-templates select="$child" mode="adjust.id">
+                            <xsl:with-param name="dur" select="$unitdur" tunnel="yes"/>
+                        </xsl:apply-templates>
+                        <xsl:apply-templates select="$child" mode="adjust.id">
+                            <xsl:with-param name="dur" select="$unitdur" tunnel="yes"/>
+                        </xsl:apply-templates>
+                    </beam>
                 </tuplet>
             </xsl:otherwise>
         </xsl:choose>
@@ -62,12 +101,17 @@
         <xsl:attribute name="xml:id" select="'n' || uuid:randomUUID()"/>
     </xsl:template>
     
+    <xsl:template match="@accid" mode="adjust.id">
+        <xsl:attribute name="accid.ges" select="."/>
+    </xsl:template>
+    
     <xsl:template match="@dur" mode="keep.id adjust.id">
         <xsl:param name="dur" tunnel="yes"/>
         <xsl:attribute name="dur" select="xs:integer(1 div $dur)"/>
     </xsl:template>
     
     <xsl:template match="@stem.mod" mode="keep.id adjust.id"/>
+    <xsl:template match="@dots" mode="keep.id adjust.id"/>
     
     <xd:doc>
         <xd:desc>
