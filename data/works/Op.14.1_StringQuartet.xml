@@ -9307,13 +9307,32 @@
                                     <note xml:id="x948134ab-6e09-45cb-9f1d-194effa8bf21" pname="f" oct="4"/>
                                  </chord>
                               </beam>
-                              <chord xml:id="xdbea7ed1-64ab-4126-87de-37df5eccbf8a"
-                                     dur="4"
-                                     stem.dir="up"
-                                     stem.mod="2slash">
+                              <beam xml:id="xbc1996ea-9f65-4f7f-a35d-7d114184d6be">
+                                    <chord xml:id="xdbea7ed1-64ab-4126-87de-37df5eccbf8a"
+                                     dur="16"
+                                     stem.dir="up">
                                  <note xml:id="x68376ea4-be65-42be-b5c1-769773965fc2" pname="b" oct="3"/>
                                  <note xml:id="xe0d4a5fe-aeed-464f-b109-539a9deea33a" pname="f" oct="4"/>
                               </chord>
+                                    <chord xml:id="x29310fc5-b805-4dd9-a7fb-66043b368c02"
+                                          dur="16"
+                                          stem.dir="up">
+                                          <note xml:id="xc0afcfa3-0849-4bb1-82f1-4b763fb0ae40" pname="b" oct="3"/>
+                                          <note xml:id="x7dd09712-ee46-4710-82b3-f2bce39e59c2" pname="f" oct="4"/>
+                                    </chord>
+                                    <chord xml:id="xfb64dfea-2fa2-4984-a1a8-52c6e553f865"
+                                          dur="16"
+                                          stem.dir="up">
+                                          <note xml:id="x6594059c-88ee-4946-80ab-acba71c9b4ec" pname="b" oct="3"/>
+                                          <note xml:id="x4c87d568-56eb-4906-aaca-e7fab4e4cbf9" pname="f" oct="4"/>
+                                    </chord>
+                                    <chord xml:id="xf18b88b3-99fd-49ec-95fb-6b91ce64f612"
+                                          dur="16"
+                                          stem.dir="up">
+                                          <note xml:id="x1e1a1335-305d-4740-aa0e-872098a04f1c" pname="b" oct="3"/>
+                                          <note xml:id="x676534fd-8aae-4028-b047-3d3b303c8c7d" pname="f" oct="4"/>
+                                    </chord>
+                              </beam>
                            </layer>
                         </staff>
                      </measure>
@@ -28641,14 +28660,11 @@
                                  staff="1"
                                  place="above"
                                  startid="#xbf7d765f-36d3-4c14-9b71-8f248d2135ac"/>
+                           <dir xml:id="x43aae218-5b61-4e96-9632-64ccc6dc01ef"
+                                 staff="1"
+                                 place="below"
+                                 tstamp="1">Da Capo Allegretto e poi la Coda</dir>
                      </measure>
-                     <!--  <measure n="x">
-                        <staff n="1">
-                           <layer n="1">
-                              <dir place="within" staff="1">Da Capo Allegretto e poi la Coda</dir>
-                           </layer>
-                        </staff>
-                     </measure>-->
                   </section>
                   <section xml:id="x69bafbd1-1027-4ea4-a352-b0d0a2792944" n="4">
                      
@@ -28678,11 +28694,6 @@
                              tstamp="1"
                              place="above"
                              staff="1">Coda</dir>
-                           <dir xml:id="x43aae218-5b61-4e96-9632-64ccc6dc01ef"
-                             staff="1"
-                             place="below"
-                             tstamp="1">Da Capo Allegretto e poi la Coda</dir>
-                           
                         <slur xml:id="x591c4674-e088-451f-ab3a-3505b75cbc52"
                               startid="#xfa5bd537-d69b-4f77-b2d9-7d7e1ccc645b"
                               curvedir="below"
@@ -31334,9 +31345,11 @@
                                  startid="#x246dfb51-39e2-47c0-be88-d839b92837fa"
                                  place="above"
                                  form="norm"/>
-                           
+                           <dir xml:id="x2b69ecc9-60ae-47f5-9bf3-11e24c71ad97"
+                                 staff="1"
+                                 place="below"
+                                 tstamp="1">D: C: Allegretto e poi la Coda.</dir>
                      </measure>
-                     <!-- D:C: Allegretto epoi la Coda. -->
                   </section>
                   <section xml:id="x26fd68c8-a230-4f7d-8add-8031f2701c16" n="3" label="Coda">
                      <scoreDef xml:id="x762dfe98-6a31-455a-9e57-7db2e70cf95b"
@@ -31373,11 +31386,6 @@
                              tstamp="1"
                              place="above"
                              staff="1">Coda.</dir>
-                           <dir xml:id="x2b69ecc9-60ae-47f5-9bf3-11e24c71ad97"
-                             staff="1"
-                             place="below"
-                             tstamp="1">D: C: Allegretto e poi la Coda.</dir>
-                           
                      </measure>
                      <measure n="102" xml:id="x3783e045-fb20-44f5-8253-b65cfd7dc7e2">
                         <staff xml:id="xd18003b1-80a4-4e48-b463-8635d5cafc8c" n="1">
@@ -33752,9 +33760,12 @@
                                  startid="#xf8aa581a-305c-45ff-ab56-893b4d31bb91"
                                  place="above"
                                  form="norm"/>
+                           <dir xml:id="xb5b0b3d6-bb00-4b2c-a2d3-d6866dcdd5db"
+                                 staff="1"
+                                 place="below"
+                                 tstamp="1">D: C: Allegretto e poi la Coda.</dir>
                      </measure>
                   </section>
-                  <!-- D:C: Allegretto e poi la Coda -->
                   <section xml:id="x0d757649-4bcb-400d-ba87-24555a5eef45">
                      <scoreDef xml:id="x38facb0f-3e20-483c-a671-b54fd8be75ea"
                                key.sig="4f"
@@ -33779,11 +33790,6 @@
                              tstamp="1"
                              place="above"
                              staff="1">Coda.</dir>
-                           <dir xml:id="xb5b0b3d6-bb00-4b2c-a2d3-d6866dcdd5db"
-                             staff="1"
-                             place="below"
-                             tstamp="1">D: C: Allegretto e poi la Coda.</dir>
-                           
                         <dynam xml:id="xe973f988-6e2e-497e-9bfa-d9680c8e72f4"
                                tstamp="1"
                                place="below"
@@ -36019,8 +36025,11 @@
                                     stem.dir="up"/>
                            </layer>
                         </staff>
+                           <dir xml:id="x79c82bd6-0ae7-4940-8120-227dee19540e"
+                                 staff="1"
+                                 place="below"
+                                 tstamp="1">Da Capo Allegretto e poi la Coda</dir>
                      </measure>
-                     <!-- Da Capo Allegretto e poi la Coda -->
                   </section>
                   <section xml:id="xb202d1f9-6171-40be-b182-f6b01b663e3a" n="3" label="Coda">
                      <scoreDef xml:id="x59dce62a-bc02-455e-9143-8e8621adf274"
@@ -36057,11 +36066,6 @@
                              tstamp="1"
                              place="above"
                              staff="1">Coda.</dir>
-                           <dir xml:id="x79c82bd6-0ae7-4940-8120-227dee19540e"
-                             staff="1"
-                             place="below"
-                             tstamp="1">Da Capo Allegretto e poi la Coda</dir>
-                           
                      </measure>
                      <measure n="102" xml:id="x0b0b0976-1962-49f9-a6fb-5e119cf0bb60">
                         <staff xml:id="xddf59179-bfa4-49ab-9892-5c03f61085a4" n="1">
@@ -38321,7 +38325,9 @@
                                     dur="4"
                                     stem.dir="up"/>
                               <rest xml:id="x5d5f5ce1-49dc-4885-a345-4b65776d5c66" dur="4"/>
-                              <tuplet xml:id="x579943a6-f330-4723-9d41-c7bac293543b" num.visible="false">
+                                 <tuplet xml:id="x579943a6-f330-4723-9d41-c7bac293543b" bracket.visible="false" num="3"
+                                       num.visible="false"
+                                       numbase="2">
                                  <rest xml:id="x79deadf5-4831-44a1-9961-24adaeca0e81" dur="8"/>
                                  <beam xml:id="x9544035c-74cd-4fe5-a001-6e8bb982761b">
                                     <note xml:id="x0f2a03e5-496c-47d2-8ddd-6c9cda5d1463"
@@ -53329,8 +53335,13 @@
                         <staff xml:id="x66b3f77f-af81-4733-9706-87ad734502b9" n="1">
                            <layer xml:id="x586252b3-9528-4e3f-a42b-4d82715017e0" n="1">
                               <rest xml:id="xe3aea9d4-e3de-4c87-aa8b-ee603349238e" dur="2"/>
-                              <rest xml:id="x7a0ca2a6-fc88-49e3-9be6-ae72a9d2385f" dur="8"/>
-                              <beam xml:id="x362bab80-94dc-4fcc-8782-7bf49dbc0015">
+                              <rest xml:id="x7a0ca2a6-fc88-49e3-9be6-ae72a9d2385f" dur="4"/>
+                                 <tuplet xml:id="xa6c8d06a-4358-4862-8626-25ac14b4b13e"
+                                       num="3"
+                                       numbase="2"
+                                       num.visible="false"
+                                       bracket.visible="false">
+                                    <beam xml:id="x362bab80-94dc-4fcc-8782-7bf49dbc0015">
                                  <note xml:id="x7548de6b-01fc-4db8-a187-c2458e4d4c9a"
                                        pname="b"
                                        accid="n"
@@ -53349,7 +53360,7 @@
                                        dur="8"
                                        stem.dir="down"
                                        accid.ges="n"/>
-                              </beam>
+                              </beam></tuplet>
                            </layer>
                         </staff>
                      </measure>
