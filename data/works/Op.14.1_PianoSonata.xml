@@ -22354,14 +22354,14 @@
                                   n="1"
                                   lines="5"
                                   clef.line="2"
-                                  clef.shape="G" key.accid="n" key.pname="f" keysig.showchange="true">
+                                  clef.shape="G" key.sig="0" keysig.showchange="true">
                            <label xml:id="xb3d76cf0-c9d8-42ec-a5ee-2f71cd174514">piano</label>
                         </staffDef>
                         <staffDef xml:id="xa6c32843-34f5-41c9-95b2-2e798c5d1255"
                                   n="2"
                                   lines="5"
                                   clef.line="4"
-                                  clef.shape="F" key.accid="n" key.pname="f" keysig.showchange="true">
+                                  clef.shape="F" key.sig="0" keysig.showchange="true">
                            <label xml:id="x9f39eec5-68fb-46d8-825a-a48603325a46">piano</label>
                         </staffDef>
                      </staffGrp>
@@ -24313,6 +24313,10 @@
                               startid="#x6070dc21-5477-4814-8bfd-81e38c6c5262"
                               place="above"
                               form="norm"/>
+                        <dir xml:id="x8bfb9071-65fa-4d91-8776-68e4a90180a5"
+                              staff="1"
+                              place="below"
+                              tstamp="1">D.C. Allto e poi la Coda</dir>
                   </measure>
                </section>
                <section xml:id="x92ad47f4-cd67-4321-bc26-39396a17fc5a" n="3" label="Coda">
@@ -24358,10 +24362,6 @@
                           staff="1"
                           place="above"
                           tstamp="1">Coda.</dir>
-                     <dir xml:id="x8bfb9071-65fa-4d91-8776-68e4a90180a5"
-                          staff="1"
-                          place="below"
-                          tstamp="1">D.C. Allto e poi la Coda</dir>
                      <tie xml:id="x57383f7b-e034-454f-b865-b9fd5c856f51"
                           staff="2"
                           startid="#xaef574be-d61b-44de-81a0-b9e13c786f9f"
