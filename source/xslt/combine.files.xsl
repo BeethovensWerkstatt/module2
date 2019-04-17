@@ -192,7 +192,7 @@
         <xsl:copy-of select="$output"/>
     </xsl:template>
     
-    <xsl:template match="mei:scoreDef" mode="first.pass">
+    <xsl:template match="mei:score/mei:scoreDef" mode="first.pass">
         <xsl:variable name="pos" select="count(preceding::mei:scoreDef) + 1" as="xs:integer"/>
         
         <scoreDef xmlns="http://www.music-encoding.org/ns/mei">
@@ -207,6 +207,7 @@
             </staffGrp>
         </scoreDef>
     </xsl:template>
+    <xsl:template match="mei:section/mei:scoreDef" mode="first.pass"/>
     
     <xsl:template match="mei:staffDef" mode="first.pass">
         <xsl:copy>
@@ -317,8 +318,29 @@
                 <xsl:apply-templates select="($second.file//mei:measure)[3]/child::node()" mode="first.pass.file.2"/>
             </measure>
         </xsl:if>
+        
+        
+        <!-- check for scoreDefs in one of the files -->
+        
+        
+        <!--<xsl:template match="mei:scoreDef" mode="first.pass">
+            <xsl:variable name="pos" select="count(preceding::mei:scoreDef) + 1" as="xs:integer"/>
+            
+            <scoreDef xmlns="http://www.music-encoding.org/ns/mei">
+                <xsl:apply-templates select="@meter.count | @meter.unit" mode="#current"/>
+                <staffGrp label="" symbol="none" bar.thru="false">
+                    <staffGrp symbol="brace" bar.thru="true">
+                        <xsl:apply-templates select=".//mei:staffDef" mode="first.pass"/>
+                    </staffGrp>
+                    <staffGrp symbol="brace" bar.thru="true">
+                        <xsl:apply-templates select="($second.file//mei:scoreDef)[$pos]//mei:staffDef" mode="first.pass.file.2"/>
+                    </staffGrp>
+                </staffGrp>
+            </scoreDef>
+        </xsl:template>-->
+        <xsl:sequence select="bw:combineFiles-evaluatePrecedingScoreDef($this.measure,$corresponding.measure)"/>
+        
         <xsl:copy>
-            <xsl:attribute name="found" select="count($corresponding.measure)"/>
             <xsl:apply-templates select="mei:staff | @*" mode="#current"/>
             <xsl:apply-templates select="$corresponding.measure/mei:staff" mode="first.pass.file.2"/>
             <xsl:apply-templates select="child::mei:*[not(local-name() = 'staff')]" mode="#current"/>
@@ -327,7 +349,7 @@
     </xsl:template>
     <xsl:template match="mei:staffDef/@n" mode="first.pass.file.2">
         <xsl:variable name="current.n" select="number(.)" as="xs:double"/>
-        <xsl:attribute name="n" select="$current.n + $first.file.staff.count"/>
+        <xsl:attribute name="n" select="$current.n + $first.file.staff.count"/>        
     </xsl:template>
     <xsl:template match="mei:staff/@n" mode="first.pass">
         <xsl:next-match/>
@@ -356,6 +378,98 @@
     <xsl:template match="*:measure/@n" mode="special.pushing">
         <xsl:attribute name="n" select="number(.) + 2"/>
     </xsl:template>
+    
+    
+    
+    <xsl:function name="bw:combineFiles-evaluatePrecedingScoreDef" as="node()?">
+        <xsl:param name="measure.1" as="node()"/>
+        <xsl:param name="measure.2" as="node()"/>
+        
+        <xsl:variable name="scoreDef.1" select="$measure.1/preceding-sibling::mei:*[1][local-name() = 'scoreDef']" as="node()?"/>
+        <xsl:variable name="scoreDef.2" select="$measure.2/preceding-sibling::mei:*[1][local-name() = 'scoreDef']" as="node()?"/>
+        
+        <xsl:if test="exists($scoreDef.1) or exists($scoreDef.2)">
+            <scoreDef xmlns="http://www.music-encoding.org/ns/mei">
+                
+                <staffGrp symbol="none" bar.thru="false">
+                    <staffGrp symbol="brace" bar.thru="true">
+                        <xsl:choose>
+                            <xsl:when test="exists($scoreDef.1)">
+                                <xsl:apply-templates select="$scoreDef.1" mode="condenseScoreDef"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:for-each select="(1 to $first.file.staff.count)">
+                                    <xsl:variable name="current.pos" select="." as="xs:integer"/>
+                                    <staffDef xmlns="http://www.music-encoding.org/ns/mei" type="unchanged" n="{$current.pos}"/>
+                                </xsl:for-each>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </staffGrp>
+                    <staffGrp symbol="brace" bar.thru="true">
+                        <xsl:choose>
+                            <xsl:when test="exists($scoreDef.2)">
+                                <xsl:apply-templates select="$scoreDef.2" mode="condenseScoreDef.file2"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:for-each select="(1 to $second.file.staff.count)">
+                                    <xsl:variable name="current.pos" select="." as="xs:integer"/>
+                                    <staffDef xmlns="http://www.music-encoding.org/ns/mei" type="unchanged" n="{string($current.pos + $first.file.staff.count)}"/>
+                                </xsl:for-each>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </staffGrp>
+                </staffGrp>
+            </scoreDef>
+        </xsl:if>
+            
+    </xsl:function>
+    
+    <xsl:template match="mei:scoreDef" mode="condenseScoreDef">
+        <xsl:variable name="current.scoreDef" select="." as="node()"/>
+        <xsl:variable name="available.staffDef.n" select="distinct-values(.//mei:staffDef/xs:integer(@n))" as="xs:integer*"/>
+        <xsl:for-each select="(1 to $first.file.staff.count)">
+            <xsl:variable name="current.n" select="." as="xs:integer"/>
+            <xsl:choose>
+                <xsl:when test="$current.scoreDef//mei:staffDef[xs:integer(@n) = $current.n]">
+                    <staffDef xmlns="http://www.music-encoding.org/ns/mei">
+                        <xsl:apply-templates select="$current.scoreDef/(@* except @xml:id)" mode="#current"/>
+                        <xsl:apply-templates select="$current.scoreDef//mei:staffDef[xs:integer(@n) = $current.n]/(@* except @xml:id)" mode="first.pass"/>
+                        <xsl:attribute name="n" select="$current.n"/>
+                    </staffDef>        
+                </xsl:when>
+                <xsl:otherwise>
+                    <staffDef xmlns="http://www.music-encoding.org/ns/mei">
+                        <xsl:apply-templates select="$current.scoreDef/(@* except @xml:id)" mode="#current"/>
+                        <xsl:attribute name="n" select="$current.n"/>
+                    </staffDef>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template match="mei:scoreDef" mode="condenseScoreDef.file2">
+        <xsl:variable name="current.scoreDef" select="." as="node()"/>
+        <xsl:variable name="available.staffDef.n" select="distinct-values(.//mei:staffDef/xs:integer(@n))" as="xs:integer*"/>
+        <xsl:for-each select="(1 to $second.file.staff.count)">
+            <xsl:variable name="current.n" select="." as="xs:integer"/>
+            <xsl:choose>
+                <xsl:when test="$current.scoreDef//mei:staffDef[xs:integer(@n) = $current.n]">
+                    <staffDef xmlns="http://www.music-encoding.org/ns/mei">
+                        <xsl:apply-templates select="$current.scoreDef/(@* except @xml:id)" mode="#current"/>
+                        <xsl:apply-templates select="$current.scoreDef//mei:staffDef[xs:integer(@n) = $current.n]/(@* except @xml:id)" mode="first.pass"/>
+                        <xsl:attribute name="n" select="($current.n + $first.file.staff.count)"/>
+                    </staffDef>        
+                </xsl:when>
+                <xsl:otherwise>
+                    <staffDef xmlns="http://www.music-encoding.org/ns/mei" n="">
+                        <xsl:apply-templates select="$current.scoreDef/(@* except @xml:id)" mode="#current"/>
+                        <xsl:attribute name="n" select="($current.n + $first.file.staff.count)"/>
+                    </staffDef>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:for-each>
+    </xsl:template>
+    
     
     <!-- generic copy template -->
     <xsl:template match="node() | @*" mode="#all">

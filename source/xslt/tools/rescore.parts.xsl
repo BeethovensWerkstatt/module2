@@ -84,6 +84,9 @@
     <xsl:template match="mei:measure" mode="rescore.parts">
         <xsl:param name="parts" tunnel="yes" as="node()*"/>
         <xsl:variable name="measure.n" select="@n" as="xs:string"/>
+        
+        <xsl:sequence select="custom:evaluatePrecedingScoreDef($parts,.,$measure.n)"/>
+        
         <xsl:copy>
             <xsl:apply-templates select="@*" mode="#current"/>
             <xsl:for-each select="1 to count($parts)">
@@ -113,7 +116,7 @@
                     <xsl:when test="$matching.measure">
                         <xsl:apply-templates select="$matching.measure/mei:*[local-name() != 'staff']" mode="rescore.parts">
                             <xsl:with-param name="new.n" select="$new.n" tunnel="yes"/>
-                            <xsl:with-param name="remove.tempo" select="xs:boolean($new.n != 1)" tunnel="yes" as="xs:boolean"/>
+                            <!--<xsl:with-param name="remove.tempo" select="xs:boolean($new.n != 1)" tunnel="yes" as="xs:boolean"/>-->
                         </xsl:apply-templates>
                     </xsl:when>
                     <xsl:otherwise/>
@@ -121,6 +124,79 @@
             </xsl:for-each>
         </xsl:copy>
     </xsl:template>
+    
+    <xsl:function name="custom:evaluatePrecedingScoreDef" as="node()?">
+        <xsl:param name="parts" as="node()*"/>
+        <xsl:param name="measure.1" as="node()"/>
+        <xsl:param name="measure.n" as="xs:string"/>
+        
+        <xsl:variable name="corresponding.measures" as="node()*">
+            <xsl:for-each select="1 to count($parts)">
+                <xsl:variable name="new.n" select="." as="xs:integer"/>
+                <xsl:variable name="current.part" select="$parts[$new.n]"/>
+                <xsl:sequence select="($current.part//mei:measure[@n = $measure.n])[1]"/>
+            </xsl:for-each>
+        </xsl:variable>
+        
+        <xsl:if test="some $measure in $corresponding.measures satisfies (local-name($measure/preceding-sibling::mei:*[1]) = 'scoreDef')">
+            
+            <xsl:variable name="staffDefs" as="node()*">
+                <xsl:for-each select="$parts">
+                    <xsl:variable name="new.n" select="position()" as="xs:integer"/>
+                    <xsl:variable name="current.part" select="$parts[$new.n]"/>
+                    <xsl:variable name="current.scoreDef" select="($current.part//mei:measure[@n = $measure.n])[1]/preceding-sibling::mei:*[1][local-name() = 'scoreDef']" as="node()?"/>
+                    
+                    <xsl:apply-templates select="$current.scoreDef" mode="rescore.parts.adjust.scoreDef">
+                        <xsl:with-param name="new.n" select="$new.n" tunnel="yes"/>
+                    </xsl:apply-templates>
+                </xsl:for-each>
+            </xsl:variable>
+            
+            <xsl:variable name="att.names" select="distinct-values($staffDefs/descendant-or-self::mei:staffDef/@*/local-name())" as="xs:string*"/>
+            <xsl:variable name="matching.attributes" as="attribute()*">
+                <xsl:for-each select="$att.names">
+                    <xsl:variable name="current.att.name" select="." as="xs:string"/>
+                    <xsl:variable name="first.value" select="string(($staffDefs//@*[local-name() = $current.att.name])[1])" as="xs:string"/>
+                    
+                    <xsl:variable name="available.everywhere" select="not($staffDefs/descendant-or-self::mei:staffDef[not(@*[local-name() = $current.att.name])])" as="xs:boolean"/>
+                    <xsl:variable name="same.value.everywhere" select="every $value in $staffDefs//@*[local-name() = $current.att.name]/string(.) satisfies $value = $first.value" as="xs:boolean"/>
+                    
+                    <xsl:if test="$available.everywhere and $same.value.everywhere">
+                        <xsl:attribute name="{$current.att.name}" select="$first.value"/>
+                    </xsl:if>
+                </xsl:for-each>   
+            </xsl:variable>
+            
+            <scoreDef xmlns="http://www.music-encoding.org/ns/mei" type="generated">
+                <xsl:attribute name="xml:id" select="($staffDefs//@xml:id)[1] || '_scoreDef'"/>
+                <xsl:sequence select="$matching.attributes"/>
+                <staffGrp>
+                    <xsl:attribute name="xml:id" select="($staffDefs//@xml:id)[1] || '_staffGrp'"/>
+                    <xsl:apply-templates select="$staffDefs" mode="rescore.parts.remove.common.attributes">
+                        <xsl:with-param name="common.attributes" select="$matching.attributes" tunnel="yes"/>
+                    </xsl:apply-templates>
+                </staffGrp>
+            </scoreDef>
+        </xsl:if>
+        
+    </xsl:function>
+    
+    <xsl:template match="mei:scoreDef" mode="rescore.parts"/>
+    <xsl:template match="mei:scoreDef" mode="rescore.parts.adjust.scoreDef">
+        <xsl:param name="new.n" tunnel="yes"/>
+        <staffDef xmlns="http://www.music-encoding.org/ns/mei" n="{$new.n}">
+            <xsl:attribute name="xml:id" select="(.//@xml:id)[1]"/>
+            <xsl:apply-templates select="@* except (@xml:id, @n)" mode="#current"/>
+        </staffDef>
+    </xsl:template>
+    
+    <xsl:template match="mei:staffDef/@*" mode="rescore.parts.remove.common.attributes">
+        <xsl:param name="common.attributes" tunnel="yes"/>
+        <xsl:if test="local-name() != $common.attributes/local-name()">
+            <xsl:next-match/>
+        </xsl:if>
+    </xsl:template>
+
     <xsl:template match="mei:staff/@n" mode="rescore.parts">
         <xsl:param name="new.n" tunnel="yes"/>
         <xsl:attribute name="n" select="$new.n"/>
@@ -129,7 +205,7 @@
         <xsl:param name="new.n" tunnel="yes"/>
         <xsl:attribute name="staff" select="$new.n"/>
     </xsl:template>
-    <xsl:template match="mei:tempo" mode="rescore.parts">
+    <!--<xsl:template match="mei:tempo" mode="rescore.parts">
         <xsl:param name="remove.tempo" tunnel="yes" as="xs:boolean?"/>
         <xsl:choose>
             <xsl:when test="exists($remove.tempo) and $remove.tempo = true()"/>
@@ -137,5 +213,5 @@
                 <xsl:next-match/>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template>-->
 </xsl:stylesheet>
