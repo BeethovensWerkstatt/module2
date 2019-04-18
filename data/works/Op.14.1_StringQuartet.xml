@@ -1136,12 +1136,6 @@
                               curvedir="above"
                               startid="#xd3e7cd49-6b19-4b23-8a0a-64b716443306"
                               endid="#xffe2f048-86ae-4dc2-9934-54249ee5ad6a"/>
-                        <!--Unterminated tupletSpan.-->
-                        <!--<tupletSpan xml:id="d1e2090" tstamp="3" tstamp.ges="216" startid="d1e2067" num="3" numbase="2" num.format="count" num.place="above"/>-->
-                        <!--Unterminated tupletSpan.-->
-                        <!--<tupletSpan xml:id="d1e2114" tstamp="3" tstamp.ges="216" startid="d1e2091" num="9" numbase="4" num.format="count" num.place="above"/>-->
-                        <!--Unterminated tupletSpan.-->
-                        <!--<tupletSpan xml:id="d1e2148" tstamp="3" tstamp.ges="216" startid="d1e2125" num="27" numbase="8" num.format="count" bracket.visible="true"/>-->
                      </measure>
                      <measure n="27" xml:id="xacf46276-5a39-469f-9980-3fe598c1b668">
                         <staff xml:id="x6cf623d5-0ebf-430d-8f4d-7034f541aa84" n="1">
@@ -2355,8 +2349,6 @@
                               staff="1"/>
                         </measure>
                      </ending>
-                  
-                  <!-- Taktzählung (OA zählt Wiederholung als einen?? -->
                   <section xml:id="xda2edb5a-edd7-4e37-a999-378ce298e166">
                      <measure n="62" xml:id="xac7e89e3-69ba-4325-be12-f468c56e2b94">
                         <staff xml:id="x6b65b689-aad8-4276-8a44-55a123d1bf21" n="1">
@@ -13828,7 +13820,6 @@
                               curvedir="below"
                               endid="#xbf71246f-f05d-4063-a7d7-c8b75920281f"
                               staff="1"/>
-                        <!--<slur startid="#d1e614" curvedir="above" endid="#d1e764" staff="1"/>-->
                      </measure>
                      <measure n="7" xml:id="x5b16d1f7-66cf-41a7-b4a2-ba6365e77a55">
                         <staff xml:id="xd27e1a3b-9b92-48b8-bdb6-a747bfb11804" n="1">
@@ -16822,11 +16813,7 @@
                                place="below"
                                staff="1">
                        fp
-                     </dynam> 
-                           <!-- <dir xml:id="xe63a759d-32b8-4704-bf2f-050bf2a1fa71"
-                             tstamp="3"
-                             staff="1"
-                             place="below">V.S.</dir> -->
+                     </dynam>
                      </measure> 
                      <measure n="76" xml:id="x2250c78d-a0a4-4eab-91d9-be072b76a317">
                         <staff xml:id="x84a505c2-5216-4289-b81f-2e3b9b8f6e70" n="1">
@@ -27683,7 +27670,9 @@
                   <section xml:id="xdf616a56-2dfe-4406-85b5-3ed4917d8641" n="2">
                      <scoreDef xml:id="xf8fbeb08-bf1f-46cd-bb6d-6ac9ce04056c"
                                key.sig="5f"
-                               key.mode="major">
+                               key.mode="major"
+                               meter.count="3"
+                               meter.unit="4">
                         <staffGrp xml:id="x08a14968-48e7-4373-933d-e536e30fd46c">
                            <staffDef xml:id="x1ecf5cb5-bc2c-40f8-b905-4334fa23dce9" n="1" key.sig="5f"/>
                         </staffGrp>
@@ -33109,7 +33098,7 @@
                            label="Maggiore">
                      <scoreDef xml:id="xa303225c-be1c-4dfb-a6d9-87b02e0e9848"
                                key.sig="5f"
-                               key.mode="major">
+                               key.mode="major"> <!-- Fehler in OA: Taktart-Angabe 3/4 fehlt -->
                         <staffGrp xml:id="x753ede68-1c0e-44fc-afde-3508f6804516">
                            <staffDef xml:id="x38714861-eca9-4ec5-9b71-3833331ecdf2" n="1" key.sig="5f"/>
                         </staffGrp>
@@ -35425,7 +35414,9 @@
                            label="Maggiore">
                      <scoreDef xml:id="x0a0d9009-d35f-4d35-9378-462c20f9bdc4"
                                key.sig="5f"
-                               key.mode="major">
+                               key.mode="major" 
+                               meter.count="3"
+                               meter.unit="4">
                         <staffGrp xml:id="xcce809b5-5da8-4dc9-a447-f0c0ef22580d">
                            <staffDef xml:id="x897f992d-9e37-488e-8fe7-96a3a006afab" n="1" key.sig="5f"/>
                         </staffGrp>
@@ -36574,7 +36565,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xe9164e94-dc84-479e-ac57-9b9c46f21f23"
-                               tstamp="1"
+                               tstamp="1.5"
                                place="below"
                                staff="1">
                           sf
@@ -36939,7 +36930,7 @@
                            </layer>
                         </staff>
                      </measure>
-                     <measure n="15" xml:id="xd0af7520-a117-4830-83cf-1d1add623589"><!-- in OA multiRest num="2" -->
+                     <measure n="15" xml:id="xd0af7520-a117-4830-83cf-1d1add623589">
                         <staff xml:id="x5da1241f-20a0-4f30-9e1f-2053736140fd" n="1">
                            <layer xml:id="xc88be51c-a564-4f2d-b568-3b3f9cf8e5c1" n="1">
                               <mRest xml:id="x24f1300f-0fbc-4c23-9085-d252d744c405"/>
@@ -37077,7 +37068,7 @@
                               endid="#x3802b3b8-7bd0-4701-a1ae-f9822b9855b7"
                               staff="1"/>
                         <dynam xml:id="x065499be-d0c6-4e8d-88b5-ab18745ada0a"
-                               tstamp="1.275"
+                               tstamp="1.2"
                                place="below"
                                staff="1">
                            cres
@@ -37528,7 +37519,7 @@
                           p
                         </dynam>
                         <dynam xml:id="xc2fee4e8-9250-42f4-bb1d-eefc42c45359"
-                               tstamp="1.9"
+                               tstamp="2"
                                place="below"
                                staff="1">
                           p
@@ -38381,9 +38372,6 @@
                               curvedir="below"
                               endid="#x4daec051-0b82-45e4-b228-60a3a66c0747"
                               staff="1"/>
-                        <!--  <tupletSpan tstamp="2.5" startid="#d1e4551" num="3" numbase="2"
-                           num.format="count" num.place="above" tstamp2="0m+2.8333" endid="#d1e4598"
-                           staff="1"/>-->
                      </measure>
                      <measure n="47" xml:id="x5d978610-2a51-4ce8-a879-7017c4d5fa97">
                         <staff xml:id="x8d5997fb-6623-44a3-a02e-44161cfbe1c2" n="1">
@@ -40067,7 +40055,7 @@
                                           dur="8"
                                           stem.dir="down"/>
                                     <note xml:id="xa83560a0-2505-4cbe-aa06-90b1dd7e87e6"
-                                          pname="f"
+                                          pname="g"
                                           oct="5"
                                           dur="8"
                                           stem.dir="down"/>
@@ -41869,11 +41857,10 @@
                                           dur="8"
                                           stem.dir="down"/>
                                     <note xml:id="x463db244-4b8c-432c-90ca-76bb5856bc7f"
-                                          pname="b"
-                                          oct="4"
+                                          pname="c"
+                                          oct="5"
                                           dur="8"
-                                          stem.dir="down"
-                                          accid.ges="f"/>
+                                          stem.dir="down"/>
                                     <note xml:id="x30c57def-ff6a-48fe-b4a6-3df57f9c1b2e"
                                           pname="e"
                                           oct="5"
@@ -43687,6 +43674,10 @@
                              staff="1"
                              startid="#x42c21dfd-209c-490d-8eb1-d93558b943b2"
                              endid="#x1353f123-c9ef-4d43-bd33-172d6b0650bd"/>
+                           <dynam xml:id="xecb8f101-acb9-4bc2-93f2-75cdeb5d0fc5"
+                                 tstamp="2.75"
+                                 place="below"
+                                 staff="1">cres</dynam>
                      </measure>
                      <measure n="109" xml:id="x830bd427-7ced-4da0-8c92-75a36b9b96ba">
                         <staff xml:id="x97c61047-f96c-4e03-bf1a-843d9e0f0ef0" n="1">
