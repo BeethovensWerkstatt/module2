@@ -6525,10 +6525,6 @@
                           staff="1"
                           startid="#xfab63f5f-b75e-4ab7-af78-3aa419c27531"
                           endid="#xde2302f2-6c77-4868-bf75-5c68f21c9432"/>
-                        <dir xml:id="x597e8483-735c-4b0b-8439-8a935b788e34"
-                              staff="1"
-                              tstamp="1"
-                              place="above">Maggiore</dir>
                   </measure>
                   <measure n="64" xml:id="x2fc756c1-e673-4fde-9fd1-98d296cdd6ad">
                      <staff xml:id="x82c7ec80-e9e5-4eb7-91c6-1c5d19236932" n="1">
@@ -16179,6 +16175,11 @@
                               staff="1"
                               tstamp="1"
                               place="below">sf</dynam>
+                        <slur xml:id="xd8a49d98-ec8c-4d89-b568-c61310e592e5"
+                              staff="1"
+                              startid="#x75c48a82-8a07-4cf8-85cd-e30c90d28214"
+                              endid="#x860ad30f-8ae8-404c-85d6-42589cdff214"
+                              curvedir="above"/>
                   </measure>
                   <measure n="148" xml:id="x7eb2c021-647d-4850-8c35-e1c509be85d6">
                      <staff xml:id="x10f65b86-f8f9-4ac2-947c-b3f4bb1e8ed0" n="1">
@@ -16215,11 +16216,7 @@
                             staff="1"
                             tstamp="1.5"
                             place="below">p</dynam>
-                     <slur xml:id="xd8a49d98-ec8c-4d89-b568-c61310e592e5"
-                           staff="1"
-                           startid="#x75c48a82-8a07-4cf8-85cd-e30c90d28214"
-                           endid="#x860ad30f-8ae8-404c-85d6-42589cdff214"
-                           curvedir="above"/>
+                     
                   </measure>
                   <measure n="149" xml:id="xafcc4878-aab5-4001-b4d5-51f0689da96d">
                      <staff xml:id="xaf3e18db-1930-49bd-8e62-ca21a05680b2" n="1">
