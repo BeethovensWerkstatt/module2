@@ -99,6 +99,7 @@
                <p n="14">second corrections: part 5 and 6.</p>
                <p n="15">second corrections: part 7, 8 and 9.</p>
                <p n="16">corrected some dynam-tsamps and commented some OA-mistakes.</p>
+               <p n="17">converted crescendo-dirs to dynam-elements and set extender-attributes with tstamp2s.</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -260,11 +261,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x51dd0054-98f5-40d9-aae2-0024df9bcad3"
+                        <dynam xml:id="x51dd0054-98f5-40d9-aae2-0024df9bcad3"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="2m+1">cres</dynam>
                      </measure>
                      <measure n="4" xml:id="xbf3716e6-17d9-41be-b0db-9eb8a4a4d986">
                         <staff xml:id="xc734e1f7-5c36-4821-a5bc-c9eba668a6d6" n="1">
