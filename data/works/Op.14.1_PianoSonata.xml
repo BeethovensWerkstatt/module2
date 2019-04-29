@@ -997,10 +997,6 @@
                      </staff>
                      <staff xml:id="x943d046b-880b-4043-a1e7-79ebf60def9d" n="2">
                         <layer xml:id="x49641319-8405-4333-b2d0-04012b47cf57" n="1">
-                           <space xml:id="xa8e977a5-1c14-4752-b8ba-b3dad8b7e2a7" dur="4"/>
-                           <space xml:id="x51fcde86-16d8-4e53-a939-3b89b5ceb22e" dur="8"/>
-                        </layer>
-                        <layer xml:id="x8d588144-b1be-4bab-8579-0295917322d9" n="2">
                            <beam xml:id="x86e2c462-6e76-474f-b743-b02d24d8a6e3">
                               <note xml:id="xcdef1579-3bf5-468f-a0b7-b53a3b1f7b1c"
                                     pname="b"
@@ -1049,7 +1045,6 @@
                      <turn xml:id="xa6b1bf14-751d-4668-8d71-3ba5f3fd16cb"
                            form="lower"
                            staff="1"
-                           tstamp="0.5"
                            accidupper="s"
                            startid="#x0afd8cb9-f4b3-4f6c-872a-949a2a6b8e41"/>
                   </measure>

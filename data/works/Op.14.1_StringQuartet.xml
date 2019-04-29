@@ -180,9 +180,6 @@
                              tstamp="1"
                              staff="1"
                              place="above">Allo moderato</dir>
-                        <dir xml:id="xb8d056d4-2960-4132-a409-d260b0e1bac3"
-                             tstamp="0"
-                             place="below">QUARTETTO</dir>
                      </measure>
                      <measure n="2"
                               xml:id="x517a17e2-3f02-4da6-b64e-184580b0f4f4"
@@ -782,7 +779,6 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x19cb8c1a-36d1-4267-9c44-9bc2768e6adc"
-                               label="direction"
                                tstamp="3"
                                place="below"
                                staff="1">sf</dynam>
