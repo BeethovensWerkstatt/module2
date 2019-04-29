@@ -29899,8 +29899,8 @@
                </section>
                <section xml:id="x3abd4466-ac27-434b-a202-986b64136c95">
                   <scoreDef xml:id="x7b5e1d26-d84e-4fcf-af94-2ab418a4cfd3"
-                            key.sig="1s"
-                            key.mode="major"/>                  
+                        key.sig="1s" keysig.showchange="true"
+                            key.mode="major" />                  
                   <measure n="47" xml:id="x5a84e4ba-151f-4ff1-bfe1-0323f0e86d72">
                      <staff xml:id="xdbf5160a-6ffc-4e81-b4ec-0153af014355" n="1">
                         <layer xml:id="x32a55bcc-236a-43c7-bf98-1e0f8638cf55" n="1">
