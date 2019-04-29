@@ -320,11 +320,11 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x3fd5f371-7c61-4cbb-9b5c-4bc2cb4a12cb"
+                        <dynam xml:id="x3fd5f371-7c61-4cbb-9b5c-4bc2cb4a12cb"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cendo</dir>
+                             label="words">cendo</dynam>
                      </measure>
                      <measure n="6" xml:id="xaa69c373-d127-4fbb-b446-100d11084e53">
                         <staff xml:id="xa1cb00b9-de40-4702-98c1-818284801f83" n="1">
@@ -1419,11 +1419,12 @@
                               </note>
                            </layer>
                         </staff>
-                        <dir xml:id="xfbbd1b5a-ac01-4b90-9cff-df4100440423"
+                        <!-- Die crescendo-Angabe hat in der OA keine Verlängerungsstriche. -->
+                        <dynam xml:id="xfbbd1b5a-ac01-4b90-9cff-df4100440423"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="37" xml:id="x7079e013-74d7-4299-85ae-8569980a640e">
                         <staff xml:id="xc7fb0396-7ca2-4e62-922f-831b5312eb0d" n="1">
@@ -1658,11 +1659,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x8d9b98a4-0c5f-4f8b-a0e0-59e773a25bf7"
+                        <dynam xml:id="x8d9b98a4-0c5f-4f8b-a0e0-59e773a25bf7"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="2m+1">cres</dynam>
                      </measure>
                      <measure n="44" xml:id="x2cee7517-1233-48fa-be23-75e4eaca9677">
                         <staff xml:id="x37f57c47-33fb-41cf-b80d-0563b5cacaea" n="1">
@@ -2814,11 +2817,12 @@
                               </note>
                            </layer>
                         </staff>
-                        <dir xml:id="x65802ff3-1186-49a6-bcb2-12258a11b472"
+                        <!-- Die crescendo-Angabe hat in der OA keine Verlängerungsstriche. -->
+                        <dynam xml:id="x65802ff3-1186-49a6-bcb2-12258a11b472"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="77" xml:id="x547bf026-bfcb-4b84-93da-4e7c9e1404f9">
                         <staff xml:id="x5bbb4468-72a9-4cc9-85fa-2a3370a4f095" n="1">
@@ -3029,11 +3033,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xd432e1d3-0678-4f25-8372-9221bab7a6ed"
+                        <dynam xml:id="xd432e1d3-0678-4f25-8372-9221bab7a6ed"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="2m+1">cres</dynam>
                      </measure>
                      <measure n="84" xml:id="x0b9e71ca-e351-4b5c-aea3-8268978bd936">
                         <staff xml:id="x28e62144-c285-4bd5-b951-1a8dc817f550" n="1">
@@ -4178,11 +4184,12 @@
                               </note>
                            </layer>
                         </staff>
-                        <dir xml:id="x06042fc3-2792-424b-8f73-c58a3d804bae"
+                        <!-- Die folgende Cres-Angabe ist in der OA ohne Verlängerungsstriche angegeben. -->
+                        <dynam xml:id="x06042fc3-2792-424b-8f73-c58a3d804bae"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="117" xml:id="xde9f5460-90df-49d6-a1b0-29f9bd6742b7">
                         <staff xml:id="xf2d6632e-f5c6-4fa0-9655-75292e8000bb" n="1">
@@ -4393,11 +4400,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x1f6f3718-f68d-4ad7-86ea-e30ef41601a9"
+                        <dynam xml:id="x1f6f3718-f68d-4ad7-86ea-e30ef41601a9"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="2m+1">cres</dynam>
                      </measure>
                      <measure n="124" xml:id="x378ccfb3-ba10-4597-9729-562bebeb23c7">
                         <staff xml:id="x18d74ef2-4125-412a-ae3e-681373db5a9b" n="1">
@@ -4450,11 +4459,11 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xba581709-c20b-4529-98c3-967c68c89432"
+                        <dynam xml:id="xba581709-c20b-4529-98c3-967c68c89432"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cendo</dir>
+                             label="words">cendo</dynam>
                      </measure>
                      <measure n="126" xml:id="x268efbb5-8ba5-4836-a2cf-6c8c2b76cff2">
                         <staff xml:id="x5c88ba00-f17c-4efe-9c41-46b0305e7fe2" n="1">
@@ -5554,11 +5563,12 @@
                               </note>
                            </layer>
                         </staff>
-                        <dir xml:id="x7d77bbc6-c1f7-44c1-861c-482b3b67846e"
+                        <!-- In OA ohne Crescendo-Verlängerung. -->
+                        <dynam xml:id="x7d77bbc6-c1f7-44c1-861c-482b3b67846e"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="157" xml:id="x2979a51f-1352-4913-bc1a-166291f604b9">
                         <staff xml:id="x96c9a68e-0434-4f66-a0f3-232e64c867a6" n="1">
@@ -5717,11 +5727,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xd1b80ec5-c271-41d6-8d49-8d1c71c42b20"
+                        <dynam xml:id="xd1b80ec5-c271-41d6-8d49-8d1c71c42b20"
                              tstamp="1.5"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="8m+1">cres</dynam>
                      </measure>
                      <measure n="162" xml:id="x4917fe28-6804-42b1-99fd-945089ff4834">
                         <staff xml:id="x9fa7d1b1-542b-4504-9f71-31134a2c17a4" n="1">
@@ -7784,11 +7796,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xe82ede2d-abc3-445d-b007-a5a116d80b9b"
+                        <!-- In OA ohne Cres-Verlängerungsstriche. -->
+                        <dynam xml:id="xe82ede2d-abc3-445d-b007-a5a116d80b9b"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="203" xml:id="x59583e06-190d-4f7e-a3db-8642b686c060">
                         <staff xml:id="x3131b483-aab4-426b-b1ee-a9b6677faaf9" n="1">
@@ -8190,11 +8203,13 @@
                               </beam>
                            </layer>
                         </staff>
-                        <dir xml:id="x2b574ae0-3906-4946-8491-f390afe9a2e4"
+                        <dynam xml:id="x2b574ae0-3906-4946-8491-f390afe9a2e4"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="2m+1">cres</dynam>
                      </measure>
                      
                      <measure n="216" xml:id="x16e41b3c-8b24-4968-a28c-5bb9469f5953">
@@ -8452,11 +8467,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xa5377f52-f514-4d5f-a485-4f83197fb37e"
+                        <dynam xml:id="xa5377f52-f514-4d5f-a485-4f83197fb37e"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="6m+1">cres</dynam>
                      </measure>
                      <measure n="4" xml:id="xe2676846-4c5f-4644-9027-abe4bf2de33c">
                         <staff xml:id="x25435120-b9e9-4069-90a9-6823db2399bc" n="1">
@@ -9576,11 +9593,13 @@
                                     stem.dir="up"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x2695a73d-ca5d-4417-af9b-3ded7433d323"
+                        <dynam xml:id="x2695a73d-ca5d-4417-af9b-3ded7433d323"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="2m+1">cres</dynam>
                      </measure>
                      <measure n="37" xml:id="x35968da2-d79b-4829-9925-c8bb64a7e9c3">
                         <staff xml:id="x4b4d0f77-0831-49ff-a72c-d68dc25fc5a3" n="1">
@@ -9791,11 +9810,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x293ee1c4-831f-4189-a1fe-28edaa4456a2"
+                        <dynam xml:id="x293ee1c4-831f-4189-a1fe-28edaa4456a2"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="6m+1">cres</dynam>
                      </measure>
                      <measure n="44" xml:id="x0c90e1b3-6957-4c5a-9b6b-4f2327697fc5">
                         <staff xml:id="x19b02c86-cc63-4280-a289-288f82e10a21" n="1">
@@ -10915,11 +10936,12 @@
                                     stem.dir="up"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x34774b3b-109c-41ca-bd30-f84acf1b8cc7"
+                        <!-- In OA ohne Cres-Verlängerungsstriche. -->
+                        <dynam xml:id="x34774b3b-109c-41ca-bd30-f84acf1b8cc7"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="77" xml:id="x85bbde80-0ec0-4d49-9abf-9caf0f7cc293">
                         <staff xml:id="xf193ca43-02fc-4e4a-9b01-4dad0e3d1847" n="1">
@@ -11130,11 +11152,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xdc0b9847-43e5-4933-89ca-77e3dfe6f6c0"
+                        <dynam xml:id="xdc0b9847-43e5-4933-89ca-77e3dfe6f6c0"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="6m+1">cres</dynam>
                      </measure>
                      <measure n="84" xml:id="x5bd62e3c-dc10-43e8-a98e-915b63354798">
                         <staff xml:id="x95acb27a-f1c7-4032-ad89-2d78c70583d9" n="1">
@@ -12255,11 +12279,12 @@
                                     stem.dir="up"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x7b257363-6642-48d3-a723-7b4477a3ed0e"
+                        <!-- In OA ohne Cres-Verlängerungsstriche. -->
+                        <dynam xml:id="x7b257363-6642-48d3-a723-7b4477a3ed0e"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="117" xml:id="x681354b2-71bd-47ee-bc53-0f33d2e93f29">
                         <staff xml:id="x00d1ac9c-57e6-4ebe-974e-9f299d74bf29" n="1">
@@ -12470,11 +12495,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x7dc72f7b-40bd-4416-a911-0b872a462db9"
+                        <!-- In OA ohne Cres-Verlängerungsstriche. -->
+                        <dynam xml:id="x7dc72f7b-40bd-4416-a911-0b872a462db9"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="124" xml:id="xce150535-8822-4c9a-bee3-3f146fe53903">
                         <staff xml:id="xa516b204-c8b7-4691-bc83-c23534040c68" n="1">
@@ -13595,11 +13621,12 @@
                                     stem.dir="up"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x2c80e9ca-5404-47c4-a001-1f02c785db2f"
+                        <!-- In OA ohne Cres-Verlängerungsstriche. -->
+                        <dynam xml:id="x2c80e9ca-5404-47c4-a001-1f02c785db2f"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="157" xml:id="xe2002a6d-0bcf-47b4-a32b-74527ffe0c2d">
                         <staff xml:id="x1cfb87cb-366e-42f4-b6ed-f938166301a2" n="1">
@@ -13758,11 +13785,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x20de9718-c589-46f7-a118-84561cb54f3c"
+                        <dynam xml:id="x20de9718-c589-46f7-a118-84561cb54f3c"
                              tstamp="1.5"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="8m+1">cres</dynam>
                      </measure>
                      <measure n="162" xml:id="x6a39c12b-0376-4134-b18a-e58b80a67f57">
                         <staff xml:id="xd6dd5237-91e8-4aa7-b3e3-965203500134" n="1">
@@ -15191,11 +15220,12 @@
                                     stem.dir="up"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x97a709f3-9afa-4e98-a3b1-63cad14a0a29"
+                        <!-- In OA ohne Cres-Verlängerungsstriche. -->
+                        <dynam xml:id="x97a709f3-9afa-4e98-a3b1-63cad14a0a29"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="203" xml:id="x1234468e-b2a8-4e45-ae6a-66a0e6ad9e75">
                         <staff xml:id="x6bb0758d-5e68-42a8-9373-442613fd5ac4" n="1">
@@ -15961,11 +15991,12 @@
                               </beam>
                            </layer>
                         </staff>
-                        <dir xml:id="x50e3edc7-0294-4e59-a5c4-2295fc386b6a"
+                        <!-- In OA ohne Cres-Verlängerungsstriche. -->
+                        <dynam xml:id="x50e3edc7-0294-4e59-a5c4-2295fc386b6a"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="216" xml:id="x38d1e86b-3eb1-4965-97f7-be79ad413f6b">
                         <staff xml:id="xaa49b630-f4df-47fb-be89-23464b3c9228" n="1">
@@ -16235,11 +16266,13 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xb5c9c3b5-c481-486d-af6a-45bb4b3e79b8"
+                        <dynam xml:id="xb5c9c3b5-c481-486d-af6a-45bb4b3e79b8"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="6m+1">cres</dynam>
                      </measure>
                      <measure n="4" xml:id="x46be548a-cb39-45e2-b812-1b6c8e9637a4">
                         <staff xml:id="x3e1996ef-d61f-4cd2-a87c-0c1d5d28b492" n="1">
@@ -17388,11 +17421,13 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x6a1a8033-c1bf-4283-babe-8ac7e706e86a"
+                        <dynam xml:id="x6a1a8033-c1bf-4283-babe-8ac7e706e86a"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="2m+1">cres</dynam>
                      </measure>
                      <measure n="37" xml:id="x9e6ddd64-b575-4a95-9dc6-d062e9eb24a9">
                         <staff xml:id="x3ab84c2c-9f79-4351-bf97-61ec244c84e2" n="1">
@@ -17634,11 +17669,13 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x6ed25193-183a-4982-bd76-7ab133ece6d5"
+                        <dynam xml:id="x6ed25193-183a-4982-bd76-7ab133ece6d5"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="6m+1">cres</dynam>
                      </measure>
                      <measure n="44" xml:id="xea1ff4d7-fc38-4bcb-af1b-4d660938da5f">
                         <staff xml:id="x9145d293-deed-4ee6-a97a-da364b07dcac" n="1">
@@ -18794,11 +18831,13 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xea8fd8aa-684b-46d5-aee9-8776b2a4cb64"
+                        <dynam xml:id="xea8fd8aa-684b-46d5-aee9-8776b2a4cb64"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="2m+1">cres</dynam>
                      </measure>
                      <measure n="77" xml:id="xd8f13069-3e4b-4e87-853b-adbfe2d5bc7f">
                         <staff xml:id="x5622d6f3-0804-45f9-97e9-c588f68e83b9" n="1">
@@ -19016,11 +19055,13 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xaa298b80-8bea-4aa2-a750-ca90b32ef4f8"
+                        <dynam xml:id="xaa298b80-8bea-4aa2-a750-ca90b32ef4f8"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="6m+1">cres</dynam>
                      </measure>
                      <measure n="84" xml:id="x7ac762f4-b175-43eb-ac9b-a79373de434e">
                         <staff xml:id="x0efaefa5-61c9-4b6b-9883-0bdcca241b1a" n="1">
@@ -20176,11 +20217,12 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x4a8a79f8-70b5-4b98-96ef-1e4ba5661360"
+                        <!-- In OA ohne Cres.-Verlängerungsstriche. -->
+                        <dynam xml:id="x4a8a79f8-70b5-4b98-96ef-1e4ba5661360"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="117" xml:id="xdd833091-1e48-4c16-b2f2-5607028b482b">
                         <staff xml:id="x61192d65-3718-458c-8553-902c4e962968" n="1">
@@ -20398,11 +20440,12 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xaec3e7a7-6743-42c3-8ebe-c3762658559f"
+                        <!-- In OA ohne Cres-Verlängerungsstriche. -->
+                        <dynam xml:id="xaec3e7a7-6743-42c3-8ebe-c3762658559f"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="124" xml:id="x00296b2b-5dda-4e88-8769-6f38d946478a">
                         <staff xml:id="x5ae9afa4-98dc-4f87-afa1-3d892a4144d7" n="1">
@@ -21536,11 +21579,12 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x12fd1012-54e1-49a9-9062-41bf8ec12014"
+                        <!-- In OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="x12fd1012-54e1-49a9-9062-41bf8ec12014"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="157" xml:id="x1af08187-19b6-49cd-b9e5-544254c6f1bb">
                         <staff xml:id="x592c19be-6311-491c-ac22-33930e1104e8" n="1">
@@ -21698,6 +21742,7 @@
                                     artic="stacciss"/>
                            </layer>
                         </staff>
+                        <!-- Anders als in den anderen Stimmen steht hier kein "cres" in der OA. -->
                      </measure>
                      <measure n="162" xml:id="xe4ae1696-9502-414e-bae8-0d8c9d08a269">
                         <staff xml:id="xfdc6114b-cec2-4f33-8e5f-95f29d2e2d81" n="1">
@@ -23179,11 +23224,12 @@
                                     stem.dir="up"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x7b8d44c1-43df-4b20-861b-39d666057e15"
+                        <!-- In OA sind keine Cres-Verlängerungsstriche vermerkt. -->
+                        <dynam xml:id="x7b8d44c1-43df-4b20-861b-39d666057e15"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="203" xml:id="xbb9f2fd1-4325-41e2-9110-e2bad2bd16d5">
                         <staff xml:id="xfdcfbae0-586f-4b79-bc36-a4c6ddcb70e3" n="1">
@@ -23795,11 +23841,12 @@
                               </beam>
                            </layer>
                         </staff>
-                        <dir xml:id="x91635c51-e406-479c-a126-457517f7f933"
+                        <!-- In OA sind hier keine Cres-Verlängerungsstriche vermerkt. -->
+                        <dynam xml:id="x91635c51-e406-479c-a126-457517f7f933"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="216" xml:id="xec0e7d29-9065-4ca5-b7bc-2d48f783e1a9">
                         <staff xml:id="x3cafddcf-6467-4fc6-a528-f49edc7321e2" n="1">
@@ -24037,11 +24084,13 @@
                            </layer>
                         </staff>
                         <!-- In der OA steht dieses Crescendo entgegen allen anderen Stimmen auf der zweiten statt der ersten Viertel. -->
-                        <dir xml:id="x6250cb75-39cc-444d-b1cc-058bd4e5dea2"
+                        <dynam xml:id="x6250cb75-39cc-444d-b1cc-058bd4e5dea2"
                              tstamp="1.5"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="6m+1">cres</dynam>
                      </measure>
                      <measure n="4" xml:id="x99fc070a-8061-4a1f-bd3c-bbe7523b9911">
                         <staff xml:id="x6e5e6178-2723-4279-a511-bcb650c291ca" n="1">
@@ -25206,11 +25255,12 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xe447f294-e427-48a9-aa77-5352984265d3"
+                        <!-- In der OA sind hier keine Verlängerungsstriche vermerkt. -->
+                        <dynam xml:id="xe447f294-e427-48a9-aa77-5352984265d3"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="37" xml:id="xd89da190-24d6-4754-9d38-0e08166fc132">
                         <staff xml:id="x5d6d45f6-7528-4fca-a443-ba1850d1af6f" n="1">
@@ -25453,11 +25503,12 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x7194d026-f366-4328-8684-bf7d8322a8d1"
+                        <!-- In der OA sind hier keine Cres-Verlängerungsstriche vermerkt. -->
+                        <dynam xml:id="x7194d026-f366-4328-8684-bf7d8322a8d1"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="44" xml:id="x5764c71e-ba44-42b4-9dcf-7fb6819dea64">
                         <staff xml:id="xea844206-eff2-432a-9275-7b0634453bbf" n="1">
@@ -26630,11 +26681,12 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x7d5f0edc-1407-4298-a1e9-113fa8dd3412"
+                        <!-- In der OA sind hier keine Cres-Verlängerungsstriche vermerkt. -->
+                        <dynam xml:id="x7d5f0edc-1407-4298-a1e9-113fa8dd3412"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="77" xml:id="x624678be-fcb9-4bc4-a4d8-7ccc235622d8">
                         <staff xml:id="xaca467e5-5df1-4d70-8cfa-225a588774d8" n="1">
@@ -26877,11 +26929,12 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x1055cc64-73cd-4f5f-bd88-c94e560066df"
+                        <!-- In der OA sind hier keine Cres-Verlängerungsstriche vermerkt. -->
+                        <dynam xml:id="x1055cc64-73cd-4f5f-bd88-c94e560066df"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="84" xml:id="x6bc8aa50-183f-48f8-87f5-853fe296241d">
                         <staff xml:id="x26340adc-b7ba-4167-b6fc-6e2dc76ffa96" n="1">
@@ -28053,11 +28106,12 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x34745c46-6629-4071-a06c-57f4d04f4c26"
+                        <!-- In OA sind hier keine Cres-Verlängerungsstriche vermerkt. -->
+                        <dynam xml:id="x34745c46-6629-4071-a06c-57f4d04f4c26"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      
                      <measure n="117" xml:id="xc67fcccb-efcd-45f5-a188-e8258aa37d30">
@@ -28293,11 +28347,12 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x3509fdac-0513-4e80-8e81-8ea5f4e5f4be"
+                        <!-- In OA sind hier keine Cres-Verlängerungsstriche vermerkt. -->
+                        <dynam xml:id="x3509fdac-0513-4e80-8e81-8ea5f4e5f4be"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="124" xml:id="xa97ba49c-cf55-4a1c-8af2-5e50c00ca150">
                         <staff xml:id="x9d9a16e2-4963-4d6d-b358-0b2cc6cbbf07" n="1">
@@ -29462,11 +29517,12 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xbacca444-224b-477f-beef-672858229057"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="xbacca444-224b-477f-beef-672858229057"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      
                      <measure n="157" xml:id="xc2c1811d-0466-42d0-b7e9-278fc43c7942">
@@ -29709,11 +29765,13 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x1d7998e1-1244-4d2d-a340-71e24745b21d"
+                        <dynam xml:id="x1d7998e1-1244-4d2d-a340-71e24745b21d"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="8m+1">cres</dynam>
                      </measure>
                      <measure n="164" xml:id="x2fcc0b62-b7ae-4cdc-baf5-a77540a669a2">
                         <staff xml:id="x070b467a-a9e1-4676-bb5e-04d12d6a68a7" n="1">
@@ -31136,11 +31194,12 @@
                                     stem.dir="up"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x54b71b14-487e-4e35-b183-f3292592e499"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="x54b71b14-487e-4e35-b183-f3292592e499"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="203" xml:id="xdd7d5ea0-cd5e-4544-8af0-dd55c0acc763">
                         <staff xml:id="x870c4f0e-fb83-4a81-b71f-82884cffd4f5" n="1">
@@ -31757,11 +31816,12 @@
                               </beam>
                            </layer>
                         </staff>
-                        <dir xml:id="x36070339-0a86-4614-b6a2-c8e6abdbaa94"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="x36070339-0a86-4614-b6a2-c8e6abdbaa94"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="216" xml:id="x0aaf754e-edc7-4f21-82fa-43c5fbfa55b7">
                         <staff xml:id="x5656defe-187e-40c8-8fa9-674cab96a535" n="1">
@@ -31968,11 +32028,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x62d8182e-7b00-42a9-b0ca-b7de9b9e8345"
+                        <dynam xml:id="x62d8182e-7b00-42a9-b0ca-b7de9b9e8345"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="6m+1">cres</dynam>
                      </measure>
                      <measure n="4" xml:id="x7326d40a-b0e4-45b3-9c1c-913776b2ab6b">
                         <staff xml:id="x806b7ddf-d9e3-4fa7-8a6d-e844a710fb90" n="1">
@@ -32701,11 +32763,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x4f1c1d4a-407c-4529-a31e-8a411ca510d6"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="x4f1c1d4a-407c-4529-a31e-8a411ca510d6"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="37" xml:id="x65795287-2859-4545-967a-594d2cd11e01">
                         <staff xml:id="x86ce43e0-d106-430d-be0e-4cd2b3e78afb" n="1">
@@ -32909,11 +32972,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x7360677c-3579-4a9a-b431-e160bda3fcf6"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="x7360677c-3579-4a9a-b431-e160bda3fcf6"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="44" xml:id="x1ae49065-3c1e-497f-82db-45f8f2d1e5d2">
                         <staff xml:id="x369f1b1c-3be1-4b29-9e07-21d632df60d1" n="1">
@@ -33635,11 +33699,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x4e9e4af7-5814-4f5c-9590-248f05d97f31"
+                        <!-- Cres ohne Verlängerungsstriche in der OA. -->
+                        <dynam xml:id="x4e9e4af7-5814-4f5c-9590-248f05d97f31"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="77" xml:id="x68d25723-4ea3-47bc-b600-d550ad635993">
                         <staff xml:id="x6b99a02c-a1ab-4011-abd9-a9bf3725ded6" n="1">
@@ -33843,11 +33908,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x1bcc4771-ed8c-4b83-9a35-668c0dd2f953"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="x1bcc4771-ed8c-4b83-9a35-668c0dd2f953"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="84" xml:id="x0e82a927-e08c-4205-a7ed-9d99cca7f73e">
                         <staff xml:id="xe03b3ed8-89f5-44fa-b336-93a180645176" n="1">
@@ -34569,11 +34635,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x646b8028-66b2-46c7-971e-88cef5305618"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="x646b8028-66b2-46c7-971e-88cef5305618"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="117" xml:id="xb93315c5-16e1-4ed9-baa3-f8a5da47a21e">
                         <staff xml:id="xd5a1ec9c-26d8-4ced-8617-fca2c545839c" n="1">
@@ -34777,11 +34844,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x01590258-7556-492d-a0eb-51db790c71c2"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="x01590258-7556-492d-a0eb-51db790c71c2"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="124" xml:id="x408051a1-aa27-46f6-9c93-78c9b833b63e">
                         <staff xml:id="x195cd977-b019-4e94-acb1-bb8bdf806c97" n="1">
@@ -35503,11 +35571,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xc6082baa-cf10-48af-8242-e0d48e987333"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="xc6082baa-cf10-48af-8242-e0d48e987333"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="157" xml:id="xf4066bfb-0051-42f3-9a78-0ed1ff4f05be">
                         <staff xml:id="x1154e82f-9641-4976-a56e-89a8a1e3c5aa" n="1">
@@ -35659,11 +35728,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xe4dc4331-b5b6-48e9-ae8a-2e346f848f2c"
+                        <dynam xml:id="xe4dc4331-b5b6-48e9-ae8a-2e346f848f2c"
                              tstamp="1.5"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="8m+1">cres</dynam>
                      </measure>
                      <measure n="162" xml:id="xc0d0307a-9a38-4cf9-94a7-7731d39c91ca">
                         <staff xml:id="x2b50d2a6-5a10-4dde-b2d8-6abdf578e70f" n="1">
@@ -36704,11 +36775,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x9711f835-de4a-4ece-8e41-00a47ff09b26"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="x9711f835-de4a-4ece-8e41-00a47ff09b26"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="203" xml:id="x7e321e23-77fc-488b-8059-5366c7e914db">
                         <staff xml:id="x8126af6a-5b08-40b3-a0ee-5005f7454a9d" n="1">
@@ -37255,11 +37327,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xca34d47f-eaf3-48f8-a045-abe4b81b9f4e"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="xca34d47f-eaf3-48f8-a045-abe4b81b9f4e"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="216" xml:id="xeae54f72-e753-4860-b8ee-b13f4e95c9a8">
                         <staff xml:id="x9c215f97-fb47-49c5-b18a-76d04f0f56e2" n="1">
@@ -37464,11 +37537,13 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xea9adfe1-8824-4f10-935b-cd5b927574fe"
+                        <dynam xml:id="xea9adfe1-8824-4f10-935b-cd5b927574fe"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words"
+                             extender="true"
+                             tstamp2="6m+1">cres</dynam>
                      </measure>
                      <measure n="4" xml:id="xdf389105-da47-4efc-af97-06c03aeb9d6e">
                         <staff xml:id="x1deb3a52-6469-43bc-a77b-db7dada99482" n="1">
@@ -38190,11 +38265,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x4fe9d45c-85f7-4dbb-bb1a-8d9fc6b82015"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="x4fe9d45c-85f7-4dbb-bb1a-8d9fc6b82015"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="37" xml:id="x1dbe5cde-7cf4-4a7d-ada0-cbee983b3673">
                         <staff xml:id="x77c08e6d-2957-4e9e-bda8-a26eca52a6a4" n="1">
@@ -38398,11 +38474,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x391a7cef-e18c-40fb-a12e-5e7f9a4c41d6"
+                        <!-- cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="x391a7cef-e18c-40fb-a12e-5e7f9a4c41d6"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="44" xml:id="x15af10bb-120f-4245-bb19-55097b4bf1f6">
                         <staff xml:id="x17e146d8-ea89-4a3a-9436-2114495f18fc" n="1">
@@ -39124,11 +39201,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xb681ef22-ae6b-4162-9d1f-e491b8c2d70e"
+                        <!-- Cres in Oa ohne Verlängerungsstriche. -->
+                        <dynam xml:id="xb681ef22-ae6b-4162-9d1f-e491b8c2d70e"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="77" xml:id="xd6ce3aa1-70b9-462b-86ec-84085776f5d9">
                         <staff xml:id="x90c7b552-193a-41a9-b6b6-7f890bdbd317" n="1">
@@ -39332,11 +39410,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x6ca73215-e375-4423-9e2e-2e059e6bec09"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="x6ca73215-e375-4423-9e2e-2e059e6bec09"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="84" xml:id="x2c1fd542-663f-4ec9-88ef-b6ea7bf0abfe">
                         <staff xml:id="x4ca47ef4-4856-47e5-87d3-c94e8ca2491d" n="1">
@@ -40059,11 +40138,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="ua95a9250-13a4-49e8-a890-bc7f4cd22d2c"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="ua95a9250-13a4-49e8-a890-bc7f4cd22d2c"
                            tstamp="1"
                            place="below"
                            staff="1"
-                           label="words">cres</dir>
+                           label="words">cres</dynam>
                      </measure>
                      <measure n="117" xml:id="x825d8c86-5ab1-4b6f-82c8-1be34358037e">
                         <staff xml:id="x3b3c99e2-c15b-45b4-becd-c3339095e837" n="1">
@@ -40267,11 +40347,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xf5ed22f5-77e1-4349-b890-8f43cb53dcff"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="xf5ed22f5-77e1-4349-b890-8f43cb53dcff"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="124" xml:id="xda3c90d8-461e-4e6f-aa13-76379525775b">
                         <staff xml:id="xa42a00f4-6659-4eaa-b38d-810fa0bb027d" n="1">
@@ -40993,11 +41074,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xaa5db3eb-3716-4135-8472-c28c18e12d6f"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="xaa5db3eb-3716-4135-8472-c28c18e12d6f"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="157" xml:id="x313f555f-d6fc-46b2-9d41-095cfc84a93d">
                         <staff xml:id="x10498dff-82b0-48ea-95db-65de361f4208" n="1">
@@ -41149,11 +41231,12 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x6dfe64f1-5d6c-487f-a867-7357f9034e84"
+                        <!-- Cres in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="x6dfe64f1-5d6c-487f-a867-7357f9034e84"
                              tstamp="1.5"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="162" xml:id="x86f9b059-4a13-4ebf-b17d-3a085929ae11">
                         <staff xml:id="x7471912a-602d-431b-a346-a6bb24399272" n="1">
@@ -42193,11 +42276,12 @@
                                     stem.dir="up"/>
                            </layer>
                         </staff>
-                        <dir xml:id="xeea331c2-d78e-41fa-984e-08eb64da9098"
+                        <!-- Cresi in OA ohne Verlängerungsstriche. -->
+                        <dynam xml:id="xeea331c2-d78e-41fa-984e-08eb64da9098"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="203" xml:id="xcb769e5d-25db-4482-97b8-a3a8e25c3a5a">
                         <staff xml:id="xac032cc1-c178-45ee-91c6-bf1a42b506b1" n="1">
@@ -42743,11 +42827,12 @@
                                     stem.dir="up"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x6f89f7ab-25b3-4099-9d7d-d81398f44aa5"
+                        <!-- Cres in OA ohne Verlängerungstriche. -->
+                        <dynam xml:id="x6f89f7ab-25b3-4099-9d7d-d81398f44aa5"
                              tstamp="1"
                              place="below"
                              staff="1"
-                             label="words">cres</dir>
+                             label="words">cres</dynam>
                      </measure>
                      <measure n="216" xml:id="xafb21004-4541-46dd-b29c-7abf388d3161">
                         <staff xml:id="xc00e255b-d174-4d98-aa6a-3022952bfecc" n="1">
