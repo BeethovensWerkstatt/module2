@@ -98,6 +98,7 @@
                <p n="13">second corrections: part 4.</p>
                <p n="14">second corrections: part 5 and 6.</p>
                <p n="15">second corrections: part 7, 8 and 9.</p>
+               <p n="16">corrected some dynam-tsamps and commented some OA-mistakes.</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -5682,7 +5683,7 @@
                         </staff>
                         <dynam xml:id="xe0a261cb-9c36-4f22-a5e8-0ec62357641e"
                                label="direction"
-                               tstamp="2"
+                               tstamp="1.5"
                                place="below"
                                staff="1">
                            p
@@ -5714,7 +5715,7 @@
                            </layer>
                         </staff>
                         <dir xml:id="xd1b80ec5-c271-41d6-8d49-8d1c71c42b20"
-                             tstamp="1"
+                             tstamp="1.5"
                              place="below"
                              staff="1"
                              label="words">cres</dir>
@@ -12104,7 +12105,7 @@
                                place="below"
                                staff="1">
                            f
-                        </dynam><!-- sic. Offenbar ein Fehler in der OA. -->
+                        </dynam><!-- sic. Offenbar ein Fehler in der OA. In allen anderen Stimmen steht "sf". -->
                      </measure>
                      <measure n="112" xml:id="xb0ae742f-32b5-44fc-b212-a5ba4aa6dd53">
                         <staff xml:id="x134f526e-db53-4c12-8a30-e3d255eedea8" n="1">
@@ -13498,6 +13499,7 @@
                                     stem.dir="up"/>
                            </layer>
                         </staff>
+                        <!-- Anders als in den anderen Stimmen steht in der OA an dieser Stelle ein "f" statt "sf". -->
                         <dynam xml:id="x39044dd0-1864-405a-a0fe-58998db1baec"
                                label="direction"
                                tstamp="1"
@@ -16797,12 +16799,18 @@
                               </beam>
                            </layer>
                         </staff>
+                        <dynam xml:id="u6487bd31-0f91-44e3-820b-9714e9eda9bc"
+                           label="direction"
+                           tstamp="1"
+                           place="below"
+                           staff="1">
+                           fp
+                        </dynam>
                         <slur xml:id="x1886a65b-520b-40ea-b94f-5ea7df8c199c"
                               startid="#x64982db3-afb7-4a3b-bd21-dd7592de5dda"
                               curvedir="above"
                               endid="#x18e41c63-ffd9-4110-b01f-03e720545d43"
                               staff="1"/>
-                        
                      </measure>
                      <measure n="21" xml:id="xc4f16d5a-fd14-4edf-b20d-e75c8dd66ade">
                         <staff xml:id="x3efb3567-c926-4bc9-aa95-d39cf5010a44" n="1">
@@ -18267,6 +18275,7 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
+                        <!-- In der OA findet sich an dieser Stelle keine Dynamikbezeichnung wie in den anderen Stimmen. -->
                         <slur xml:id="x2d652681-cfa8-4847-ad72-658e0fb15750"
                               startid="#xaed8b0d5-725b-446d-8db6-fe5999d5e61b"
                               curvedir="above"
@@ -20812,6 +20821,7 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
+                        <!-- Im Gegensatz zu den anderen Stimmen fehlt auf die Zz 1 hier ein "f". -->
                         <dynam xml:id="xa1e7d70a-ca52-4d5b-8df2-30abdcf70aa6"
                                label="direction"
                                tstamp="2.5"
@@ -20892,6 +20902,7 @@
                               <clef xml:id="udba91045-2694-42e1-9818-97a5cc237af6" line="4" shape="F"/>
                            </layer>
                         </staff>
+                        <!-- In diesem Takt fehlen entgegen allen anderen Stimmen die Dynamikangaben "f" (Zz 1) und "p" (Zz 4). -->
                      </measure>
                      <measure n="140" xml:id="xaca00510-a252-4895-9176-69dddfe9a553">
                         <staff xml:id="x5a271fa0-7bc1-43be-a4fb-b95535b5f3b9" n="1">
@@ -22677,13 +22688,6 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x6b7b8da6-7b29-43fd-973f-3f6960006fd4"
-                             tstamp="2.8958"
-                             place="below"
-                             staff="1"
-                             label="words">
-                           Allo.
-                        </dir>
                      </measure>
                      <measure n="190" xml:id="x91cee671-050e-486c-8eff-13ead74934b8">
                         <staff xml:id="x5193ae12-8f41-4db5-9f20-65129f329c04" n="1">
@@ -22916,6 +22920,7 @@
                               </beam>
                            </layer>
                         </staff>
+                        <!-- In der OA steht hier ein "f", obwohl alle anderen Instrumente ein "sf" notiert haben (außer Cor I). -->
                         <dynam xml:id="x91e79686-828f-45af-87f6-dfe650798394"
                                label="direction"
                                tstamp="1"
@@ -24028,6 +24033,7 @@
                                     accid.ges="f"/>
                            </layer>
                         </staff>
+                        <!-- In der OA steht dieses Crescendo entgegen allen anderen Stimmen auf der zweiten statt der ersten Viertel. -->
                         <dir xml:id="x6250cb75-39cc-444d-b1cc-058bd4e5dea2"
                              tstamp="1.5"
                              place="below"
@@ -25331,7 +25337,7 @@
                         </staff>
                         <dynam xml:id="xdb1038df-76d8-4320-ad17-f1827ff06d65"
                                label="direction"
-                               tstamp="1"
+                               tstamp="1.5"
                                place="below"
                                staff="1">
                            p
@@ -31100,13 +31106,6 @@
                                     stem.dir="up"/>
                            </layer>
                         </staff>
-                        <dir xml:id="x6db2b90d-cddd-4243-bb8f-e9790988d57e"
-                             tstamp="2.9167"
-                             place="below"
-                             staff="1"
-                             label="words">
-                           Allo.
-                        </dir>
                      </measure>
                      <measure n="202" xml:id="x2b600e3f-48f4-444d-bc35-5bb22e9cc89c">
                         <staff xml:id="xdbf63f6d-44a7-4ccf-906b-79d45cfceff0" n="1">
@@ -35355,7 +35354,7 @@
                                tstamp="1"
                                place="below"
                                staff="1">
-                           ff
+                           sf
                         </dynam>
                      </measure>
                      <measure n="152" xml:id="x9491b7b2-179f-4c25-8d52-650444023edd">
@@ -36450,6 +36449,7 @@
                                     stem.dir="down"/>
                            </layer>
                         </staff>
+                        <!-- In der OA steht hier "ff", obwohl alle anderen Instrumente an dieser Stelle ein "sf" notiert haben (außer Fg I).  -->
                         <dynam xml:id="x52525a7e-26d4-408e-ba06-55584df5f1fe"
                                label="direction"
                                tstamp="1"
@@ -40265,7 +40265,7 @@
                            </layer>
                         </staff>
                         <dir xml:id="xf5ed22f5-77e1-4349-b890-8f43cb53dcff"
-                             tstamp="1.5"
+                             tstamp="1"
                              place="below"
                              staff="1"
                              label="words">cres</dir>
@@ -48857,7 +48857,7 @@
                         <slur xml:id="u57b8e534-65b4-47ac-8f33-ddbd5af4911e"
                            startid="#x69993630-e6d7-4b2c-9a0f-4d8ca2145198"
                            endid="#x60071487-5f6c-4659-aee9-ab8565c63263"
-                           curvedir="below"/>
+                           curvedir="above"/>
                      </measure>
                      <measure n="23" xml:id="xb4ef7588-e0d2-4473-a20a-c3274a9b4fd8">
                         <staff xml:id="x175a238e-f7ab-4f2d-a716-3ed44fd126d9" n="1">
