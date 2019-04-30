@@ -27,6 +27,9 @@
                 <xsl:when test="preceding-sibling::mei:scoreDef[@key.sig]">
                     <xsl:sequence select="preceding-sibling::mei:scoreDef[@key.sig][1]"/>
                 </xsl:when>
+                <xsl:when test="ancestor-or-self::mei:*[local-name() = ('section','ending')]/preceding-sibling::mei:scoreDef[@key.sig]">
+                    <xsl:sequence select="ancestor-or-self::mei:*[local-name() = ('section','ending')]/preceding-sibling::mei:scoreDef[@key.sig][1]"/>
+                </xsl:when>
                 <xsl:otherwise>
                     <xsl:message terminate="yes" select="'ERROR: Unable to find scoreDef at ' || (descendant-or-self::mei:*[@xml:id])[1]/@xml:id"/>
                 </xsl:otherwise>
