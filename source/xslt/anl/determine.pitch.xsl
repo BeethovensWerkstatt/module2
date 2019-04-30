@@ -1,4 +1,4 @@
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:key="none" xmlns:custom="none" xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:uuid="http://www.uuid.org" exclude-result-prefixes="xs math xd mei custom uuid" version="3.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:custom="none" xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:uuid="http://www.uuid.org" xmlns:key="none" exclude-result-prefixes="xs math xd mei custom uuid" version="3.0">
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p>
@@ -26,7 +26,7 @@
         </xsl:copy>
     </xsl:template>
     <xsl:template match="mei:note" mode="determine.pitch_add.normalized.pitch">
-        <xsl:variable name="key" select="if(ancestor::mei:staff/@staff.key) then(ancestor::mei:staff/@staff.key) else(ancestor::mei:section[@base.key]/@base.key)" as="xs:string"/>
+        <xsl:variable name="key" select="if(ancestor::mei:staff/@staff.key) then(ancestor::mei:staff/@staff.key) else if(ancestor::mei:ending[@base.key]) then(ancestor::mei:ending[@base.key]/@base.key) else(ancestor::mei:section[@base.key]/@base.key)" as="xs:string"/>
         <xsl:variable name="trans.dir" as="xs:integer">
             <xsl:choose>
                 <xsl:when test="not(exists(ancestor::mei:staff/@trans.semi))">

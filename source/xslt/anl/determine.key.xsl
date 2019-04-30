@@ -18,7 +18,7 @@
     
     
     -->
-    <xsl:template match="mei:section" mode="determine.key">
+    <xsl:template match="mei:section | mei:ending" mode="determine.key">
         <xsl:variable name="relevant.scoreDef" as="node()">
             <xsl:choose>
                 <xsl:when test="child::mei:scoreDef[@key.sig][count(preceding-sibling::mei:*[not(local-name() = 'annot')]) = 0]">
@@ -42,6 +42,8 @@
                     <xsl:sequence select="$circle.of.fifths//key:minor[@sig = $relevant.scoreDef/@key.sig]"/>
                 </xsl:when>
                 <xsl:otherwise>
+                    <xsl:message select="'Problem caused by $relevant.scoreDef:'"/>
+                    <xsl:message select="$relevant.scoreDef"/>
                     <xsl:message terminate="yes" select="'ERROR: Currently, only major and minor modes are supported.'"/>
                 </xsl:otherwise>
             </xsl:choose>
@@ -49,7 +51,7 @@
         <xsl:variable name="key" select="$relevant.key.elem/@name" as="xs:string">
             <!-- todo: here was a test if that's really the right key. We could look for a Krumhansl-Schmuckler-Evaluation -->
         </xsl:variable>
-        <xsl:message select="'Indentified section as key ' || $key"/>
+        <xsl:message select="'Identified section as key ' || $key"/>
         <xsl:copy>
             <xsl:attribute name="base.key" select="$key"/>
             <xsl:apply-templates select="node() | @*" mode="#current">
