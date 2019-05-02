@@ -101,6 +101,7 @@
                <p n="16">corrected some dynam-tsamps and commented some OA-mistakes.</p>
                <p n="17">converted crescendo-dirs to dynam-elements and set extender-attributes with tstamp2s.</p>
                <p n="18">Songtextstandardization part 7.</p>
+               <p n="19">Songtextstandardization part 8.</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -48511,7 +48512,7 @@
                                     dur="4"
                                     stem.dir="up">
                                  <verse xml:id="x811c7afa-dd1c-4d8c-ae5d-5e6b86b29fa7" n="1">
-                                    <syl xml:id="x355a2e95-4256-4f7b-ab1d-96e47b8b6502">al</syl>
+                                    <syl xml:id="x355a2e95-4256-4f7b-ab1d-96e47b8b6502" con="d" wordpos="i">al</syl>
                                  </verse>
                               </note>
                               <note xml:id="x459a0bb9-ef21-4181-a11c-13d359e1008a"
@@ -48520,7 +48521,7 @@
                                     dur="4"
                                     stem.dir="up">
                                  <verse xml:id="xba376365-0553-4429-b59b-4cca0cee2885" n="1">
-                                    <syl xml:id="x89653010-f30f-49d9-99f1-7d6a8f292542">len</syl>
+                                    <syl xml:id="x89653010-f30f-49d9-99f1-7d6a8f292542" wordpos="t">len</syl>
                                  </verse>
                               </note>
                               <note xml:id="xa7327fa0-ef08-4b0a-a5c9-d86181c0c7ee"
@@ -48563,18 +48564,18 @@
                                     pname="f"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up">
-                                 <verse xml:id="u9d657af3-6a88-492c-8fd8-723b4fb32680" n="1">
-                                    <syl xml:id="u37904df3-c7cc-4bd9-83c2-b785d222571b"
-                                    wordpos="t"
-                                    halign="left">Stun</syl>
-                                 </verse>
-                              </note>
+                                    stem.dir="up"/>
                               <note xml:id="xea9e97bf-5b52-41e1-bcf0-283e20052f14"
                                     pname="d"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="ue81a9c4c-1927-4129-83bc-0296a8893445" n="1">
+                                    <syl xml:id="u5b4fd793-5d9b-4958-81d4-7555f2e0c792"
+                                       wordpos="t"
+                                       halign="left">den</syl>
+                                 </verse>
+                              </note>
                               <note xml:id="x11209bb0-76c1-4462-9baf-7dd641004594"
                                     pname="f"
                                     oct="4"
@@ -48582,8 +48583,9 @@
                                     stem.dir="up">
                                  <verse xml:id="x71c72ef2-f2a2-4abd-bd26-f79435019de9" n="1">
                                     <syl xml:id="xd2d08742-6473-4cce-97e8-3b7c5baf2eaa"
-                                         con="u"
-                                         halign="left">erhöht</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">er</syl>
                                  </verse>
                               </note>
                            </layer>
@@ -48601,7 +48603,13 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"
-                                    accid.ges="f"/>
+                                    accid.ges="f">
+                                 <verse xml:id="uebc85819-4c0f-4158-bcad-4091f0e9f7ad" n="1">
+                                    <syl xml:id="u70072f18-097b-4e67-8eea-db856efa7139"
+                                       wordpos="t"
+                                       halign="left">höht</syl>
+                                 </verse>
+                              </note>
                               <note xml:id="x178a6f68-54a8-46a1-b97e-2908a3ed7247"
                                     pname="a"
                                     oct="4"
@@ -48767,16 +48775,22 @@
                                     stem.dir="up">
                                  <verse xml:id="xb043700f-4c8c-4265-8792-921797156195" n="1">
                                     <syl xml:id="xaf4c63e9-f84c-4284-af0b-7f294dc3d4d3"
-                                         wordpos="t"
-                                         con="u"
-                                         halign="left">sunggen</syl>
+                                         wordpos="m"
+                                         con="d"
+                                         halign="left">sun</syl>
                                  </verse>
                               </note>
                               <note xml:id="x7448c485-5101-4b25-8166-2660b0ebf328"
                                     pname="f"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="u37c58d3f-adc9-46b9-ba95-bee161193db6" n="1">
+                                    <syl xml:id="u406813d8-aa40-428a-a290-151f8c81cccf"
+                                       wordpos="t"
+                                       halign="left">gen</syl>
+                                 </verse>
+                              </note>
                            </layer>
                         </staff>
                      </measure>
@@ -48825,7 +48839,6 @@
                                        stem.dir="up">
                                     <verse xml:id="xf8c5df0f-0e32-4308-a991-d2f643594d22" n="1">
                                        <syl xml:id="xd798167d-4e45-42f0-9ced-de421a614f6f"
-                                            con="u"
                                             halign="left">der</syl>
                                     </verse>
                                  </note>
@@ -49009,16 +49022,22 @@
                                     accid.ges="f">
                                  <verse xml:id="x77852c0a-9566-4f60-97c4-85e7e43cfd01" n="1">
                                     <syl xml:id="x122f025c-e64a-4927-9105-ea31c860e575"
-                                         wordpos="t"
-                                         con="u"
-                                         halign="left">neuert</syl>
+                                         wordpos="m"
+                                         con="d"
+                                         halign="left">neu</syl>
                                  </verse>
                               </note>
                               <note xml:id="x5330ffda-03a3-475d-92c4-f65880b7b1d8"
                                     pname="f"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="ueac65c08-ee5e-4401-8f98-6eb0490078a6" n="1">
+                                    <syl xml:id="u6c5ff349-b462-440e-90e7-3e8b78f5bfe2"
+                                       wordpos="t"
+                                       halign="left">ert</syl>
+                                 </verse>
+                              </note>
                               <note xml:id="x1cdc256e-3b19-4e11-b7e5-537da03bbbcc"
                                     pname="b"
                                     oct="4"
@@ -49550,15 +49569,22 @@
                                     stem.dir="up">
                                  <verse xml:id="x0eb7e810-0517-4afb-b687-c5b05af3fa9a" n="1">
                                     <syl xml:id="x54ae36b4-f62f-4aea-958b-8085f24af462"
-                                         con="u"
-                                         halign="left">glühet</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">glü</syl>
                                  </verse>
                               </note>
                               <note xml:id="xa3d81ace-23d6-4e92-a827-cb3c661cfdcd"
                                     pname="f"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="u68b3465b-8a27-421f-9d1e-3cb841c6b4e3" n="1">
+                                    <syl xml:id="u345a1c0f-a7a3-45a2-bca2-518154ebaa7d"
+                                       wordpos="t"
+                                       halign="left">het</syl>
+                                 </verse>
+                              </note>
                               <note xml:id="xe1bc0e4a-d7a1-4f50-bffb-18468991022c"
                                     pname="d"
                                     oct="4"
@@ -49566,15 +49592,22 @@
                                     stem.dir="up">
                                  <verse xml:id="x9a718189-b00d-422f-8c05-830c51e7581d" n="1">
                                     <syl xml:id="xacf5a0c7-c9b7-42e2-98bf-b740b5945237"
-                                         con="u"
-                                         halign="left">fröhlich</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">fröh</syl>
                                  </verse>
                               </note>
                               <note xml:id="x2a41c053-2c5a-491b-bb48-bd46b8450e54"
                                     pname="f"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="u12d14bb6-68a0-478e-b13b-f087eccafa96" n="1">
+                                    <syl xml:id="u71ae9307-3b17-4a89-b056-b403124619f9"
+                                       wordpos="t"
+                                       halign="left">lich</syl>
+                                 </verse>
+                              </note>
                            </layer>
                         </staff>
                      </measure>
@@ -50154,15 +50187,22 @@
                                     accid.ges="f">
                                  <verse xml:id="x8ffd3b81-1d40-43c5-978d-a7243482b722" n="1">
                                     <syl xml:id="x2d6cfc0d-e2d2-4f35-9bc8-df88f7db019f"
-                                         con="u"
-                                         halign="left">wieder</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">wie</syl>
                                  </verse>
                               </note>
                               <note xml:id="x730d3f05-c53a-4a17-9f6f-f144c55c73e4"
                                     pname="f"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="ud68b108f-ffad-40a1-ad4a-6cacd0c998a4" n="1">
+                                    <syl xml:id="u3417ffa5-59c2-4155-a4a3-5391e74e54ec"
+                                       wordpos="t"
+                                       halign="left">der</syl>
+                                 </verse>
+                              </note>
                            </layer>
                         </staff>
                      </measure>
@@ -50235,8 +50275,9 @@
                                     stem.dir="up">
                                  <verse xml:id="x33b5957d-5df1-4cc7-9626-0866b058ba68" n="1">
                                     <syl xml:id="x70f11f06-066a-4a98-823c-974e44023c84"
-                                         con="u"
-                                         halign="left">holden</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">hol</syl>
                                  </verse>
                               </note>
                               <note xml:id="x07355f72-1dce-4e9b-95ba-909cc0620f9c"
@@ -50244,7 +50285,13 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"
-                                    accid.ges="f"/>
+                                    accid.ges="f">
+                                 <verse xml:id="uc55fb4a2-fdd5-44f4-a279-92f0d358d3b3" n="1">
+                                    <syl xml:id="u9aa5e981-286a-4491-a4fb-955304cb6bd5"
+                                       wordpos="t"
+                                       halign="left">den</syl>
+                                 </verse>
+                              </note>
                            </layer>
                         </staff>
                      </measure>
@@ -50337,8 +50384,9 @@
                                     stem.dir="up">
                                  <verse xml:id="x7360895f-882f-4db5-9bc7-88413e0ebe3f" n="1">
                                     <syl xml:id="x6c41ce90-2d41-40f5-988b-d99a3564e980"
-                                         con="u"
-                                         halign="left">küsset</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">küs</syl>
                                  </verse>
                               </note>
                               <note xml:id="x06a77de4-1d7b-459e-b717-259125a5030a"
@@ -50346,7 +50394,13 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"
-                                    accid.ges="f"/>
+                                    accid.ges="f">
+                                 <verse xml:id="u678b9691-9b8c-4896-9e63-7733a2b0dac5" n="1">
+                                    <syl xml:id="u5a60f5a3-6521-42af-9e2d-278ef335576f"
+                                       wordpos="t"
+                                       halign="left">set</syl>
+                                 </verse>
+                              </note>
                            </layer>
                         </staff>
                      </measure>
@@ -50701,7 +50755,7 @@
                                     dots="1"
                                     stem.dir="up">
                                  <verse xml:id="x2c687f0d-653e-49e1-8b68-f2e0cf860267" n="1">
-                                    <syl xml:id="xc078a691-017c-4244-a95f-32e804980b26">drin?</syl>
+                                    <syl xml:id="xc078a691-017c-4244-a95f-32e804980b26">drin?</syl><!-- In der OA ist dieses Fragezeichen vertikal gespiegelt. -->
                                  </verse>
                               </note>
                               <note xml:id="x01408428-067c-4a80-942a-6724c93e0208"
@@ -50711,8 +50765,9 @@
                                     stem.dir="up">
                                  <verse xml:id="xf85755f3-3225-4db7-a91e-ce4c65c1a802" n="1">
                                     <syl xml:id="x817a7945-c282-44c3-8e82-44a4a9f6d4a9"
-                                         con="u"
-                                         halign="left">geniesst</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">ge</syl>
                                  </verse>
                               </note>
                            </layer>
@@ -50726,7 +50781,13 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"
-                                    accid.ges="f"/>
+                                    accid.ges="f">
+                                 <verse xml:id="uaf3a46ca-5ada-4825-a14b-10d7ab0ac99e" n="1">
+                                    <syl xml:id="ua7d35bc9-6f82-4957-a8e5-05181b1b6924"
+                                       wordpos="t"
+                                       halign="left">niesst</syl>
+                                 </verse>
+                              </note>
                               <note xml:id="xc2757714-588f-4e4b-a1fb-e8579055a701"
                                     pname="b"
                                     oct="4"
@@ -50745,15 +50806,22 @@
                                     accid.ges="f">
                                  <verse xml:id="xd55173a6-5ce5-46f8-984b-89e70f454078" n="1">
                                     <syl xml:id="x172165ed-3ea7-4509-99ef-037ef3dbece3"
-                                         con="u"
-                                         halign="left">freye</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">fre</syl>
                                  </verse>
                               </note>
                               <note xml:id="xee71e5ed-441a-4bb2-a5e7-ab1f264b53b7"
                                     pname="c"
                                     oct="5"
                                     dur="4"
-                                    stem.dir="down"/>
+                                    stem.dir="down">
+                                 <verse xml:id="uaa16987c-d72d-4800-a75a-d8b87a65c490" n="1">
+                                    <syl xml:id="uc1208b25-f0fa-436e-a373-bdddc9ad1aa9"
+                                       wordpos="t"
+                                       halign="left">ye</syl>
+                                 </verse>
+                              </note>
                            </layer>
                         </staff>
                      </measure>
@@ -50820,15 +50888,23 @@
                                     stem.dir="up">
                                  <verse xml:id="x47100877-f04b-4e02-861c-3c9771df6d7f" n="1">
                                     <syl xml:id="x4af87d7e-0234-4ebf-a644-4e9e2f1f30a6"
-                                         con="u"
-                                         halign="left">Bruder</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">Bru</syl>
                                  </verse>
                               </note>
                               <note xml:id="xfbca9453-db93-4a8c-b9c8-e3670fe61b3e"
                                     pname="f"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="u33b4f105-7506-4741-abaf-cee20986b367" n="1">
+                                    <syl xml:id="u467a6cfb-7fa8-43bd-8ad7-b46a98802e6f"
+                                       con="d"
+                                       wordpos="m"
+                                       halign="left">der</syl>
+                                 </verse>
+                              </note>
                            </layer>
                         </staff>
                      </measure>
@@ -50841,7 +50917,7 @@
                                     dur="2"
                                     stem.dir="up">
                                  <verse xml:id="x65f7b229-315d-4cc5-acb6-52e19b28efa9" n="1">
-                                    <syl xml:id="x7add580b-2db3-4762-9fb8-2d4d99bc8b85">sinn!</syl>
+                                    <syl xml:id="x7add580b-2db3-4762-9fb8-2d4d99bc8b85" wordpos="t">sinn!</syl>
                                  </verse>
                               </note>
                               <rest xml:id="x4e8739f7-68a8-43f3-9b54-3bc4cbf47a23" dur="4"/>
@@ -51020,9 +51096,9 @@
                                     accid.ges="f">
                                  <verse xml:id="x5435df8f-1941-4e9b-8d7d-cfc5b681c594" n="1">
                                     <syl xml:id="x3a0ba60c-00cf-480d-80d0-3da922b2d8ca"
-                                         wordpos="t"
-                                         con="u"
-                                         halign="left">gekehrt!</syl>
+                                         wordpos="m"
+                                         con="d"
+                                         halign="left">ge</syl>
                                  </verse>
                               </note>
                            </layer>
@@ -51040,7 +51116,13 @@
                                     pname="a"
                                     oct="4"
                                     dur="2"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="u78d5258f-abb5-4d12-82aa-b6e37866ad23" n="1">
+                                    <syl xml:id="u28c21f70-3027-478d-972c-c5bef8e8954f"
+                                       wordpos="t"
+                                       halign="left">kehrt!</syl>
+                                 </verse>
+                              </note>
                               <rest xml:id="x82112bce-5c93-4b02-9ae7-054b1d57756c" dur="4"/>
                               <note xml:id="xb2e66595-092f-4647-b3bc-bd60303343ee"
                                     pname="d"
@@ -51352,7 +51434,6 @@
                                     <verse xml:id="xf38886ed-f8bc-43d2-9747-80890bf9d073" n="1">
                                        <syl xml:id="xbd939e41-bbec-4e65-b59b-ae3d9a06115a"
                                             wordpos="t"
-                                            con="u"
                                             halign="left">zen</syl>
                                     </verse>
                                  </note>
@@ -51420,15 +51501,22 @@
                                     accid.ges="f">
                                  <verse xml:id="x21535eaf-e095-4994-b24b-e720bef9f644" n="1">
                                     <syl xml:id="xdfda0663-e56c-4e22-860d-fd8f445a486c"
-                                         con="u"
-                                         halign="left">keinen</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">kei</syl>
                                  </verse>
                               </note>
                               <note xml:id="x3091f0fb-7d10-4d2b-8412-10d1ba086532"
                                     pname="f"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="u2d48333a-2efa-4347-bc0d-e48dcb430109" n="1">
+                                    <syl xml:id="u0c3f6da8-d999-4a97-af0e-46136a20f8c4"
+                                       wordpos="t"
+                                       halign="left">nen</syl>
+                                 </verse>
+                              </note>
                               <note xml:id="x086d7128-ccd9-49f1-8fa5-23456dbce648"
                                     pname="b"
                                     oct="4"
@@ -51445,7 +51533,7 @@
                                     dur="4"
                                     stem.dir="down">
                                  <verse xml:id="x7b5a08a3-b742-4554-be14-2274b6ed8f68" n="1">
-                                    <syl xml:id="xf597e9bf-3b4f-454f-b465-074fd6d2bdbe" wordpos="t">nig</syl>
+                                    <syl xml:id="xf597e9bf-3b4f-454f-b465-074fd6d2bdbe" con="d" wordpos="m">nig</syl>
                                  </verse>
                               </note>
                            </layer>
@@ -51460,7 +51548,7 @@
                                     dur="4"
                                     stem.dir="down">
                                  <verse xml:id="x3b624a98-4dfd-4035-9ade-5966cf9f3db4" n="1">
-                                    <syl xml:id="xcce6c242-2053-4375-b627-cc9bd66c7e22" wordpos="i" con="d">kei</syl>
+                                    <syl xml:id="xcce6c242-2053-4375-b627-cc9bd66c7e22" wordpos="m" con="d">kei</syl>
                                  </verse>
                               </note>
                               <note xml:id="x450b5fc3-ad38-46b7-bf6b-4ccf310b3a51"
@@ -51695,15 +51783,22 @@
                                     accid.ges="f">
                                  <verse xml:id="x7a1ebed5-511e-4bb4-9cea-aeaa6f87acec" n="1">
                                     <syl xml:id="xa26836f2-9992-49e4-9b04-1cf70ecebfb0"
-                                         con="u"
-                                         halign="left">freyem</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">frey</syl>
                                  </verse>
                               </note>
                               <note xml:id="xc17be883-6004-4809-823e-2dece2bca58b"
                                     pname="a"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="ud60f8dbe-1cad-45d1-8811-a3fcb2313107" n="1">
+                                    <syl xml:id="uee689480-992c-4563-aa3c-9621ace73c9f"
+                                       wordpos="t"
+                                       halign="left">em</syl>
+                                 </verse>
+                              </note>
                               <note xml:id="x67c2ad0c-601f-4db6-9adc-b6051f46ec38"
                                     pname="b"
                                     oct="4"
@@ -51712,15 +51807,23 @@
                                     accid.ges="f">
                                  <verse xml:id="xbd17d4a6-d6bc-4a54-acc8-417b12bc0681" n="1">
                                     <syl xml:id="xa4da560e-976e-456b-a247-58582072f762"
-                                         con="u"
-                                         halign="left">Lebensblick,</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">Le</syl>
                                  </verse>
                               </note>
                               <note xml:id="x14bca95b-a91a-4c64-ae3e-e5d6f1e2035c"
                                     pname="c"
                                     oct="5"
                                     dur="4"
-                                    stem.dir="down"/>
+                                    stem.dir="down">
+                                 <verse xml:id="u0fd2c9a8-cd7a-4978-9510-7b0c287a223b" n="1">
+                                    <syl xml:id="u56936fe0-6456-4854-9dd7-3b8ca0814caf"
+                                       con="d"
+                                       wordpos="m"
+                                       halign="left">bens</syl>
+                                 </verse>
+                              </note>
                            </layer>
                         </staff>
                      </measure>
@@ -51732,7 +51835,13 @@
                                     oct="4"
                                     dur="2"
                                     dots="1"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="u389d01e3-e9b2-462c-97d3-428522bb77ef" n="1">
+                                    <syl xml:id="u652b1189-c4aa-469f-b7d5-c0f697947d46"
+                                       wordpos="t"
+                                       halign="left">blick,</syl>
+                                 </verse>
+                              </note>
                               <note xml:id="x637d350d-d95e-4c26-b3c1-cf2e25421196"
                                     pname="a"
                                     oct="4"
@@ -51755,7 +51864,7 @@
                                     stem.dir="down"
                                     accid.ges="f">
                                  <verse xml:id="x36fe9ad6-84c1-441a-9d7c-7033d3570154" n="1">
-                                    <syl xml:id="xfaf850b6-a5dd-4718-9063-274f8ee8aa09" wordpos="i" con="d">All</syl>
+                                    <syl xml:id="xfaf850b6-a5dd-4718-9063-274f8ee8aa09" wordpos="i" con="d">Al</syl>
                                  </verse>
                               </note>
                               <note xml:id="x060d5e01-e1dd-48ec-9015-67fb7039c4fd"
@@ -51834,9 +51943,9 @@
                                     accid.ges="f">
                                  <verse xml:id="x954fab8d-6d59-461f-b4c3-fc7d76cc43fc" n="1">
                                     <syl xml:id="x7549991b-1ffb-4fef-9884-63ca6dc549bd"
-                                         wordpos="t"
-                                         con="u"
-                                         halign="left">neuert</syl>
+                                         wordpos="m"
+                                         con="d"
+                                         halign="left">neu</syl>
                                  </verse>
                               </note>
                               <note xml:id="x103712d0-83b1-407a-948a-2b45796a97d3"
@@ -51844,7 +51953,13 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"
-                                    accid.ges="f"/>
+                                    accid.ges="f">
+                                 <verse xml:id="uc337d19c-cce2-4f6b-bd8f-c914dded2a25" n="1">
+                                    <syl xml:id="u6e8e12f7-ce47-4329-84c6-f331db2954c6"
+                                       wordpos="t"
+                                       halign="left">ert</syl>
+                                 </verse>
+                              </note>
                               <note xml:id="x30e41ff3-5f04-40e9-9d76-ecd063470d70"
                                     pname="f"
                                     oct="4"
@@ -52045,8 +52160,9 @@
                                     stem.dir="up">
                                  <verse xml:id="x832210dd-aeea-4605-bc51-383cc97b1057" n="1">
                                     <syl xml:id="x1e57daa8-cb8e-435a-8dd3-0ff834d3d75f"
-                                         con="u"
-                                         halign="left">keine</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">kei</syl>
                                  </verse>
                               </note>
                               <note xml:id="xfa0d64b3-5117-468d-9704-b87a5942445d"
@@ -52054,7 +52170,13 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"
-                                    accid.ges="f"/>
+                                    accid.ges="f">
+                                 <verse xml:id="u42b71898-9f82-47ab-a901-057827f556ab" n="1">
+                                    <syl xml:id="ue7646630-9ae3-493a-a3dd-150cebec07af"
+                                       wordpos="t"
+                                       halign="left">ne</syl>
+                                 </verse>
+                              </note>
                            </layer>
                         </staff>
                      </measure>
@@ -52094,15 +52216,22 @@
                                     accid.ges="f">
                                  <verse xml:id="x4473b5e9-e8aa-42d2-874b-4bd035d01301" n="1">
                                     <syl xml:id="xfc3bea2f-d46e-4a33-a2a1-492a47ae8398"
-                                         con="u"
-                                         halign="left">Zieren</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">Zie</syl>
                                  </verse>
                               </note>
                               <note xml:id="x7480b015-9e9b-4238-8d48-f35b59f7bedf"
                                     pname="f"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="u3da97039-92cf-4367-846a-5f251db077cd" n="1">
+                                    <syl xml:id="u2a8c6bd8-7a58-42c6-ad08-5777c2664568"
+                                       wordpos="t"
+                                       halign="left">ren</syl>
+                                 </verse>
+                              </note>
                               <note xml:id="x7372543f-077b-4d2d-ac5c-4afc93dea0d8"
                                     pname="b"
                                     oct="4"
@@ -52392,7 +52521,7 @@
                                     dur="4"
                                     stem.dir="up">
                                  <verse xml:id="x665ac65e-e74d-4f8c-b487-297c3fe77cb3" n="1">
-                                    <syl xml:id="x8bdd961f-3cab-406e-a2c8-43ddbcb2421c" wordpos="i" con="d">kein</syl>
+                                    <syl xml:id="x8bdd961f-3cab-406e-a2c8-43ddbcb2421c" wordpos="i" con="d">kei</syl>
                                  </verse>
                               </note>
                               <note xml:id="x73b2b02a-af16-48f3-ac08-81f06af529f7"
@@ -52748,9 +52877,9 @@
                                     stem.dir="down">
                                  <verse xml:id="x249f4e2b-f49f-45aa-9f9c-9e7196c21e56" n="1">
                                     <syl xml:id="xe2d968d4-54fd-42fa-8465-09d26f1b8680"
-                                         wordpos="t"
-                                         con="u"
-                                         halign="left">bensbahn,</syl>
+                                         wordpos="m"
+                                         con="d"
+                                         halign="left">bens</syl>
                                  </verse>
                               </note>
                            </layer>
@@ -52764,7 +52893,13 @@
                                     oct="4"
                                     dur="2"
                                     dots="1"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="u4994d32e-12ee-4fc1-9cad-77c256e52de6" n="1">
+                                    <syl xml:id="u731588d4-cc8a-43f0-8bf5-568a52350712"
+                                       wordpos="t"
+                                       halign="left">bahn,</syl>
+                                 </verse>
+                              </note>
                               <note xml:id="xbb9ac9b7-94b1-4bc5-9bab-4186ccf9675d"
                                     pname="a"
                                     oct="4"
@@ -52964,8 +53099,9 @@
                                     stem.dir="up">
                                  <verse xml:id="xa6509117-1757-483d-bd4d-034aecb2a9ef" n="1">
                                     <syl xml:id="x88800f79-1368-4709-a9b5-a51597d72a20"
-                                         con="u"
-                                         halign="left">nimmer</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">nim</syl>
                                  </verse>
                               </note>
                               <note xml:id="x9e5bd344-dc1a-4c9f-b0d0-f92b338a299e"
@@ -52973,7 +53109,13 @@
                                     oct="4"
                                     dur="4"
                                     stem.dir="down"
-                                    accid.ges="f"/>
+                                    accid.ges="f">
+                                 <verse xml:id="uaf59d88c-4ca2-4104-a239-4f1c079e1c3e" n="1">
+                                    <syl xml:id="u6525fd44-884f-43f1-9fcf-dce86d4b490a"
+                                       wordpos="t"
+                                       halign="left">mer</syl>
+                                 </verse>
+                              </note>
                            </layer>
                         </staff>
                         <slur xml:id="x25eda2bc-4e95-4f95-947d-31932a9db051"
@@ -53596,7 +53738,7 @@
                                     stem.dir="down"
                                     accid.ges="f">
                                  <verse xml:id="x14ffa7a9-d739-445e-9871-ac79aed99470" n="1">
-                                    <syl xml:id="xaaa4a3a3-aa7f-41ab-ba85-6b462b8e36a8">u.</syl>
+                                    <syl xml:id="xaaa4a3a3-aa7f-41ab-ba85-6b462b8e36a8">u.</syl><!-- Aus Platzgründen in der OA abgekürzt. -->
                                  </verse>
                               </note>
                            </layer>
@@ -53638,15 +53780,22 @@
                                     accid.ges="f">
                                  <verse xml:id="x697ea1a0-511b-4930-aee2-0775b28997ce" n="1">
                                     <syl xml:id="x8e048998-3382-4f18-a1df-e38f7fed62eb"
-                                         con="u"
-                                         halign="left">bleiben</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">blei</syl>
                                  </verse>
                               </note>
                               <note xml:id="x614e6e00-a4d7-43c0-954f-a7422daa7652"
                                     pname="f"
                                     oct="4"
                                     dur="4"
-                                    stem.dir="up"/>
+                                    stem.dir="up">
+                                 <verse xml:id="u818c173a-c798-4c4d-8a08-672575f0e58c" n="1">
+                                    <syl xml:id="uc489ba8f-f814-4eec-9edd-651c8b5c2ec7"
+                                       wordpos="t"
+                                       halign="left">ben</syl>
+                                 </verse>
+                              </note>
                               <note xml:id="x6189871d-d19a-45ff-afa7-7351a03962dd"
                                     pname="b"
                                     oct="4"
@@ -53655,15 +53804,22 @@
                                     accid.ges="f">
                                  <verse xml:id="x8028c3d3-9471-41cb-8cee-d782cb12e112" n="1">
                                     <syl xml:id="xe3b121cd-9648-47d9-9bb5-0a577e77294f"
-                                         con="u"
-                                         halign="left">lange!</syl>
+                                         con="d"
+                                         wordpos="i"
+                                         halign="left">lan</syl>
                                  </verse>
                               </note>
                               <note xml:id="x180d464c-8e99-475c-8b61-225e435d04e8"
                                     pname="d"
                                     oct="5"
                                     dur="4"
-                                    stem.dir="down"/>
+                                    stem.dir="down">
+                                 <verse xml:id="u4e85388d-012d-4af4-bd75-8ffa778e9f21" n="1">
+                                    <syl xml:id="u5709a833-88e3-42c4-858b-bf2a4941bd2d"
+                                       wordpos="t"
+                                       halign="left">ge!</syl>
+                                 </verse>
+                              </note>
                            </layer>
                         </staff>
                      </measure>
