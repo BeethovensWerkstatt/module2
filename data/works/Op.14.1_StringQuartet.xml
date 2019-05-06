@@ -14318,7 +14318,7 @@
                                     dur="4"
                                     stem.dir="down"
                                     accid.ges="f"
-                                    artic="stacciss">
+                                    artic="stacciss"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                                  
                               </note>
                               <rest xml:id="xe2161250-4279-43ae-9b01-3fc5014c6c52" dur="4"/>
@@ -22199,7 +22199,7 @@
                                        pname="e"
                                        oct="4"
                                        dur="8"
-                                       stem.dir="down"/>
+                                       stem.dir="down"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                                  <note xml:id="x69ffd7f2-dcb1-4742-ba8b-ab02328824e0"
                                        pname="e"
                                        oct="4"
@@ -26150,7 +26150,7 @@
                                     dur="8"
                                     stem.dir="down"
                                     accid.ges="f"
-                                    artic="stacc">
+                                    artic="stacc"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                                  
                               </note>
                               <note xml:id="x67f4603e-5582-418c-99ab-04535716ad89"
