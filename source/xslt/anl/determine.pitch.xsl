@@ -40,9 +40,19 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
+        <xsl:variable name="trans.diat" as="xs:integer">
+            <xsl:choose>
+                <xsl:when test="not(exists(ancestor::mei:staff/@trans.diat))">
+                    <xsl:value-of select="0"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="ancestor::mei:staff/@trans.diat"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
         <xsl:copy>
             <xsl:attribute name="pitch" select="custom:qualifyPitch(., $key)"/>
-            <xsl:attribute name="rel.oct" select="custom:determineOct(., $key,$trans.dir)"/>
+            <xsl:attribute name="rel.oct" select="custom:determineOct(., $key,$trans.dir, $trans.diat)"/>
             <xsl:apply-templates select="node() | @*" mode="#current"/>
         </xsl:copy>
     </xsl:template>
@@ -123,16 +133,17 @@
         <xsl:param name="note" as="node()" required="yes"/>
         <xsl:param name="key" as="xs:string" required="yes"/>
         <xsl:param name="trans.dir" as="xs:integer" required="yes"/>
+        <xsl:param name="trans.diat" as="xs:integer" required="yes"/>
         <xsl:variable name="pitches" select="('c','d','e','f','g','a','b')" as="xs:string+"/>
         <xsl:variable name="index.of.key" select="index-of($pitches,lower-case(substring($key,1,1)))" as="xs:integer"/>
         <xsl:variable name="index.of.pname" select="index-of($pitches,$note/@pname)" as="xs:integer"/>
         <xsl:variable name="oct.mod" as="xs:integer">
-            <xsl:choose>
-                <!-- in keys of A / B, pitches in the upper range will be treated as one octave higher… -->
+            <!--<xsl:choose>
+                <!-\- in keys of A / B, pitches in the upper range will be treated as one octave higher… -\->
                 <xsl:when test="$index.of.key ge 6 and $index.of.pname ge $index.of.key">
                     <xsl:value-of select="+1"/>
                 </xsl:when>
-                <!-- …or as in the same octave -->
+                <!-\- …or as in the same octave -\->
                 <xsl:when test="$index.of.key ge 6">
                     <xsl:value-of select="0"/>
                 </xsl:when>
@@ -142,10 +153,29 @@
                 <xsl:otherwise>
                     <xsl:value-of select="0"/>
                 </xsl:otherwise>
+            </xsl:choose>-->
+            <xsl:choose>
+                <xsl:when test="$index.of.key gt $index.of.pname">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="0"/>
+                </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="trans.mod" select="if($trans.dir = -1) then(-1) else(0)"/>
+        <!--<xsl:variable name="trans.mod" select="if($trans.dir = -1) then(0) else(0)"/>-->
+        <xsl:variable name="trans.mod" as="xs:integer">
+            <xsl:choose>
+                <xsl:when test="$index.of.key + $trans.diat lt 0">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="0"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
         <xsl:variable name="output" select="string($note/number(@oct) + $oct.mod + $trans.mod)" as="xs:string"/>
-        <xsl:value-of select="$output"/>
+        <!--<xsl:value-of select="$output"/>-->
+        <xsl:value-of select="string($note/number(@oct) + $oct.mod  + $trans.mod)"/>
     </xsl:function>
 </xsl:stylesheet>
