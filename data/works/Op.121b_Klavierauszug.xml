@@ -1716,8 +1716,7 @@
                                      stem.dir="down">
                                  <note xml:id="xa8f01923-31e9-47ca-b539-861b90bf1010"
                                        oct="4"
-                                       pname="e"
-                                       accid.ges="s"/>
+                                       pname="e"/>
                                  <note xml:id="x92fdc995-344c-4d45-8c92-d1acd3673d33" oct="4" pname="g"/>
                               </chord>
                               <note xml:id="x5bc980d8-3970-4355-87c6-7332c76f2bdc"
@@ -1727,9 +1726,9 @@
                                     accid.ges="s"
                                     stem.dir="down"/>
                            </beam>
-                           <bTrem xml:id="x3aeb91bb-cd05-46e5-964d-dd5a417a668b" unitdur="8" dur="2">
+                           <beam xml:id="x4514d0b3-018a-4dfa-9718-3e036c0a6107">
                               <chord xml:id="x717bfbb6-bbbc-4d34-af2c-fa9cf14f04c4"
-                                     dur="2"
+                                     dur="8"
                                      stem.dir="down">
                                  <note xml:id="x3e2e9b63-6048-43cd-a843-e0ff5845f425" oct="5" pname="e"/>
                                  <note xml:id="xf4f5a8e9-de07-4e3f-b6d5-fd67d466f92c"
@@ -1737,7 +1736,34 @@
                                        pname="g"
                                        accid.ges="s"/>
                               </chord>
-                           </bTrem>
+                              <chord xml:id="xa2727d87-7385-48b8-9556-9cac8274017a"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="x96cd9f78-b7fe-4cc3-b07b-9d45c443773c" oct="5" pname="e"/>
+                                 <note xml:id="x9be7f9df-9918-4874-aed3-74bd2c15d977"
+                                    oct="5"
+                                    pname="g"
+                                    accid.ges="s"/>
+                              </chord>
+                              <chord xml:id="x8c272074-5290-4562-9a43-f5f4492d7018"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="x732fcd6e-ddd2-4e2e-bf5a-ec6ca7812d37" oct="5" pname="e"/>
+                                 <note xml:id="x2420667a-0af7-4ad5-a46c-94e9def06183"
+                                    oct="5"
+                                    pname="g"
+                                    accid.ges="s"/>
+                              </chord>
+                              <chord xml:id="xb831b3c4-22d2-4362-aa57-3590f11c92ae"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="x47ae891d-40a8-46d1-92e7-96fe3dcd01b1" oct="5" pname="e"/>
+                                 <note xml:id="x32230a46-fef7-40c9-ac2f-9a951cd10c4c"
+                                    oct="5"
+                                    pname="g"
+                                    accid.ges="s"/>
+                              </chord>
+                           </beam>
                         </layer>
                      </staff>
                      <staff xml:id="x6f77f73f-a38d-463c-b057-dee26a722d2d" n="7">
@@ -1791,9 +1817,9 @@
                                        accid.ges="s"/>
                               </chord>
                            </beam>
-                           <bTrem xml:id="xba6531f2-4f08-4c0b-a532-d6187904cc85" unitdur="8" dur="2">
+                           <beam xml:id="x7004a9b8-b36c-4b86-b366-822877357ec9">
                               <chord xml:id="x6b891db4-18d2-49b3-abaa-34f022acab9f"
-                                     dur="2"
+                                     dur="8"
                                      stem.dir="down">
                                  <note xml:id="x235db510-992e-498b-9419-c59c332bbd85"
                                        oct="3"
@@ -1801,7 +1827,34 @@
                                        accid.ges="s"/>
                                  <note xml:id="x88570649-8c03-4696-9d30-c595e44ae7ad" oct="3" pname="e"/>
                               </chord>
-                           </bTrem>
+                              <chord xml:id="xd614fb50-e750-46b0-98e2-7117ac8bb98a"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="x0b410db1-8889-43df-a4ea-d8d01feeef24"
+                                    oct="3"
+                                    pname="c"
+                                    accid.ges="s"/>
+                                 <note xml:id="x5e103ac3-fe94-4bf0-94f2-67d665b6783b" oct="3" pname="e"/>
+                              </chord>
+                              <chord xml:id="xf8efead2-571c-4cfc-b920-4d8a134d8d87"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="x99ab5b85-16ad-4e05-80d6-9c1bbfe894ff"
+                                    oct="3"
+                                    pname="c"
+                                    accid.ges="s"/>
+                                 <note xml:id="xcfea1abd-c185-47c8-88dd-594986c7476a" oct="3" pname="e"/>
+                              </chord>
+                              <chord xml:id="xc6adf09a-3602-4bba-ae39-f58dac8a9cd8"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="x89c376f6-4284-436c-a418-f584d93dbeb9"
+                                    oct="3"
+                                    pname="c"
+                                    accid.ges="s"/>
+                                 <note xml:id="x696f9b22-0322-472b-a4fd-2ce258eb75d9" oct="3" pname="e"/>
+                              </chord>
+                           </beam>
                         </layer>
                      </staff>
                      <tie xml:id="x9ddeed56-8b64-4038-84cf-e68e6b669cd0"
