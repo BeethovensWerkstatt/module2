@@ -512,10 +512,16 @@ function displayMelodicComparison(rawData) {
     
     console.log('displayMelodicComparison 7')
     
-    drawIndividualLines(svg,line,duration,data)
+    //tondauern:
+    //drawIndividualLines(svg,line,duration,data)
+    
+    //durchgängige Linien:
     //drawConnectedLines(svg,line,duration,data,x,y)
+    
+    //Konturlinien:
     drawSemiConnectedLines(svg,line,duration,data,x,y)
     
+    //Punkte:
     drawDots(svg,data,x,y);
     
     console.log('displayMelodicComparison 8')
@@ -795,8 +801,12 @@ function drawSemiConnectedLines(svg,line,duration,data,x,y) {
         .x(function(d) { return x(d.start); })
         .y(function(d) { return y(d.pnum/*((d.pnum % 12) + 60)*/); })
         //.curve(d3.curveStepAfter)
-        .curve(d3.curveCatmullRom)
-        //.curve(d3.curveLinear)
+        
+        //geschwungene Linie:
+        //.curve(d3.curveCatmullRom)
+        
+        //gerade Linien:
+        .curve(d3.curveLinear)
     
     let variant1 = data.variants[0];
     let variant2 = data.variants[1];
