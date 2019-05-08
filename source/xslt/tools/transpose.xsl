@@ -50,7 +50,7 @@
         
     </xsl:template>
     
-    <xsl:template match="mei:section" mode="transpose">
+    <xsl:template match="mei:section | mei:ending" mode="transpose">
         <xsl:param name="key.distance" tunnel="yes" as="xs:double"/>
         
         <xsl:if test="not(@base.key)">
