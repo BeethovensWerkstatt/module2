@@ -158,6 +158,9 @@
                 <xsl:when test="$index.of.key gt $index.of.pname">
                     <xsl:value-of select="-1"/>
                 </xsl:when>
+                <xsl:when test="$index.of.key = 1">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="0"/>
                 </xsl:otherwise>
