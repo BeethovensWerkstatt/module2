@@ -158,9 +158,10 @@
                 <xsl:when test="$index.of.key gt $index.of.pname">
                     <xsl:value-of select="-1"/>
                 </xsl:when>
-                <xsl:when test="$index.of.key = 1">
+                <!-- offset all C-keys by -1; was necessary for Op.122 -->
+                <!--<xsl:when test="$index.of.key = 1">
                     <xsl:value-of select="-1"/>
-                </xsl:when>
+                </xsl:when>-->
                 <xsl:otherwise>
                     <xsl:value-of select="0"/>
                 </xsl:otherwise>
