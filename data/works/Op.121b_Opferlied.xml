@@ -119,10 +119,10 @@
                <persName>Elisa Novara</persName>
             </respStmt>
             <changeDesc>
-               <p n="1">2. Korrektur: Singtext Normalisiert (Silbentrennung und Striche nache
+               <p n="1">2. Korrektur: Singtext Normalisiert (Silbentrennung und Striche nach
                   heutigen Normen)</p>
                <p n="2"> Cres-Fortsetzungsstriche hinzugefügt</p>
-               <p n="3"> Fehler in den Notentext korrigiert</p>
+               <p n="3"> Fehler im Notentext korrigiert</p>
                <p n="4"> Agogik-Zeichen wie in OAS positioniert</p>
             </changeDesc>
             <date isodate="2019-04-29"/>
@@ -135,6 +135,15 @@
                <p>Silbentrennung angepasst: con="u" gelöscht</p>
             </changeDesc>
             <date isodate="2019-05-07"/>
+         </change>
+         <change n="9">
+            <respStmt>
+               <persName auth.uri="https://github.com/" codedval="susannecox">Susanne Cox</persName>
+            </respStmt>
+            <changeDesc>
+               <p>cres-Fortsetzungsstriche korrigiert nach OA, Abbreviaturen aufgelöst</p>
+            </changeDesc>
+            <date isodate="2019-05-14"/>
          </change>
       </revisionDesc>
    </meiHead>
@@ -571,7 +580,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x721def6b-b6b2-4e43-8659-fb9c9c0c6c6e" tstamp="2"
-                           place="below" staff="1" label="words" tstamp2="3m+4" extender="true">cres</dynam>
+                           place="below" staff="1" label="words" tstamp2="2m+5" extender="true">cres</dynam>
                         <!-- Fehler in OAS: legato-Bogen auf der 3. und 4. Note fehlt. Dagegen OAP-->
                      </measure>
 
@@ -788,7 +797,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x4d488ad4-726c-43d6-98ae-9b3a4cfb3d94" tstamp="2"
-                           place="below" staff="1" label="words" extender="true" tstamp2="2m+4">cres</dynam>
+                           place="below" staff="1" label="words" extender="true" tstamp2="1m+5">cres</dynam>
                         <!-- cres-Fortsetzungsstriche nur hier und in Cor I-II. Dagegen OAP: hier gibt es keine Striche, in keiner Stimme -->
                         <slur xml:id="x202a3579-be74-4b1e-b43d-783b9b91f483"
                            startid="#x88a9bbad-c86b-46c1-aa31-57e172cca1de" curvedir="above"
@@ -1362,7 +1371,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x4d2232e4-7314-435b-8735-59a90faa9788" tstamp="2.5"
-                           place="below" staff="1" label="words"  extender="true" tstamp2="3m+4">cres</dynam>
+                           place="below" staff="1" label="words"  extender="true" tstamp2="2m+5">cres</dynam>
                         <!-- N.B. cres-Fortsetzungsstriche nur hier und nur in OAS (in keiner anderen Stimme und auch nicht in OAP) -->
                         <tie xml:id="xcbbb6763-a8c6-4770-b5f5-3ca771748742" staff="1"
                            startid="#xb7a24f5b-19d6-4d3b-ada7-3520cc5c73de"
@@ -3952,7 +3961,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xd76e3d7c-2744-495e-b9c3-be91ebf780d6" tstamp="3"
-                           place="below" staff="1" label="words" tstamp2="2m+4" extender="true"> cres </dynam>
+                           place="below" staff="1" label="words" tstamp2="1m+5" extender="true"> cres </dynam>
                         <!-- Hier vermutlich Fehler in OAS: cres-Fortsetzungsstriche nur in OAS. Dagegen alle anderen Stimmen und OAP-->
                      </measure>
 
@@ -5906,7 +5915,7 @@
                               </beam>
                            </layer>
                         </staff>
-                        <dynam xml:id="xb477c662-3340-404a-8c57-655985939c76" tstamp="2.75"
+                        <dynam xml:id="xb477c662-3340-404a-8c57-655985939c76" tstamp="2.75" tstamp2="2m+5"
                            place="below" staff="1" label="words" extender="true">cres</dynam>
                         <slur xml:id="x3e228c24-a713-4470-af50-c346e61fbeb7"
                            startid="#x092b7bea-49a9-4216-9baa-b0941fab7215" curvedir="above"
@@ -7815,7 +7824,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x124c3e0a-60c6-42b1-9b4e-dfa472fe8c51" tstamp="2.5"
-                           place="below" staff="1" label="words" extender="true" tstamp2="3m+4">cres</dynam>
+                           place="below" staff="1" label="words" extender="true" tstamp2="2m+5">cres</dynam>
                         <tie xml:id="xed446b8b-386d-4bae-9c53-7e3ee3102b43" staff="1"
                            startid="#x4319c01e-a68f-41ff-8853-362502c62eff"
                            endid="#xd9ebb299-80d6-4df5-9df5-8e05bea6af59"/>
@@ -9083,7 +9092,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x9566a4a3-ccb6-47d1-a7b1-b47ac8be7816" tstamp="2.5"
-                           place="below" staff="1" label="words" tstamp2="2m+4" extender="true"> cres </dynam>
+                           place="below" staff="1" label="words" tstamp2="3m+4" extender="true"> cres </dynam>
                         <slur xml:id="x60435d22-c604-49a2-b2b3-00bd4ded946b"
                            startid="#xf7498e22-7182-4f6f-8843-e5e6fdb38fe6" curvedir="below"
                            endid="#xb540d5c8-8482-4e46-8d02-0660d99f1eb5" staff="1"/>
@@ -9248,7 +9257,7 @@
                               </beam>
                            </layer>
                         </staff>
-                        <dynam xml:id="x078ca357-80b8-44ac-87f5-1ef805177b47" tstamp="2.5"
+                        <dynam xml:id="x078ca357-80b8-44ac-87f5-1ef805177b47" tstamp="2.5" tstamp2="2m+5" extender="true"
                            place="below" staff="1" label="words"> cres </dynam>
                         <tie xml:id="x02602dea-f14c-4f9a-a81d-d8821ad8b765" staff="1"
                            startid="#x972b9e60-5f42-405d-a214-0ec5e027dcc9"
@@ -16147,7 +16156,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xb20a7760-4e49-40ae-9456-f271178c38cf" tstamp="2.5"
-                           place="below" staff="1" extender="true" tstamp2="3m+4"> cres </dynam>
+                           place="below" staff="1" extender="true" tstamp2="2m+5"> cres </dynam>
                         <slur xml:id="x4f3a590a-0cd5-439d-90b5-8bc9b694e2a9"
                            startid="#x3fa6f5ea-f78d-402e-9e16-b0d73464bc94" curvedir="below"
                            endid="#xb6aed3ea-a408-47ed-9969-fafedd342399" staff="1"/>
@@ -16445,7 +16454,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xb581c6d4-48ce-450f-835f-4ec91e690f9e" tstamp="3.5"
-                           place="below" staff="1" extender="true" tstamp2="3m+4"> cres </dynam>
+                           place="below" staff="1" extender="true" tstamp2="2m+5"> cres </dynam>
                         <tie xml:id="xc64f564a-4286-4048-9d23-29caf581a9ef" staff="1"
                            startid="#xf61adb0d-4681-42eb-a25c-d26604d9951b"
                            endid="#x6f0b1cbb-64da-4715-8203-6b03a24b976a"/>
@@ -16482,10 +16491,16 @@
                                  <note xml:id="x4007f0be-a9b8-4bbb-9680-0173b965f101" pname="d"
                                     oct="5" dur="8" stem.dir="down" accid.ges="s"/>
                               </beam>
-                              <bTrem xml:id="x59df30b5-08dd-4558-9306-d2a4b606839e" dur="2">
+                              <beam>
                                  <note xml:id="x6c0f58e5-c885-471b-8706-0089e9498129" pname="e"
-                                    oct="5" dur="2" stem.dir="down" stem.mod="1slash"/>
-                              </bTrem>
+                                    oct="5" dur="8" stem.dir="down"/>
+                                 <note xml:id="x2c80c934-1e3e-4e08-a9f4-94375927027d" pname="e"
+                                    oct="5" dur="8" stem.dir="down"/>
+                                 <note xml:id="x700fc7bf-b87d-4538-b595-eb3a06856312" pname="e"
+                                    oct="5" dur="8" stem.dir="down"/>
+                                 <note xml:id="x5cf65761-b9b1-4e6a-b2a2-8de1a04bb8e6" pname="e"
+                                    oct="5" dur="8" stem.dir="down"/>
+                              </beam>
                            </layer>
                         </staff>
                         <slur xml:id="xbcd1d4ac-04ba-4e2b-9ad2-76e5597a77b6"
@@ -16924,7 +16939,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x7f15ded0-65db-47f4-bd7a-9fff6e8216e7" tstamp="2.5"
-                           place="below" staff="1" extender="true" tstamp2="3m+4"> cres </dynam>
+                           place="below" staff="1" extender="true" tstamp2="2m+5"> cres </dynam>
                         <tie xml:id="x86552f33-fe55-4536-a9b9-9aa59e4c423e" staff="1"
                            startid="#x1b2ff22b-0812-4930-9a0a-deb4986abf17"
                            endid="#x94be76a6-beed-49ad-8225-9eb307a975ea"/>
@@ -17300,7 +17315,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x39fdf6b7-d26d-431e-afe7-a327003ff6b1" tstamp="3.5"
-                           place="below" staff="1" extender="true" tstamp2="3m+4"> cres </dynam>
+                           place="below" staff="1" extender="true" tstamp2="2m+5"> cres </dynam>
                         <tie xml:id="x71081113-af15-4e17-956c-968beb531f22" staff="1"
                            startid="#xdbc2dc1d-8ae9-4a19-99bf-a5b4019a4e66"
                            endid="#x3438460b-9537-4dfd-9a49-4b076da55e74"/>
@@ -17833,7 +17848,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xbb5f2bd2-f9a9-43e9-a11d-aeef01cb75e5" tstamp="2.5"
-                           place="below" staff="1"  extender="true" tstamp2="3m+4"> cres </dynam>
+                           place="below" staff="1"  extender="true" tstamp2="2m+5"> cres </dynam>
                         <slur xml:id="x59961475-5ea1-4def-a857-531671a91bd6"
                            startid="#xce5d5523-d7b1-44d3-9e39-b48799b3d2f8" curvedir="below"
                            endid="#x1574d75b-8917-4f44-96eb-896280af5321" staff="1"/>
@@ -18190,7 +18205,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x774887ef-f0cc-413a-89c4-17655d921f19" tstamp="3.5"
-                           place="below" staff="1" extender="true" tstamp2="3m+4"> cres </dynam>
+                           place="below" staff="1" extender="true" tstamp2="2m+5"> cres </dynam>
                         <slur xml:id="x39e42d94-3ed4-484b-bef6-5d54a5198259"
                            startid="#x369577c8-3c05-47ea-8699-ce5e3b0dd0bd" curvedir="below"
                            endid="#x6df8f37f-5175-4259-a633-db48b5338142" staff="1"/>
@@ -20755,7 +20770,7 @@
                         <slur xml:id="xc06f45af-729d-4bc4-939f-1189ed479d9b"
                            startid="#x347571c0-231e-4b78-a523-e1802bc5ac04" curvedir="above"
                            endid="#x28d2986a-473c-40f9-b065-f85818ca04ea" staff="1"/>
-                        <dynam xml:id="x3d1216b8-3038-4d79-bb9d-9fd7b219dd51" tstamp="3.5"
+                        <dynam xml:id="x3d1216b8-3038-4d79-bb9d-9fd7b219dd51" tstamp="3.5" extender="true" tstamp2="2m+5"
                            place="below" staff="1">cres</dynam>
                      </measure>
                      <measure n="61" xml:id="x6c7709c1-5fbe-49b1-a537-8b825993eba4">

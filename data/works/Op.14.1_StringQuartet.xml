@@ -1452,7 +1452,7 @@
                         <staff xml:id="xf406f60f-758f-4f2d-85d5-f7f7feb08f1d" n="1">
                            <layer xml:id="x8f82bbe1-4210-450e-8934-b6f6a7ba6aeb" n="1">
                               <note xml:id="x3e8da5f1-1ab5-47d8-a059-333a6845ae10"
-                                    pname="a"
+                                    pname="a" accid.ges="f"
                                     oct="5"
                                     dur="4"
                                     stem.dir="down"/>
@@ -1809,7 +1809,8 @@
                         <staff xml:id="x893ce1ae-4f0d-4312-aacd-a6bb587040da" n="1">
                            <layer xml:id="xecb7dbfc-ad82-46a7-bb30-89a8ebe39f36" n="1">
                               <note xml:id="xad5767de-51e0-438f-b0bd-235ce9c7e6d1"
-                                    pname="a"
+                                    pname="a" 
+                                    accid.ges="f"
                                     oct="4"
                                     dur="4"
                                     stem.dir="up"/>
@@ -2372,7 +2373,8 @@
                         <staff xml:id="x9643c7c9-ab08-41de-b9bb-6a36a15ff817" n="1">
                            <layer xml:id="x06bded59-2c1d-4158-bfe0-cc903f8f8982" n="1">
                               <note xml:id="xeb539a74-0c7d-46f5-bf42-25ce477ce679"
-                                    pname="g"
+                                    pname="g" 
+                                    accid.ges="f"
                                     oct="5"
                                     dur="2"
                                     stem.dir="down"/>
@@ -2796,7 +2798,7 @@
                                     oct="6"
                                     dur="2"
                                     dots="1"
-                                    stem.dir="down"/>
+                                    stem.dir="down"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                               <beam xml:id="x84cd1785-93ad-427d-960d-29cb5c58bfc8">
                                  <note xml:id="x826cbc94-406d-46dd-94fb-c6d145efae12"
                                        pname="e"
@@ -10225,7 +10227,7 @@
                                  <chord xml:id="xc050c425-ee14-416c-90f5-ec1fa870dcee"
                                         dur="16"
                                         stem.dir="up">
-                                    <note xml:id="x516597bd-07d6-40a8-a5bd-fea3f97f3bb2" pname="a" oct="3"/>
+                                    <note xml:id="x516597bd-07d6-40a8-a5bd-fea3f97f3bb2" pname="a" oct="3"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt, so auch bis T. 80 -->
                                     <note xml:id="x62b7ff76-72a8-4f61-b780-a1a3994ee269" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="n7515d09a-122b-48ae-b29c-82f859e57743"
@@ -16387,7 +16389,7 @@
                                        pname="d"
                                        oct="4"
                                        dur="16"
-                                       stem.dir="down"/>
+                                       stem.dir="down"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                                  <note xml:id="xf18dcc98-3a4d-4ddb-adc2-c94e8eb8bfde"
                                        pname="d"
                                        oct="4"
@@ -16487,7 +16489,7 @@
                                        pname="d"
                                        oct="4"
                                        dur="16"
-                                       stem.dir="down"/>
+                                       stem.dir="down"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                                  <note xml:id="x94a734df-b225-487f-99d0-5b7d2cdd3091"
                                        pname="d"
                                        oct="4"

@@ -3555,7 +3555,8 @@
                      <staff xml:id="xac0f5060-df08-457f-a78e-db75a400cfb4" n="2">
                         <layer xml:id="xae742c16-e8f3-4282-b31a-e9a82e964812" n="1">
                            <note xml:id="x45e7b618-9a86-4d51-be38-fe2f88aa791d"
-                                 pname="e"
+                                 pname="e" 
+                                 accid.ges="s"
                                  oct="4"
                                  dur="4"
                                  stem.dir="down"/>
@@ -4793,7 +4794,8 @@
                                   stem.dir="up">
                               <note xml:id="xe683a25e-34a8-4dc6-ac7a-6b876827c114" pname="e" oct="4"/>
                               <note xml:id="x225d1a03-cb7f-402b-89ba-7a5cf37f9c33"
-                                    pname="g"
+                                    pname="g" 
+                                    accid.ges="n"
                                     oct="4"/>
                            </chord>
                            <chord xml:id="x28fd10d7-7d3b-421a-8df2-073da0632e73"
@@ -6045,7 +6047,7 @@
                                  <note xml:id="x72450926-0618-436f-8c61-5fad104c7ea8"
                                        pname="b"
                                        accid="s"
-                                       oct="3"/>
+                                       oct="3"/> <!-- Fehler in OA: accid=s steht irrtümlich vor b, müsste aber vor a stehen -->
                               </chord>
                               <chord xml:id="x25191df1-ff7a-4702-bffb-3fd7f3d77740"
                                      dur="8"
@@ -6534,7 +6536,7 @@
                                   dur="2"
                                   stem.dir="down">
                               <note xml:id="x931ce36f-4051-4fe8-ab44-53c20ac2e98e" pname="b" oct="4"/>
-                              <note xml:id="xde2302f2-6c77-4868-bf75-5c68f21c9432" pname="f" oct="5"/>
+                              <note xml:id="xde2302f2-6c77-4868-bf75-5c68f21c9432" pname="f" accid.ges="n" oct="5"/>
                            </chord>
                            <chord xml:id="xa4d7c9f2-d380-47ea-90cb-12e2ef6d0bf9"
                                   dur="2"
