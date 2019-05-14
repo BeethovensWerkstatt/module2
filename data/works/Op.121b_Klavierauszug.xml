@@ -132,6 +132,15 @@
             </changeDesc>
             <date isodate="2019-05-07"/>
          </change>
+         <change n="10">
+            <respStmt>
+               <persName auth.uri="https://github.com/" codedval="susannecox">Susanne Cox</persName>
+            </respStmt>
+            <changeDesc>
+               <p>Abbreviaturen aufgelöst und T. 48–Ende nach OA korrigiert</p>
+            </changeDesc>
+            <date isodate="2019-05-14"/>
+         </change>
       </revisionDesc>
    </meiHead>
    <music>
@@ -8023,14 +8032,32 @@
                                  <note xml:id="xe66b9cc7-d034-44cb-b7a2-118d96486beb" oct="3" pname="b"/>
                               </chord>
                            </beam>
-                           <bTrem xml:id="x70007de0-de26-4b1a-bb0d-7f705fd0ff7a" unitdur="8" dur="2">
+                           <beam>
                               <chord xml:id="x12de7919-ed9b-4060-acc7-469c348fa91d"
-                                     dur="2"
+                                     dur="8"
                                      stem.dir="down">
                                  <note xml:id="x3617be5d-7eb4-4887-aca8-43a6116649f8" oct="2" pname="b"/>
                                  <note xml:id="xf28dcfbc-8c2b-4964-9c92-1366aa220b7b" oct="3" pname="b"/>
                               </chord>
-                           </bTrem>
+                              <chord xml:id="x361cf501-2574-4b5e-ba77-d41c62f50efa"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="xc694255f-c850-4e82-b895-7db944d7b6c3" oct="2" pname="b"/>
+                                 <note xml:id="xa2bef1b9-4cd3-4c24-8c70-94db2f2aa306" oct="3" pname="b"/>
+                              </chord>
+                              <chord xml:id="x7fabe11e-ccb1-4c0d-bb0b-eda11ff0f7fc"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="xfb16d94c-d316-4fc7-a1f7-953c6980ae5a" oct="2" pname="b"/>
+                                 <note xml:id="x5404384f-d097-425a-abf8-a3e5358dc252" oct="3" pname="b"/>
+                              </chord>
+                              <chord xml:id="x3881e6c2-9563-4d81-9311-403ceaf0a3ca"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="x39a1add9-8bdd-46a7-8df3-e79b43815845" oct="2" pname="b"/>
+                                 <note xml:id="x33b624d3-20a9-4b4c-80ed-055737c2cfc3" oct="3" pname="b"/>
+                              </chord>
+                           </beam>
                         </layer>
                      </staff>
                      <slur xml:id="x55236209-0d26-497c-8225-70d1d7baa1ac"
@@ -10098,9 +10125,9 @@
                                        accid.ges="s"/>
                               </chord>
                            </beam>
-                           <bTrem xml:id="xc5dc470f-2cf6-4c68-97c3-a3f4b20f0a4f" unitdur="8" dur="2">
+                           <beam>
                               <chord xml:id="x14687798-aba0-41fc-a4e1-7a24e23a59b8"
-                                     dur="2"
+                                     dur="8"
                                      stem.dir="down">
                                  <note xml:id="x64a537ff-fcfe-4774-9437-6481825d2823" oct="5" pname="e"/>
                                  <note xml:id="xf1ad1e15-fe0e-499e-96ef-e9bd05bae89d"
@@ -10108,7 +10135,34 @@
                                        pname="g"
                                        accid.ges="s"/>
                               </chord>
-                           </bTrem>
+                              <chord xml:id="xa7c9378a-3db7-4e90-85a8-9b2f3c6d7e5f"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="xf4a3c1c7-9119-4d64-99b2-b54d4eacd57c" oct="5" pname="e"/>
+                                 <note xml:id="x1b74f6ac-aac0-4df3-9d32-73e73f13ace8"
+                                    oct="5"
+                                    pname="g"
+                                    accid.ges="s"/>
+                              </chord>
+                              <chord xml:id="x7e7a0f77-8e75-46d9-92dd-444153d490ac"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="xbc373d6d-7815-486f-a462-bc0b94446d20" oct="5" pname="e"/>
+                                 <note xml:id="x2381253f-3dd0-4eb2-9d26-048c278a27e5"
+                                    oct="5"
+                                    pname="g"
+                                    accid.ges="s"/>
+                              </chord>
+                              <chord xml:id="x4a59aa50-ff24-4636-a208-656404fade3f"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="x756b04a7-1f33-46be-bf7c-1345bdbfe79a" oct="5" pname="e"/>
+                                 <note xml:id="x239c3573-672b-48ba-a8c8-d46bb3a8aa47"
+                                    oct="5"
+                                    pname="g"
+                                    accid.ges="s"/>
+                              </chord>
+                           </beam>
                         </layer>
                      </staff>
                      <staff xml:id="xac272758-bde2-4824-aa0b-3ffca92bbb6d" n="7">
@@ -10155,9 +10209,9 @@
                                  <note xml:id="xa5daaa21-c503-45de-89ad-b773424d239d" oct="3" pname="e"/>
                               </chord>
                            </beam>
-                           <bTrem xml:id="xc85f91ed-eb46-4ec5-9667-80e8f803f819" unitdur="8" dur="2">
+                           <beam>
                               <chord xml:id="x90af24a8-08f4-4cd4-afb9-6235799d71fc"
-                                     dur="2"
+                                     dur="8"
                                      stem.dir="down">
                                  <note xml:id="x33701546-12d4-4d12-9cc5-066d2e5000d3"
                                        oct="3"
@@ -10165,7 +10219,34 @@
                                        accid.ges="s"/>
                                  <note xml:id="x48dde966-fd32-4309-bf20-cca1b7149dd4" oct="3" pname="e"/>
                               </chord>
-                           </bTrem>
+                              <chord xml:id="x4f936663-ea09-4182-9c07-87ab06234b78"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="x71a06fac-248f-4a93-bede-94a87643f46b"
+                                    oct="3"
+                                    pname="c"
+                                    accid.ges="s"/>
+                                 <note xml:id="x144e9f25-d81e-42cc-bc29-fdc110fa5053" oct="3" pname="e"/>
+                              </chord>
+                              <chord xml:id="x9f3506d3-7c27-4556-8c62-4502505b86e6"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="x120dda38-f553-44e8-9479-32a08af04119"
+                                    oct="3"
+                                    pname="c"
+                                    accid.ges="s"/>
+                                 <note xml:id="xb88f5fbc-b6bc-4d02-815d-c97faff23d45" oct="3" pname="e"/>
+                              </chord>
+                              <chord xml:id="xf45b8cc4-06b3-4078-ba8e-48d504549d27"
+                                 dur="8"
+                                 stem.dir="down">
+                                 <note xml:id="x3daa3021-6788-478e-a13a-534d1e399030"
+                                    oct="3"
+                                    pname="c"
+                                    accid.ges="s"/>
+                                 <note xml:id="x5b3c562b-1022-48d9-b6cf-c1d5be0c9501" oct="3" pname="e"/>
+                              </chord>
+                           </beam>
                         </layer>
                      </staff>
                      <slur xml:id="x50b91987-5b40-4b71-81a5-328db390517b"
@@ -10617,9 +10698,9 @@
                                        accid.ges="s"/>
                               </chord>
                            </beam>
-                           <bTrem xml:id="x81df14f1-3fb5-4251-bed4-dff93fed2fb7" unitdur="8" dur="2">
+                           <beam>
                               <chord xml:id="x35b59153-e3c6-4685-b6d9-9b2c49bc5480"
-                                     dur="2"
+                                     dur="8"
                                      stem.dir="down">
                                  <note xml:id="x1c543974-8c74-4cbf-8db3-bbb8023e7bf1"
                                        oct="2"
@@ -10628,9 +10709,42 @@
                                  <note xml:id="x764eb35f-056c-49e6-ae8d-13eeb59acd5f"
                                        oct="3"
                                        pname="f"
+                                       accid.ges="s"/></chord>
+                                 <chord xml:id="x09cd51f3-6630-45be-9154-d7702311c3ec"
+                                    dur="8"
+                                    stem.dir="down">
+                                    <note xml:id="xcd3adebb-a6b5-4a38-a11c-ac54bebeee40"
+                                       oct="2"
+                                       pname="f"
                                        accid.ges="s"/>
+                                    <note xml:id="x7dab54d1-e3f7-4417-a16c-b324b27dfe95"
+                                       oct="3"
+                                       pname="f"
+                                       accid.ges="s"/></chord>
+                                    <chord xml:id="x9e7c67fc-75d5-4f24-8df8-550dfe09e554"
+                                       dur="8"
+                                       stem.dir="down">
+                                       <note xml:id="xed98d511-8436-43a5-aac8-7ab28fbfa69f"
+                                          oct="2"
+                                          pname="f"
+                                          accid.ges="s"/>
+                                       <note xml:id="x2080b66b-4c20-4511-b95e-c3182108884f"
+                                          oct="3"
+                                          pname="f"
+                                          accid.ges="s"/></chord>
+                                       <chord xml:id="x949cc813-ede6-40c6-ab0c-31664b12cb0a"
+                                          dur="8"
+                                          stem.dir="down">
+                                          <note xml:id="x2a9aaf1d-841f-404d-8f83-5dff57e38188"
+                                             oct="2"
+                                             pname="f"
+                                             accid.ges="s"/>
+                                          <note xml:id="x69dfb186-6362-4311-a0fc-da9fc4f4ca9f"
+                                             oct="3"
+                                             pname="f"
+                                             accid.ges="s"/>
                               </chord>
-                           </bTrem>
+                           </beam>
                         </layer>
                         <layer xml:id="x4cd8368c-60ed-47b7-86b7-2c9a60c3ec50" n="4">
                            <note xml:id="x7263399b-5c84-4b28-8aa8-c235f81937bd"
@@ -13858,7 +13972,7 @@
                                  accid.ges="s"
                                  stem.dir="down">
                               <verse xml:id="x17573ac8-d4ec-42aa-bf1b-a40713220ff9" n="1">
-                                 <syl xml:id="x2db2cc21-a25f-442c-878a-ce434dca9988" con="d">Jüng</syl>
+                                 <syl xml:id="x2db2cc21-a25f-442c-878a-ce434dca9988" con="d" wordpos="i">Jüng</syl>
                               </verse>
                            </note>
                            <note xml:id="x54c1e720-dbc6-4c37-a622-d7928edd9623"
@@ -13868,7 +13982,7 @@
                                  accid.ges="s"
                                  stem.dir="down">
                               <verse xml:id="x22649194-3f07-4a79-8a30-a0ba1d47d2ba" n="1">
-                                 <syl xml:id="x565dc737-0e94-425c-82fb-484c658ec172" >ling</syl>
+                                 <syl xml:id="x565dc737-0e94-425c-82fb-484c658ec172" wordpos="t">ling</syl>
                               </verse>
                            </note>
                            <note xml:id="xfa647b43-e204-404f-bf33-17f6fe274452"
@@ -13900,7 +14014,7 @@
                                  pname="a"
                                  stem.dir="up">
                               <verse xml:id="x6b39a5b0-043f-4358-94d6-fcc0cfc43fa7" n="1">
-                                 <syl xml:id="xa59dc521-9fd1-43ab-a597-3cb07bcb75e0" con="d">Jüng</syl>
+                                 <syl xml:id="xa59dc521-9fd1-43ab-a597-3cb07bcb75e0" con="d" wordpos="i">Jüng</syl>
                               </verse>
                            </note>
                            <note xml:id="x0f01f636-b078-4e16-ba70-99172d92b4c2"
@@ -13909,7 +14023,7 @@
                                  pname="a"
                                  stem.dir="up">
                               <verse xml:id="x24ccbae7-c718-490a-8e09-f496bf99b7df" n="1">
-                                 <syl xml:id="xc393c9f3-87a9-46a0-aec0-9f00507ff98b" >ling</syl>
+                                 <syl xml:id="xc393c9f3-87a9-46a0-aec0-9f00507ff98b" wordpos="t">ling</syl>
                               </verse>
                            </note>
                            <note xml:id="xca5dbbc0-520e-45e7-83f5-7d1ae90be889"
@@ -13943,7 +14057,7 @@
                                  pname="b"
                                  stem.dir="up">
                               <verse xml:id="xc07aa5ad-2818-4280-8c55-83975d5713b3" n="1">
-                                 <syl xml:id="x5d7eb57b-00bd-4009-9005-263dc5460319" con="d">Jüng</syl>
+                                 <syl xml:id="x5d7eb57b-00bd-4009-9005-263dc5460319" con="d" wordpos="i">Jüng</syl>
                               </verse>
                            </note>
                            <note xml:id="x53673789-453f-4043-9fee-09580bf99dac"
@@ -13952,7 +14066,7 @@
                                  pname="b"
                                  stem.dir="up">
                               <verse xml:id="xf7c4c303-3e85-4009-86a0-1d3703305cf8" n="1">
-                                 <syl xml:id="x089384e5-eb7e-4807-a722-df3044abeb68" >ling</syl>
+                                 <syl xml:id="x089384e5-eb7e-4807-a722-df3044abeb68" wordpos="t">ling</syl>
                               </verse>
                            </note>
                            <note xml:id="x493fbbe8-c719-4851-afe5-eb1d0363064f"
@@ -13984,7 +14098,7 @@
                                  pname="b"
                                  stem.dir="up">
                               <verse xml:id="x06781bf3-d084-4108-8633-b4cef14e6afb" n="1">
-                                 <syl xml:id="x47938ca4-cd24-4854-b426-7c33a42e873f" con="d">Jüng</syl>
+                                 <syl xml:id="x47938ca4-cd24-4854-b426-7c33a42e873f" con="d" wordpos="i">Jüng</syl>
                               </verse>
                            </note>
                            <note xml:id="xa1e55543-8eaf-4e97-b858-33a913e480ea"
@@ -13993,7 +14107,7 @@
                                  pname="b"
                                  stem.dir="up">
                               <verse xml:id="x121ff8f1-c38d-4840-8a12-3d394f9f8df2" n="1">
-                                 <syl xml:id="x5cfd7337-8204-49c6-b201-ddbed655d0ba" >ling</syl>
+                                 <syl xml:id="x5cfd7337-8204-49c6-b201-ddbed655d0ba" wordpos="t">ling</syl>
                               </verse>
                            </note>
                            <note xml:id="x99f51d53-d378-4389-8c0f-557ac2c3d766"
@@ -14524,19 +14638,15 @@
                      <dynam xml:id="x61493ab5-4efd-4051-a70c-48b2186c79fa"
                           place="below"
                           staff="6"
-                          tstamp="3">cres</dynam>
+                          tstamp="3.5">cres</dynam>
                      <slur xml:id="x49f0bc43-00cb-468e-8223-39ca1883f696"
-                           startid="#x65e02c91-6739-4db9-8829-8329d0cfafc5"
-                           endid="#x7a375a16-89e0-468b-8ac5-1d83a771567f"
-                           curvedir="below"/>
-                     <slur xml:id="xc21d1e2b-c9e2-43b2-b21d-43df734f2569"
                            startid="#x65e02c91-6739-4db9-8829-8329d0cfafc5"
                            endid="#x7a375a16-89e0-468b-8ac5-1d83a771567f"
                            curvedir="below"/>
                      <slur xml:id="x8b6b2b72-e470-4fae-b961-72f49b5c132e"
                            curvedir="above"
-                           startid="#xc1177663-a0fa-48a2-9898-d160b19500ca"
-                           endid="#xffdbb25c-164c-4b3d-ac90-55ef60ec0d70"/>
+                           startid="#xf745645c-8281-46fa-a49a-ee0b4853972e"
+                           endid="#x6a737e51-c379-43f0-99dd-db0f916c1cb6"/>
                   </measure>
                   <measure xml:id="xbafb95b6-9148-4f9d-8162-8f20d33aa5e8" n="61">
                      <staff xml:id="xd573b919-5e23-43a7-a190-9a6a871b0fe4" n="1">
@@ -15277,10 +15387,6 @@
                            startid="#xb98af508-3b27-495c-b187-47c3cf883661"
                            endid="#x73ce0077-54a5-4666-8fad-b22b87d25a54"
                            curvedir="above"/>
-                     <dynam xml:id="x2c9d83bc-bf6e-4359-a908-dc1c502782ff"
-                            place="above"
-                            staff="2"
-                            tstamp="1">f</dynam>
                      <slur xml:id="xef10cb1c-c663-4b7e-aba8-f8a34de2528a"
                            startid="#xdcbe4305-25a8-4ffa-ab25-b12f8fdf886a"
                            endid="#x65c72af2-1083-47d5-ae1e-e578418231d1"
@@ -16701,7 +16807,7 @@
                                  accid.ges="s"
                                  stem.dir="up">
                               <verse xml:id="x74f1bba7-9f6f-4906-8b04-09ff824f339f" n="1">
-                                 <syl xml:id="x7f941aa5-fa19-4982-908d-995947d7168e">mir,</syl>
+                                 <syl xml:id="x7f941aa5-fa19-4982-908d-995947d7168e">mir</syl>
                               </verse>
                            </note>
                            <note xml:id="xebba14e9-c69e-40b6-b222-ae053b167b14"
@@ -16741,7 +16847,7 @@
                                  accid.ges="s"
                                  stem.dir="up">
                               <verse xml:id="x9e80b4e6-6c84-4146-afad-320d370ea4dd" n="1">
-                                 <syl xml:id="x1f308432-0f78-4a49-9308-c18600252a36">mir,</syl>
+                                 <syl xml:id="x1f308432-0f78-4a49-9308-c18600252a36">mir</syl>
                               </verse>
                            </note>
                            <note xml:id="x2966eb67-dc8c-4995-958d-7b89f5d4201f"
@@ -16779,7 +16885,7 @@
                                  pname="a"
                                  stem.dir="down">
                               <verse xml:id="x4f3c1d29-0240-4acf-ba70-4ef013dc3b7d" n="1">
-                                 <syl xml:id="xffb52c7b-1c75-494d-ad00-dcc48f9a32c6">mir,</syl>
+                                 <syl xml:id="xffb52c7b-1c75-494d-ad00-dcc48f9a32c6">mir</syl>
                               </verse>
                            </note>
                            <note xml:id="x8f9cff9c-b463-42b6-9160-06962a7d60dc"
@@ -16819,7 +16925,7 @@
                                  pname="b"
                                  stem.dir="up">
                               <verse xml:id="xf065e27e-6885-4614-b54d-ea2d10ed5d70" n="1">
-                                 <syl xml:id="x6d33aa9b-b557-4017-bc80-896672aed516">mir,</syl>
+                                 <syl xml:id="x6d33aa9b-b557-4017-bc80-896672aed516">mir</syl>
                               </verse>
                            </note>
                            <note xml:id="xd4f09d84-2d8c-4119-9b8a-b027b60b96f9"
@@ -18571,7 +18677,7 @@
                               place="above"
                               staff="5"
                               tstamp="1"
-                              tstamp2="0m+3"/>
+                              tstamp2="0m+2"/>
                      <hairpin xml:id="x3b8c59cf-b585-4c84-a14c-e173e59016b8"
                               form="dim"
                               place="above"
@@ -18743,6 +18849,11 @@
                            curvedir="above"
                            startid="#xcffa5565-959f-4ab5-9028-2a315ca9209e"
                            endid="#xb5f814ef-e4a9-420a-992f-cca5d5093725"/>
+                     <hairpin xml:id="xad9fe8fa-3d34-4746-b533-5cc8748b24da"
+                        tstamp="1" tstamp2="1m+1.5"
+                        place="below"
+                        staff="7"
+                        form="cres"/>
                   </measure>
                   <measure xml:id="xb5cf097b-f5ee-40ac-bfec-41eff60a589b" n="74" right="end">
                      <staff xml:id="xb0429abc-e20e-4f81-beda-aec667d8135a" n="1">
@@ -18953,6 +19064,10 @@
                               staff="2"
                               startid="#x064e7c17-5ce9-4d5a-9b49-de15d4db3a8d"
                               place="above"/>
+                     <fermata xml:id="x02265c21-9b17-4dfc-94b1-1c29a20ace17"
+                              staff="3" 
+                              startid="#xf6e96376-2512-46f2-9113-25dbd91bd69c" 
+                              place="above"/>
                      <fermata xml:id="xa03a9bf1-3fe6-4f92-9f1f-26936611e953"
                               staff="4"
                               startid="#xdd19cf93-4df1-49c4-8966-cca8b474abfc"
@@ -18969,6 +19084,11 @@
                               staff="7"
                               startid="#x193b5b01-312a-4f8d-811d-a1bf1d181970"
                               place="below"/>
+                     <hairpin xml:id="x2968914f-0208-4e50-bebd-3ea0c2e0eff1"
+                        tstamp="1.5" tstamp2="0m+2.5"
+                        place="below"
+                        staff="7"
+                        form="dim"/>
                   </measure>
                </section>
             </score>

@@ -12463,8 +12463,6 @@
                               </note>
                            </layer>
                         </staff>
-                        <dynam xml:id="xb8f8a87a-db49-49b4-b237-f0ba5e97b9e9" tstamp="5"
-                           place="above" staff="1"> f </dynam>
                         <slur xml:id="xa0fcd015-34f6-4cdb-8eec-ff0ffcc77da3"
                            startid="#xcd382fa2-0664-4523-9d5a-dee9add5a2e7" curvedir="above"
                            endid="#x47940399-1965-4b95-bb0a-6eb92bc11c2c" staff="1"/>
@@ -12489,6 +12487,8 @@
                               <rest xml:id="x28fd2bf0-0361-485b-8378-afdf9038f57b" dur="4"/>
                            </layer>
                         </staff>
+                        <dynam xml:id="xb8f8a87a-db49-49b4-b237-f0ba5e97b9e9" tstamp="1"
+                           place="above" staff="1"> f </dynam>
                         <hairpin xml:id="xa4ee4b13-9530-42d6-83f8-b75fab7c5980" tstamp="1"
                            place="above" staff="1" form="dim" tstamp2="0m+2.875"/>
                         <dynam xml:id="x064a4387-e876-4bae-a4d9-0752b638a13e" tstamp="3"
