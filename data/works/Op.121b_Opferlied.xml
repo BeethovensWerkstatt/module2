@@ -616,7 +616,7 @@
                               <note xml:id="xd4518982-9c4d-4faf-93d5-0e297ac55b38" pname="e" oct="5"
                                  dur="4" stem.dir="down"/>
                               <note xml:id="xb667d3ac-6ef8-4bea-98ac-d920fca1b97c" pname="f" oct="5"
-                                 dur="8" stem.dir="down"/>
+                                 dur="8" stem.dir="down" accid.ges="s"/>
                               <beam xml:id="x2ec266f0-fc74-4fcf-b269-13c9b39e6920">
                                  <note xml:id="x46c7dbfd-1f98-4c70-81d3-70ffde9a0548" pname="g"
                                     oct="5" dur="8" stem.dir="down"/>
@@ -2225,7 +2225,7 @@
                         <staff xml:id="xbc50a1bb-8633-42a3-8507-ec4f19748156" n="1">
                            <layer xml:id="x58b36c0b-b6e1-42d7-ba75-8645e55fcced" n="1">
                               <note xml:id="xfae0d0e9-bd40-4c2f-ae48-3e389634d2fc" pname="c" oct="5"
-                                 dur="8" stem.dir="down"/>
+                                 dur="8" stem.dir="down"/> <!-- Fehler in OA: # fehlt -->
                               <rest xml:id="xcd4b23ca-97a6-494b-9ea4-d8e80e26dae3" dur="8"/>
                               <beam xml:id="xbc536c40-1654-4d19-aaae-67c15ac56306">
                                  <note xml:id="xeeaea750-2cbe-47a3-8c6f-297139e38f25" pname="d"
@@ -4205,8 +4205,7 @@
                                  dur="8" stem.dir="down" accid.ges="s"/>
                               <rest xml:id="x4946dfa6-feb6-44e1-b7b4-46ab95b42c9d" dur="8"/>
                               <note xml:id="x4daab6dc-898d-4396-b0b7-c00acf00e99b" pname="g" oct="3"
-                                 dur="8" stem.dir="down" accid.ges="s"/>
-                              <rest xml:id="x8dacd270-d350-47a1-8db1-0461aae4d344" dur="8"/>
+                                 dur="4" stem.dir="down" accid.ges="s"/>
                               <rest xml:id="xe18b8d6e-9dc6-4937-97d2-7c5a353c78c0" dur="4"/>
                               <clef xml:id="x37f71ccc-49d6-42fc-91d2-02ceb6b60454" shape="C"
                                  line="4"/>
@@ -5851,7 +5850,7 @@
                         <staff xml:id="xbe652734-21ba-4027-8e57-75d63ae90577" n="1">
                            <layer xml:id="x784d7a6b-5fea-484d-8609-52018616eeff" n="1">
                               <note xml:id="xc3afbb2d-2551-404b-b617-2a4529aa29f2" pname="d" oct="3"
-                                 dur="8" stem.dir="down" accid.ges="s"/>
+                                 dur="8" stem.dir="down" accid.ges="s"/> <!-- Fehler in OA: müsste e sein -->
                               <rest xml:id="x9260773f-05d9-4bb5-9ec5-647c3f4f4537" dur="8"/>
                               <note xml:id="x4682a603-8ae9-4c24-91fb-489d58708fb6" pname="a" oct="2"
                                  dur="8" stem.dir="up"/>

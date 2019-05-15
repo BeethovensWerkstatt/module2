@@ -1726,7 +1726,7 @@
                                  <note xml:id="xa8f01923-31e9-47ca-b539-861b90bf1010"
                                        oct="4"
                                        pname="e"/>
-                                 <note xml:id="x92fdc995-344c-4d45-8c92-d1acd3673d33" oct="4" pname="g"/>
+                                 <note xml:id="x92fdc995-344c-4d45-8c92-d1acd3673d33" oct="4" pname="g" accid.ges="s"/>
                               </chord>
                               <note xml:id="x5bc980d8-3970-4355-87c6-7332c76f2bdc"
                                     dur="8"
@@ -1822,8 +1822,7 @@
                                        accid.ges="s"/>
                                  <note xml:id="x444edb2a-c80f-4852-af95-1af356566659"
                                        oct="3"
-                                       pname="e"
-                                       accid.ges="s"/>
+                                       pname="e"/>
                               </chord>
                            </beam>
                            <beam xml:id="x7004a9b8-b36c-4b86-b366-822877357ec9">
@@ -2214,7 +2213,7 @@
                            <chord xml:id="x35670b48-0ef1-4ebc-a50b-2cfcf799011e"
                                   dur="8"
                                   stem.dir="up">
-                              <note xml:id="x69d29f3c-4782-4a14-8450-9d102caf9d2f" oct="4" pname="a"/>
+                              <note xml:id="x69d29f3c-4782-4a14-8450-9d102caf9d2f" oct="4" pname="a"/> <!-- Fehler in OA: # fehlt -->
                               <note xml:id="x33669c10-6991-4290-9421-e9eb53f8bafb"
                                     oct="5"
                                     pname="c"
@@ -2482,7 +2481,7 @@
                                     dur="8"
                                     oct="4"
                                     pname="a"
-                                    stem.dir="up"/>
+                                    stem.dir="up"/> <!-- Fehler in OA: # fehlt -->
                               <chord xml:id="x0d582fbc-e62a-4433-b3ac-2076b3224baa"
                                      dur="8"
                                      stem.dir="up">
@@ -2490,7 +2489,7 @@
                                        oct="4"
                                        pname="f"
                                        accid.ges="s"/>
-                                 <note xml:id="x90f8a82f-5ec2-4c73-9c7c-9cd35a88bcbf" oct="4" pname="a"/>
+                                 <note xml:id="x90f8a82f-5ec2-4c73-9c7c-9cd35a88bcbf" oct="4" pname="a" accid.ges="s"/>
                                  <note xml:id="x0fdedf8d-6b39-41d5-8aa0-61f45598c184"
                                        oct="5"
                                        pname="c"
@@ -2775,8 +2774,8 @@
                               <chord xml:id="x450cc52e-daba-458e-bc50-4d27472e0b0f"
                                      dur="8"
                                      stem.dir="down">
-                                 <note xml:id="xdf465c8c-3eef-46c7-968c-6eac20cb99a1" oct="2" pname="g"/>
-                                 <note xml:id="x8cd7a375-74eb-4596-ac05-ed08e90c75f1" oct="3" pname="g"/>
+                                 <note xml:id="xdf465c8c-3eef-46c7-968c-6eac20cb99a1" oct="2" pname="g" accid.ges="s"/>
+                                 <note xml:id="x8cd7a375-74eb-4596-ac05-ed08e90c75f1" oct="3" pname="g" accid.ges="s"/>
                               </chord>
                               <chord xml:id="x013f0af4-a757-4a9a-b9d8-be26d881959f"
                                      dur="8"
