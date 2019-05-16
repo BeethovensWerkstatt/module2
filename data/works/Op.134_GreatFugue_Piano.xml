@@ -23421,7 +23421,7 @@
               </staff>
               <slur xml:id="x6e6c50b2-fade-4024-80a5-68fca3eef154" curvedir="above" staff="1"
                 startid="#xc77bc3de-70e9-4813-adf3-c3aa81339c23"
-                endid="#x20af8287-6de2-4f60-b1a6-0007d15e4c18"/>
+                endid="#xe1b1863a-41a9-4e90-83ed-e7d5da8cb5ee"/>
               <slur xml:id="xf5d1e47a-996b-4e2c-ab3e-3f06eb5e44bc" curvedir="above" staff="3"
                 startid="#xed839c48-9a41-4a43-8d66-cedbf1efbcad"
                 endid="#x084ede2a-0f9b-4844-9633-8a7f4d53a807"/>
@@ -23513,7 +23513,7 @@
               <staff xml:id="x8efae567-3cf9-4ca0-a355-bff04e805d71" n="1">
                 <layer xml:id="xfa7c46b9-3c88-4315-ad1e-29960360eead" n="1">
                   <note xml:id="x3bc5e423-9883-4f16-9fca-a3aee5ac0306" pname="a" oct="5" dur="4"
-                    stem.dir="down" accid="n"/>
+                    stem.dir="down"/>
                   <note xml:id="xa7e29a05-e6eb-41f2-91c9-874229fe6a4e" pname="f" oct="6" dur="4"
                     stem.dir="up" accid="n"/>
                 </layer>
@@ -23659,10 +23659,7 @@
                     stem.dir="down" accid.ges="f"/>
                 </layer>
               </staff>
-              <slur xml:id="x1bb77943-31c0-4f7d-b400-a19531c164ae" curvedir="above" staff="1"
-                startid="#x20af8287-6de2-4f60-b1a6-0007d15e4c18"
-                endid="#xe1b1863a-41a9-4e90-83ed-e7d5da8cb5ee"/>
-              <tie xml:id="xf022ec61-7c43-493b-89c2-7950c0d6b9f7" curvedir="above" staff="1"
+               <tie xml:id="xf022ec61-7c43-493b-89c2-7950c0d6b9f7" curvedir="above" staff="1"
                 startid="#x6b43383c-0ff8-49c2-a232-483ce020aaa7"
                 endid="#x1c4e013a-ba3e-4f28-a2ea-a2183cebb474"/>
               <slur xml:id="xeb11c9c4-6503-4324-8f17-38600cbe3a58" curvedir="above" staff="2"
@@ -24297,9 +24294,9 @@
               <staff xml:id="xaa10e3d5-c5a2-4326-af91-2adb62d5e887" n="1">
                 <layer xml:id="x04e1f7ed-65f8-472d-b81d-423673f2254a" n="1">
                   <beam xml:id="xa8423942-a623-49ce-a8e5-49a7fe26a610">
-                    <note xml:id="xb6dfb233-067c-4d5c-b074-f304482d56f3" pname="g" oct="5" dur="16"
+                    <note xml:id="xb6dfb233-067c-4d5c-b074-f304482d56f3" pname="b" oct="5" dur="16"
                       stem.dir="down" accid.ges="f"/>
-                    <note xml:id="x2f1c7c90-269d-4267-98e2-0bc250661859" pname="f" oct="5" dur="16"
+                    <note xml:id="x2f1c7c90-269d-4267-98e2-0bc250661859" pname="a" oct="5" dur="16"
                       stem.dir="down"/>
                     <note xml:id="xa9836830-cc73-4067-bde8-5a70bdbac21f" pname="a" oct="6" dur="16"
                       stem.dir="down" accid.ges="f"/>
@@ -24337,7 +24334,7 @@
                       stem.dir="down" accid.ges="f"/>
                     <note xml:id="xf0d6094a-cce2-4036-826e-8281ee28eff3" pname="a" oct="5" dur="16"
                       stem.dir="down" accid.ges="f"/>
-                    <note xml:id="x9d2a6cb1-3eb5-48a3-b8b5-ddeadd98ead1" pname="f" oct="5" dur="16"
+                    <note xml:id="x9d2a6cb1-3eb5-48a3-b8b5-ddeadd98ead1" pname="g" oct="5" dur="16"
                       stem.dir="down"/>
                   </beam>
                 </layer>
@@ -24471,7 +24468,7 @@
                   </beam>
                 </layer>
               </staff>
-              <dynam xml:id="x9b0b595e-da5c-4986-a00c-c96554ff0d9d" staff="1" tstamp="2"
+              <dynam xml:id="x9b0b595e-da5c-4986-a00c-c96554ff0d9d" staff="1" tstamp="2.5"
                 place="below">F</dynam>
               <slur xml:id="x1b4af345-1383-45ce-a5bd-70eb62974cf7" curvedir="above" staff="1"
                 startid="#x7a68f381-aa54-4f48-addd-3790c8fbfea4"
@@ -24488,7 +24485,7 @@
               <slur xml:id="xebe9ce99-6c92-4241-8c71-4724f4d5ec8b" curvedir="below" staff="4"
                 startid="#x787520f8-3d3b-4f30-bd71-071b4536f6bc"
                 endid="#x0ae62be4-8eaa-4493-9962-88f3683f0ebe"/>
-              <dynam xml:id="x56b080b4-292a-4662-b138-52b04694c168" staff="3" tstamp="2.5"
+              <dynam xml:id="x56b080b4-292a-4662-b138-52b04694c168" staff="3" tstamp="4"
                 place="below">F</dynam>
             </measure>
             <measure n="225" xml:id="x270e225e-32f0-487f-b07e-487486d25c5a">
@@ -24632,7 +24629,7 @@
                       stem.dir="down" accid.ges="f"/>
                     <note xml:id="x221ffb26-741d-4f11-a61d-6b959ae8f072" pname="d" oct="6" dur="16"
                       stem.dir="down" accid.ges="f"/>
-                    <note xml:id="xb0764176-c398-4c9d-923a-7c04a6c865d4" pname="c" oct="6" dur="16"
+                    <note xml:id="xb0764176-c398-4c9d-923a-7c04a6c865d4" pname="b" oct="5" dur="16"
                       stem.dir="down" accid.ges="f"/>
                   </beam>
                 </layer>
@@ -24955,7 +24952,7 @@
                 </layer>
               </staff>
               <dynam xml:id="xd3886e7c-e6b4-4de7-abde-f20724a59861" staff="1" tstamp="2"
-                place="below">dim:</dynam>
+                place="below" tstamp2="2m+4" extender="true" > dim:</dynam>
               <!-- Wie füge ich hier die dim-Strichelchen in den Folgetakten richtig ein? -->
               <slur xml:id="xf040c842-6d94-4325-9eeb-67c619e9eea6" curvedir="above" staff="1"
                 startid="#x44cb95c2-9fe6-4b53-a320-3e87928d8ae5"
@@ -25111,7 +25108,7 @@
                     <note xml:id="x69d93fa1-e6c1-4895-b972-017759cd9cf1" pname="f" oct="4" dur="16"
                       stem.dir="up" accid.ges="f"/>
                     <note xml:id="xcc188a37-3653-4688-8b69-9f03f1aed64b" pname="g" oct="4" dur="16"
-                      stem.dir="up" accid="n"/>
+                      stem.dir="up"/>
                     <note xml:id="xfcb30df2-600a-4cd5-9f2b-2bf299d9dc62" pname="e" oct="4" dur="16"
                       stem.dir="up" accid.ges="f"/>
                   </beam>
