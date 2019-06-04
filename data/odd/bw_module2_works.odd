@@ -104,12 +104,12 @@
                     <constraintSpec ident="check_controlevents" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:dir">
-                                <sch:assert test="not(@tstamp2) and @tstamp and not(@endid) and not(@startid)">
+                                <sch:assert test="(not(@tstamp2) or (@extender = 'true')) and @tstamp and not(@endid) and not(@startid)">
                                     dir elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:dynam">
-                                <sch:assert test="not(@tstamp2) and @tstamp and not(@endid) and not(@startid)">
+                                <sch:assert test="(not(@tstamp2) or (@extender = 'true')) and @tstamp and not(@endid) and not(@startid)">
                                     dynam elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>
@@ -139,7 +139,7 @@
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:trill">
-                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and (not(@endid) or @extender='true') and @startid">
                                     trill elements are supposed to have a @startid only.
                                 </sch:assert>
                             </sch:rule>
