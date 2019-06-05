@@ -142,7 +142,7 @@
                             </sch:rule>
                             <sch:rule context="mei:fermata">
                                 <sch:let name="meter" value="preceding::mei:*[@meter.count][1]/xs:integer(@meter.count)"/>
-                                <sch:assert test="(not(@tstamp2) and not(@endid)) and ((@startid and not(@tstamp)) or (not(@startid) and @tstamp and number(@tstamp = $meter + 1))">
+                                <sch:assert test="(not(@tstamp2) and not(@endid)) and ((@startid and not(@tstamp)) or (not(@startid) and @tstamp and number(@tstamp = $meter + 1)))">
                                     fermata elements are supposed to have a @startid only. Unless it is on a barline, then a @tstamp is allowed.
                                 </sch:assert>
                             </sch:rule>
