@@ -204,6 +204,16 @@
                         </constraint>
                     </constraintSpec>
                     
+                    <constraintSpec ident="check_gracenote" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:note">
+                                <sch:assert test="not(@grace) or @grace='unknown'">
+                                    for attribute @grace only 'unknown' is allowed.
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
                 </elementSpec>
                 
                 <classSpec type="atts" ident="att.note.anl.cmn" mode="delete"> 
