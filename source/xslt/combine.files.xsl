@@ -21,6 +21,13 @@
     -->
     
     <xsl:param name="transpose.mode"/>
+    <!-- allowed values for param $transpose.mode are:
+        'none' - both files are kept as they are
+        'matchFile1' - transpose second file to key of first file 
+        'matchFile2' - transpose first file to key of second file
+        'C' - transpose both files to the key of C for easier reading
+    
+    -->
     
     <xsl:include href="tools/transpose.xsl"/>
     <xsl:include href="data/circleOf5.xsl"/>
