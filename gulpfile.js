@@ -40,7 +40,7 @@ gulp.task('xar-structure', function () {
     .pipe(replace('$$version$$', getPackageJsonVersion()))
     .pipe(replace('$$desc$$', packageJson.description))
     .pipe(replace('$$license$$', packageJson.license))
-    .pipe(gulp.dest('./dist/'))
+    .pipe(gulp.dest('./build/'))
 })
 
 // reading from fs as this prevents caching problems
@@ -58,8 +58,8 @@ function getGitInfo () {
 // handles data
 gulp.task('data', function () {
   return gulp.src('./data/**/*')
-    .pipe(newer('./dist/content/'))
-    .pipe(gulp.dest('./dist/content/'))
+    .pipe(newer('./build/content/'))
+    .pipe(gulp.dest('./build/content/'))
 })
 
 /**
@@ -68,7 +68,7 @@ gulp.task('data', function () {
 gulp.task('deploy', function () {
   const git = getGitInfo()
 
-  return gulp.src('**/*', { cwd: 'dist' })
+  return gulp.src('**/*', { cwd: 'build' })
 
     .pipe(replace('$$git-url$$', git.url))
     .pipe(replace('$$git-short$$', git.short))
@@ -78,15 +78,15 @@ gulp.task('deploy', function () {
     .pipe(existClient.dest({ target: '/db/apps/modul2/' }))
 })
 
-gulp.task('buildXar', function () {
+gulp.task('dist', function () {
   const git = getGitInfo()
 
-  return gulp.src('./dist/**/*')
+  return gulp.src('./build/**/*')
 
     .pipe(replace('$$git-url$$', git.url))
     .pipe(replace('$$git-short$$', git.short))
     .pipe(replace('$$git-dirty$$', git.dirty))
 
     .pipe(zip(packageJson.name + '-' + getPackageJsonVersion() + '.xar'))
-    .pipe(gulp.dest('./build'))
+    .pipe(gulp.dest('./dist'))
 })
