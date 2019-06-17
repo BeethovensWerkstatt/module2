@@ -1,6 +1,6 @@
 {
   "name": "bw-modul2",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "private": true,
   "repository": {
     "type": "git",
@@ -12,10 +12,17 @@
     "Beethovens Werkstatt"
   ],
   "author": "Johannes Kepper",
-  "contributors":[
-    { "name" : "Johannes Kepper",
-      "email" : "kepper@edirom.de",
-      "url" : "https://github.com/kepper"}
+  "contributors": [
+    {
+      "name": "Johannes Kepper",
+      "email": "kepper@edirom.de",
+      "url": "https://github.com/kepper"
+    },
+    {
+      "name": "Kristin Herold",
+      "email": "herold@beethovens-werkstatt.de",
+      "url": "https://github.com/krHERO"
+    }
   ],
   "license": "AGPL-3.0",
   "bugs": {
