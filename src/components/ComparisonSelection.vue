@@ -4,13 +4,13 @@
 
     <div class="comparisonContainer" v-for="comparison in comparisons" v-bind="comparison">
 
-      <div class="comparisonDetails active">
+      <div class="comparisonDetails" v-bind:class="{active: (comparison.id === activeComparisonId)}" v-on:click="activateComparison(comparison.id)">
         <div class="additionalInfo s-circle float-right">i</div>
         <div class="title">{{comparison.title}}</div>
         <div class="subtitle">{{comparison.target}}</div>
       </div>
-      <div v-if="comparison.movements.length != 1" class="mdivSelection">
-        <div class="mdiv" v-for="mdiv in comparison.movements">{{mdiv.label}}</div>
+      <div v-if="comparison.id === activeComparisonId && comparison.movements.length != 1" class="mdivSelection">
+        <div class="mdiv" v-for="mdiv in comparison.movements" v-bind:class="{active: (mdiv.n === activeMovement)}" v-on:click="activateMovement(mdiv.n)">{{mdiv.label}}</div>
       </div>
     </div>
 
@@ -61,6 +61,20 @@ export default {
   computed: {
     comparisons: function() {
       return this.$store.getters.comparisons;
+    },
+    activeComparisonId: function() {
+      return this.$store.getters.activeComparisonId;
+    },
+    activeMovement: function() {
+      return this.$store.getters.activeMovement;
+    }
+  },
+  methods: {
+    activateComparison (id){
+      this.$store.dispatch('activateComparison',id)
+    },
+    activateMovement (n){
+      this.$store.dispatch('activateMovement',n)
     }
   }
 }

@@ -10,8 +10,8 @@ export default new Vuex.Store({
   state: {
     comparisonsLoaded: false,
     comparisons: {},
-    activeComparison: -1,
-    activeMovement: 0, // first mdiv
+    activeComparison: null,
+    activeMovement: 1, // first mdiv
     mode: null, // default comparison?
     zoom: 1,
     measure: null,
@@ -27,14 +27,19 @@ export default new Vuex.Store({
         state.comparisons = Object.assign({}, state.comparisons, created)
         // this.dispatch('fetchOutputs', comparison.id).then(() => {})
       })
-      state.dataLoaded = true
+      state.comparisonsLoaded = true
+    },
+    ACTIVATE_COMPARISON (state, id) {
+      state.activeComparison = id
+      state.activeMovement = 1
+    },
+    ACTIVATE_MOVEMENT (state, n) {
+      state.activeMovement = n
     }
   },
   actions: {
     fetchComparisons ({ commit }) {
-      console.log('hello polly')
       return new Promise(resolve => {
-        console.log('Fetching available comparisons…')
         fetch(api + 'resources/xql/getComparisonListing.xql')
           .then(response => response.json()) // add error handling for failing requests
           .then(comparisons => {
@@ -42,6 +47,14 @@ export default new Vuex.Store({
             resolve()
           })
       })
+    },
+    activateComparison ({ commit }, id) {
+      console.log('done ' + id)
+      // todo: check if comparison with that id is available
+      commit('ACTIVATE_COMPARISON', id)
+    },
+    activateMovement ({ commit }, n) {
+      commit('ACTIVATE_MOVEMENT', n)
     }
 
   },
@@ -56,6 +69,15 @@ export default new Vuex.Store({
     },
     comparison: state => id => {
       return state.comparisons[id]
+    },
+    activeComparisonObject: state => {
+      return state.comparisons[state.activeComparison]
+    },
+    activeComparisonId: state => {
+      return state.activeComparison
+    },
+    activeMovement: state => {
+      return state.activeMovement
     }
   }
 })
