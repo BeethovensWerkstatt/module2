@@ -12,8 +12,11 @@ declare namespace svg="http://www.w3.org/2000/svg";
 declare namespace request="http://exist-db.org/xquery/request";
 declare namespace util="http://exist-db.org/xquery/util";
 declare namespace transform="http://exist-db.org/xquery/transform";
+declare namespace response="http://exist-db.org/xquery/response"; 
 
 declare option exist:serialize "method=xml media-type=text/plain omit-xml-declaration=yes indent=yes";
+
+let $header-addition := response:set-header("Access-Control-Allow-Origin","*")
 
 let $data.basePath := '/db/apps/bw-module2/'
 let $xslPath := '../xsl/' 
