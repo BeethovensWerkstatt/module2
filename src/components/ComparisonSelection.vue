@@ -1,22 +1,20 @@
 <template>
-  <div id="workSelector">
+  <div id="comparisonSelector">
     <SectionLabel label="Fassungsvergleiche"/>
 
-    <div class="workContainer">
+    <div class="comparisonContainer" v-for="comparison in comparisons" v-bind="comparison">
 
-      <div class="workDetails active">
+      <div class="comparisonDetails active">
         <div class="additionalInfo s-circle float-right">i</div>
-        <div class="title">Klaviersonate E-Dur Op.14/1</div>
-        <div class="subtitle">und Bearbeitung als Streichquartett F-Dur</div>
+        <div class="title">{{comparison.title}}</div>
+        <div class="subtitle">{{comparison.target}}</div>
       </div>
-      <div v-if="1 == 1" class="mdivSelection">
-        <div class="mdiv">Allegro</div>
-        <div class="mdiv active">Allegretto</div>
-        <div class="mdiv">Rondo Allegro Comodo</div>
+      <div v-if="comparison.movements.length != 1" class="mdivSelection">
+        <div class="mdiv" v-for="mdiv in comparison.movements">{{mdiv.label}}</div>
       </div>
     </div>
 
-    <div class="workContainer">
+    <!--<div class="workContainer">
       <div class="workDetails">
         <div class="additionalInfo s-circle float-right">i</div>
         <div class="title">Septett Op.20</div>
@@ -46,7 +44,7 @@
         <div class="mdiv">Allegro molto e vivace</div>
         <div class="mdiv">Andante con moto alla Marcia</div>
       </div>
-    </div>
+    </div>-->
 
   </div>
 </template>
@@ -56,9 +54,14 @@
 import SectionLabel from '@/components/SectionLabel'
 
 export default {
-  name: 'WorkSelection',
+  name: 'ComparisonSelection',
   components: {
     SectionLabel
+  },
+  computed: {
+    comparisons: function() {
+      return this.$store.getters.comparisons;
+    }
   }
 }
 </script>
@@ -68,11 +71,11 @@ export default {
 
   $borderColor: #999999;
 
-  .workContainer {
+  .comparisonContainer {
     margin: 0 .2rem .5rem;
     text-align: left;
 
-    .workDetails {
+    .comparisonDetails {
       border: .5px solid $borderColor;
       border-radius: 8px;
       background-color: #f5f5f5;

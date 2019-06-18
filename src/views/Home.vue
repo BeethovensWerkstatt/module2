@@ -5,7 +5,7 @@
     <div class="container">
       <div class="columns">
         <div id="navigationBox" class="column col-3 col-lg-12">
-          <WorkSelection/>
+          <ComparisonSelection/>
           <ModeSelection/>
           <!-- WorkSelection -->
           <!-- WorkSelection -->
@@ -25,7 +25,7 @@
 
 <script>
 // @ is an alias to /src
-import WorkSelection from '@/components/WorkSelection.vue'
+import ComparisonSelection from '@/components/ComparisonSelection.vue'
 import ModeSelection from '@/components/ModeSelection.vue'
 import Analysis from '@/components/Analysis.vue'
 import NavigationTop from '@/components/NavigationTop.vue'
@@ -33,7 +33,7 @@ import NavigationTop from '@/components/NavigationTop.vue'
 export default {
   name: 'home',
   components: {
-    WorkSelection,
+    ComparisonSelection,
     ModeSelection,
     Analysis,
     NavigationTop
