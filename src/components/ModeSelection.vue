@@ -7,6 +7,7 @@
         <li class="modeBtn" id="geneticComparison">Genetischer Vergleich</li><!-- Genetic Comparison -->
         <li class="modeBtn" id="melodicComparison">Stimmenkontur-Vergleich</li><!-- Melodic Line Comparison -->
         <li class="modeBtn" id="eventDensity">Ereignisdichte-Vergleich</li><!-- Event Density Comparison -->
+        <li class="modeBtn" id="harmonicComparison">Harmonie-Vergleich</li><!-- Harmonic Comparison -->
 
         <!--
             <li class="modeBtn" id="relativeChroma">Relative Chroma</li>
@@ -31,5 +32,43 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+ul.navigationList {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    padding: .3em 0 .3em 1em;
+                    margin: 0.3em 0;
+                    font-weight: 300;
+                    position: relative;
+                    cursor: pointer;
+                    border: .5px solid #666666;
+                    border-radius: 5px;
+                    background-color: #f5f5f5;
+
+                    span.originalVersion {
+                        display: block;
+                    }
+
+                    span.targetVersion {
+                        display: block;
+                        font-size: 90%;
+                        margin-left: 1em;
+                    }
+
+                    &.active {
+
+                        font-weight: 500;
+                        background-color: #a7c7f2;
+                        /*&:before {
+                            position: absolute;
+                            left: .2em;
+                            content: '‣'
+                        }*/
+                    }
+                  }
+}
 
 </style>

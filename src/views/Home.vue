@@ -11,7 +11,8 @@
           <!-- WorkSelection -->
         </div>
         <div id="contentBox" class="column col-9 col-lg-12">
-          <!-- Content -->
+        <!-- Content -->
+          <NavigationTop/>
           <Analysis/>
         </div>
       </div>
@@ -27,13 +28,15 @@
 import WorkSelection from '@/components/WorkSelection.vue'
 import ModeSelection from '@/components/ModeSelection.vue'
 import Analysis from '@/components/Analysis.vue'
+import NavigationTop from '@/components/NavigationTop.vue'
 
 export default {
   name: 'home',
   components: {
     WorkSelection,
     ModeSelection,
-    Analysis
+    Analysis,
+    NavigationTop
   }
 }
 </script>

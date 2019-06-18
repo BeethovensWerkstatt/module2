@@ -1,3 +1,5 @@
+<!-- describes the style of the labels in the navigationBox -->
+
 <template>
   <div class="sectionLabel">
     <h1>{{ label }}</h1>
@@ -13,7 +15,7 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style lang="scss">
 .sectionLabel h1 {
   font-size: 1.2rem;
