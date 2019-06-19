@@ -70,10 +70,10 @@ export default {
     }
   },
   methods: {
-    activateComparison (id){
+    activateComparison (id) {
       this.$store.dispatch('activateComparison',id)
     },
-    activateMovement (n){
+    activateMovement (n) {
       this.$store.dispatch('activateMovement',n)
     }
   }

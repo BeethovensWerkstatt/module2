@@ -1,0 +1,128 @@
+{
+  "plain":{
+    "id":"plain",
+    "position":1,
+    "label":{
+      "de":"Fassungs-Synopse",
+      "en":"Score Synopsis"
+    },
+    "glossary":{
+      "de":"link-de",
+      "en":"link-en"
+    },
+    "options":{
+      "sunburst":true,
+      "zoom":true,
+      "paging":true,
+      "scoreDef":true,
+      "coloring":true,
+      "legend":false,
+      "search":true
+    }
+  },
+  "eventComparison": {
+    "id":"eventComparison",
+    "position":2,
+    "label":{
+      "de":"Note-gegen-Note",
+      "en":"Event Comparison"
+    },
+    "glossary":{
+      "de":"link-de",
+      "en":"link-en"
+    },
+    "options":{
+      "sunburst":true,
+      "zoom":true,
+      "paging":true,
+      "scoreDef":true,
+      "coloring":false,
+      "legend":true,
+      "search":true
+    }
+  },
+  "geneticComparison": {
+    "id":"geneticComparison",
+    "position":3,
+    "label":{
+      "de":"Kompositorische Maßnahmen",
+      "en":"Genetic Comparison"
+    },
+    "glossary":{
+      "de":"link-de",
+      "en":"link-en"
+    },
+    "options":{
+      "sunburst":true,
+      "zoom":true,
+      "paging":true,
+      "scoreDef":true,
+      "coloring":false,
+      "legend":true,
+      "search":true
+    }
+  },
+  "melodicComparison": {
+    "id":"melodicComparison",
+    "position":4,
+    "label":{
+      "de":"Stimmenkontur",
+      "en":"Melodic Comparison"
+    },
+    "glossary":{
+      "de":"link-de",
+      "en":"link-en"
+    },
+    "options":{
+      "sunburst":true,
+      "zoom":true,
+      "paging":false,
+      "scoreDef":true,
+      "coloring":false,
+      "legend":false,
+      "search":false
+    }
+  },
+  "eventDensity": {
+    "id":"eventDensity",
+    "position":5,
+    "label":{
+      "de":"Ereignisdichte",
+      "en":"Event Density"
+    },
+    "glossary":{
+      "de":"link-de",
+      "en":"link-en"
+    },
+    "options":{
+      "sunburst":true,
+      "zoom":true,
+      "paging":true,
+      "scoreDef":true,
+      "coloring":false,
+      "legend":false,
+      "search":true
+    }
+  },
+  "harmonicComparison": {
+    "id":"harmonicComparison",
+    "position":6,
+    "label":{
+      "de":"Harmonievergleich",
+      "en":"Harmonic Comparison"
+    },
+    "glossary":{
+      "de":"link-de",
+      "en":"link-en"
+    },
+    "options":{
+      "sunburst":true,
+      "zoom":true,
+      "paging":true,
+      "scoreDef":true,
+      "coloring":false,
+      "legend":false,
+      "search":true
+    }
+  }
+}

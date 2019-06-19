@@ -2,18 +2,10 @@
   <div id="modeSelector">
     <SectionLabel label="Modus"/>
     <ul class="navigationList">
-        <li class="modeBtn active" id="plain">Fassungs-Synopse</li><!-- Plain comparison -->
-        <li class="modeBtn" id="comparison">Einzelnoten-Vergleich</li><!-- Single Note Comparison -->
-        <li class="modeBtn" id="geneticComparison">Genetischer Vergleich</li><!-- Genetic Comparison -->
-        <li class="modeBtn" id="melodicComparison">Stimmenkontur-Vergleich</li><!-- Melodic Line Comparison -->
-        <li class="modeBtn" id="eventDensity">Ereignisdichte-Vergleich</li><!-- Event Density Comparison -->
-        <li class="modeBtn" id="harmonicComparison">Harmonie-Vergleich</li><!-- Harmonic Comparison -->
 
-        <!--
-            <li class="modeBtn" id="relativeChroma">Relative Chroma</li>
-            <li class="modeBtn" id="krumhansl-1" title="Generates Krumhansl-Schmuckler values for each single measure">Krumhansl-Schmuckler (1)</li>
-            <li class="modeBtn" id="krumhansl-4" title="Generates Krumhansl-Schmuckler values for a sliding window of 4 measures">Krumhansl-Schmuckler (4)</li>
-        -->
+      <li class="modeBtn" v-for="mode in modes" v-bind:id="mode.id" v-bind:class="{active: (mode.id === activeModeId)}" v-on:click="activateMode(mode.id)">
+        {{mode.label.de}}
+      </li>
     </ul>
   </div>
 </template>
@@ -26,6 +18,22 @@ export default {
   name: 'ModeSelection',
   components: {
     SectionLabel
+  },
+  computed: {
+    modes: function() {
+      return this.$store.getters.modes
+    },
+    activeModeId: function() {
+      return this.$store.getters.activeModeId
+    },
+    activeModeObject: function() {
+      return this.$store.getter.activeModeObject
+    }
+  },
+  methods: {
+    activateMode (id) {
+      this.$store.dispatch('activateMode',id)
+    }
   }
 }
 </script>

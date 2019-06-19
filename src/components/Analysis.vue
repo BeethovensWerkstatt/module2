@@ -1,10 +1,11 @@
 <template>
   <div id="analysis">
-    <div v-if="1 == 1"><AnalysisPlain/></div>
-    <div v-if="1 == 1"><AnalysisComparison/></div>
-    <div v-if="1 == 1"><AnalysisGenetic/></div>
-    <div v-if="1 == 1"><AnalysisMelodic/></div>
-    <div v-if="1 == 1"><AnalysisDensity/></div>
+    <div v-if="activeModeId === 'plain'"><AnalysisPlain/></div>
+    <div v-if="activeModeId === 'eventComparison'"><AnalysisComparison/></div>
+    <div v-if="activeModeId === 'geneticComparison'"><AnalysisGenetic/></div>
+    <div v-if="activeModeId === 'melodicComparison'"><AnalysisMelodic/></div>
+    <div v-if="activeModeId === 'harmonicComparison'"><AnalysisHarmonic/></div>
+    <div v-if="activeModeId === 'eventDensity'"><AnalysisDensity/></div>
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import AnalysisComparison from '@/components/AnalysisComparison.vue'
 import AnalysisGenetic from '@/components/AnalysisGenetic.vue'
 import AnalysisMelodic from '@/components/AnalysisMelodic.vue'
 import AnalysisDensity from '@/components/AnalysisDensity.vue'
+import AnalysisHarmonic from '@/components/AnalysisHarmonic.vue'
 
 export default {
   name: 'Analysis',
@@ -23,7 +25,13 @@ export default {
     AnalysisComparison,
     AnalysisGenetic,
     AnalysisMelodic,
-    AnalysisDensity
+    AnalysisDensity,
+    AnalysisHarmonic
+  },
+  computed: {
+    activeModeId: function() {
+      return this.$store.getters.activeModeId
+    }
   }
 }
 </script>

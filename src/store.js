@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import modeConfiguration from './../modeConfiguration.json'
+
 // const api = process.env.VUE_APP_DATA_BACKEND_URL
 const api = 'https://dev.beethovens-werkstatt.de/'
 
@@ -12,7 +14,8 @@ export default new Vuex.Store({
     comparisons: {},
     activeComparison: null,
     activeMovement: 1, // first mdiv
-    mode: null, // default comparison?
+    modes: modeConfiguration,
+    activeMode: null, // default comparison?
     zoom: 1,
     measure: null,
     navigationVisible: true // this is the sidebar with work and mode selection
@@ -35,6 +38,9 @@ export default new Vuex.Store({
     },
     ACTIVATE_MOVEMENT (state, n) {
       state.activeMovement = n
+    },
+    ACTIVATE_MODE (state, id) {
+      state.activeMode = id
     }
   },
   actions: {
@@ -49,12 +55,15 @@ export default new Vuex.Store({
       })
     },
     activateComparison ({ commit }, id) {
-      console.log('done ' + id)
       // todo: check if comparison with that id is available
       commit('ACTIVATE_COMPARISON', id)
     },
     activateMovement ({ commit }, n) {
       commit('ACTIVATE_MOVEMENT', n)
+    },
+    activateMode ({ commit }, id) {
+      // todo: check if mode with that id is available
+      commit('ACTIVATE_MODE', id)
     }
 
   },
@@ -78,6 +87,20 @@ export default new Vuex.Store({
     },
     activeMovement: state => {
       return state.activeMovement
+    },
+    modes: state => {
+      const keys = Object.keys(state.modes)
+      const values = []
+      for (const key of keys) {
+        values.push(state.modes[key])
+      }
+      return values
+    },
+    activeModeObject: state => {
+      return state.modes[state.activeMode]
+    },
+    activeModeId: state => {
+      return state.activeMode
     }
   }
 })
