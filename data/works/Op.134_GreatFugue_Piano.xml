@@ -35506,8 +35506,8 @@
             <measure n="450" xml:id="x23c41e0e-6116-47c2-ba29-62c55e59bf96">
               <staff xml:id="x2e725cd7-be4c-49b6-b7ce-590cee6c3606" n="1">
                 <layer xml:id="xfebea2ff-c9d4-4dc8-8da6-785606b53dfb" n="1">
-                  <note xml:id="x9dd5caa0-3ff1-4043-9845-a56ed2ae2e29" pname="b" oct="5" dur="4"
-                    stem.dir="down" accid="f"/>
+                  <note xml:id="x9dd5caa0-3ff1-4043-9845-a56ed2ae2e29" pname="b" oct="5" oct.ges="6" dur="4"
+                    stem.dir="down" accid="f"/><!-- todo: following notes also with oct.ges, then remove this comment -->
                   <note xml:id="x4d5a50b3-1463-43da-ba69-4af1a3feaf1d" pname="a" oct="5" dur="8"
                     stem.dir="down" accid.ges="f"/>
                   <note xml:id="x14e86509-eac3-4176-bd95-82421fc76878" pname="a" oct="5" dur="4"
