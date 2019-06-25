@@ -4000,7 +4000,7 @@
                            </layer>
                         </staff>
                         <slur xml:id="xff2d2f7c-8615-4e26-a62b-8ce10dbda22b"
-                           startid="#x2cbbfe12-177b-4650-9ffb-f4866493d4e6" curvedir="below"
+                           startid="#x2cbbfe12-177b-4650-9ffb-f4866493d4e6" curvedir="above"
                            endid="#xd6bff75a-9713-49e9-996f-8375ac6f9757" staff="1"/>
                      </measure>
                      <measure n="12" xml:id="x82344d0f-c9e0-434f-99ae-13949dff49b5">
@@ -14596,6 +14596,9 @@
                               <rest xml:id="x15258192-0a52-4fc5-a39c-8919b583e6eb" dur="16"/>
                            </layer>
                         </staff>
+                        <slur xml:id="x620703f2-8ed5-4312-83b3-4beb0bf6d2c3"
+                           startid="#x383779f4-e387-48c0-bc39-007120c22763"
+                           endid="#x4920c635-fc7c-45b7-8318-806919793a41" curvedir="below" staff="1"/>
                      </measure>
                      <measure n="62" xml:id="x9ec231f7-af3b-4380-a952-a374f9c55127">
                         <staff xml:id="x6e9af8f0-e6bb-4282-98f3-b479010c6a38" n="1">
