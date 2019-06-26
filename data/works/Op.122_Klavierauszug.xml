@@ -95,6 +95,8 @@
                <p n="10">converted crescendo-dirs to dynam-elements and set extender-attributes with tstamp2s.</p>
                <p n="11">songtextstandardization and deletion of all con="u"s.</p>
                <p n="12">deleted all @stem.dir-attributes.</p>
+               <p n="13">smaller corrections</p>
+               <p n="14">clef-corrections in m.185f, 197f and 209f.</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -2833,7 +2835,7 @@
                                  
                                  tstamp="1.5">
                               <verse xml:id="x64090526-6651-43f6-bc36-e43f89eb6868" n="1">
-                                 <syl xml:id="x9338f386-88c8-4eee-a29c-ea46689fd461" cwordpos="t">ert</syl>
+                                 <syl xml:id="x9338f386-88c8-4eee-a29c-ea46689fd461" wordpos="t">ert</syl>
                               </verse>
                            </note>
                            <note xml:id="xe393c2d7-623f-48ab-a9ad-e4542fe91f8a"
@@ -13340,7 +13342,7 @@
                                  
                                  tstamp="2.5">
                               <verse xml:id="x23a7f4be-d7d3-41be-b036-b130f93c5adb" n="1">
-                                 <syl xml:id="x6a88e0dd-4457-423b-8b7a-704cd017662f" cwordpos="t">e</syl>
+                                 <syl xml:id="x6a88e0dd-4457-423b-8b7a-704cd017662f" wordpos="t">e</syl>
                               </verse>
                            </note>
                         </layer>
@@ -27108,6 +27110,10 @@
                         staff="4"
                         tstamp="1">fp</dynam>
                   </measure>
+                  <scoreDef xml:id="u724528ca-a5a0-4a70-bad8-e3a1c4727782"
+                     meter.count="4"
+                     meter.unit="4"
+                     meter.sym="common"/>
                   <measure xml:id="xabb8b9e7-d756-4c52-bfda-8b0edc89e508" n="185">
                      <staff xml:id="x389b7567-c837-4a01-b3f8-422bbf9b7832" n="1">
                         <layer xml:id="xd574c6d3-4c68-4983-b476-dd51db1484b8" n="1">
@@ -27746,7 +27752,11 @@
                         startid="#xfeaf40dc-68ac-4dd6-8c20-df1232a1d454"
                         endid="#xc4da6f30-e963-4722-8ecc-b087f91bac30"
                         curvedir="above"/>
-                  </measure>
+                  </measure> 
+                  <scoreDef xml:id="u2fd37fe5-8a43-4de0-bd06-b6c4040df291"
+                     meter.count="2"
+                     meter.unit="2"
+                     meter.sym="cut"/>
                   <measure xml:id="xcf537097-66bd-4503-b8ac-225aabb54160" n="187">
                      <staff xml:id="x0c2b7232-f01d-4830-b228-6439118fd300" n="1">
                         <layer xml:id="x797b1251-6dbd-455f-9ed2-3bfb792c579c" n="1">
@@ -28986,7 +28996,7 @@
                                  
                                  tstamp="2.5">
                               <verse xml:id="xb29fa39b-afbb-4460-8e8f-6f0b162dd65c" n="1">
-                                 <syl xml:id="x081eeade-c959-409d-933e-bd084bc8417c" wordpos="">ge!</syl>
+                                 <syl xml:id="x081eeade-c959-409d-933e-bd084bc8417c" wordpos="t">ge!</syl>
                               </verse>
                            </note>
                         </layer>
@@ -29841,7 +29851,10 @@
                             staff="4"
                             tstamp="1">fp</dynam>
                   </measure>
-                  
+                  <scoreDef xml:id="uc21fa4b0-2dee-4959-8d85-f104b4957749"
+                     meter.count="2"
+                     meter.unit="2"
+                     meter.sym="common"/>
                   <measure xml:id="x00d47bdf-e6c8-4422-9e7b-297cd0164045" n="197">
                      <staff xml:id="xfac98a06-3f76-4ddf-9e8a-e2386e0f91df" n="1">
                         <layer xml:id="x887d5da9-fbd6-454b-80aa-112808b14ebf" n="1">
@@ -30516,6 +30529,10 @@
                            endid="#x2745b3c0-0188-4f09-9e4f-19632d98b71b"
                            curvedir="above"/>
                   </measure>
+                  <scoreDef xml:id="u858feb3c-6d0c-4aff-942b-6c344d766fc7"
+                     meter.count="2"
+                     meter.unit="2"
+                     meter.sym="cut"/>
                   <measure xml:id="xfacb6ad3-bfda-412b-a3d3-61e7386002ba" n="199">
                      <staff xml:id="xb489a011-36e6-4396-9552-d43b89a3fa6b" n="1">
                         <layer xml:id="x005596a5-b1e4-4ee3-89b9-fa76e8744b82" n="1">
@@ -31710,6 +31727,10 @@
                         </layer>
                      </staff>
                   </measure>
+                  <scoreDef xml:id="u4f994f48-d82d-4760-b59a-9d00eb34f8d0"
+                     meter.count="2"
+                     meter.unit="2"
+                     meter.sym="common"/>
                   <measure xml:id="x9cd42fcc-ac4c-4039-8329-5cda7531cc69" n="209">
                      <staff xml:id="x19704413-ed50-4d5f-8a24-92f3c9676c59" n="1">
                         <layer xml:id="x510efe1d-c509-4be2-8e42-09e4ab299384" n="1">
@@ -32122,6 +32143,10 @@
                      <trill xml:id="uf17b9b2a-8264-4e5f-bd93-c86df80207cd" startid="#xc92ae0f2-f850-45bc-8cc2-48a89023e3d4" place="above"/>
                      <trill xml:id="u05c7374a-f1cb-40cf-a3d9-d87604640529" startid="#x63e445c4-527b-4960-9205-dbd7a8c6b823" place="above"/>
                   </measure>
+                  <scoreDef xml:id="u74155ba5-4c66-42f5-8ec5-ee3d8d3c6989"
+                     meter.count="2"
+                     meter.unit="2"
+                     meter.sym="cut"/>
                   <measure xml:id="x618af32c-ca01-4d79-8733-5a89b18ebde3" n="211">
                      <staff xml:id="x1f586e38-f50f-41ee-b8f0-6ca44dc3c2df" n="1">
                         <layer xml:id="x2efb0192-c4cf-4e1a-a0c6-4e55f66b292f" n="1">
