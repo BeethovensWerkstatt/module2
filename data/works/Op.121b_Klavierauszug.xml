@@ -150,6 +150,15 @@
             </changeDesc>
             <date isodate="2019-06-25"/>
          </change>
+         <change n="12">
+            <respStmt>
+               <persName auth.uri="https://github.com/" codedval="susannecox">Susanne Cox</persName>
+            </respStmt>
+            <changeDesc>
+               <p>curvedir entfernt</p>
+            </changeDesc>
+            <date isodate="2019-06-2"/>
+         </change>
       </revisionDesc>
    </meiHead>
    <music>
@@ -580,7 +589,7 @@
                      <slur xml:id="xbd173b90-ac11-4ca5-ac01-32c4d0084604"
                            startid="#xacc5ed63-019b-490e-bbd1-c5602c71bb3a"
                            endid="#x3b00bde2-17f4-4339-a691-d6d712cf054d"
-                           curvedir="below"/>
+                           />
                      <tie xml:id="x63b4dafd-0869-48d0-99ef-1a00b50ca343"
                           startid="#x12a52c85-0d49-4bcb-90f9-70fd4261b46f"
                           endid="#x060de163-e8d8-4cb5-83a0-43e581e2bb1e"/>
@@ -955,19 +964,19 @@
                      <slur xml:id="x9b49d8d4-6f5c-4bc3-bde8-883cdeaf585c"
                            startid="#xb5c14dc5-f804-46e3-92dc-a2bb71d1276a"
                            endid="#xbfcf3018-0ed8-4e00-a02f-7e99266bf18d"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x425002ec-b281-4895-bdba-2feda0a27372"
                            startid="#xddd8adf3-09d4-45d9-aa27-d220cd23abcd"
                            endid="#xb0a8c6cc-8870-4c3c-baea-3c08c6da652d"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xe0126057-af72-4337-95be-22098ec81d18"
                            startid="#x35a09a06-c723-4711-bfec-5c69ca4eea0e"
                            endid="#x8ece0637-4b67-478a-82bf-0eac501bc754"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xaef75f95-2e23-4ad1-beb7-d49a04a06314"
                            startid="#x521e29e7-db22-4d6f-8d90-99ec92ddbf23"
                            endid="#x8f235664-35f7-43bf-ab52-8af9a709734c"
-                           curvedir="below"/>
+                           />
                   </measure>
                   <measure xml:id="x245cdcee-f493-4135-b4df-6cf0d6c9dd4f" n="5">
                      <staff xml:id="xa9507a67-a9cd-42c9-b52d-d8ed052e5759" n="1">
@@ -1406,15 +1415,15 @@
                      <slur xml:id="x086cf0ac-6cee-427b-a78d-8a49dd139f63"
                            startid="#xb9c227eb-1fb7-4782-b484-4dee15962969"
                            endid="#x07409cf7-4dd4-4e57-aa16-d4496ec27660"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x9d3fd3dc-546d-4c2f-a056-44bef27c0158"
                            startid="#x4976d1da-d0d4-4c78-a718-b614ebae77f4"
                            endid="#x1afedd5f-0caf-4b54-b8b2-12c10117c06b"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x2d4e4f13-596f-470b-8af9-82065d450352"
                            startid="#xe6508be5-285c-4693-8335-a8cafff00d6b"
                            endid="#xb074e559-49c3-4643-bf29-9b8a62f15d66"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="x2ca0fc35-549f-4ef4-a4d2-4f04a96bb969"
                             place="below"
                             staff="6"
@@ -1422,7 +1431,7 @@
                      <slur xml:id="xc4540b5c-2102-46f9-af6c-9e90ff9529fa"
                            startid="#xdbe76ae7-4f20-4fcb-b048-52a201b600d8"
                            endid="#xcc03ce28-7494-4451-8dd6-1b9b4b4f701f"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="x925cb2e8-ca4c-443e-a0ef-bab2a67d89d5" n="7">
                      <staff xml:id="x62600b3b-e4d3-44f4-aa09-3d965e23e546" n="1">
@@ -2130,19 +2139,19 @@
                      <slur xml:id="xa8e38640-f040-4db3-804d-3d109a08b459"
                            startid="#xf1b39796-f9d1-45c8-8d8e-9d39e38d256c"
                            endid="#x47f4b572-d8a1-4286-83b7-c21d3bed01b1"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x9510fbc6-f53a-4ec4-a6e3-be93161ac8ab"
                            startid="#xf449ad44-00c9-4f92-94b1-db79701f5d43"
                            endid="#x8b0d2387-09c9-4f07-8605-67ba06c41704"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x4409aeaf-8b5a-40c9-8bb2-29f6bac93754"
                            startid="#xefa40a9f-6b94-4231-82aa-03d626ef49c0"
                            endid="#xe668f4f5-e7ea-4199-8663-cb8b53a22dba"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x673fadd4-81ee-4440-a753-672c8a0d670b"
-                           startid="#xa4ea5930-fd39-4f28-8da4-714debcf081a"
-                           endid="#xcab1aa27-7e1a-4bf2-9eaf-dbc5f7d45882"
-                           curvedir="above"/>
+                        startid="#x6d659b1d-94c2-42b8-a90f-1ed7575dbad0"
+                           endid="#x81e1d654-850f-4a86-8c01-ad4c86a72bc1"
+                           />
                   </measure>
                   <measure xml:id="xf6160b40-19c0-460e-a6d9-9ea835cd1d36" n="10">
                      <staff xml:id="x2ba04edd-987e-4f7c-96f7-f7f548001b3a" n="1">
@@ -2397,7 +2406,7 @@
                      <slur xml:id="x591beb1a-7410-44c6-a180-d7a2e15d3c74"
                            startid="#x27ff5833-cb45-4d9b-a60a-90650e633b9d"
                            endid="#x4c8841b1-3182-4700-b1f3-93fba91d6853"
-                           curvedir="above"/>
+                           />
                      <tie xml:id="x8c0ad9a4-ba0e-45cc-9919-ba848f6a6efc"
                           startid="#x16a1b62e-caa2-4e26-90a4-958b9c84c753"
                           endid="#x20bb21ad-ecf7-4975-a152-7a4e4ee88957"/>
@@ -2413,7 +2422,7 @@
                      <slur xml:id="x39de0dcc-6687-4f21-9fdc-59cf5f651161"
                            startid="#xb9bd693b-3b12-4f52-8309-56de607d3168"
                            endid="#x4e6a60b4-7d77-42c8-aa20-fc214d52cc69"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="xd2844287-78d5-41f8-8dd7-6e7d66f89b2b" n="11">
                      <staff xml:id="xa8282abb-e903-4b56-a6f8-fb62c897e35a" n="1">
@@ -2656,15 +2665,15 @@
                      <slur xml:id="xbee08eb9-f656-48a1-b7f4-f006e6c75c96"
                            startid="#x87fe2cde-f011-4d86-b6a5-1e7e29d096db"
                            endid="#x79bbb16a-eb1f-475d-a3f1-8eec040db792"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xfa0ff94c-2691-493b-8e73-6945ddc6ff61"
                            startid="#x635b07b0-bc42-4ec0-96a8-79fcc9452f84"
                            endid="#x5bbc155d-1f14-4ad4-bf6f-d5e5a6f933f3"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x6a2b25d3-989a-4127-b66b-7a837c9afc69"
                            startid="#xb34df62b-374b-49cc-9e37-f7cac79a5c78"
                            endid="#xaa2e2867-e418-443f-8c5c-85b2b4d3cfdc"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="x80980f6d-e4c4-42fd-8afb-878bcbe580f0" n="12">
                      <staff xml:id="xd69fd77b-72ef-4083-84fb-b18db3674a5e" n="1">
@@ -3014,11 +3023,11 @@
                      <slur xml:id="x34a80e4c-6950-4712-a1cc-58591d6e02ab"
                            startid="#x34e148fb-fb5e-4175-ae4d-0e56d4eb2202"
                            endid="#x498186fc-f3e3-4ebf-aec0-b54afd95a9a0"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x896af969-1873-49db-9e41-842d2655258f"
                            startid="#x677653df-1839-42d6-8b5d-5a90b5ff7066"
                            endid="#x372755c7-8b66-420e-a5f9-cb036dfb5bc3"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="x557e0add-a60e-4305-8f6e-611438db6fa9"
                           place="below"
                           staff="6"
@@ -3393,9 +3402,9 @@
                      <slur xml:id="xab35e272-9dd2-43f3-8667-0af70fd954ea"
                            startid="#x2d38b20d-6f53-40b2-9d1b-fe2a412930b5"
                            endid="#x63089186-93ea-4ee9-adce-3473f1162f3c"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xe7f613c6-657a-43cc-b9d0-799c2c3fbde8"
-                           curvedir="below"
+                           
                            staff="7"
                            startid="#xb0fa562e-a62e-4c76-bf1b-7d4967e4c7be"
                            endid="#x24ac912f-5aa5-4688-83a7-b25f16606595"/>
@@ -3408,7 +3417,7 @@
                      <slur xml:id="xa41bd620-559c-4af9-8850-45cc05bc96b5"
                            startid="#x9f6ae434-d22d-4788-a9df-c6ac74f043d5"
                            endid="#xa8a8ba46-3b8f-430c-8ede-3b23986f8b3f"
-                           curvedir="below"/>
+                           />
                      <tie xml:id="xb7792434-01db-4d8c-afc6-695a0238ed50"
                           startid="#xba2e25fc-76d4-4c5a-b5a6-9b50665cac41"
                           endid="#xa6c85cfb-396f-4013-b961-9b733e4a2f32"/>
@@ -3608,7 +3617,7 @@
                      <slur xml:id="x48b97e16-05b7-49fb-b1c0-c2c15b17816b"
                            startid="#xa2a1e2b5-b455-4f21-abf2-eacfeb13061b"
                            endid="#x397bb3a0-accb-4e10-89af-664177e48a25"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="x2a47ea2d-d7fc-4265-9dd2-244e082c4dc4" n="17">
                      <staff xml:id="x269b003b-6942-4528-b88a-7e58077da283" n="1">
@@ -3854,11 +3863,11 @@
                      <slur xml:id="xa53ac9a8-7687-436a-b886-cd76d4928a7d"
                            startid="#x8393c1fc-ce1c-42e9-84c2-efa6f4b9b814"
                            endid="#x1edfe43b-2adf-4324-bdd3-d91a50fa55db"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xadc274ba-0f10-4d64-8e2e-8fe449f39a98"
                            startid="#x75164a0d-7966-4ea4-8b06-f58eebfead8b"
                            endid="#x22e9b3be-0245-419b-aa20-ac22e1ebde8d"
-                           curvedir="below"/>
+                           />
                   </measure>
                   <measure xml:id="x3c4d4513-d35d-4342-966d-d6d804dba5f9" n="18">
                      <staff xml:id="x14985365-3e6f-44da-8678-5f3ee28d8089" n="1">
@@ -4277,15 +4286,15 @@
                      <slur xml:id="xc43e8734-5b0d-48b0-a889-4f8b43d33397"
                            startid="#x25e354da-04d6-49ea-a4cf-ffd847f50f65"
                            endid="#x4a6c0c97-c383-4794-8965-6195fcccf1e6"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x3d7f94dd-e86c-48d9-b73f-9a1a163f8171"
                            startid="#x76612f8a-43a9-477f-a086-868b0a2d4697"
                            endid="#x17e26e2f-5ecc-4e10-97c8-b3ea7d04924b"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xe6b7b70a-ac5f-4cae-a249-9220e6132b57"
                            startid="#x66c38e16-8fbd-4ec6-8d49-4cb9ce451eca"
                            endid="#x03231c9c-6dad-49b2-b4e8-34c149631eec"
-                           curvedir="below"/>
+                           />
                      <dir xml:id="x1e0e053a-89f1-456c-aa04-6f049693c225"
                           tstamp="1"
                           staff="2"
@@ -4549,23 +4558,23 @@
                      <slur xml:id="x523a10e1-1985-4729-92ec-c95c9861b339"
                            startid="#xbb008b72-4f39-4267-b55d-939aee357ddd"
                            endid="#xaf4fb59d-f5e9-4630-9c05-d9fa656c2a79"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xa1ac9a4f-7bf7-4a7b-b28f-e982f5e0a050"
                            startid="#x9a6af748-833f-4b01-9be5-9107321df506"
                            endid="#xf57b7af8-91e7-4252-a17f-430485537fac"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x2b221186-3f9d-4f41-9a7c-8bf7027272d4"
                            startid="#x356cb0b0-b851-4a78-b03b-6e330be20ac4"
                            endid="#xfd95302f-9ab7-4a79-a5a5-241a65d042c7"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x0e3094fa-88a8-4c84-a4b0-5e3150a7d1a6"
                            startid="#xb6471316-1476-493b-ab65-d6ddab91b787"
                            endid="#x6a18fbca-8e69-4507-848e-8c68c3a7e078"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x9810a4fd-8fde-4dc8-a087-ed89751a62b1"
                            startid="#x61b22d4c-8723-4b12-8e04-50b62d787210"
                            endid="#x9d2c8e44-6581-490f-a48d-afc549d9b16b"
-                           curvedir="above"/>
+                           />
                      <dynam xml:id="xd0aeab4d-7f00-4e9b-99a8-838e1100ff35"
                             place="above"
                             staff="7"
@@ -5148,19 +5157,19 @@
                      <slur xml:id="xe4e24ae3-2a38-4470-b934-f159b70aa917"
                            startid="#x0de2650d-7ab2-46fd-a56a-70b476d7599b"
                            endid="#x2a151ba9-6ab0-4e0b-82d8-a8ea1a1c670c"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x49c2149a-d155-48d6-a3d4-c3a74f01596d"
                            startid="#xb53639d2-891a-4b6e-9761-fe6babf7d8b4"
                            endid="#xa1fc2085-f954-457d-b40a-1c7c6ea5ca60"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x0588609f-eef5-4273-ad0f-5643233596a6"
                            startid="#xf6c1f02b-4194-41a0-a3e9-c0198f3b014c"
                            endid="#xb49fd04a-b47f-449d-90ee-4c3938f7a9cc"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x79405be4-7278-419c-881e-58f59da47d98"
                            startid="#xc9dcc132-1d4a-44b3-8e57-9968bab50a7f"
                            endid="#x40b7a836-bf50-4f08-bf7c-16262f5a6333"
-                           curvedir="below"/>
+                           />
                   </measure>
                   <measure xml:id="xd86459e4-46f7-43c9-bcb2-dc4b7deb46d5" n="24">
                      <staff xml:id="xaa1bfaec-375f-4c48-bc4d-55e8a4806eac" n="1">
@@ -5751,14 +5760,14 @@
                      <slur xml:id="xe7ad9aee-c4da-48a8-bfe7-cd78085281c1"
                            startid="#xee7680b4-12e8-4e51-8308-881e7d123d8e"
                            endid="#x6abf0e9d-af0f-4aab-b7f5-f881b5d4c07e"
-                           curvedir="below"/>
+                           />
                      <tie xml:id="x52fe8617-7e2f-4cfd-8223-f9e437d8d5d5"
                           startid="#x6abf0e9d-af0f-4aab-b7f5-f881b5d4c07e"
                           endid="#x32840208-f525-4ff5-9331-c2d37e5b0773"/>
                      <slur xml:id="xa1d23831-f8ff-4973-8468-c9c29a5fef3f"
                            startid="#x0cab57ed-4446-49ae-9115-938dff51aba5"
                            endid="#x313f374c-5528-460d-bca1-948b8d8355ca"
-                           curvedir="below"/>
+                           />
                      <tie xml:id="x069b9ac7-1ca1-4e2a-802c-e7961f949332"
                           startid="#x313f374c-5528-460d-bca1-948b8d8355ca"
                           endid="#x8475426b-7c31-42ca-b160-c1a9459bf281"/>
@@ -5768,7 +5777,7 @@
                      <slur xml:id="xa86d1b07-344f-4413-8cb9-919df5c382e3"
                            startid="#x06874e07-acab-4891-8900-c2f98392de94"
                            endid="#x75116111-3722-4e00-8161-37f2018e5645"
-                           curvedir="above"/>
+                           />
                      <dynam xml:id="xe7be386e-4017-482a-b96f-5c22801a655f"
                           place="below"
                           staff="6"
@@ -5787,11 +5796,11 @@
                      <slur xml:id="x7c9a65e8-dc2b-4231-b6b9-0e59f2d6c0ad"
                            startid="#x65ed6b47-c6ec-40ab-8365-cd7f13ba0e96"
                            endid="#xb6894f98-852f-4700-8a3d-76327237cc0c"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x3f2568be-0b83-48db-a6ed-caff77ffafcf"
                            startid="#x08709c37-3afe-47ba-b43b-139ac74810e6"
                            endid="#x37386850-bd3f-4b17-8d4a-dc551ee42f7c"
-                           curvedir="below"/>
+                           />
                   </measure>
                   <measure xml:id="x7a961aa5-02cb-47e8-aeee-3bc276cc0fb6" n="26">
                      <staff xml:id="xd7a09223-866d-4a14-90bf-a46d9f42d711" n="1">
@@ -6113,15 +6122,15 @@
                      <slur xml:id="xefd1975c-45a6-4c88-bd39-2fb96d7bfc2b"
                            startid="#xb64b2c72-4fb6-4974-be58-36d8fdcedbc4"
                            endid="#xe966f664-8f84-426f-b313-87810fe591f7"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xa804621a-a173-4c42-b144-27f590a50a49"
                            startid="#xc16b83bc-a157-4420-aafe-1e9dc0b6a4ea"
                            endid="#xb9536533-4956-426a-8d34-359143b4f2bb"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x81345772-79ea-4af4-9b86-b330b40b9d47"
                            startid="#x135eea07-efec-4d21-ac9e-459fbc63c461"
                            endid="#x01274f04-2777-4460-a68f-7f46339fd0f2"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="xd28de05d-7747-485a-bd5a-3ced4ca3bb36" n="27">
                      <staff xml:id="x6a27ea73-2124-46f4-b5b8-9c752109c16a" n="1">
@@ -6518,31 +6527,31 @@
                      <slur xml:id="x38b61d05-eb7b-430b-969a-463ec2ed6f77"
                            startid="#xf53d94af-1eec-436c-9ab8-790b4f14b3cf"
                            endid="#x3dac59df-534a-40ad-b3a0-07340311dc26"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x16b7a43a-fc81-4fed-a025-0766b24caadb"
                            startid="#x229f0ace-6066-4711-b2bb-34a73bca7fb6"
                            endid="#x617a6cf5-8379-41ce-a23e-3693a1d9f411"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x332ce510-dbf7-4851-abcf-55a06efa85a9"
                            startid="#xf19e9a72-077a-4a13-a8e9-9a566c147abe"
                            endid="#xefde9de2-7102-4468-8c68-2a65687eb028"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x1fb85e72-773b-4654-9569-74db33df1e6e"
                            startid="#x3b0e9c19-e996-47fd-b207-207be09488da"
                            endid="#x1c0cb7c6-9378-46b2-bd07-b7a02f4090dd"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x20d79cec-a666-4f8d-8cb6-f30b45e7f819"
                            startid="#x1d2a1f73-90ac-4b89-87d0-e375abe3a52c"
                            endid="#x0e0ba5f9-c534-4b77-a77d-60f6ccab3c7e"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x83447707-ea9f-4dca-acd3-8a9fbca1011a"
                            startid="#x3c303e14-1462-4e24-830d-88eac05e2b38"
                            endid="#x83fc10bf-cb20-4760-9ccd-cd0a8a39e530"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xdaeb3d11-0732-4555-ab46-0e923cc47739"
                            startid="#x594f35c3-a059-479a-be74-318826fa9bfe"
                            endid="#xdb372f22-c9fc-4e51-838d-ee11f02d3625"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="xe2239ad2-2bbb-4ba1-9980-299bc79c6650" n="28">
                      <staff xml:id="xf5c98efb-0057-400a-8b6b-fb8570bc85f8" n="1">
@@ -7257,15 +7266,15 @@
                      <slur xml:id="x2b3ae56a-5d7f-4c11-b2fc-5607e12d04f0"
                            startid="#xdd9ffb75-d013-4027-8ba7-90be984b0818"
                            endid="#x623de3f0-0f8d-42f6-84ed-e4c00646d334"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xb1f7d35b-b00e-4ff6-98d5-49fde4ca1670"
                            startid="#x0566b572-c4b9-4a33-b5ff-23e2a28558a3"
                            endid="#xe5f4c59d-8cc6-4fa7-8f82-d246c4a5699a"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xc7a232d5-eb12-4ca4-8a82-3870436764cc"
                            startid="#xf8e7c31e-2da6-43f4-a509-0b8d7664baa0"
                            endid="#xd12e0e74-4154-4917-a518-4009d4327a73"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="xb911f661-57d3-4a3e-a286-4a16fc11396e"
                             place="above"
                             staff="3"
@@ -7273,15 +7282,15 @@
                      <slur xml:id="xf10b0729-2b0c-4cd4-ab94-c13eb6904cfe"
                            startid="#x719a1e33-a55b-470f-8425-dd86b42f1b69"
                            endid="#x0c918919-b78e-4de7-b989-3fed4b755fd0"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x5e492c13-4e34-4e4a-a4c4-6ecff29891ea"
                            startid="#xd842a305-196e-4426-8944-ac3d608c39dd"
                            endid="#x229d0de9-ff0e-40c1-8ab3-7c9a5977a3cf"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x20facfe3-a244-4893-a38d-e60a02297f2f"
                            startid="#x95480e71-3e85-4fdc-bc48-96ead78254a3"
                            endid="#x76cb094b-d240-44a4-adb8-dd6ab5392860"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="x1c072356-3bdc-48db-99d4-c127f18297bc"
                             place="above"
                             staff="4"
@@ -7289,11 +7298,11 @@
                      <slur xml:id="xdfa281f4-7af9-4445-90c8-e4e286f976b4"
                            startid="#x2ae1cdd0-6b62-46f4-8c6b-32b73df665c0"
                            endid="#x7fbe2fcd-4dd0-439d-82dd-4ab20eff2da3"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xb264f15e-b4c1-4f0a-818c-9b2b9d9e3ea2"
                            startid="#xbc7c7720-ac86-4d44-b741-42f58f13782e"
                            endid="#x53bb19ea-c7d9-4f77-bd35-5d89fd275d32"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="xe41bd0ce-e2d2-4e5a-a9c2-f499d8a2c524"
                             place="above"
                             staff="5"
@@ -7303,9 +7312,9 @@
                             staff="6"
                             tstamp="1">p</dynam>
                      <slur xml:id="x9b353b74-fec2-41cb-81ed-7d28dc64dbea"
-                           startid="#xfbdcd892-f630-472f-ad7a-31f3f250d0f9"
-                           endid="#xd1d5f7b0-5aae-452f-8128-40e045753140"
-                           curvedir="above"/>
+                        startid="#xd048ee52-6b1d-4006-8344-4f97ff56adb8"
+                           endid="#x31f1b16d-65ad-478b-95ef-929695254eff"
+                           />
                   </measure>
                   <measure xml:id="x3602b0a3-6c31-4598-a693-96aec56db905" n="31">
                      <staff xml:id="x8004e737-d980-4412-aa91-653b8635224e" n="1">
@@ -7538,19 +7547,19 @@
                      <slur xml:id="xa5627da0-b637-44aa-8ace-72ccd4ed74c9"
                            startid="#x113f4d7b-d297-425e-b16d-db8e0dbe8190"
                            endid="#x96cf6f56-6fec-4ded-ba96-964135a9071f"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xdc840669-1caa-4d6d-be36-033d5f7e2816"
                            startid="#xb2c4de62-f6f2-4545-893c-5f28be1056ad"
                            endid="#x93a84035-f391-49c5-9c94-adef5f1e4f8a"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x65fb5c58-be2c-435f-93ba-3449e3ce0a91"
                            startid="#x225cb672-fb39-4032-8a2b-e07f085c0408"
                            endid="#x6cd184fc-0c1c-4204-b964-ec43e492c0d4"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x73916fbd-48f3-49dd-ac97-029296d474bf"
                            startid="#x0de076f0-1b03-4ba3-a839-04fbbf726023"
                            endid="#x9694dd7f-c0ea-422f-9569-0b45ddebda7f"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="x17863db9-9792-4027-9aa2-d58663dadccf" n="32">
                      <staff xml:id="x151ce1e7-3def-429d-829f-1186b8e38695" n="1">
@@ -8074,11 +8083,11 @@
                      <slur xml:id="x55236209-0d26-497c-8225-70d1d7baa1ac"
                            startid="#x3bfd0b72-bdd6-478b-b3a3-644b6f77603f"
                            endid="#x91df6a76-85c9-4f12-bde6-db0b1dc45e0d"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xf192bc37-19aa-4aca-b267-29b70411bbb5"
                            startid="#x43ce0fbc-1f86-4685-b01e-6a988c0d9b58"
                            endid="#x3ab88d2c-5e87-4232-83f5-1044dcfc8aff"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="x59139833-35d4-456d-b743-eafc5a5d6398"
                           place="below"
                           staff="6"
@@ -8298,11 +8307,11 @@
                      <slur xml:id="x9aa7a772-92fe-42cc-a6b2-93e55038c543"
                            startid="#xbfd70b9c-73c1-49f5-8a82-e052d2fe9eeb"
                            endid="#x92223c4e-2fa3-4d1f-8995-4934c63a5084"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x0624ec9d-0e15-4aa8-8e6c-9f7d9448ad1d"
-                           curvedir="below"
+                           
                            startid="#x1d2793c1-72c4-4d26-ab60-860e8fe77110"
-                           endid="#x28235e7e-00d5-4232-9faa-ee8fc03aa049"/>
+                           endid="#x28235e7e-00d5-4232-9faa-ee8fc03aa049" curvedir="below"/>
                      <dynam xml:id="x105d68c8-e32f-4bf6-9415-d885e402160a"
                           place="above"
                           staff="3"
@@ -8310,7 +8319,11 @@
                      <slur xml:id="xcb4a286c-3aaf-4578-b27d-259a4265fa94"
                            startid="#xa32cfc3f-cbf4-4f75-be2d-56779cd5a618"
                            endid="#x46baefb0-be05-422c-bc80-19eef4ce1d59"
-                           curvedir="below"/>
+                           />
+                     <slur xml:id="x4a622c18-c459-4883-a582-218e6eeb09bc"
+                        startid="#x6cd074b2-ba6b-4f77-88b1-4bff57957d2f"
+                        endid="#x722a087c-30c5-4097-9807-50fc06ece4be" curvedir="above"
+                     />
                      <dynam xml:id="x61a34bca-b06d-4c94-8691-4eaf47d7a6f1"
                           place="above"
                           staff="4"
@@ -8319,14 +8332,6 @@
                           place="above"
                           staff="5"
                           tstamp="1">dim. </dynam>
-                     <slur xml:id="xe24811d1-160a-418e-8c29-fbe72f1b22b2"
-                           startid="#x1d2793c1-72c4-4d26-ab60-860e8fe77110"
-                           endid="#x28235e7e-00d5-4232-9faa-ee8fc03aa049"
-                           curvedir="above"/>
-                     <slur xml:id="xbdd60b35-6180-43bf-9c74-ec7bb27d5cf0"
-                           startid="#x1d2793c1-72c4-4d26-ab60-860e8fe77110"
-                           endid="#x28235e7e-00d5-4232-9faa-ee8fc03aa049"
-                           curvedir="above"/>
                      <dynam xml:id="xc4f588e0-fdb4-49ac-b3f8-7f95b55e161c"
                             place="below"
                             staff="6"
@@ -8687,16 +8692,16 @@
                      </staff>
                      <slur xml:id="x44d5f65a-8f5d-4b53-b9fa-8ceda7016621"
                            startid="#xbd610879-57a4-43ff-a078-9b1e2d661858"
-                           endid="#x8d96bba0-1ff3-4f5b-9264-6fb6ec117a24"
-                           curvedir="below"/>
+                           endid="#x8d96bba0-1ff3-4f5b-9264-6fb6ec117a24" curvedir="below"
+                           />
                      <slur xml:id="xad67d5ee-0329-42cb-946b-36d190381b1e"
                            startid="#x270c05b2-f38e-41e4-9c56-17fc0395f9eb"
-                           endid="#xdf45e862-7a8a-41d1-b4cd-650948679bcd"
-                           curvedir="below"/>
+                           endid="#xdf45e862-7a8a-41d1-b4cd-650948679bcd" curvedir="below"
+                           />
                      <slur xml:id="x121d2de9-d768-4763-88b7-a14445bf94a8"
                            startid="#x125c79f7-d2f5-4666-864c-8b8088cc95e6"
-                           endid="#x8c17dfed-fe06-48e0-a065-2cca5a0f657a"
-                           curvedir="below"/>
+                           endid="#x8c17dfed-fe06-48e0-a065-2cca5a0f657a" curvedir="below"
+                           />
                   </measure>
                   <measure xml:id="x378a7012-f30a-44bb-bf3d-56fee1061d97" n="37">
                      <staff xml:id="x0dd8f9d3-8ded-4412-87ed-cf28e3364104" n="1">
@@ -8876,11 +8881,11 @@
                      <slur xml:id="xbc616dc5-e985-42f8-b256-4a335d7cfa89"
                            startid="#x487caecf-0550-4c87-9947-b74823d7edbe"
                            endid="#x2ee2b67f-deae-447b-a383-2fa032204df4"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xe86dc4de-f9b6-48d8-91ec-ee7adefb48c2"
                            startid="#x68904597-ec7d-43b0-9e3b-c05a0ad7902f"
                            endid="#x159d3be0-b7bd-4ba7-8fc8-32f7e302b982"
-                           curvedir="below"/>
+                           />
                      <tie xml:id="xbd48ccce-37ac-4a29-8b40-eb3bd3bcff13"
                           startid="#x0fc12e82-796a-4f00-b227-c1fe5b3bcbd7"
                           endid="#x47fe3913-d607-46d9-b825-27afb6d5fa8c"/>
@@ -9048,7 +9053,7 @@
                      <slur xml:id="xaf7e6e76-3327-4b73-917a-1a56e0ce722d"
                            startid="#xe9b83a1b-c231-4c7e-aea2-6570ee07a3a5"
                            endid="#x7d1fd4f2-5356-410a-b1b2-1559ef316120"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="x36cd219f-1eb7-47ef-9c54-b5f2886c9f87" n="39">
                      <staff xml:id="x6e5362f1-8bdf-432b-a2c5-a6b2a9aa21be" n="1">
@@ -9290,15 +9295,15 @@
                      <slur xml:id="xdf287339-86b3-47f4-9a81-33a07e80bac7"
                            startid="#xd1564b0a-df80-4911-8cf5-cbed7b7cb6b2"
                            endid="#x3bb9e869-8260-4ef7-8ef6-1154f0908e5f"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x145056ff-337f-4a4e-8081-9a57a1d27147"
                            startid="#xb55546a4-9c42-4a92-b504-d44e4c1d10af"
                            endid="#x02056a4f-450d-4f5f-9256-393d8462648d"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x7ac9bcb7-9662-4934-9fd0-c7b599eb6a28"
                            startid="#xc9df7667-054c-43eb-8e6f-6c13b44563da"
                            endid="#x5bec57b5-100c-46b7-a486-68da524cfd55"
-                           curvedir="below"/>
+                           />
                   </measure>
                   <measure xml:id="x3aa6f48d-f6fb-4ed0-aa1f-651efbbcf709" n="40">
                      <staff xml:id="x17fffe5a-8e2f-46d3-91d7-4ac3a2b38365" n="1">
@@ -9784,19 +9789,19 @@
                      <slur xml:id="xbab577a3-ea99-43d1-8284-6ab88defc541"
                            startid="#x1f4a25f3-831b-41b2-a50a-ac80e3e49463"
                            endid="#xd84f546d-1274-40b4-932e-6156002380bb"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x56a0a308-21b2-4ff1-83ab-c2965ab97cef"
                            startid="#x00b36185-96dc-4069-acd2-159bf4e1578c"
                            endid="#x5b212646-f741-4d8c-a686-ceba87b1049a"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x66056bbf-d1ca-450d-8132-74fbb370ba1a"
                            startid="#x60cc9785-e581-488a-a19e-2311235d000c"
                            endid="#x210d13e8-2813-4ce9-87d8-60f5444d05c5"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x65223ae5-4604-4a56-8854-2b6f7465daf8"
                            startid="#x388df84a-6a5a-46fd-a947-5ece7d66533b"
                            endid="#xeba037f0-a758-4ffb-bd56-7c6c31db28b6"
-                           curvedir="above"/>
+                           />
                      <dir xml:id="x9fadab15-8d84-4263-a0f1-cc306c4a9caf"
                           place="above"
                           staff="1"
@@ -10025,7 +10030,7 @@
                      <slur xml:id="xfd3c16cf-aee1-4d3c-b064-73162196e608"
                            startid="#xe23a5037-8723-4f74-9d5e-42411aafa800"
                            endid="#xbf46d035-f62e-4630-b815-af83ffe51ed4"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="x90e61d1b-a950-4b0c-afcd-fbd4aeeb0ea8"
                           place="below"
                           staff="6"
@@ -10265,7 +10270,7 @@
                      <slur xml:id="x50b91987-5b40-4b71-81a5-328db390517b"
                            startid="#xf29a51f8-4faf-469d-98c8-e7350dabab84"
                            endid="#xbbb3bb90-8ac6-45bb-b8ce-53ecd6f02d4c"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="x470e6247-ab23-4341-be95-763df3699c78"
                             place="below"
                             staff="6"
@@ -10481,18 +10486,18 @@
                      <slur xml:id="xbef82cd7-b3d2-4871-a4b1-8cee2ac1e9eb"
                            startid="#xec829f6a-ab75-438c-8103-bb30887f468b"
                            endid="#x643e84c8-7bfa-4cb2-85b3-8a159a25f5f8"
-                           curvedir="below"/>
+                           />
                      <tie xml:id="x71242456-bac1-4a5c-b103-ac6bca64d71c"
                           startid="#xf3fdb8a4-77f6-4c71-8460-a01da68e137e"
                           endid="#xfe68f90f-6c3f-4087-8a44-158cf297fae5"/>
                      <slur xml:id="x4192e2be-39e1-42c8-94f5-5bf9db6ff03d"
-                           startid="#x1099fc25-a9ff-4cb7-a2c7-5869e0ed20df"
-                           endid="#x4da2fa78-495b-43ac-8cdc-5e538a99c1a1"
-                           curvedir="above"/>
+                        startid="#x12b009f1-f783-4a30-b084-6e96b1bea6a7"
+                           endid="#x04156b9b-d34a-456f-a1ce-50c80580b013"
+                           />
                      <slur xml:id="x0bea37d6-ded7-4f36-b7ad-b6da0009eae4"
                            startid="#x83efa5ab-99a3-4481-85ec-02e63208424d"
                            endid="#x96813a34-c160-47e4-b5b9-450dfa008a60"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="x1e3a6ab2-52e8-4f0f-819f-6cbe5dd46119" n="45">
                      <staff xml:id="x3e8ae05f-9e23-4d02-8832-280591dfa24b" n="1">
@@ -10778,11 +10783,11 @@
                      <slur xml:id="x7c9cb131-2bf2-45c4-a929-bdef37dce111"
                            startid="#x18980df6-bf1c-42d1-977f-cca6d3386f0f"
                            endid="#xbe7ff7da-3475-42a1-840c-b1c97e7b4135"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x0b6227a1-1048-4c2a-b7a7-93880c631c6f"
                            startid="#x0c6b3435-2249-4207-b209-d3de52712b9c"
                            endid="#x42071194-9cb7-4c93-a511-71f7d4acf022"
-                           curvedir="above"/>
+                           />
                      <dynam xml:id="x2bb1ee8c-d60c-4960-a26d-9eaa0b923cd9"
                           place="below"
                           staff="6"
@@ -11046,11 +11051,11 @@
                      <slur xml:id="xeee3647e-253e-4350-884d-f637867f2356"
                            startid="#x8d138ef6-a13c-4b89-b70f-ca338dea445f"
                            endid="#x4088bde4-d668-4173-be75-a75183d72892"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x1c5bc73e-c739-49a7-9da4-89cc86d4160e"
                            startid="#x8a73ede9-bf52-48f7-a441-55eb2cc0c0fb"
                            endid="#xc2a4f478-f659-4cc9-8300-c502234e976d"
-                           curvedir="below"/>
+                           />
                   </measure>
                   <measure xml:id="x303cac84-2ad2-40fa-ac2f-bfd390add9c0" n="47">
                      <staff xml:id="x6cf52c90-da11-4c03-b9b5-8f6061926a6c" n="1">
@@ -11405,11 +11410,11 @@
                      <slur xml:id="x8af7b479-caf8-4030-b4c8-b597aecb5b54"
                            startid="#xf894274b-833e-4e73-9530-de7c5567d0f6"
                            endid="#x8d09baa5-7b78-4f93-9cb6-b60b1438076a"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xf34bb5e7-0978-4b3e-a9c2-4cf4e7d7e037"
                            startid="#xe2d6cce7-b337-425e-a68d-70c0d7d47051"
                            endid="#x0986685c-750b-4753-bf5d-e70c3bb5d02f"
-                           curvedir="below"/>
+                           />
                   </measure>
                   <measure xml:id="x51b60041-14b3-4346-9100-03f6ce22e993" n="49">
                      <staff xml:id="x88423bb6-c4f7-4fbf-a789-d04445e1814a" n="1">
@@ -11826,7 +11831,7 @@
                      <slur xml:id="x8dd08f7f-99d4-4e72-9c34-ebfc9ed0da8d"
                            startid="#xa1d2ed0a-be5f-4e94-8fb2-7553f04cef5f"
                            endid="#x9118ceff-01a7-4f09-951d-f92b51b200d4"
-                           curvedir="below"/>
+                           />
                      <tie xml:id="xd979369b-c79f-4c58-a872-2c50dcb3866d"
                           startid="#x9118ceff-01a7-4f09-951d-f92b51b200d4"
                           endid="#x03606927-18cb-4c10-8791-a693d4cf461e"/>
@@ -12063,7 +12068,7 @@
                      <slur xml:id="x1489ea77-d62c-403c-b3b0-e03a056cf55b"
                            startid="#x3836130d-54cc-4873-80aa-754ce865c1a1"
                            endid="#xc32a74a1-a38a-4ceb-9621-276ef0d02948"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="xf2d4298b-fc44-41a5-b669-2fa730a7d4ec" n="52">
                      <staff xml:id="xf8f621b9-496c-48df-aaef-3961f5dd1674" n="1">
@@ -12315,7 +12320,7 @@
                      <slur xml:id="x8101dd95-3fa5-4ab0-b761-bb3b69da6858"
                            startid="#x41a1fb8c-6e6a-46fb-8440-0bfe3ed406ad"
                            endid="#xcedd6516-27c8-4225-b307-2a915f11cc8f"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="xa464f23c-9e00-4394-8916-fe46fe87dea8" n="53">
                      <staff xml:id="xf4a427e6-1c39-4613-a804-5c627898986f" n="1">
@@ -12483,13 +12488,13 @@
                             staff="6"
                             tstamp="3">p</dynam>
                      <slur xml:id="xf5e696dd-f85c-4da4-a460-9db3cc185ecc"
-                           startid="#x11529c9e-65d3-430a-a64a-997bd02d63ee"
-                           endid="#x98953ad4-7367-4c26-a8a3-3844262f11ac"
-                           curvedir="above"/>
+                        startid="#xffce285f-f52f-42c1-bbeb-d76ed38de7fb"
+                           endid="#xa5ed1bf1-099f-448c-88f1-5c4bcc180806"
+                           />
                      <slur xml:id="xc9b911f7-2746-4339-98e1-beb255652cec"
                            startid="#x126fb790-9a58-4310-8e64-87911da0fad2"
                            endid="#xc62a080b-7b0c-4de3-9048-3b7604fdd276"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="x085bc1fa-926c-4844-b5c0-d7b705cae1b2" n="54">
                      <staff xml:id="x53d56c71-df94-496c-b65b-6c6d8671308f" n="1">
@@ -12704,11 +12709,11 @@
                      <slur xml:id="x5661975b-be13-4865-b8bf-f5109f723525"
                            startid="#x85ad60e7-9d14-4f53-b667-4678440ab1a5"
                            endid="#xf887af6b-f2b1-40b5-9329-fe9c5326ccb8"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xf702c9f1-bd58-475c-b73f-b79d9d5e9d1c"
                            startid="#x12c241cb-a7f2-4af5-8801-dd13ec4bb013"
                            endid="#x647b7ddf-8f5f-4d44-8ce7-2cf6fcbadcbc"
-                           curvedir="above"/>
+                           />
                      <dynam xml:id="xa1dea6ad-90db-4990-bbd5-0017859491f3"
                             place="below"
                             staff="6"
@@ -12960,15 +12965,15 @@
                      <slur xml:id="xa7a36838-5ac4-4878-8745-625fcb350ac9"
                            startid="#xb28e213e-2dfd-428b-b10d-f9b422b7c9b7"
                            endid="#x9a1729c4-a9e0-453e-880f-3ca6336094c2"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x00f1f259-081f-4ee2-bda5-20f4c4ffc2ee"
                            startid="#xa2f43d81-494e-4120-a9d0-c99dd695be5d"
                            endid="#xbf964811-7cd7-4790-8e7c-46957f745d51"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x26ac73e5-2587-46d2-a276-3fbebcc4e2d5"
                            startid="#xf750de3e-4af9-49db-9e4c-50a1f492c782"
                            endid="#x1b370ce4-442c-4b89-a1e2-4fe12e8af333"
-                           curvedir="below"/>
+                           />
                   </measure>
                   <measure xml:id="x707695c6-38ea-4565-9ef1-769144ffd298" n="56">
                      <staff xml:id="x8dcf0c20-a9fa-433c-9f66-19bfcc498c49" n="1">
@@ -13245,7 +13250,7 @@
                      <slur xml:id="xade78e79-9be1-4507-9710-7ed7a5436ee1"
                            startid="#x50ab0927-950f-480c-890f-39c6dc221f59"
                            endid="#x40f01c47-95b9-4219-9487-e4f36af227db"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="x89415889-e342-4dc3-9bb7-a5379c2368b2"
                             place="above"
                             staff="2"
@@ -13253,7 +13258,7 @@
                      <slur xml:id="xe2a5d1f3-a37c-4285-9c39-397571f64646"
                            startid="#x17578e09-ec0f-4319-a426-d5d5262504fe"
                            endid="#xbcdfe315-9117-4cbd-9713-c21296e1d542"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="xee85ad06-ff29-4c40-9272-ec163c722532"
                             place="above"
                             staff="3"
@@ -13261,7 +13266,7 @@
                      <slur xml:id="x6e23c8bb-6449-4c7f-aa0c-c5ef0750bfe6"
                            startid="#xa0fc1df1-4559-48ff-91cb-47a0457e65b0"
                            endid="#x66be7b15-5b07-4f84-bd7e-cbef0109c800"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="xffd210b2-89f7-4e44-a777-54c357ca21f5"
                             place="above"
                             staff="4"
@@ -13269,7 +13274,7 @@
                      <slur xml:id="x8144fcd1-3433-411e-bd2e-dc65cc0baea3"
                            startid="#xf44c971c-ae8b-42a0-a9ad-3ba2f44f0bb8"
                            endid="#x3948ac28-7074-4f2e-baa1-90acdf59eb01"
-                           curvedir="above"/>
+                           />
                      <dynam xml:id="x2a3099f5-7695-4ac5-89d2-063421e39f11"
                             place="above"
                             staff="5"
@@ -13277,9 +13282,9 @@
                      <slur xml:id="x358c8071-0f01-4baa-8cc3-b1561a3724c3"
                            startid="#xe628194a-2ac9-4689-9d94-ccf804f6e40e"
                            endid="#xf683b88a-4060-460c-8669-44623ca71196"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xa3152b29-cdac-4ae2-9cc5-d2d3c5f62260"
-                           curvedir="above"
+                           
                            startid="#x584d735c-508e-449f-85d7-8fe5eee27078"
                            endid="#xc780e017-6f9f-4ff1-90e8-15a514409bc9"/>
                      <dynam xml:id="x77a4a057-797e-4f82-8724-c05f54c48fdd"
@@ -13951,23 +13956,23 @@
                      <slur xml:id="x234a2f7c-f319-4ccb-bae9-2fc3432ffa77"
                            startid="#x67a39887-5cb8-4fb5-b24e-88d2b8575b9e"
                            endid="#x79f82891-505c-4b82-8958-38146b6233bd"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xc912c898-6834-46ee-af02-5eefaaa5b411"
                            startid="#x2cff9fad-1faa-41b7-9685-0b1997d91e97"
                            endid="#x5fccadcd-c142-4a83-81d1-cea878b7769f"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x34bc967d-8c9e-4e60-b8e2-26157a9e0fa0"
                            startid="#x9edb3c5c-e117-49af-98cd-4fab82c41d68"
                            endid="#x84ba90ab-3358-4a31-a1eb-bf59d77b6a0e"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xc542fa8f-c05c-446e-97b8-df11abc4347c"
                            startid="#x25095688-9e35-4b86-83a9-639254406d12"
                            endid="#x3e69c612-8916-4066-a82e-8c76814720e3"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xdbceb693-68c9-4c4c-9da9-d7c5dea7e370"
                            startid="#x8b29af00-e174-4a26-83cb-1b38e01da4b8"
                            endid="#xc07d8ed6-c5c5-4761-bf2f-ebe9e33479cc"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="xe7e45bad-4aec-4042-a419-532e49ae9952" n="59">
                      <staff xml:id="xc19ca7be-8764-46b4-8de6-2e9c5c347be4" n="1">
@@ -14286,7 +14291,7 @@
                      <slur xml:id="x844b87bc-4bcb-41bf-ba76-870296cc3cef"
                            startid="#x99f51d53-d378-4389-8c0f-557ac2c3d766"
                            endid="#x1d22c33e-f816-4eff-979f-2694080ffccc"
-                           curvedir="below"/>
+                           />
                   </measure>
                   <measure xml:id="x49c411d2-d1d5-4fa8-b9f3-2045f30dbc1e" n="60">
                      <staff xml:id="x0313e311-10bb-4dd9-8cb2-b9ecbc66affa" n="1">
@@ -14611,7 +14616,7 @@
                      <slur xml:id="x59462de0-8ae7-4561-a364-318740ae06ad"
                            startid="#x44a0e114-9ac5-4b12-a832-64b32b83db88"
                            endid="#x6e7471a2-42d5-49da-9053-807fdb416908"
-                           curvedir="below"/>
+                           />
                      <tie xml:id="xf523eae7-2755-4aad-8b8e-ec8659c1fbe2"
                           startid="#x6e7471a2-42d5-49da-9053-807fdb416908"
                           endid="#x52057b0b-072d-4b70-a461-66c32da2fcda"/>
@@ -14622,7 +14627,7 @@
                      <slur xml:id="x880bbd10-ecca-4ed4-b978-6fed91988359"
                            startid="#x58d13e02-0a47-43f5-98d2-7059a4ee01f0"
                            endid="#x1a24138f-8628-41b4-9ed1-d6252039ec1a"
-                           curvedir="below"/>
+                           />
                      <tie xml:id="xab811099-65a0-419b-91c6-42bc52986fe3"
                           startid="#x1a24138f-8628-41b4-9ed1-d6252039ec1a"
                           endid="#xc113a89f-e6c0-4a7f-a3ae-e40a27a20b54"/>
@@ -14640,7 +14645,7 @@
                      <slur xml:id="x0ff46ad1-57a1-4185-8900-4e6796ab6e26"
                            startid="#x5c57f425-d5ac-470f-89c8-6efab752c4da"
                            endid="#x9f057aaa-3643-4966-8f8b-5d96166ca159"
-                           curvedir="above"/>
+                           />
                      <dynam xml:id="xbd35c80d-87e7-4a39-ab03-118cafe02657"
                           place="above"
                           staff="5"
@@ -14655,9 +14660,9 @@
                      <slur xml:id="x49f0bc43-00cb-468e-8223-39ca1883f696"
                            startid="#x65e02c91-6739-4db9-8829-8329d0cfafc5"
                            endid="#x7a375a16-89e0-468b-8ac5-1d83a771567f"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x8b6b2b72-e470-4fae-b961-72f49b5c132e"
-                           curvedir="above"
+                           
                            startid="#xf745645c-8281-46fa-a49a-ee0b4853972e"
                            endid="#x6a737e51-c379-43f0-99dd-db0f916c1cb6"/>
                   </measure>
@@ -14998,15 +15003,15 @@
                      <slur xml:id="x1e9d380e-879f-4de1-96e1-2d036ada26f0"
                            startid="#xea78b92e-6e3b-4552-907c-42b7f53100bb"
                            endid="#x69c39c09-5311-47de-a7e9-6ac7c2629fe2"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x23190060-48b5-40c6-b36c-d58262a0a1ee"
                            startid="#x8ea59f75-f92f-4880-a504-9b5c6cc9fc86"
                            endid="#x1c0da74d-6cf8-4493-9850-69f6b68b414e"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x1ea54fe5-3b7c-480e-91f7-6a6c6177833f"
                            startid="#xec46718e-04c8-40bf-b259-5f3afe888dc2"
                            endid="#x1c895e9c-35cd-41d3-b1be-d4dd71ae2297"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="xdea9b134-1990-417c-b79e-f0fe95c74e05" n="62">
                      <staff xml:id="x2a96d9c5-6561-471a-9435-f9f6211612d8" n="1">
@@ -15399,31 +15404,31 @@
                      <slur xml:id="x81b9b3b8-10fd-4c97-9599-f58ddf1b24cd"
                            startid="#xb98af508-3b27-495c-b187-47c3cf883661"
                            endid="#x73ce0077-54a5-4666-8fad-b22b87d25a54"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xef10cb1c-c663-4b7e-aba8-f8a34de2528a"
                            startid="#xdcbe4305-25a8-4ffa-ab25-b12f8fdf886a"
                            endid="#x65c72af2-1083-47d5-ae1e-e578418231d1"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x866622e1-fa82-4641-83e2-45cec2c636dd"
                            startid="#x77a2f849-0979-468e-943e-3ada99af002b"
                            endid="#x2b2341f7-0a3f-46a4-8c68-47fbc0e2bed3"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x8baa5622-59c5-43a6-8c49-2e40711b8989"
                            startid="#x25a31b3d-fad7-402a-abde-26f4e045a88c"
                            endid="#x68019b8f-ed09-4b9b-81d7-3a1f3aece5a0"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xa3234828-9a53-4d8e-96a4-ab86297013e0"
                            startid="#xa04e9757-9f1f-46a7-bdfa-653b831eb4e1"
                            endid="#xe9a953bf-a4ff-4afa-95df-e3ccbe037350"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x1bae14e0-209a-4ab9-831b-9b044b719b94"
                            startid="#xb1a4538c-3e4f-4fe5-ab33-05e74aec6a3e"
                            endid="#xce718c99-5c6c-47c2-958e-42f53fb9532b"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xa86a17dc-877a-4d27-b33b-d96d7d51ee34"
                            startid="#x7ec099f7-ea8d-4c24-887b-d907734808d5"
                            endid="#xa7299ba2-7701-41ef-a9b7-bfad77a3d77d"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="x08b23b6e-ff0d-4452-a0ab-2a4d73c78b68" n="63">
                      <staff xml:id="xe82bca18-ef06-497d-9f98-33aa32780e6b" n="1">
@@ -15712,9 +15717,9 @@
                             staff="6"
                             tstamp="1">f</dynam>
                      <slur xml:id="xaa17e8bc-8f60-4e79-864b-f3cb27d3f419"
-                           startid="#x8f655363-62f9-4c7e-b3ae-def2d4970bd3"
-                           endid="#x3fb8fe42-3a62-40dc-8035-d449a8d3ff46"
-                           curvedir="above"/>
+                        startid="#x8bd39a3b-431f-4aad-a7e2-bd492da381bb"
+                           endid="#xf6a5eae1-24f1-4148-9969-e30ff4d19290"
+                           />
                      <dynam xml:id="x8e101a56-454d-488e-9a41-906d2c03f23a"
                             place="below"
                             staff="6"
@@ -15722,7 +15727,7 @@
                      <slur xml:id="xb7a9e9a2-6d2e-4d18-9983-3583b2436aa5"
                            startid="#xfc3c4f05-b5e2-4a2a-9dd1-d4fa2077e0ce"
                            endid="#x65e875fc-9129-499f-834a-27b9fb21f438"
-                           curvedir="above"/>
+                           />
                      <hairpin xml:id="xb96b4256-b911-41b9-bc3f-a6acc03fe020"
                               tstamp="1"
                               tstamp2="0m+3"
@@ -16029,9 +16034,9 @@
                             staff="6"
                             tstamp="1">f</dynam>
                      <slur xml:id="x89b87785-7ef2-4f7c-996b-6a9355426b30"
-                           startid="#xa268b880-d7cc-437c-98d3-079e54349e11"
-                           endid="#xf8cdb6e5-c94f-4323-9798-ed6bc859de9a"
-                           curvedir="above"/>
+                        startid="#x1d625b03-cb63-4b91-ab69-40fe5514d1fe"
+                           endid="#x0eb57e01-efb0-4f22-b165-16c542a19544"
+                           />
                      <hairpin xml:id="x36d0377a-b875-43f8-8245-85bbbed19ac3"
                               form="dim"
                               place="above"
@@ -16454,15 +16459,15 @@
                      <slur xml:id="xebb66481-0157-4eda-b0eb-29b2925f2d8d"
                            startid="#xecea6748-c798-4beb-953e-fb0496bab91d"
                            endid="#x5a042f05-8dc9-4a70-b4a3-aebcee061ead"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x416ab74d-b3d2-4721-af82-747980246b6d"
                            startid="#x3197a685-2761-4e67-bef4-c6f06d43c1ef"
                            endid="#xb6955c63-496d-40d1-ae31-6942c8ac8b6b"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x3133b889-37c1-4a6b-b4c6-ea7f0f3c52c8"
                            startid="#xb1ce2947-9f66-4092-867b-dfc4dee04b02"
                            endid="#x5345df64-43ff-40be-bd49-253fd4fa7f52"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="xbb4d961a-23ff-4f48-a9b9-75a2d1aefe43"
                             place="above"
                             staff="3"
@@ -16473,7 +16478,7 @@
                      <slur xml:id="xa479077f-23c4-4f3d-b7a6-0c86e00b8ec7"
                            startid="#xfe24c7e3-3146-4f0d-b02a-276b2f9c2dc9"
                            endid="#x4765d1d3-c2a4-421e-934c-ad1b972c89a5"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="xa77b2fb2-6c23-4e6e-98a6-c87200f09766"
                             place="above"
                             staff="4"
@@ -16481,19 +16486,19 @@
                      <slur xml:id="x166d77a6-6085-4c49-9905-86d515c675a8"
                            startid="#x9d49d72a-497d-4e77-b1a4-0182fa1e65e1"
                            endid="#x79d09218-c47c-4635-abf9-335303e0f8a0"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xc1b20203-a419-4b84-bd91-0ecfeb3c78f6"
                            startid="#x2710de7d-373d-4174-bb16-37706899ba91"
                            endid="#x6c382f56-65e7-4149-b9dc-3a492a39c2d5"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x8fb16a86-503c-4514-bb89-78d073d3f264"
                            startid="#x271ba9ad-0ac5-48ff-aede-29f92358742a"
                            endid="#xdccdeb44-2f97-4c8a-a3fd-d84dff806463"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x1c157973-7184-466a-8691-389ad2fead4b"
                            startid="#x1cdf78e6-a523-414b-8b66-4f38b40c2572"
                            endid="#x14a73193-831f-4448-b0b7-0709724fba46"
-                           curvedir="below"/>
+                           />
                      <dynam xml:id="xde71d786-b949-45b3-b67e-9d76173d3981"
                             place="above"
                             staff="5"
@@ -16503,9 +16508,9 @@
                             staff="6"
                             tstamp="1">p</dynam>
                      <slur xml:id="xb3d4e00b-681a-4b15-af48-8a747426ed5f"
-                           startid="#x626b512d-b366-44af-945c-83faae70c76b"
-                           endid="#x627c436e-8663-4c35-93cd-e77d1ab72d34"
-                           curvedir="above"/>
+                        startid="#xcca39a65-ae19-4c23-a27a-887358229df3"
+                           endid="#x50be19dd-dc06-4fce-a655-28e24b3782b5"
+                           />
                   </measure>
                   <measure xml:id="x6bf35875-345c-4a30-a917-b391ee190a0d" n="66">
                      <staff xml:id="xcb1926be-a6cd-42a9-a373-15714b56c81a" n="1">
@@ -16791,19 +16796,19 @@
                      <slur xml:id="x1aa26ce7-2623-43e6-b232-96f445c8832b"
                            startid="#x34ebc783-18eb-4322-9084-012ad21aed00"
                            endid="#xc1ce6d6f-58b2-440e-9383-c9ff8a886ed7"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xa17acf94-f41e-435c-9fe5-fb6fa1deb768"
                            startid="#xad902481-571e-4a07-8ac3-6403fe2b5963"
                            endid="#xda232db9-148f-47f3-bca2-b93f7231f53d"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x3ac9deb0-efe3-431c-aa7e-41d8ac0f7c44"
                            startid="#x1be0b102-6cfa-48d9-a670-5f197e18b8da"
                            endid="#x1448fb56-c1fa-4cfd-a816-b6affb51dcaa"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xed3572f4-9efc-4028-8220-381483d4a01a"
                            startid="#xc6fff65f-928d-49dd-83fb-9f43b6ad8b7f"
                            endid="#xd4b0108d-0122-4b09-ad03-4808f488dc96"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="xdb1c233f-a4ca-4eda-a35d-5a4e1e20cfd5" n="67">
                      <staff xml:id="xdb7171f0-5086-48b9-8079-3d86e1ea7880" n="1">
@@ -17074,23 +17079,23 @@
                      <slur xml:id="x352e69a8-28e8-4f42-9cde-23ecad2e28b6"
                            startid="#xbed88313-2dcf-4118-a9c9-e72c89ba65f7"
                            endid="#xebba14e9-c69e-40b6-b222-ae053b167b14"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x2cc5eb7c-ac96-4a9e-bee9-9640253ff60d"
                            startid="#x04bf3727-112c-4b75-a5dc-b40cbfb03c67"
                            endid="#x2966eb67-dc8c-4995-958d-7b89f5d4201f"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x9aa917b6-f07f-4603-bf37-aa68ca652d1f"
                            startid="#x77c63be4-2859-49b7-a4eb-fba6d372ce43"
                            endid="#x8f9cff9c-b463-42b6-9160-06962a7d60dc"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xca620419-6b29-4a96-b07d-285f0a6d417f"
                            startid="#x10fb5a26-3a5c-42df-a429-94cd86e79f62"
                            endid="#xd4f09d84-2d8c-4119-9b8a-b027b60b96f9"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xa454f3ab-2ee8-4f7a-aeef-5431ad67795d"
                            startid="#x3f32a144-b99c-4955-801f-b5fa60230a40"
                            endid="#xdcf3a45a-a71e-4189-b91b-0bb30b22e604"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="x7e190d6d-ebdc-4feb-ac46-5030c46f437e" n="68">
                      <staff xml:id="xf7435c4b-849d-488f-8352-664af0a5a695" n="1">
@@ -17378,55 +17383,55 @@
                      <slur xml:id="xdf550fa7-f7f1-4151-b12a-9127519aa124"
                            startid="#x0ab617e5-f670-4672-a6a1-f90e332e6a59"
                            endid="#xddad7fd7-7e00-4766-8bcc-79f535f66869"
-                           curvedir="below"/>
+                           />
                      <tie xml:id="x636b8f95-38c4-406c-b5fb-8b370aaec449"
                           startid="#xddad7fd7-7e00-4766-8bcc-79f535f66869"
                           endid="#x886b62c2-9924-46fb-a216-1f17e8488ed9"/>
                      <slur xml:id="x2bb97b13-37f0-4153-b45d-3ba984d5f932"
                            startid="#x886b62c2-9924-46fb-a216-1f17e8488ed9"
                            endid="#x8594e51c-0daa-4085-8b56-abdf4037f9d5"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xea1ea7b9-85b8-4bd1-967e-9028d21f2dee"
                            startid="#x70df924a-e19e-4422-b77c-64356e8c1f58"
                            endid="#x2c6796f2-30fb-4872-bd6d-cb73f317aa79"
-                           curvedir="above"/>
+                           />
                      <tie xml:id="x4f4cc66f-ef05-4cb1-a404-f212388a087a"
                           startid="#x4ff931d3-5561-430b-9fdb-975e8576e06f"
                           endid="#x70be451f-ab66-408c-aa57-0c9c7951ebb5"/>
                      <slur xml:id="x5ad6681d-3c81-42ed-939e-248415d8f9d0"
                            startid="#x70be451f-ab66-408c-aa57-0c9c7951ebb5"
                            endid="#xa56fba36-7fd8-4fc6-ae98-7bd6566cb6b0"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x3c4a3caf-00ed-4d61-9da9-e772e8d88c5a"
                            startid="#x942f3345-6cbc-4ed9-831b-18a07c7f5d74"
                            endid="#x3703a128-cf97-4a4b-a903-7426ac5d5592"
-                           curvedir="above"/>
+                           />
                      <tie xml:id="xb9af45ce-0c47-450e-a84b-d7c96bfaaccc"
                           startid="#x3703a128-cf97-4a4b-a903-7426ac5d5592"
                           endid="#x0ec95017-e9b4-420a-a807-538259263481"/>
                      <slur xml:id="x5ab48106-dcc0-4198-87a5-d515f38aa1b7"
                            startid="#x38561929-7226-4a3a-9018-6482fb11e878"
                            endid="#x4659a0b8-bed8-40da-ada1-10236913c242"
-                           curvedir="below"/>
+                           />
                      <tie xml:id="xf1a7b393-d990-4020-87bc-8c38a5bbf989"
                           startid="#x37ee5d51-d260-4d79-96a8-dea32098f141"
                           endid="#xfb6437e2-eb68-45ce-808f-a1fac003feed"/>
                      <slur xml:id="xb76eb9b1-1b5e-4f5d-a0c1-b54e5f538ec9"
                            startid="#xfb6437e2-eb68-45ce-808f-a1fac003feed"
                            endid="#x043946f3-b228-471e-b7c9-6a21ab447798"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x2eb50844-84c1-49d8-8b78-ed1f0504ecc2"
                            startid="#xb99e4f80-b3c0-4487-b143-e478d06eeb36"
                            endid="#xdf59686e-c9b8-4a84-93e5-2c1ece5339aa"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x4cd43fef-1283-4737-9922-92b4ec0f1872"
                            startid="#xc8d9beff-d0bd-454e-b7ab-5cc45a55a69b"
                            endid="#x1f5f3111-4ca0-4333-902c-23e994c3d53c"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xb381ae62-3573-40f7-a3aa-49848dbe1d5a"
-                           startid="#x7778574a-9464-4c1d-bc85-7bc3f25132d5"
-                           endid="#x54937748-847f-4b2e-9943-d27263ae9ec5"
-                           curvedir="above"/>
+                        startid="#x0bbaa37f-1cb7-4fe1-a34c-91aa14dd3011"
+                           endid="#x24e582da-6192-42ea-ac08-49369debc204"
+                           />
                   </measure>
                   <measure xml:id="x0921f029-1e83-4dcb-8156-2afc0030a81e" n="69">
                      <staff xml:id="x4f0d4918-2d87-4d69-a4d7-3f762a9346ba" n="1">
@@ -17826,44 +17831,44 @@
                      <slur xml:id="x7f400612-b502-42df-a96f-ba47b7f64721"
                            startid="#xefb8ddcc-57c7-4ac8-affd-5e5438881dd3"
                            endid="#x46d86b83-9026-484f-8203-f887655b7aba"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x91a50153-0091-408b-9737-8f0c8b520e98"
                            startid="#x5f523b74-dc28-4b40-8462-c2be27da00d5"
                            endid="#x44663c68-00df-424b-a8ce-d8068c3aae9d"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xd45b585b-a7b1-4584-a980-10e954c2d7d5"
                            startid="#x85efc06d-707f-42c4-a585-f80a858ab496"
                            endid="#x7ad70bc3-dbbb-4f1e-8552-65b0eb1fbb3e"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x742aebac-0072-4c50-a76f-6ffb4ec2a1d7"
                            startid="#x884afc50-e265-4904-b764-6c4c57bce3e7"
                            endid="#x7e5f71bb-8b1a-406e-a9eb-3273ef03b6b5"
-                           curvedir="below"/>
+                           />
                      <tie xml:id="x1aa4a3a9-4406-4c70-928e-d3d86a7eeb42"
                           startid="#x7e5f71bb-8b1a-406e-a9eb-3273ef03b6b5"
                           endid="#x66a1da75-d34d-49ea-ae4c-46dda0528cfb"/>
                      <slur xml:id="x825337ab-8b71-4bba-b5b4-0728f1e1d393"
                            startid="#x70e556a7-8e48-428f-8a73-5711823016db"
                            endid="#x35cd0692-0416-4726-8824-05b66966b90e"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x16eeb06f-1798-414e-b495-6a719acd0133"
                            startid="#x17b1e516-2023-4447-a0e8-9d1f4f7f8121"
                            endid="#x5a7cc46e-4f59-499e-a679-456fc5014985"
-                           curvedir="above"/>
+                           />
                      <tie xml:id="x1fd14fd6-9d44-4141-acb5-e6d165eed43f"
                           startid="#x5a7cc46e-4f59-499e-a679-456fc5014985"
                           endid="#x9a9654e2-eaa5-4486-bf27-a6bda33cf170"/>
                      <slur xml:id="xcd65095e-475f-4e86-a916-bc4ac2f1db67"
                            startid="#x833c5bcd-25b7-49ba-9e96-39d45c8aa1aa"
                            endid="#xd07da619-83b6-416b-94df-3182d9dee060"
-                           curvedir="above"/>
+                           />
                      <tie xml:id="x32396ee6-c2b3-41d9-992d-47e7ebe46713"
                           startid="#xc47c73cb-3885-4578-9b8c-b44ff0f1e018"
                           endid="#x4aa21100-b4dd-4513-a581-b5a0cb7aeb4b"/>
                      <slur xml:id="xf0d08000-db7d-417d-bef4-7e6a5ce2737b"
-                           startid="#x7bed25ae-5345-4b8a-b2e2-c946a3651d9d"
-                           endid="#xb2badf16-d6ae-42a4-961a-cba453b0a669"
-                           curvedir="above"/>
+                        startid="#xeaf0cdff-1397-4585-84b2-87e71e74f34a"
+                           endid="#x0cd734e7-e198-4a88-8c9c-472a92ba3a70"
+                           />
                      <tie xml:id="x58bb2fdc-cbea-46a9-9f40-fb4a7a3e2167"
                           startid="#x2b367083-4a94-423b-9c54-5dd6e24cb759"
                           endid="#x921f8534-6413-4e5b-9579-b9ccdcd48395"/>
@@ -18200,15 +18205,15 @@
                      <slur xml:id="xa452a061-b2e7-4b3c-9ec0-035516e68d46"
                            startid="#x17a2fa59-e7ed-4732-81b5-c07614d3ad94"
                            endid="#xd89d7e9e-0f2d-4951-ad8c-85dbd8a393b0"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xefb460bd-2d99-4533-bf11-3903ea3a6f0b"
                            startid="#x5a97768c-0c5e-46f5-860d-331a331097cd"
                            endid="#x62175c65-a4b4-4205-ab0f-68df095c41d8"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="x46d12cd9-6836-4b0b-a263-e805133f80cb"
                            startid="#x559416aa-6077-4574-af69-22d60f86f911"
                            endid="#x46dbfe48-635f-4c4c-ae9e-0e54286ebfad"
-                           curvedir="above"/>
+                           />
                   </measure>
                   <measure xml:id="xbd5103b8-deb5-496b-a7cc-a9630e168e45" n="71">
                      <staff xml:id="xa0acd6b9-7d20-4a6a-a36d-270bbbd76b38" n="1">
@@ -18363,7 +18368,7 @@
                      <slur xml:id="x9b7692f0-5678-4930-a669-60bb76c7b14a"
                            startid="#x8ab1e6e7-cf09-4d37-9ae0-188711ba03b8"
                            endid="#x34467a15-12ac-4fa4-a607-998059bc36cd"
-                           curvedir="below"/>
+                           />
                      <tie xml:id="x9f97b7c8-fd1d-4f24-ae79-66d590756e5f"
                           startid="#x34467a15-12ac-4fa4-a607-998059bc36cd"
                           endid="#x3ce2c322-4ed7-42b9-ac87-699cd9dda8ca"/>
@@ -18654,19 +18659,19 @@
                      <slur xml:id="x1e7dcea4-024e-4e39-98ca-f2a444c28b40"
                            startid="#xbe0e7a2f-61ea-4e05-9d0c-fe288163e2b0"
                            endid="#xa4de5f31-12c5-4b94-96a9-895243a2bd05"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="xa79d7bdd-57f0-4050-8582-b8d0707b6a18"
                            startid="#x3ce2c322-4ed7-42b9-ac87-699cd9dda8ca"
                            endid="#xb536b37a-f2bb-44a8-8e87-cf4cb59c7b79"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x8fc6a039-4463-4cb4-a881-c9bb5c4a1a5e"
                            startid="#x4cb62c60-7ac3-462a-938b-15ee4aa3f23d"
                            endid="#xd9a83869-3880-44f0-90c6-06dc88ff2f8d"
-                           curvedir="below"/>
+                           />
                      <slur xml:id="x7c4126e1-131b-4ed8-a46e-55754e81ae39"
-                           startid="#x8c0f676a-741e-4565-8c75-c4158db5ce67"
-                           endid="#xfdcabe6f-5756-4027-8cae-410565b19f2b"
-                           curvedir="above"/>
+                        startid="#x227a6dea-272a-428a-a17d-825a6b70a8ec"
+                           endid="#x54739355-2e1c-48f5-b46b-147dffddf742"
+                           />
                      <hairpin xml:id="x3da3a5a8-22c8-47f9-ae19-9dad1896b600"
                               form="dim"
                               staff="2"
@@ -18847,11 +18852,11 @@
                      <slur xml:id="xbf5b5200-7631-4be4-b0bc-ed09b1a8ecc4"
                            startid="#x5844a5db-7e75-4bd4-af4b-1b836f80999d"
                            endid="#x2b992e24-3d5a-4d7e-8bbc-44ca7eb6b30c"
-                           curvedir="above"/>
+                           />
                      <slur xml:id="xbdc32da2-623e-48ed-b6f1-367f05169496"
                            startid="#x838e9cd2-4c1d-4f58-8446-a14ac4f76505"
                            endid="#xac75c26a-6050-48d8-9211-74282815ec4b"
-                           curvedir="above"/>
+                           />
                      <tie xml:id="xcf2af584-e6e7-49a2-b838-23becd13601e"
                           startid="#xac75c26a-6050-48d8-9211-74282815ec4b"
                           endid="#xe585d598-d1a8-47a1-b5a5-0f4bb2a0b1c2"/>
@@ -18859,7 +18864,7 @@
                           startid="#xe86732b7-fd09-4611-a688-496ea77315f6"
                           endid="#x605a600d-ba7c-4327-bca9-c896c453bea2"/>
                      <slur xml:id="x94af9345-6aac-4edb-9d1e-c7e96ad98490"
-                           curvedir="above"
+                           
                            startid="#xcffa5565-959f-4ab5-9028-2a315ca9209e"
                            endid="#xb5f814ef-e4a9-420a-992f-cca5d5093725"/>
                      <hairpin xml:id="xad9fe8fa-3d34-4746-b533-5cc8748b24da"
