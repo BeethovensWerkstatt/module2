@@ -3690,7 +3690,7 @@
                                        dur="8"
                                        />
                                  <note xml:id="x5848f2f1-bcf5-4a95-8031-e672c18ecc64"
-                                       pname="g"
+                                       pname="f"
                                        oct="5"
                                        dur="8"
                                        />
@@ -28718,7 +28718,7 @@
                                     pname="g"
                                     oct="4"
                                     dur="4"
-                                    />
+                                    /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                               <note xml:id="xe58c597c-43fe-4931-8e90-e5f7e3e58f1e"
                                     pname="c"
                                     oct="4"
@@ -28832,7 +28832,7 @@
                                     pname="g"
                                     oct="5"
                                     dur="4"
-                                    />
+                              /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                               <note xml:id="xfacfbc8d-e458-4b7a-b013-f4de3b62f2f3"
                                     pname="c"
                                     oct="5"
