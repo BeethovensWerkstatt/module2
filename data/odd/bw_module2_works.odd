@@ -87,9 +87,36 @@
                                 <sch:assert test="(exists(@key.sig) and exists(@key.mode)) or ($context//mei:scoreDef[1]/@key.sig and $context//mei:scoreDef[1]/@key.mode)">
                                     The first scoreDef in an mdiv needs @key.sig and @key.mode.
                                 </sch:assert>
+                                <sch:assert test="not(@trans.diat) and not(@trans.semi)">
+                                    @trans.diat and @trans.semi are not allowed in the scoreDef
+                                </sch:assert>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
+                    
+                    <constraintSpec ident="check_key_at_parts" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:parts">
+                                <sch:let name="parts" value="child::mei:part"/>
+                                <sch:let name="scoreDefs" value="for $part in $parts return ($part//mei:scoreDef)[1]"/>
+                                <sch:let name="first.scoreDef" value="$scoreDefs[1]"/>
+                                <sch:assert test="every $scoreDef in $scoreDefs satisfies ($scoreDef/@key.sig = $first.scoreDef/@key.sig and $scoreDef/@key.mode = $first.scoreDef/@key.mode)">
+                                    All scoreDefs in parts need to have the same values for @key.sig and @key.mode.
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_transposing_staffDefs" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:staffDef">
+                                <sch:assert test="(@trans.diat and @trans.semi and @key.sig and @key.mode) or (not(@trans.diat) and not(@trans.semi) and not(@key.sig) and not(@key.mode))">
+                                    Transposing instruments need a staffDef with @trans.diat, @trans.semi, @key.sig and @key.mode. All other staffDefs may not use these.
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
                     
                     <constraintSpec ident="check_tstamp2" scheme="isoschematron" mode="add">
                         <constraint>
@@ -104,18 +131,19 @@
                     <constraintSpec ident="check_controlevents" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:dir">
-                                <sch:assert test="not(@tstamp2) and @tstamp and not(@endid) and not(@startid)">
+                                <sch:assert test="(not(@tstamp2) or (@extender = 'true')) and @tstamp and not(@endid) and not(@startid)">
                                     dir elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:dynam">
-                                <sch:assert test="not(@tstamp2) and @tstamp and not(@endid) and not(@startid)">
+                                <sch:assert test="(not(@tstamp2) or (@extender = 'true')) and @tstamp and not(@endid) and not(@startid)">
                                     dynam elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:fermata">
-                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
-                                    fermata elements are supposed to have a @startid only.
+                                <sch:let name="meter" value="preceding::mei:*[@meter.count][1]/xs:integer(@meter.count)"/>
+                                <sch:assert test="(not(@tstamp2) and not(@endid)) and ((@startid and not(@tstamp)) or (not(@startid) and @tstamp and number(@tstamp = $meter + 1)))">
+                                    fermata elements are supposed to have a @startid only. Unless it is on a barline, then a @tstamp is allowed.
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:hairpin">
@@ -139,8 +167,48 @@
                                 </sch:assert>
                             </sch:rule>
                             <sch:rule context="mei:trill">
-                                <sch:assert test="not(@tstamp2) and not(@tstamp) and not(@endid) and @startid">
+                                <sch:assert test="not(@tstamp2) and not(@tstamp) and (not(@endid) or @extender='true') and @startid">
                                     trill elements are supposed to have a @startid only.
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_layer_content" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:layer">
+                                <sch:assert test="not(count(child::mei:*)=0)">
+                                    layers need content
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_stem.dir_dur1" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:note">
+                                <sch:assert test="not(@dur='1' and @stem.dir)">
+                                    notes with dur="1" are not allowed to have a @stem.dir Attribute
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_text_attributes" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:syl">
+                                <sch:assert test="@con='d' and (@wordpos='i','m') or @con='u' or not(@con)">
+                                    for attribute @con only 'd' is allowed. if syl is longer than one note, of course @con="u" is allowed.
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_gracenote" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:note">
+                                <sch:assert test="not(@grace) or @grace='unknown'">
+                                    for attribute @grace only 'unknown' is allowed.
                                 </sch:assert>
                             </sch:rule>
                         </constraint>

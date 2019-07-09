@@ -32134,25 +32134,6 @@
 
           </section>
           <section xml:id="x3328f347-c081-4685-896d-c247157bd86c" n="7">
-            <scoreDef xml:id="x0a9ae165-15eb-4096-acb0-75b8077def48" meter.count="6" meter.unit="8"
-              key.sig="4f" key.mode="major">
-              <staffGrp xml:id="xc3be095a-bfda-44a0-9fe0-030471a604cb">
-                <staffGrp xml:id="x44a6d60f-32db-4b36-8ea6-7a65418b8ace" symbol="brace">
-                  <label xml:id="xab0e8aea-3d55-40fb-ba91-3c5405bb8ff3">Klavier 1</label>
-                  <staffDef xml:id="xa1eaf798-89b4-409f-b204-e594a12114c0" n="1" lines="5"
-                    clef.line="2" clef.shape="G"/>
-                  <staffDef xml:id="x6b10670d-ec53-4c01-bfab-e9d4c448df81" n="2" lines="5"
-                    clef.line="2" clef.shape="G"/>
-                </staffGrp>
-                <staffGrp xml:id="x747e6508-14fd-496d-beb3-03b26ab33151" symbol="brace">
-                  <label xml:id="x0cd64745-7b5b-452e-8d6b-56850c6ba468">Klavier 2</label>
-                  <staffDef xml:id="x42b05450-a701-4946-bc3e-01cbf73d30a4" n="3" lines="5"
-                    clef.line="4" clef.shape="F"/>
-                  <staffDef xml:id="xfb6cfbd6-2fc2-42ed-8c17-49a33d766361" n="4" lines="5"
-                    clef.line="4" clef.shape="F"/>
-                </staffGrp>
-              </staffGrp>
-            </scoreDef>
             <measure n="372" xml:id="x2b5bfefb-45ca-4005-a538-e4ba6fdbe0a6">
               <staff xml:id="x3ae2c1e0-9b5f-41cf-9fab-9c67391a0cde" n="1">
                 <layer xml:id="x759fd765-4b12-48cf-8a35-ee83eff5e09d" n="1">
@@ -35100,7 +35081,7 @@
               <staff xml:id="x324e2a81-d84a-460a-816f-6d2a9ebae676" n="1">
                 <layer xml:id="xd6076336-83cc-4f9e-b523-355e95f7e792" n="1">
                   <note xml:id="x4a15d1af-5279-4db7-889d-3edd85af49f9" pname="d" oct="6" dur="2"
-                    dots="1" stem.dir="down"/>
+                    dots="1" stem.dir="down" accid.ges="f"/>
                 </layer>
               </staff>
               <staff xml:id="x7686805c-5402-4ff5-8d36-fb1c58c88c72" n="2">
@@ -35721,8 +35702,8 @@
             <measure n="450" xml:id="x23c41e0e-6116-47c2-ba29-62c55e59bf96">
               <staff xml:id="x2e725cd7-be4c-49b6-b7ce-590cee6c3606" n="1">
                 <layer xml:id="xfebea2ff-c9d4-4dc8-8da6-785606b53dfb" n="1">
-                  <note xml:id="x9dd5caa0-3ff1-4043-9845-a56ed2ae2e29" pname="b" oct="5" dur="4"
-                    stem.dir="down" accid="f"/>
+                  <note xml:id="x9dd5caa0-3ff1-4043-9845-a56ed2ae2e29" pname="b" oct="5" oct.ges="6" dur="4"
+                    stem.dir="down" accid="f"/><!-- todo: following notes also with oct.ges, then remove this comment -->
                   <note xml:id="x4d5a50b3-1463-43da-ba69-4af1a3feaf1d" pname="a" oct="5" dur="8"
                     stem.dir="down" accid.ges="f"/>
                   <note xml:id="x14e86509-eac3-4176-bd95-82421fc76878" pname="a" oct="5" dur="4"
