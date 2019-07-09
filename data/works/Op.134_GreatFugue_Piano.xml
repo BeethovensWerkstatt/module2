@@ -154,6 +154,7 @@
         </respStmt>
         <changeDesc>
           <p n="1">P, PP, FP, F, FF, SF:, dim: changed into p, pp, fp, f, ff, sf, dim</p>
+          <p n="2">corrections in measure 84 </p>
         </changeDesc>
         <date isodate="2019-07-9"/>
       </change>
@@ -8635,7 +8636,20 @@
                     <note xml:id="x5a9a4371-4581-4082-a4fe-860edf638f96" pname="b" oct="3" dur="16"
                       stem.dir="down" accid.ges="f"/>
                   </beam>
-
+                <beam xml:id="x8b02f6d9-9a72-42d0-8620-13fc6fcac1bf">
+                      <note xml:id="x027ff7b9-670b-4a8b-b45b-56d502d2f8b9" pname="b" oct="3" dur="8"
+                        stem.dir="down" accid.ges="f"/>
+                      <rest xml:id="xb98a3ec5-c229-4ba5-8009-7e289c1f32e6" dur="16"/>
+                      <note xml:id="x9e92e5b0-c7f9-4b1f-ab4a-951c8a56df3a" pname="a" oct="3" dur="16"
+                        stem.dir="down"/>
+                    </beam>
+                    <beam xml:id="x5a304b36-dc33-412b-a075-50cc0d89b48b">
+                      <note xml:id="x7730ed36-fb39-4d9f-af68-5fd44167b269" pname="a" oct="3" dur="8"
+                        stem.dir="down"/>
+                      <rest xml:id="xdf2d2e5c-81b1-43c8-88a7-d41b4d4dfa0f" dur="16"/>
+                      <note xml:id="xd1780446-da45-454f-8ef5-d599a5c7de26" pname="b" oct="3" dur="16"
+                        stem.dir="down" accid.ges="f"/>
+                    </beam>
                 </layer>
               </staff>
               <staff xml:id="x868f2353-e60b-4c67-a0d3-fd05314312b1" n="4">
@@ -8667,22 +8681,7 @@
                       stem.dir="up"/>
                   </beam>
                 </layer>
-                <layer xml:id="x6f360333-7a9f-407a-838f-b9000fd22c71" n="2">
-                  <beam xml:id="x8b02f6d9-9a72-42d0-8620-13fc6fcac1bf">
-                    <note xml:id="x027ff7b9-670b-4a8b-b45b-56d502d2f8b9" pname="b" oct="3" dur="8"
-                      stem.dir="down" accid.ges="f"/>
-                    <rest xml:id="xb98a3ec5-c229-4ba5-8009-7e289c1f32e6" dur="16"/>
-                    <note xml:id="x9e92e5b0-c7f9-4b1f-ab4a-951c8a56df3a" pname="a" oct="3" dur="16"
-                      stem.dir="down"/>
-                  </beam>
-                  <beam xml:id="x5a304b36-dc33-412b-a075-50cc0d89b48b">
-                    <note xml:id="x7730ed36-fb39-4d9f-af68-5fd44167b269" pname="a" oct="3" dur="8"
-                      stem.dir="down"/>
-                    <rest xml:id="xdf2d2e5c-81b1-43c8-88a7-d41b4d4dfa0f" dur="16"/>
-                    <note xml:id="xd1780446-da45-454f-8ef5-d599a5c7de26" pname="b" oct="3" dur="16"
-                      stem.dir="down" accid.ges="f"/>
-                  </beam>
-                </layer>
+              
               </staff>
               <dynam xml:id="x4626e7f3-3302-4c93-a69f-1914f7528d7e" staff="1" tstamp="2"
                 place="below">f </dynam>
