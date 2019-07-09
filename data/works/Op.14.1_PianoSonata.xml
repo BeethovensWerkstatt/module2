@@ -1551,6 +1551,7 @@
                         </layer>
                         <layer xml:id="x0516e940-f315-4dcf-9ee0-7ab4489e6c79" n="2">
                            <rest xml:id="xdae2d1a2-53f6-4eca-905b-68ce85a81fd9" dur="8" ploc="g"/>
+                           <space xml:id="x6a7d7869-6aa1-4982-bb34-45f977f99f87" dur="4" dots="1"/>
                            <space xml:id="x5fec7cae-af7c-4506-9478-24bc64da82c2" dur="2"/>
                         </layer>
                      </staff>
@@ -2807,24 +2808,24 @@
                               <note xml:id="x6f42051b-ffc7-4761-bbdc-0a014281a557"
                                     pname="e"
                                     oct="5"
-                                    dur="8"
+                                    dur="8" stem.dir="up"
                                     />
                               <note xml:id="xb12c213d-1400-4292-b93e-3baa31ec0eb4"
                                     pname="d"
                                     oct="5"
                                     dur="8"
-                                    
+                                    stem.dir="up"
                                     accid.ges="s"/>
                               <note xml:id="x74bc6c24-c99a-46ed-979e-53ed9acda44f"
                                     pname="c"
                                     oct="5"
                                     dur="8"
-                                    
+                                    stem.dir="up"
                                     accid.ges="s"/>
                               <note xml:id="x2e926f17-adf8-46fd-ab31-9d17a539a0a9"
                                     pname="b"
                                     oct="4"
-                                    dur="8"
+                                    dur="8" stem.dir="up"
                                     />
                            </beam>
                         </layer>
@@ -2835,7 +2836,8 @@
                                  dur="2"
                                  
                                  accid.ges="s"/>
-                           <space xml:id="x0400a24f-2a03-4e9e-acbf-58c536c0be81" dur="2"/>
+                           <space xml:id="x0400a24f-2a03-4e9e-acbf-58c536c0be81" dur="2"/> <!-- Fehler in OA: Halbe Pause fehlt, 
+                                 deshalb stemDirs hinzugefügt -->
                         </layer>
                      </staff>
                      <staff xml:id="xb88a3c95-b69a-42f9-90a3-a406335b337c" n="2">

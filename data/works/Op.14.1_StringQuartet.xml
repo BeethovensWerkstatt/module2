@@ -6636,7 +6636,7 @@
                                     pname="d"
                                     accid="n"
                                     oct="4"
-                                    dur="2"
+                                    dur="2" artic="stacciss"
                                     />
                               <note xml:id="xe5372099-f3c2-4096-92df-e5b565598773"
                                     pname="e"
@@ -7031,10 +7031,7 @@
                                     pname="g"
                                     accid="s"
                                     oct="4"
-                                    dur="4"
-                                    
-                                    artic="stacc">
-                                 
+                                    dur="4">                                 
                               </note>
                            </layer>
                         </staff>
@@ -7483,7 +7480,7 @@
                                        oct="4"
                                        dur="8"
                                        
-                                       accid.ges="f"/>
+                                       accid.ges="f"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                                  <note xml:id="xac671e0b-239e-4f1a-9f0c-7f6d1b2717e2"
                                        pname="d"
                                        oct="5"
@@ -15213,7 +15210,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xce4a9071-a50f-4e91-ac91-3ca47d442294"
-                               tstamp="1"
+                               tstamp="2"
                                place="below"
                                staff="1">
                         ff
@@ -15502,7 +15499,7 @@
                               </layer>
                            </staff>
                            <dynam xml:id="xa2148584-7485-464d-bbe4-2e4c074bf583"
-                               tstamp="1.5"
+                               tstamp="1"
                                place="below"
                                staff="1">
                         p
@@ -21508,7 +21505,7 @@
                                        pname="a"
                                        oct="3"
                                        dur="8"
-                                       />
+                                       /> <!-- Fehler in OA: Tonhöhe müsste g statt a lauten -->
                                  <note xml:id="xad0a8d0a-b1fb-427b-8cfe-fd6a61e189a0"
                                        pname="e"
                                        oct="3"
@@ -21606,7 +21603,7 @@
                           p
                         </dynam>
                         <dynam xml:id="x4018e969-41dc-42dc-aa04-50fde9a2a07b"
-                               tstamp="4"
+                               tstamp="4.5"
                                place="below"
                                staff="1">
                         f
@@ -21839,7 +21836,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xff0d8a6f-456e-46dd-b3a6-e980441f7d34"
-                               tstamp="3"
+                               tstamp="2"
                                place="below"
                                staff="1">cres</dynam>
                      </measure>
@@ -21907,7 +21904,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xcdcc4251-3837-45b8-852e-79c020ed3632"
-                               tstamp="1"
+                               tstamp="2"
                                place="below"
                                staff="1">
                           ff
