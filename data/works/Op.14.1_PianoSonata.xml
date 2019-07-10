@@ -7404,7 +7404,7 @@
                                     pname="d"
                                     oct="3"
                                     dur="16"
-                                    />
+                                    /> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                               <note xml:id="xbe0dbe2d-2f38-4520-af16-0f28fccca817"
                                     pname="f"
                                     accid="n"
@@ -8080,7 +8080,7 @@
                                     pname="d"
                                     oct="4"
                                     dur="16"
-                                    />
+                                    /> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                            </beam>
                            <beam xml:id="xfc1f686c-6837-4a7c-9974-a682b5a593a4">
                               <note xml:id="xf861dc38-16c5-456c-b6ff-b23c3dc0d588"
