@@ -4174,7 +4174,7 @@
                               endid="#x59c12d97-a014-4b22-93d0-f9bf1b7a877d"
                               staff="1"/>
                         <dynam xml:id="x771755e9-aea9-452b-95a1-79ba0fc9cf56"
-                               tstamp="3.25"
+                               tstamp="3"
                                place="below"
                                staff="1">
                           sf
@@ -10354,7 +10354,8 @@
                                  <chord xml:id="xe7d80632-adaf-400f-8bea-38ae572532a7"
                                         dur="16"
                                         >
-                                    <note xml:id="x1eb9dcb8-f1bd-44ed-9888-7dafa76c69d3" pname="a" oct="3"/>
+                                    <note xml:id="x1eb9dcb8-f1bd-44ed-9888-7dafa76c69d3" pname="a" oct="3"/> <!-- Fehler in OA:
+                                    Erniedrigungszeichen fehlt-->
                                     <note xml:id="xb2eb06d5-1168-486d-b7b1-7eaa23ecf6e2" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="nb6821029-12c3-4603-9230-a0a1029678af"
@@ -10468,7 +10469,8 @@
                                  <chord xml:id="x5d00ae21-c625-40a3-a11d-ab27d7a69c2c"
                                         dur="16"
                                         >
-                                    <note xml:id="x36358ca8-fca4-45aa-89dc-ee441a39a5d6" pname="a" oct="3"/>
+                                       <note xml:id="x36358ca8-fca4-45aa-89dc-ee441a39a5d6" pname="a" oct="3"/> <!-- Fehler in OA:
+                                    Erniedrigungszeichen fehlt-->
                                     <note xml:id="x95d18d52-79b3-49c6-bcd0-d14a5105df82" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="nef88da17-3c1d-472c-8eb8-181f1a616868"
@@ -10578,7 +10580,8 @@
                                  <chord xml:id="x011d4010-e71e-47d9-99b5-932859523bc9"
                                         dur="16"
                                         >
-                                    <note xml:id="x07961590-ca5d-47b9-aa64-6eeacb9adecb" pname="a" oct="3"/>
+                                       <note xml:id="x07961590-ca5d-47b9-aa64-6eeacb9adecb" pname="a" oct="3"/> <!-- Fehler in OA:
+                                    Erniedrigungszeichen fehlt-->
                                     <note xml:id="xeb5f9a36-cffa-4c92-85c8-cc475d5b128c" pname="f" oct="4"/>
                                  </chord>
                                  <note xml:id="x5ad71027-667d-48cc-902c-9537b5c40abf"
@@ -10693,7 +10696,8 @@
                                        pname="a"
                                        oct="4"
                                        dur="16"
-                                       />
+                                 /> <!-- Fehler in OA:
+                                    Erniedrigungszeichen fehlt-->
                                  <note xml:id="n04e29c06-3591-4c16-91d2-08feb53ae240"
                                        pname="a"
                                        oct="4"
@@ -18237,7 +18241,7 @@
                         <staff xml:id="xc1b87a4b-2e99-4731-92ce-1a753a9b0750" n="1">
                            <layer xml:id="x20d60ad0-557f-4600-b06d-46b696da79ff" n="1">
                               <note xml:id="xdcb12879-7969-4eed-96f1-34514bb80cc9"
-                                    pname="a"
+                                    pname="g"
                                     oct="4"
                                     dur="4"
                                     />
@@ -23833,7 +23837,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xfcdcf32d-2de8-4f65-8035-60005d00e69c"
-                               tstamp="2"
+                               tstamp="1"
                                place="below"
                                staff="1">
                          p
@@ -23853,7 +23857,7 @@
                                     dur="2"
                                     />
                               <note xml:id="xdbceaa5b-1b64-4af7-b69b-80113fb0e050"
-                                    pname="e"
+                                    pname="c"
                                     oct="2"
                                     dur="2"
                                     />

@@ -1253,8 +1253,8 @@
                                  />
                         </layer>
                      </staff>
-                     <slur xml:id="xa5e87105-5e10-4ed5-810e-c01e20c1942e"
-                           startid="#x5e6591dc-7078-4926-b409-784ecce74f7b"
+                     <tie xml:id="xa5e87105-5e10-4ed5-810e-c01e20c1942e"
+                           startid="#xf07d29ff-27e3-419e-9a33-4dae9af12261"
                            staff="1"
                            endid="#x334d5b26-5cb5-48ef-ba4f-f078b204c716"
                            />
@@ -8622,10 +8622,10 @@
                                      >
                                  <note xml:id="x2f719935-bbb0-4785-930d-b19bbe716eed"
                                        pname="f"
-                                       oct="4"/>
+                                       oct="4" accid.ges="s"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                                  <note xml:id="x25835eed-3614-4fc1-8c9e-4ecbac5a2449"
                                        pname="f"
-                                       oct="5"/>
+                                       oct="5" accid.ges="s"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                               </chord>
                               <chord xml:id="x1280fd6b-ce9a-4eda-ac94-f8b3ffb86875"
                                      dur="8"
@@ -8677,11 +8677,11 @@
                                  <note xml:id="xddce3c3d-5818-4ae2-9a91-63664537e16a"
                                        pname="f"
                                        oct="4"
-                                       accid.ges="n"/>
+                                       accid.ges="s"/>
                                  <note xml:id="x21d0728b-625a-45c4-bb03-a0bb7d847803"
                                        pname="f"
                                        oct="5"
-                                       accid.ges="n"/>
+                                       accid.ges="s"/>
                               </chord>
                               <chord xml:id="x4cc86498-11b2-4f17-8938-7d93e09c4c85"
                                      dur="8"
@@ -8816,8 +8816,10 @@
                               <chord xml:id="x58a8ad44-0254-44b0-8864-23671a737aee"
                                      dur="8"
                                      >
-                                 <note xml:id="x340d1fde-6fdf-4fa3-957d-2b24cdb941b3" pname="g" oct="4"/>
-                                 <note xml:id="xadf51959-4e63-47be-a6ef-58ba04b039c3" pname="g" oct="5"/>
+                                 <note xml:id="x340d1fde-6fdf-4fa3-957d-2b24cdb941b3" pname="g" oct="4" accid.ges="s"/>
+                                    <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                 <note xml:id="xadf51959-4e63-47be-a6ef-58ba04b039c3" pname="g" oct="5" accid.ges="s"/>
+                                    <!-- Fehler in OA: Auflösungszeichen fehlt -->
                               </chord>
                               <chord xml:id="xe049e515-ce96-4558-9a28-15ffe9046a2e"
                                      dur="8"
@@ -9035,10 +9037,10 @@
                                     dur="16"
                                     />
                               <note xml:id="x74b16a79-790d-4cac-9e9f-6612bd6a3011"
-                                    pname="g"
+                                    pname="g" accid.ges="s"
                                     oct="3"
                                     dur="16"
-                                    />
+                                    /> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                               <note xml:id="x2208a498-0710-4e14-8b98-984af97427be"
                                     pname="b"
                                     oct="3"
@@ -9061,7 +9063,7 @@
                                     oct="3"
                                     dur="16"
                                     
-                                    accid.ges="n"/>
+                                    accid.ges="s"/>
                               <note xml:id="xac754a67-fc92-4733-ab63-48144862990a"
                                     pname="b"
                                     oct="3"
@@ -9084,7 +9086,7 @@
                                     oct="3"
                                     dur="16"
                                     
-                                    accid.ges="n"/>
+                                    accid.ges="s"/>
                               <note xml:id="xc73671d7-b0e3-4cfd-a14c-ee57eda93fa1"
                                     pname="b"
                                     oct="3"
@@ -9107,7 +9109,7 @@
                                     oct="3"
                                     dur="16"
                                     
-                                    accid.ges="n"/>
+                                    accid.ges="s"/>
                               <note xml:id="xca48d119-23c3-431b-bf5f-39000ba5f429"
                                     pname="b"
                                     oct="3"
@@ -9408,9 +9410,9 @@
                         </layer>
                      </staff>
                      <dynam xml:id="x1a0ccef1-9db7-4495-ace5-11b06a92715c"
-                            staff="1"
+                            staff="1 2"
                             tstamp="1"
-                            place="below">sf</dynam>
+                            place="between">sf</dynam>
                      <slur xml:id="xe938e1eb-dd61-499d-a976-7256028f0af5"
                            staff="1"
                            startid="#xfb5445d4-7679-4b46-8cb8-0a4bf6d56ad2"
@@ -10884,8 +10886,8 @@
                                     accid.ges="s"/>
                               <note xml:id="x296189ea-88ee-4d8a-93bb-48336f7f2784" pname="a" oct="5"/>
                               <note xml:id="xba8d0faa-e77a-46dd-99bd-e39458aaebf6"
-                                    pname="c"
-                                    oct="6"
+                                    pname="b"
+                                    oct="5"
                                     artic="stacc">
                                  
                               </note>
@@ -10899,8 +10901,8 @@
                                     accid.ges="s"/>
                               <note xml:id="xbf3c4998-1218-4669-97d0-36613d38d0af" pname="a" oct="5"/>
                               <note xml:id="xcaa55377-d573-49a6-a99c-a556ebfb75de"
-                                    pname="c"
-                                    oct="6"
+                                    pname="b"
+                                    oct="5"
                                     artic="stacc">
                                  
                               </note>
@@ -11757,10 +11759,10 @@
                                  />
                         </layer>
                      </staff>
-                     <slur xml:id="xc6f4362d-b17e-4e53-a1ea-eeba0cdaf16c"
+                     <tie xml:id="xc6f4362d-b17e-4e53-a1ea-eeba0cdaf16c"
                            staff="1"
-                           startid="#x47e531cc-473f-40f0-958f-cc1e72a50405"
-                           endid="#x4520fe57-a446-4dd6-85bd-1d5af2bc4d39"
+                           startid="#x3f17f029-3a5a-4473-9d88-bfb14dfb6c47"
+                           endid="#x8d0c28bf-d257-4ebf-b404-9ec74d5bfd4f"
                            />
                      <slur xml:id="x5c4aff4e-4c78-427e-84d5-b7f2a881e7fa"
                            startid="#xa463a5b8-7ff3-4389-b1a1-762e6e324ade"
@@ -11916,7 +11918,7 @@
                                  dots="1"
                                  />
                               <note xml:id="x2f5c46af-3250-44ba-8724-359e358ddc02" 
-                                    pname="d" 
+                                    pname="d" accid.ges="s"
                                     oct="3" 
                                     dur="4" 
                                     />
@@ -11943,7 +11945,7 @@
                   <measure n="103" xml:id="xed8e81bc-ebee-43b1-a58f-0f660b7449fc">
                      <staff xml:id="x2aff939c-1a7a-4b22-8067-954c7ff7231c" n="1">
                         <layer xml:id="x60f45269-f30d-45a4-b897-a5fc2b2b0245" n="1">
-                           <mRest xml:id="xcfc56e2a-ff9b-4149-9120-a94946143329" dur="1"/>
+                           <space xml:id="xcfc56e2a-ff9b-4149-9120-a94946143329" dur="1"/>
                         </layer>
                      </staff>
                      <staff xml:id="x920a0874-5686-4703-a9e6-748329159b74" n="2">
@@ -12205,10 +12207,10 @@
                                     dur="16"
                                     />
                               <note xml:id="xf2b271ae-52f8-4bef-a4f6-4a0ee6d8411d"
-                                    pname="d"
+                                    pname="d" accid.ges="s"
                                     oct="5"
                                     dur="16"
-                                    />
+                                    /> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                            </beam>
                            <beam xml:id="xd4a17834-f5ca-40b1-beba-03082b6d17f5">
                               <note xml:id="x7ec2c0c7-6cff-4030-bc35-07fc07a5c5cb"
@@ -12250,10 +12252,10 @@
                                     dur="16"
                                     />
                               <note xml:id="x701f645c-3b34-46c7-b9a3-2a94517d022c"
-                                    pname="d"
+                                    pname="d" accid.ges="s"
                                     oct="6"
                                     dur="16"
-                                    />
+                              /> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                            </beam>
                         </layer>
                      </staff>
@@ -12262,8 +12264,8 @@
                            <note xml:id="x92848bf2-8182-4a8d-8854-bf1964603476"
                                  pname="g"
                                  oct="3"
-                                 dur="2"
-                                 />
+                                 dur="2" accid.ges="s"
+                                 /> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                            <note xml:id="x1e81a776-cb4f-4e8e-9f37-2fde946f509a"
                                  pname="c"
                                  accid="n"
