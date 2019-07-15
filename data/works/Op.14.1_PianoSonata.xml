@@ -173,6 +173,15 @@
                   </changeDesc>
                   <date isodate="2019-07-04"/>
             </change>
+            <change n="14">
+                  <respStmt>
+                        <persName auth.uri="https://github.com/" codedval="Susanne Cox">Susanne Cox</persName>
+                  </respStmt>
+                  <changeDesc>
+                        <p>Für den 1. Satz: Fehler der Originalausgabe (nur die primäre Notation betreffend) als Kommentar angegeben.</p>
+                  </changeDesc>
+                  <date isodate="2019-07-15"/>
+            </change>
       </revisionDesc>
    </meiHead>
    <music>
@@ -5778,11 +5787,11 @@
                            <rest xml:id="x95861c69-3b11-4882-b24d-7067d7a0ed04" dur="2"/>
                         </layer>
                      </staff>
-                     <tie xml:id="x400ec8fb-7ce5-420e-9901-d85c432f4ce1"
+                     <slur xml:id="x400ec8fb-7ce5-420e-9901-d85c432f4ce1"
                           startid="#x911f24fa-870a-48e1-a191-c77aa8ea9b52"
                           endid="#x62064b3e-241a-489c-9ebf-46e09c358d2b"
                           />
-                     <tie xml:id="xb3d028c7-45f7-43b9-a0bf-5979d27d6b14"
+                     <slur xml:id="xb3d028c7-45f7-43b9-a0bf-5979d27d6b14"
                           startid="#x30331987-2a4e-4d13-b712-7451131933c3"
                           endid="#xb639142a-5ce6-4eeb-96c8-3bc1929dfc13"
                           />
@@ -13203,7 +13212,7 @@
                            <mRest xml:id="x553a9bbb-ddcc-40ab-93fe-962139ff2fdf" dur="1"/>
                         </layer>
                      </staff>
-                     <tie xml:id="xba4e9275-d974-418d-badb-986186656911"
+                     <slur xml:id="xba4e9275-d974-418d-badb-986186656911"
                           staff="1"
                           startid="#x06607065-23ab-4002-88ef-f66d6ea6bcd0"
                           endid="#x420db52b-a65f-43df-b08b-c2ac288b3760"/>
@@ -13372,24 +13381,24 @@
                               <note xml:id="x53f101ab-328e-47f2-89bd-104c2c174ce4"
                                     pname="a"
                                     oct="5"
-                                    dur="8"
+                                    dur="8" stem.dir="up"
                                     />
                               <note xml:id="x1bcd4b5b-9373-4746-9f1e-8b1fb7d4b9bc"
                                     pname="g"
                                     oct="5"
                                     dur="8"
-                                    
+                                     stem.dir="up"
                                     accid.ges="s"/>
                               <note xml:id="x3d4e76cf-587a-49f1-a182-55c823a46328"
                                     pname="f"
                                     oct="5"
                                     dur="8"
-                                    
+                                     stem.dir="up"
                                     accid.ges="s"/>
                               <note xml:id="xbf3892ba-21ad-4adc-a79b-5f7aa90b8628"
                                     pname="e"
                                     oct="5"
-                                    dur="8"
+                                    dur="8" stem.dir="up"
                                     />
                            </beam>
                         </layer>
@@ -13400,7 +13409,7 @@
                                        dur="2"
                                        
                                        accid.ges="s"/>
-                                 <space xml:id="x017a2f3f-5234-49c9-9e18-4f9903cb1fd0" dur="2"/>
+                                 <space xml:id="x017a2f3f-5234-49c9-9e18-4f9903cb1fd0" dur="2"/> <!-- Fehler in OA: halbe Pause fehlt, deshalb stem.dirs hinzugefügt -->
                            </layer>
                      </staff>
                      <staff xml:id="x9a4ca8df-885d-4f55-b1a0-b86c10b27b17" n="2">
@@ -13461,7 +13470,7 @@
                            <mRest xml:id="xa0e7fd25-83ca-4caf-80a3-8718747f5525" dur="1"/>
                         </layer>
                      </staff>
-                     <tie xml:id="x87e900a9-7a2c-4df9-a394-dec352c18dd0"
+                     <slur xml:id="x87e900a9-7a2c-4df9-a394-dec352c18dd0"
                           staff="1"
                           startid="#x01181500-d13b-440e-b594-a07571ef485c"
                           endid="#xbcc356ad-bba7-4716-99aa-9e8fc9ce3fbc"/>
@@ -13904,14 +13913,14 @@
                                   dur="4"
                                   >
                               <note xml:id="x2887afa5-fc48-4b4d-8ad6-d7a67a9fef65"
-                                    pname="e"
+                                    pname="e" accid.ges="s"
                                     oct="5"/>
                               <note xml:id="x77f3aa21-e831-4638-a12b-545c6e34636a"
                                     pname="g"
                                     oct="5"
                                     accid.ges="s"/>
                               <note xml:id="x25e01585-5ac0-4838-9158-48d55afc82f1"
-                                    pname="d"
+                                    pname="d" accid.ges="n"
                                     oct="6"/>
                            </chord>
                            <chord xml:id="xb538af36-c717-4ecb-a831-f3bab17bd6f1"
@@ -14197,6 +14206,10 @@
                               staff="2"
                               startid="#xd3cf7c5c-5a7c-4359-b3c9-b8ce74f1e253"
                               endid="#x89144bc4-bbcf-43e5-8c6a-0b0922b8f1ff"/>
+                        <tie xml:id="x2d5dcf52-547e-4cfd-bd2f-f79a7c159312"
+                         staff="1"
+                         startid="#xad564e69-c694-491c-977a-42b49f9e3de4"
+                         endid="#x1e1f3412-8ea6-4797-b4a3-c448d1f233f7"/> <!-- Fehler in OA: nur die zweite Hälfte des Haltebogens vorhanden (Seitenumbruch) -->
                   </measure>
                   <measure n="129" xml:id="x2fd98a65-6197-42c9-9e95-f175a405853b">
                      <staff xml:id="x52ff1643-9069-4b22-a0e1-c546bbb6773c" n="1">
@@ -15272,7 +15285,7 @@
                                        oct="4"/>
                                  <note xml:id="x91b5a269-a58c-4bd9-8e8a-e0153000f44e" 
                                        pname="c" 
-                                       oct="5"/>    
+                                       oct="5" accid.ges="n"/>    
                            </chord>
                            <chord xml:id="x5f51cf13-cb8c-470c-b5aa-7658a940900b"
                                   dur="4"
@@ -15499,7 +15512,7 @@
                                           pname="a"
                                           oct="4"/>
                                     <note xml:id="xb55558d4-bc11-4294-8d8c-b60b993c48f2"
-                                          pname="c" 
+                                          pname="c" accid.ges="n"
                                           oct="5"/>    
                               </chord>
                            <chord xml:id="x4c5ba899-44e3-4b87-95b2-8e60ac208aa3"
@@ -16266,100 +16279,92 @@
                   <measure n="148" xml:id="xafcc4878-aab5-4001-b4d5-51f0689da96d">
                      <staff xml:id="xaf3e18db-1930-49bd-8e62-ca21a05680b2" n="1">
                         <layer xml:id="xcbef5600-3ff5-498f-9bbd-7f15625312c7" n="1">
-                              <rest xml:id="x697fff4a-dfa8-42d5-95f3-61ff49d938e0" dur="8" staff="2"/>
-                           <beam xml:id="xcfddd429-0f22-446e-be4d-a07e6092bfe7">
-                              <chord xml:id="x2b2f3d08-155e-4651-be3f-3e3b5f7cea7a"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x4548bf9f-5c2c-44a9-b3b9-a49bcddffca4"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x4dec85cb-f66d-4429-8e9d-e87db704e67f"
-                                       pname="g"
-                                       oct="3"
-                                       accid.ges="s"
-                                       staff="2"/>
-                                 <note xml:id="x55cfb06c-7020-4a96-a8be-b70b7e2091b9" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="x4814dc33-2607-4d06-88c9-50c37ac0cf56"
-                                     dur="8"
-                                     >
-                                 <note xml:id="xb4e781fa-1cd3-4b1c-bb0d-bc54f6e88cad"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="xdca37700-46d1-4be8-82a0-06f490179b8b"
-                                       pname="g"
-                                       oct="3"
-                                       accid.ges="s"
-                                       staff="2"/>
-                                 <note xml:id="xbbf2d8c2-9110-492d-9f53-cb668b23a6c2" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="x9003127f-6e39-4a1a-b968-a3fc6b67019a"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x54034356-f1bb-402f-a3b4-f86f0f217d63"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x90e74102-8db8-4c52-8bfd-0e9c399c188d"
-                                       pname="g"
-                                       oct="3"
-                                       accid.ges="s"
-                                       staff="2"/>
-                                 <note xml:id="x53cd592c-9c39-4c57-ad02-b6c3c89892af" pname="e" oct="4"/>
-                              </chord>
-                           </beam>
-                              <rest xml:id="x33f0dfaf-c522-477e-96f4-4b7091f031d9" dur="8" staff="2"/>
-                           <beam xml:id="x3db596dc-0e88-443e-a6a9-115e6495fdda">
-                              <chord xml:id="x9093ed9d-414f-4c2b-8a96-63038316d757"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x40965185-01bb-4368-be18-cbcb2c59db05"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x6e8c9451-5fd0-4c47-bdb5-99a7399e3946"
-                                       pname="c"
-                                       oct="4"
-                                       accid.ges="s"
-                                       staff="2"/>
-                                 <note xml:id="x43e2d890-c20c-4c58-87f2-b885df88987c" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="xaf7fec66-7e64-4890-a3cf-a89eaf349178"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x55d4cc83-7668-4dfa-811c-70aa609124d8"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="xc4decfcf-a7ea-41e9-bdc0-44fc985de5da"
-                                       pname="c"
-                                       oct="4"
-                                       accid.ges="s"
-                                       staff="2"/>
-                                 <note xml:id="xc1980c09-7d83-475e-98aa-a3fc224a06a0" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="xa1a904ef-1414-45b5-b3e7-e44326b412de"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x6ad5d6c7-2891-4196-a5b5-2b5cf8ecd6bd"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x92f57a5c-992b-4f66-98f7-9e91216bb86c"
-                                       pname="c"
-                                       oct="4"
-                                       accid.ges="s"
-                                       staff="2"/>
-                                 <note xml:id="xa1235043-f667-4a51-a409-e2d6668a9423" pname="e" oct="4"/>
-                              </chord>
-                           </beam>
+                              <space xml:id="x4e4177e6-5b52-44f1-b799-b7968218256a" dur="1"/>
+                              
                         </layer>
                      </staff>
                      <staff xml:id="xbcd69d54-8c2a-4d3f-93ee-f2f311cfab82" n="2">
-                        <layer xml:id="x894428bc-afa2-4e3b-92ff-f236dd00f624" n="1">
+                           <layer xml:id="xce95d27d-b496-4899-a3a3-5c7020e211ca" n="1">
+                                 <rest xml:id="x697fff4a-dfa8-42d5-95f3-61ff49d938e0" dur="8"/>
+                                 <beam xml:id="xcfddd429-0f22-446e-be4d-a07e6092bfe7">
+                                       <chord xml:id="x2b2f3d08-155e-4651-be3f-3e3b5f7cea7a"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x4548bf9f-5c2c-44a9-b3b9-a49bcddffca4"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x4dec85cb-f66d-4429-8e9d-e87db704e67f"
+                                                   pname="g"
+                                                   oct="3"
+                                                   accid.ges="s"/>
+                                             <note xml:id="x55cfb06c-7020-4a96-a8be-b70b7e2091b9" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="x4814dc33-2607-4d06-88c9-50c37ac0cf56"
+                                             dur="8"
+                                             >
+                                             <note xml:id="xb4e781fa-1cd3-4b1c-bb0d-bc54f6e88cad"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="xdca37700-46d1-4be8-82a0-06f490179b8b"
+                                                   pname="g"
+                                                   oct="3"
+                                                   accid.ges="s"/>
+                                             <note xml:id="xbbf2d8c2-9110-492d-9f53-cb668b23a6c2" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="x9003127f-6e39-4a1a-b968-a3fc6b67019a"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x54034356-f1bb-402f-a3b4-f86f0f217d63"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x90e74102-8db8-4c52-8bfd-0e9c399c188d"
+                                                   pname="g"
+                                                   oct="3"
+                                                   accid.ges="s"/>
+                                             <note xml:id="x53cd592c-9c39-4c57-ad02-b6c3c89892af" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                 </beam>
+                                 <rest xml:id="x33f0dfaf-c522-477e-96f4-4b7091f031d9" dur="8"/>
+                                 <beam xml:id="x3db596dc-0e88-443e-a6a9-115e6495fdda">
+                                       <chord xml:id="x9093ed9d-414f-4c2b-8a96-63038316d757"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x40965185-01bb-4368-be18-cbcb2c59db05"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x6e8c9451-5fd0-4c47-bdb5-99a7399e3946"
+                                                   pname="c"
+                                                   oct="4"
+                                                   accid.ges="s"/>
+                                             <note xml:id="x43e2d890-c20c-4c58-87f2-b885df88987c" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="xaf7fec66-7e64-4890-a3cf-a89eaf349178"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x55d4cc83-7668-4dfa-811c-70aa609124d8"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="xc4decfcf-a7ea-41e9-bdc0-44fc985de5da"
+                                                   pname="c"
+                                                   oct="4"
+                                                   accid.ges="s"/>
+                                             <note xml:id="xc1980c09-7d83-475e-98aa-a3fc224a06a0" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="xa1a904ef-1414-45b5-b3e7-e44326b412de"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x6ad5d6c7-2891-4196-a5b5-2b5cf8ecd6bd"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x92f57a5c-992b-4f66-98f7-9e91216bb86c"
+                                                   pname="c"
+                                                   oct="4"
+                                                   accid.ges="s"/>
+                                             <note xml:id="xa1235043-f667-4a51-a409-e2d6668a9423" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                 </beam>  
+                           </layer>
+                        <layer xml:id="x894428bc-afa2-4e3b-92ff-f236dd00f624" n="2">
                            <note xml:id="x8bc52c12-623e-4d76-9815-cf8b3048b8b7"
                                  pname="e"
                                  oct="2"
@@ -16385,94 +16390,86 @@
                   <measure n="149" xml:id="x68ccc18c-1fa1-4fd5-90f4-50540cc1d9c4">
                      <staff xml:id="x22ac0421-695c-49e4-8a15-f8fd5f53ede9" n="1">
                         <layer xml:id="xa4c3c2c7-5c04-4bd5-9dc0-45a999c37fe5" n="1">
-                              <rest xml:id="xb0055a9a-1198-4eaf-8d29-7d787faf3d54" dur="8" staff="2"/>
-                           <beam xml:id="x632c6960-5fc9-4b1c-abc0-b2531678ca6e">
-                              <chord xml:id="x943b2724-5ee8-491c-815b-2189ab8c8a9d"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x106168aa-319f-4c6a-93de-2246f1be4fc6"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x8702c6c2-aca2-4955-89f0-b37503816a01"
-                                       pname="b"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="xfe698c78-f7d0-4bfe-981f-831d29f4e757" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="x6197fcc2-7ae9-4c39-9123-c3a6c9e602c0"
-                                     dur="8"
-                                     >
-                                 <note xml:id="xf934b629-c02b-4926-9887-2118b4d3b886"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x4e592af8-2ad4-4faf-ad43-948e7e48a623"
-                                       pname="b"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x33434b71-abfc-42d2-8a3b-8af05c006295" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="x9837907f-a53b-43b1-a41a-318feb4566fd"
-                                     dur="8"
-                                     >
-                                 <note xml:id="xc6c3efaf-0a6d-4c53-bc0c-fd6a845134bd"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x0c676229-da8c-4c69-b083-1fdc303d5cb0"
-                                       pname="b"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x215950ea-accd-432b-90fd-f87513a9f7ed" pname="e" oct="4"/>
-                              </chord>
-                           </beam>
-                              <rest xml:id="x3b589c9f-eac2-4617-aa48-20f5f192c050" dur="8" staff="2"/>
-                           <beam xml:id="xab9bb4c8-1744-4091-b89d-bc409fbd666f">
-                              <chord xml:id="xdbb60ab5-665b-44bc-a845-0c9d3218f40a"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x7d1a7c48-7b1c-4c5c-8a96-8dcd89a63b67"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="xf101dd78-cf52-46ff-b2b4-0ab2e77db1fd"
-                                       pname="a"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x37fdb27d-7ece-449a-8ff4-e37fa2f5313b" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="x50712936-b9f8-41ce-a741-25a0919f4a42"
-                                     dur="8"
-                                     >
-                                 <note xml:id="xd0f88d33-f4f8-41d5-a749-28c52b717fb8"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x137b68c4-296b-4f8c-a177-4f3d54858d88"
-                                       pname="a"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x2fe973ae-dde4-4e45-9ea3-602ae79e82da" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="x56449ad8-b988-4d1e-91b3-97204a10648b"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x60db8f5f-ef6d-4f80-b828-c04326004604"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x25c09078-498e-4d58-98cf-39eaef18f4f7"
-                                       pname="a"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x266b6928-2a92-4126-a7ec-6f6da67db198" pname="e" oct="4"/>
-                              </chord>
-                           </beam>
+                              <space xml:id="xa4faa265-8181-44bb-b9f8-f81cae5397d8" dur="1"/>
+                    
                         </layer>
                      </staff>
                      <staff xml:id="xcb10e096-a61b-4355-9781-c439e092f935" n="2">
-                        <layer xml:id="x37d79795-dbc6-494c-b27a-7a574aa9e2e7" n="1">
+                           <layer xml:id="x06d1828f-e7eb-4539-974e-29f508dbc48c" n="1">
+                                 <rest xml:id="xb0055a9a-1198-4eaf-8d29-7d787faf3d54" dur="8"/>
+                                 <beam xml:id="x632c6960-5fc9-4b1c-abc0-b2531678ca6e">
+                                       <chord xml:id="x943b2724-5ee8-491c-815b-2189ab8c8a9d"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x106168aa-319f-4c6a-93de-2246f1be4fc6"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x8702c6c2-aca2-4955-89f0-b37503816a01"
+                                                   pname="b"
+                                                   oct="3"/>
+                                             <note xml:id="xfe698c78-f7d0-4bfe-981f-831d29f4e757" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="x6197fcc2-7ae9-4c39-9123-c3a6c9e602c0"
+                                             dur="8"
+                                             >
+                                             <note xml:id="xf934b629-c02b-4926-9887-2118b4d3b886"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x4e592af8-2ad4-4faf-ad43-948e7e48a623"
+                                                   pname="b"
+                                                   oct="3"/>
+                                             <note xml:id="x33434b71-abfc-42d2-8a3b-8af05c006295" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="x9837907f-a53b-43b1-a41a-318feb4566fd"
+                                             dur="8"
+                                             >
+                                             <note xml:id="xc6c3efaf-0a6d-4c53-bc0c-fd6a845134bd"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x0c676229-da8c-4c69-b083-1fdc303d5cb0"
+                                                   pname="b"
+                                                   oct="3"/>
+                                             <note xml:id="x215950ea-accd-432b-90fd-f87513a9f7ed" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                 </beam>
+                                 <rest xml:id="x3b589c9f-eac2-4617-aa48-20f5f192c050" dur="8"/>
+                                 <beam xml:id="xab9bb4c8-1744-4091-b89d-bc409fbd666f">
+                                       <chord xml:id="xdbb60ab5-665b-44bc-a845-0c9d3218f40a"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x7d1a7c48-7b1c-4c5c-8a96-8dcd89a63b67"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="xf101dd78-cf52-46ff-b2b4-0ab2e77db1fd"
+                                                   pname="a"
+                                                   oct="3"/>
+                                             <note xml:id="x37fdb27d-7ece-449a-8ff4-e37fa2f5313b" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="x50712936-b9f8-41ce-a741-25a0919f4a42"
+                                             dur="8"
+                                             >
+                                             <note xml:id="xd0f88d33-f4f8-41d5-a749-28c52b717fb8"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x137b68c4-296b-4f8c-a177-4f3d54858d88"
+                                                   pname="a"
+                                                   oct="3"/>
+                                             <note xml:id="x2fe973ae-dde4-4e45-9ea3-602ae79e82da" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="x56449ad8-b988-4d1e-91b3-97204a10648b"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x60db8f5f-ef6d-4f80-b828-c04326004604"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x25c09078-498e-4d58-98cf-39eaef18f4f7"
+                                                   pname="a"
+                                                   oct="3"/>
+                                             <note xml:id="x266b6928-2a92-4126-a7ec-6f6da67db198" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                 </beam>   
+                           </layer>
+                        <layer xml:id="x37d79795-dbc6-494c-b27a-7a574aa9e2e7" n="2">
                            <note xml:id="xaf7a6a01-6986-444e-8a46-775dd43e31dc"
                                  pname="g"
                                  oct="2"
@@ -16491,100 +16488,94 @@
                   <measure n="150" xml:id="x7b9fa804-4d04-4f51-b90a-9f31516dcf91">
                      <staff xml:id="xf8049427-2d01-4873-9080-06a4606e798a" n="1">
                         <layer xml:id="x1d8b4b5d-5b2d-45a4-a38a-fe4cc42f775d" n="1">
-                              <rest xml:id="xe02c433c-7b7f-4ea8-ae53-fae9ec768ff2" dur="8" staff="2"/>
-                           <beam xml:id="x01ecd54f-17b0-47a9-96b6-dc6ee5f4fbf5">
-                              <chord xml:id="x9323ae7b-a8ef-40c2-a684-d0c444939d4a"
-                                     dur="8"
-                                     >
-                                 <note xml:id="xafc5e7b4-b22d-4b5b-9a76-7f31957d2f4a"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x0e75be86-9c8e-4e95-9752-0585767d844a"
-                                       pname="g"
-                                       oct="3"
-                                       accid.ges="s"
-                                       staff="2"/>
-                                 <note xml:id="x24578c57-6b8b-4932-8674-5c7f3beb73d7" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="x5fc08284-b9be-45e1-b625-198572186bda"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x90d746a7-e972-4c9f-8e23-ba04a7dae216"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x5082b62c-8f92-4558-9529-152f8009b504"
-                                       pname="g"
-                                       oct="3"
-                                       accid.ges="s"
-                                       staff="2"/>
-                                 <note xml:id="x66d7a555-55b2-441d-b6d1-8d3ba10eb9c7" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="x9633b24e-b265-465b-a669-dbe813cdddd2"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x4cfa5138-5ea3-425a-9c23-1cf14617f3c9"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x4efefd9a-3002-422e-9283-dcf46e0feb82"
-                                       pname="g"
-                                       oct="3"
-                                       accid.ges="s"
-                                       staff="2"/>
-                                 <note xml:id="x142b20f2-2ae9-44d5-9e7c-d0737982a2f7" pname="e" oct="4"/>
-                              </chord>
-                           </beam>
-                              <rest xml:id="x33cd7fd1-e6d7-4658-91e1-194713885005" dur="8" staff="2"/>
-                           <beam xml:id="x3d38dea3-ea97-4d20-bb81-cb3946d86582">
-                              <chord xml:id="xbb1c79be-7bcf-46f7-87dc-039a22484bea"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x04cf42ae-30b3-4a2e-8a18-dd2a5c376b2c"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="xf39cf4b6-08ea-44b4-8df4-f4aa2ecd86b8"
-                                       pname="c"
-                                       oct="4"
-                                       accid.ges="s"
-                                       staff="2"/>
-                                 <note xml:id="x4d883131-df86-4411-a00d-267115e27871" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="x98c5752b-8cbd-4a67-923f-7cb1b8777036"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x5361be9a-32e4-4431-9eb4-593e2f7d6332"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x1d2aa84f-1d8c-40d8-acf4-e35423e26fc7"
-                                       pname="c"
-                                       oct="4"
-                                       accid.ges="s"
-                                       staff="2"/>
-                                 <note xml:id="xe10d6688-1866-490f-a750-091749daf18e" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="x498c1ce2-c136-43a0-aa77-9b4995adbceb"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x0f227e41-1c06-467c-ba8b-bd2f05594417"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="xaf569307-1ac0-49e3-835c-de6f3d92b5b3"
-                                       pname="c"
-                                       oct="4"
-                                       accid.ges="s"
-                                       staff="2"/>
-                                 <note xml:id="x9ff7e686-f9e2-483c-8579-0d1903aaf4da" pname="e" oct="4"/>
-                              </chord>
-                           </beam>
+                              <space xml:id="x5bab782f-27c2-4aeb-be19-5622a89539b9" dur="1"/>
+                      
                         </layer>
                      </staff>
                      <staff xml:id="xc14840f7-3866-419f-afc0-2e629852f614" n="2">
-                        <layer xml:id="x25d19cb6-dc60-48ac-bff6-8f21c3b62453" n="1">
+                           <layer xml:id="x0f3afef4-2c55-419e-9264-812cdd73dac2" n="1">
+                                 <rest xml:id="xe02c433c-7b7f-4ea8-ae53-fae9ec768ff2" dur="8"/>
+                                 <beam xml:id="x01ecd54f-17b0-47a9-96b6-dc6ee5f4fbf5">
+                                       <chord xml:id="x9323ae7b-a8ef-40c2-a684-d0c444939d4a"
+                                             dur="8"
+                                             >
+                                             <note xml:id="xafc5e7b4-b22d-4b5b-9a76-7f31957d2f4a"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x0e75be86-9c8e-4e95-9752-0585767d844a"
+                                                   pname="g"
+                                                   oct="3"
+                                                   accid.ges="s"/>
+                                             <note xml:id="x24578c57-6b8b-4932-8674-5c7f3beb73d7" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="x5fc08284-b9be-45e1-b625-198572186bda"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x90d746a7-e972-4c9f-8e23-ba04a7dae216"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x5082b62c-8f92-4558-9529-152f8009b504"
+                                                   pname="g"
+                                                   oct="3"
+                                                   accid.ges="s"/>
+                                             <note xml:id="x66d7a555-55b2-441d-b6d1-8d3ba10eb9c7" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="x9633b24e-b265-465b-a669-dbe813cdddd2"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x4cfa5138-5ea3-425a-9c23-1cf14617f3c9"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x4efefd9a-3002-422e-9283-dcf46e0feb82"
+                                                   pname="g"
+                                                   oct="3"
+                                                   accid.ges="s"/>
+                                             <note xml:id="x142b20f2-2ae9-44d5-9e7c-d0737982a2f7" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                 </beam>
+                                 <rest xml:id="x33cd7fd1-e6d7-4658-91e1-194713885005" dur="8"/>
+                                 <beam xml:id="x3d38dea3-ea97-4d20-bb81-cb3946d86582">
+                                       <chord xml:id="xbb1c79be-7bcf-46f7-87dc-039a22484bea"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x04cf42ae-30b3-4a2e-8a18-dd2a5c376b2c"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="xf39cf4b6-08ea-44b4-8df4-f4aa2ecd86b8"
+                                                   pname="c"
+                                                   oct="4"
+                                                   accid.ges="s"/>
+                                             <note xml:id="x4d883131-df86-4411-a00d-267115e27871" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="x98c5752b-8cbd-4a67-923f-7cb1b8777036"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x5361be9a-32e4-4431-9eb4-593e2f7d6332"
+                                                   pname="e"
+                                                   oct="3"
+                                                   staff="2"/>
+                                             <note xml:id="x1d2aa84f-1d8c-40d8-acf4-e35423e26fc7"
+                                                   pname="c"
+                                                   oct="4"
+                                                   accid.ges="s"
+                                                   staff="2"/>
+                                             <note xml:id="xe10d6688-1866-490f-a750-091749daf18e" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="x498c1ce2-c136-43a0-aa77-9b4995adbceb"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x0f227e41-1c06-467c-ba8b-bd2f05594417"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="xaf569307-1ac0-49e3-835c-de6f3d92b5b3"
+                                                   pname="c"
+                                                   oct="4"
+                                                   accid.ges="s"/>
+                                             <note xml:id="x9ff7e686-f9e2-483c-8579-0d1903aaf4da" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                 </beam>   
+                           </layer>
+                        <layer xml:id="x25d19cb6-dc60-48ac-bff6-8f21c3b62453" n="2">
                            <note xml:id="xaa74b647-b8e0-4097-a6f2-e1abfc862aeb"
                                  pname="b"
                                  oct="2"
@@ -16605,106 +16596,98 @@
                   <measure n="151" xml:id="x56fafc0e-ee10-46cb-84ec-8371ae7dd85c">
                      <staff xml:id="x7cdef7ff-ff3c-405c-838c-2df868e43645" n="1">
                         <layer xml:id="x1169b131-2461-473d-9d5a-f51d14652ee6" n="1">
-                              <rest xml:id="x9dfebfe5-46ef-4953-9d56-29d82b6c2f01" dur="8" staff="2"/>
-                           <beam xml:id="xabf74806-0920-41d0-aac8-7f84924cdc51">
-                              <chord xml:id="x9f56e757-3db9-49c4-affc-0be9aba5d1b6"
-                                     dur="8"
-                                     >
-                                 <note xml:id="xa7a03123-221c-468a-9276-7ca1e4a0561e"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="xb59087d3-284d-4337-ad29-ce9025cb0529"
-                                       pname="b"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x4c2e1490-1718-4ae5-af02-2e0fe81f2250" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="x854ae3e0-4ac1-4ad1-bd63-8c7a2559c467"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x609c3bca-5694-44a4-8626-25bace9b6b15"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x5041fb07-37de-4e27-98f9-e392e923aaee"
-                                       pname="b"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x1a3e4d3a-6371-4e36-b348-a8d50b361fc4" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="xbef929af-7bbb-4185-9c53-6da1c1cde822"
-                                     dur="8"
-                                     >
-                                 <note xml:id="x3e18e329-2453-4d68-bbfa-875e54b5aaea"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="xe02fabe1-4dec-4a95-8117-83097bea561b"
-                                       pname="b"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x8bdbbede-29ea-4055-be98-3185e23962e2" pname="e" oct="4"/>
-                              </chord>
-                           </beam>
-                              <rest xml:id="xe6fc3f7d-b351-49d3-a926-7f102382e65c" dur="8" staff="2"/>
-                           <beam xml:id="xe9a2d09f-2842-4539-a588-eea7e966885f">
-                              <chord xml:id="x3678abd5-9f6b-4e23-b72b-799bbfc4579a"
-                                     dur="8"
-                                     >
-                                 <note xml:id="xdf6361ce-cce7-401c-abbe-ec04dfefe349"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="xf56c14fa-10b3-4b71-8573-fcf97c0f31ef"
-                                       pname="a"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x5a36a4aa-8237-47b7-8776-18ac4de84759"
-                                       pname="d"
-                                       oct="4"
-                                       accid.ges="s"/>
-                                 <note xml:id="x3d52cfa0-939d-400f-8a4c-a21769d51aa0" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="x72ca3139-ca1c-43a4-bad1-034de7638ea5"
-                                     dur="8"
-                                     >
-                                 <note xml:id="xfefe7655-408e-4676-97f1-c426d45cef50"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x51ac4b4b-3919-4e30-9c05-e1979f3b5e81"
-                                       pname="a"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x7122c168-f379-4f10-af0b-a90321058f5f"
-                                       pname="d"
-                                       oct="4"
-                                       accid.ges="s"/>
-                                 <note xml:id="xddd16bc6-55fe-4217-a14d-85b92a31f8f5" pname="e" oct="4"/>
-                              </chord>
-                              <chord xml:id="xd978ad50-6197-4a59-a476-1fc03a24a53a"
-                                     dur="8"
-                                     >
-                                 <note xml:id="xb67fbb59-4b21-409c-9eab-39b95007e128"
-                                       pname="e"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x207c0fd5-207e-4b07-897e-f267bdc2c81a"
-                                       pname="a"
-                                       oct="3"
-                                       staff="2"/>
-                                 <note xml:id="x2c74c83f-d010-4022-8a43-59e5e33ee53b"
-                                       pname="d"
-                                       oct="4"
-                                       accid.ges="s"/>
-                                 <note xml:id="x4f4cb66c-11c2-4401-a1aa-04bdf2a26518" pname="e" oct="4"/>
-                              </chord>
-                           </beam>
+                              <space xml:id="x98fbd0b5-a1db-488a-bb85-1590a82c44ea" dur="1"/>
+                              
                         </layer>
                      </staff>
                      <staff xml:id="x52a527bc-6f7e-4b19-8d2e-e204a3d6646e" n="2">
-                        <layer xml:id="x67273ee1-981a-4e69-968d-7179c48936c7" n="1">
+                           <layer xml:id="x28e90805-3994-49c6-bb48-c0a2f26efdc2" n="1">
+                                 <rest xml:id="x9dfebfe5-46ef-4953-9d56-29d82b6c2f01" dur="8"/>
+                                 <beam xml:id="xabf74806-0920-41d0-aac8-7f84924cdc51">
+                                       <chord xml:id="x9f56e757-3db9-49c4-affc-0be9aba5d1b6"
+                                             dur="8"
+                                             >
+                                             <note xml:id="xa7a03123-221c-468a-9276-7ca1e4a0561e"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="xb59087d3-284d-4337-ad29-ce9025cb0529"
+                                                   pname="b"
+                                                   oct="3"/>
+                                             <note xml:id="x4c2e1490-1718-4ae5-af02-2e0fe81f2250" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="x854ae3e0-4ac1-4ad1-bd63-8c7a2559c467"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x609c3bca-5694-44a4-8626-25bace9b6b15"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x5041fb07-37de-4e27-98f9-e392e923aaee"
+                                                   pname="b"
+                                                   oct="3"/>
+                                             <note xml:id="x1a3e4d3a-6371-4e36-b348-a8d50b361fc4" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="xbef929af-7bbb-4185-9c53-6da1c1cde822"
+                                             dur="8"
+                                             >
+                                             <note xml:id="x3e18e329-2453-4d68-bbfa-875e54b5aaea"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="xe02fabe1-4dec-4a95-8117-83097bea561b"
+                                                   pname="b"
+                                                   oct="3"/>
+                                             <note xml:id="x8bdbbede-29ea-4055-be98-3185e23962e2" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                 </beam>
+                                 <rest xml:id="xe6fc3f7d-b351-49d3-a926-7f102382e65c" dur="8"/>
+                                 <beam xml:id="xe9a2d09f-2842-4539-a588-eea7e966885f">
+                                       <chord xml:id="x3678abd5-9f6b-4e23-b72b-799bbfc4579a"
+                                             dur="8"
+                                             >
+                                             <note xml:id="xdf6361ce-cce7-401c-abbe-ec04dfefe349"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="xf56c14fa-10b3-4b71-8573-fcf97c0f31ef"
+                                                   pname="a"
+                                                   oct="3"/>
+                                             <note xml:id="x5a36a4aa-8237-47b7-8776-18ac4de84759"
+                                                   pname="d"
+                                                   oct="4"
+                                                   accid.ges="s" staff="1"/>
+                                             <note xml:id="x3d52cfa0-939d-400f-8a4c-a21769d51aa0" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="x72ca3139-ca1c-43a4-bad1-034de7638ea5"
+                                             dur="8"
+                                             >
+                                             <note xml:id="xfefe7655-408e-4676-97f1-c426d45cef50"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x51ac4b4b-3919-4e30-9c05-e1979f3b5e81"
+                                                   pname="a"
+                                                   oct="3"/>
+                                             <note xml:id="x7122c168-f379-4f10-af0b-a90321058f5f"
+                                                   pname="d"
+                                                   oct="4"
+                                                   accid.ges="s" staff="1"/>
+                                             <note xml:id="xddd16bc6-55fe-4217-a14d-85b92a31f8f5" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                       <chord xml:id="xd978ad50-6197-4a59-a476-1fc03a24a53a"
+                                             dur="8"
+                                             >
+                                             <note xml:id="xb67fbb59-4b21-409c-9eab-39b95007e128"
+                                                   pname="e"
+                                                   oct="3"/>
+                                             <note xml:id="x207c0fd5-207e-4b07-897e-f267bdc2c81a"
+                                                   pname="a"
+                                                   oct="3"/>
+                                             <note xml:id="x2c74c83f-d010-4022-8a43-59e5e33ee53b"
+                                                   pname="d"
+                                                   oct="4"
+                                                   accid.ges="s" staff="1"/>
+                                             <note xml:id="x4f4cb66c-11c2-4401-a1aa-04bdf2a26518" pname="e" oct="4" staff="1"/>
+                                       </chord>
+                                 </beam>   
+                           </layer>
+                        <layer xml:id="x67273ee1-981a-4e69-968d-7179c48936c7" n="2">
                            <note xml:id="xccb25f95-4d95-4320-a41c-55d943855e81"
                                  pname="g"
                                  oct="2"

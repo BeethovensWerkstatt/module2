@@ -141,6 +141,15 @@
                   </changeDesc>
                   <date isodate="2019-06-27"/>
             </change>
+            <change n="11">
+                  <respStmt>
+                        <persName auth.uri="https://github.com/" codedval="Susanne Cox">Susanne Cox</persName>
+                  </respStmt>
+                  <changeDesc>
+                        <p>Für den 1. Satz: Fehler der Originalausgabe (nur die primäre Notation betreffend) als Kommentar angegeben.</p>
+                  </changeDesc>
+                  <date isodate="2019-07-15"/>
+            </change>
       </revisionDesc>
    </meiHead>
    <music meiversion="4.0.0">
@@ -4829,7 +4838,7 @@
                         <staff xml:id="xbf4710f3-db47-4f77-b74e-c40e41a8daf1" n="1">
                            <layer xml:id="x19fbe5db-a4db-4cff-b76a-4e15462edf60" n="1">
                               <note xml:id="x42ea4f19-8328-4332-afe5-49ba8b8fd050"
-                                    pname="e"
+                                    pname="e" accid.ges="f"
                                     oct="6"
                                     dur="4"
                                     />
@@ -5278,7 +5287,7 @@
                         <staff xml:id="xe1e3c406-6c91-41b6-920a-01b34524c571" n="1">
                            <layer xml:id="xd2724b39-3a1a-4169-a90f-3dd8b6749c26" n="1">
                               <note xml:id="xe06d95b6-2dfe-47a6-b9cd-026b014660d9"
-                                    pname="d"
+                                    pname="d" accid.ges="f"
                                     oct="5"
                                     dur="4"
                                     />
@@ -5351,7 +5360,7 @@
                         <staff xml:id="x3d4d908f-f66c-4f46-8861-79285e851a1a" n="1">
                            <layer xml:id="x3080188d-3b69-4a0f-a526-1b667649205c" n="1">
                               <note xml:id="xad4e0bca-5515-4801-aad7-5330919e1e97"
-                                    pname="d"
+                                    pname="d" accid.ges="f"
                                     oct="5"
                                     dur="4"
                                     />
@@ -12125,7 +12134,7 @@
                         <staff xml:id="xc592ec75-9753-47b4-8fcf-95ca32841124" n="1">
                            <layer xml:id="x6fbfeec1-2929-4a4f-82ac-1e6fc2c1e455" n="1">
                               <note xml:id="x686321ff-fa87-4354-9ef2-643d18eacad3"
-                                    pname="f"
+                                    pname="f" accid.ges="s"
                                     oct="5"
                                     dur="4"
                                     />
@@ -12886,7 +12895,7 @@
                                      
                                      artic="stacc">
                                  
-                                 <note xml:id="x2e0f227f-a77f-4119-b8d8-fa397b3d109c" pname="f" oct="4"/>
+                                 <note xml:id="x2e0f227f-a77f-4119-b8d8-fa397b3d109c" pname="e" oct="4"/>
                                  <note xml:id="xd950f382-be4f-4ecb-8887-76a3c7a5be76" pname="c" oct="5"/>
                               </chord>
                               <chord xml:id="xab0a430c-62b5-4521-a7ac-6a12ae754620"
@@ -12900,7 +12909,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x2d6d603a-de8c-4ed4-921b-0947516d42ba"
-                               tstamp="1"
+                               tstamp="2"
                                place="below"
                                staff="1"> ff </dynam>
                      </measure>
@@ -13145,19 +13154,19 @@
                                  <chord xml:id="x5c9865ac-6062-40f0-b655-60ea0efacb24"
                                         dur="8"
                                         >
-                                    <note xml:id="x7f1b3dd2-9677-493f-aeb1-c53576241c3a" pname="b" oct="3"/>
+                                    <note xml:id="x7f1b3dd2-9677-493f-aeb1-c53576241c3a" pname="b" oct="3" accid.ges="f"/>
                                     <note xml:id="xc1fa5bdd-5c1f-4918-b8e2-56fa455b6d43" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="xbbdc86f7-d90f-4717-8c6a-dd54ed26d2b5"
                                         dur="8"
                                         >
-                                    <note xml:id="xd8aff5fe-1ba1-4ac8-94fa-828ebbd4010e" pname="b" oct="3"/>
+                                       <note xml:id="xd8aff5fe-1ba1-4ac8-94fa-828ebbd4010e" pname="b" oct="3" accid.ges="f"/>
                                     <note xml:id="x25dd124f-e2b4-4a3b-8922-3a6672045fec" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="xd0750839-2bb4-42fb-a9ea-92e7842e6e50"
                                         dur="8"
                                         >
-                                    <note xml:id="x44d4d31e-8320-4795-9e40-bce710b605f2" pname="b" oct="3"/>
+                                       <note xml:id="x44d4d31e-8320-4795-9e40-bce710b605f2" pname="b" oct="3" accid.ges="f"/>
                                     <note xml:id="x365874d7-299d-4b94-ad5d-6e246aa0e336" pname="f" oct="4"/>
                                  </chord>
                               </beam>
@@ -13544,7 +13553,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x6cfbb506-4013-410c-988b-ecff25ed596a"
-                               tstamp="1.5"
+                               tstamp="1"
                                place="below"
                                staff="1"> p </dynam>
                         <dynam xml:id="xf93eb44e-9413-4b97-809e-803c93af5766"
@@ -18542,7 +18551,7 @@
                         <staff xml:id="x577f72cb-68ea-41ab-ac6c-5f0969f59814" n="1">
                            <layer xml:id="x95d09f3f-340f-405b-9f81-a9260902522a" n="1">
                               <note xml:id="x4ee13a46-a426-42b9-9958-e495c9382db0"
-                                    pname="c"
+                                    pname="c" accid.ges="s"
                                     oct="5"
                                     dur="4"
                                     />
@@ -19533,7 +19542,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x79d7c42b-ba1c-4c69-ad92-b7687f498c3c"
-                               tstamp="1"
+                               tstamp="2"
                                place="below"
                                staff="1">
                        ff
@@ -19936,7 +19945,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x7de366c7-b6af-4dd8-bc22-bc58cedb07f4"
-                               tstamp="1"
+                               tstamp="3"
                                place="below"
                                staff="1">
                        pp
@@ -25291,7 +25300,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x48400f08-cfba-44d1-a20b-6ef7e5cef5cf"
-                               tstamp="1"
+                               tstamp="2"
                                place="below"
                                staff="1">
                            ff
