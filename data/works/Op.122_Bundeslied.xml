@@ -21682,6 +21682,7 @@
                                     />
                            </layer>
                         </staff>
+                        <!-- in T. 159 fehlt das ff in der OA, das in allen anderen Stimmen auf Zählzeit 1 steht. -->
                      </measure>
                      <measure n="160" xml:id="xb968be53-ff3e-4c17-8642-27e37a28e3e5">
                         <staff xml:id="x48cdb4bc-4ca3-4935-a546-b4593ed1beb9" n="1">
@@ -28210,6 +28211,14 @@
                                     />
                            </layer>
                         </staff>
+                        <!-- in der OA steht das folgende ff eigentlich aus Platzgründen oberhalb der Note -->
+                        <dynam xml:id="ufca4d54b-4f7e-4a0a-9d93-f0780ca8821e"
+                           label="direction"
+                           tstamp="1"
+                           place="below"
+                           staff="1">
+                           ff
+                        </dynam>
                      </measure>
                      <measure n="120" xml:id="xf9eba578-b9dc-499d-b46c-0aac7f8599e9">
                         <staff xml:id="x0155b863-fd6e-400f-827f-1d5227a8cf6b" n="1">
@@ -29621,6 +29630,7 @@
                                     />
                            </layer>
                         </staff>
+                        <!-- in der OA steht das folgende ff eigentlich aus Platzgründen oberhalb der Note -->
                         <dynam xml:id="xf6a7856c-d1b7-44aa-bf4c-1e68c5a37ed4"
                                label="direction"
                                tstamp="1"
