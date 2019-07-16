@@ -150,6 +150,15 @@
                   </changeDesc>
                   <date isodate="2019-07-15"/>
             </change>
+            <change n="12">
+                  <respStmt>
+                        <persName auth.uri="https://github.com/" codedval="Susanne Cox">Susanne Cox</persName>
+                  </respStmt>
+                  <changeDesc>
+                        <p>Für den 2. Satz: Fehler der Originalausgabe (nur die primäre Notation betreffend) als Kommentar angegeben.</p>
+                  </changeDesc>
+                  <date isodate="2019-07-16"/>
+            </change>
       </revisionDesc>
    </meiHead>
    <music meiversion="4.0.0">
@@ -28145,7 +28154,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xdbe57cc1-d393-4702-baf7-d2b39b1b4753"
-                               tstamp="1"
+                               tstamp="2"
                                place="below"
                                staff="1"> p </dynam>
                         <slur xml:id="x7b13b082-14a6-4942-9aee-7e0e521bfdb3"
@@ -28229,8 +28238,8 @@
                            <layer xml:id="x974c1b1a-002e-427d-b7f0-8af955f58f2c" n="1">
                               <rest xml:id="x90d92b45-1339-4162-a571-6e7145a1777e" dur="4"/>
                               <note xml:id="x076c0691-1f9c-4620-a8d1-f56ee5611755"
-                                    pname="d"
-                                    oct="5"
+                                    pname="b"
+                                    oct="4"
                                     dur="4"
                                     
                                     accid.ges="f"/>
@@ -28669,7 +28678,7 @@
                               <note xml:id="xbf7d765f-36d3-4c14-9b71-8f248d2135ac"
                                     pname="c"
                                     oct="6"
-                                    dur="2"
+                                    dur="2" dots="1"
                                     />
                            </layer>
                         </staff>
@@ -29213,7 +29222,7 @@
                                     dur="4"
                                     
                                     accid.ges="f"
-                                    artic="stacc">
+                                    artic="stacc"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                                  
                               </note>
                               <rest xml:id="x9556fd76-828a-4065-9ba8-045ab23910a6" dur="4"/>
@@ -30336,7 +30345,7 @@
                                        oct="4"
                                        dur="8"
                                        
-                                       accid.ges="f"/>
+                                       accid.ges="f"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                                  <note xml:id="xda3da910-9c6d-4f6d-bf92-8aa70a54039a"
                                        pname="c"
                                        oct="5"
@@ -30438,7 +30447,7 @@
                                     dur="4"
                                     
                                     accid.ges="f"
-                                    artic="stacc">
+                                    artic="stacc"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                                  
                               </note>
                               <rest xml:id="xc88ca7c2-5789-48c9-80ff-ff1bea6504fe" dur="4"/>
@@ -30526,9 +30535,9 @@
                                        
                                        accid.ges="f"/>
                                  <note xml:id="x6c25d8b6-1082-4ca3-b0bc-efecaf522a16"
-                                       pname="c"
-                                       oct="5"
-                                       dur="8"
+                                       pname="b"
+                                       oct="4"
+                                       dur="8" accid.ges="f"
                                        />
                               </beam>
                            </layer>
@@ -30601,7 +30610,7 @@
                                     dur="4"
                                     
                                     accid.ges="f"
-                                    artic="stacc">
+                                    artic="stacc"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                                  
                               </note>
                               <beam xml:id="x661d3e18-ffdc-4646-b014-e5a135dba937">
@@ -30671,7 +30680,7 @@
                                     oct="4"
                                     dur="4"
                                     
-                                    accid.ges="f"/>
+                                    accid.ges="f"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                               <rest xml:id="x760ce045-87ec-46bf-95bb-0b802177ad11" dur="4"/>
                               <rest xml:id="xf170446a-8b1b-41af-aafb-cd4f54c24082" dur="4"/>
                            </layer>
@@ -30937,7 +30946,7 @@
                                     oct="4"
                                     dur="2"
                                     
-                                    accid.ges="f"/>
+                                    accid.ges="f"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                               <note xml:id="xfe7f2824-057a-4ce6-bfd7-9709bda16b08"
                                     pname="a"
                                     oct="4"
@@ -31472,7 +31481,7 @@
                                     oct="4"
                                     dur="2"
                                     dots="1"
-                                    />
+                              /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                            </layer>
                         </staff>
                         <slur xml:id="x04618b56-4a2f-45bf-8219-cdc54246fc52"
@@ -32627,7 +32636,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x3faf18ee-eb1f-4a37-99d2-9dcb0ca40244"
-                               tstamp="1"
+                               tstamp="2"
                                place="below"
                                staff="1">
                            sf
@@ -32653,7 +32662,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x1ff9fa78-ac4c-425a-9960-996551452444"
-                               tstamp="1"
+                               tstamp="2"
                                place="below"
                                staff="1">
                            sf
@@ -32900,8 +32909,6 @@
                                     pname="c"
                                     oct="5"
                                     dur="4"
-                                    
-                                    accid.ges="f"
                                     artic="stacc">
                                  
                               </note>
@@ -32956,7 +32963,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x7d496094-8eaf-446c-9bc3-3bea58ca08c1"
-                               tstamp="1"
+                               tstamp="2"
                                place="below"
                                staff="1">sf
                         </dynam>
@@ -33002,7 +33009,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xb7dde852-cdbc-46e1-81f1-e8b816c176cb"
-                               tstamp="1"
+                               tstamp="2"
                                place="below"
                                staff="1">
                          sf
@@ -33050,7 +33057,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x5ae2a35a-db4c-4ea7-9eed-fb09516e6fd5"
-                               tstamp="2.5"
+                               tstamp="2"
                                place="above"
                                staff="1">
                            sf
@@ -33827,7 +33834,7 @@
                                     oct="3"
                                     dur="2"
                                     dots="1"
-                                    />
+                                    /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                            </layer>
                         </staff>
                      </measure>
@@ -33986,8 +33993,7 @@
                                  <note xml:id="x37a65d3e-18d9-4f51-bebf-4a52c8df88c9" pname="c" oct="4"/>
                                  <note xml:id="xcded25a7-1ad3-43ab-baa1-e29eee8b8c62"
                                        pname="e"
-                                       oct="4"
-                                       accid.ges="f"/>
+                                       oct="4" accid="n"/>
                               </chord>
                            </layer>
                         </staff>
@@ -34700,7 +34706,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x8a210e13-f0e8-462f-8faf-01566dcde74f"
-                               tstamp="0.5"
+                               tstamp="1"
                                place="below"
                                staff="1">
                           cres
@@ -34718,7 +34724,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x200d1f13-a8da-484a-9f2e-26d2f77352d9"
-                               tstamp="1.5"
+                               tstamp="1"
                                place="below"
                                staff="1">
                            decres
@@ -35153,7 +35159,7 @@
                         </dynam>
                         <hairpin xml:id="x4c384304-2d29-4772-91e7-9517e5ea6e01"
                                  place="above"
-                                 tstamp="3"
+                                 tstamp="2.9"
                                  tstamp2="0m+4"
                                  staff="1"
                                  form="cres"/>
