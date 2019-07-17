@@ -28513,8 +28513,8 @@
                         <layer xml:id="xfcb25039-3281-460c-afae-b2733317384f" n="1">
                            <rest xml:id="xb9d240e1-e5b8-40e5-a18a-c42d3d8fc290"
                                  dur="4"
-                                 ploc="a"
-                                 oloc="3"/>
+                                 ploc="c"
+                                 oloc="4"/>
                            <note xml:id="xb704395e-8ba1-4f2d-8d62-671ecf76fd80"
                                  pname="b"
                                  oct="3"
@@ -28701,7 +28701,7 @@
                         <layer xml:id="xf28a8aac-2c48-4146-a985-4771b8512017" n="1">
                            <rest xml:id="xd8325f68-2472-4243-91f7-a98f55415f98"
                                  dur="4"
-                                 ploc="d"
+                                 ploc="c"
                                  oloc="3"/>
                            <note xml:id="x69561d0b-d77f-476b-8eb5-4225e702937e"
                                  pname="b"
@@ -29420,10 +29420,10 @@
                                     dur="16"
                                     />
                               <note xml:id="xd5c69391-1407-4efa-9162-9ee32d5cc82b"
-                                    pname="g"
+                                    pname="g" accid.ges="s"
                                     oct="4"
                                     dur="16"
-                                    />
+                              /> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                            </beam>
                         </layer>
                         <layer xml:id="x986fb8f9-e55e-4179-998f-f87755f7c6b2" n="2">
@@ -29454,7 +29454,7 @@
                                  oct="3"
                                  dur="2"
                                  dots="1"
-                                 />
+                                 /> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                         </layer>
                         <layer xml:id="x4c7ede48-c21f-4d49-b8b6-dd0de9302157" n="2">
                            <note xml:id="x4eef1beb-9cb2-4028-86cf-d43ac1195984"
@@ -29480,7 +29480,7 @@
                            />
                      <dynam xml:id="x55ed5172-5a07-48c3-a0d8-c59afb5a8455"
                             staff="2"
-                            tstamp="1"
+                            tstamp="1.5"
                             place="above">sf</dynam>
                      <tie xml:id="x0fa08a12-66e4-47d1-baa3-fec699835da1"
                           staff="1"
@@ -29593,7 +29593,7 @@
                            />
                      <dynam xml:id="x723378ae-1207-4137-ad2b-0fe40b00982b"
                             staff="2"
-                            tstamp="1"
+                            tstamp="1.5"
                             place="above">sf</dynam>
                      <dynam xml:id="x9c4bb285-a5b6-4f69-8220-2baec18ffbd3"
                             staff="1"
@@ -29628,10 +29628,10 @@
                                     dur="16"
                                     />
                               <note xml:id="x50fcd027-b850-4387-a805-e3e9a4a1fdc9"
-                                    pname="d"
+                                    pname="d" accid.ges="s"
                                     oct="4"
                                     dur="16"
-                                    />
+                              /> <!-- Fehler in OA: Auflösungszeichen fehlt -->
                            </beam>
                            <beam xml:id="xcb86b234-7447-4a8a-8c3d-59df65c649d5">
                               <note xml:id="xc2c74839-6938-40a3-ba43-04e1812f1b09"
@@ -29713,7 +29713,7 @@
                            />
                      <dynam xml:id="xe447e813-4663-414c-b838-04e6964ae963"
                             staff="2"
-                            tstamp="1"
+                            tstamp="1.5"
                             place="above">sf</dynam>
                      <tie xml:id="x8212275d-53c1-421a-8864-63b0e47fb742"
                           staff="1"
@@ -29991,7 +29991,7 @@
                            <space xml:id="xca88049d-965d-4c60-8c34-0602dccae2ed" dur="2"/>
                            <tuplet xml:id="x065aff75-7279-4d6b-9aa4-4b16024fb74d"
                                    numbase="2"
-                                   num.visible="false"
+                                   num.visible="false" num.format="count"
                                    num="3">
                               <beam xml:id="xc116259b-0be5-4bc7-9371-2adc84c46c9c">
                                  <note xml:id="x3cba892e-5ae7-423c-b6d9-e7f4ef9c1427"
@@ -32141,11 +32141,12 @@
                      </staff>
                      <staff xml:id="x2d7ee497-33ae-4efb-953b-c223ef8d944b" n="2">
                         <layer xml:id="x20d168ef-b094-4780-baa4-3fc8ba6f4a12" n="1">
-                           <rest xml:id="xe9b14d18-80af-4498-b0fb-9179d0ef2b4a" dur="8"/>
+                           
                            <tuplet xml:id="x31ffc0e0-5de0-4aff-8c37-ea6289c46fda"
                                    num="3"
                                    numbase="2"
-                                   num.visible="false">
+                                   num.visible="false" bracket.visible="false">
+                                 <rest xml:id="xe9b14d18-80af-4498-b0fb-9179d0ef2b4a" dur="8"/>
                               <beam xml:id="xa558f66d-f3aa-49bb-8e31-fcd6508b25fe">
                                  <note xml:id="x5726a5bf-2077-4685-8f27-8317e0142e49"
                                        pname="g"
@@ -32243,8 +32244,8 @@
                                  oct="2"
                                  dur="4"
                                  />
-                           <rest xml:id="x1964eea4-dde4-4576-b486-832969b4fd9e" dur="4"/>
-                           <rest xml:id="x3667a3df-dcd9-4700-aec0-8ab39fde7776" dur="2"/>
+                           <rest xml:id="x1964eea4-dde4-4576-b486-832969b4fd9e" dur="4" ploc="e" oloc="2"/>
+                           <rest xml:id="x3667a3df-dcd9-4700-aec0-8ab39fde7776" dur="2" ploc="g" oloc="2"/>
                         </layer>
                      </staff>
                      <dynam xml:id="x951c50ee-e520-4e02-9269-71dea2bce64d"
@@ -32358,8 +32359,8 @@
                      </staff>
                      <staff xml:id="x06dbfd5a-59ca-499b-9bcb-64d19965c124" n="2">
                         <layer xml:id="x120c19f2-ec1d-4682-ad0b-d3370ea75da0" n="1">
-                           <rest xml:id="x6d43663d-7f44-4c3e-91da-828868422d4c" dur="2"/>
-                           <rest xml:id="x51775509-9ca5-4a93-932c-52cb707dd141" dur="4"/>
+                              <rest xml:id="x6d43663d-7f44-4c3e-91da-828868422d4c" dur="2" ploc="b" oloc="2"/>
+                           <rest xml:id="x51775509-9ca5-4a93-932c-52cb707dd141" dur="4" ploc="g" oloc="2"/>
                            <chord xml:id="x3257ffca-c7d5-43f7-8b6b-0f9813ef9452"
                                   dur="4"
                                    

@@ -39876,7 +39876,7 @@
                                           pname="e"
                                           oct="5"
                                           dur="8"
-                                          />
+                                          /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                                     <note xml:id="x48976c16-3408-4e4c-8baa-2fcb32e59059"
                                           pname="g"
                                           oct="5"
@@ -40116,7 +40116,7 @@
                                     pname="d"
                                     oct="6"
                                     dur="4"
-                                    />
+                              /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                               <rest xml:id="x4b1d8be8-5937-4213-a4c6-c6a8baa73b2c" dur="4"/>
                            </layer>
                         </staff>
@@ -47586,7 +47586,7 @@
                                            dur="8"
                                            >
                                        <note xml:id="xdd263eaf-4231-4f17-911c-15737e650a32" pname="g" oct="3"/>
-                                       <note xml:id="x548c87d3-d3bd-45a5-b05b-fbdd901d434e" pname="e" oct="4"/>
+                                          <note xml:id="x548c87d3-d3bd-45a5-b05b-fbdd901d434e" pname="e" oct="4"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                                     </chord>
                                     <chord xml:id="x7fc775f4-9803-480d-bbb5-ec3dde355e21"
                                            dur="8"
@@ -47693,7 +47693,7 @@
                                        pname="a"
                                        accid="f"
                                        oct="3"/>
-                                 <note xml:id="x20ae7db0-df98-44c3-abca-983d7574bfb4" pname="e" oct="4"/>
+                                    <note xml:id="x20ae7db0-df98-44c3-abca-983d7574bfb4" pname="e" oct="4"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                               </chord>
                            </layer>
                         </staff>
@@ -47730,8 +47730,8 @@
                                     <chord xml:id="x068888ed-20a8-4e3b-b214-6308514ea102"
                                            dur="8"
                                            >
-                                       <note xml:id="x4822e25e-b9d0-4f11-8ec8-77e810ce4d81" pname="a" oct="3"/>
-                                       <note xml:id="x5f43bffd-c7a6-4c17-bbac-1cca5e309580" pname="e" oct="4"/>
+                                          <note xml:id="x4822e25e-b9d0-4f11-8ec8-77e810ce4d81" pname="a" oct="3"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                          <note xml:id="x5f43bffd-c7a6-4c17-bbac-1cca5e309580" pname="e" oct="4"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                                     </chord>
                                     <chord xml:id="x50c37aff-90cc-4776-8dcc-284610c92f69"
                                            dur="8"
@@ -53338,7 +53338,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x0d328d08-c5e6-4366-b04d-21713814185b"
-                               tstamp="1"
+                               tstamp="1.5"
                                place="below"
                                staff="1">
                            sf
