@@ -172,6 +172,15 @@
             </changeDesc>
             <date isodate="2019-07-02"/>
          </change>
+         <change n="13">
+            <respStmt>
+               <persName auth.uri="https://github.com/" codedval="susannecox">Susanne Cox</persName>
+            </respStmt>
+            <changeDesc>
+               <p>Dynam und hairpin unter den Systemen; nur bei Singstimmen darüber</p>
+            </changeDesc>
+            <date isodate="2019-07-17"/>
+         </change>
       </revisionDesc>
    </meiHead>
    <music>
@@ -1896,7 +1905,7 @@
                            </layer>
                         </staff>
                         <hairpin xml:id="x53da5363-7489-495b-b495-ca610cb21305" tstamp="1"
-                           place="above" staff="1" form="cres" tstamp2="1m+1" opening="2.4"/>
+                           place="below" staff="1" form="cres" tstamp2="1m+1" opening="2.4"/>
                      </measure>
                      <measure n="72" xml:id="x27ff38b4-95a2-4068-934f-e58bfebc82c1">
                         <staff xml:id="x758ca844-bfef-41d7-879d-9d170ef2de96" n="1">
@@ -1915,7 +1924,7 @@
                            startid="#xfaa24314-c1f3-432c-aa88-097f62d0678f" 
                            endid="#x5c8e574f-73c7-44f2-8974-1ac535038c94" staff="1"/>
                         <hairpin xml:id="xb534b2fc-f3c4-4b42-a295-3cef308dc13c" tstamp="1.375"
-                           place="above" staff="1" form="dim" opening="2.4" tstamp2="0m+2.875"/>
+                           place="below" staff="1" form="dim" opening="2.4" tstamp2="0m+2.875"/>
                         <dynam xml:id="xe7fae01c-4d06-4569-a549-a639539dcb5b" label="direction"
                            tstamp="2" place="below" staff="1"> p </dynam>
                      </measure>
@@ -3622,7 +3631,7 @@
                            </layer>
                         </staff>
                         <hairpin xml:id="x9eee461a-6dd5-484b-b59d-deb1f7e8634c" tstamp="1"
-                           place="above" staff="1" form="cres" tstamp2="1m+1.25" opening="2.4"/>
+                           place="below" staff="1" form="cres" tstamp2="1m+1.25" opening="2.4"/>
                      </measure>
                      <measure n="72" xml:id="x168b6797-db20-4891-a662-d33273f67d23">
                         <staff xml:id="x1db5c9cf-0245-4666-a5b0-aed3b0d1f1d7" n="1">
@@ -3641,7 +3650,7 @@
                            startid="#xb442a6d5-1bd2-4041-b716-6bbf0917030e" 
                            endid="#x5ff2dda7-7a19-4367-add9-151b63eef294" staff="1"/>
                         <hairpin xml:id="x9214f226-227f-473b-a70a-cb449a383c97" tstamp="1.5"
-                           place="above" staff="1" form="dim" opening="2.4" tstamp2="0m+3"/>
+                           place="below" staff="1" form="dim" opening="2.4" tstamp2="0m+3"/>
                         <dynam xml:id="xc418c211-afe9-40a5-b77c-5f8c931e599c" label="direction"
                            tstamp="2" place="below" staff="1"> p </dynam>
                      </measure>
@@ -12196,7 +12205,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xf900f316-d140-4031-8716-6642968cb1d3" tstamp="1"
-                           place="below" staff="1">cres</dynam>
+                           place="above" staff="1">cres</dynam>
                         <slur xml:id="xc0ca4cf9-c91d-4d9c-8aa4-7c06e2a45065"
                            startid="#xe4115c46-8204-461e-a3cc-10c3c93eca4a" 
                            endid="#x8bed20fd-1ada-4624-875e-b149de732600" staff="1"/>
@@ -13173,7 +13182,7 @@
                            </layer>
                         </staff>
                         <hairpin xml:id="xb18ae99b-c1be-4896-8a9c-ba244f5b4beb" tstamp="3.125"
-                           place="below" staff="1" form="dim" tstamp2="0m+4.75"/>
+                           place="above" staff="1" form="dim" tstamp2="0m+4.75"/>
                         <tie xml:id="xcad0f7d6-597a-46ee-b19b-8326f7ea730a" staff="1"
                            startid="#x0b0c537b-02d5-4f29-a507-b2a0c0a7e325"
                            endid="#x21174f18-fe19-485e-a09c-150378213af8"/>
@@ -14239,7 +14248,7 @@
                            </layer>
                         </staff>
                         <hairpin xml:id="x8b117515-0d10-403e-8304-fa03efad4b5e" tstamp="3"
-                           place="below" staff="1" form="dim" tstamp2="0m+5"/>
+                           place="above" staff="1" form="dim" tstamp2="0m+5"/>
                         <tie xml:id="x5dab321c-283a-4987-93a8-6505ee9f1999" staff="1"
                            startid="#x96f5988d-8c36-44ff-80ac-44f7a8630469"
                            endid="#x16f72d12-3a90-472e-94dc-0786f86aed91"/>
@@ -15329,7 +15338,7 @@
                            </layer>
                         </staff>
                         <hairpin xml:id="x7d59ebf8-178a-4af5-adc5-779bce68ff82" tstamp="3"
-                           place="below" staff="1" form="dim" tstamp2="0m+4.875"/>
+                           place="above" staff="1" form="dim" tstamp2="0m+4.875"/>
                         <tie xml:id="x0c04139d-6833-4684-a9be-a30d41525f5c" staff="1"
                            startid="#xea71bff5-e217-4d6e-b529-b61c36bdc67d"
                            endid="#xc266f97b-2afb-42c5-9998-ba8bd29ca3bb"/>
@@ -15766,7 +15775,7 @@
                         <dynam xml:id="xb2f419a6-2f9c-4a8d-be4b-fa29a035ac40" tstamp="1"
                            place="above" staff="1"> f </dynam>
                         <hairpin xml:id="x0f08303d-d6d1-4811-85da-77758b7ae737" tstamp="1"
-                           place="below" staff="1" form="dim" tstamp2="0m+2.75"/>
+                           place="above" staff="1" form="dim" tstamp2="0m+2.75"/>
                         <dynam xml:id="x27bdc8cf-6d7d-4b8a-9656-5c38083d8d47" tstamp="3"
                            place="above" staff="1"> p </dynam>
                      </measure>
@@ -15792,7 +15801,7 @@
                         <dynam xml:id="xb8c13b57-1690-4ce7-8244-0bdbb47d5c66" tstamp="2"
                            place="above" staff="1"> f </dynam>
                         <hairpin xml:id="x13d4c1b0-2546-475c-b241-5612643f6e90" tstamp="3"
-                           place="below" staff="1" form="dim" tstamp2="1m+1"/>
+                           place="above" staff="1" form="dim" tstamp2="1m+1"/>
                         <tie xml:id="x58712255-a7de-4878-a45a-b62f9c155b0f" staff="1"
                            startid="#xdcb60023-56a0-46ed-bc68-81e266db848b"
                            endid="#x19012445-d20f-418b-b57f-88b296e1c70f"/>
@@ -18370,7 +18379,7 @@
                            startid="#x24200028-8bc2-4a30-8f4a-3a89eecc5369" 
                            endid="#xd0268564-2301-4149-a515-26eca13d4f54" staff="1"/>
                         <hairpin xml:id="x8c0bf17d-03f1-4d4b-bcf4-4d54470a7f80" tstamp="2"
-                           place="above" staff="1" form="dim" tstamp2="0m+4.25"/>
+                           place="below" staff="1" form="dim" tstamp2="0m+4.25"/>
                      </measure>
                      <measure n="65" xml:id="x658df965-11af-45ca-bc71-c40cf92a2273">
                         <staff xml:id="xac715f15-bfc9-488f-b750-e074b903f4e1" n="1">

@@ -20469,7 +20469,6 @@
                                  dur="2"
                                  dots="1"
                                  />
-                           <space xml:id="x6e7580ce-b9d8-4225-a3c8-915e4b5e3a45" dur="4"/>
                            <clef xml:id="x5178864e-bec2-4f24-98b0-1be3d430e9f8" shape="F" line="4"/>
                         </layer>
                      </staff>
@@ -20603,7 +20602,7 @@
                         <layer xml:id="x7fa19d06-1b9f-4379-bd90-1409e083e6cc" n="1">
                                  <note xml:id="xaf195300-b37f-4c53-8358-d1af7c17caf2" pname="b" oct="3" dur="2"
                                        />
-                                 <note xml:id="x741b1fdd-2f16-4aa4-8d0a-396aa5360863" pname="b" oct="3" dur="2"
+                                 <note xml:id="x741b1fdd-2f16-4aa4-8d0a-396aa5360863" pname="b" oct="3" dur="4"
                                        />
                         </layer>
                            <layer xml:id="xcc40e325-d2f9-4725-8e55-1b549afae78c" n="2">
@@ -20616,7 +20615,7 @@
                                  <note xml:id="x58c0c456-78af-4f9d-8f8a-ca635dd9f92e"
                                        pname="e"
                                        oct="3"
-                                       dur="2"
+                                       dur="4"
                                        />
                            </layer>
                      </staff>
@@ -25246,11 +25245,11 @@
                                        oct="2"
                                        dur="8"
                                        
-                                       accid.ges="s"/>
+                                       />
                                  <note xml:id="x1a46931c-3ad8-4c5c-ba3c-6bd97f9062db"
                                        pname="d"
                                        oct="3"
-                                       dur="8"
+                                       dur="8" accid.ges="s"
                                        />
                                  <note xml:id="xbd7964c4-392e-429c-8ba4-2071c1dfe048"
                                        pname="g"
@@ -25695,8 +25694,8 @@
                         <layer xml:id="xcbf80b15-00d6-42d9-a4f1-2c71e7e26b5d" n="1">
                            <rest xml:id="xdd12cee6-2ff2-47cc-adcf-2aa06c9f98cf"
                                  dur="4"
-                                 ploc="b"
-                                 oloc="3"/>
+                                 ploc="c"
+                                 oloc="4"/>
                            <note xml:id="xd8afc208-e494-4989-8477-93c1d3e38038"
                                  pname="b"
                                  oct="3"
@@ -26129,11 +26128,9 @@
                                  <note xml:id="x202424d4-6321-4feb-ac0c-e60c12b9f430"
                                        pname="b"
                                        oct="2"
-                                       dur="8"
-                                       
-                                       accid.ges="s"/>
+                                       dur="8"/>
                                  <note xml:id="xda48bc94-3aca-4ddf-8ecd-98048fc4c1e7"
-                                       pname="d"
+                                       pname="d" accid.ges="s"
                                        oct="3"
                                        dur="8"
                                        />
@@ -26580,8 +26577,8 @@
                         <layer xml:id="xb817511f-cebf-47fd-94e5-9567d197c93a" n="1">
                            <rest xml:id="xd6866a74-8992-48b4-ba35-83f3ddd6c4c7"
                                  dur="4"
-                                 ploc="a"
-                                 oloc="3"/>
+                                 ploc="c"
+                                 oloc="4"/>
                            <note xml:id="xb434e93d-6708-425c-8d9d-37d34485a861"
                                  pname="b"
                                  oct="3"
@@ -26985,7 +26982,7 @@
                      <slur xml:id="xca31dc53-9275-46ab-b25d-5828db2f2c43"
                            staff="2"
                            startid="#xe7a70d61-a0b1-4082-826b-185024f3aaa7"
-                           endid="#x29c809c9-143d-4acf-a29b-064ca20964e3"
+                           endid="#xfed3a039-b2f8-42ca-abd6-1e6efcc085a9"
                            />
                   </measure>
                   <measure n="18" xml:id="x75496bc5-db3c-4cfc-b6ac-9c9966567be1">
@@ -27057,7 +27054,16 @@
                         </layer>
                      </staff>
                      <staff xml:id="x27f29b84-44c9-4bd1-adbb-99372192f059" n="2">
-                        <layer xml:id="xdc6c6e2b-af31-4cc3-914e-80c02f9a5c3c" n="1">
+                           <layer xml:id="xb8c67122-3ca3-4d06-9049-9c6c7032f159" n="1">
+                                 <space xml:id="xf2c921f7-353e-40de-bead-2774130ed33b" dur="2"/>
+                                 <note xml:id="xedc5798a-6030-415d-b8a3-096267733cea"
+                                       pname="c"
+                                       oct="3" 
+                                       dur="2"
+                                       accid.ges="s"
+                                 />
+                           </layer>
+                        <layer xml:id="xdc6c6e2b-af31-4cc3-914e-80c02f9a5c3c" n="2">
                            <note xml:id="x43682eb2-3106-4688-950d-5c5ee67f98f6"
                                  pname="b"
                                  oct="1"
@@ -27080,23 +27086,17 @@
                                  dur="4"
                                  />
                         </layer>
-                        <layer xml:id="xe129b54c-2982-4148-b19f-e2570b2b5767" n="2">
+                        <layer xml:id="xe129b54c-2982-4148-b19f-e2570b2b5767" n="3">
                            <note xml:id="x7d111da5-7516-4f73-ad84-333a1fd11115"
                                  pname="b"
                                  oct="1"
                                  dur="2"
                                  />
-                              <chord xml:id="xded42dd1-4695-406b-a2f1-bdd9ce12e822" dur="2">
-                           <note xml:id="xedc5798a-6030-415d-b8a3-096267733cea"
-                                 pname="c"
-                                 oct="2"
-                                 accid.ges="s"
-                                 />
-                                    <note xml:id="x5cf73c96-889b-4d6f-a682-9b592ff28a6f"
+                              <note xml:id="x5cf73c96-889b-4d6f-a682-9b592ff28a6f"
                                           pname="c"
-                                          oct="3"
+                                          oct="2" 
+                                          dur="2"
                                           accid.ges="s"/>
-                              </chord>
                         </layer>
                      </staff>
                         <dynam xml:id="xa23c73d2-b05d-4a0b-8a71-fe20ee269f34"
@@ -27169,7 +27169,16 @@
                         
                      </staff>
                      <staff xml:id="x272f21f2-7dd1-4b64-bfbb-e39a6f4d31ca" n="2">
-                        <layer xml:id="x4f7cc5f5-c433-4889-b892-fb3040342835" n="1">
+                           <layer xml:id="x8ff0e738-52f0-442b-8ab8-b989e226b9dc" n="1">
+                                 <note xml:id="x56d0fe1f-57c7-402f-ae9e-26656c083c87"
+                                       pname="d"
+                                       oct="3" dur="2"
+                                       accid.ges="s"/>
+                                 <note xml:id="xf0b9dc7f-57d7-4bef-844d-ceebde3470e6"
+                                       pname="e"
+                                       oct="3" dur="2"/>
+                           </layer>
+                        <layer xml:id="x4f7cc5f5-c433-4889-b892-fb3040342835" n="2">
                            <note xml:id="xc0727716-d125-45d0-9606-528470215a58"
                                  pname="d"
                                  oct="3"
@@ -27192,26 +27201,17 @@
                                  dur="4"
                                  />
                         </layer>
-                        <layer xml:id="x9b286758-dea3-4a4f-b39e-f1f90a92b46a" n="2">
-                           <chord xml:id="x6e954e0c-3532-4b31-bdea-ea285d15634b" dur="2">
-                                 <note xml:id="x66727c78-237e-4ae0-8b0e-96203674a90c"
+                        <layer xml:id="x9b286758-dea3-4a4f-b39e-f1f90a92b46a" n="3">
+                           <note xml:id="x66727c78-237e-4ae0-8b0e-96203674a90c"
                                  pname="d"
-                                 oct="2"
+                                 oct="2" dur="2"
                                  accid.ges="s"
                                  />
-                                 <note xml:id="x56d0fe1f-57c7-402f-ae9e-26656c083c87"
-                                       pname="d"
-                                       oct="3"
-                                       accid.ges="s"/>
-                           </chord>
-                           <chord xml:id="x45f359f2-59d3-4ffd-a3db-e6b94c07af21" dur="2">
-                                 <note xml:id="x523eff0b-c2f1-4161-b34a-360c369428da"
+                                 
+                           <note xml:id="x523eff0b-c2f1-4161-b34a-360c369428da"
                                  pname="e"
-                                 oct="2"/>
-                                 <note xml:id="xf0b9dc7f-57d7-4bef-844d-ceebde3470e6"
-                                       pname="e"
-                                       oct="3"/>
-                           </chord>
+                                 oct="2" dur="2"/>
+                                 
                         </layer>
                      </staff>
                   </measure>
@@ -27798,7 +27798,7 @@
                            <chord xml:id="xa674cc7f-da7e-4d2a-b3e6-a9457681e4d4"
                                   dur="2"
                                   >
-                              <note xml:id="xc574858d-bf1a-4a35-859b-8e7ed6b8d04f" pname="g" oct="3"/>
+                              <note xml:id="xc574858d-bf1a-4a35-859b-8e7ed6b8d04f" pname="b" oct="3"/>
                               <note xml:id="x54f320ea-5f61-4cc6-8e1d-5e0a6083a2b7"
                                     pname="c"
                                     oct="4"
@@ -28067,7 +28067,7 @@
                                        dur="8"
                                        />
                                  <note xml:id="x91fc06ad-2631-4d93-bad4-56261be1d6bb"
-                                       pname="d"
+                                       pname="d" accid.ges="s"
                                        oct="3"
                                        dur="8"
                                        />
