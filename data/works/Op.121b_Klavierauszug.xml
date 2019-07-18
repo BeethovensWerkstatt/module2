@@ -168,6 +168,14 @@
             </changeDesc>
             <date isodate="2019-07-01"/>
          </change>
+         <change n="14">
+            <respStmt>
+               <persName auth.uri="https://github.com/" codedval="susannecox">Susanne Cox</persName>
+            </respStmt>
+            <changeDesc>
+               <p>dynam und hairpin bei den Singstimmen nun über den Systemen</p>
+            </changeDesc>
+            <date isodate="2019-07-17"/>
       </revisionDesc>
    </meiHead>
    <music>
@@ -6912,19 +6920,19 @@
                      <hairpin xml:id="x97ec55a4-c691-475f-959a-eb5dbb67def7"
                               form="dim"
                               staff="3"
-                              place="below"
+                              place="above"
                               tstamp="3"
                               tstamp2="1m+1"/>
                      <hairpin xml:id="xa728e5f4-66d7-494e-b6bf-ed3e4b66050a"
                               form="dim"
                               staff="4"
-                              place="below"
+                              place="above"
                               tstamp="3"
                               tstamp2="1m+1"/>
                      <hairpin xml:id="x03688ba2-084c-4952-a759-9830d92715df"
                               form="dim"
                               staff="5"
-                              place="below"
+                              place="above"
                               tstamp="3"
                               tstamp2="1m+1"/>
                      <hairpin xml:id="xd89084f2-cf86-490e-ae8a-aed0a8255ce3"
