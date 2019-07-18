@@ -1354,12 +1354,12 @@
               key.sig="1f" key.mode="major">
               <staffGrp xml:id="xc1d9f029-a978-4c29-90f1-830775d9ade1">
                 <staffGrp xml:id="x143fc60e-0e23-461d-89ec-57c3ac400171" symbol="brace">
-                  <staffDef xml:id="xf972b439-0316-4b70-b9a8-30958f2bdaa1" n="1" key.sig="1f"/>
-                  <staffDef xml:id="x8d6c74e1-2aec-46ac-ad7a-ca7e1f9204b0" n="2" key.sig="1f"/>
+                  <staffDef xml:id="xf972b439-0316-4b70-b9a8-30958f2bdaa1" n="1"/>
+                  <staffDef xml:id="x8d6c74e1-2aec-46ac-ad7a-ca7e1f9204b0" n="2"/>
                 </staffGrp>
                 <staffGrp xml:id="x8cb2142a-3c7f-49c1-8564-ee5db1716ad6" symbol="brace">
-                  <staffDef xml:id="xd6c58002-8f59-408d-949d-e8d874df8d42" n="3" key.sig="1f"/>
-                  <staffDef xml:id="x12990b28-4498-4b1b-a0f5-bf90d8923235" n="4" key.sig="1f"/>
+                  <staffDef xml:id="xd6c58002-8f59-408d-949d-e8d874df8d42" n="3" />
+                  <staffDef xml:id="x12990b28-4498-4b1b-a0f5-bf90d8923235" n="4" />
                 </staffGrp>
               </staffGrp>
             </scoreDef>
@@ -1788,12 +1788,12 @@
               meter.sym="common" key.sig="2f" key.mode="major">
               <staffGrp xml:id="xeb1b9172-1382-443e-8990-3bf1bc84d847">
                 <staffGrp xml:id="xb544e28f-eb2d-48f3-a363-069d388b2721" symbol="brace">
-                  <staffDef xml:id="x2ce01ffa-d08f-41dd-87dc-a6c7b3b5c517" n="1" key.sig="2f"/>
-                  <staffDef xml:id="xe29a0ba4-b108-4b3d-b922-719ba048c62b" n="2" key.sig="2f"/>
+                  <staffDef xml:id="x2ce01ffa-d08f-41dd-87dc-a6c7b3b5c517" n="1" />
+                  <staffDef xml:id="xe29a0ba4-b108-4b3d-b922-719ba048c62b" n="2" />
                 </staffGrp>
                 <staffGrp xml:id="x943d6b3b-d07c-4255-b411-989156119e49" symbol="brace">
-                  <staffDef xml:id="x139d7385-323e-4cae-a908-cb3e5864164b" n="3" key.sig="2f"/>
-                  <staffDef xml:id="x8b8cec87-a5c4-4847-a0c1-61936b4b98bc" n="4" key.sig="2f"/>
+                  <staffDef xml:id="x139d7385-323e-4cae-a908-cb3e5864164b" n="3" />
+                  <staffDef xml:id="x8b8cec87-a5c4-4847-a0c1-61936b4b98bc" n="4" />
                 </staffGrp>
               </staffGrp>
             </scoreDef>
@@ -15406,31 +15406,31 @@
                 <layer xml:id="x197a44f2-447a-4f69-99a2-41bdcb3ea8ad" n="1">
                   <beam xml:id="x0c76b089-9b8c-4dad-8ea5-bf5c642da4e7">
                     <note xml:id="xf2f6a31e-bc3e-4ac9-8d2b-41c8104fd5b9" pname="e" oct="5" dur="8"
-                      stem.dir="down" accid.ges="f"/>
+                      stem.dir="down" accid.ges="f" oct.ges="6"/>
                     <rest xml:id="xed0d229a-23e1-4b99-b0d1-580cb16bc70e" dur="16"/>
                     <note xml:id="x91d861c7-616a-4fbe-bb55-0d73899512ed" pname="f" oct="5" dur="16"
-                      stem.dir="down"/>
+                      stem.dir="down" oct.ges="6"/>
                   </beam>
                   <beam xml:id="xdf6c14fe-5efb-4eb9-9102-f853251b83fc">
                     <note xml:id="x8c73071b-d21e-4227-a962-40a463ef9a5f" pname="f" oct="5" dur="8"
-                      stem.dir="down"/>
+                      stem.dir="down" oct.ges="6"/>
                     <rest xml:id="x0aa4f0ec-ac38-4520-8b35-890b8e43ed58" dur="16"/>
                     <note xml:id="x693a3fbe-5019-414c-8be2-67267cc25ebd" pname="f" oct="5" dur="16"
-                      stem.dir="down"/>
+                      stem.dir="down" oct.ges="6"/>
                   </beam>
                   <beam xml:id="x3af75bd0-0e78-4256-880e-5089ddbddd62">
                     <note xml:id="xd334c074-6eb5-4422-8b7f-ff4296e195a4" pname="f" oct="5" dur="8"
-                      stem.dir="down"/>
+                      stem.dir="down" oct.ges="6"/>
                     <rest xml:id="xd1d2fb4c-b130-44a3-8b6a-37f0c4a5611d" dur="16"/>
                     <note xml:id="x23764e0c-65d9-4df2-9ea7-d8f8a43094c7" pname="g" oct="5" dur="16"
-                      stem.dir="down"/>
+                      stem.dir="down" oct.ges="6"/>
                   </beam>
                   <beam xml:id="x7db06358-6a82-4e4a-a921-2348242e89f4">
                     <note xml:id="x58c12ac0-4e38-4a7f-aab8-e4812c8ca5df" pname="a" oct="5" dur="8"
-                      stem.dir="down" accid="n"/>
+                      stem.dir="down" accid="n" oct.ges="6"/>
                     <rest xml:id="x2e0fe8e7-e67b-4524-b288-6427136d2c61" dur="16"/>
                     <note xml:id="x82a586cc-78e7-4d1c-bd91-f0e4b6edc89d" pname="b" oct="5" dur="16"
-                      stem.dir="down" accid.ges="f"/>
+                      stem.dir="down" accid.ges="f" oct.ges="6"/>
                   </beam>
                 </layer>
               </staff>
@@ -15506,8 +15506,8 @@
                 </layer>
               </staff>
               <octave xml:id="xa6e19fb4-0911-4470-9373-da5148d124ac" staff="1" lform="wavy" dis="8"
-                dis.place="above" startid="#xf2f6a31e-bc3e-4ac9-8d2b-41c8104fd5b9"
-                endid="#x60e324dc-7bc2-4606-82e0-e7ad08d7c1c7" oct.ges="6"/>
+                dis.place="above" startid="#xf2f6a31e-bc3e-4ac9-8d2b-41c8104fd5b9" 
+                endid="#x60e324dc-7bc2-4606-82e0-e7ad08d7c1c7" />
               <dynam xml:id="x02dc7e0c-4a89-45d1-9af8-2a363225394a" staff="2" tstamp="1.5"
                 place="below">f </dynam>
               <dynam xml:id="x24ccaade-0c14-4cbc-8f98-f957d808212c" staff="2" tstamp="3.5"
@@ -19550,13 +19550,13 @@
               key.sig="6f" key.mode="major">
               <staffGrp xml:id="xe231bf85-7764-4d1e-a180-b44c30787c62">
                 <staffGrp xml:id="x4c62d95c-dd32-4657-812a-1acbd883673c" symbol="brace">
-                  <staffDef xml:id="xa61ea94b-3bd3-474a-afae-f07d53b8fd37" n="1" key.sig="6f"/>
-                  <staffDef xml:id="xbdfc99f5-a21c-4303-90a8-3feb29f82a5d" n="2" key.sig="6f"/>
+                  <staffDef xml:id="xa61ea94b-3bd3-474a-afae-f07d53b8fd37" n="1" />
+                  <staffDef xml:id="xbdfc99f5-a21c-4303-90a8-3feb29f82a5d" n="2" />
                 </staffGrp>
                 <staffGrp xml:id="x4994bbd9-33d9-4dc4-8a2f-fff0bfb98517" symbol="brace">
                   <staffDef xml:id="x88ab5c50-a0b5-4e3b-9a44-27a09ad23936" n="3" clef.line="2"
-                    clef.shape="G" key.sig="6f"/>
-                  <staffDef xml:id="xc539035e-4121-4063-878f-aa09ca2d482c" n="4" key.sig="6f"/>
+                    clef.shape="G" />
+                  <staffDef xml:id="xc539035e-4121-4063-878f-aa09ca2d482c" n="4" />
                 </staffGrp>
               </staffGrp>
             </scoreDef>
@@ -25686,12 +25686,12 @@
               key.sig="2f" key.mode="major">
               <staffGrp xml:id="x9e9fe1ee-7d58-4bfb-8896-feae08ea2130">
                 <staffGrp xml:id="x0960b45c-1a3b-4dcb-8ec9-7ca1d2ea57d9" symbol="brace">
-                  <staffDef xml:id="xf6f25593-5859-44a5-a9dc-823b2d1a2133" n="1" key.sig="2f"/>
-                  <staffDef xml:id="x7ec4df90-79af-4706-913a-c2f0391a9951" n="2" key.sig="2f"/>
+                  <staffDef xml:id="xf6f25593-5859-44a5-a9dc-823b2d1a2133" n="1" />
+                  <staffDef xml:id="x7ec4df90-79af-4706-913a-c2f0391a9951" n="2" />
                 </staffGrp>
                 <staffGrp xml:id="xc0a7b9c3-09d3-4543-b589-6742d7212295" symbol="brace">
-                  <staffDef xml:id="x1e67b3fe-79ba-4612-a0d0-843e283c35c1" n="3" key.sig="2f"/>
-                  <staffDef xml:id="x5d481434-391a-45ed-83ef-963dade90e7d" n="4" key.sig="2f"/>
+                  <staffDef xml:id="x1e67b3fe-79ba-4612-a0d0-843e283c35c1" n="3" />
+                  <staffDef xml:id="x5d481434-391a-45ed-83ef-963dade90e7d" n="4" />
                 </staffGrp>
               </staffGrp>
             </scoreDef>
@@ -26932,7 +26932,12 @@
                 </layer>
               </staff>
               <staff xml:id="xf7ea766b-bd52-4527-aac0-a4de8a4214bd" n="3">
-                <layer xml:id="x15bb664d-d354-4a99-afd9-ad55c14facf3" n="1"/>
+                <layer xml:id="x15bb664d-d354-4a99-afd9-ad55c14facf3" n="1">
+                  
+                <space xml:id="x24e297fe-1d14-49d0-9fcb-1b56b95d0f22" n="1">
+                  
+                </space>
+                </layer>
               </staff>
               <staff xml:id="xe759a7f2-77fb-4877-943c-e80c36314703" n="4">
                 <layer xml:id="x7da19a07-11dc-4dac-8dad-ad11e1b92235" n="1">
@@ -27605,7 +27610,9 @@
                 </layer>
               </staff>
               <staff xml:id="xe01b22f2-827b-4d0c-87e8-e2e2f4ad8666" n="3">
-                <layer xml:id="x46c5a7ae-c83f-4781-be49-688f52f5402e" n="1"/>
+                <layer xml:id="x46c5a7ae-c83f-4781-be49-688f52f5402e" n="1">
+                  <space xml:id="x749658a5-c2ec-4ab9-88a1-62ff447eac91" />
+                </layer>
               </staff>
               <staff xml:id="x1831823a-fa20-4d48-9149-e13dfefc911e" n="4">
                 <layer xml:id="xdce30d2a-b35c-4a71-afdb-66468488da86" n="1">
@@ -27636,12 +27643,12 @@
             <scoreDef xml:id="x45a335df-3ec6-42e8-9331-149a48a08c84" key.sig="4f" key.mode="major">
               <staffGrp xml:id="x13e40876-24ec-4538-9cb9-bb0d7d8488cf">
                 <staffGrp xml:id="x32d20439-99c7-4fc2-af09-ad64563ab2b9" symbol="brace">
-                  <staffDef xml:id="x7875c38d-48b3-42a8-b951-f180c69a4e77" n="1" key.sig="4f"/>
-                  <staffDef xml:id="x441792f2-4b15-4ae9-a285-b2e692654b3b" n="2" key.sig="4f"/>
+                  <staffDef xml:id="x7875c38d-48b3-42a8-b951-f180c69a4e77" n="1" />
+                  <staffDef xml:id="x441792f2-4b15-4ae9-a285-b2e692654b3b" n="2" />
                 </staffGrp>
                 <staffGrp xml:id="x4a05eb93-62c7-4215-930e-c728ec9ee9db" symbol="brace">
-                  <staffDef xml:id="xc52dfbcf-2312-4f85-9de7-e28bc1a16d33" n="3" key.sig="4f"/>
-                  <staffDef xml:id="xf0787bb8-4d03-4350-bc25-26e0906dd03b" n="4" key.sig="4f"/>
+                  <staffDef xml:id="xc52dfbcf-2312-4f85-9de7-e28bc1a16d33" n="3" />
+                  <staffDef xml:id="xf0787bb8-4d03-4350-bc25-26e0906dd03b" n="4" />
                 </staffGrp>
               </staffGrp>
             </scoreDef>
@@ -28161,8 +28168,8 @@
               <dynam xml:id="x39c8c756-b120-4f75-96cf-b329ee09c79e" staff="3" tstamp="1"
                 place="below">sf</dynam>
               <slur xml:id="x9fda82c6-6bf4-4f92-941f-3313c1d5f3b2"
-                startid="xc6f116a5-90b4-4e40-bce7-c8ee8226c403"
-                endid="x1852115b-c433-4724-ba5e-c3363c7fd9c3" />
+                startid="#xc6f116a5-90b4-4e40-bce7-c8ee8226c403"
+                endid="#x1852115b-c433-4724-ba5e-c3363c7fd9c3" />
             </measure>
             <measure n="289" xml:id="x896b2205-91b5-4282-b5cf-ea8169decffe">
               <staff xml:id="x3cf88c2c-2677-4075-b066-6f6840ea6df6" n="1">
@@ -31534,7 +31541,7 @@
               <octave xml:id="xbd90fd39-16db-4dd1-9c66-c3689c1ad235" staff="1"
                 startid="#xdc0dde2e-a32c-4e6d-87fc-3e3a481373bd"
                 endid="#x3835ef03-f88c-4fe3-853c-66692d466272" lform="wavy" dis="8"
-                dis.place="above" oct.ges="6"> 8va </octave>
+                dis.place="above"> 8va </octave>
               <trill xml:id="xd626dc88-147a-438a-b485-205ed75730ac" staff="2"
                 startid="#x3553ad96-0627-4d32-a076-4eb7a09d5c5d" place="above" accidupper="f"/>
               <dynam xml:id="x674e1716-0a3d-4c3c-a684-b0a116031b8d" staff="3" tstamp="3.5"
@@ -34185,12 +34192,12 @@
             <scoreDef xml:id="x9230a1e6-441a-44cd-897a-886b85f782a2" key.sig="3f" key.mode="major">
               <staffGrp xml:id="x17da4e65-fc79-4fc2-b05a-242ea72decb7">
                 <staffGrp xml:id="xfb593ac0-a4a1-425c-b317-34473361d5fb" symbol="brace">
-                  <staffDef xml:id="xdafd6d67-8b8d-418c-9902-915226b11b49" n="1" key.sig="3f"/>
-                  <staffDef xml:id="x65a63fe3-7424-4210-b77b-644793e292d3" n="2" key.sig="3f"/>
+                  <staffDef xml:id="xdafd6d67-8b8d-418c-9902-915226b11b49" n="1" />
+                  <staffDef xml:id="x65a63fe3-7424-4210-b77b-644793e292d3" n="2" />
                 </staffGrp>
                 <staffGrp xml:id="x695c913b-4f06-43f6-a070-f95d007d3dab" symbol="brace">
-                  <staffDef xml:id="x1557bd58-09a2-4f68-8a3f-444c489fe390" n="3" key.sig="3f"/>
-                  <staffDef xml:id="xd6374805-284c-40e0-a666-d1cf075d6e2b" n="4" key.sig="3f"/>
+                  <staffDef xml:id="x1557bd58-09a2-4f68-8a3f-444c489fe390" n="3" />
+                  <staffDef xml:id="xd6374805-284c-40e0-a666-d1cf075d6e2b" n="4" />
                 </staffGrp>
               </staffGrp>
             </scoreDef>
@@ -36006,12 +36013,12 @@
             <scoreDef xml:id="x080911ff-cc10-42ea-a930-26503a627003" key.sig="4f" key.mode="major">
               <staffGrp xml:id="xfb3e3e39-0b19-4ab7-be47-907fa59cc609">
                 <staffGrp xml:id="x63df71a4-d214-4575-b51c-3464eb199d29" symbol="brace">
-                  <staffDef xml:id="x64d20838-f044-4c91-811b-2a771c90b14f" n="1" key.sig="4f"/>
-                  <staffDef xml:id="x5606b1ed-e493-4749-aa86-175e40976415" n="2" key.sig="4f"/>
+                  <staffDef xml:id="x64d20838-f044-4c91-811b-2a771c90b14f" n="1" />
+                  <staffDef xml:id="x5606b1ed-e493-4749-aa86-175e40976415" n="2" />
                 </staffGrp>
                 <staffGrp xml:id="xb7406b95-46db-4a16-a5fb-743a5a990a65" symbol="brace">
-                  <staffDef xml:id="x43b42a2f-bb53-4a99-8e8d-fff6b6468dd8" n="3" key.sig="4f"/>
-                  <staffDef xml:id="x5f4575e4-0db8-4494-b495-44ce42792d63" n="4" key.sig="4f"/>
+                  <staffDef xml:id="x43b42a2f-bb53-4a99-8e8d-fff6b6468dd8" n="3" />
+                  <staffDef xml:id="x5f4575e4-0db8-4494-b495-44ce42792d63" n="4" />
                 </staffGrp>
               </staffGrp>
             </scoreDef>
@@ -40280,12 +40287,12 @@
               key.sig="2f" key.mode="major">
               <staffGrp xml:id="x5af75ce6-719f-474f-9542-c9346a296fa3">
                 <staffGrp xml:id="x0c03f988-62da-4c1d-87f8-64c4a5f42585" symbol="brace">
-                  <staffDef xml:id="x3e73a48d-6c73-4c95-b988-0c1eed950ea6" n="1" key.sig="2f"/>
-                  <staffDef xml:id="xeac1cf24-cae5-48d5-adb9-02e4716cd22e" n="2" key.sig="2f"/>
+                  <staffDef xml:id="x3e73a48d-6c73-4c95-b988-0c1eed950ea6" n="1" />
+                  <staffDef xml:id="xeac1cf24-cae5-48d5-adb9-02e4716cd22e" n="2" />
                 </staffGrp>
                 <staffGrp xml:id="x70ae2f86-b3c3-44cd-9bd0-0382f1da8dd8" symbol="brace">
-                  <staffDef xml:id="x9e5ca919-bcd8-4853-952f-30905396869b" n="3" key.sig="2f"/>
-                  <staffDef xml:id="x1db99436-d5fc-437a-822d-5e4e8ce7b769" n="4" key.sig="2f"/>
+                  <staffDef xml:id="x9e5ca919-bcd8-4853-952f-30905396869b" n="3" />
+                  <staffDef xml:id="x1db99436-d5fc-437a-822d-5e4e8ce7b769" n="4" />
                 </staffGrp>
               </staffGrp>
             </scoreDef>
