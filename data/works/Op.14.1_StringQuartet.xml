@@ -168,6 +168,15 @@
                   </changeDesc>
                   <date isodate="2019-07-17"/>
             </change>
+            <change n="14">
+                  <respStmt>
+                        <persName auth.uri="https://github.com/" codedval="Susanne Cox">Susanne Cox</persName>
+                  </respStmt>
+                  <changeDesc>
+                        <p>Für den 3. Satz: Fehler der Originalausgabe (nur die primäre Notation betreffend) als Kommentar angegeben.</p>
+                  </changeDesc>
+                  <date isodate="2019-07-18"/>
+            </change>
       </revisionDesc>
    </meiHead>
    <music meiversion="4.0.0">
@@ -39104,7 +39113,7 @@
                                          num.format="count"
                                          num.visible="false">
                                     <note xml:id="xd8162193-e172-4b08-a6fb-2c624b2c7021"
-                                          pname="d"
+                                          pname="e"
                                           accid="f"
                                           oct="6"
                                           dur="8"
@@ -43650,7 +43659,7 @@
                               endid="#x593e4fc7-d74e-47b4-888b-bd5ae0f8ef42"
                               staff="1"/>
                         <dynam xml:id="x4e3f787e-23f4-4269-a6b1-8ccdbfca81b9"
-                               tstamp="1.3333"
+                               tstamp="1"
                                place="below"
                                staff="1">
                            cres
@@ -48981,7 +48990,7 @@
                         </staff>
                         
                         <dynam xml:id="x45e5bc76-2c15-42f3-89a6-9ad7402b6d39"
-                               tstamp="1.1667"
+                               tstamp="1"
                                place="below"
                                staff="1">cres</dynam>
                         <slur xml:id="x0543716d-1518-4d1f-a6a0-b3b97fb63779"
@@ -49586,7 +49595,7 @@
                            </layer>
                         </staff>
                            <dynam xml:id="x499c31f1-537f-45f7-bf61-a0b0d44fd253"
-                               tstamp="1.3333"
+                               tstamp="1"
                                place="below"
                                staff="1">cres</dynam>
                      </measure>
@@ -51315,7 +51324,7 @@
                                startid="#x0bfe88b9-c156-451e-b4fa-10a67d515f60"
                                place="above"/>
                         <dynam xml:id="x2b3b3936-26ae-4c85-a2bf-f46f88a79a56"
-                               tstamp="1.2"
+                               tstamp="1"
                                place="below"
                                staff="1">
                            ff
@@ -55277,7 +55286,7 @@
                                     pname="g"
                                     oct="4"
                                     dur="2"
-                                    />
+                                    /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                               <note xml:id="x3bbb02d8-b28e-4e99-8edc-de2362ed3171"
                                     pname="f"
                                     oct="4"
