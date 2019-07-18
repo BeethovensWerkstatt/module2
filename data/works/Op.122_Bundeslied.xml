@@ -105,6 +105,7 @@
                <p n="20">Songtextstandardization part 9.</p>
                <p n="21">Deleted all @stem.dir-attributes.</p>
                <p n="22">Smaller corrections.</p>
+               <p n="23">Smaller corrections and annotations</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -18244,7 +18245,7 @@
                                           dur="8"
                                           />
                                  </tuplet>
-                                 
+                                 <!-- Hier in OA kein Bogen über der Triole wie in allen anderen OA-Einzelstimmen. -->
                                  
                               </beam>
                            </layer>
@@ -19609,6 +19610,7 @@
                                     oct="3"
                                     dur="4"
                                     />
+                              <!-- Über der Triole findet sich hier in der OA kein Bogen wie bei allen anderen OA-Einzelstimmen. -->
                               <beam xml:id="x056747ef-e5a5-4edb-8c25-6534261c6907">
                                  <tuplet xml:id="x3fbfff2b-cb16-4eab-9b51-31dcc7544605"
                                          num="3"
@@ -22839,6 +22841,7 @@
                                     oct="3"
                                     dur="4"
                                     />
+                              <!-- anders als bei allen anderen OA-Einzelstimmen fehlen bei der folgenden Triole der Bogen und die Triolenziffer in dieser Stimme. -->
                               <beam xml:id="x3b6455c4-9960-4257-ab47-7ae142d7ea38">
                                  <tuplet xml:id="x7a5f64f9-ffda-424a-90dc-14bb00ea6753"
                                          num="3"
@@ -26136,6 +26139,7 @@
                                staff="1">
                            fp
                         </dynam>
+                        <!-- Der folgende Slur steht offensichtlich fälschlicherweise in Fg. II einen Takt früher als in allen anderen Einzelstimmen der OA. --> -->
                         <slur xml:id="x3d742ea5-eaba-4757-81be-bf968eafbef4"
                               startid="#x92d0d7aa-3d8d-48ef-a0ac-c1c67a7c667b"
                               
