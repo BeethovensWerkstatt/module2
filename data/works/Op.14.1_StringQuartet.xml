@@ -42065,7 +42065,7 @@
                         
                         
                         <dynam xml:id="x45356745-85a4-4bf7-a788-101d25138374"
-                               tstamp="1.3333"
+                               tstamp="1.5"
                                place="below"
                                staff="1">
                           sf
@@ -42181,7 +42181,7 @@
                         </staff>
                         
                         <dynam xml:id="x2bd19f1f-a720-4456-8389-596a112c5ab4"
-                               tstamp="1.3333"
+                               tstamp="1.5"
                                place="below"
                                staff="1">
                           sf
@@ -42302,7 +42302,7 @@
                         </staff>
                         
                         <dynam xml:id="x39946abc-bd15-457d-9e57-ac3c3952adaa"
-                               tstamp="1.3333"
+                               tstamp="1.5"
                                place="below"
                                staff="1">
                           sf
@@ -48210,7 +48210,7 @@
                               endid="#x242699bd-e86e-4701-a643-5bf27954d556"
                               staff="1"/>
                         <dynam xml:id="xaf6b4bd9-b1eb-4447-908a-f8aee95ac1e4"
-                               tstamp="1.2"
+                               tstamp="1"
                                place="below"
                                staff="1">decres</dynam>
                         <slur xml:id="xc5191e62-6baf-45bf-99b2-7498c6c471d1"
@@ -54127,7 +54127,7 @@
                                     pname="d"
                                     oct="4"
                                     dur="2"
-                                    />
+                                    /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                               <note xml:id="x25e4245b-5a90-40c6-ae91-457cb8c74c82"
                                     pname="f"
                                     oct="4"
@@ -58486,7 +58486,7 @@
                                     pname="d"
                                     oct="3"
                                     dur="4"
-                                    />
+                                    /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                               <rest xml:id="xfa016d61-e401-487c-b538-92641b86d93f" dur="4"/>
                               <rest xml:id="x2a0dc19a-e39c-41dc-b5f1-773d68c3e8c2" dur="4"/>
                               <note xml:id="x13105529-cfda-4720-834e-42b7722d040f"
