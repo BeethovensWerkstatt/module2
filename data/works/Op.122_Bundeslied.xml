@@ -105,6 +105,7 @@
                <p n="20">Songtextstandardization part 9.</p>
                <p n="21">Deleted all @stem.dir-attributes.</p>
                <p n="22">Smaller corrections.</p>
+               <p n="23">Smaller corrections and annotations</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -18244,7 +18245,7 @@
                                           dur="8"
                                           />
                                  </tuplet>
-                                 
+                                 <!-- Hier in OA kein Bogen über der Triole wie in allen anderen OA-Einzelstimmen. -->
                                  
                               </beam>
                            </layer>
@@ -26136,6 +26137,7 @@
                                staff="1">
                            fp
                         </dynam>
+                        <!-- Der folgende Slur steht offensichtlich fälschlicherweise in Fg. II einen Takt früher als in allen anderen Einzelstimmen der OA. --> -->
                         <slur xml:id="x3d742ea5-eaba-4757-81be-bf968eafbef4"
                               startid="#x92d0d7aa-3d8d-48ef-a0ac-c1c67a7c667b"
                               
