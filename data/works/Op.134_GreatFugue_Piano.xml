@@ -155,6 +155,7 @@
         <changeDesc>
           <p n="1">P, PP, FP, F, FF, SF:, dim: changed into p, pp, fp, f, ff, sf, dim</p>
           <p n="2">corrections in measure 84 </p>
+          <p n="3">@curvedir entfernt </p>
         </changeDesc>
         <date isodate="2019-07-9"/>
       </change>
@@ -9003,7 +9004,7 @@
                 <layer xml:id="x8e1019cb-88eb-497e-9706-6f20fb923fb1" n="1">
                   <beam xml:id="xb6742c1f-1b00-497d-8a84-a0e443167925">
                     <note xml:id="x57194836-f74c-4081-b54f-91adaf7f49ff" pname="c" oct="3" dur="8"
-                      stem.dir="up" accid.ges="s"/>
+                      stem.dir="up"/>
                     <rest xml:id="x8681ac20-9433-4398-9798-6cb47482d65f" dur="16"/>
                     <note xml:id="x701bbdb9-0b8a-4526-bf40-db9db8071bb3" pname="b" oct="2" dur="16"
                       stem.dir="up" accid.ges="f"/>
@@ -9194,7 +9195,7 @@
                       stem.dir="up"/>
                     <rest xml:id="x694ed358-7195-48dc-bae7-8e4de778dc92" dur="16"/>
                     <note xml:id="xd1eabd64-983d-4bd5-b175-1cfc8327558c" pname="b" oct="3" dur="16"
-                      stem.dir="up"/>
+                      stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -26016,7 +26017,7 @@
               <staff xml:id="x4eed4140-574e-4c89-b1e0-166884d67a44" n="4">
                 <layer xml:id="xf1bae867-91a2-4fdf-b1f4-58a254b7d575" n="1">
                   <note xml:id="x2402fbea-ae5d-4d74-ace0-08447fd75c43" pname="b" oct="3" dur="4"
-                    stem.dir="down" artic="stacciss"/>
+                    stem.dir="down" artic="stacciss" accid.ges="f"/>
                   <rest xml:id="x1f69380a-3b69-4ae3-96b8-6b0a0d7f3300" dur="8"/>
                   <note xml:id="x2d93be1b-4990-4472-9c37-48684b1258f7" pname="f" oct="3" dur="4"
                     stem.dir="down"/>
@@ -26432,8 +26433,8 @@
                     stem.dir="up" accid="n"/>
                   <note xml:id="x391496d9-0b40-4a21-ac68-e999cfec26e1" pname="f" oct="4" dur="4"
                     stem.dir="up"/>
-                  <note xml:id="x9cc1162b-a0fb-4016-9053-b179b12d2e25" pname="e" accid.ges="n"
-                    oct="5" dur="8" stem.dir="down"/>
+                  <note xml:id="x9cc1162b-a0fb-4016-9053-b179b12d2e25" pname="e" 
+                    oct="5" dur="8" stem.dir="down" accid.ges="f"/>
                 </layer>
               </staff>
               <staff xml:id="xbf4e8766-3a0c-47e3-9b16-5d521b59397c" n="3">
@@ -51301,7 +51302,7 @@
               </staff>
               <staff xml:id="xb155e866-0bee-4342-83b4-fe0a9b2bf6cf" n="2">
                 <layer xml:id="x3b6fe63c-7564-4dac-a76a-a6c8e465a896" n="1">
-                  <chord xml:id="xd0f35b37-fa25-41ac-b8c9-c3dde3872514" dur="4" stem.dir="up">
+                  <chord xml:id="xd0f35b37-fa25-41ac-b8c9-c3dde3872514" dur="4" >
                     <note xml:id="x961964dd-0c28-4288-8532-b9276f1fd09d" pname="f" oct="4"/>
                     <note xml:id="x6ead1466-4e7a-4335-8d08-009a9df674fc" pname="d" oct="5"/>
                   </chord>
@@ -51311,7 +51312,7 @@
               </staff>
               <staff xml:id="x5579ea66-5209-4fee-b7ef-c8ca9e75fd3e" n="3">
                 <layer xml:id="xee8cbaab-ac75-4111-b8d7-e5f2b2525180" n="1">
-                  <chord xml:id="x5073dce2-b6fc-4247-9ecc-fdf346a9a512" dur="4" stem.dir="down">
+                  <chord xml:id="x5073dce2-b6fc-4247-9ecc-fdf346a9a512" dur="4" >
                     <note xml:id="xefd1862f-e4ee-47c9-aefc-d20f89983a58" pname="f" oct="3"/>
                     <note xml:id="xf232aaa4-6e30-4cf4-b2a0-6b4562515317" pname="b" oct="3"
                       accid.ges="f"/>
@@ -51323,7 +51324,7 @@
               </staff>
               <staff xml:id="x335c4381-9af7-4cef-9fd4-3dc375924f91" n="4">
                 <layer xml:id="x0d2845f5-61c4-4ef2-a3fe-f7dd1b95e95b" n="1">
-                  <chord xml:id="x3a1f0fdd-8385-4be1-9927-78737e164a00" dur="4" stem.dir="up">
+                  <chord xml:id="x3a1f0fdd-8385-4be1-9927-78737e164a00" dur="4" >
                     <note xml:id="x5c539d96-fd38-4eac-bfa6-e897d6d5cdbd" pname="b" oct="1"
                       accid.ges="f"/>
                     <note xml:id="x82585054-27ce-49b7-bb3d-47ce1e6d407d" pname="b" oct="2"
