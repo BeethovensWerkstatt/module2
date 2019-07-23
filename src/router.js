@@ -24,7 +24,7 @@ export default new Router({
     {
       path: '/info',
       name: 'info',
-      component: () => import(/* webpackChunkName: "about" */ './views/Info.vue')
+      component: () => import(/* webpackChunkName: "info" */ './views/Info.vue')
     }
   ]
 })
