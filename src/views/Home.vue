@@ -2,22 +2,27 @@
 
   <div class="home">
 
-    <div class="container">
-      <div class="columns">
-        <div id="navigationBox" class="column col-3 col-lg-12">
-          <ComparisonSelection/>
-          <ModeSelection/>
-          <!-- WorkSelection -->
-          <!-- WorkSelection -->
-        </div>
-        <div id="contentBox" class="column col-9 col-lg-12">
-        <!-- Content -->
-          <NavigationTop/>
-          <Analysis/>
+    <div v-if="introVisible">
+      <h1>show Intro</h1>
+    </div>
+    <div v-if="!introVisible">
+      <div class="container">
+        <div class="columns">
+          <div id="navigationBox" class="column col-3 col-lg-12">
+            <ComparisonSelection/>
+            <ModeSelection/>
+            <!-- WorkSelection -->
+            <!-- WorkSelection -->
+          </div>
+          <div id="contentBox" class="column col-9 col-lg-12">
+          <!-- Content -->
+            <NavigationTop/>
+            <Analysis/>
+          </div>
         </div>
       </div>
     </div>
-    
+
   </div>
 </template>
 
@@ -35,6 +40,11 @@ export default {
     ModeSelection,
     Analysis,
     NavigationTop
+  },
+  computed: {
+    introVisible: function() {
+      return this.$store.getters.introVisible;
+    }
   }
 }
 </script>

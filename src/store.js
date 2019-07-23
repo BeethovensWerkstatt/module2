@@ -16,14 +16,15 @@ export default new Vuex.Store({
     activeMovement: 1, // first mdiv
     modes: modeConfiguration,
     activeMode: null, // default comparison?
+    transpose: 'none',
     zoom: 1,
+    currentPage: 1,
     measure: null,
+    introVisible: false,
     navigationVisible: true // this is the sidebar with work and mode selection
   },
   mutations: {
     FETCH_COMPARISONLIST (state, comparisons) {
-      console.log('got something: ' + typeof comparisons)
-      console.log(comparisons)
       comparisons.forEach(comparison => {
         const created = {}
         created[comparison.id] = comparison
@@ -41,6 +42,13 @@ export default new Vuex.Store({
     },
     ACTIVATE_MODE (state, id) {
       state.activeMode = id
+      state.currentPage = 1 // reset to page 1 when changing mode
+    },
+    DISPLAY_INTRO (state, id) {
+      state.introVisible = true
+    },
+    HIDE_INTRO (state) {
+      state.introVisible = false
     }
   },
   actions: {
@@ -64,6 +72,13 @@ export default new Vuex.Store({
     activateMode ({ commit }, id) {
       // todo: check if mode with that id is available
       commit('ACTIVATE_MODE', id)
+    },
+    displayIntro ({ commit }, id) {
+      // todo: load HTML snippet from server
+      commit('DISPLAY_INTRO')
+    },
+    hideIntro ({ commit }) {
+      commit('HIDE_INTRO')
     }
 
   },
@@ -101,6 +116,12 @@ export default new Vuex.Store({
     },
     activeModeId: state => {
       return state.activeMode
+    },
+    transpose: state => {
+      return state.transpose
+    },
+    introVisible: state => {
+      return state.introVisible
     }
   }
 })

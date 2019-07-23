@@ -5,7 +5,7 @@
     <div class="comparisonContainer" v-for="comparison in comparisons" v-bind="comparison">
 
       <div class="comparisonDetails" v-bind:class="{active: (comparison.id === activeComparisonId)}" v-on:click="activateComparison(comparison.id)">
-        <div class="additionalInfo s-circle float-right">i</div>
+        <div class="additionalInfo s-circle float-right" v-on:click="displayIntro(comparison.id)">i</div>
         <div class="title">{{comparison.title}}</div>
         <div class="subtitle">{{comparison.target}}</div>
       </div>
@@ -13,38 +13,6 @@
         <div class="mdiv" v-for="mdiv in comparison.movements" v-bind:class="{active: (mdiv.n === activeMovement)}" v-on:click="activateMovement(mdiv.n)">{{mdiv.label}}</div>
       </div>
     </div>
-
-    <!--<div class="workContainer">
-      <div class="workDetails">
-        <div class="additionalInfo s-circle float-right">i</div>
-        <div class="title">Septett Op.20</div>
-        <div class="subtitle">und Bearbeitung als Violintrio Op.38</div>
-      </div>
-      <div v-if="1 == 2" class="mdivSelection">
-        <div class="mdiv">Adagio</div>
-        <div class="mdiv">Adagio cantabile</div>
-        <div class="mdiv">Tempo di Menuetto</div>
-        <div class="mdiv">Andante con Variazioni</div>
-        <div class="mdiv">Allegro molto e vivace</div>
-        <div class="mdiv">Andante con moto alla Marcia</div>
-      </div>
-    </div>
-
-    <div class="workContainer">
-      <div class="workDetails">
-        <div class="additionalInfo s-circle float-right">i</div>
-        <div class="title">Septett Op.20</div>
-        <div class="subtitle">und Bearbeitung als Klarinettentrio Op.38</div>
-      </div>
-      <div v-if="1 == 2" class="mdivSelection">
-        <div class="mdiv">Adagio</div>
-        <div class="mdiv">Adagio cantabile</div>
-        <div class="mdiv">Tempo di Menuetto</div>
-        <div class="mdiv">Andante con Variazioni</div>
-        <div class="mdiv">Allegro molto e vivace</div>
-        <div class="mdiv">Andante con moto alla Marcia</div>
-      </div>
-    </div>-->
 
   </div>
 </template>
@@ -75,6 +43,9 @@ export default {
     },
     activateMovement (n) {
       this.$store.dispatch('activateMovement',n)
+    },
+    displayIntro (id) {
+      this.$store.dispatch('displayIntro',id)
     }
   }
 }
