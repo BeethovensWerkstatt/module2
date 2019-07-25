@@ -15325,8 +15325,7 @@
               </staff>
 
 
-              <dynam xml:id="xfd979a00-32c9-4534-a38b-b5f443e5c649" tstamp="1.3333" place="below"
-                staff="1"> f </dynam>
+
               <dynam xml:id="xe9520818-569c-4085-ba3e-311596f8de81" tstamp="1.5" place="below"
                 staff="4"> ff </dynam>
               <slur xml:id="x7ad1d0e9-7f3a-4970-ab59-1bf045fc925f"
@@ -17036,7 +17035,7 @@
                 endid="#xade77a04-1fd7-4b5d-90fd-fb4fb913748c" staff="3"/>
 
 
-              <dynam xml:id="xf5d8a7f3-ab52-42c7-85f4-15b230a08170" tstamp="3" place="below"
+              <dynam xml:id="xf5d8a7f3-ab52-42c7-85f4-15b230a08170" tstamp="3.5" place="below"
                 staff="2"> ff </dynam>
               <slur xml:id="x83551b86-627f-4fe2-88f5-0ff504276b5b"
                 startid="#xa269f7cd-b915-4fd0-b887-1f5434e70af1"
@@ -18129,7 +18128,7 @@
                 startid="#x34c19128-4cc7-4fda-892d-902bd2a357de"
                 endid="#xb4b770fb-7e14-4aac-9f97-96f2e6fa42ec"/>
             </measure>
-            
+
             <measure n="158" xml:id="x9e2872aa-c1e9-4899-868a-02c62d08c3a9" right="dbl">
               <staff xml:id="x9cbbf12a-f2f2-4781-97d4-456232c9f5fe" n="1">
                 <layer xml:id="xd4008ea4-6d0e-479e-b7a5-b01a0d60fc0f" n="1">
@@ -18317,9 +18316,9 @@
                 endid="#x2e6b76b8-f96d-4646-8e3b-d8b8fd1459e4"/>
             </measure>
           </section>
-          
+
           <section xml:id="x493c9219-6daf-433d-9744-4fa689bdfaf0" n="4">
-           
+
             <scoreDef xml:id="x45fd6ffb-52cb-4a5e-bfe6-596489d362ce" meter.count="2" meter.unit="4"
               key.sig="6f" key.mode="major">
               <staffGrp xml:id="x47e8555e-acbc-48cf-8bc3-c4d413f9dde9" symbol="bracket"
@@ -18330,7 +18329,7 @@
                 <staffDef xml:id="x06442073-9845-48c1-9875-fcce84381efb" n="4"/>
               </staffGrp>
             </scoreDef>
-            
+
             <measure n="159" xml:id="xc788e01e-1064-4bab-a452-b9f9184f4f8e">
               <staff xml:id="x3b7e64e3-27bb-48b8-9703-9c36ada99414" n="1">
                 <layer xml:id="xb0558573-8c56-4755-af00-615155e01f47" n="1">
@@ -18380,7 +18379,7 @@
               <slur xml:id="xc8c601c6-7fb7-4ea2-91cd-1af22ef94226"
                 startid="#x9d33f30f-b3e7-41fe-ab50-b05c6f407430"
                 endid="#xdd99a154-69cd-4ed5-b714-c2261f6ca379" staff="1"/>
-              <dynam xml:id="x145f420f-7d2b-4569-800f-3c7640794e06" tstamp="1.75" place="below"
+              <dynam xml:id="x145f420f-7d2b-4569-800f-3c7640794e06" tstamp="1.9" place="below"
                 staff="2"> pp </dynam>
               <slur xml:id="x047fe4d5-693a-4f3e-84ac-f432ac47c75b"
                 startid="#x109ed80b-7773-4561-b5da-50ea51af765e"
@@ -18432,7 +18431,15 @@
                 <layer xml:id="x548063c4-c22d-44d2-93c6-ce968653ae67" n="1">
                   <mRest xml:id="x2241e54c-63de-4201-800f-32ee9d77b8ed" dur="2"/>
                   <clef shape="G" line="2" xml:id="xb99faa12-817a-4f52-8e21-c3ffd426cdd8"/>
-                  <!-- N.B. T. 161-183 werden im Autograph, Abschrift und OA in Violinschlüssel notiert - die Oktavierung ist aber implizit, denn so hoch könnte das Cello gar nicht spielen. Bei Henle wurde eine Oktave tiefer transkribiert. Ich habe es jetzt so wie bei Henle gelassen, weil es ansonsten beim vergleichen Probleme oder ungemeinte Invarianz schaffen könnte. Soll ein Supplied Attribut hinzukommen? -->
+
+                  <!-- N.B. EN: T. 161-183 werden im Autograph, Abschrift und OA in Violinschlüssel notiert - 
+                    die Oktavierung ist aber implizit, denn so hoch könnte das Cello gar nicht spielen. 
+                    Bei Henle wurde eine Oktave tiefer transkribiert. Ich habe es jetzt so wie bei Henle gelassen, 
+                    weil es ansonsten beim vergleichen Probleme oder ungemeinte Invarianz schaffen könnte. 
+                    Soll ein Supplied Attribut hinzukommen?
+              N.B. 2., am 25.7.2019: Sollte doch lieber die Notierungsweise von OA übernommen werden, und um die Problemen
+                  mit der Invarianz-Darstellung zu vermeiden, einen oct.ges-Element hinzugefügt worden??  -->
+
                 </layer>
               </staff>
               <slur xml:id="xeffd8c5f-8262-44fc-92a1-d271bf5463bf"
@@ -19135,7 +19142,7 @@
                   <note xml:id="x43fbe753-804f-497a-ad21-6b2387dc1c72" pname="a" oct="3" dur="4"
                     accid.ges="f"/>
                   <note xml:id="x76852dde-cccb-4f88-95e3-969cac881b96" pname="f" oct="4" dur="4"
-                    accid="f"/>
+                    accid="n"/>
                 </layer>
               </staff>
               <staff xml:id="x304b30ef-e77b-44b2-a743-05433e5e454d" n="4">
@@ -19324,7 +19331,8 @@
                   <note xml:id="xbca4090a-d3ab-4df2-b5f6-1daa0ebba28c" pname="b" oct="4" dur="4"
                     accid.ges="f"/>
                   <note xml:id="x993b6259-d698-42f7-bfea-10d590588a18" pname="d" oct="4" dur="4"
-                    accid="n"/>
+                    accid.ges="f"/>
+                  <!-- N.B. Fehler in OA: Bei der Note "d" sollte einen accid="n" sein -->
                 </layer>
               </staff>
               <staff xml:id="xaf57e086-d69f-4f6f-a43e-014ce8af468d" n="3">
@@ -21136,9 +21144,6 @@
                   <note xml:id="x5edd3910-3a0e-40b3-88bc-b07e46079ebb" pname="f" oct="2" dur="2"/>
                 </layer>
               </staff>
-              <slur xml:id="x54454030-e0c2-41b3-830f-e4e86a2fa04d"
-                startid="#xc327f085-d160-4862-8b13-2b119f64a9c6"
-                endid="#x8f923159-ca20-4370-800f-803093f603b0" staff="3"/>
               <slur xml:id="x666685cf-e11d-4ba4-b6aa-e70252fb8b43"
                 startid="#xcdd436ae-288b-4a10-84dd-19447f597fd8"
                 endid="#xaa93111d-3473-4f84-8ea5-e65f3fc85673" staff="2"/>
@@ -21606,6 +21611,9 @@
               <slur xml:id="xc99220db-ded9-4413-94de-af15f4637e45"
                 startid="#xab8b757c-a3d3-4145-9703-bb235b742b33"
                 endid="#x056daf42-4dd3-41a4-a4b4-d7ba6ed9e1f2" staff="2"/>
+              <dir xml:id="xff575b15-b28f-43ac-bc40-35df1edf3dda" staff="1" tstamp="2" place="above"
+                label="fing">1</dir>
+
             </measure>
             <measure n="205" xml:id="xc33e9bc4-f28d-4edb-a6da-7c855205a9dc">
               <staff xml:id="x8217d116-86a7-4937-96d9-5c6abeb18729" n="1">
@@ -21687,6 +21695,8 @@
               <tie xml:id="x8030a13b-d89f-4cef-a4ec-54bd7015a35d" staff="4"
                 startid="#x196bcb1a-a895-41f7-bebd-3c8c32e43ebc"
                 endid="#x4903bf59-24ed-4077-80c3-e231350fcbaf"/>
+              <dir xml:id="x6f3ee3d1-31ee-4b6c-b0fe-3551463ff130" staff="1" tstamp="1.5" place="above"
+                label="number"> 1 </dir>
             </measure>
             <measure n="206" xml:id="x2660fb6d-fe3b-403b-b24b-c2b1710477c3">
               <staff xml:id="x439779e9-b5f1-4192-afc6-442d1aa90384" n="1">
@@ -21958,7 +21968,6 @@
             <!-- <staffDef xml:id="xc1fb27dc-f138-44e7-b08a-5068f14701a9" n="4"
                                           clef.line="2" clef.shape="G" clef.dis="8"
                                           clef.dis.place="below"/> -->
-            <!-- N.B. vor T. 209 in OA Orientierungsbuchstabe: E -->
             <measure n="209" xml:id="x36c13e2e-b366-4ba2-84c9-407d11502465">
               <staff xml:id="x1ff2cc70-a9e2-41f5-a1d6-e9336c0bf64e" n="1">
                 <layer xml:id="x4f97a91d-ff27-40bb-bae7-47c1419b29c5" n="1">
@@ -22050,6 +22059,18 @@
               <tie xml:id="x19e12b4d-5439-470d-bbb8-bc396811f0f9" staff="3"
                 startid="#x81d9466c-6647-4138-b2d8-ddd734d4bc23"
                 endid="#x7af5759f-6cc7-49ff-b967-f11e8538b852"/>
+              <reh xml:id="x85f2d21a-29e1-42f9-8b60-9103309bf7e5" staff="1" place="above" tstamp="1" label="words">
+               E
+              </reh>
+              <reh xml:id="xb2b7a94b-3adc-49cf-aec8-a8bad539e913" staff="2" place="above" tstamp="1" label="words">
+                E
+              </reh>
+              <reh xml:id="x782f4b0b-7fdc-4112-a3ef-287ea321a06b" staff="3" place="above" tstamp="1" label="words">
+                E
+              </reh>
+              <reh xml:id="xd87ac746-bbf1-4f79-b97a-2994fb27661f" staff="4" place="above" tstamp="1" label="words">
+                E
+              </reh>
             </measure>
             <measure n="210" xml:id="x67351a46-1b8c-4d32-9041-037b008f9559">
               <staff xml:id="x86d08439-886b-425a-b7cf-6dd2b9079110" n="1">
@@ -32471,7 +32492,8 @@
             </measure>
           </section>
           <section xml:id="x3969a456-1fa1-4999-a2a9-b13756fdd9bb" n="7">
-            <scoreDef xml:id="xfe01e35e-8f3d-46f7-b171-988422ec83cf" key.sig="3f" key.mode="major" keysig.showchange="true">
+            <scoreDef xml:id="xfe01e35e-8f3d-46f7-b171-988422ec83cf" key.sig="3f" key.mode="major"
+              keysig.showchange="true">
               <staffGrp xml:id="x3d2e3e51-df00-40fd-adf1-1de427907032" symbol="bracket"
                 bar.thru="true">
                 <staffDef xml:id="x647a1a17-5f4b-4fd0-a5fa-ec37911a7a93" n="1"/>
@@ -35916,8 +35938,7 @@
             </measure>
           </section>
           <section xml:id="x885d9fef-10c7-4127-8070-521434b1b1b0" n="9">
-            <scoreDef xml:id="x4e7c6e32-9472-43ba-bb68-d101ae80f6fc" meter.count="2" meter.unit="4"
-              >
+            <scoreDef xml:id="x4e7c6e32-9472-43ba-bb68-d101ae80f6fc" meter.count="2" meter.unit="4">
               <staffGrp xml:id="x1fc8e8d5-904b-4f6d-ba25-c4e5ce7b6871" symbol="bracket"
                 bar.thru="true">
                 <staffDef xml:id="x8b3551a8-feed-4b6e-8fd5-268744b5a621" n="2"/>
