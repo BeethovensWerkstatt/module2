@@ -155,6 +155,15 @@
         </changeDesc>
         <date isodate="2019-07-24"/>
       </change>
+      <change n="9">
+        <respStmt>
+          <persName>Elisa Novara</persName>
+        </respStmt>
+        <changeDesc>
+          <p n="1"> Korrekturen nach OA bis T. 477</p>
+        </changeDesc>
+        <date isodate="2019-07-30"/>
+      </change>
     </revisionDesc>
   </meiHead>
   <music meiversion="4.0.0">
@@ -19762,13 +19771,13 @@
               <slur xml:id="x9ac8046c-5126-4a76-ab8c-b93011d7c7c6"
                 startid="#xa0d4773d-ee6a-431c-a774-93134e0d5b51"
                 endid="#xd516f778-5e7e-4007-9dc3-5bb743a993b6" staff="1"/>
-              <dynam xml:id="x591617bb-8ca0-444d-9c5c-8ab1d2477f8f" tstamp="1" place="above"
+              <dynam xml:id="x591617bb-8ca0-444d-9c5c-8ab1d2477f8f" tstamp="1" place="below"
                 staff="4"> 3 </dynam>
-              <dynam xml:id="xe5e3484c-8c57-40fa-bfa1-baee8b638490" tstamp="1.25" place="above"
+              <dynam xml:id="xe5e3484c-8c57-40fa-bfa1-baee8b638490" tstamp="1.25" place="below"
                 staff="4"> 2 </dynam>
-              <dynam xml:id="xb4a3ecf3-cbe0-4129-b0fa-06fcd2604204" tstamp="1.5" place="above"
+              <dynam xml:id="xb4a3ecf3-cbe0-4129-b0fa-06fcd2604204" tstamp="1.5" place="below"
                 staff="4"> 3 </dynam>
-              <dynam xml:id="xf4d0c4e5-ea5a-4589-8748-c8cff55b806f" tstamp="1.75" place="above"
+              <dynam xml:id="xf4d0c4e5-ea5a-4589-8748-c8cff55b806f" tstamp="1.75" place="below"
                 staff="4"> 3 </dynam>
             </measure>
             <measure n="179" xml:id="x11edb473-f79f-4982-80bb-4aba6b2b8ad8">
@@ -29746,6 +29755,14 @@
               <tie xml:id="x04281ce4-da37-4572-b47f-2ecdddc270d5" staff="3"
                 startid="#xd0f72d2b-0e20-4dda-bc8a-fac583b40025"
                 endid="#xee75169c-7a99-4638-b762-0a53ff6a06e9"/>
+              <reh xml:id="xe5d79374-4f79-4a6e-9be7-6cfd21772802" tstamp="1" staff="1" place="above"
+                label="words"> H </reh>
+              <reh xml:id="x94978ffd-207d-4e6b-8e1d-1504b0c22e43" tstamp="1" staff="2" place="above"
+                label="words"> H </reh>
+              <reh xml:id="x722f9080-52bc-464d-a4ca-1d01d846f946" tstamp="1" staff="3" place="above"
+                label="words"> H </reh>
+              <reh xml:id="x93027806-9b8d-480e-aa9b-0fb0c01e2103" tstamp="1" staff="4" place="above"
+                label="words"> H </reh>
             </measure>
             <measure n="359" xml:id="x86a59ddb-5d4a-4976-8ab0-cd11e32a5bb6">
               <staff xml:id="x27b2e596-df7c-4a80-bc82-326d7797fa21" n="1">
@@ -30694,7 +30711,7 @@
               <staff xml:id="xf0d7cc74-b23f-427b-bf6b-d7c8694da9eb" n="1">
                 <layer xml:id="xf43f79e1-613b-4f7d-aabe-f79612d0af3a" n="1">
                   <note xml:id="x89503de3-5cbe-4a58-971f-a621b0e94aff" pname="g" oct="5" dur="4"
-                    accid="n"/>
+                    accid.ges="n"/>
                   <rest xml:id="xf83476a0-5cfe-476c-9b7f-e906d078202e" dur="8"/>
                   <note xml:id="x5bd69350-57fe-42a9-98e8-f8ccf398b515" pname="a" oct="5" dur="4"
                     accid.ges="f"/>
@@ -30749,7 +30766,7 @@
             <measure n="377" xml:id="xe0659f69-4201-47ab-aced-b49ae8fc7326">
               <staff xml:id="x28488ddd-accf-40d0-8813-5930960c9a29" n="1">
                 <layer xml:id="x5e544d92-feb7-4527-b766-b90ce28ff6a0" n="1">
-                  <note xml:id="x2eaf4785-b907-429e-9f83-51bc24f5d0b4" pname="f" oct="6" dur="4"/>
+                  <note xml:id="x2eaf4785-b907-429e-9f83-51bc24f5d0b4" pname="f" oct="6" dur="4" accid="n"/>
                   <rest xml:id="xbd38a37d-039a-4d09-aa4c-b74ede7e4ba8" dur="8"/>
                   <note xml:id="xc48ae42a-1fd5-4384-b104-7a6a80b0374d" pname="g" oct="6" dur="4"
                     dots="1" accid="f"/>
@@ -31893,8 +31910,11 @@
                 startid="#x0db66e4f-314b-48c7-a6bf-62d4421cfd8d"
                 endid="#x8990eb5b-ddf7-473b-b8d8-b4fdaa2b49ff"/>
               <tie xml:id="x6b0f6fe3-b9b2-4fba-a8cd-8a313c8603d5" staff="3"
-                startid="#x93ac1019-e608-41ef-8330-87ceb1f5622e"
-                endid="#x7e1745d2-c383-48fd-9a8e-c6756aa202e2"/>
+                startid="#x6c7fcfc6-77cd-4f1d-aeec-463e0e2669a1"
+                endid="#x314bf00e-aef2-4b28-b0f6-4d025d78bbbe"/>
+              <tie xml:id="xf93206b0-2a5c-4ed5-8dc1-4a530dcf0739" staff="3"
+                startid="#xc4894f76-92d4-4c62-8361-5553565f26a1"
+                endid="#x33e9f4e3-56c5-4e6a-8c29-d665ea9fecf1"/>
             </measure>
             <measure n="402" xml:id="x0baee354-534e-492b-acc2-1a02edddf7b8">
               <staff xml:id="x97c63498-9a52-4aa2-b396-2e4e2c6eccba" n="1">
@@ -32055,7 +32075,15 @@
               <tie xml:id="xb19dc406-8fbb-40db-b59e-b06e937e4ca3" staff="4"
                 startid="#xa9d8d310-565f-49c5-95be-f306e981c038"
                 endid="#xfe336e30-a412-466f-99a5-91a5447b7f80"/>
-            </measure>
+              <reh xml:id="x606b5fd9-1f45-45b8-b8ae-d1c400af3638" tstamp="1" staff="1"
+                place="above" label="words"> J </reh>
+              <reh xml:id="x810a66e1-4545-43fc-b28a-067ae8b03bef" tstamp="1" staff="2"
+                place="above" label="words"> J </reh>
+              <reh xml:id="x2741f3f9-3d56-4290-8235-dc366f393a30" tstamp="1" staff="3"
+                place="above" label="words"> J </reh>
+              <reh xml:id="xa1e63d97-7b3c-4694-b8a3-217cd8dee0f5" tstamp="1" staff="4"
+                place="above" label="words"> J </reh>
+             </measure>
             <measure n="405" xml:id="x21a628a0-5af2-4c9c-ac6a-08c31a94b211">
               <staff xml:id="x2c6ca998-39ce-4359-bbb3-797318b374ac" n="1">
                 <layer xml:id="x3cc8a046-fb58-4c7e-ac48-2ad123e5941c" n="1">
@@ -32986,7 +33014,7 @@
               <staff xml:id="xdf86dc53-2a24-4cae-a96c-c045b3634426" n="4">
                 <layer xml:id="x4b524469-4b80-40a8-8c08-9b2d136398b3" n="1">
                   <note xml:id="xe03e7fa9-d78b-48ad-9561-6691cfc91b2a" pname="e" oct="4" dur="2"
-                    dots="1" accid.ges="f"/>
+                    accid.ges="f"/> <!-- Achtung: hier offensichtlicher Fehler in OA: Punkt fehlt und Verlängerungsbogen ist falsch. -->
                 </layer>
               </staff>
             </measure>
@@ -33359,7 +33387,7 @@
                     accid.ges="f"/>
                   <note xml:id="x7333b434-fbe2-446f-8de5-091ff33453dd" pname="a" oct="4" dur="4"
                     accid="f"/>
-                  <note xml:id="x853c7fe7-edce-4733-ad34-93341efe00db" pname="f" oct="4" dur="8"/>
+                  <note xml:id="x853c7fe7-edce-4733-ad34-93341efe00db" pname="g" oct="4" dur="8"/>
                 </layer>
               </staff>
               <staff xml:id="xcafbc5ad-fb7c-4274-abb0-b1de7d86ba01" n="3">
@@ -33880,9 +33908,11 @@
                   </beam>
                 </layer>
               </staff>
-              <tie xml:id="xcaebd106-4561-4d05-a270-9960d728fcc2" staff="1"
+              <!-- tie xml:id="xcaebd106-4561-4d05-a270-9960d728fcc2" staff="1"
                 startid="#x67ae50ae-70d1-4cab-ad44-a6975c38029c"
-                endid="#x9461e876-61cb-4b00-ab43-0910976cddce"/>
+                endid="#x9461e876-61cb-4b00-ab43-0910976cddce": 
+                offensichtlicher Fehler in OA, der Bogen wäre hier eigentlich richtig -->
+              
               <tie xml:id="xc296297c-6a2e-4dd7-9bdb-9e07f7e64940" staff="1"
                 startid="#x9461e876-61cb-4b00-ab43-0910976cddce"
                 endid="#x2bd55797-7ecb-4f6d-883a-deb138e3249f"/>
@@ -34979,6 +35009,8 @@
                   <rest xml:id="x5f6b4f3c-4673-4bab-a241-b47c2d833f6c" dur="8"/>
                 </layer>
               </staff>
+              <dir xml:id="x2c316f2d-bf31-4d65-8d73-741f673b64ef" staff="1" tstamp="1" place="above" label="fing"
+                > 1 </dir>
             </measure>
             <measure n="475" xml:id="xdb4f8367-5177-41f7-800f-a422e3a93992">
               <staff xml:id="xa89d3bab-530b-453c-abb8-913542d338c2" n="1">
@@ -35026,6 +35058,8 @@
                 staff="3"> sf </dynam>
               <dynam xml:id="x5c86c03c-1bd8-46a3-b01b-995ffede9fe3" tstamp="1" place="below"
                 staff="4"> sf </dynam>
+              <dir xml:id="x7575bafc-8619-4063-8f90-5d3a75bb337a" staff="1" tstamp="1" place="above" label="fing"
+                > 1 </dir>
             </measure>
             <measure n="476" xml:id="xaa9ad5ad-906a-45fb-b4f6-e571621aad42">
               <staff xml:id="xca94e344-0d20-4efb-b185-18cff34b1014" n="1">
@@ -35165,6 +35199,15 @@
               <tie xml:id="xb586ba82-836a-4d95-94a1-6c5537d9ba29" staff="1"
                 startid="#xf7bc699e-ad43-4d1c-ae71-e777829c170f"
                 endid="#x2c4db0c8-542e-4e94-90ee-dd86d1690501"/>
+              <reh xml:id="x970a670f-98bd-4baf-a23a-28614fb238fb" tstamp="1" staff="1"
+               place="above" label="words" > K </reh>
+              <reh xml:id="x560d302e-413e-4c69-a064-4742e5ff2bd5" tstamp="1" staff="2"
+                place="above" label="words" > K </reh>
+              <reh xml:id="x0dd64f9d-5c2f-4201-85b4-db1426293f8e" tstamp="1" staff="3"
+                place="above" label="words" > K </reh>
+              <reh xml:id="x71f95d59-b1bd-4e48-a6df-86fea521f415" tstamp="1" staff="4"
+                place="above" label="words" > K </reh>
+              
             </measure>
             <measure n="478" xml:id="xbaadd719-06cf-4380-b34f-592d0f31e075">
               <staff xml:id="xe8a59820-af52-4e96-a712-05563c4902b5" n="1">
