@@ -182,6 +182,15 @@
         </changeDesc>
         <date isodate="2019-07-24"/>
       </change>
+      <change n="15">
+        <respStmt>
+          <persName auth.uri="https://github.com/"> Elisa Novara</persName>
+        </respStmt>
+        <changeDesc>
+          <p n="1"> Kleinere Korrekturen, vor allem accid.ges</p>
+         </changeDesc>
+        <date isodate="2019-07-30"/>
+      </change>
     </revisionDesc>
   </meiHead>
   <music>
@@ -4251,7 +4260,7 @@
                       stem.dir="up" accid.ges="f"/>
                     <rest xml:id="x168d7353-27e8-46ea-9156-dbe2249ce1fc" dur="16"/>
                     <note xml:id="x749bab7d-a412-438c-a732-a54a9595bf43" pname="d" oct="4" dur="16"
-                      stem.dir="up" accid.ges="f"/>
+                      stem.dir="up" />
                   </beam>
                   <clef xml:id="x476df8ee-98c7-4a36-9db6-79747929de85" shape="F" line="4"/>
                   <beam xml:id="x43638c1f-9830-4a61-813b-d42102b06ed8">
@@ -7986,7 +7995,7 @@
                         stem.dir="down"/>
                     </tuplet>
                   </beam>
-                  <space xml:id="x9ffa2972-af4b-4228-ba5d-5758071bcb35" dur="2"/>
+              
                 </layer>
               </staff>
               
@@ -8159,7 +8168,7 @@
                       <note xml:id="x57ec0f1f-8f17-4a80-b957-d8f5b96c429f" pname="a" oct="5" dur="8"
                         stem.dir="up"/>
                       <note xml:id="x8dbfd459-def8-4576-b65f-4510d8fb1181" pname="b" oct="5" dur="8"
-                        stem.dir="up"/>
+                        stem.dir="up" accid.ges="f"/>
                       <note xml:id="x3b2136c7-094b-4069-9edd-7d9be3bd557b" pname="c" oct="6" dur="8"
                         stem.dir="up"/>
                     </tuplet>
@@ -16909,7 +16918,7 @@
                     <note xml:id="x655b964b-4400-4e42-a50d-bc812f76b77b" pname="b" oct="4" dur="8"
                       stem.dir="down" accid.ges="f"/>
                     <note xml:id="xd63458f1-ee5c-422e-bfab-832b25ac98d9" pname="b" oct="4" dur="8"
-                      stem.dir="down"/>
+                      stem.dir="down" accid.ges="f"/>
                   </beam>
                   <beam xml:id="x9114bb07-f5e1-4ed4-bb35-50be896b758b">
                     <note xml:id="x3bd27284-5bd1-4ca4-b301-009a638e0dd0" pname="a" oct="5" dur="8"
@@ -22323,7 +22332,7 @@
                     <note xml:id="x2a66bc08-b4db-4340-9f7f-e3cfe3f3fbbb" pname="b" oct="3" dur="16"
                       stem.dir="down" accid.ges="f"/>
                     <note xml:id="xc15349c9-e2b4-4746-8a82-ba538908ef56" pname="g" oct="3" dur="16"
-                      stem.dir="down" accid.ges="f"/>
+                      stem.dir="down" accid.ges="n"/>
                   </beam>
                 </layer>
               </staff>
@@ -22608,12 +22617,12 @@
                 <layer xml:id="x87c32100-d75c-411a-a1a1-6dacf9d382b6" n="1">
                   <beam xml:id="x3c7457d1-933b-42a0-a64c-16ee646b0895">
                     <note xml:id="x47cd997e-7bac-4455-9c6f-52a43d3cc836" pname="c" oct="4" dur="16"
-                      stem.dir="up"/>
-                    <!-- N.B. Hier Fehler in OA: vorherige Note sollte ein Auflösungszeichen bekommen -->
-                    <note xml:id="x1dddc0d8-f5ea-4241-a86d-e98a645c1443" pname="d" oct="4" dur="16"
+                      stem.dir="up" accid.ges="f"/>
+                   <!-- N.B. noch zu überprüfen: Fehler in OA bei der vorherigen Note? Sollte einen "accid="n" da sein? -->
+                   <note xml:id="x1dddc0d8-f5ea-4241-a86d-e98a645c1443" pname="d" oct="4" dur="16"
                       stem.dir="up" accid="n"/>
                     <note xml:id="x5955161b-4dc9-4bb8-9bf9-154adb30df87" pname="c" oct="4" dur="16"
-                      stem.dir="up" accid.ges="n"/>
+                      stem.dir="up" accid.ges="f"/>
                     <note xml:id="x55610fc9-9928-48b8-8399-979552f64add" pname="d" oct="4" dur="16"
                       stem.dir="up" accid.ges="n"/>
                   </beam>
@@ -23542,7 +23551,7 @@
               <staff xml:id="x8efae567-3cf9-4ca0-a355-bff04e805d71" n="1">
                 <layer xml:id="xfa7c46b9-3c88-4315-ad1e-29960360eead" n="1">
                   <note xml:id="x3bc5e423-9883-4f16-9fca-a3aee5ac0306" pname="a" oct="5" dur="4"
-                    stem.dir="down"/>
+                    stem.dir="down" accid.ges="f"/>
                   <note xml:id="xa7e29a05-e6eb-41f2-91c9-874229fe6a4e" pname="f" oct="6" dur="4"
                     stem.dir="up" accid="n"/>
                 </layer>
@@ -24326,7 +24335,7 @@
                     <note xml:id="xb6dfb233-067c-4d5c-b074-f304482d56f3" pname="b" oct="5" dur="16"
                       stem.dir="down" accid.ges="f"/>
                     <note xml:id="x2f1c7c90-269d-4267-98e2-0bc250661859" pname="a" oct="5" dur="16"
-                      stem.dir="down"/>
+                      stem.dir="down" accid.ges="f"/>
                     <note xml:id="xa9836830-cc73-4067-bde8-5a70bdbac21f" pname="a" oct="6" dur="16"
                       stem.dir="down" accid.ges="f"/>
                     <note xml:id="x418a670f-78b3-4d48-a828-d1138e207c15" pname="g" oct="6" dur="16"
@@ -24364,7 +24373,7 @@
                     <note xml:id="xf0d6094a-cce2-4036-826e-8281ee28eff3" pname="a" oct="5" dur="16"
                       stem.dir="down" accid.ges="f"/>
                     <note xml:id="x9d2a6cb1-3eb5-48a3-b8b5-ddeadd98ead1" pname="g" oct="5" dur="16"
-                      stem.dir="down"/>
+                      stem.dir="down" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -34494,7 +34503,7 @@
                     <note xml:id="xd3bf5fd8-1a9e-4a5e-8c80-f107a44dc0ed" pname="b" oct="3" dur="8"
                       stem.dir="up" accid.ges="f"/>
                     <note xml:id="x520440a6-b763-4cc7-abf8-51f426870253" pname="a" oct="4" dur="8"
-                      stem.dir="up" artic="stacciss" accid.ges="n"/>
+                      stem.dir="up" artic="stacciss" accid.ges="f"/>
                     <!-- das Zeichen, das mit artic=stacciss an der Note #d1e172508 codiert ist, 
                                  ist unklar (möglicherweise Fleck im Papier?) -->
                   </beam>
@@ -41519,7 +41528,7 @@
                   <note xml:id="xd9c48941-fc96-4b9c-aab3-a23b8114a564" pname="d" oct="5" dur="4"
                     stem.dir="down"/>
                   <note xml:id="x0b17ca03-86ea-4c6f-aa5d-c607125b7344" pname="c" oct="6" dur="8"
-                    stem.dir="down" accid.ges="s"/>
+                    stem.dir="down" accid.ges="n"/>
                 </layer>
               </staff>
               <staff xml:id="x68a26224-6d74-4a2b-981d-d54cbdbba128" n="2">
