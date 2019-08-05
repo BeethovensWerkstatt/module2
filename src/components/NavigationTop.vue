@@ -1,7 +1,7 @@
 <template>
     <div id="navigationTop" v-if="1 == 1" class="navbar">
       <section class="navbar-section">
-          <span>Navigations-Tools</span>
+          <PageNavigation/>
           <span>Besetzung, Transposition, Satzkern</span>
       </section>
 
@@ -13,10 +13,12 @@
 
 <script>
 
+import PageNavigation from '@/components/PageNavigation.vue'
+
 export default {
   name: 'NavigationTop',
   components: {
-
+    PageNavigation
   }
 }
 </script>
@@ -24,7 +26,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-  div {
+  div#navigationTop {
+    /*flex: 1;*/
     background-color: #f5f5f5;
     border-bottom: .5px solid #999999;
     padding: 10px 20px;

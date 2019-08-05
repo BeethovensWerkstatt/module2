@@ -1,45 +1,86 @@
 <template>
   <div id="analysisPlain">
-    <h1>AnalysisPlain</h1>
     <div id="svgContainer"></div>
   </div>
 </template>
 
 <script>
 
+let unwatch
+
 export default {
   name: 'AnalysisPlain',
   components: {
 
   },
-  mounted(){
-    console.log('me mounted')
-    this.getData()
+  created () {
+    this.$store.dispatch('fetchMEI')
+    this.setOptions()
+  },
+  mounted () {
+
+    // initial Verovio rendering (when data available)
+    if (this.$store.getters.currentMEI !== null) {
+      this.$verovio.loadData(this.$store.getters.currentMEI + '\n')
+      this.renderPage(this.$store.getters.currentPage)
+    }
+
+    unwatch = this.$store.watch(
+      (state, getters) => ({ request: getters.currentRequest, page: getters.currentPage }),
+      (newState, oldState) => {
+        // console.log(`Updating from ${oldState.request} to ${newState.request}`);
+        if (newState.request !== oldState.request) {
+          // make sure the required data is available
+          this.$store.dispatch('fetchMEI')
+
+          // render data when already available
+          if (this.$store.getters.currentMEI !== null) {
+            this.$verovio.loadData(this.$store.getters.currentMEI + '\n')
+            this.renderPage(this.$store.getters.currentPage)
+          }
+        }
+
+        if (newState.page !== oldState.page) {
+          // make verovio render the requested page
+          this.renderPage(this.$store.getters.currentPage)
+        }
+      }
+    )
+  },
+  updated () {
+    // this.$store.dispatch('fetchMEI')
+  },
+  beforeDestroy () {
+    try {
+      unwatch()
+    } catch (err) {
+      console.log('[ERROR] Unable to remove watcher: ' + err)
+    }
   },
   methods: {
-    getData: function() {
-
-      let activeComparisonId = this.$store.getters.activeComparisonId
-      let activeMovement = this.$store.getters.activeMovement
-      let transpose = this.$store.getters.transpose
-
-      let api = process.env.VUE_APP_DATA_BACKEND_URL
-      let request = 'resources/xql/getAnalysis.xql?comparisonId=' + activeComparisonId + '&method=plain&mdiv=' + activeMovement + '&transpose=' + transpose
-
-      /*return 'api: ' + api + request*/
-
-      if(activeComparisonId === null) {
-        return false;
-      }
-
+    setOptions: function () {
       let options = {
-          scale: 50,
+        scale: 10,
+        noFooter: 1, // takes out the "rendered by Verovio" footer
+        // adjustPageHeight: true,
+        spacingNonLinear: 1,
+        spacingLinear: 0.05,
+        svgViewBox: 1
+      }
+      try {
+        this.$verovio.setOptions(options)
+      } catch (err) {
+        console.log('ERR: ' + err)
+      }
+    },
+    /* renderMEI: function () {
+      let options = {
+          scale: 30,
           noFooter: 1, // takes out the "rendered by Verovio" footer
-          pageWidth: 500,
-          pageHeight: 500,
-          adjustPageHeight: true,
+          // adjustPageHeight: true,
           spacingNonLinear: 1,
-          spacingLinear: .05
+          spacingLinear: .05,
+          svgViewBox: 1
         };
       try {
           this.$verovio.setOptions(options);
@@ -48,32 +89,44 @@ export default {
       }
       console.log('successfully set options…')
 
-      // console.log('\nhello polly ' + typeof verovio)
+      if(typeof this.currentMEI !== 'undefined') {
 
-      new Promise(resolve => {
-        fetch(api + request)
-          .then(response => response.text()) // add error handling for failing requests
-          .then(mei => {
-            this.$verovio.loadData(mei + '\n')
-            this.loadPage(1)
-          })
-      })
-    },
-    loadPage: function(n) {
-      console.log('loading page ' + n)
-      let svg = this.$verovio.renderToSVG(n, {});
-      let svgContainer = document.querySelector('#svgContainer');
-      svgContainer.innerHTML = svg;
+        this.$verovio.loadData(this.currentMEI + '\n')
+        this.currentPage)
+        this.loadPage(this.currentPage)
+      }
+    }, */
+    renderPage: function (n) {
+      // set listeners
 
-
+      let svg = this.$verovio.renderToSVG(this.$store.getters.currentPage, {})
+      let svgContainer = document.querySelector('#svgContainer')
+      svgContainer.innerHTML = svg
     }
   },
   computed: {
-    activeModeId: function() {
+    activeModeId: function () {
       return this.$store.getters.activeModeId
     },
-    activeModeObject: function() {
+    activeModeObject: function () {
       return this.$store.getters.activeModeObject
+    },
+    currentPage: function () {
+      return this.$store.getters.currentPage
+    },
+    currentMEI: function () {
+      return this.$store.getters.currentMEI
+    },
+    render: function () {
+      return this.render()
+    },
+    svg: function () {
+      if (this.$store.getters.currentMEI === null) {
+        return 'kann noch nicht laden'
+      } else {
+        this.$verovio.loadData(this.$store.getters.currentMEI + '\n')
+        return this.renderPage(this.$store.getters.currentPage)
+      }
     }
   }
 }

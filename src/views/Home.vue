@@ -48,3 +48,36 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+
+  /*.home {
+    height: calc(100% - 68.5px);
+    max-height: calc(100% - 68.5px);
+    position: absolute;
+    top: 68.5px;
+    left: 0;
+    width: 100%;
+  }
+
+  #navigationBox {
+    height: calc(100% - 68.5px);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    & > * {
+      flex: 1;
+    }
+  }
+
+  #contentBox {
+    height: calc(100% - 68.5px);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    & > * {
+      flex: 1;
+    }
+  }*/
+
+</style>

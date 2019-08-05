@@ -5,6 +5,9 @@ import modeConfiguration from './../modeConfiguration.json'
 
 // const api = process.env.VUE_APP_DATA_BACKEND_URL
 const api = 'https://dev.beethovens-werkstatt.de/'
+const buildRequest = (comparison, method, mdiv, transpose) => {
+  return 'resources/xql/getAnalysis.xql?comparisonId=' + comparison + '&method=' + method + '&mdiv=' + mdiv + '&transpose=' + transpose
+}
 
 Vue.use(Vuex)
 
@@ -14,11 +17,13 @@ export default new Vuex.Store({
     comparisons: {},
     activeComparison: null,
     activeMovement: 1, // first mdiv
+    cachedRequests: {},
     modes: modeConfiguration,
-    activeMode: null, // default comparison?
+    activeMode: null,
     transpose: 'none',
     zoom: 1,
     currentPage: 1,
+    currentMaxPage: 10,
     measure: null,
     introVisible: false,
     navigationVisible: true // this is the sidebar with work and mode selection
@@ -49,6 +54,21 @@ export default new Vuex.Store({
     },
     HIDE_INTRO (state) {
       state.introVisible = false
+    },
+    SET_PAGE (state, n) {
+      state.currentPage = n
+    },
+    SET_MAX_PAGE (state, n) {
+      state.currentMaxPage = n
+    },
+    SET_TRANSPOSE (state, transpose) {
+      state.transpose = transpose
+    },
+    CACHE_REQUEST (state, { request, mei }) {
+      // state.cachedRequests[request] = mei
+      let newEntry = {}
+      newEntry[request] = mei
+      state.cachedRequests = Object.assign({}, state.cachedRequests, newEntry)
     }
   },
   actions: {
@@ -60,6 +80,32 @@ export default new Vuex.Store({
             commit('FETCH_COMPARISONLIST', comparisons)
             resolve()
           })
+      })
+    },
+    fetchMEI ({ commit, state }) {
+      let request = buildRequest(state.activeComparison, state.activeMode, state.activeMovement, state.transpose)
+
+      console.log('fetching has started')
+
+      return new Promise(resolve => {
+        if (state.activeComparison === null) {
+          // request isn't complete yet
+          console.log('no comparison has been selected yet, so data cannot be loaded')
+          resolve()
+        } else if (typeof state.cachedRequests[request] !== 'undefined') {
+          // resource has been loaded already, no action required
+          console.log('resource has been loaded already, no action required')
+          resolve()
+        } else {
+          // resource needs to be loaded
+          console.log('// resource needs to be loaded')
+          fetch(api + request)
+            .then(response => response.text()) // add error handling for failing requests
+            .then(mei => {
+              commit('CACHE_REQUEST', { request, mei })
+              resolve()
+            })
+        }
       })
     },
     activateComparison ({ commit }, id) {
@@ -79,8 +125,31 @@ export default new Vuex.Store({
     },
     hideIntro ({ commit }) {
       commit('HIDE_INTRO')
+    },
+    setPage ({ commit, state }, n) {
+      let num = parseInt(n, 10)
+      if (!isNaN(num) && num >= 1 && num <= state.currentMaxPage) {
+        commit('SET_PAGE', num)
+      }
+    },
+    increasePage ({ commit, state }) {
+      let num = state.currentPage + 1
+      if (num >= 1 && num <= state.currentMaxPage) {
+        commit('SET_PAGE', num)
+      }
+    },
+    decreasePage ({ commit, state }) {
+      let num = state.currentPage - 1
+      if (num >= 1 && num <= state.currentMaxPage) {
+        commit('SET_PAGE', num)
+      }
+    },
+    setMaxPage ({ commit }, n) {
+      commit('SET_MAX_PAGE', n)
+    },
+    setTranpose ({ commit }, transpose) {
+      commit('SET_TRANSPOSE', transpose)
     }
-
   },
   getters: {
     comparisons: state => {
@@ -122,6 +191,35 @@ export default new Vuex.Store({
     },
     introVisible: state => {
       return state.introVisible
+    },
+    currentPage: state => {
+      return state.currentPage
+    },
+    currentRequest: state => {
+      if (state.activeComparison === null) {
+        return null
+      }
+
+      if (state.activeMode === null) {
+        return null
+      }
+
+      let request = buildRequest(state.activeComparison, state.activeMode, state.activeMovement, state.transpose)
+
+      return request
+    },
+    currentMEI: state => {
+      if (state.activeComparison === null) {
+        return null
+      }
+
+      if (state.activeMode === null) {
+        return null
+      }
+
+      let request = buildRequest(state.activeComparison, state.activeMode, state.activeMovement, state.transpose)
+
+      return state.cachedRequests[request]
     }
   }
 })
