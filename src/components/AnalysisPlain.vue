@@ -26,7 +26,7 @@ export default {
     }
 
     unwatch = this.$store.watch(
-      (state, getters) => ({ request: getters.currentRequest, page: getters.currentPage }),
+      (state, getters) => ({ request: getters.currentRequest, page: getters.currentPage, dataAvailable: (getters.currentMEI !== null) }),
       (newState, oldState) => {
         // console.log(`Updating from ${oldState.request} to ${newState.request}`);
         if (newState.request !== oldState.request) {
@@ -40,9 +40,16 @@ export default {
           }
         }
 
+        // render MEI as soon as it arrives from the API. This responds only for the first time a request has been made
+        if (newState.dataAvailable && !oldState.dataAvailable) {
+          console.log('coming back for the first time')
+          this.$verovio.loadData(this.$store.getters.currentMEI)
+          this.renderPage(newState.page)
+        }
+
         if (newState.page !== oldState.page) {
           // make verovio render the requested page
-          this.renderPage(this.$store.getters.currentPage)
+          this.renderPage(newState.page)
         }
       }
     )

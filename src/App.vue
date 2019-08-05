@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Navbar/>
+    <Loading/>
     <router-view/>
   </div>
 </template>
@@ -8,11 +9,13 @@
 <script>
 // @ is an alias to /src
 import Navbar from '@/components/Navbar.vue'
+import Loading from '@/components/Loading.vue'
 
 export default {
   name: 'home',
   components: {
-    Navbar
+    Navbar,
+    Loading
   }
 }
 </script>

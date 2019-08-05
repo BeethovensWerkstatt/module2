@@ -26,6 +26,8 @@ export default new Vuex.Store({
     currentMaxPage: 10,
     measure: null,
     introVisible: false,
+    loading: [],
+    networkErrorMsg: null,
     navigationVisible: true // this is the sidebar with work and mode selection
   },
   mutations: {
@@ -69,15 +71,48 @@ export default new Vuex.Store({
       let newEntry = {}
       newEntry[request] = mei
       state.cachedRequests = Object.assign({}, state.cachedRequests, newEntry)
+    },
+    START_LOADING (state, request) {
+      // see if request is on the list already, then remove from old position
+      let index = state.loading.indexOf(request)
+      if (index !== -1) {
+        state.loading.splice(index, 1)
+      }
+      // add new request to end of list
+      state.loading.push(request)
+    },
+    STOP_LOADING (state, request) {
+      // identify current request and remove it from array
+      let index = state.loading.indexOf(request)
+      if (index !== -1) {
+        state.loading.splice(index, 1)
+      }
+    },
+    SHOW_NETWORK_ERROR (state, msg) {
+      state.networkErrorMsg = msg
+      // this is a dead end for now, with no way to get out of this state
     }
   },
   actions: {
     fetchComparisons ({ commit }) {
       return new Promise(resolve => {
-        fetch(api + 'resources/xql/getComparisonListing.xql')
-          .then(response => response.json()) // add error handling for failing requests
+        let request = 'resources/xql/getComparisonListing.xql'
+        commit('START_LOADING', request)
+        fetch(api + request)
+          .then(response => {
+            if (response.status !== 200) {
+              console.log('why here?')
+              throw Error(response.statusText)
+            }
+            return response.json()
+          })
           .then(comparisons => {
             commit('FETCH_COMPARISONLIST', comparisons)
+            commit('STOP_LOADING', request)
+            resolve()
+          })
+          .catch(error => {
+            commit('SHOW_NETWORK_ERROR', error)
             resolve()
           })
       })
@@ -85,24 +120,34 @@ export default new Vuex.Store({
     fetchMEI ({ commit, state }) {
       let request = buildRequest(state.activeComparison, state.activeMode, state.activeMovement, state.transpose)
 
-      console.log('fetching has started')
-
+      // console.log('fetching has started')
       return new Promise(resolve => {
         if (state.activeComparison === null) {
           // request isn't complete yet
-          console.log('no comparison has been selected yet, so data cannot be loaded')
+          // console.log('no comparison has been selected yet, so data cannot be loaded')
           resolve()
         } else if (typeof state.cachedRequests[request] !== 'undefined') {
           // resource has been loaded already, no action required
-          console.log('resource has been loaded already, no action required')
+          // console.log('resource has been loaded already, no action required')
           resolve()
         } else {
           // resource needs to be loaded
-          console.log('// resource needs to be loaded')
+          // console.log('// resource needs to be loaded')
+          commit('START_LOADING', request)
           fetch(api + request)
-            .then(response => response.text()) // add error handling for failing requests
+            .then(response => {
+              if (!response.ok) {
+                throw Error(response.statusText)
+              }
+              return response.text()
+            })
             .then(mei => {
               commit('CACHE_REQUEST', { request, mei })
+              commit('STOP_LOADING', request)
+              resolve()
+            })
+            .catch(error => {
+              commit('SHOW_NETWORK_ERROR', error)
               resolve()
             })
         }
@@ -219,7 +264,21 @@ export default new Vuex.Store({
 
       let request = buildRequest(state.activeComparison, state.activeMode, state.activeMovement, state.transpose)
 
+      if (typeof state.cachedRequests[request] === 'undefined') {
+        return null
+      }
+
       return state.cachedRequests[request]
+    },
+    currentlyLoading: state => {
+      if (state.loading.length === 0) {
+        return null
+      } else if (state.activeComparison === null || state.activeMode === null && state.loading[0] === 'resources/xql/getComparisonListing.xql') {
+        return 'available data'
+      } else {
+        let comp = state.comparisons[state.activeComparison]
+        return comp.title + ' ' + comp.target
+      }
     }
   }
 })
