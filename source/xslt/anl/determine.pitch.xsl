@@ -27,6 +27,7 @@
     </xsl:template>
     <xsl:template match="mei:note" mode="determine.pitch_add.normalized.pitch">
         <xsl:variable name="key" select="if(ancestor::mei:staff/@staff.key) then(ancestor::mei:staff/@staff.key) else if(ancestor::mei:ending[@base.key]) then(ancestor::mei:ending[@base.key]/@base.key) else(ancestor::mei:section[@base.key]/@base.key)" as="xs:string"/>
+        <xsl:variable name="base.key" select="if(ancestor::mei:ending[@base.key]) then(ancestor::mei:ending[@base.key]/@base.key) else(ancestor::mei:section[@base.key]/@base.key)" as="xs:string"/>
         <xsl:variable name="trans.dir" as="xs:integer">
             <xsl:choose>
                 <xsl:when test="not(exists(ancestor::mei:staff/@trans.semi))">
@@ -52,7 +53,7 @@
         </xsl:variable>
         <xsl:copy>
             <xsl:attribute name="pitch" select="custom:qualifyPitch(., $key)"/>
-            <xsl:attribute name="rel.oct" select="custom:determineOct(., $key,$trans.dir, $trans.diat)"/>
+            <xsl:attribute name="rel.oct" select="custom:determineOct(., $key,$trans.dir, $trans.diat, $base.key)"/>
             <xsl:apply-templates select="node() | @*" mode="#current"/>
         </xsl:copy>
     </xsl:template>
@@ -134,10 +135,13 @@
         <xsl:param name="key" as="xs:string" required="yes"/>
         <xsl:param name="trans.dir" as="xs:integer" required="yes"/>
         <xsl:param name="trans.diat" as="xs:integer" required="yes"/>
+        <xsl:param name="base.key" as="xs:string" required="yes"/>
         <xsl:variable name="pitches" select="('c','d','e','f','g','a','b')" as="xs:string+"/>
         <xsl:variable name="index.of.key" select="index-of($pitches,lower-case(substring($key,1,1)))" as="xs:integer"/>
+        <xsl:variable name="index.of.base.key" select="index-of($pitches,lower-case(substring($base.key,1,1)))" as="xs:integer"/>
         <xsl:variable name="index.of.pname" select="index-of($pitches,$note/@pname)" as="xs:integer"/>
         <xsl:variable name="oct.mod" as="xs:integer">
+            <!-- approach 1 -->
             <!--<xsl:choose>
                 <!-\- in keys of A / B, pitches in the upper range will be treated as one octave higher… -\->
                 <xsl:when test="$index.of.key ge 6 and $index.of.pname ge $index.of.key">
@@ -154,19 +158,60 @@
                     <xsl:value-of select="0"/>
                 </xsl:otherwise>
             </xsl:choose>-->
-            <xsl:choose>
+            
+            <!-- approach 2 -->
+            <!--<xsl:choose>
                 <xsl:when test="$index.of.key gt $index.of.pname">
                     <xsl:value-of select="-1"/>
                 </xsl:when>
-                <!-- offset all C-keys by -1; was necessary for Op.122 -->
-                <!--<xsl:when test="$index.of.key = 1">
+                <!-\- offset all C-keys by -1; was necessary for Op.122 -\->
+                <!-\-<xsl:when test="$index.of.key = 1">
                     <xsl:value-of select="-1"/>
-                </xsl:when>-->
+                </xsl:when>-\->
+                <xsl:otherwise>
+                    <xsl:value-of select="0"/>
+                </xsl:otherwise>
+            </xsl:choose>-->
+            
+            <!-- approach 3 -->
+            <xsl:variable name="new.index.prep" select="$index.of.pname - ($index.of.key - 1)" as="xs:integer"/>
+            <xsl:variable name="new.index" select="if($new.index.prep lt 1) then($new.index.prep + 7) else($new.index.prep)" as="xs:integer"/>
+            <xsl:choose>
+                <xsl:when test="8 - $index.of.key lt $new.index">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="0"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
+        
+        <xsl:if test="$note/@xml:id = 'x11e7dff3-0ef9-477f-b99c-0203f094a055'">
+            <xsl:message select="'-------oct.mod: ' || $oct.mod || ' 8 - $index.of.key:' || $index.of.key || ' is less than $index.of.pname: ' || $index.of.pname"/>
+        </xsl:if>
+        
+        <!-- approach 3 -->
+        <xsl:variable name="trans.mod.new" as="xs:integer">
+            <xsl:choose>
+                <xsl:when test="$key = $base.key">
+                    <xsl:value-of select="0"/>
+                </xsl:when>
+                <xsl:when test="$trans.dir = -1 and $index.of.key lt $index.of.base.key">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>
+                <xsl:when test="$trans.dir = 1 and $index.of.key gt $index.of.base.key">
+                    <xsl:value-of select="1"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="0"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        
+        <!--<xsl:if test="$trans.mod.new != 0">
+            <xsl:message select="'  ' || $note/@xml:id || ' has ' || $trans.mod.new"/>
+        </xsl:if>-->
+        
         <!--<xsl:variable name="trans.mod" select="if($trans.dir = -1) then(0) else(0)"/>-->
         <xsl:variable name="trans.mod" as="xs:integer">
             <xsl:choose>
@@ -178,8 +223,8 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="output" select="string($note/number(@oct) + $oct.mod + $trans.mod)" as="xs:string"/>
+        <xsl:variable name="output" select="string($note/number(@oct) + $oct.mod + $trans.mod.new)" as="xs:string"/>
         <!--<xsl:value-of select="$output"/>-->
-        <xsl:value-of select="string($note/number(@oct) + $oct.mod  + $trans.mod)"/>
+        <xsl:value-of select="string($note/number(@oct) + $oct.mod  + $trans.mod.new)"/>
     </xsl:function>
 </xsl:stylesheet>

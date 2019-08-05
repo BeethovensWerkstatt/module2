@@ -24,8 +24,8 @@
                 <xsl:when test="child::mei:scoreDef[@key.sig][count(preceding-sibling::mei:*[not(local-name() = 'annot')]) = 0]">
                     <xsl:sequence select="child::mei:scoreDef[@key.sig][count(preceding-sibling::mei:*[not(local-name() = 'annot')]) = 0]"/>
                 </xsl:when>
-                <xsl:when test="preceding-sibling::mei:scoreDef[@key.sig]">
-                    <xsl:sequence select="preceding-sibling::mei:scoreDef[@key.sig][1]"/>
+                <xsl:when test="preceding-sibling::mei:*[(local-name() = 'scoreDef' and @key.sig) or (local-name() = ('section','ending') and child::mei:scoreDef[@key.sig])]">
+                    <xsl:sequence select="preceding-sibling::mei:*[(local-name() = 'scoreDef' and @key.sig) or (local-name() = ('section','ending') and child::mei:scoreDef[@key.sig])][1]/descendant-or-self::mei:scoreDef[@key.sig][1]"/>
                 </xsl:when>
                 <xsl:when test="ancestor-or-self::mei:*[local-name() = ('section','ending')]/preceding-sibling::mei:scoreDef[@key.sig]">
                     <xsl:sequence select="ancestor-or-self::mei:*[local-name() = ('section','ending')]/preceding-sibling::mei:scoreDef[@key.sig][1]"/>
@@ -54,7 +54,7 @@
         <xsl:variable name="key" select="$relevant.key.elem/@name" as="xs:string">
             <!-- todo: here was a test if that's really the right key. We could look for a Krumhansl-Schmuckler-Evaluation -->
         </xsl:variable>
-        <xsl:message select="'Identified section as key ' || $key"/>
+        <xsl:message select="'Identified section starting at measure ' || (.//mei:measure)[1]/@n || ' as key ' || $key"/>
         <xsl:copy>
             <xsl:attribute name="base.key" select="$key"/>
             <xsl:apply-templates select="node() | @*" mode="#current">

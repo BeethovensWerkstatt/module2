@@ -14,7 +14,7 @@
         <xsl:copy>
             <xsl:apply-templates select="node() | @*" mode="#current"/>
             <xsl:variable name="staff.count" select="count(.//mei:staff)" as="xs:integer"/>
-            <xsl:variable name="tstamps" select="distinct-values(.//@tstamp)" as="xs:string+"/>
+            <xsl:variable name="tstamps" select="distinct-values(.//mei:staff//@tstamp)" as="xs:string+"/>
             <xsl:for-each select="$tstamps">
                 <xsl:sort select="." data-type="number"/>
                 <harm xmlns="http://www.music-encoding.org/ns/mei" staff="{$staff.count}" place="below" tstamp="{.}" type="eventDensity">

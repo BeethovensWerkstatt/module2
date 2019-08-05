@@ -926,7 +926,7 @@ function loadPage(newPage) {
     
     //todo: is there a more elegant way, either utilising Verovio or Draw?
     let height = svgContainer.querySelector('svg > svg').getAttribute('height');
-    svgContainer.style.height = height;
+    svgContainer.style.height = height + 30;
     
     addPageListeners();
 }
