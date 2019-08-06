@@ -5,24 +5,27 @@
     <div v-if="introVisible">
       <h1>show Intro</h1>
     </div>
-    <div v-if="!introVisible">
-      <div class="container">
-        <div class="columns col-gapless">
-          <div id="navigationBox" class="column col-3 col-lg-12">
-            <ComparisonSelection/>
-            <ModeSelection/>
-            <!-- WorkSelection -->
-            <!-- WorkSelection -->
-          </div>
-          <div id="contentBox" class="column col-9 col-lg-12">
-          <!-- Content -->
-            <NavigationTop/>
-            <Analysis/>
-          </div>
+    <div v-else id="fullBox">
+      <div id="navigationBox">
+        <ComparisonSelection/>
+        <ModeSelection/>
+        <!-- WorkSelection -->
+        <!-- WorkSelection -->
+      </div>
+      <div id="contentBox">
+
+        <NavigationTop v-if="comparisonSelected && modeSelected"/>
+        <Analysis v-if="comparisonSelected && modeSelected"/>
+        <div v-if="!comparisonSelected" class="toast">
+          <h1>Select Comparison</h1>
+          <p>In order to start, you need to select a comparison of two works on the left side.</p>
+        </div>
+        <div v-else-if="!modeSelected" class="toast toast-primary">
+          <h1>Select Comparison Mode</h1>
+          <p>In order to start, you need to select a mode of comparison on the left side.</p>
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -44,6 +47,12 @@ export default {
   computed: {
     introVisible: function() {
       return this.$store.getters.introVisible;
+    },
+    comparisonSelected: function() {
+      return this.$store.getters.activeComparisonId !== null
+    },
+    modeSelected: function() {
+      return this.$store.getters.activeModeId !== null
     }
   }
 }
@@ -51,11 +60,43 @@ export default {
 
 <style scoped lang="scss">
 
-#navigationBox {
-  background-color: #f5f5f5;
-  border-right: 0.5px solid #666666;
-  padding: 0.5rem;
+#fullBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 68.5px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  #navigationBox {
+    background-color: #f5f5f5;
+    border-right: 0.5px solid #666666;
+    padding: 0.5rem 1rem;
+    flex: 0 0 360px;
+    align-self: stretch;
+    overflow: auto;
+  }
+
+  #contentBox {
+    flex: 1 1 auto;
+    align-self: stretch;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .toast {
+      width: unset;
+      margin: 3rem;
+    }
+  }
+
 }
+
+
 
   /*.home {
     height: calc(100% - 68.5px);

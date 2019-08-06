@@ -27,7 +27,7 @@ export default {
 <style scoped lang="scss">
 
   div#navigationTop {
-    /*flex: 1;*/
+    flex: 0 0 auto;
     background-color: #f5f5f5;
     border-bottom: .5px solid #999999;
     padding: 10px 20px;
