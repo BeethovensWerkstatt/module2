@@ -142,6 +142,10 @@ export default new Vuex.Store({
               return response.text()
             })
             .then(mei => {
+              /* if (state.loading[state.loading.length - 1] === request) {
+                // accept only the last requested file -> problem: other loaded data is not preserved. It should work anyway?
+                commit('CACHE_REQUEST', { request, mei })
+              } */
               commit('CACHE_REQUEST', { request, mei })
               commit('STOP_LOADING', request)
               resolve()
@@ -273,12 +277,20 @@ export default new Vuex.Store({
     currentlyLoading: state => {
       if (state.loading.length === 0) {
         return null
-      } else if (state.activeComparison === null || state.activeMode === null && state.loading[0] === 'resources/xql/getComparisonListing.xql') {
-        return 'available data'
+      } else if ((state.activeComparison === null || state.activeMode === null) && state.loading[0] === 'resources/xql/getComparisonListing.xql') {
+        return 'loading data'
+      } else if (state.activeComparison !== null && typeof state.comparisons[state.activeComparison] !== 'undefined') {
+        // let comp = state.comparisons[state.activeComparison]
+        // return comp.title + ' ' + comp.target
+        return 'loading data'
       } else {
-        let comp = state.comparisons[state.activeComparison]
-        return comp.title + ' ' + comp.target
+        // this case should not happen
+        return 'loading data'
       }
+      // todo: find mechanism to automatically notify admin (and tell that to the user)
+    },
+    loadingError: state => {
+      return state.networkErrorMsg
     }
   }
 })

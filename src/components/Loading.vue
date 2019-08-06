@@ -1,6 +1,18 @@
 <template>
-  <div id="loadingBack" v-if="isloading">
-    <div id="loadingText">{{loadingText}}</div>
+  <div id="loadingBack" v-if="isloading || loadingError !== null">
+    <div id="loadingFront">
+      <div v-if="isloading">
+        <div class="loading loading-lg"></div>
+        <div id="loadingText">{{loadingText}}</div>
+      </div>
+      <div v-if="loadingError !== null">
+        <div class="toast toast-error">
+          <h1>Network Error</h1>
+          <p>{{loadingError}}</p>
+          <p>Please try again later</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -12,10 +24,14 @@ export default {
   },
   computed: {
     isloading: function() {
-      return this.$store.getters.currentlyLoading !== null
+      return (this.$store.getters.currentlyLoading !== null)
     },
     loadingText: function() {
-      return this.$store.getters.currentlyLoading
+      // return this.$store.getters.currentlyLoading
+      return 'loading data'
+    },
+    loadingError: function() {
+      return this.$store.getters.loadingError
     }
   }
 }
@@ -24,16 +40,19 @@ export default {
 <style scoped lang="scss">
 
 #loadingBack {
-  display: fixed;
+  position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff66;
+  right: 0;
+  left: 0;
+  min-height: 1000px;
+  background-color: #ffffffcc;
 
-  #loadingText {
-      margin: 10rem;
+  #loadingFront {
+      width: 300px;
+      margin: 10rem calc(50% - 150px);
+      text-align: center;
   }
 }
 
