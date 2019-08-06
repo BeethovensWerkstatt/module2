@@ -166,13 +166,16 @@ export default new Vuex.Store({
     activateComparison ({ commit }, id) {
       // todo: check if comparison with that id is available
       commit('ACTIVATE_COMPARISON', id)
+      commit('SET_PAGE', 1)
     },
     activateMovement ({ commit }, n) {
       commit('ACTIVATE_MOVEMENT', n)
+      commit('SET_PAGE', 1)
     },
     activateMode ({ commit }, id) {
       // todo: check if mode with that id is available
       commit('ACTIVATE_MODE', id)
+      commit('SET_PAGE', 1)
     },
     displayIntro ({ commit }, id) {
       // todo: load HTML snippet from server

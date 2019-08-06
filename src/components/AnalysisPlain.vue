@@ -7,6 +7,9 @@
 <script>
 
 let unwatch
+let width
+let height
+let zoom = 35
 
 export default {
   name: 'AnalysisPlain',
@@ -15,15 +18,19 @@ export default {
   },
   created () {
     this.$store.dispatch('fetchMEI')
-    this.setOptions()
+    // this.setOptions()
   },
   mounted () {
 
     // initial Verovio rendering (when data available)
     if (this.$store.getters.currentMEI !== null) {
-      this.$verovio.loadData(this.$store.getters.currentMEI + '\n')
+      this.loadMEI()
       this.renderPage(this.$store.getters.currentPage)
     }
+
+    width = document.getElementById('analysis').clientWidth
+    height = document.getElementById('analysis').clientHeight
+    this.setOptions()
 
     unwatch = this.$store.watch(
       (state, getters) => ({ request: getters.currentRequest, page: getters.currentPage, dataAvailable: (getters.currentMEI !== null) }),
@@ -35,7 +42,7 @@ export default {
 
           // render data when already available
           if (this.$store.getters.currentMEI !== null) {
-            this.$verovio.loadData(this.$store.getters.currentMEI + '\n')
+            this.loadMEI()
             this.renderPage(this.$store.getters.currentPage)
           }
         }
@@ -43,7 +50,7 @@ export default {
         // render MEI as soon as it arrives from the API. This responds only for the first time a request has been made
         if (newState.dataAvailable && !oldState.dataAvailable) {
           console.log('coming back for the first time')
-          this.$verovio.loadData(this.$store.getters.currentMEI)
+          this.loadMEI()
           this.renderPage(newState.page)
         }
 
@@ -67,12 +74,15 @@ export default {
   methods: {
     setOptions: function () {
       let options = {
-        scale: 10,
+        scale: zoom,
         noFooter: 1, // takes out the "rendered by Verovio" footer
-        // adjustPageHeight: true,
+
+        pageWidth: (width - 20) * 100 / zoom,
+        pageHeight: (height - 20) * 100 / zoom,
+        adjustPageHeight: true,
         spacingNonLinear: 1,
-        spacingLinear: 0.05,
-        svgViewBox: 1
+        spacingLinear: 0.05
+        // svgViewBox: 1
       }
       try {
         this.$verovio.setOptions(options)
@@ -103,6 +113,13 @@ export default {
         this.loadPage(this.currentPage)
       }
     }, */
+    loadMEI: function () {
+      this.$verovio.loadData(this.currentMEI + '\n')
+      let maxPage = this.$verovio.getPageCount()
+      if(maxPage > 0) {
+        this.$store.dispatch('setMaxPage',maxPage)
+      }
+    },
     renderPage: function (n) {
       // set listeners
 
@@ -123,10 +140,10 @@ export default {
     },
     currentMEI: function () {
       return this.$store.getters.currentMEI
-    },
+    }/*,
     render: function () {
       return this.render()
-    },
+    }*//*,
     svg: function () {
       if (this.$store.getters.currentMEI === null) {
         return 'kann noch nicht laden'
@@ -134,7 +151,7 @@ export default {
         this.$verovio.loadData(this.$store.getters.currentMEI + '\n')
         return this.renderPage(this.$store.getters.currentPage)
       }
-    }
+    }*/
   }
 }
 </script>
