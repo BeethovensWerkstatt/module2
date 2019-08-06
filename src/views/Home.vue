@@ -7,7 +7,7 @@
     </div>
     <div v-if="!introVisible">
       <div class="container">
-        <div class="columns">
+        <div class="columns col-gapless">
           <div id="navigationBox" class="column col-3 col-lg-12">
             <ComparisonSelection/>
             <ModeSelection/>
@@ -50,6 +50,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+#navigationBox {
+  background-color: #f5f5f5;
+  border-right: 0.5px solid #666666;
+  padding: 0.5rem;
+}
 
   /*.home {
     height: calc(100% - 68.5px);

@@ -57,6 +57,12 @@ export default new Vuex.Store({
     HIDE_INTRO (state) {
       state.introVisible = false
     },
+    SHOW_NAVIGATION (state) {
+      state.navigationVisible = true
+    },
+    HIDE_NAVIGATION (state) {
+      state.navigationVisible = false
+    },
     SET_PAGE (state, n) {
       state.currentPage = n
     },
@@ -175,6 +181,12 @@ export default new Vuex.Store({
     hideIntro ({ commit }) {
       commit('HIDE_INTRO')
     },
+    showNavigation ({ commit }) {
+      commit('SHOW_NAVIGATION')
+    },
+    hideNavigation ({ commit }) {
+      commit('HIDE_NAVIGATION')
+    },
     setPage ({ commit, state }, n) {
       let num = parseInt(n, 10)
       if (!isNaN(num) && num >= 1 && num <= state.currentMaxPage) {
@@ -240,6 +252,9 @@ export default new Vuex.Store({
     },
     introVisible: state => {
       return state.introVisible
+    },
+    navigationVisible: state => {
+      return state.navigationVisible
     },
     currentPage: state => {
       return state.currentPage

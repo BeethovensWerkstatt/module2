@@ -47,14 +47,13 @@ ul.navigationList {
                 padding: 0;
 
                 li {
-                    padding: .3em 0 .3em 1em;
-                    margin: 0.3em 0;
+                    padding: .3em;
                     font-weight: 300;
                     position: relative;
                     cursor: pointer;
                     border: .5px solid #666666;
-                    border-radius: 5px;
-                    background-color: #f5f5f5;
+                    border-radius: 8px;
+                    background-color: #e5e5e5;
 
                     span.originalVersion {
                         display: block;

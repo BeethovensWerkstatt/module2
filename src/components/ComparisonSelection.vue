@@ -10,7 +10,7 @@
         <div class="subtitle">{{comparison.target}}</div>
       </div>
       <div v-if="comparison.id === activeComparisonId && comparison.movements.length != 1" class="mdivSelection">
-        <div class="mdiv" v-for="mdiv in comparison.movements" v-bind:class="{active: (mdiv.n === activeMovement)}" v-on:click="activateMovement(mdiv.n)">{{mdiv.label}}</div>
+        <div class="mdiv" v-for="mdiv in comparison.movements" v-bind:class="{active: (mdiv.n == activeMovement)}" v-on:click="activateMovement(mdiv.n)">{{mdiv.n}}: {{mdiv.label}}</div>
       </div>
     </div>
 
@@ -63,8 +63,9 @@ export default {
     .comparisonDetails {
       border: .5px solid $borderColor;
       border-radius: 8px;
-      background-color: #f5f5f5;
+      background-color: #e5e5e5;
       padding: .3rem;
+      cursor: pointer;
 
 
       .additionalInfo {
@@ -90,8 +91,6 @@ export default {
         background-color: #a7c7f2;
         font-weight: 700;
       }
-
-
     }
 
     .mdivSelection {
@@ -99,7 +98,6 @@ export default {
       border-right: .5px solid $borderColor;
       border-bottom: .5px solid $borderColor;
       border-left: .5px solid $borderColor;
-      border-radius: 8px;
 
       .mdiv {
           padding: 0 .5rem;
