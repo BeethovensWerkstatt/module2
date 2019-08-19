@@ -2,6 +2,7 @@
     <div id="navigationTop" v-if="1 == 1" class="navbar">
       <section class="navbar-section">
           <PageNavigation/>
+          <ZoomControl/>
           <span>Besetzung, Transposition, Satzkern</span>
       </section>
 
@@ -14,11 +15,13 @@
 <script>
 
 import PageNavigation from '@/components/PageNavigation.vue'
+import ZoomControl from '@/components/ZoomControl.vue'
 
 export default {
   name: 'NavigationTop',
   components: {
-    PageNavigation
+    PageNavigation,
+    ZoomControl
   }
 }
 </script>
