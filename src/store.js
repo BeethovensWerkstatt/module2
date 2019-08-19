@@ -194,6 +194,9 @@ export default new Vuex.Store({
       let num = parseInt(n, 10)
       if (!isNaN(num) && num >= 1 && num <= state.currentMaxPage) {
         commit('SET_PAGE', num)
+      } else if (!isNaN(num) && num > state.currentMaxPage) {
+        // if the requested page numer is too high, load last page instead
+        commit('SET_PAGE', state.currentMaxPage)
       }
     },
     increasePage ({ commit, state }) {
