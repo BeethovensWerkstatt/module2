@@ -13,12 +13,12 @@
     <xsl:template match="mei:measure" mode="add.invariance">
         <xsl:variable name="file1.pitches" as="node()*">
             <xsl:for-each select=".//mei:staff[@type = 'file1']//mei:note[@pitch]">
-                <custom:pitch id="{@xml:id}" pitch="{@pitch}" rel.oct="{@rel.oct}" tstamp="{if(@tstamp) then(@tstamp) else(ancestor::mei:*[@tstamp]/@tstamp)}" tstamp2="{if(@tstamp2) then(@tstamp2) else(ancestor::mei:*[@tstamp2]/@tstamp2)}"/>
+                <custom:pitch id="{@xml:id}" pitch="{@pitch}" rel.oct="{@rel.oct}" tstamp="{if(@tstamp) then(@tstamp) else(ancestor::mei:*[@tstamp][1]/@tstamp)}" tstamp2="{if(@tstamp2) then(@tstamp2) else(ancestor::mei:*[@tstamp2][1]/@tstamp2)}"/>
             </xsl:for-each>
         </xsl:variable>
         <xsl:variable name="file2.pitches" as="node()*">
             <xsl:for-each select=".//mei:staff[@type = 'file2']//mei:note[@pitch]">
-                <custom:pitch id="{@xml:id}" pitch="{@pitch}" rel.oct="{@rel.oct}" tstamp="{if(@tstamp) then(@tstamp) else(ancestor::mei:*[@tstamp]/@tstamp)}" tstamp2="{if(@tstamp2) then(@tstamp2) else(ancestor::mei:*[@tstamp2]/@tstamp2)}"/>
+                <custom:pitch id="{@xml:id}" pitch="{@pitch}" rel.oct="{@rel.oct}" tstamp="{if(@tstamp) then(@tstamp) else(ancestor::mei:*[@tstamp][1]/@tstamp)}" tstamp2="{if(@tstamp2) then(@tstamp2) else(ancestor::mei:*[@tstamp2][1]/@tstamp2)}"/>
             </xsl:for-each>
         </xsl:variable>
         <xsl:copy>
@@ -43,11 +43,11 @@
         <xsl:variable name="tstamp" select="
             if (@tstamp) 
             then (@tstamp)
-            else (ancestor::mei:*[@tstamp]/@tstamp)"/>
+            else (ancestor::mei:*[@tstamp][1]/@tstamp)"/>
         <xsl:variable name="tstamp2" select="             
             if (@tstamp2) 
             then (@tstamp2)
-            else (ancestor::mei:*[@tstamp2]/@tstamp2)"/>
+            else (ancestor::mei:*[@tstamp2][1]/@tstamp2)"/>
         <xsl:variable name="pitch" select="@pitch"/>
         <xsl:variable name="rel.oct" select="@rel.oct"/>
         
