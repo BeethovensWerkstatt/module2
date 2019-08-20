@@ -140,6 +140,7 @@
         <xsl:variable name="index.of.key" select="index-of($pitches,lower-case(substring($key,1,1)))" as="xs:integer"/>
         <xsl:variable name="index.of.base.key" select="index-of($pitches,lower-case(substring($base.key,1,1)))" as="xs:integer"/>
         <xsl:variable name="index.of.pname" select="index-of($pitches,$note/@pname)" as="xs:integer"/>
+        <xsl:variable name="base.oct" select="if($note/@oct.ges) then($note/xs:integer(@oct.ges)) else($note/xs:integer(@oct))" as="xs:integer"/>
         <xsl:variable name="oct.mod" as="xs:integer">
             <!-- approach 1 -->
             <!--<xsl:choose>
@@ -193,6 +194,12 @@
         <!-- approach 3 -->
         <xsl:variable name="trans.mod.new" as="xs:integer">
             <xsl:choose>
+                <xsl:when test="$key = $base.key and $trans.diat = -7">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>
+                <xsl:when test="$key = $base.key and $trans.diat = 7">
+                    <xsl:value-of select="1"/>
+                </xsl:when>
                 <xsl:when test="$key = $base.key">
                     <xsl:value-of select="0"/>
                 </xsl:when>
@@ -218,13 +225,19 @@
                 <xsl:when test="$index.of.key + $trans.diat lt 0">
                     <xsl:value-of select="-1"/>
                 </xsl:when>
+                <xsl:when test="$trans.diat = -7">
+                    <xsl:value-of select="-1"/>
+                </xsl:when>
+                <xsl:when test="$trans.diat = 7">
+                    <xsl:value-of select="1"/>
+                </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="0"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="output" select="string($note/number(@oct) + $oct.mod + $trans.mod.new)" as="xs:string"/>
+        <!--<xsl:variable name="output" select="string($base.oct + $oct.mod + $trans.mod.new)" as="xs:string"/>-->
         <!--<xsl:value-of select="$output"/>-->
-        <xsl:value-of select="string($note/number(@oct) + $oct.mod  + $trans.mod.new)"/>
+        <xsl:value-of select="string($base.oct + $oct.mod + $trans.mod.new)"/>
     </xsl:function>
 </xsl:stylesheet>
