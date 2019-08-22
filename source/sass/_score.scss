@@ -15,32 +15,32 @@
     stroke: #888888;
 }
 
-svg .noMatch {
+#contentBox[data-mode='comparison'] svg .noMatch {
     fill: $highlightColor_different;
     stroke: $highlightColor_different;
 }
 
-svg .ts {
+#contentBox[data-mode='comparison'] svg .ts {
     fill: $highlightColor_transp_durSame;
     stroke: $highlightColor_transp_durSame;
 }
 
-svg .od {
+#contentBox[data-mode='comparison'] svg .od {
     fill: $highlightColor_octDiff_durDiff;
     stroke: $highlightColor_octDiff_durDiff;
 }
 
-svg .sd {
+#contentBox[data-mode='comparison'] svg .sd {
     fill: $highlightColor_octSame_durDiff;
     stroke: $highlightColor_octSame_durDiff;
 }
 
-svg .os, svg .os.od {
+#contentBox[data-mode='comparison'] svg .os, #contentBox[data-mode='comparison'] svg .os.od {
     fill: $highlightColor_octDiff_durSame;
     stroke: $highlightColor_octDiff_durSame;
 }
 
-svg .id {
+#contentBox[data-mode='comparison'] svg .id {
     fill: $highlightColor_identical !important;
     stroke: $highlightColor_identical !important;
 }
