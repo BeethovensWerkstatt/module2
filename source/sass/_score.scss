@@ -10,6 +10,11 @@
     stroke: green;
 }*/
 
+#contentBox[data-mode='comparison'] svg g {
+    fill: #888888;
+    stroke: #888888;
+}
+
 svg .noMatch {
     fill: $highlightColor_different;
     stroke: $highlightColor_different;
