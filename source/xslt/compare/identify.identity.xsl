@@ -100,6 +100,9 @@
         <xsl:copy>
             <xsl:attribute name="type">
                 <xsl:choose>
+                    <xsl:when test="@grace">
+                        <xsl:value-of select="'grace'"/>
+                    </xsl:when>
                     <xsl:when test="$hasMatch">
                         <xsl:value-of select="string-join($matches,' ')"/>
                     </xsl:when>
