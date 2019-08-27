@@ -52,6 +52,11 @@
 #contentBox[data-mode='geneticComparison'] svg .file1 .os {
     fill: $colorVariant1;
     stroke: $colorVariant1;
+    
+    &.id {
+        fill: #000000;
+        stroke: #000000;
+    }
 }
 
 #contentBox[data-mode='geneticComparison'] svg .file2 .noMatch, 
@@ -61,4 +66,9 @@
 #contentBox[data-mode='geneticComparison'] svg .file2 .os {
     fill: $colorVariant2;
     stroke: $colorVariant2;
+    
+    &.id {
+        fill: #000000;
+        stroke: #000000;
+    }
 }
