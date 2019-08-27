@@ -21,7 +21,7 @@ if(ends-with($exist:path,'/comparisons.json')) then (
     
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
         <forward url="{$exist:controller}/resources/xql/getAnalysis.xql">
-            <add-parameter name="comparison.id" value="{tokenize($exist:path,'/')[last() - 5]}"/>
+            <add-parameter name="comparisonId" value="{tokenize($exist:path,'/')[last() - 5]}"/>
             <add-parameter name="method" value="comparison"/>
             <add-parameter name="mdiv" value="{tokenize($exist:path,'/')[last() - 3]}"/>
             <add-parameter name="transpose" value="{tokenize($exist:path,'/')[last() - 1]}"/>
@@ -35,7 +35,7 @@ if(ends-with($exist:path,'/comparisons.json')) then (
     
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
         <forward url="{$exist:controller}/resources/xql/getAnalysis.xql">
-            <add-parameter name="comparison.id" value="{tokenize($exist:path,'/')[last() - 5]}"/>
+            <add-parameter name="comparisonId" value="{tokenize($exist:path,'/')[last() - 5]}"/>
             <add-parameter name="method" value="eventDensity"/>
             <add-parameter name="mdiv" value="{tokenize($exist:path,'/')[last() - 3]}"/>
             <add-parameter name="transpose" value="{tokenize($exist:path,'/')[last() - 1]}"/>
@@ -49,7 +49,7 @@ if(ends-with($exist:path,'/comparisons.json')) then (
     
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
         <forward url="{$exist:controller}/resources/xql/getAnalysis.xql">
-            <add-parameter name="comparison.id" value="{tokenize($exist:path,'/')[last() - 5]}"/>
+            <add-parameter name="comparisonId" value="{tokenize($exist:path,'/')[last() - 5]}"/>
             <add-parameter name="method" value="melodicComparison"/>
             <add-parameter name="mdiv" value="{tokenize($exist:path,'/')[last() - 3]}"/>
             <add-parameter name="transpose" value="{tokenize($exist:path,'/')[last() - 1]}"/>
@@ -63,7 +63,7 @@ if(ends-with($exist:path,'/comparisons.json')) then (
     
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
         <forward url="{$exist:controller}/resources/xql/getAnalysis.xql">
-            <add-parameter name="comparison.id" value="{tokenize($exist:path,'/')[last() - 5]}"/>
+            <add-parameter name="comparisonId" value="{tokenize($exist:path,'/')[last() - 5]}"/>
             <add-parameter name="method" value="harmonicComparison"/>
             <add-parameter name="mdiv" value="{tokenize($exist:path,'/')[last() - 3]}"/>
             <add-parameter name="transpose" value="{tokenize($exist:path,'/')[last() - 1]}"/>
