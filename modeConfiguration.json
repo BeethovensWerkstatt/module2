@@ -2,6 +2,7 @@
   "plain":{
     "id":"plain",
     "position":1,
+    "apiLink":"basic",
     "label":{
       "de":"Fassungs-Synopse",
       "en":"Score Synopsis"
@@ -24,6 +25,7 @@
   "eventComparison": {
     "id":"eventComparison",
     "position":2,
+    "apiLink":"basic",
     "label":{
       "de":"Note-gegen-Note",
       "en":"Event Comparison"
@@ -46,6 +48,7 @@
   "geneticComparison": {
     "id":"geneticComparison",
     "position":3,
+    "apiLink":"basic",
     "label":{
       "de":"Kompositorische Maßnahmen",
       "en":"Genetic Comparison"
@@ -68,6 +71,7 @@
   "melodicComparison": {
     "id":"melodicComparison",
     "position":4,
+    "apiLink":"melodicComparison",
     "label":{
       "de":"Stimmenkontur",
       "en":"Melodic Comparison"
@@ -90,6 +94,7 @@
   "eventDensity": {
     "id":"eventDensity",
     "position":5,
+    "apiLink":"eventDensity",
     "label":{
       "de":"Ereignisdichte",
       "en":"Event Density"
@@ -112,6 +117,7 @@
   "harmonicComparison": {
     "id":"harmonicComparison",
     "position":6,
+    "apiLink":"harmonicComparison",
     "label":{
       "de":"Harmonievergleich",
       "en":"Harmonic Comparison"

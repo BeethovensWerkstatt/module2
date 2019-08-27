@@ -5,8 +5,9 @@ import modeConfiguration from './../modeConfiguration.json'
 
 // const api = process.env.VUE_APP_DATA_BACKEND_URL
 const api = 'https://dev.beethovens-werkstatt.de/'
-const buildRequest = (comparison, method, mdiv, transpose) => {
-  return 'resources/xql/getAnalysis.xql?comparisonId=' + comparison + '&method=' + method + '&mdiv=' + mdiv + '&transpose=' + transpose
+const buildRequest = (comparison, methodLink, mdiv, transpose) => {
+  // return 'resources/xql/getAnalysis.xql?comparisonId=' + comparison + '&method=' + method + '&mdiv=' + mdiv + '&transpose=' + transpose
+  return 'data/' + comparison + '/mdiv/' + mdiv + '/transpose/' + transpose + '/' + methodLink + '.xml'
 }
 
 Vue.use(Vuex)
@@ -124,7 +125,7 @@ export default new Vuex.Store({
       })
     },
     fetchMEI ({ commit, state }) {
-      let request = buildRequest(state.activeComparison, state.activeMode, state.activeMovement, state.transpose)
+      let request = buildRequest(state.activeComparison, state.modes[state.activeMode].apiLink, state.activeMovement, state.transpose)
 
       // console.log('fetching has started')
       return new Promise(resolve => {
@@ -274,7 +275,7 @@ export default new Vuex.Store({
         return null
       }
 
-      let request = buildRequest(state.activeComparison, state.activeMode, state.activeMovement, state.transpose)
+      let request = buildRequest(state.activeComparison, state.modes[state.activeMode].apiLink, state.activeMovement, state.transpose)
 
       return request
     },
@@ -287,7 +288,7 @@ export default new Vuex.Store({
         return null
       }
 
-      let request = buildRequest(state.activeComparison, state.activeMode, state.activeMovement, state.transpose)
+      let request = buildRequest(state.activeComparison, state.modes[state.activeMode].apiLink, state.activeMovement, state.transpose)
 
       if (typeof state.cachedRequests[request] === 'undefined') {
         return null
