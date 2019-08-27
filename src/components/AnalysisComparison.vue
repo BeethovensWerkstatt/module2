@@ -1,6 +1,5 @@
 <template>
   <div id="analysisComparison">
-    <h1>AnalysisComparison</h1>
     <div id="svgContainer" class="comparison"></div>
   </div>
 </template>
@@ -16,7 +15,7 @@ export default {
 
   },
   methods: {
-    
+
   }
 }
 </script>

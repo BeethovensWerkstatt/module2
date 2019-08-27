@@ -1,14 +1,21 @@
 <template>
   <div id="analysisDensity">
-    <h1>AnalysisDensity</h1>
+    <div id="svgContainer" class="eventDensity"></div>
   </div>
 </template>
 
 <script>
 
+import VerovioBaseComponent from './VerovioBaseComponent.vue'
+
 export default {
   name: 'AnalysisDensity',
+  extends: VerovioBaseComponent,
   components: {
+
+  },
+  methods: {
+
   }
 }
 </script>
