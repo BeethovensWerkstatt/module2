@@ -2755,16 +2755,13 @@
                            </chord>
                            <chord xml:id="x62593d06-92dd-47fa-9d4e-b55f9528795a"
                                   dur="4"
-                                  
                                   tstamp="1.5">
                               <note xml:id="xbed44f7a-f057-447f-8ac2-b557d55b9b8f"
                                     oct="2"
-                                    pname="b"
-                                    accid.ges="f"/>
+                                    pname="a"/>
                               <note xml:id="x64ba2316-7f6b-4af2-9485-44679a1bafb1"
                                     oct="3"
-                                    pname="b"
-                                    accid.ges="f"/>
+                                    pname="a"/>
                            </chord>
                            <chord xml:id="x493a7e89-dda4-4028-a2c4-848e31e187f3"
                                   dur="4"
@@ -3666,7 +3663,6 @@
                                  oct="4"
                                  pname="b"
                                  accid.ges="f"
-                                 
                                  tstamp="2.5">
                               <verse xml:id="x12b4f722-9e49-4c14-81d6-a05daa63f145" n="1">
                                  <syl xml:id="x97e79fe3-a8db-430a-9f8e-61977565cd87" con="d" wordpos="i">zu</syl>
@@ -3739,7 +3735,6 @@
                                     oct="4"
                                     pname="b"
                                     accid.ges="f"
-                                    
                                     tstamp="1.75"/>
                            </beam>
                            <chord xml:id="x4d1babc2-eb84-47b6-a4c7-c1b819701b94"
@@ -9527,8 +9522,6 @@
                                     dur="8"
                                     oct="4"
                                     pname="g"
-                                    accid.ges="f"
-                                    
                                     tstamp="1.75">
                                  <verse xml:id="x8ad9c7ba-55f5-4575-9ce0-b043702ddb44" n="1">
                                     <syl xml:id="xd2c2325b-5498-41eb-9e2e-219639ced753"/>
@@ -9637,7 +9630,7 @@
                                   dur="4"
                                   
                                   tstamp="2.5">
-                              <note xml:id="x1bc45f96-0777-4641-b4e1-4945e3db83b9" oct="4" pname="b"/>
+                              <note xml:id="x1bc45f96-0777-4641-b4e1-4945e3db83b9" oct="4" pname="b" accid.ges="f"/>
                               <note xml:id="xf286726b-28bd-4deb-b2b7-d46399b8b60b" oct="5" pname="d"/>
                            </chord>
                         </layer>
@@ -15527,7 +15520,7 @@
                                   dur="4"
                                   
                                   tstamp="2.5">
-                              <note xml:id="xf110836b-454e-477f-b833-5abf3ed4fab7" oct="4" pname="b"/>
+                              <note xml:id="xf110836b-454e-477f-b833-5abf3ed4fab7" oct="4" pname="b" accid.ges="f"/>
                               <note xml:id="x8513049b-ad4f-4bce-a33e-95605817f088" oct="5" pname="d"/>
                            </chord>
                         </layer>
@@ -21403,7 +21396,7 @@
                                   dur="4"
                                   
                                   tstamp="2.5">
-                              <note xml:id="xf2bbe29c-6206-4b9c-b307-f903228979c3" oct="4" pname="b"/>
+                              <note xml:id="xf2bbe29c-6206-4b9c-b307-f903228979c3" oct="4" pname="b" accid.ges="f"/>
                               <note xml:id="xdadd11f2-8971-4177-a29e-20bb97d7470e" oct="5" pname="d"/>
                            </chord>
                         </layer>
