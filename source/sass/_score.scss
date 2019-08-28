@@ -18,31 +18,61 @@
 #contentBox[data-mode='comparison'] svg .noMatch {
     fill: $highlightColor_different;
     stroke: $highlightColor_different;
+    
+    .accid {
+        fill: $highlightColor_different;
+        stroke: $highlightColor_different;
+    }
 }
 
 #contentBox[data-mode='comparison'] svg .ts {
     fill: $highlightColor_transp_durSame;
     stroke: $highlightColor_transp_durSame;
+    
+    .accid {
+        fill: $highlightColor_transp_durSame;
+        stroke: $highlightColor_transp_durSame;
+    }
 }
 
 #contentBox[data-mode='comparison'] svg .od {
     fill: $highlightColor_octDiff_durDiff;
     stroke: $highlightColor_octDiff_durDiff;
+    
+    .accid {
+        fill: $highlightColor_octDiff_durDiff;
+        stroke: $highlightColor_octDiff_durDiff;    
+    }
 }
 
 #contentBox[data-mode='comparison'] svg .sd {
     fill: $highlightColor_octSame_durDiff;
     stroke: $highlightColor_octSame_durDiff;
+    
+    .accid {
+        fill: $highlightColor_octSame_durDiff;
+        stroke: $highlightColor_octSame_durDiff;
+    }
 }
 
 #contentBox[data-mode='comparison'] svg .os, #contentBox[data-mode='comparison'] svg .os.od {
     fill: $highlightColor_octDiff_durSame;
     stroke: $highlightColor_octDiff_durSame;
+    
+    .accid {
+        fill: $highlightColor_octDiff_durSame;
+        stroke: $highlightColor_octDiff_durSame;
+    }
 }
 
 #contentBox[data-mode='comparison'] svg .id {
     fill: $highlightColor_identical !important;
     stroke: $highlightColor_identical !important;
+    
+    .accid {
+        fill: $highlightColor_identical !important;
+        stroke: $highlightColor_identical !important;
+    }
 }
 
 #contentBox[data-mode='geneticComparison'] svg .file1 .noMatch, 
@@ -53,9 +83,19 @@
     fill: $colorVariant1;
     stroke: $colorVariant1;
     
+    .accid {
+        fill: $colorVariant1;
+        stroke: $colorVariant1;
+    }
+    
     &.id {
         fill: #000000;
         stroke: #000000;
+        
+        .accid {
+            fill: #000000;
+            stroke: #000000;
+        }
     }
 }
 
@@ -67,8 +107,18 @@
     fill: $colorVariant2;
     stroke: $colorVariant2;
     
+    .accid {
+        fill: $colorVariant2;
+        stroke: $colorVariant2;
+    }
+    
     &.id {
         fill: #000000;
         stroke: #000000;
+        
+        .accid {
+            fill: #000000;
+            stroke: #000000;
+        }
     }
 }
