@@ -365,7 +365,7 @@
         </xsl:copy>
     </xsl:template>
     <xsl:template match="mei:staffDef/@n" mode="first.pass.file.2">
-        <xsl:variable name="current.n" select="number(.)" as="xs:double"/>
+        <xsl:variable name="current.n" select="xs:integer(.)" as="xs:integer"/>
         <xsl:attribute name="n" select="$current.n + $first.file.staff.count"/>        
     </xsl:template>
     <xsl:template match="mei:staff/@n" mode="first.pass">
@@ -373,13 +373,23 @@
         <xsl:attribute name="type" select="'file1'"/>
     </xsl:template>
     <xsl:template match="mei:staff/@n" mode="first.pass.file.2">
-        <xsl:variable name="current.n" select="number(.)" as="xs:double"/>
+        <xsl:variable name="current.n" select="xs:integer(.)" as="xs:integer"/>
         <xsl:attribute name="n" select="$current.n + $first.file.staff.count"/>
         <xsl:attribute name="type" select="'file2'"/>
     </xsl:template>
     <xsl:template match="@staff" mode="first.pass.file.2">
-        <xsl:variable name="current.n" select="number(.)" as="xs:double"/>
-        <xsl:attribute name="staff" select="$current.n + $first.file.staff.count"/>
+        <xsl:choose>
+            <xsl:when test="not(contains(.,' '))">
+                <xsl:variable name="current.n" select="xs:integer(.)" as="xs:integer"/>
+                <xsl:attribute name="staff" select="$current.n + $first.file.staff.count"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:variable name="tokens" select="for $token in tokenize(., ' ') return (xs:integer($token) + $first.file.staff.count)" as="xs:integer+"/>
+                <xsl:attribute name="staff" select="string-join($tokens, ' ')"/>
+            </xsl:otherwise>
+        </xsl:choose>
+        
+        
     </xsl:template>
     
     <xsl:template match="@start" mode="special.pushing">
