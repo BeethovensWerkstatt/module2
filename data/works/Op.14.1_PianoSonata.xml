@@ -10890,20 +10890,17 @@
                                  accid.ges="s"
                                  dur="2"
                                  />
-                           <space xml:id="x6917b139-ad33-4f1d-a935-ff72767384cc" dur="2" dots="1"/>
+                           <space xml:id="x6917b139-ad33-4f1d-a935-ff72767384cc" dur="2"/>
                         </layer>
-                        <layer xml:id="xe6d9f1b0-6fac-4dac-92ed-428a682fd3bc" n="2">
-                           <note xml:id="x81b5243c-fbf9-48da-a3f2-546263b6047c"
-                                 pname="b"
-                                 dur="1"
-                                 oct="4"/>
-                        </layer>
-                        <layer xml:id="x9551768a-616f-4b73-b1c0-f15f563968b3" n="3">
-                           <note xml:id="x1aa622b9-2483-4b66-9f81-24e670c58117"
+                        <layer xml:id="x9551768a-616f-4b73-b1c0-f15f563968b3" n="2">
+                           <chord xml:id="x7450fffb-83c6-4d6f-aff6-c6ca304d7728" dur="2">
+                                 <note xml:id="x81b5243c-fbf9-48da-a3f2-546263b6047c"
+                                       pname="b"
+                                       oct="4"/>
+                                 <note xml:id="x1aa622b9-2483-4b66-9f81-24e670c58117"
                                  pname="a"
-                                 oct="4"
-                                 dur="2"
-                                 />
+                                 oct="4"/>
+                           </chord>
                            <chord xml:id="xbf49291b-276e-4216-968e-f90d9503b8c0"
                                   dur="4"
                                   >
