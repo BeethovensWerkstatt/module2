@@ -384,7 +384,7 @@
                 <xsl:attribute name="staff" select="$current.n + $first.file.staff.count"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:variable name="tokens" select="for $token in tokenize(., ' ') return (xs:integer($token) + $first.file.staff.count)" as="xs:integer+"/>
+                <xsl:variable name="tokens" select="for $token in tokenize(normalize-space(.), ' ') return (xs:string(xs:integer($token) + $first.file.staff.count))" as="xs:string+"/>
                 <xsl:attribute name="staff" select="string-join($tokens, ' ')"/>
             </xsl:otherwise>
         </xsl:choose>
