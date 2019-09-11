@@ -33,9 +33,19 @@ $neutralColor: #000000;
       fill: $colorVariant1;
       stroke: $colorVariant1;
 
+      .accid {
+        fill: $colorVariant1;
+        stroke: $colorVariant1;
+      }
+
       &.id {
+        fill: $neutralColor;
+        stroke: $neutralColor;
+
+        .accid {
           fill: $neutralColor;
           stroke: $neutralColor;
+        }
       }
     }
   }
@@ -45,9 +55,19 @@ $neutralColor: #000000;
       fill: $colorVariant2;
       stroke: $colorVariant2;
 
+      .accid {
+        fill: $colorVariant2;
+        stroke: $colorVariant2;
+      }
+
       &.id {
           fill: $neutralColor;
           stroke: $neutralColor;
+
+          .accid {
+            fill: $neutralColor;
+            stroke: $neutralColor;
+          }
       }
     }
   }

@@ -30,33 +30,35 @@ export default {
   $highlightColor_octDiff_durDiff: #1b44f4;
   $highlightColor_transp_durSame: #859900;
 
-  #svgContainer.comparison .noMatch {
+  #svgContainer.comparison {
+    .noMatch, .noMatch .accid {
       fill: $highlightColor_different;
       stroke: $highlightColor_different;
-  }
+    }
 
-  #svgContainer.comparison .ts {
+    .ts, .ts .accid {
       fill: $highlightColor_transp_durSame;
       stroke: $highlightColor_transp_durSame;
-  }
+    }
 
-  #svgContainer.comparison .od {
+    .od, .od .accid {
       fill: $highlightColor_octDiff_durDiff;
       stroke: $highlightColor_octDiff_durDiff;
-  }
+    }
 
-  #svgContainer.comparison .sd {
+    .sd, .sd .accid {
       fill: $highlightColor_octSame_durDiff;
       stroke: $highlightColor_octSame_durDiff;
-  }
+    }
 
-  #svgContainer.comparison .os, #svgContainer.comparison .os.od {
-      fill: $highlightColor_octDiff_durSame;
-      stroke: $highlightColor_octDiff_durSame;
-  }
+    .os, .os .accid {
+        fill: $highlightColor_octDiff_durSame;
+        stroke: $highlightColor_octDiff_durSame;
+    }
 
-  #svgContainer.comparison .id {
+    .id, .id .accid {
       fill: $highlightColor_identical !important;
       stroke: $highlightColor_identical !important;
+    }
   }
 </style>
