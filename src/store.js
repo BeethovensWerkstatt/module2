@@ -3,8 +3,14 @@ import Vuex from 'vuex'
 
 import modeConfiguration from './../modeConfiguration.json'
 
+const environment = 'local' // 'local' or 'live'
+
 // const api = process.env.VUE_APP_DATA_BACKEND_URL
-const api = 'https://dev.beethovens-werkstatt.de/'
+// const api = 'https://dev.beethovens-werkstatt.de/'
+// const api = 'http://localhost:8080/exist/apps/bw-module2/'
+
+const api = (environment === 'local') ? 'http://localhost:8080/exist/apps/bw-module2/' : 'https://dev.beethovens-werkstatt.de/'
+
 const buildRequest = (comparison, methodLink, mdiv, transpose) => {
   // return 'resources/xql/getAnalysis.xql?comparisonId=' + comparison + '&method=' + method + '&mdiv=' + mdiv + '&transpose=' + transpose
   return 'data/' + comparison + '/mdiv/' + mdiv + '/transpose/' + transpose + '/' + methodLink + '.xml'
