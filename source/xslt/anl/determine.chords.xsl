@@ -7,7 +7,7 @@
     xmlns:tools="no:link"
     xmlns:temp="no:link"
     xmlns:custom="none"
-    exclude-result-prefixes="xs math xd mei tools temp"
+    exclude-result-prefixes="xs math xd mei tools temp custom"
     version="3.0">
     <xd:doc scope="stylesheet">
         <xd:desc>
