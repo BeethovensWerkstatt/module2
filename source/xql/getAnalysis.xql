@@ -38,58 +38,23 @@ let $doc2.path := ($comparison//mei:source)[2]/data(@target)
 let $doc1 := doc(concat($comparison.path, '/', $doc1.path))
 let $doc2 := doc(concat($comparison.path, '/', $doc2.path))
 
-(: Mode of Analysis:)
-let $analysis.mode :=
-    if($method = 'plain')
-    then('plain')
-    else if($method = 'comparison')
-    then('comparison')
-    else if($method = 'geneticComparison')
-    then('comparison')
-    else if($method = 'melodicComparison')
-    then('melodicComparison')
-    else if($method = 'harmonicComparison')
-    then('harmonicComparison')
-    else if($method = 'eventDensity')
-    then('eventDensity')
-    else('plain')
-
-(: Method for Comparing analyzed files :)
-let $comparison.method :=
-    if($method = 'plain')
-    then('plain')
-    else if($method = 'comparison')
-    then('comparison')
-    else if($method = 'geneticComparison')
-    then('comparison')
-    else if($method = 'melodicComparison')
-    then('melodicComparison')
-    else if($method = 'harmonicComparison')
-    then('harmonicComparison')
-    else if($method = 'eventDensity')
-    then('eventDensity')
-    else('plain')
-
-(:let $doc1 := (collection($data.basePath)//mei:mei[@xml:id = $file.id])[1]
-let $doc2 := (collection($data.basePath)//mei:mei[@xml:id = $second.file.id])[1]:)
-
 let $doc1.analyzed := transform:transform($doc1,
                doc(concat($xslPath,'analyze.file.xsl')), <parameters>
-                   <param name="mode" value="{$analysis.mode}"/>
+                   <param name="mode" value="{$method}"/>
                    <param name="mdiv" value="{$mdiv}"/>
                    <param name="transpose.mode" value="{$transpose.mode}"/>
                </parameters>)
                
 let $doc2.analyzed := transform:transform($doc2,
                doc(concat($xslPath,'analyze.file.xsl')), <parameters>
-                   <param name="mode" value="{$analysis.mode}"/>
+                   <param name="mode" value="{$method}"/>
                    <param name="mdiv" value="{$mdiv}"/>
                    <param name="transpose.mode" value="{$transpose.mode}"/>
                </parameters>)               
 
 let $merged.files := transform:transform(<root>{$doc1.analyzed}{$doc2.analyzed}{$comparison}</root>,
                doc(concat($xslPath,'combine.files.xsl')), <parameters>
-                   <param name="method" value="{$comparison.method}"/>
+                   <param name="method" value="{$method}"/>
                    <param name="transpose.mode" value="{$transpose.mode}"/>
                </parameters>)
 
