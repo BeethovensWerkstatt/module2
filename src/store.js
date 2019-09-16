@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 
 import modeConfiguration from './../modeConfiguration.json'
 
-const environment = 'local' // 'local' or 'live'
+const environment = 'live' // 'local' or 'live'
 
 // const api = process.env.VUE_APP_DATA_BACKEND_URL
 // const api = 'https://dev.beethovens-werkstatt.de/'
