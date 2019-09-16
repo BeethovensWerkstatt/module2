@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar/>
+    <AppHeader/>
     <Loading/>
     <router-view/>
   </div>
@@ -8,13 +8,13 @@
 
 <script>
 // @ is an alias to /src
-import Navbar from '@/components/Navbar.vue'
+import AppHeader from '@/components/AppHeader.vue'
 import Loading from '@/components/Loading.vue'
 
 export default {
   name: 'home',
   components: {
-    Navbar,
+    AppHeader,
     Loading
   }
 }
