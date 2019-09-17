@@ -2,7 +2,7 @@
     <span id="zoomControl">
       Zoom
       <button class="btn btn-primary btn-sm" v-on:click="decreaseZoom()">&lt;</button>
-      <input class="pagenum" type="text" pattern="\d+" v-model="pageModel">
+      <input class="zoomnum" type="text" pattern="\d+" v-model="zoomModel">
       <button class="btn btn-primary btn-sm" v-on:click="increaseZoom()">&gt;</button>
     </span>
 </template>
@@ -15,27 +15,27 @@ export default {
 
   },
   computed: {
-    currentPage: function () {
-      return this.$store.getters.currentPage
+    currentZoom: function () {
+      return this.$store.getters.currentZoom
     },
-    pageModel: {
+    zoomModel: {
       get () {
-        return this.$store.getters.currentPage
+        return this.$store.getters.currentZoom
       },
       set (n) {
-        this.$store.dispatch('setPage', n)
+        this.$store.dispatch('setZoom', n)
       }
     }
   },
   methods: {
-    decreasePage () {
-      this.$store.dispatch('decreasePage')
+    decreaseZoom () {
+      this.$store.dispatch('decreaseZoom')
     },
-    increasePage () {
-      this.$store.dispatch('increasePage')
+    increaseZoom () {
+      this.$store.dispatch('increaseZoom')
     },
-    setPage (n) {
-      this.$store.dispatch('setPage', n)
+    setZoom (n) {
+      this.$store.dispatch('setZoom', n)
     }
   }
 }
@@ -46,7 +46,7 @@ export default {
 #zoomControl {
   /*margin-right: .5rem;*/
 
-  .pagenum {
+  .zoomnum {
     text-align: center;
     width: 3rem;
   }
