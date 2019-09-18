@@ -135,7 +135,7 @@
                     </xsl:variable>
                     <xsl:copy-of select="$merged.files"/>
                 </xsl:when>
-                <xsl:when test="$method = 'comparison'">
+                <xsl:when test="$method = ('comparison','geneticComparison')">
                     <xsl:variable name="merged.files" as="node()">
                         <xsl:apply-templates select="$first.file" mode="first.pass"/>
                     </xsl:variable>
