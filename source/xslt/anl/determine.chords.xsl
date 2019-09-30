@@ -25,10 +25,22 @@
                 
         <xsl:copy>
             <xsl:apply-templates select="node() | @*" mode="#current"/>
-            <xsl:variable name="events" as="node()*">
-                <xsl:apply-templates select=".//mei:layer//mei:*[@tstamp and @tstamp2 and local-name() = ('note','chord')]" mode="resolve.transposing.instruments"/>
+            <xsl:variable name="resolved.transpositions" as="node()*">
+                <xsl:apply-templates select="mei:staff" mode="resolve.transposing.instruments"/>
             </xsl:variable>
-            <xsl:variable name="tstamps" select="distinct-values(.//mei:layer//@tstamp)" as="xs:string*"/>
+            <xsl:variable name="resolved.arpeggios" as="node()*">
+                <xsl:apply-templates select="$resolved.transpositions" mode="resolve.arpeggios"/>
+            </xsl:variable>
+            
+            <xsl:if test="$resolved.arpeggios//mei:chord[@type='resolved.arpeggio']">
+                <!-- debug -->
+                <!--<xsl:message select="'[INFO] resolved an arpeggio in measure ' || @n || ' in staves ' || string-join($resolved.arpeggios/descendant-or-self::mei:staff[.//mei:chord[@type='resolved.arpeggio']]/@n,', ')"/>-->
+                <!--<xsl:message select="'    IDs affected: ' || string-join($resolved.arpeggios//mei:chord[@type='resolved.arpeggio']//mei:note/@xml:id,', ')"/>-->
+                <annot xmlns="http://www.music-encoding.org/ns/mei" type="resolvedArpegs" plist="{string-join($resolved.arpeggios//mei:chord[@type='resolved.arpeggio']//mei:note/@xml:id,' ')}"/>
+            </xsl:if>
+            
+            <xsl:variable name="events" select="$resolved.arpeggios//mei:layer//mei:*[@tstamp and @tstamp2 and local-name() = ('note','chord')]" as="node()*"/>
+            <xsl:variable name="tstamps" select="distinct-values($resolved.arpeggios//mei:layer//@tstamp)" as="xs:string*"/>
             
             <xsl:for-each select="$tstamps">
                 <xsl:sort select="." data-type="number"/>
@@ -38,7 +50,7 @@
                 <xsl:variable name="is.accented" select="tools:isAccented($current.tstamp,$measure/@meter.count,$measure/@meter.unit)" as="xs:boolean"/>
                 
                 <xsl:if test="count(distinct-values($current.notes//@pname)) gt 1">
-                    <xsl:variable name="harm" select="tools:interpreteChord($current.notes,$is.accented)" as="node()+"/>
+                    <xsl:variable name="harm" select="tools:interpreteChord($current.notes,$is.accented,true())" as="node()+"/>
                     <choice type="harmInterpretation" measure="{count($measure/preceding::mei:measure)}" key="{$current.key}" tstamp="{$current.tstamp}" xmlns="http://www.music-encoding.org/ns/mei">
                         <xsl:for-each select="$harm">
                             <orig>
@@ -61,6 +73,7 @@
     <xsl:function name="tools:interpreteChord" as="node()+">
         <xsl:param name="notes" as="node()+"/>
         <xsl:param name="isAccented" as="xs:boolean"/>
+        <xsl:param name="allowSimplification" as="xs:boolean"/>
         
         <!-- static: how many thirds does it take to get somewhere -->
         <xsl:variable name="third.rows" as="node()+">
@@ -162,7 +175,14 @@
         
         <!-- determine final costs after all suspensions etc. are found -->
         <xsl:variable name="final.costs" as="node()*">
-            <xsl:apply-templates select="$identified.neighbors" mode="determine.chords.final.costs"/>
+            <xsl:choose>
+                <xsl:when test="$allowSimplification">
+                    <xsl:apply-templates select="$identified.neighbors" mode="determine.chords.final.costs"/>        
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates select="$potential.chords" mode="determine.chords.final.costs"/>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:variable>
         
         
@@ -211,7 +231,7 @@
                         </xsl:otherwise>
                     </xsl:choose>   
                 </xsl:for-each>
-                <annot type="mfunc.tonelist">
+                <annot type="mfunc.tonelist" cost="{$current.interpretation/@highest.cost}">
                     <xsl:for-each select="$current.interpretation/temp:tone">
                         <annot type="{tools:resolveMFuncByNumber(@func)}" plist="{string-join(.//mei:note/@xml:id,' ')}"/>
                     </xsl:for-each>
@@ -682,7 +702,8 @@
         
         <xsl:choose>
             <xsl:when test="not($third.note)">
-                <xsl:message select="'INFO: Found a harmony with no third in measure ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || ', skipping determination of mode for now…'"/>
+                <!-- debug -->
+                <!--<xsl:message select="'INFO: Found a harmony with no third in measure ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || ', skipping determination of mode for now…'"/>-->
                 <xsl:next-match/>
             </xsl:when>
             <xsl:otherwise>
@@ -746,12 +767,88 @@
                 <xsl:attribute name="accid.ges" select="$new.accid"/>
             </xsl:if>
             
-            <xsl:message select="'transposing ' || $this/@xml:id || ' from ' || $this/@pname || $this/@accid || $this/@accid.ges || ' to ' || $new.pname || $new.accid || ' (trans.diat:' || $trans.diat || ', trans.semi:' || $trans.semi || ')'"/>
+            <!-- debug -->
+            <!--<xsl:message select="'transposing ' || $this/@xml:id || ' from ' || $this/@pname || $this/@accid || $this/@accid.ges || ' to ' || $new.pname || $new.accid || ' (trans.diat:' || $trans.diat || ', trans.semi:' || $trans.semi || ')'"/>-->
             
             <!-- todo: if time permits, we should adjust @oct and @oct.ges as well… -->
             
             <xsl:apply-templates select="node() | (@* except (@pname,@accid,@accid.ges))" mode="#current"/>
         </xsl:copy>
+    </xsl:template>
+    
+    <!-- MODE resolve.arpeggios: this template  -->
+    <xsl:template match="mei:beam[count(child::mei:note[not(@grace) and not(@cue) and @tstamp]) gt 2]" mode="resolve.arpeggios">
+        <xsl:variable name="has.chords" select="exists(child::mei:chord)" as="xs:boolean"/>
+        <!-- gracenotes and cue-notes are ignored -->
+        <xsl:variable name="notes" select="child::mei:note[not(@grace) and not(@cue) and @tstamp]" as="node()*"/>
+        <xsl:variable name="starts.at.clean.tstamp" select="$notes[1]/number(@tstamp) mod 1 eq 0" as="xs:boolean"/>
+        <!-- use the function interpreteChord that stacks all notes and calculates the costs (one third above the root = 1, two = 2 etc.) -->
+        <xsl:variable name="potential.chords" select="tools:interpreteChord($notes,true(),false())" as="node()+"/>
+       <!-- take the least costs of thirds -->
+        <xsl:variable name="minimal.cost.of.thirds" select="min($potential.chords//mei:annot[@type='mfunc.tonelist']/number(@cost))" as="xs:double"/>
+        
+        <xsl:choose>
+            <!-- ignore when there is a chord within the beam -> discuss! -->
+            <xsl:when test="$has.chords">
+                <xsl:next-match/>
+            </xsl:when>
+            
+            <!-- ignore when the beam does not start on a full tstamp -->
+            <xsl:when test="not($starts.at.clean.tstamp)">
+                <xsl:next-match/>
+            </xsl:when>
+            
+            <!-- ignore when there are less than 3 notes within the beam -> discuss! -->
+            <xsl:when test="count($notes) lt 3">
+                <xsl:next-match/>
+            </xsl:when>
+            
+            <!-- ignore when there is only one single pitch name – can be kept do reduce number of onsets -->
+            <!--<xsl:when test="$minimal.cost.of.thirds eq 0">
+                <xsl:next-match/>
+            </xsl:when>-->
+            
+            <!-- lest.thirds less than 3 means only third, fifth and seventh above the root are allowed -->
+            <xsl:when test="$minimal.cost.of.thirds le 2">
+                <xsl:variable name="start" select="$notes[1]/@tstamp" as="xs:string"/>
+                <xsl:variable name="end" select="$notes[last()]/@tstamp2" as="xs:string"/>
+                <chord xmlns="http://www.music-encoding.org/ns/mei" type="resolved.arpeggio">
+                    <xsl:attribute name="tstamp" select="$start"/>
+                    <xsl:attribute name="tstamp2" select="$end"/>
+                    <xsl:apply-templates select="$notes" mode="resolve.arpeggios.change.tstamps">
+                        <xsl:with-param name="start" tunnel="yes" select="$start"/>
+                        <xsl:with-param name="end" tunnel="yes" select="$end"/>
+                    </xsl:apply-templates>
+                </chord>
+            </xsl:when>
+            <!--  A seventh above the root must be accompanied by a third and/or a fifth -->
+            <xsl:when test="$minimal.cost.of.thirds eq 3 and $potential.chords/descendant-or-self::*[.//mei:annot[@type='mfunc.tonelist']/@cost = '3' and .//mei:annot[@type = ('ct ct3','ct ct5')]]">
+                <xsl:variable name="start" select="$notes[1]/@tstamp" as="xs:string"/>
+                <xsl:variable name="end" select="$notes[last()]/@tstamp2" as="xs:string"/>
+                <chord xmlns="http://www.music-encoding.org/ns/mei" type="resolved.arpeggio">
+                    <xsl:attribute name="tstamp" select="$start"/>
+                    <xsl:attribute name="tstamp2" select="$end"/>
+                    <xsl:apply-templates select="$notes" mode="resolve.arpeggios.change.tstamps">
+                        <xsl:with-param name="start" tunnel="yes" select="$start"/>
+                        <xsl:with-param name="end" tunnel="yes" select="$end"/>
+                    </xsl:apply-templates>
+                </chord>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:next-match/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!-- change tstamps of the notes that took part of the arpeggio and are now in a chord-element -->
+    <xsl:template match="@tstamp" mode="resolve.arpeggios.change.tstamps">
+        <xsl:param name="start" tunnel="yes"/>
+        <xsl:attribute name="tstamp" select="$start"/>
+    </xsl:template>
+    
+    <xsl:template match="@tstamp2" mode="resolve.arpeggios.change.tstamps">
+        <xsl:param name="end" tunnel="yes"/>
+        <xsl:attribute name="tstamp2" select="$end"/>
     </xsl:template>
     
     <!-- MODE inherit.tstamps -->

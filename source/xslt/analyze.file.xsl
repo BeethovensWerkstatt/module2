@@ -49,6 +49,7 @@
     <xsl:include href="tools/add.intm.xsl"/>
     <xsl:include href="anl/insert.harmonies.xsl"/>
     <xsl:include href="anl/determine.chords.xsl"/>
+    <xsl:include href="anl/resolve.duplicate.harms.xsl"/>
 
     <xsl:include href="data/circleOf5.xsl"/>
 

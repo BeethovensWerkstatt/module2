@@ -68,18 +68,49 @@
                         <xsl:with-param name="current.key" select="$local.key" tunnel="yes"/>
                     </xsl:apply-templates>
                 </xsl:variable>-->
-                <!--<xsl:sequence select="$determined.numerals//mei:harm"/>-->
                 
-                <xsl:sequence select="$determined.chords//mei:choice[@type = 'harmInterpretation']"/>
+                <xsl:variable name="resolved.duplicate.harms" as="node()">
+                    <xsl:apply-templates select="$determined.chords" mode="resolve.duplicate.harms"/>
+                </xsl:variable>
+                
+                <!--<xsl:sequence select="$determined.numerals//mei:harm"/>-->
+                <harms>
+                    <xsl:sequence select="$resolved.duplicate.harms//mei:choice[@type = 'harmInterpretation']"/>    
+                </harms>
+                <resolvedArpegs><xsl:value-of select="string-join($determined.chords//mei:annot[@type='resolvedArpegs']/@plist,' ')"/></resolvedArpegs>
                 
             </xsl:for-each>
         </xsl:variable>
         
+        <xsl:variable name="resolvable.arpeg.notes" as="xs:string*" select="tokenize($harms/descendant-or-self::resolvedArpegs/text(),' ')"/>
+        <xsl:if test="count($resolvable.arpeg.notes) gt 0">
+            <xsl:message select="'we can resolve some notes: ' || count($resolvable.arpeg.notes)"/>
+        </xsl:if>
         <xsl:copy>
             <xsl:attribute name="type" select="string-join($local.keys, ' ')"/>
-            <xsl:apply-templates select="node() | @*" mode="#current"/>
-            <xsl:sequence select="$harms"/>
+            <xsl:apply-templates select="node() | @*" mode="#current">
+                <xsl:with-param name="unarpeggable.ids" select="$resolvable.arpeg.notes" tunnel="yes" as="xs:string*"/>
+            </xsl:apply-templates>
+            <xsl:sequence select="$harms/descendant-or-self::harms/child::node()"/>
         </xsl:copy>
+        
+    </xsl:template>
+    
+    <xsl:template match="mei:note" mode="insert.harmonies">
+        <xsl:param name="unarpeggable.ids" tunnel="yes" as="xs:string*"/>
+        
+        <xsl:choose>
+            <xsl:when test="@xml:id = $unarpeggable.ids">
+                <xsl:copy>
+                    <xsl:apply-templates select="@* except @type" mode="#current"/>
+                    <xsl:attribute name="type" select="'noArpeg' || (if(@type) then(' ' || @type) else())"/>
+                    <xsl:apply-templates select="node()" mode="#current"/>
+                </xsl:copy>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:next-match/>
+            </xsl:otherwise>
+        </xsl:choose>
         
     </xsl:template>
     
