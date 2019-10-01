@@ -777,10 +777,10 @@
     </xsl:template>
     
     <!-- MODE resolve.arpeggios: this template  -->
-    <xsl:template match="mei:beam[count(child::mei:note[not(@grace) and not(@cue) and @tstamp]) gt 2]" mode="resolve.arpeggios">
+    <xsl:template match="mei:beam[count(descendant::mei:note[not(@grace) and not(@cue) and @tstamp]) gt 2]" mode="resolve.arpeggios">
         <xsl:variable name="has.chords" select="exists(child::mei:chord)" as="xs:boolean"/>
         <!-- gracenotes and cue-notes are ignored -->
-        <xsl:variable name="notes" select="child::mei:note[not(@grace) and not(@cue) and @tstamp]" as="node()*"/>
+        <xsl:variable name="notes" select="descendant::mei:note[not(@grace) and not(@cue) and @tstamp]" as="node()*"/>
         <xsl:variable name="starts.at.clean.tstamp" select="$notes[1]/number(@tstamp) mod 1 eq 0" as="xs:boolean"/>
         <!-- use the function interpreteChord that stacks all notes and calculates the costs (one third above the root = 1, two = 2 etc.) -->
         <xsl:variable name="potential.chords" select="tools:interpreteChord($notes,true(),false())" as="node()+"/>
