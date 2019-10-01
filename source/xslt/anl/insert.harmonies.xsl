@@ -103,7 +103,7 @@
             <xsl:when test="@xml:id = $unarpeggable.ids">
                 <xsl:copy>
                     <xsl:apply-templates select="@* except @type" mode="#current"/>
-                    <xsl:attribute name="type" select="'noArpeg' || (if(@type) then(' ' || @type) else())"/>
+                    <xsl:attribute name="type" select="'Arpeg' || (if(@type) then(' ' || @type) else())"/>
                     <xsl:apply-templates select="node()" mode="#current"/>
                 </xsl:copy>
             </xsl:when>
