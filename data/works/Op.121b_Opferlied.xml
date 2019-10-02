@@ -181,6 +181,15 @@
             </changeDesc>
             <date isodate="2019-07-17"/>
          </change>
+         <change n="14">
+            <respStmt>
+               <persName auth.uri="https://github.com/" codedval="susannecox">Susanne Cox</persName>
+            </respStmt>
+            <changeDesc>
+               <p>gegen NGA Korrektur gelesen und kleine Korrekturen vorgenommen</p>
+            </changeDesc>
+            <date isodate="2019-10-02"/>
+         </change>
       </revisionDesc>
    </meiHead>
    <music>
@@ -1966,7 +1975,7 @@
                               <beam xml:id="xa5dbd9e4-834b-4589-ad16-c17a882b4465">
                                  <note xml:id="x37b86f65-5d8d-4695-a2a5-0573255a2cc4" pname="b"
                                     oct="4" dur="8" />
-                                 <note xml:id="xae4a9a0f-76b2-4fb2-a1ea-cdd94a430ab1" pname="d"
+                                 <note xml:id="xae4a9a0f-76b2-4fb2-a1ea-cdd94a430ab1" pname="c"
                                     oct="5" dur="8" />
                                  <note xml:id="x8ab810d3-fb59-4932-b9d1-6fd1a15fcc36" pname="b"
                                     oct="4" dur="8" />
@@ -18296,8 +18305,8 @@
                               </chord>
                               <chord xml:id="x645d2dad-8e0a-4e9c-a476-f68d9d250719" dur="8"
                                  >
-                                 <note xml:id="xf9277e89-50e2-4554-9ee2-c479c3aa1dff" pname="c"
-                                    oct="4" accid.ges="s"/>
+                                 <note xml:id="xf9277e89-50e2-4554-9ee2-c479c3aa1dff" pname="b"
+                                    oct="3"/>
                                  <note xml:id="xe1a487c5-52b8-4bfd-af3c-8aa43a0dd279" pname="a"
                                     oct="4"/>
                               </chord>
@@ -19454,7 +19463,7 @@
                                  <note xml:id="x2b5f3ef5-1143-41e9-a2c1-b98896626a77" pname="b"
                                     oct="3" dur="8" dots="1" />
                                  <note xml:id="x3df3404f-4871-49d4-84e0-0c7355287d6e" pname="g"
-                                    oct="4" dur="16"  accid.ges="s"/>
+                                    oct="4" dur="16"  accid.ges="s"/> <!-- Fehler in OA: müsste a statt gis lauten -->
                               </beam>
                               <beam xml:id="x2f12f30c-7fb4-4303-ba03-997ed5d4eba0">
                                  <note xml:id="x9fbb1c43-8860-459b-bbec-7874f27892a4" pname="b"
