@@ -182,6 +182,15 @@
         </changeDesc>
         <date isodate="2019-08-06"/>
       </change>
+      <change n="12">
+        <respStmt>
+          <persName>Elisa Novara</persName>
+        </respStmt>
+        <changeDesc>
+          <p n="1"> Korrekturen nach OA bis Ende</p>
+        </changeDesc>
+        <date isodate="2019-10-04"/>
+      </change>
     </revisionDesc>
   </meiHead>
   <music meiversion="4.0.0">
@@ -46129,10 +46138,8 @@
               <tie xml:id="xa6ef5263-0351-4d2e-8cff-45e6ad635025"
                 startid="#x0bc20389-56c9-4728-901b-b037d1efc547"
                 endid="#xfe69b797-78ad-4c6b-a56d-4f794938f4f0" staff="4"/>
-              <slur xml:id="x6f338bbe-36aa-4ac9-b02d-f99a5b88f4a4"
-                startid="#x1a9db8a3-0d49-4088-b181-4566b511a305"
-                endid="#x89a2d4cf-251a-47f9-b50d-c8c00cd4fd9d" staff="1"/>
-              <slur xml:id="xd7dfda2d-ed0e-4ce8-99b8-0569ccd03148"
+              
+             <slur xml:id="xd7dfda2d-ed0e-4ce8-99b8-0569ccd03148"
                 startid="#x735ef047-13b1-4135-a49a-4a1e34693f2d"
                 endid="#xa722de69-b019-49a9-8a60-5d96ef63d7a4" staff="2"/>
               <slur xml:id="xab858580-b5a7-4fd9-859c-2c37996c045b"
@@ -46167,6 +46174,12 @@
                     dots="1" accid.ges="f"/>
                 </layer>
               </staff>
+              <slur xml:id="x6f338bbe-36aa-4ac9-b02d-f99a5b88f4a4"
+                startid="#xccb4f78d-0d3e-48d9-9e22-9da4abe1cb97"
+                endid="#x89a2d4cf-251a-47f9-b50d-c8c00cd4fd9d" staff="1"/>
+           <tie xml:id="x9eef8a09-7298-4165-bc43-22d1f144ba97"
+                startid="#x9dd03fad-0bed-470e-bc5d-f3f08bb98fc3"
+                endid="#xbed238c1-c2b6-4f28-8d40-fb49c6e8b530" staff="3"/>
               <tie xml:id="xeea1c8bc-07b2-4c1b-a8d8-5e69c92f5dc2"
                 startid="#xfe69b797-78ad-4c6b-a56d-4f794938f4f0"
                 endid="#xae1dcaa6-32d2-49ba-b88f-0aaac167e5cf" staff="4"/>
@@ -46277,22 +46290,22 @@
                 </layer>
               </staff>
               <hairpin xml:id="xa143e28e-8a9d-445a-b6ff-c55766ab8901" tstamp="1" place="below"
-                staff="1" form="cres" tstamp2="0m+6" opening="2.4"/>
+                staff="1" form="cres" tstamp2="0m+4" opening="2.4"/>
               <slur xml:id="x078fc949-5de8-46bc-bb5b-85a9f0c61629"
                 startid="#x3914e6f1-abd3-4c3e-a05a-6697530a9592"
                 endid="#x920e9555-0d53-4a1d-a057-e1c814e276a4" staff="1"/>
               <hairpin xml:id="x48453d1e-c234-4f14-b107-f6890ebcda2b" tstamp="1" place="below"
-                staff="2" form="cres" tstamp2="0m+6" opening="2.4"/>
+                staff="2" form="cres" tstamp2="0m+4" opening="2.4"/>
               <slur xml:id="xd2a4d9df-7d50-4298-ab3a-bdadbfb4885d"
                 startid="#xd1805a5d-043b-4994-8ad2-5bf0fa65e087"
                 endid="#x967c4e11-7901-419c-9a0b-548634826ce3" staff="2"/>
               <hairpin xml:id="x3cc294c7-109b-470a-96d2-0bceea563b57" tstamp="1" place="below"
-                staff="3" form="cres" tstamp2="0m+6" opening="2.4"/>
+                staff="3" form="cres" tstamp2="0m+4" opening="2.4"/>
               <slur xml:id="xa05e6320-c589-4880-8eef-6add0155b6bf"
                 startid="#xe4732aaf-966f-4f56-8f81-38bd7c81501e"
                 endid="#x4b1dde9e-dd12-494f-91d5-38a71cdd09b1" staff="3"/>
               <hairpin xml:id="x939930b7-06f8-4539-a572-cb05c769ad85" tstamp="1" place="below"
-                staff="4" form="cres" tstamp2="0m+6" opening="2.4"/>
+                staff="4" form="cres" tstamp2="0m+4" opening="2.4"/>
               <slur xml:id="xae2239c6-1c46-41de-b094-f5e57ff5ed13"
                 startid="#x90308941-7db0-440e-b7f4-fb7ae1bcb120"
                 endid="#x2867ee24-21df-4cc5-ae55-6fd300e20836" staff="4"/>
@@ -46334,20 +46347,28 @@
                 startid="#xa2bb34cb-7f8a-4ff3-98f9-ee869607fbee"
                 endid="#x0c10f7df-a8e5-468a-b7df-69a32751f11b"/>
               <hairpin xml:id="x109b4b0e-429c-479d-871d-a6c9bf807781" tstamp="4" place="below"
-                staff="1" form="cres" tstamp2="1m+6" opening="2.4"/>
+                staff="1" form="cres" tstamp2="1m+4" opening="2.4"/>
               <trill xml:id="xc6834a7f-a2fe-4835-bcba-61eb4edf21c4" staff="1"
                 startid="#x63c76774-0961-4d68-9299-7199aaa239a5" place="above"/>
               <hairpin xml:id="xa2d4e273-01d4-4d94-9393-a827402c5cd3" tstamp="4" place="below"
-                staff="2" form="cres" tstamp2="1m+6" opening="2.4"/>
+                staff="2" form="cres" tstamp2="1m+4" opening="2.4"/>
               <trill xml:id="x8c0fdb61-f60e-49b8-a96b-9686b5e0fcf3" staff="2"
                 startid="#x8406877b-ff1d-4194-b4d6-5132aa4cffb7" place="above"/>
               <hairpin xml:id="xad7f14ec-778c-4e24-b552-19b0e9587c02" tstamp="4" place="below"
-                staff="3" form="cres" tstamp2="1m+6" opening="2.4"/>
+                staff="3" form="cres" tstamp2="1m+4" opening="2.4"/>
               <trill xml:id="x1e50801b-f4c3-4f74-8336-18e8cde2fc32" staff="3"
                 startid="#xa2bb34cb-7f8a-4ff3-98f9-ee869607fbee" place="above"/>
               <tie xml:id="xca3afe8c-4e30-4376-a68a-2faebfb8bba9" staff="1"
                 startid="#x63c76774-0961-4d68-9299-7199aaa239a5"
                 endid="#xcc12443c-3192-4180-abb3-1df7b0303935"/>
+              <reh xml:id="x1b1acdbc-c55b-4620-9b56-ba273c2c1a3a" tstamp="1" staff="1" place="above"
+                label="words">N></reh>
+              <reh xml:id="x4a025048-1466-43af-91a6-b1314c69421b" tstamp="1" staff="2" place="above"
+                label="words">N></reh>
+              <reh xml:id="x00f1e3c6-b377-410e-81c0-2244da9a55c8" tstamp="1" staff="3" place="above"
+                label="words">N></reh>
+              <reh xml:id="xc3603556-8d72-46be-ae2c-c21674c294fa" tstamp="1" staff="4" place="above"
+                label="words">N></reh>
             </measure>
             <measure n="703" xml:id="x6730cb4c-bc12-403d-b0b5-be5b011cccd2">
               <staff xml:id="xf7ba6196-6f46-451b-ba5b-f4bc2536206d" n="1">
@@ -46552,15 +46573,15 @@
                 startid="#x21b2e249-8d14-4240-acab-ed34696a4e11"
                 endid="#xe5193f2b-d762-4dad-9587-646e5f0382fc"/>
               <hairpin xml:id="x451da8f4-c68d-480a-9bef-6886a12cfbc3" tstamp="4" place="below"
-                staff="1" form="cres" tstamp2="1m+6" opening="2.4"/>
+                staff="1" form="cres" tstamp2="1m+4" opening="2.4"/>
               <trill xml:id="x31818055-3599-4319-a79b-5dc121d91e4d" staff="1"
                 startid="#x2d12b5c6-c7d3-4f94-8667-1c1091a7a1be" place="above"/>
               <hairpin xml:id="x0aee4603-dd19-4b46-b8e2-cad8687fd78e" tstamp="4" place="below"
-                staff="2" form="cres" tstamp2="1m+6" opening="2.4"/>
+                staff="2" form="cres" tstamp2="1m+4" opening="2.4"/>
               <trill xml:id="xfa298064-4ec6-4978-9f21-4d9c53bf0941" staff="2"
                 startid="#x33563add-d42c-432e-8c30-d77f96d55181" place="above"/>
               <hairpin xml:id="xc3f37abe-1bb6-49b7-a7bf-eb1da5b19999" tstamp="4" place="below"
-                staff="3" form="cres" tstamp2="1m+6" opening="2.4"/>
+                staff="3" form="cres" tstamp2="1m+4" opening="2.4"/>
               <trill xml:id="xb6fdb47b-aa0a-4a2c-8371-e575e67f04fa" staff="3"
                 startid="#x21b2e249-8d14-4240-acab-ed34696a4e11" place="above"/>
               <tie xml:id="xd1127839-53c5-49e5-8ad8-cc25ec2017b2" staff="1"
@@ -47010,7 +47031,8 @@
             <measure n="716" xml:id="x49a86ae5-06ce-46e5-9109-a92379e73f12">
               <staff xml:id="xf71ff5c4-4325-4969-a95b-d4b6b0ed3507" n="1">
                 <layer xml:id="x3a29df33-b9b8-477e-b3a5-7d7b27a0443a" n="1">
-                  <rest xml:id="xd54e2e65-6d63-4c15-92b4-a527fa7b3630" dur="4"/>
+                  <rest xml:id="xd54e2e65-6d63-4c15-92b4-a527fa7b3630" dur="8"/>
+                  <rest xml:id="x0f6850fd-9362-47d9-b677-433e62458f0b" dur="8"/>
                   <note xml:id="x492e4b17-654a-4a38-861c-3eae2ed9c708" pname="d" oct="5" dur="8"/>
                   <note xml:id="x98a06947-549a-45b6-b4ca-9b161ff3c5c3" pname="f" oct="6" dur="4"/>
                   <note xml:id="xbb33b776-1623-48a3-af79-42c8126dc0cf" pname="f" oct="6" dur="8"/>
@@ -47082,14 +47104,14 @@
               <slur xml:id="xb396b662-771c-4440-b339-b6437f336f64"
                 startid="#x492e4b17-654a-4a38-861c-3eae2ed9c708"
                 endid="#x98a06947-549a-45b6-b4ca-9b161ff3c5c3" staff="1"/>
-              <dynam xml:id="xb1c764b3-996c-4bd6-9124-37b62aa988df" tstamp="4" place="below"
-                staff="1">cresc.</dynam>
+              <dynam xml:id="xe10e63a2-0e58-44ec-8f82-5073d132bd18" tstamp="4" place="below"
+                staff="1" extender="true" tstamp2="16m+7">cresc.</dynam>
               <dynam xml:id="x4905bdc3-6be2-452c-8dab-89b721a1d49b" tstamp="4" place="below"
-                staff="2">cresc.</dynam>
+                staff="2" extender="true" tstamp2="16m+7">cresc.</dynam>
               <dynam xml:id="xad21d55b-9271-4db2-ac4f-83b8fb49dede" tstamp="4" place="below"
-                staff="3">cresc.</dynam>
+                staff="3" extender="true" tstamp2="16m+7">cresc.</dynam>
               <dynam xml:id="x2a9da6a6-3699-4a5f-a20f-aabfeb977091" tstamp="4" place="below"
-                staff="4">cresc.</dynam>
+                staff="4" extender="true" tstamp2="16m+7">cresc.</dynam>
               <slur xml:id="x6a459afc-9f3a-4059-8782-f6e60d8c854f"
                 startid="#x1894cf42-3d03-40d2-a9e7-15a34f8293cf"
                 endid="#x7e179aa1-8bbd-48d7-8c05-36607fc21a62" staff="4"/>
@@ -47157,15 +47179,8 @@
                     dots="1" accid.ges="f"/>
                 </layer>
               </staff>
-              <hairpin xml:id="x64bfc75a-14ef-45af-a966-ef1425d50f93" tstamp="1" place="below"
-                staff="1" form="cres" tstamp2="3m+7" opening="2.4"/>
-              <hairpin xml:id="xa133aa04-88c5-4581-88a5-85f30dc1d0f3" tstamp="1" place="below"
-                staff="2" form="cres" tstamp2="3m+7" opening="2.4"/>
-              <hairpin xml:id="x762a3961-0eaf-4f38-81c3-a1bff44e1855" tstamp="1" place="below"
-                staff="3" form="cres" tstamp2="3m+7" opening="2.4"/>
-              <hairpin xml:id="x40698492-b6a6-4ccb-be28-79595599e1fb" tstamp="1" place="below"
-                staff="4" form="cres" tstamp2="3m+7" opening="2.4"/>
-              <!-- von T. 717 bis T. 737 statt cresc. und dim. hairpin immer nur gestrichelte Linie in allen Stimmen -->
+              
+      
               <slur xml:id="x10d82094-4969-4dc2-a81b-4a54eac9b37b"
                 startid="#xa32444ad-2c47-46b4-805d-347bf1c41d89"
                 endid="#x156c8713-c936-48f8-9c54-5a122acd699c" staff="2"/>
@@ -47366,13 +47381,12 @@
                     dots="1" accid="f"/>
                 </layer>
               </staff>
-              <slur xml:id="xf71d0b22-9fa5-4c8d-b093-3decd78b3fca"
-                startid="#x3f158c28-58fa-4e90-bc4f-d9b38d10d650"
-                endid="#x2d7662e5-9a67-4adf-a08c-a67aa581e27e" staff="1"/>
+           
               <tie xml:id="xf69777a2-948c-4d03-bd92-66654cc95c25" staff="1"
                 startid="#x462ac349-41b4-498f-b502-1288e1199967"
                 endid="#x050fd2dc-d86b-4c28-827e-f4ec0b0dfeaf"/>
             </measure>
+            
             <measure n="721" xml:id="x38147484-bb71-4746-a03a-1e1beef7d15e">
               <staff xml:id="x4c662e02-28d3-43e8-9850-3a6575e47284" n="1">
                 <layer xml:id="xc317f461-4ef0-40a5-915b-fdf15bb96d07" n="1">
@@ -47436,17 +47450,11 @@
                     dots="1"/>
                 </layer>
               </staff>
-              <hairpin xml:id="x6ec32485-1880-49e4-83eb-812351bf80cc" tstamp="1" place="below"
-                staff="1" form="cres" tstamp2="3m+7" opening="2.4"/>
-              <hairpin xml:id="xa3609767-7786-40e7-8194-120da8613ec3" tstamp="1" place="below"
-                staff="2" form="cres" tstamp2="3m+7" opening="2.4"/>
+              
               <slur xml:id="x9153013a-c150-43ba-925e-ec4d69f95c87"
                 startid="#x8c54faf9-3475-4451-b575-07eea45ec07f"
                 endid="#x395ea23c-21ee-4c6b-846d-66c421b2c688" staff="2"/>
-              <hairpin xml:id="x61059565-f338-49cb-979a-31e843fa6930" tstamp="1" place="below"
-                staff="3" form="cres" tstamp2="3m+7" opening="2.4"/>
-              <hairpin xml:id="xe434caa1-37da-4986-abbb-c98484c49160" tstamp="1" place="below"
-                staff="4" form="cres" tstamp2="3m+7" opening="2.4"/>
+              
               <slur xml:id="xfa58cc87-51a0-4338-bec3-e14d0c8f5829"
                 startid="#xb172477e-a5c5-4196-98b9-00c03784de7a"
                 endid="#xd656363e-efeb-4262-907f-8220ba4211df" staff="4"/>
