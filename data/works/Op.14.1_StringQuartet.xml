@@ -27728,9 +27728,9 @@
                                key.mode="major"
                                meter.count="3"
                                meter.unit="4">
-                        <staffGrp xml:id="x08a14968-48e7-4373-933d-e536e30fd46c">
+                        <!--<staffGrp xml:id="x08a14968-48e7-4373-933d-e536e30fd46c">
                            <staffDef xml:id="x1ecf5cb5-bc2c-40f8-b905-4334fa23dce9" n="1" key.sig="5f"/>
-                        </staffGrp>
+                        </staffGrp>-->
                      </scoreDef>
                      <measure n="63"
                               xml:id="x2428ad1b-0529-405f-a78d-adb856be7c35"
@@ -28715,9 +28715,9 @@
                      <scoreDef xml:id="xab7820d4-a486-44b6-8b98-bdbfb92db77b"
                                key.sig="4f"
                                key.mode="minor">
-                        <staffGrp xml:id="xca33a477-fd24-4398-83ec-58e8896b80fb">
+                        <!--<staffGrp xml:id="xca33a477-fd24-4398-83ec-58e8896b80fb">
                            <staffDef xml:id="x2a8cdf6b-6275-4b25-9d47-ebee57025422" n="1" key.sig="4f"/>
-                        </staffGrp>
+                        </staffGrp>-->
                      </scoreDef>
                      <measure n="101" xml:id="xc2788a3b-ec8a-4de8-bf05-771b2f467cc6">
                         <staff xml:id="x88d4e4d9-0c13-4c47-9d3c-941ba4bce565" n="1">
@@ -31399,9 +31399,9 @@
                      <scoreDef xml:id="x762dfe98-6a31-455a-9e57-7db2e70cf95b"
                                key.sig="4f"
                                key.mode="minor">
-                        <staffGrp xml:id="x7274efbc-37e1-4e91-88ad-ecccfcfe821d">
+                        <!--<staffGrp xml:id="x7274efbc-37e1-4e91-88ad-ecccfcfe821d">
                            <staffDef xml:id="xafdf5115-39ff-4b3f-af67-98d44ddcc1de" n="1" key.sig="4f"/>
-                        </staffGrp>
+                        </staffGrp>-->
                      </scoreDef>
                      <measure n="101" xml:id="xa8b82eee-b004-490c-aa94-228915ebb0d2">
                         <staff xml:id="x7ad5448c-4dfe-4343-97f0-64743677f9bc" n="1">
@@ -33151,10 +33151,11 @@
                            label="Maggiore">
                      <scoreDef xml:id="xa303225c-be1c-4dfb-a6d9-87b02e0e9848"
                                key.sig="5f"
-                               key.mode="major"> <!-- Fehler in OA: Taktart-Angabe 3/4 fehlt -->
-                        <staffGrp xml:id="x753ede68-1c0e-44fc-afde-3508f6804516">
+                               key.mode="major"
+                               meter.count="3" meter.unit="4"> <!-- Fehler in OA: Taktart-Angabe 3/4 fehlt -->
+                        <!--<staffGrp xml:id="x753ede68-1c0e-44fc-afde-3508f6804516">
                            <staffDef xml:id="x38714861-eca9-4ec5-9b71-3833331ecdf2" n="1" key.sig="5f"/>
-                        </staffGrp>
+                        </staffGrp>-->
                      </scoreDef>
                      <measure n="63"
                               xml:id="x75c64c48-d654-4090-9341-63cbf6ebb199"
@@ -33812,9 +33813,9 @@
                      <scoreDef xml:id="x38facb0f-3e20-483c-a671-b54fd8be75ea"
                                key.sig="4f"
                                key.mode="minor">
-                        <staffGrp xml:id="xb0da6c6b-328b-4fc1-956e-4d52bad2352a">
+                        <!--<staffGrp xml:id="xb0da6c6b-328b-4fc1-956e-4d52bad2352a">
                            <staffDef xml:id="x9782fae7-826a-425c-b2cd-ddf047faad8f" n="1" key.sig="4f"/>
-                        </staffGrp>
+                        </staffGrp>-->
                      </scoreDef>
                      <measure n="101" xml:id="x3e7764ce-2ba8-4b42-ae2e-ce6acb470fbb">
                         <staff xml:id="xc1777e46-9bae-4699-b2f2-201d3432b10b" n="1">
@@ -35469,9 +35470,9 @@
                                key.mode="major" 
                                meter.count="3"
                                meter.unit="4">
-                        <staffGrp xml:id="xcce809b5-5da8-4dc9-a447-f0c0ef22580d">
+                        <!--<staffGrp xml:id="xcce809b5-5da8-4dc9-a447-f0c0ef22580d">
                            <staffDef xml:id="x897f992d-9e37-488e-8fe7-96a3a006afab" n="1" key.sig="5f"/>
-                        </staffGrp>
+                        </staffGrp>-->
                      </scoreDef>
                      <measure n="63"
                               xml:id="xa11c4496-1a39-4105-a390-b44188eb3c91"
@@ -36078,9 +36079,9 @@
                      <scoreDef xml:id="x59dce62a-bc02-455e-9143-8e8621adf274"
                                key.sig="4f"
                                key.mode="minor">
-                        <staffGrp xml:id="x04a7f076-9dc5-4615-953f-472503b0e411">
+                        <!--<staffGrp xml:id="x04a7f076-9dc5-4615-953f-472503b0e411">
                            <staffDef xml:id="x4df800fe-cc70-4c28-b226-924dc61c67a2" n="1" key.sig="4f"/>
-                        </staffGrp>
+                        </staffGrp>-->
                      </scoreDef>
                      <measure n="101" xml:id="x9b52c6bb-4d59-4a36-8cc8-292008315389">
                         <staff xml:id="xd508e2fa-10a3-4f0f-a8e0-b736fd68e98b" n="1">
