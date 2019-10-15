@@ -196,8 +196,8 @@
             <xsl:apply-templates select="$best.explanation" mode="identify.root.accid"/>
         </xsl:variable>
         
-        <xsl:variable name="identified.mode" as="node()+">
-            <xsl:apply-templates select="$identified.root.accid" mode="identify.mode"/>
+        <xsl:variable name="identified.intervals" as="node()+">
+            <xsl:apply-templates select="$identified.root.accid" mode="identify.intervals"/>
         </xsl:variable>
         
         <!--<xsl:if test="1 = 1">
@@ -205,7 +205,7 @@
             <xsl:message select="$identified.mode" terminate="yes"/>
         </xsl:if>-->
         
-        <xsl:for-each select="$identified.mode">
+        <xsl:for-each select="$identified.intervals">
             <xsl:variable name="current.interpretation" select="." as="node()"/>
             <harm type="mfunc" xmlns="http://www.music-encoding.org/ns/mei">
                 <rend type="root"><xsl:value-of select="$current.interpretation/@root"/></rend>
@@ -695,39 +695,102 @@
         <xsl:attribute name="root" select=". || $i18n.accid"/>
     </xsl:template>
     
-    <!-- determine distance between root and third -->
-    <xsl:template match="temp:chord/@root" mode="identify.mode">
+    
+    <xsl:template match="temp:chord/@root" mode="identify.intervals">
         <xsl:variable name="root.note" select="parent::temp:chord/temp:tone[@func='1']/mei:note[1]" as="node()"/>
         <xsl:variable name="third.note" select="parent::temp:chord/temp:tone[@func='3']/mei:note[1]" as="node()?"/>
+        <xsl:variable name="fifth.note" select="parent::temp:chord/temp:tone[@func='5']/mei:note[1]" as="node()?"/>
+        <xsl:variable name="seventh.note" select="parent::temp:chord/temp:tone[@func='7']/mei:note[1]" as="node()?"/>
+        <xsl:variable name="ninth.note" select="parent::temp:chord/temp:tone[@func='9']/mei:note[1]" as="node()?"/>
+        <xsl:variable name="root.pnum" select="xs:integer(custom:getPnum($root.note,0)) mod 12" as="xs:integer"/>
         
-        <xsl:choose>
-            <xsl:when test="not($third.note)">
-                <!-- debug -->
-                <!--<xsl:message select="'INFO: Found a harmony with no third in measure ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || ', skipping determination of mode for now…'"/>-->
-                <xsl:next-match/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:variable name="root.pnum" select="xs:integer(custom:getPnum($root.note,0)) mod 12" as="xs:integer"/>
+        
+        
+        <!-- determine distance between root and third -->
+        <!-- toDo: handle the case when there are both minor and major thirds -->
+        <xsl:if test="exists($third.note)">
                 <xsl:variable name="third.pnum" select="xs:integer(custom:getPnum($third.note,0)) mod 12" as="xs:integer"/>
                 <xsl:variable name="fixed.third" select="if($root.pnum gt $third.pnum) then($third.pnum + 12) else($third.pnum)" as="xs:integer"/>
                 <xsl:variable name="distance" select="$fixed.third - $root.pnum" as="xs:integer"/>
                 <xsl:choose>
                     <xsl:when test="$distance = 3">
-                        <xsl:attribute name="mode" select="'minor'"/>
+                        <xsl:attribute name="third" select="'minor'"/>
                         <xsl:attribute name="root" select="."/>
                     </xsl:when>
                     <xsl:when test="$distance = 4">
-                        <xsl:attribute name="mode" select="'major'"/>
+                        <xsl:attribute name="third" select="'major'"/>
                         <xsl:attribute name="root" select="upper-case(substring(.,1,1)) || substring(.,2)"/>
+                        <!--toDO: move root-modification elsewhere -->
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:message select="'Unable to determine mode at ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || '. Please help…'"/>
+                        <xsl:message select="'Unable to determine third at ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || '. Please help…'"/>
                         <xsl:attribute name="root" select="."/>
                     </xsl:otherwise>
                 </xsl:choose>
+        </xsl:if>
+        
+        <!-- determine distance between root and fifth -->
+        <xsl:if test="exists($fifth.note)">
+            <xsl:variable name="fifth.pnum" select="xs:integer(custom:getPnum($fifth.note,0)) mod 12" as="xs:integer"/>
+            <xsl:variable name="fixed.fifth" select="if($root.pnum gt $fifth.pnum) then($fifth.pnum + 12) else($fifth.pnum)" as="xs:integer"/>
+            <xsl:variable name="distance" select="$fixed.fifth - $root.pnum" as="xs:integer"/>
+            <xsl:choose>
+                <xsl:when test="$distance = 7">
+                    <xsl:attribute name="fifth" select="'perf'"/>
+                </xsl:when>
+                <xsl:when test="$distance = 6">
+                    <xsl:attribute name="fifth" select="'dim'"/>
+                </xsl:when>
+                <xsl:when test="$distance = 8">
+                    <xsl:attribute name="fifth" select="'aug'"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:message select="'Unable to determine fifth at ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || '. Please help…'"/>
+                    
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:if>
+    
+        <!-- determine distance between root and seventh -->
+        <xsl:if test="exists($seventh.note)">
+            <xsl:variable name="seventh.pnum" select="xs:integer(custom:getPnum($seventh.note,0)) mod 12" as="xs:integer"/>
+            <xsl:variable name="fixed.seventh" select="if($root.pnum gt $seventh.pnum) then($seventh.pnum + 12) else($seventh.pnum)" as="xs:integer"/>
+            <xsl:variable name="distance" select="$fixed.seventh - $root.pnum" as="xs:integer"/>
+            <xsl:choose>
+                <xsl:when test="$distance = 10">
+                    <xsl:attribute name="seventh" select="'minor'"/>
+                </xsl:when>
+                <xsl:when test="$distance = 11">
+                    <xsl:attribute name="seventh" select="'major'"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:message select="'Unable to determine seventh at ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || '. Please help…'"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:if>
+   
+    
+    <!-- determine distance between root and ninth -->
+    <xsl:if test="exists($ninth.note)">
+        <xsl:variable name="ninth.pnum" select="xs:integer(custom:getPnum($ninth.note,0)) mod 12" as="xs:integer"/>
+        <xsl:variable name="fixed.ninth" select="if($root.pnum gt $ninth.pnum) then($ninth.pnum + 12) else($ninth.pnum)" as="xs:integer"/>
+        <xsl:variable name="distance" select="$fixed.ninth - $root.pnum" as="xs:integer"/>
+        <xsl:choose>
+            <xsl:when test="$distance = 1">
+                <xsl:attribute name="ninth" select="'minor'"/>
+            </xsl:when>
+            <xsl:when test="$distance = 2">
+                <xsl:attribute name="ninth" select="'major'"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:message select="'Unable to determine ninth at ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || '. Please help…'"/>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:if>
     </xsl:template>
+   
+    
+    
     
     <!-- MODE resolve.transposing.instruments -->
     <xsl:template match="mei:note[ancestor::mei:staff[@trans.semi and @trans.diat]]" mode="resolve.transposing.instruments">

@@ -95,7 +95,7 @@
         </xsl:variable>
         <!-- the midi.offset is used to make @pnum compatible with MIDI piano numbers, where A0 = 1 -->
         <xsl:variable name="midi.offset" select="12" as="xs:integer"/>
-        <xsl:value-of select="$pname + $oct + $accid + $trans.semi + $midi.offset"/>
+        <xsl:value-of select="xs:string($pname + $oct + $accid + $trans.semi + $midi.offset)"/>
     </xsl:function>
     
 </xsl:stylesheet>
