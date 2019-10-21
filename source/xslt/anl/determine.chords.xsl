@@ -844,25 +844,37 @@
         <xsl:variable name="has.chords" select="exists(child::mei:chord)" as="xs:boolean"/>
         <!-- gracenotes and cue-notes are ignored -->
         <xsl:variable name="notes" select="descendant::mei:note[not(@grace) and not(@cue) and @tstamp]" as="node()*"/>
-        <xsl:variable name="starts.at.clean.tstamp" select="$notes[1]/number(@tstamp) mod 1 eq 0" as="xs:boolean"/>
+        <xsl:variable name="start.tstamp" select="($notes[1]/number(@tstamp) mod 1 eq 0) or ($notes[1]/number(@tstamp) mod 1 eq 0.5)" as="xs:boolean"/>
         <!-- use the function interpreteChord that stacks all notes and calculates the costs (one third above the root = 1, two = 2 etc.) -->
         <xsl:variable name="potential.chords" select="tools:interpreteChord($notes,true(),false())" as="node()+"/>
        <!-- take the least costs of thirds -->
         <xsl:variable name="minimal.cost.of.thirds" select="min($potential.chords//mei:annot[@type='mfunc.tonelist']/number(@cost))" as="xs:double"/>
+        <!-- collect the durations of all nots within the beam -->
+        <xsl:variable name="notes.dur" select="$notes/@dur" as="xs:string+"/>
+        <!--<xsl:variable name="chords.dur" select="$notes/parent::mei:chord/@dur" as="xs:string+"/>-->
         
         <xsl:choose>
-            <!-- ignore when there is a chord within the beam -> discuss! -->
+            <!-- ignore when there is a chord within the beam -->
             <xsl:when test="$has.chords">
                 <xsl:next-match/>
             </xsl:when>
             
-            <!-- ignore when the beam does not start on a full tstamp -->
-            <xsl:when test="not($starts.at.clean.tstamp)">
+            <!-- ignore when the beam does not start on a full or 0.5-tstamp -->
+            <xsl:when test="not($start.tstamp)">
                 <xsl:next-match/>
             </xsl:when>
             
             <!-- ignore when there are less than 3 notes within the beam -> discuss! -->
             <xsl:when test="count($notes) lt 3">
+                <xsl:next-match/>
+            </xsl:when>
+            
+            <!-- ignore when there are different durations within the beam -->
+           <xsl:when test="count(distinct-values($notes.dur)) gt 1">
+                <xsl:next-match/>
+            </xsl:when>
+            
+            <xsl:when test="count(distinct-values($notes.dur)) gt 1">
                 <xsl:next-match/>
             </xsl:when>
             
