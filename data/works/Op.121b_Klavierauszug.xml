@@ -177,6 +177,15 @@
             </changeDesc>
             <date isodate="2019-07-17"/>
          </change>
+         <change n="15">
+            <respStmt>
+               <persName auth.uri="https://github.com/" codedval="susannecox">Susanne Cox</persName>
+            </respStmt>
+            <changeDesc>
+               <p>gegen NGA Korrektur gelesen und kleine Korrekturen vorgenommen</p>
+            </changeDesc>
+            <date isodate="2019-10-22"/>
+         </change>
       </revisionDesc>
    </meiHead>
    <music>
@@ -11351,7 +11360,7 @@
                                  dur="8"
                                  oct="2"
                                  pname="b"
-                                 />
+                                 /> <!-- Fehler in OA: richtig wäre a -->
                            <rest xml:id="x69eddd5a-7a6d-4954-8eb5-389f0d75b2ef" dur="8"/>
                            <chord xml:id="x1e58b455-e5f4-42e5-80f3-eca3bfaf333e"
                                   dur="8"
