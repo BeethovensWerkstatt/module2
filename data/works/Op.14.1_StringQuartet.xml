@@ -5121,7 +5121,7 @@
                               <note xml:id="x04e3ebd6-9ad9-4678-bd19-379d0c8d821c"
                                     pname="b"
                                     oct="5"
-                                    dur="2"
+                                    dur="2" accid.ges="f"
                                     />
                               <note xml:id="x11298575-bcff-414f-b01d-3485bd35a15f"
                                     pname="a"
@@ -12303,8 +12303,6 @@
                                     pname="a"
                                     oct="4"
                                     dur="4"
-                                    
-                                    accid.ges="f"
                                     artic="stacc">
                                  
                               </note>
@@ -27739,9 +27737,7 @@
                                     pname="f"
                                     oct="4"
                                     dur="2"
-                                    dots="1"
-                                    
-                                    accid.ges="f"/>
+                                    dots="1"/>
                            </layer>
                         </staff>
                         <dynam xml:id="x61fff924-b48b-4876-a2a1-cc356caaf3ba"
@@ -27764,7 +27760,7 @@
                               <note xml:id="x091a87e7-41fe-4fbd-9112-b17c915893a9"
                                     pname="e"
                                     oct="4"
-                                    dur="4"
+                                    dur="4" accid.ges="f"
                                     />
                               <note xml:id="x869b20e9-4eb2-4c49-b389-cbe61a635100"
                                     pname="g"
@@ -27792,9 +27788,7 @@
                               <note xml:id="x2bdbd802-4fb9-409c-8a84-605092db45b3"
                                     pname="f"
                                     oct="4"
-                                    dur="4"
-                                    
-                                    accid.ges="f"/>
+                                    dur="4"/>
                               <note xml:id="xf41d379d-9dfd-4249-af71-786fc1babb4b"
                                     pname="a"
                                     oct="4"

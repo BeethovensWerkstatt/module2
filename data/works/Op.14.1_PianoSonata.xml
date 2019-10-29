@@ -11255,7 +11255,7 @@
                                  dur="4"
                                  />
                            <rest xml:id="x6e5e07b0-aec7-4ef1-b170-445e3d7ee579" dur="4"/>
-                              <clef xml:id="x9406b9c2-826a-44db-a474-3f938f6342da" shape="G" line="2"/> <!-- Fehler in OA: Violinschlüssel fehlt -->
+                              <clef xml:id="x9406b9c2-826a-44db-a474-3f938f6342da" shape="G" line="2"/> <!-- Fehler in OA: Violinschlüssel fehlt. In Codierung hinzugefügt. -->
                         </layer>
                      </staff>
                      <staff xml:id="xf966692c-2377-4c7f-8283-b365f56ef595" n="2">
@@ -14920,7 +14920,7 @@
                            <note xml:id="x7d3e6333-858f-4ba6-a012-1acfc89d2730"
                                  pname="d"
                                  oct="5"
-                                 dur="2"
+                                 dur="2" accid.ges="s"
                                  />
                            <note xml:id="xb9c7402a-a0f7-4940-ac20-5bb78ab6a55d"
                                  pname="e"
@@ -19045,7 +19045,6 @@
                                  dots="1"
                                  accid="n"
                                  />
-                           <space xml:id="xdf714b80-84de-4e23-a07c-80ac064751c4" dur="4"/>
                         </layer>
                      </staff>
                      <slur xml:id="xa37e503f-a425-4dc3-af3a-2725fc90912d"
@@ -24253,8 +24252,11 @@
                               tstamp="1">D.C. Allto e poi la Coda</dir>
                   </measure>
                </section>
-               <section xml:id="x92ad47f4-cd67-4321-bc26-39396a17fc5a" n="3" label="Coda"> <!-- Fehler in OA: Tonartwechsel nicht angezeigt -->
-                  <measure xml:id="x9b4e826f-a0a1-4855-8c3b-6dc89d541e38" n="101">
+               <section xml:id="x92ad47f4-cd67-4321-bc26-39396a17fc5a" n="3" label="Coda"> <!-- Fehler in OA: Tonartwechsel nicht angezeigt. 
+                     In Codierung hinzugefügt. -->
+                     <scoreDef xml:id="x69231d57-46fd-48d4-87c5-a409e92f18eb"
+                           key.sig="1s" key.mode="minor" keysig.showchange="true"/>
+                     <measure xml:id="x9b4e826f-a0a1-4855-8c3b-6dc89d541e38" n="101">
                      <staff xml:id="x5f9aa8fc-1d44-4858-8d18-23c22df7339e" n="1">
                         <layer xml:id="x74fac870-e348-4197-966e-76c8ea473f55" n="1">
                            <chord dur="2"
