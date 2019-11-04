@@ -33141,7 +33141,7 @@
                            label="Maggiore">
                      <scoreDef xml:id="xa303225c-be1c-4dfb-a6d9-87b02e0e9848"
                                key.sig="5f"
-                               key.mode="major"> <!-- Fehler in OA: Taktart-Angabe 3/4 fehlt -->
+                               key.mode="major" meter.count="3" meter.unit="4"> <!-- Fehler in OA: Taktart-Angabe 3/4 fehlt, hier hinzugefügt -->
                         <!--<staffGrp xml:id="x753ede68-1c0e-44fc-afde-3508f6804516">
                            <staffDef xml:id="x38714861-eca9-4ec5-9b71-3833331ecdf2" n="1" key.sig="5f"/>
                         </staffGrp>-->
