@@ -27721,12 +27721,14 @@
                   <section xml:id="xdf616a56-2dfe-4406-85b5-3ed4917d8641" n="2">
                      <scoreDef xml:id="xf8fbeb08-bf1f-46cd-bb6d-6ac9ce04056c"
                                key.sig="5f"
-                               key.mode="major"
+                               key.mode="major" 
+                               keysig.showchange="true"
                                meter.count="3"
                                meter.unit="4">
-                        <!--<staffGrp xml:id="x08a14968-48e7-4373-933d-e536e30fd46c">
-                           <staffDef xml:id="x1ecf5cb5-bc2c-40f8-b905-4334fa23dce9" n="1" key.sig="5f"/>
-                        </staffGrp>-->
+                        <staffGrp xml:id="x08a14968-48e7-4373-933d-e536e30fd46c">
+                           <staffDef xml:id="x1ecf5cb5-bc2c-40f8-b905-4334fa23dce9" n="1" 
+                                 lines="5" clef.line="2" clef.shape="G"/>
+                        </staffGrp>
                      </scoreDef>
                      <measure n="63"
                               xml:id="x2428ad1b-0529-405f-a78d-adb856be7c35"
@@ -30730,9 +30732,13 @@
                   <section xml:id="x9358947d-1c1f-4c47-a225-f94b95cf1a0e" n="2">
                      <scoreDef xml:id="xc4a1152b-ab7a-4bc9-bf8e-717976763803"
                                key.sig="5f"
-                               key.mode="major"
+                               key.mode="major" keysig.showchange="true"
                                meter.count="3"
                                meter.unit="4">
+                           <staffGrp xml:id="x5c1883cf-33a4-428c-86b5-bba6274ec42f">
+                                 <staffDef xml:id="x5b10a8bb-960f-4d15-9077-dc08ff0e37c5" n="1" 
+                                       lines="5" clef.line="2" clef.shape="G"/>
+                           </staffGrp>
                      </scoreDef>
                      <measure n="63"
                               xml:id="xe6d4fd12-1af6-456b-a5a8-32f738425c02"
@@ -33141,10 +33147,13 @@
                            label="Maggiore">
                      <scoreDef xml:id="xa303225c-be1c-4dfb-a6d9-87b02e0e9848"
                                key.sig="5f"
-                               key.mode="major" meter.count="3" meter.unit="4"> <!-- Fehler in OA: Taktart-Angabe 3/4 fehlt, hier hinzugefügt -->
-                        <!--<staffGrp xml:id="x753ede68-1c0e-44fc-afde-3508f6804516">
-                           <staffDef xml:id="x38714861-eca9-4ec5-9b71-3833331ecdf2" n="1" key.sig="5f"/>
-                        </staffGrp>-->
+                               key.mode="major" keysig.showchange="true" meter.count="3" meter.unit="4"> <!-- Fehler in OA: Taktart-Angabe 3/4 fehlt, hier hinzugefügt -->
+                        <staffGrp xml:id="x753ede68-1c0e-44fc-afde-3508f6804516">
+                              <staffDef xml:id="x38714861-eca9-4ec5-9b71-3833331ecdf2" n="1" 
+                                    lines="5" 
+                                    clef.line="3"
+                                    clef.shape="C"/>
+                        </staffGrp>
                      </scoreDef>
                      <measure n="63"
                               xml:id="x75c64c48-d654-4090-9341-63cbf6ebb199"
@@ -35456,12 +35465,13 @@
                            label="Maggiore">
                      <scoreDef xml:id="x0a0d9009-d35f-4d35-9378-462c20f9bdc4"
                                key.sig="5f"
-                               key.mode="major" 
+                               key.mode="major" keysig.showchange="true" 
                                meter.count="3"
                                meter.unit="4">
-                        <!--<staffGrp xml:id="xcce809b5-5da8-4dc9-a447-f0c0ef22580d">
-                           <staffDef xml:id="x897f992d-9e37-488e-8fe7-96a3a006afab" n="1" key.sig="5f"/>
-                        </staffGrp>-->
+                        <staffGrp xml:id="xcce809b5-5da8-4dc9-a447-f0c0ef22580d">
+                           <staffDef xml:id="x897f992d-9e37-488e-8fe7-96a3a006afab" n="1" 
+                                 lines="5" clef.shape="F" clef.line="2"/>
+                        </staffGrp>
                      </scoreDef>
                      <measure n="63"
                               xml:id="xa11c4496-1a39-4105-a390-b44188eb3c91"
