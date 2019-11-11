@@ -22306,17 +22306,11 @@
                                symbol="bracket"
                                bar.thru="false">
                         <staffDef xml:id="xa028fdcd-4c37-4e97-96b8-fa887df9e550"
-                                  n="1"
-                                  lines="5"
-                                  clef.line="2"
-                                  clef.shape="G">
+                                  n="1">
                            <label xml:id="xb3d76cf0-c9d8-42ec-a5ee-2f71cd174514">piano</label>
                         </staffDef>
                         <staffDef xml:id="xa6c32843-34f5-41c9-95b2-2e798c5d1255"
-                                  n="2"
-                                  lines="5"
-                                  clef.line="4"
-                                  clef.shape="F">
+                                  n="2">
                            <label xml:id="x9f39eec5-68fb-46d8-825a-a48603325a46">piano</label>
                         </staffDef>
                      </staffGrp>

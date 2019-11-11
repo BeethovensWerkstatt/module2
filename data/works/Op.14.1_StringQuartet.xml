@@ -27727,7 +27727,7 @@
                                meter.unit="4">
                         <staffGrp xml:id="x08a14968-48e7-4373-933d-e536e30fd46c">
                            <staffDef xml:id="x1ecf5cb5-bc2c-40f8-b905-4334fa23dce9" n="1" 
-                                 lines="5" clef.line="2" clef.shape="G"/>
+                                 />
                         </staffGrp>
                      </scoreDef>
                      <measure n="63"
@@ -30737,7 +30737,7 @@
                                meter.unit="4">
                            <staffGrp xml:id="x5c1883cf-33a4-428c-86b5-bba6274ec42f">
                                  <staffDef xml:id="x5b10a8bb-960f-4d15-9077-dc08ff0e37c5" n="1" 
-                                       lines="5" clef.line="2" clef.shape="G"/>
+                                       />
                            </staffGrp>
                      </scoreDef>
                      <measure n="63"
@@ -33150,9 +33150,7 @@
                                key.mode="major" keysig.showchange="true" meter.count="3" meter.unit="4"> <!-- Fehler in OA: Taktart-Angabe 3/4 fehlt, hier hinzugefügt -->
                         <staffGrp xml:id="x753ede68-1c0e-44fc-afde-3508f6804516">
                               <staffDef xml:id="x38714861-eca9-4ec5-9b71-3833331ecdf2" n="1" 
-                                    lines="5" 
-                                    clef.line="3"
-                                    clef.shape="C"/>
+                                    />
                         </staffGrp>
                      </scoreDef>
                      <measure n="63"
@@ -35470,7 +35468,7 @@
                                meter.unit="4">
                         <staffGrp xml:id="xcce809b5-5da8-4dc9-a447-f0c0ef22580d">
                            <staffDef xml:id="x897f992d-9e37-488e-8fe7-96a3a006afab" n="1" 
-                                 lines="5" clef.shape="F" clef.line="2"/>
+                                 />
                         </staffGrp>
                      </scoreDef>
                      <measure n="63"
