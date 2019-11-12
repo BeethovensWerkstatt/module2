@@ -206,10 +206,11 @@
             <xsl:apply-templates select="@meter.count | @meter.unit" mode="#current"/>
             <staffGrp label="" symbol="none" bar.thru="false">
                 <staffGrp symbol="brace" bar.thru="true">
-                    <xsl:apply-templates select=".//mei:staffDef" mode="first.pass"/>
+                    <xsl:apply-templates select=".//mei:label | .//mei:labelAbbr | .//mei:staffDef" mode="first.pass"/>
                 </staffGrp>
                 <staffGrp symbol="brace" bar.thru="true">
                     <xsl:variable name="second.file.staffDefs" select="($second.file//mei:scoreDef)[$pos]//mei:staffDef" as="node()+"/>
+                    <xsl:apply-templates select="($second.file//mei:scoreDef)[$pos]/mei:staffGrp/(mei:label | mei:labelAbbr)" mode="first.pass.file.2"/>
                     <xsl:apply-templates select="($second.file.staffDefs)[1]" mode="first.pass.file.2">
                         <xsl:with-param name="add.spacing" select="true()" as="xs:boolean" tunnel="yes"/>
                     </xsl:apply-templates>
