@@ -258,91 +258,6 @@
             <xsl:with-param name="mode" select="$mode" as="xs:string" tunnel="yes"/>
         </xsl:next-match>
         
-        <!--<xsl:choose>
-            <!-\- no data is available -\->
-            <xsl:when test="not($hasIDs) and not($hasTstamps)">
-                <xsl:choose>
-                    <xsl:when test="$mode.untouched">
-                        <xsl:next-match>
-                            <xsl:with-param name="mode" select="'untouched'" tunnel="yes"/>
-                        </xsl:next-match>
-                    </xsl:when>
-                    <xsl:when test="local-name() = ('dynam','dir','hairpin','dir','tempo','fermata','trill','metaMark')">
-                        <xsl:variable name="start" select="vife:controlevent.linking.getStartElem(.)" as="node()?"/>
-                        <xsl:choose>
-                            <xsl:when test="exists($start)">
-                                <xsl:next-match>
-                                    <xsl:with-param name="mode" select="$mode" tunnel="yes"/>
-                                </xsl:next-match>
-                            </xsl:when>
-                        </xsl:choose>
-                    </xsl:when>
-                    <xsl:when test="local-name() = ('slur','tie')">
-                        <xsl:variable name="start" select="vife:controlevent.linking.getStartElem(.)" as="node()?"/>
-                        <xsl:variable name="end" select="vife:controlevent.linking.getEndElem(.)" as="node()?"/>
-                        <xsl:choose>
-                            <xsl:when test="exists($start) and exists($end)">
-                                <xsl:next-match>
-                                    <xsl:with-param name="mode" select="$mode" tunnel="yes"/>
-                                </xsl:next-match>
-                            </xsl:when>
-                        </xsl:choose>
-                    </xsl:when>
-                    <xsl:when test="local-name() = ('cpMark')">
-                        <xsl:variable name="start" select="vife:controlevent.linking.getStartElem(.)" as="node()?"/>
-                        <xsl:variable name="end" select="vife:controlevent.linking.getEndElem(.)" as="node()?"/>
-                        <xsl:variable name="origin" select="vife:controlevent.linking.getOriginElem(.)" as="node()?"/>
-                        <xsl:variable name="origin.end" select="vife:controlevent.linking.getOriginEndElem(.)" as="node()?"/>
-                        <xsl:choose>
-                            <xsl:when test="exists($start) and exists($end) and exists($origin) and exists($origin.end)">
-                                <xsl:next-match>
-                                    <xsl:with-param name="mode" select="$mode" tunnel="yes"/>
-                                </xsl:next-match>
-                            </xsl:when>
-                        </xsl:choose>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:message select="'ERROR (controlevent.linking): mei:' || local-name() || '#' || @xml:id || ' has neither @startid nor @tstamp – further processing impossible.' "/>
-                        <xsl:next-match>
-                            <xsl:with-param name="mode" select="'untouched'" tunnel="yes"/>
-                        </xsl:next-match>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:when>
-            
-            <xsl:when test="$mode.id and $hasIDs">
-                <xsl:apply-templates select="." mode="controlevent.linking_strip.tstamps"/>
-            </xsl:when>
-            <xsl:when test="$mode.id and not($hasIDs)">
-                <xsl:apply-templates select="." mode="controlevent.linking_add.IDs">
-                    <xsl:with-param name="strip.tstamps" select="true()" tunnel="yes" as="xs:boolean"/>
-                </xsl:apply-templates>
-            </xsl:when>
-            
-            <xsl:when test="$mode.tstamp and $hasTstamps">
-                <xsl:apply-templates select="." mode="controlevent.linking_strip.IDs"/>
-            </xsl:when>
-            <xsl:when test="$mode.tstamp and not($hasTstamps)">
-                <xsl:apply-templates select="." mode="controlevent.linking_add.tstamps">
-                    <xsl:with-param name="strip.IDs" select="true()" tunnel="yes" as="xs:boolean"/>
-                </xsl:apply-templates>
-            </xsl:when>
-            
-            <xsl:when test="$mode.both and $hasIDs and $hasTstamps">
-                <xsl:next-match/>
-            </xsl:when>
-            <xsl:when test="$mode.both and $hasIDs and not($hasTstamps)">
-                <xsl:apply-templates select="." mode="controlevent.linking_add.tstamps"/>
-            </xsl:when>
-            <xsl:when test="$mode.both and not($hasIDs) and $hasTstamps">
-                <xsl:apply-templates select="." mode="controlevent.linking_add.IDs"/>
-            </xsl:when>
-            
-            <xsl:when test="$mode.untouched">
-                <xsl:next-match/>
-            </xsl:when>
-            
-        </xsl:choose>-->
     </xsl:template>
     
     <!-- generate IDs from tstamp-based info -->
@@ -837,7 +752,7 @@
                 </xsl:choose>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:variable name="current.tstamp" select="$input.elem/@tstamp" as="xs:string"/>
+                <xsl:variable name="current.tstamp" select="string(round(number($input.elem/@tstamp),2))" as="xs:string"/>
                 <xsl:variable name="staff.n" as="xs:string?">
                     <xsl:choose>
                         <xsl:when test="$input.elem/@staff">
@@ -866,7 +781,7 @@
                             then($staff/mei:layer[@n = $layer.n]) 
                             else($staff)" as="node()"/>
                         
-                        <xsl:variable name="target" select="($scope//mei:*[@tstamp = $current.tstamp])[1]" as="node()?"/>
+                        <xsl:variable name="target" select="($scope//mei:*[string(round(number(@tstamp),2)) = $current.tstamp])[1]" as="node()?"/>
                         <xsl:choose>
                             <xsl:when test="exists($target)">
                                 <xsl:sequence select="$target"/>
@@ -900,7 +815,7 @@
             </xsl:when>
             <xsl:otherwise>
                 <xsl:variable name="current.tstamp2" select="$input.elem/@tstamp2" as="xs:string"/>
-                <xsl:variable name="target.tstamp" select="substring-after($current.tstamp2,'m+')" as="xs:string"/>
+                <xsl:variable name="target.tstamp" select="string(round(number(substring-after($current.tstamp2,'m+')), 2))" as="xs:string"/>
                 <xsl:variable name="measure.dist" select="xs:integer(substring-before($current.tstamp2,'m+'))" as="xs:integer"/>
                 <xsl:variable name="current.measure" select="$input.elem/ancestor::mei:measure" as="node()"/>
                 <xsl:variable name="target.measure" select="if($measure.dist = 0) then($current.measure) else($current.measure/following::mei:measure[$measure.dist])" as="node()?"/>
@@ -944,7 +859,7 @@
                                     then($staff/mei:layer[@n = $layer.n]) 
                                     else($staff)" as="node()"/>
                                 
-                                <xsl:variable name="target" select="($scope//mei:*[@tstamp = $target.tstamp])[1]" as="node()?"/>
+                                <xsl:variable name="target" select="($scope//mei:*[string(round(number(@tstamp), 2)) = $target.tstamp])[1]" as="node()?"/>
                                 <xsl:choose>
                                     <xsl:when test="exists($target)">
                                         <xsl:sequence select="$target"/>
@@ -954,9 +869,9 @@
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </xsl:when>
-                            <xsl:when test="count($target.measure//mei:*[@tstamp = $target.tstamp]) = 1">
+                            <xsl:when test="count($target.measure//mei:*[string(round(number(@tstamp), 2)) = $target.tstamp]) = 1">
                                 <!-- there is only one possible target in this measure -->
-                                <xsl:sequence select="$target.measure//mei:*[@tstamp = $target.tstamp]"/>
+                                <xsl:sequence select="$target.measure//mei:*[string(round(number(@tstamp), 2)) = $target.tstamp]"/>
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:message select="'WARNING (controlevent.linking): Unable to identify element at @tstamp2 ' || $current.tstamp2 || ' of mei:' || local-name($input.elem) || '#' || $input.elem/@xml:id || ' because the staff is unknown.'"/>
@@ -972,7 +887,7 @@
                             then($staff/mei:layer[@n = $layer.n]) 
                             else($staff)" as="node()"/>
                         
-                        <xsl:variable name="target" select="($scope//mei:*[@tstamp = $target.tstamp])[1]" as="node()?"/>
+                        <xsl:variable name="target" select="($scope//mei:*[string(round(number(@tstamp), 2)) = $target.tstamp])[1]" as="node()?"/>
                         <xsl:choose>
                             <xsl:when test="exists($target)">
                                 <xsl:sequence select="$target"/>
