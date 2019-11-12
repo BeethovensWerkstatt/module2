@@ -3536,14 +3536,58 @@
                             </staff>
                             <staff xml:id="x724d5f7f-04b5-40ea-879d-3f991bb7e10e" n="2">
                                 <layer xml:id="x61a76580-3392-4fba-afba-b3a0ac376e80" n="1">
-                                    <bTrem xml:id="x2fba58a3-dac0-4450-90bd-b26653804d45">
+                                    <beam>
                                         <note xml:id="x25d31f07-a78c-4e30-939f-0952360eb9e8"
-                                    dur="2"
+                                    dur="16"
                                     oct="4"
                                     pname="f"
                                     stem.dir="up"
-                                    stem.mod="2slash"/>
-                                    </bTrem>
+                                    />
+                                    <note 
+                                        dur="16"
+                                        oct="4"
+                                        pname="f"
+                                        stem.dir="up"
+                                        />
+                                    <note 
+                                        dur="16"
+                                        oct="4"
+                                        pname="f"
+                                        stem.dir="up"
+                                        />
+                                    <note 
+                                        dur="16"
+                                        oct="4"
+                                        pname="f"
+                                        stem.dir="up"
+                                        />
+                                    </beam>
+                                    <beam>
+                                    <note 
+                                        dur="16"
+                                        oct="4"
+                                        pname="f"
+                                        stem.dir="up"
+                                        />
+                                    <note 
+                                        dur="16"
+                                        oct="4"
+                                        pname="f"
+                                        stem.dir="up"
+                                        />
+                                    <note 
+                                        dur="16"
+                                        oct="4"
+                                        pname="f"
+                                        stem.dir="up"
+                                        />
+                                    <note 
+                                        dur="16"
+                                        oct="4"
+                                        pname="f"
+                                        stem.dir="up"
+                                        />
+                                    </beam>
                                 </layer>
                             </staff>
                             <staff xml:id="x6914d9f9-8741-48c5-a561-eb9a13805e41" n="3">
@@ -6121,14 +6165,32 @@
                                     pname="f"
                                     stem.dir="down"/>
                                     </beam>
-                                    <bTrem xml:id="x4e7b9321-c223-49a9-9820-752ddbe7031a">
-                                        <note xml:id="x8f98263c-edee-482f-8ec7-5743ff0ad330"
-                                    dur="4"
+                                    <beam xml:id="x4e7b9321-c223-49a9-9820-752ddbe7031a">
+                                        <note 
+                                    dur="16"
                                     oct="5"
                                     pname="f"
                                     stem.dir="down"
-                                    stem.mod="2slash"/>
-                                    </bTrem>
+                                        />
+                                        <note 
+                                            dur="16"
+                                            oct="5"
+                                            pname="f"
+                                            stem.dir="down"
+                                        />
+                                        <note 
+                                            dur="16"
+                                            oct="5"
+                                            pname="f"
+                                            stem.dir="down"
+                                        />
+                                        <note 
+                                            dur="16"
+                                            oct="5"
+                                            pname="f"
+                                            stem.dir="down"
+                                        />
+                                    </beam>
                                 </layer>
                             </staff>
                             <staff xml:id="x10f59888-de0b-4302-9c83-cc873e98e4e1" n="3">
@@ -6522,14 +6584,28 @@
                                     pname="f"
                                     stem.dir="up"/>
                                     </beam>
-                                    <bTrem xml:id="xad4e67ef-04d3-4155-9082-d6a8510b50ac">
-                                        <note xml:id="x7fe28725-a45e-4cad-bb2a-71a1324a9501"
-                                    dur="4"
+                                    <beam xml:id="xad4e67ef-04d3-4155-9082-d6a8510b50ac">
+                                        <note 
+                                    dur="16"
                                     oct="4"
                                     pname="f"
-                                    stem.dir="up"
-                                    stem.mod="2slash"/>
-                                    </bTrem>
+                                    stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="4"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="4"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="4"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                    </beam>
                                 </layer>
                             </staff>
                             <staff xml:id="xe9db1677-922c-4285-9bab-84a43ace1b89" n="3" visible="true">
@@ -18456,14 +18532,28 @@
                             </staff>
                             <staff xml:id="xa5eb0b88-7299-4d84-9bf1-41d2d8e2e798" n="3">
                                 <layer xml:id="x7ccd7485-f03f-47f9-8d5e-a595d933264c" n="1">
-                                    <bTrem xml:id="x02b3da32-5509-4086-9114-7f5c08729206">
-                                        <note xml:id="x30f8adfc-b678-478f-ba52-e40210e0a3cb"
-                                    dur="2"
+                                    <beam xml:id="x02b3da32-5509-4086-9114-7f5c08729206">
+                                        <note 
+                                    dur="8"
                                     oct="3"
                                     pname="f"
-                                    stem.dir="up"
-                                    stem.mod="1slash"/>
-                                    </bTrem>
+                                    stem.dir="up"/>
+                                        <note 
+                                            dur="8"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="8"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="8"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                    </beam>
                                 </layer>
                             </staff>
                             <staff xml:id="x612a1908-6351-45a9-90f1-bb3da8c42d9f" n="4">
@@ -18573,14 +18663,28 @@
                             </staff>
                             <staff xml:id="x6cb39cb9-d706-48af-a7e7-75c8d36edf1b" n="3" visible="true">
                                 <layer xml:id="x899c1140-4bbd-4460-9925-f92482d6ad69" n="1">
-                                    <bTrem xml:id="xd20d2145-7494-4399-bd69-e3b4705ddcec">
-                                        <note xml:id="x166ae2d7-ced8-4f78-a5af-e41df2386b76"
-                                    dur="2"
+                                    <beam xml:id="xd20d2145-7494-4399-bd69-e3b4705ddcec">
+                                        <note 
+                                    dur="8"
                                     oct="3"
                                     pname="f"
-                                    stem.dir="up"
-                                    stem.mod="1slash"/>
-                                    </bTrem>
+                                    stem.dir="up"/>
+                                        <note 
+                                            dur="8"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="8"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="8"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                    </beam>
                                 </layer>
                             </staff>
                             <staff xml:id="xc8a43663-143a-4204-af2d-24a01188e46f" n="4" visible="true">
@@ -20383,14 +20487,50 @@
                             </staff>
                             <staff xml:id="xfaac71d8-0e49-45dd-945b-4bd6e915172c" n="4">
                                 <layer xml:id="x412d7495-6e46-4677-a2de-d16a4b0f01bb" n="1">
-                                    <bTrem xml:id="xe45b6035-5afc-4ada-b02b-dd036cee47b7">
-                                        <note xml:id="x1c673518-35bd-4340-8def-a6341c40e7da"
-                                    dur="2"
+                                    <beam xml:id="xe45b6035-5afc-4ada-b02b-dd036cee47b7">
+                                        <note 
+                                    dur="16"
                                     oct="3"
                                     pname="f"
-                                    stem.dir="up"
-                                    stem.mod="2slash"/>
-                                    </bTrem>
+                                    stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                    </beam>
+                                    <beam >
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                    </beam>
                                 </layer>
                             </staff>
                             <staff xml:id="x834b16ac-3aba-4d61-89cc-b24f87b892d6" n="5">
@@ -20529,14 +20669,50 @@
                             </staff>
                             <staff xml:id="x8be30ab1-320a-4dce-ac3e-f7bf6f6ccf8d" n="4">
                                 <layer xml:id="x90a3ad64-0398-43b1-8807-71b7efb418ab" n="1">
-                                    <bTrem xml:id="x06bba4dc-2ff4-4aa1-933e-f661ef460f8f">
-                                        <note xml:id="x69e04cc9-6b03-4593-8881-8cfacc78ee34"
-                                    dur="2"
-                                    oct="3"
-                                    pname="f"
-                                    stem.dir="up"
-                                    stem.mod="2slash"/>
-                                    </bTrem>
+                                    <beam>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                    </beam>
+                                    <beam>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                    </beam>
                                 </layer>
                             </staff>
                             <staff xml:id="x53a5cb0b-1d18-4006-b611-bbd7d71301a3" n="5">
@@ -20701,14 +20877,50 @@
                             </staff>
                             <staff xml:id="xd9fd3aaa-df21-4ff6-9ed3-8e9cee6790e6" n="4">
                                 <layer xml:id="x44f651cd-f3fd-44e6-ba7f-3bfb2ee29ad8" n="1">
-                                    <bTrem xml:id="x6c3bc8ef-7f2d-4850-8739-16c95d0ae241">
-                                        <note xml:id="x8308c108-922d-499d-995f-56b932f47fe5"
-                                    dur="2"
-                                    oct="3"
-                                    pname="f"
-                                    stem.dir="up"
-                                    stem.mod="2slash"/>
-                                    </bTrem>
+                                    <beam>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                    </beam>
+                                    <beam>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                        <note 
+                                            dur="16"
+                                            oct="3"
+                                            pname="f"
+                                            stem.dir="up"/>
+                                    </beam>
                                 </layer>
                             </staff>
                             <staff xml:id="x3e72fad0-58e3-499a-b9e6-1a1a3adfc7c1" n="5">
