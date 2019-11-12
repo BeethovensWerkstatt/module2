@@ -19,14 +19,17 @@
          <sourceDesc>
             <source>
                <bibl>
-                  <title type="main">Opferlied</title>
+                  <title type="main">"Opferlied" für Singstimme, Chor und Orchester op. 121b, 
+                     Klavierauszug, Schott, Plattennummer: 2279 (Originalausgabe)</title>
                   <respStmt>
                      <resp auth.uri="http://id.loc.gov/vocabulary/relators.html" codedval="cmp"/>
                      <persName auth.uri="http://d-nb.info/gnd" codedval="118508288">Ludwig van
                         Beethoven</persName>
                   </respStmt>
-                  <annot n="1">Als Vorlage wurde die OA genommen.</annot>
-                  <annot n="2">aus Finale generierte MusicXML-Daten die in MEI konvertiert
+                  <physLoc>
+                     <repository>Beethoven-Haus Bonn, C 121b / 1</repository>
+                  </physLoc>
+                  <annot n="1">aus Finale generierte MusicXML-Daten, die in MEI konvertiert
                      (MusicXMLToMEI-xslt) wurden</annot>
                </bibl>
             </source>

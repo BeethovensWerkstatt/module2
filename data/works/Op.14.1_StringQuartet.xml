@@ -18,7 +18,9 @@
          <sourceDesc>
             <source>
                <bibl>
-                  <title type="main">Quatuor pour deux Violons Alto et Violoncelle, </title>
+                  <title type="main">Sonate für Klavier (E-Dur) op. 14, Nr. 1, 
+                        Fassung für 2 Violinen, Viola, Violoncello, Stimmen, 
+                        Bureau des Arts et d'Industrie, Plattennummer: 17 (Originalausgabe)</title>
                   <respStmt>
                      <resp auth.uri="http://id.loc.gov/vocabulary/relators.html"
                            codedval="cmp arr"/>
@@ -28,8 +30,11 @@
                      <resp auth.uri="http://id.loc.gov/vocabulary/relators.html" codedval="dte"/>
                      <persName>Madame la Barone de Braun</persName>
                   </respStmt>
+                     <physLoc>
+                           <repository>Beethoven-Haus Bonn, Sammlung H. C. Bodmer, HCB C op. 14</repository>
+                     </physLoc>
                   <annot n="1">
-                     Bearbeitet nach der Klavier-Sonate E-dur Op.14 No.1 von Beethoven selbst.</annot>
+                     Bearbeitet nach der Klaviersonate E-Dur Op. 14, Nr. 1 von Beethoven selbst.</annot>
                </bibl>
             </source>
          </sourceDesc>
