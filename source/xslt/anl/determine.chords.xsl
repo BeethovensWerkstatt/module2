@@ -748,7 +748,7 @@
                 <xsl:choose>
                     <xsl:when test="$distance = 3">
                         <xsl:attribute name="third" select="'minor'"/>
-                        <xsl:attribute name="root" select="."/>
+                        <xsl:attribute name="root" select="upper-case(.) || 'm'"/>
                     </xsl:when>
                     <xsl:when test="$distance = 4">
                         <xsl:attribute name="third" select="'major'"/>
