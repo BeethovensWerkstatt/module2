@@ -97,6 +97,25 @@
                 <xsl:value-of select="$lowest.note"/>
             </xsl:variable>
             
+            <!--<xsl:variable name="bass.tone" as="xs:string">
+                <xsl:variable name="pnames.indizes" select="('c','d','e','f','g','a','b')" as="xs:string+"/>
+                <xsl:variable name="lowest.octave.notes" select="$notes[@oct = string(min($notes/number(@oct)))]" as="node()+"/>
+                
+                <xsl:variable name="accid" select="if($notes//@accid) then($notes//@accid) else if($notes//@accid.ges) then($notes//@accid.ges) else('')" as="xs:string+"/>
+                <xsl:variable name="change.accid.rendition" select="if($accid = 'f') then('♭') else if($accid = 's') then('♯') else('')" as="xs:string"/>
+                <xsl:variable name="lowest.note" select="$pnames.indizes[min(for $note in $lowest.octave.notes return (index-of($pnames.indizes,$note/@pname)))]" as="xs:string"/>
+                <xsl:variable name="lowest.note.changedAccid" select="concat(string($lowest.note), string($change.accid.rendition))"/>
+                <xsl:value-of select="$lowest.note.changedAccid"/>
+            </xsl:variable>-->
+            
+            <!--<xsl:template match="temp:chord/@root" mode="identify.root.accid">
+                <xsl:variable name="note" select="parent::temp:chord/temp:tone[@func='1']/mei:note[1]" as="node()"/>
+                <xsl:variable name="accid" select="if($note/@accid) then($note/@accid) else if($note/@accid.ges) then($note/@accid.ges) else('')" as="xs:string"/>
+                <xsl:variable name="i18n.accid" select="if($accid = 'f') then('♭') else if($accid = 's') then('♯') else('')" as="xs:string"/>
+                <xsl:attribute name="root" select=". || $i18n.accid"/>
+            </xsl:template>-->
+            
+            
             <xsl:for-each select="$pnames">
                 <xsl:variable name="current.pname" select="." as="xs:string"/>
                 <xsl:variable name="current.row" select="$third.rows/descendant-or-self::temp:row[@pname = $current.pname]" as="node()"/>
@@ -141,7 +160,7 @@
                 <xsl:variable name="root.dur" select="max($notes[.//@pname = $current.row/@*[. = '0']/local-name()]/(max(.//@tstamp2/number(.)) - min(.//@tstamp/number(.))))" as="xs:double?"/>
                 
                 <temp:chord root="{$current.pname}" 
-                    bass="{$bass.tone}" 
+                    bass="{$bass.tone}"
                     bass.index="{$notes//mei:note[@pname = $bass.tone]/ancestor::temp:tone/@func}" 
                     inversion="{$inversion}" 
                     accented.tstamp="{string($isAccented)}" 
@@ -207,8 +226,20 @@
         
         <xsl:for-each select="$identified.intervals">
             <xsl:variable name="current.interpretation" select="." as="node()"/>
+            <!-- insert chord symbol with additions of sevenths and/or bass tone after a slash (/) if it is not the root note -->
             <harm type="mfunc" xmlns="http://www.music-encoding.org/ns/mei">
-                <rend type="root"><xsl:value-of select="$current.interpretation/@root"/></rend>
+                    <xsl:choose>
+                        <!-- compare root-note with bass tone, when they dont have the same pname and accid/accid.ges, copy root note and add a / with the bass tone after that-->
+                        <xsl:when test="$current.interpretation/@root ne $current.interpretation/@bass">
+                            <rend type="root"><xsl:value-of select="concat(string($current.interpretation/@root), '/', upper-case($current.interpretation/@bass))"/></rend>
+                        </xsl:when>
+                        <!-- when root note and bass note are of the same pname and accid/accid.ges, just copy root note -->
+                        <xsl:when test="$current.interpretation/@root eq $current.interpretation/@bass">
+                            <rend type="root"><xsl:value-of select="$current.interpretation/@root"/></rend>
+                        </xsl:when>
+                    </xsl:choose>
+                
+                
                 <xsl:for-each select="$current.interpretation/temp:tone/@func">
                     <xsl:sort select="xs:integer(substring(.,1,1))" data-type="number" order="ascending"/>
                     <xsl:variable name="is.bass" select=". = $current.interpretation/@bass.index" as="xs:boolean"/>
@@ -694,6 +725,8 @@
         <xsl:variable name="i18n.accid" select="if($accid = 'f') then('♭') else if($accid = 's') then('♯') else('')" as="xs:string"/>
         <xsl:attribute name="root" select=". || $i18n.accid"/>
     </xsl:template>
+    
+    
     
     
     <xsl:template match="temp:chord/@root" mode="identify.intervals">
