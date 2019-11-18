@@ -124,6 +124,11 @@
                     <temp:tone func="1" cost="0" name="root">
                         <xsl:sequence select="$notes[.//@pname = $current.row/@*[. = '0']/local-name()]"/>
                     </temp:tone>
+                    <xsl:if test="$current.row/@*[. = '3']/local-name() = $pnames">
+                        <temp:tone func="7" cost="3" name="seventh">
+                            <xsl:sequence select="$notes[.//@pname = $current.row/@*[. = '3']/local-name()]"/>
+                        </temp:tone>
+                    </xsl:if>
                     <xsl:if test="$current.row/@*[. = '1']/local-name() = $pnames">
                         <temp:tone func="3" cost="1" name="third">
                             <xsl:sequence select="$notes[.//@pname = $current.row/@*[. = '1']/local-name()]"/>
@@ -132,11 +137,6 @@
                     <xsl:if test="$current.row/@*[. = '2']/local-name() = $pnames">
                         <temp:tone func="5" cost="2" name="fifth">
                             <xsl:sequence select="$notes[.//@pname = $current.row/@*[. = '2']/local-name()]"/>
-                        </temp:tone>
-                    </xsl:if>
-                    <xsl:if test="$current.row/@*[. = '3']/local-name() = $pnames">
-                        <temp:tone func="7" cost="3" name="seventh">
-                            <xsl:sequence select="$notes[.//@pname = $current.row/@*[. = '3']/local-name()]"/>
                         </temp:tone>
                     </xsl:if>
                     <xsl:if test="$current.row/@*[. = '4']/local-name() = $pnames">
@@ -226,24 +226,96 @@
         
         <xsl:for-each select="$identified.intervals">
             <xsl:variable name="current.interpretation" select="." as="node()"/>
+            <xsl:variable name="is.mod" select="some $func in $current.interpretation/temp:tone/@func satisfies (.,'[a-z]+')" as="xs:boolean"/>
             <!-- insert chord symbol with additions of sevenths and/or bass tone after a slash (/) if it is not the root note -->
             <harm type="mfunc" xmlns="http://www.music-encoding.org/ns/mei">
                     <xsl:choose>
+                        
                         <!-- compare root-note with bass tone, when they dont have the same pname and accid/accid.ges, copy root note and add a / with the bass tone after that-->
                         <xsl:when test="$current.interpretation/@root ne $current.interpretation/@bass">
-                            <rend type="root"><xsl:value-of select="concat(string($current.interpretation/@root), '/', upper-case($current.interpretation/@bass))"/></rend>
-                        </xsl:when>
+                            <rend type="root"><xsl:value-of select="$current.interpretation/@root"/></rend>
+                            <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct7')">
+                                <rend rend="sup" type="ct7">7</rend>
+                            </xsl:if>
+                            <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct9')">
+                                <rend rend="sup" type="ct9">9</rend>
+                            </xsl:if>
+                            <rend type="bass"><xsl:value-of select="concat('/', upper-case($current.interpretation/@bass))"/></rend>
+                            <xsl:if test="$is.mod">
+                                <rend type="mod {tools:resolveMFuncByNumber(.)}" fontstyle="italic"><xsl:value-of select="."/></rend>
+                            </xsl:if>
+                            </xsl:when>
+                        
+                        
                         <!-- when root note and bass note are of the same pname and accid/accid.ges, just copy root note -->
                         <xsl:when test="$current.interpretation/@root eq $current.interpretation/@bass">
-                            <rend type="root"><xsl:value-of select="$current.interpretation/@root"/></rend>
+                         <xsl:variable name="is.mod" select="matches(.,'[a-z]+')" as="xs:boolean"/>
+                         <rend type="root"><xsl:value-of select="$current.interpretation/@root"/></rend> 
+                            <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct7')">
+                                <rend rend="sup" type="ct7">7</rend>
+                            </xsl:if>
+                            <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct9')">
+                                <rend rend="sup" type="ct9">9</rend>
+                            </xsl:if>
+                            <xsl:if test="$is.mod">
+                                <rend type="mod {tools:resolveMFuncByNumber(.)}" fontsize="70%" fontstyle="italic"><xsl:value-of select="."/></rend>
+                            </xsl:if>
                         </xsl:when>
                     </xsl:choose>
+                            
                 
-                <xsl:for-each select="$current.interpretation/temp:tone/@func">
-                    <xsl:sort select="xs:integer(substring(.,1,1))" data-type="number" order="ascending"/>
+                <!--<xsl:for-each select="$current.interpretation/temp:tone/@func">
+                                <xsl:variable name="is.bass" select=". = $current.interpretation/@bass.index" as="xs:boolean"/>
+                                <xsl:variable name="is.mod" select="matches(.,'[a-z]+')" as="xs:boolean"/>
+                                <xsl:choose>
+                                  <xsl:when test="string(tools:resolveMFuncByNumber(.)) eq 'ct7'">
+                                    <rend rend="sup" type="mod {tools:resolveMFuncByNumber(.)}"><xsl:value-of select="."/></rend>
+                                  </xsl:when>
+                                    <xsl:when test="$is.bass">
+                                        <rend type="bass {tools:resolveMFuncByNumber(.)}"><xsl:value-of select="concat('/', upper-case($current.interpretation/@bass))"/></rend>
+                                    </xsl:when>
+                                  <xsl:when test="string(tools:resolveMFuncByNumber(.)) eq 'ct9'">
+                                    <rend rend="sup" type="mod {tools:resolveMFuncByNumber(.)}"><xsl:value-of select="."/></rend>
+                                  </xsl:when>
+                                  
+                                    <xsl:when test="$is.mod">
+                                        <rend type="mod {tools:resolveMFuncByNumber(.)}" fontsize="70%" fontstyle="italic"><xsl:value-of select="."/></rend>
+                                    </xsl:when>
+                            </xsl:choose>
+                            </xsl:for-each>
+                        </xsl:when>
+                        
+                        <!-\- when root note and bass note are of the same pname and accid/accid.ges, just copy root note -\->
+                        <xsl:when test="$current.interpretation/@root ne $current.interpretation/@bass">
+                            <rend type="root"><xsl:value-of select="$current.interpretation/@root"/></rend> 
+                            <xsl:for-each select="$current.interpretation/temp:tone/@func">
+                                <xsl:variable name="is.mod" select="matches(.,'[a-z]+')" as="xs:boolean"/>
+                                <xsl:choose>
+                                    <xsl:when test="string(tools:resolveMFuncByNumber(.)) eq 'ct7'">
+                                        <rend rend="sup" type="mod {tools:resolveMFuncByNumber(.)}"><xsl:value-of select="."/></rend>
+                                    </xsl:when>
+                                    <xsl:when test="string(tools:resolveMFuncByNumber(.)) eq 'ct9'">
+                                        <rend rend="sup" type="mod {tools:resolveMFuncByNumber(.)}"><xsl:value-of select="."/></rend>
+                                    </xsl:when>
+                                    <xsl:when test="$is.mod">
+                                        <rend type="mod {tools:resolveMFuncByNumber(.)}" fontsize="70%" fontstyle="italic"><xsl:value-of select="."/></rend>
+                                    </xsl:when>
+                                </xsl:choose>
+                            </xsl:for-each>
+                        </xsl:when>
+                    </xsl:choose>-->
+                
+                <!--<xsl:for-each select="$current.interpretation/temp:tone/@func">
+                    <!-\-<xsl:sort select="xs:integer(substring(.,1,1))" data-type="number" order="ascending"/>-\->
                     <xsl:variable name="is.bass" select=". = $current.interpretation/@bass.index" as="xs:boolean"/>
                     <xsl:variable name="is.mod" select="matches(.,'[a-z]+')" as="xs:boolean"/>
                     <xsl:choose>
+                         <xsl:when test="string(tools:resolveMFuncByNumber(.)) eq 'ct7'">
+                            <rend rend="sup" type="mod {tools:resolveMFuncByNumber(.)}"><xsl:value-of select="."/></rend>
+                        </xsl:when>
+                        <xsl:when test="string(tools:resolveMFuncByNumber(.)) eq 'ct9'">
+                            <rend rend="sup" type="mod {tools:resolveMFuncByNumber(.)}"><xsl:value-of select="."/></rend>
+                        </xsl:when>
                         <xsl:when test="$is.bass and $is.mod">
                             <rend type="bass mod {tools:resolveMFuncByNumber(.)}" fontsize="70%"><xsl:value-of select="."/></rend>
                         </xsl:when>
@@ -251,19 +323,13 @@
                             <rend type="bass {tools:resolveMFuncByNumber(.)}" fontsize="70%"><xsl:value-of select="."/></rend>
                         </xsl:when>
                         <xsl:when test="$is.mod">
-                            <!--<xsl:if test="position() gt 1">
-                                <rend color="white" type="distance" fontsize="30%">–</rend>
-                            </xsl:if>-->
                             <rend type="mod {tools:resolveMFuncByNumber(.)}" fontsize="70%" fontstyle="italic"><xsl:value-of select="."/></rend>
                         </xsl:when>
-                        <xsl:when test="string(tools:resolveMFuncByNumber(.)) eq 'ct7'">
-                            <rend rend="sup" type="mod {tools:resolveMFuncByNumber(.)}"><xsl:value-of select="."/></rend>
-                        </xsl:when>
-                        <xsl:otherwise>
+                           <xsl:otherwise>
                             <rend type="{tools:resolveMFuncByNumber(.)}" fontsize="70%"><xsl:value-of select="."/></rend>
                         </xsl:otherwise>
                     </xsl:choose>   
-                </xsl:for-each>
+                </xsl:for-each>-->
                 <annot type="mfunc.tonelist" cost="{$current.interpretation/@highest.cost}">
                     <xsl:for-each select="$current.interpretation/temp:tone">
                         <annot type="{tools:resolveMFuncByNumber(@func)}" plist="{string-join(.//mei:note/@xml:id,' ')}"/>
@@ -749,8 +815,8 @@
                 <xsl:variable name="distance" select="$fixed.third - $root.pnum" as="xs:integer"/>
                 <xsl:choose>
                     <xsl:when test="$distance = 3">
-                        <xsl:attribute name="third" select="'minor'"/>
-                        <xsl:attribute name="root" select="upper-case(.) || 'm'"/>
+                        <xsl:variable name="is.minorThird" select="." as="xs:boolean"/>
+                        <xsl:attribute name="root" select="upper-case(substring(.,1,1)) || substring(.,2) || 'm'"/>
                     </xsl:when>
                     <xsl:when test="$distance = 4">
                         <xsl:attribute name="third" select="'major'"/>
@@ -759,9 +825,12 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:message select="'Unable to determine third at ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || '. Please help…'"/>
-                        <xsl:attribute name="root" select="."/>
+                        <xsl:attribute name="root" select="'Hurz'"/>
                     </xsl:otherwise>
                 </xsl:choose>
+        </xsl:if>
+        <xsl:if test="not($third.note) and $fifth.note">
+            <xsl:attribute name="root" select="upper-case(substring(.,1,1)) || substring(.,2) || '5'"/>
         </xsl:if>
         
         <!-- determine distance between root and fifth -->
@@ -774,7 +843,8 @@
                     <xsl:attribute name="fifth" select="'perf'"/>
                 </xsl:when>
                 <xsl:when test="$distance = 6">
-                    <xsl:attribute name="fifth" select="'dim'"/>
+                    <xsl:variable name="is.diminishedFifth" select="." as="xs:boolean"/>
+                    <!--<xsl:attribute name="root" select="upper-case(substring(.,1,1)) || substring(.,2) || 'dim'"/>-->
                 </xsl:when>
                 <xsl:when test="$distance = 8">
                     <xsl:attribute name="fifth" select="'aug'"/>
