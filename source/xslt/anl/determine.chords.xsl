@@ -53,7 +53,7 @@
                     <xsl:variable name="harm" select="tools:interpreteChord($current.notes,$is.accented,true())" as="node()+"/>
                     <choice type="harmInterpretation" measure="{count($measure/preceding::mei:measure)}" key="{$current.key}" tstamp="{$current.tstamp}" xmlns="http://www.music-encoding.org/ns/mei">
                         <xsl:for-each select="$harm">
-                            <orig>
+                            
                                 <xsl:copy>
                                     <xsl:attribute name="xml:id" select="generate-id(.)"/>
                                     <xsl:attribute name="tstamp" select="$current.tstamp"/>
@@ -62,7 +62,7 @@
                                     <xsl:attribute name="place" select="'below'"/>
                                     <xsl:apply-templates select="node() | @*" mode="#current"/>
                                 </xsl:copy>
-                            </orig>
+                            
                         </xsl:for-each>
                     </choice>
                 </xsl:if>
@@ -239,7 +239,6 @@
                         </xsl:when>
                     </xsl:choose>
                 
-                
                 <xsl:for-each select="$current.interpretation/temp:tone/@func">
                     <xsl:sort select="xs:integer(substring(.,1,1))" data-type="number" order="ascending"/>
                     <xsl:variable name="is.bass" select=". = $current.interpretation/@bass.index" as="xs:boolean"/>
@@ -256,6 +255,9 @@
                                 <rend color="white" type="distance" fontsize="30%">–</rend>
                             </xsl:if>-->
                             <rend type="mod {tools:resolveMFuncByNumber(.)}" fontsize="70%" fontstyle="italic"><xsl:value-of select="."/></rend>
+                        </xsl:when>
+                        <xsl:when test="string(tools:resolveMFuncByNumber(.)) eq 'ct7'">
+                            <rend rend="sup" type="mod {tools:resolveMFuncByNumber(.)}"><xsl:value-of select="."/></rend>
                         </xsl:when>
                         <xsl:otherwise>
                             <rend type="{tools:resolveMFuncByNumber(.)}" fontsize="70%"><xsl:value-of select="."/></rend>
