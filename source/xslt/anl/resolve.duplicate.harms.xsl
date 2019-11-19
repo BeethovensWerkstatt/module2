@@ -24,8 +24,8 @@
                 <xsl:next-match/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:variable name="this.rends" select="$this.harm//mei:rend/text()" as="xs:string+"/>
-                <xsl:variable name="prev.rends" select="$prev.harm//mei:rend/text()" as="xs:string+"/>
+                <xsl:variable name="this.rends" select="$this.harm//mei:rend/text()" as="xs:string*"/>
+                <xsl:variable name="prev.rends" select="$prev.harm//mei:rend/text()" as="xs:string*"/>
                 
                 <xsl:choose>
                     <xsl:when test="(every $rend in $this.rends satisfies ($rend = $prev.rends)) and (every $rend in $prev.rends satisfies ($rend = $this.rends))">
