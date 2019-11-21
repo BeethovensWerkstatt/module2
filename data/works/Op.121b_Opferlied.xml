@@ -13955,8 +13955,6 @@
                               <rest xml:id="x823cc260-31a7-4efa-b95e-ea8d39e525b6" dur="8"/>
                            </layer>
                         </staff>
-                        <!--  <dir xml:id="xa278dd32-2af5-4ed3-bbe9-368fe650dd19" staff="1" place="below"
-                           tstamp="4.5">FINE</dir>: "Fine" Soll weg?-->
                         <fermata xml:id="x49fa05bb-2a7e-490d-bcc9-7eacf228ca4b" staff="1"
                            startid="#x823cc260-31a7-4efa-b95e-ea8d39e525b6" place="above"/>
                      </measure>
@@ -16076,8 +16074,6 @@
                               <rest xml:id="x65df9182-bf18-4d4a-a3e5-da4a6ca03580" dur="8"/>
                            </layer>
                         </staff>
-                        <!-- <dir xml:id="x8ed6937f-7ec9-4964-8dda-fe0cd84ff1cc" staff="1" tstamp="4"
-                           place="below">FINE.</dir>: "Fine" soll weg? -->
                         <fermata xml:id="xf82a1992-d44e-4c1e-b487-8818df86d238" staff="1"
                            startid="#x65df9182-bf18-4d4a-a3e5-da4a6ca03580" place="above"/>
                      </measure>
@@ -18613,8 +18609,6 @@
                            endid="#xcb6a5868-3c52-40e4-add8-6a5a4effb8ea" staff="1"/>
                         <dir xml:id="x390c5cc9-d4b8-4f77-9320-6192103b4d2d" tstamp="3" place="below"
                            staff="1">pizz.</dir>
-                        <!-- <dir xml:id="x236e8b1b-4ee8-4e7f-b6a3-bc64ffb4db1c" tstamp="3.5"
-                           place="below" staff="1">Fine</dir>: soll weg -->
                         <fermata xml:id="x88264d8a-2644-4492-ab18-231e79608429" staff="1"
                            startid="#x330cd780-648c-4485-90bf-7676b5e49d37" place="above"/>
                      </measure>
@@ -20400,8 +20394,6 @@
                         <slur xml:id="x893ef518-0cc6-46d9-963d-07fd0eddff77"
                            startid="#xfbec8171-43af-4ade-8e22-9e6f4832d367" 
                            endid="#x399478d0-8cb0-4d07-b183-363723a126b4" staff="1"/>
-                        <!--  <dir staff="1" xml:id="x73234db2-038d-4ce3-95e5-5904d2fa2a5a" tstamp="4.5"
-                           >Fine.</dir>-->
                         <fermata xml:id="xcee31f55-e914-4463-857b-24f0c90569fa" staff="1"
                            startid="#x399478d0-8cb0-4d07-b183-363723a126b4" place="above"/>
                      </measure>
@@ -21082,8 +21074,6 @@
                         </staff>
                         <dir xml:id="x038163a9-629e-4d54-b1fb-13c984253d40" tstamp="3" place="below"
                            staff="1">pizz.</dir>
-                        <!-- <dir xml:id="x2717d817-1f3d-46d4-97ff-21160fb2cb2a" tstamp="4.5"
-                           place="below" staff="1">Fine.</dir> -->
                         <fermata xml:id="x40702da2-dda1-4d49-b698-da3bd68f0f18" staff="1"
                            startid="#x6aefac13-7ad2-4539-af39-521cda74c475" place="above"/>
                      </measure>
