@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 
 import modeConfiguration from './../modeConfiguration.json'
 
-const environment = 'live' // 'local' or 'live'
+const environment = 'local' // 'local' or 'live'
 
 // const api = process.env.VUE_APP_DATA_BACKEND_URL
 // const api = 'https://dev.beethovens-werkstatt.de/'
@@ -35,7 +35,15 @@ export default new Vuex.Store({
     introVisible: false,
     loading: [],
     networkErrorMsg: null,
-    navigationVisible: true // this is the sidebar with work and mode selection
+    navigationVisible: true, // this is the sidebar with work and mode selection
+    search: {
+      active: false,
+      selectionStarted: false,
+      selectedIDs: [],
+      pitchMode: 'strict'
+    }
+    // searchPaneVisible: false,
+    // searchSelectionActive: false
   },
   mutations: {
     FETCH_COMPARISONLIST (state, comparisons) {
@@ -104,6 +112,18 @@ export default new Vuex.Store({
     SHOW_NETWORK_ERROR (state, msg) {
       state.networkErrorMsg = msg
       // this is a dead end for now, with no way to get out of this state
+    },
+    SHOW_SEARCH_PANE (state) {
+      state.search = { ...state.search, active: true }
+    },
+    HIDE_SEARCH_PANE (state) {
+      state.search = { ...state.search, active: false }
+    },
+    ACTIVATE_SEARCH_SELECTION (state) {
+      state.search = { ...state.search, selectionStarted: true }
+    },
+    DEACTIVATE_SEARCH_SELECTION (state) {
+      state.search = { ...state.search, selectionStarted: false }
     }
   },
   actions: {
@@ -223,6 +243,18 @@ export default new Vuex.Store({
     },
     setTranpose ({ commit }, transpose) {
       commit('SET_TRANSPOSE', transpose)
+    },
+    showSearchPane ({ commit }) {
+      commit('SHOW_SEARCH_PANE')
+    },
+    hideSearchPane ({ commit }) {
+      commit('HIDE_SEARCH_PANE')
+    },
+    activateSearchSelection ({ commit }) {
+      commit('ACTIVATE_SEARCH_SELECTION')
+    },
+    deactivateSearchSelection ({ commit }) {
+      commit('DEACTIVATE_SEARCH_SELECTION')
     }
   },
   getters: {
@@ -319,6 +351,12 @@ export default new Vuex.Store({
     },
     loadingError: state => {
       return state.networkErrorMsg
+    },
+    searchPaneVisible: state => {
+      return state.search.active
+    },
+    searchSelectionActive: state => {
+      return state.search.selectionStarted
     }
   }
 })

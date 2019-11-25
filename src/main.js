@@ -12,6 +12,10 @@ import './../node_modules/spectre.css/dist/spectre-icons.min.css'
 /* import vrvToolkit from './verovio.js'
 Vue.prototype.$verovio = vrvToolkit */
 
+// const vrvToolkit = new verovio.toolkit()
+
+// const verovio = require('../node_modules/verovio-dev/index.js').init(256)
+// const verovio = require('./verovio.js').init(256)
 const vrvToolkit = new verovio.toolkit()
 Vue.prototype.$verovio = vrvToolkit
 

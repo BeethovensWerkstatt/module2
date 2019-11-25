@@ -13,8 +13,8 @@
         <!-- WorkSelection -->
       </div>
       <div id="contentBox">
-
         <NavigationTop v-if="comparisonSelected && modeSelected"/>
+        <SearchPane v-if="searchPaneVisible"/>
         <Analysis v-if="comparisonSelected && modeSelected"/>
         <div v-if="!comparisonSelected" class="toast">
           <h1>Select Comparison</h1>
@@ -35,6 +35,7 @@ import ComparisonSelection from '@/components/ComparisonSelection.vue'
 import ModeSelection from '@/components/ModeSelection.vue'
 import Analysis from '@/components/Analysis.vue'
 import NavigationTop from '@/components/NavigationTop.vue'
+import SearchPane from '@/components/SearchPane.vue'
 
 export default {
   name: 'home',
@@ -42,7 +43,8 @@ export default {
     ComparisonSelection,
     ModeSelection,
     Analysis,
-    NavigationTop
+    NavigationTop,
+    SearchPane
   },
   computed: {
     introVisible: function() {
@@ -53,6 +55,9 @@ export default {
     },
     modeSelected: function() {
       return this.$store.getters.activeModeId !== null
+    },
+    searchPaneVisible: function() {
+      return this.$store.getters.searchPaneVisible;
     }
   }
 }

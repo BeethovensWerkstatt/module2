@@ -7,7 +7,7 @@
       </section>
 
       <section class="navbar-section">
-          <span>Suche</span>
+          <SearchButton/>
       </section>
     </div>
 </template>
@@ -16,12 +16,14 @@
 
 import PageNavigation from '@/components/PageNavigation.vue'
 import ZoomControl from '@/components/ZoomControl.vue'
+import SearchButton from '@/components/SearchButton.vue'
 
 export default {
   name: 'NavigationTop',
   components: {
     PageNavigation,
-    ZoomControl
+    ZoomControl,
+    SearchButton
   }
 }
 </script>

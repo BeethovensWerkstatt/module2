@@ -7,6 +7,7 @@
 <script>
 
 import VerovioBaseComponent from './VerovioBaseComponent.vue'
+import SearchPane from './SearchPane.vue'
 
 let paintableEvents = '#svgContainer .note, #svgContainer .rest, #svgContainer .slur'
 
@@ -14,7 +15,7 @@ export default {
   name: 'AnalysisPlain',
   extends: VerovioBaseComponent,
   components: {
-
+    SearchPane
   },
   methods: {
     renderPage: function(n) {
@@ -75,6 +76,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
+
+  #analysisPlain {
+    position: relative;
+  }
+
   #svgContainer .color1 {
     fill: #ff0000;
     stroke: #ff0000;
