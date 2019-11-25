@@ -62,6 +62,13 @@ gulp.task('data', function () {
     .pipe(gulp.dest('./build/content/'))
 })
 
+// handles verovio
+gulp.task('verovio', function () {
+  return gulp.src('./data/**/*')
+    .pipe(newer('./build/content/'))
+    .pipe(gulp.dest('./build/content/'))
+})
+
 /**
  * deploys the current build folder into a (local) exist database
  */
