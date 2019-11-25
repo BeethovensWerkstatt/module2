@@ -18,14 +18,15 @@
          <sourceDesc>
             <source>
                <bibl>
-                  <title type="main">Op. 121b - Opferlied</title>
+                  <title type="main">"Opferlied" für Singstimme, Chor und Orchester op. 121b, 
+                     Stimmen, Schott, Plattennummer: 2279 (Originalausgabe)</title>
                   <respStmt>
                      <resp auth.uri="http://id.loc.gov/vocabulary/relators.html" codedval="cmp"/>
                      <persName auth.uri="http://d-nb.info/gnd" codedval="118508288">Ludwig van
                         Beethoven</persName>
                   </respStmt>
                   <physLoc>
-                     <repository>Beethoven-Haus Bonn</repository>
+                     <repository>Beethoven-Haus Bonn, C 121b / 5</repository>
                   </physLoc>
                </bibl>
             </source>
@@ -180,6 +181,15 @@
                <p>Dynam und hairpin unter den Systemen; nur bei Singstimmen darüber</p>
             </changeDesc>
             <date isodate="2019-07-17"/>
+         </change>
+         <change n="14">
+            <respStmt>
+               <persName auth.uri="https://github.com/" codedval="susannecox">Susanne Cox</persName>
+            </respStmt>
+            <changeDesc>
+               <p>gegen NGA Korrektur gelesen und kleine Korrekturen vorgenommen</p>
+            </changeDesc>
+            <date isodate="2019-10-02"/>
          </change>
       </revisionDesc>
    </meiHead>
@@ -1966,7 +1976,7 @@
                               <beam xml:id="xa5dbd9e4-834b-4589-ad16-c17a882b4465">
                                  <note xml:id="x37b86f65-5d8d-4695-a2a5-0573255a2cc4" pname="b"
                                     oct="4" dur="8" />
-                                 <note xml:id="xae4a9a0f-76b2-4fb2-a1ea-cdd94a430ab1" pname="d"
+                                 <note xml:id="xae4a9a0f-76b2-4fb2-a1ea-cdd94a430ab1" pname="c"
                                     oct="5" dur="8" />
                                  <note xml:id="x8ab810d3-fb59-4932-b9d1-6fd1a15fcc36" pname="b"
                                     oct="4" dur="8" />
@@ -13945,8 +13955,6 @@
                               <rest xml:id="x823cc260-31a7-4efa-b95e-ea8d39e525b6" dur="8"/>
                            </layer>
                         </staff>
-                        <!--  <dir xml:id="xa278dd32-2af5-4ed3-bbe9-368fe650dd19" staff="1" place="below"
-                           tstamp="4.5">FINE</dir>: "Fine" Soll weg?-->
                         <fermata xml:id="x49fa05bb-2a7e-490d-bcc9-7eacf228ca4b" staff="1"
                            startid="#x823cc260-31a7-4efa-b95e-ea8d39e525b6" place="above"/>
                      </measure>
@@ -16066,8 +16074,6 @@
                               <rest xml:id="x65df9182-bf18-4d4a-a3e5-da4a6ca03580" dur="8"/>
                            </layer>
                         </staff>
-                        <!-- <dir xml:id="x8ed6937f-7ec9-4964-8dda-fe0cd84ff1cc" staff="1" tstamp="4"
-                           place="below">FINE.</dir>: "Fine" soll weg? -->
                         <fermata xml:id="xf82a1992-d44e-4c1e-b487-8818df86d238" staff="1"
                            startid="#x65df9182-bf18-4d4a-a3e5-da4a6ca03580" place="above"/>
                      </measure>
@@ -17586,8 +17592,7 @@
                               </chord>
                               <rest xml:id="x0cbea17b-a1cb-4b6b-aebc-4ec565e1f48d" dur="8"/>
                               <rest xml:id="x48ce361e-14f3-404f-9879-34022b5f750f" dur="4"/>
-                              <rest xml:id="x52effb71-94aa-4644-b667-bf15575cfa1f" dur="8" ploc="g"
-                                 oloc="4"/>
+                              <rest xml:id="x52effb71-94aa-4644-b667-bf15575cfa1f" dur="8"/>
                               <note xml:id="xa41a8464-9164-42be-bcd2-a7a72c1a91b1" pname="b" oct="3"
                                  dur="8" />
                            </layer>
@@ -17927,9 +17932,7 @@
                            </layer>
                            <layer xml:id="xc4c08c71-c59c-46bd-8c31-bfdc3a68b61a" n="2">
                               <space xml:id="x14de714c-854f-44d3-bf76-b756b986c6a0" dur="4"/>
-                              <note xml:id="xa3981aec-0d1e-4645-977b-f52ebb980058" visible="false"
-                                 pname="c" oct="4" dur="4" fontsize="small" 
-                                 accid.ges="s"/>
+                              <space xml:id="x9a3d379f-a6fa-41e6-84bf-4c22aeb014d6" dur="4"/>
                               <note xml:id="x562b6ee5-74db-4be8-9f92-264675b89259" pname="e" oct="3"
                                  dur="4" />
                               <note xml:id="x4fd12d0c-aabe-4bec-b997-6565f2f15ee8" pname="e" oct="3"
@@ -18296,8 +18299,8 @@
                               </chord>
                               <chord xml:id="x645d2dad-8e0a-4e9c-a476-f68d9d250719" dur="8"
                                  >
-                                 <note xml:id="xf9277e89-50e2-4554-9ee2-c479c3aa1dff" pname="c"
-                                    oct="4" accid.ges="s"/>
+                                 <note xml:id="xf9277e89-50e2-4554-9ee2-c479c3aa1dff" pname="b"
+                                    oct="3"/>
                                  <note xml:id="xe1a487c5-52b8-4bfd-af3c-8aa43a0dd279" pname="a"
                                     oct="4"/>
                               </chord>
@@ -18589,12 +18592,10 @@
                                  <note xml:id="xcb6a5868-3c52-40e4-add8-6a5a4effb8ea" pname="g"
                                     oct="3" dur="8"  accid.ges="s"/>
                               </beam>
-                              <rest xml:id="x7a6eeb91-c4b2-411d-a125-c828e7b7527c" dur="8" ploc="d"
-                                 oloc="4"/>
+                              <rest xml:id="x7a6eeb91-c4b2-411d-a125-c828e7b7527c" dur="8"/>
                               <note xml:id="x142a3ad9-3082-49c3-a222-f8fbfafcbffc" pname="g" oct="3"
                                  dur="4"  accid.ges="s"/>
-                              <rest xml:id="x330cd780-648c-4485-90bf-7676b5e49d37" dur="8" ploc="d"
-                                 oloc="4"/>
+                              <rest xml:id="x330cd780-648c-4485-90bf-7676b5e49d37" dur="8"/>
                            </layer>
                            <layer xml:id="xc9775081-7087-4616-8a68-0fb47fd15cda" n="2">
                               <space xml:id="xb18739ac-9fd6-4ecc-8b48-7e7a1326b9e7" dur="4"/>
@@ -18608,8 +18609,6 @@
                            endid="#xcb6a5868-3c52-40e4-add8-6a5a4effb8ea" staff="1"/>
                         <dir xml:id="x390c5cc9-d4b8-4f77-9320-6192103b4d2d" tstamp="3" place="below"
                            staff="1">pizz.</dir>
-                        <!-- <dir xml:id="x236e8b1b-4ee8-4e7f-b6a3-bc64ffb4db1c" tstamp="3.5"
-                           place="below" staff="1">Fine</dir>: soll weg -->
                         <fermata xml:id="x88264d8a-2644-4492-ab18-231e79608429" staff="1"
                            startid="#x330cd780-648c-4485-90bf-7676b5e49d37" place="above"/>
                      </measure>
@@ -19454,7 +19453,7 @@
                                  <note xml:id="x2b5f3ef5-1143-41e9-a2c1-b98896626a77" pname="b"
                                     oct="3" dur="8" dots="1" />
                                  <note xml:id="x3df3404f-4871-49d4-84e0-0c7355287d6e" pname="g"
-                                    oct="4" dur="16"  accid.ges="s"/>
+                                    oct="4" dur="16"  accid.ges="s"/> <!-- Fehler in OA: müsste a statt gis lauten -->
                               </beam>
                               <beam xml:id="x2f12f30c-7fb4-4303-ba03-997ed5d4eba0">
                                  <note xml:id="x9fbb1c43-8860-459b-bbec-7874f27892a4" pname="b"
@@ -20395,8 +20394,6 @@
                         <slur xml:id="x893ef518-0cc6-46d9-963d-07fd0eddff77"
                            startid="#xfbec8171-43af-4ade-8e22-9e6f4832d367" 
                            endid="#x399478d0-8cb0-4d07-b183-363723a126b4" staff="1"/>
-                        <!--  <dir staff="1" xml:id="x73234db2-038d-4ce3-95e5-5904d2fa2a5a" tstamp="4.5"
-                           >Fine.</dir>-->
                         <fermata xml:id="xcee31f55-e914-4463-857b-24f0c90569fa" staff="1"
                            startid="#x399478d0-8cb0-4d07-b183-363723a126b4" place="above"/>
                      </measure>
@@ -21077,8 +21074,6 @@
                         </staff>
                         <dir xml:id="x038163a9-629e-4d54-b1fb-13c984253d40" tstamp="3" place="below"
                            staff="1">pizz.</dir>
-                        <!-- <dir xml:id="x2717d817-1f3d-46d4-97ff-21160fb2cb2a" tstamp="4.5"
-                           place="below" staff="1">Fine.</dir> -->
                         <fermata xml:id="x40702da2-dda1-4d49-b698-da3bd68f0f18" staff="1"
                            startid="#x6aefac13-7ad2-4539-af39-521cda74c475" place="above"/>
                      </measure>

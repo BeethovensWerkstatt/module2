@@ -106,6 +106,7 @@
                <p n="21">Deleted all @stem.dir-attributes.</p>
                <p n="22">Smaller corrections.</p>
                <p n="23">Smaller corrections and annotations</p>
+               <p n="24">Small correction in Sologesang II m. 175, 196 and Sologesang I m. 196.</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -2495,7 +2496,7 @@
                         <staff xml:id="x35744112-2c95-46f9-a253-b1ab3a7dac90" n="1">
                            <layer xml:id="x984fb122-7575-4844-bdaa-92f9bd8a3b13" n="1">
                               <note xml:id="x0a58774b-d500-4b1e-8c43-75a84f2864fe"
-                                    pname="e"
+                                    pname="d"
                                     oct="5"
                                     dur="4"
                                     />
@@ -9474,7 +9475,7 @@
                                        dur="8"
                                        />
                                  <note xml:id="xa6b25a47-35d3-4ca9-85d7-2497d7701306"
-                                       pname="e"
+                                       pname="d"
                                        oct="5"
                                        dur="8"
                                        />
@@ -23795,7 +23796,7 @@
                                        
                                        accid.ges="f"/>
                                  <note xml:id="x6ff9cb69-78f3-4c2e-b9c3-c2ccfb1cf68b"
-                                       pname="d"
+                                       pname="c"
                                        oct="4"
                                        dur="8"
                                        />
@@ -31780,7 +31781,7 @@
                                        
                                        accid.ges="f"/>
                                  <note xml:id="x6966b417-2070-4ebb-8caf-9d8c12e7f2bf"
-                                       pname="d"
+                                       pname="c"
                                        oct="3"
                                        dur="8"
                                        />
@@ -48245,7 +48246,7 @@
                                  </verse>
                               </note>
                               <note xml:id="x0fa64dae-bf2e-4f07-b06f-8f5e6102575f"
-                                    pname="f"
+                                    pname="e"
                                     oct="5"
                                     dur="4"
                                     >
@@ -49232,7 +49233,6 @@
                                     pname="b"
                                     oct="4"
                                     dur="4"
-                                    
                                     accid.ges="f">
                                  <verse xml:id="x1a058709-50bc-4d21-bac7-5e9fba0fec5a" n="1">
                                     <syl xml:id="xe4e637c6-efcb-4be3-87f9-6137d31292d5" wordpos="i" con="d">zu</syl>
@@ -53000,7 +53000,7 @@
                                  </verse>
                               </note>
                               <note xml:id="x0249bb33-f818-4dd4-8296-d93aa8baec7f"
-                                    pname="a"
+                                    pname="f"
                                     oct="4"
                                     dur="4"
                                     >
@@ -53009,14 +53009,14 @@
                                  </verse>
                               </note>
                               <note xml:id="x724742c4-3de4-414d-a606-021aab980cac"
-                                    pname="a"
+                                    pname="f"
                                     oct="4"
                                     dur="4"
                                     >
                                  <verse xml:id="x5c0d5f17-e7c4-414b-978d-128e5ef6dc99" n="1">
                                     <syl xml:id="x93d88ab6-d22b-40e6-8a42-48c3fda0fc48"
                                          wordpos="i" con="d"
-                                         halign="left">hi</syl>
+                                         halign="left">hin</syl>
                                  </verse>
                               </note>
                            </layer>
@@ -53033,7 +53033,7 @@
                                  <verse xml:id="u7522c94b-bcb7-4f34-87c0-99f282c6854c" n="1">
                                     <syl xml:id="ucd039636-e06d-4619-8ff9-443752410418"
                                        wordpos="t"
-                                       halign="left">nan.</syl>
+                                       halign="left">an.</syl>
                                  </verse>
                               </note>
                               <rest xml:id="x9cab95b0-0810-4e65-aa02-987cb370cf74" dur="4"/>
@@ -53923,7 +53923,7 @@
                                  </verse>
                               </note>
                               <note xml:id="x93697f6d-e287-4cfe-8643-5878898f5834"
-                                    pname="d"
+                                    pname="c"
                                     oct="5"
                                     dur="4"
                                     >

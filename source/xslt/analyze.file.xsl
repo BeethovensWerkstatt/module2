@@ -18,10 +18,10 @@
     <xsl:output indent="yes" method="xml"/>
     <xsl:param name="mode"/>
     <!-- allowed values for param $mode are:
-        'plain' - no special treatment
         'comparison' - files need to be "normalized" for a later check for identity 
-        'krumhansl' - mei:harm with krumhansl schmuckler values are generated for each measure
-    
+        'melodicComparison' -
+        'harmonicComparison' -
+        'eventDensity' -
     -->
 
     <xsl:param name="mdiv"/>
@@ -45,6 +45,11 @@
     <xsl:include href="anl/krumhansl.schmuckler.xsl"/>
     <xsl:include href="anl/determine.event.density.xsl"/>
     <xsl:include href="anl/extract.melodic.lines.xsl"/>
+    <xsl:include href="tools/add.next.xsl"/>
+    <xsl:include href="tools/add.intm.xsl"/>
+    <xsl:include href="anl/insert.harmonies.xsl"/>
+    <xsl:include href="anl/determine.chords.xsl"/>
+    <xsl:include href="anl/resolve.duplicate.harms.xsl"/>
 
     <xsl:include href="data/circleOf5.xsl"/>
 
@@ -65,18 +70,6 @@
         </xsl:variable>
         <xsl:variable name="output" as="node()">
             <xsl:choose>
-                <xsl:when test="$mode = 'plain' and $transpose.mode = 'none'">
-                    <xsl:copy-of select="$added.tstamps"/>
-                </xsl:when>
-                <xsl:when test="$mode = 'plain' and $transpose.mode != 'none'">
-                    <xsl:variable name="determined.key" as="node()">
-                        <xsl:apply-templates select="$added.tstamps" mode="determine.key"/>
-                    </xsl:variable>
-                    <xsl:variable name="determined.pitch" as="node()">
-                        <xsl:apply-templates select="$determined.key" mode="determine.pitch"/>
-                    </xsl:variable>
-                    <xsl:copy-of select="$determined.pitch"/>
-                </xsl:when>
                 <xsl:when test="$mode = 'comparison'">
                     <xsl:variable name="determined.key" as="node()">
                         <xsl:apply-templates select="$added.tstamps" mode="determine.key"/>
@@ -98,41 +91,37 @@
                     </xsl:variable>
                     <xsl:copy-of select="$extracted.melodic.lines"/>
                 </xsl:when>
+                
                 <xsl:when test="$mode = 'eventDensity'">
                     <xsl:variable name="determined.event.density" as="node()">
-                        <xsl:apply-templates select="$added.tstamps" mode="determine.event.density"
-                        />
+                        <xsl:apply-templates select="$added.tstamps" mode="determine.event.density"/>
                     </xsl:variable>
                     <xsl:copy-of select="$determined.event.density"/>
                 </xsl:when>
-                <xsl:when test="$mode = 'relativeChroma'">
+                
+                <xsl:when test="$mode = 'harmonicComparison'">
                     <xsl:variable name="determined.key" as="node()">
                         <xsl:apply-templates select="$added.tstamps" mode="determine.key"/>
                     </xsl:variable>
                     <xsl:variable name="determined.pitch" as="node()">
                         <xsl:apply-templates select="$determined.key" mode="determine.pitch"/>
                     </xsl:variable>
-                    <xsl:variable name="determined.roman.base.numerals" as="node()">
-                        <xsl:apply-templates select="$determined.pitch"
-                            mode="determine.roman.numerals"/>
+                    <xsl:variable name="added.next" as="node()*">
+                        <xsl:apply-templates select="$determined.pitch" mode="add.next"/>
+                    </xsl:variable>                    
+                    <xsl:variable name="added.intm" as="node()*">
+                        <xsl:apply-templates select="$added.next" mode="add.intm"/>
                     </xsl:variable>
-                    <xsl:copy-of select="$determined.roman.base.numerals"/>
+                    <xsl:variable name="inserted.harmonies" as="node()*">
+                        <xsl:apply-templates select="$added.intm" mode="insert.harmonies">
+                            <xsl:with-param name="all.keys" select="'C'" as="xs:string*" tunnel="yes"/>
+                        </xsl:apply-templates>    
+                    </xsl:variable>
+                    <xsl:copy-of select="$inserted.harmonies"/>
                 </xsl:when>
-                <xsl:when test="$mode = ('krumhansl-1', 'krumhansl-4')">
-                    <xsl:variable name="determined.key" as="node()">
-                        <xsl:apply-templates select="$added.tstamps" mode="determine.key"/>
-                    </xsl:variable>
-                    <xsl:variable name="determined.pitch" as="node()">
-                        <xsl:apply-templates select="$determined.key" mode="determine.pitch"/>
-                    </xsl:variable>
-                    <xsl:variable name="got.krumhansl.schmuckler" as="node()">
-                        <xsl:apply-templates select="$determined.pitch"
-                            mode="get.krumhansl.schmuckler"/>
-                    </xsl:variable>
-                    <xsl:copy-of select="$got.krumhansl.schmuckler"/>
-                </xsl:when>
+                
                 <xsl:otherwise>
-                    <!--<xsl:copy-of select="$added.tstamps"/>-->
+                    <!-- fall-back is the same as 'comparison' -->
                     <xsl:variable name="determined.key" as="node()">
                         <xsl:apply-templates select="$added.tstamps" mode="determine.key"/>
                     </xsl:variable>

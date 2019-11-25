@@ -18,7 +18,9 @@
          <sourceDesc>
             <source>
                <bibl>
-                  <title type="main">Quatuor pour deux Violons Alto et Violoncelle, </title>
+                  <title type="main">Sonate für Klavier (E-Dur) op. 14, Nr. 1, 
+                        Fassung für 2 Violinen, Viola, Violoncello, Stimmen, 
+                        Bureau des Arts et d'Industrie, Plattennummer: 17 (Originalausgabe)</title>
                   <respStmt>
                      <resp auth.uri="http://id.loc.gov/vocabulary/relators.html"
                            codedval="cmp arr"/>
@@ -28,8 +30,11 @@
                      <resp auth.uri="http://id.loc.gov/vocabulary/relators.html" codedval="dte"/>
                      <persName>Madame la Barone de Braun</persName>
                   </respStmt>
+                     <physLoc>
+                           <repository>Beethoven-Haus Bonn, Sammlung H. C. Bodmer, HCB C op. 14</repository>
+                     </physLoc>
                   <annot n="1">
-                     Bearbeitet nach der Klavier-Sonate E-dur Op.14 No.1 von Beethoven selbst.</annot>
+                     Bearbeitet nach der Klaviersonate E-Dur Op. 14, Nr. 1 von Beethoven selbst.</annot>
                </bibl>
             </source>
          </sourceDesc>
@@ -5121,7 +5126,7 @@
                               <note xml:id="x04e3ebd6-9ad9-4678-bd19-379d0c8d821c"
                                     pname="b"
                                     oct="5"
-                                    dur="2"
+                                    dur="2" accid.ges="f"
                                     />
                               <note xml:id="x11298575-bcff-414f-b01d-3485bd35a15f"
                                     pname="a"
@@ -12303,8 +12308,6 @@
                                     pname="a"
                                     oct="4"
                                     dur="4"
-                                    
-                                    accid.ges="f"
                                     artic="stacc">
                                  
                               </note>
@@ -21117,9 +21120,7 @@
                                  
                               </note>
                               <rest xml:id="x66d2bcb8-a009-487a-bac3-2f9a80ac23eb"
-                                    dur="4"
-                                    ploc="d"
-                                    oloc="3"/>
+                                    dur="4"/>
                               <rest xml:id="x33cfdd50-395e-4327-a015-02bd5556f2a2" dur="2"/>
                            </layer>
                         </staff>
@@ -27725,11 +27726,13 @@
                   <section xml:id="xdf616a56-2dfe-4406-85b5-3ed4917d8641" n="2">
                      <scoreDef xml:id="xf8fbeb08-bf1f-46cd-bb6d-6ac9ce04056c"
                                key.sig="5f"
-                               key.mode="major"
+                               key.mode="major" 
+                               keysig.showchange="true"
                                meter.count="3"
                                meter.unit="4">
                         <staffGrp xml:id="x08a14968-48e7-4373-933d-e536e30fd46c">
-                           <staffDef xml:id="x1ecf5cb5-bc2c-40f8-b905-4334fa23dce9" n="1" key.sig="5f"/>
+                           <staffDef xml:id="x1ecf5cb5-bc2c-40f8-b905-4334fa23dce9" n="1" 
+                                 />
                         </staffGrp>
                      </scoreDef>
                      <measure n="63"
@@ -27741,9 +27744,7 @@
                                     pname="f"
                                     oct="4"
                                     dur="2"
-                                    dots="1"
-                                    
-                                    accid.ges="f"/>
+                                    dots="1"/>
                            </layer>
                         </staff>
                         <dynam xml:id="x61fff924-b48b-4876-a2a1-cc356caaf3ba"
@@ -27766,7 +27767,7 @@
                               <note xml:id="x091a87e7-41fe-4fbd-9112-b17c915893a9"
                                     pname="e"
                                     oct="4"
-                                    dur="4"
+                                    dur="4" accid.ges="f"
                                     />
                               <note xml:id="x869b20e9-4eb2-4c49-b389-cbe61a635100"
                                     pname="g"
@@ -27794,9 +27795,7 @@
                               <note xml:id="x2bdbd802-4fb9-409c-8a84-605092db45b3"
                                     pname="f"
                                     oct="4"
-                                    dur="4"
-                                    
-                                    accid.ges="f"/>
+                                    dur="4"/>
                               <note xml:id="xf41d379d-9dfd-4249-af71-786fc1babb4b"
                                     pname="a"
                                     oct="4"
@@ -28715,9 +28714,9 @@
                      <scoreDef xml:id="xab7820d4-a486-44b6-8b98-bdbfb92db77b"
                                key.sig="4f"
                                key.mode="minor">
-                        <staffGrp xml:id="xca33a477-fd24-4398-83ec-58e8896b80fb">
+                        <!--<staffGrp xml:id="xca33a477-fd24-4398-83ec-58e8896b80fb">
                            <staffDef xml:id="x2a8cdf6b-6275-4b25-9d47-ebee57025422" n="1" key.sig="4f"/>
-                        </staffGrp>
+                        </staffGrp>-->
                      </scoreDef>
                      <measure n="101" xml:id="xc2788a3b-ec8a-4de8-bf05-771b2f467cc6">
                         <staff xml:id="x88d4e4d9-0c13-4c47-9d3c-941ba4bce565" n="1">
@@ -30738,9 +30737,13 @@
                   <section xml:id="x9358947d-1c1f-4c47-a225-f94b95cf1a0e" n="2">
                      <scoreDef xml:id="xc4a1152b-ab7a-4bc9-bf8e-717976763803"
                                key.sig="5f"
-                               key.mode="major"
+                               key.mode="major" keysig.showchange="true"
                                meter.count="3"
                                meter.unit="4">
+                           <staffGrp xml:id="x5c1883cf-33a4-428c-86b5-bba6274ec42f">
+                                 <staffDef xml:id="x5b10a8bb-960f-4d15-9077-dc08ff0e37c5" n="1" 
+                                       />
+                           </staffGrp>
                      </scoreDef>
                      <measure n="63"
                               xml:id="xe6d4fd12-1af6-456b-a5a8-32f738425c02"
@@ -31399,9 +31402,9 @@
                      <scoreDef xml:id="x762dfe98-6a31-455a-9e57-7db2e70cf95b"
                                key.sig="4f"
                                key.mode="minor">
-                        <staffGrp xml:id="x7274efbc-37e1-4e91-88ad-ecccfcfe821d">
+                        <!--<staffGrp xml:id="x7274efbc-37e1-4e91-88ad-ecccfcfe821d">
                            <staffDef xml:id="xafdf5115-39ff-4b3f-af67-98d44ddcc1de" n="1" key.sig="4f"/>
-                        </staffGrp>
+                        </staffGrp>-->
                      </scoreDef>
                      <measure n="101" xml:id="xa8b82eee-b004-490c-aa94-228915ebb0d2">
                         <staff xml:id="x7ad5448c-4dfe-4343-97f0-64743677f9bc" n="1">
@@ -32707,9 +32710,7 @@
                            <layer xml:id="x23376ff8-fd83-4a40-8922-10cc762d7cea" n="1">
                               <rest xml:id="xb71cbeb6-6d86-49ea-b5d8-9234f0b25c53" dur="4"/>
                               <rest xml:id="xf842c91a-f0f5-41cb-a20d-eb0bc14f51d8"
-                                    dur="4"
-                                    ploc="c"
-                                    oloc="4"/>
+                                    dur="4"/>
                               <beam xml:id="x4fff0f05-8873-43a7-99c4-323cd93e0075">
                                  <note xml:id="x2223c042-b76f-49c2-ab89-7a939360b33c"
                                        pname="d"
@@ -33151,9 +33152,10 @@
                            label="Maggiore">
                      <scoreDef xml:id="xa303225c-be1c-4dfb-a6d9-87b02e0e9848"
                                key.sig="5f"
-                               key.mode="major"> <!-- Fehler in OA: Taktart-Angabe 3/4 fehlt -->
+                               key.mode="major" keysig.showchange="true" meter.count="3" meter.unit="4"> <!-- Fehler in OA: Taktart-Angabe 3/4 fehlt, hier hinzugefügt -->
                         <staffGrp xml:id="x753ede68-1c0e-44fc-afde-3508f6804516">
-                           <staffDef xml:id="x38714861-eca9-4ec5-9b71-3833331ecdf2" n="1" key.sig="5f"/>
+                              <staffDef xml:id="x38714861-eca9-4ec5-9b71-3833331ecdf2" n="1" 
+                                    />
                         </staffGrp>
                      </scoreDef>
                      <measure n="63"
@@ -33812,9 +33814,9 @@
                      <scoreDef xml:id="x38facb0f-3e20-483c-a671-b54fd8be75ea"
                                key.sig="4f"
                                key.mode="minor">
-                        <staffGrp xml:id="xb0da6c6b-328b-4fc1-956e-4d52bad2352a">
+                        <!--<staffGrp xml:id="xb0da6c6b-328b-4fc1-956e-4d52bad2352a">
                            <staffDef xml:id="x9782fae7-826a-425c-b2cd-ddf047faad8f" n="1" key.sig="4f"/>
-                        </staffGrp>
+                        </staffGrp>-->
                      </scoreDef>
                      <measure n="101" xml:id="x3e7764ce-2ba8-4b42-ae2e-ce6acb470fbb">
                         <staff xml:id="xc1777e46-9bae-4699-b2f2-201d3432b10b" n="1">
@@ -35466,11 +35468,12 @@
                            label="Maggiore">
                      <scoreDef xml:id="x0a0d9009-d35f-4d35-9378-462c20f9bdc4"
                                key.sig="5f"
-                               key.mode="major" 
+                               key.mode="major" keysig.showchange="true" 
                                meter.count="3"
                                meter.unit="4">
                         <staffGrp xml:id="xcce809b5-5da8-4dc9-a447-f0c0ef22580d">
-                           <staffDef xml:id="x897f992d-9e37-488e-8fe7-96a3a006afab" n="1" key.sig="5f"/>
+                           <staffDef xml:id="x897f992d-9e37-488e-8fe7-96a3a006afab" n="1" 
+                                 />
                         </staffGrp>
                      </scoreDef>
                      <measure n="63"
@@ -36078,9 +36081,9 @@
                      <scoreDef xml:id="x59dce62a-bc02-455e-9143-8e8621adf274"
                                key.sig="4f"
                                key.mode="minor">
-                        <staffGrp xml:id="x04a7f076-9dc5-4615-953f-472503b0e411">
+                        <!--<staffGrp xml:id="x04a7f076-9dc5-4615-953f-472503b0e411">
                            <staffDef xml:id="x4df800fe-cc70-4c28-b226-924dc61c67a2" n="1" key.sig="4f"/>
-                        </staffGrp>
+                        </staffGrp>-->
                      </scoreDef>
                      <measure n="101" xml:id="x9b52c6bb-4d59-4a36-8cc8-292008315389">
                         <staff xml:id="xd508e2fa-10a3-4f0f-a8e0-b736fd68e98b" n="1">
@@ -38425,6 +38428,11 @@
                               endid="#x4daec051-0b82-45e4-b228-60a3a66c0747"
                               staff="1"/>
                      </measure>
+                  </section>
+                   <section xml:id="xc4048dbb-ed97-4075-ab24-c2f601a51f67">
+                      <scoreDef xml:id="xedffc0f7-81ea-4134-8a88-8e9da2ed26de"
+                          key.sig="4f" keysig.showchange="false" keysig.show="false"
+                          key.mode="major" />      
                      <measure n="47" xml:id="x5d978610-2a51-4ce8-a879-7017c4d5fa97">
                         <staff xml:id="x8d5997fb-6623-44a3-a02e-44161cfbe1c2" n="1">
                            <layer xml:id="x3dad0880-18ef-4e12-a485-c8c088b5f25d" n="1">
@@ -47005,6 +47013,11 @@
                            </layer>
                         </staff>
                      </measure>
+                  </section>
+                   <section xml:id="xff0cb440-585c-4187-b76b-6e665ef530a7">
+                      <scoreDef xml:id="x749a8f65-02e3-48eb-8d0d-0feb83ceef18"
+                          key.sig="4f" keysig.showchange="false" keysig.show="false"
+                          key.mode="major" />
                      <measure n="47" xml:id="xf8b1ac8f-b561-44ef-a6da-9076eb3b364f">
                         <staff xml:id="xa092cbb8-116d-45f9-b24b-a9147706877f" n="1">
                            <layer xml:id="x39ca4f0d-7998-437b-9ff5-be052c650ae3" n="1">
@@ -53127,6 +53140,11 @@
                                place="below"
                                staff="1">cres</dynam>
                      </measure>
+                  </section>
+                   <section xml:id="xf32842d9-08b0-4695-a1e6-8ce9a31926bf">
+                      <scoreDef xml:id="x0ae85971-e310-4c85-a2ff-e1d61235a14a"
+                          key.sig="4f" keysig.showchange="false" keysig.show="false"
+                          key.mode="major" />
                      <measure n="47" xml:id="x0c757bb5-d4b1-439b-ac99-cf33ac21a202">
                         <staff xml:id="xafd296d8-864e-4aa2-bcf4-9bf0e7c9a088" n="1">
                            <layer xml:id="x86f34af9-2ade-4b87-b1aa-d4f5939254b9" n="1">
@@ -57853,6 +57871,11 @@
                               endid="#xff5b55b5-8cc2-44d2-a7e4-81edfc9ccb1d"
                               staff="1"/>
                      </measure>
+                  </section>
+                   <section xml:id="x8ea3688a-2113-4529-98b7-17101f8cf7e7">
+                      <scoreDef xml:id="x8ef1b3a4-cedb-46e0-94f9-b60f1860b215"
+                          key.sig="4f" keysig.showchange="false" keysig.show="false"
+                          key.mode="major" />
                      <measure n="47" xml:id="x2670f1a6-6f76-494b-85af-f777f6abcddc">
                         <staff xml:id="x0cba4645-0363-4872-a5a5-6f9526dc5edd" n="1">
                            <layer xml:id="x14054b8a-0c8b-4654-9b83-96e5a58f63a0" n="1">

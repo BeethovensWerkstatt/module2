@@ -135,7 +135,7 @@
                     </xsl:variable>
                     <xsl:copy-of select="$merged.files"/>
                 </xsl:when>
-                <xsl:when test="$method = 'comparison'">
+                <xsl:when test="$method = ('comparison','geneticComparison')">
                     <xsl:variable name="merged.files" as="node()">
                         <xsl:apply-templates select="$first.file" mode="first.pass"/>
                     </xsl:variable>
@@ -206,10 +206,11 @@
             <xsl:apply-templates select="@meter.count | @meter.unit" mode="#current"/>
             <staffGrp label="" symbol="none" bar.thru="false">
                 <staffGrp symbol="brace" bar.thru="true">
-                    <xsl:apply-templates select=".//mei:staffDef" mode="first.pass"/>
+                    <xsl:apply-templates select=".//mei:label | .//mei:labelAbbr | .//mei:staffDef" mode="first.pass"/>
                 </staffGrp>
                 <staffGrp symbol="brace" bar.thru="true">
                     <xsl:variable name="second.file.staffDefs" select="($second.file//mei:scoreDef)[$pos]//mei:staffDef" as="node()+"/>
+                    <xsl:apply-templates select="($second.file//mei:scoreDef)[$pos]/mei:staffGrp/(mei:label | mei:labelAbbr)" mode="first.pass.file.2"/>
                     <xsl:apply-templates select="($second.file.staffDefs)[1]" mode="first.pass.file.2">
                         <xsl:with-param name="add.spacing" select="true()" as="xs:boolean" tunnel="yes"/>
                     </xsl:apply-templates>
@@ -365,7 +366,7 @@
         </xsl:copy>
     </xsl:template>
     <xsl:template match="mei:staffDef/@n" mode="first.pass.file.2">
-        <xsl:variable name="current.n" select="number(.)" as="xs:double"/>
+        <xsl:variable name="current.n" select="xs:integer(.)" as="xs:integer"/>
         <xsl:attribute name="n" select="$current.n + $first.file.staff.count"/>        
     </xsl:template>
     <xsl:template match="mei:staff/@n" mode="first.pass">
@@ -373,13 +374,23 @@
         <xsl:attribute name="type" select="'file1'"/>
     </xsl:template>
     <xsl:template match="mei:staff/@n" mode="first.pass.file.2">
-        <xsl:variable name="current.n" select="number(.)" as="xs:double"/>
+        <xsl:variable name="current.n" select="xs:integer(.)" as="xs:integer"/>
         <xsl:attribute name="n" select="$current.n + $first.file.staff.count"/>
         <xsl:attribute name="type" select="'file2'"/>
     </xsl:template>
     <xsl:template match="@staff" mode="first.pass.file.2">
-        <xsl:variable name="current.n" select="number(.)" as="xs:double"/>
-        <xsl:attribute name="staff" select="$current.n + $first.file.staff.count"/>
+        <xsl:choose>
+            <xsl:when test="not(contains(.,' '))">
+                <xsl:variable name="current.n" select="xs:integer(.)" as="xs:integer"/>
+                <xsl:attribute name="staff" select="$current.n + $first.file.staff.count"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:variable name="tokens" select="for $token in tokenize(normalize-space(.), ' ') return (xs:string(xs:integer($token) + $first.file.staff.count))" as="xs:string+"/>
+                <xsl:attribute name="staff" select="string-join($tokens, ' ')"/>
+            </xsl:otherwise>
+        </xsl:choose>
+        
+        
     </xsl:template>
     
     <xsl:template match="@start" mode="special.pushing">

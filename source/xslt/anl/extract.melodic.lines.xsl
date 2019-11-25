@@ -72,10 +72,10 @@
             <xsl:apply-templates select="@*" mode="#current"/>
             
             <xsl:for-each select=".//*[local-name() = ('note','mRest','multiRest','rest') and not(@grace)]">
-                <xsl:sort select="ancestor-or-self::mei:*/@tstamp" data-type="number"/>
+                <xsl:sort select="ancestor-or-self::mei:*[@tstamp][1]/@tstamp" data-type="number"/>
                 <xsl:variable name="note" select="." as="node()"/>
-                <xsl:variable name="tstamp" select="number($note/ancestor-or-self::mei:*/@tstamp)"/>
-                <xsl:variable name="tstamp2" select="number($note/ancestor-or-self::mei:*/@tstamp2)"/>
+                <xsl:variable name="tstamp" select="number($note/ancestor-or-self::mei:*[@tstamp][1]/@tstamp)"/>
+                <xsl:variable name="tstamp2" select="number($note/ancestor-or-self::mei:*[@tstamp2][1]/@tstamp2)"/>
                 
                 <event xsl:exclude-result-prefixes="xlink"
                     pnum="{$note/@pnum}" 

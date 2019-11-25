@@ -16,28 +16,28 @@
         
         <xsl:variable name="all.durations" as="xs:double*">
             <xsl:for-each select=".//mei:*[local-name() = ('note') and ancestor-or-self::mei:*/@tstamp and ancestor-or-self::mei:*/@tstamp2]">
-                <xsl:variable name="dur" select="number(ancestor-or-self::mei:*/@tstamp2[1]) - number(ancestor-or-self::mei:*/@tstamp[1])" as="xs:double"/>
+                <xsl:variable name="dur" select="number(ancestor-or-self::mei:*[@tstamp2][1]/@tstamp2) - number(ancestor-or-self::mei:*[@tstamp][1]/@tstamp)" as="xs:double"/>
                 <xsl:value-of select="$dur"/>
             </xsl:for-each>
         </xsl:variable>
         
         <xsl:variable name="all.identical.durations" as="xs:double*">
             <xsl:for-each select=".//mei:note['id' = tokenize(@type,' ') and ancestor-or-self::mei:*/@tstamp and ancestor-or-self::mei:*/@tstamp2]">
-                <xsl:variable name="dur" select="number(ancestor-or-self::mei:*/@tstamp2[1]) - number(ancestor-or-self::mei:*/@tstamp[1])" as="xs:double"/>
+                <xsl:variable name="dur" select="number(ancestor-or-self::mei:*[@tstamp2][1]/@tstamp2[1]) - number(ancestor-or-self::mei:*[@tstamp][1]/@tstamp[1])" as="xs:double"/>
                 <xsl:value-of select="$dur"/>
             </xsl:for-each>
         </xsl:variable>
         
         <xsl:variable name="all.similar.durations" as="xs:double*">
             <xsl:for-each select=".//mei:note[@type and not('id' = tokenize(@type,' ')) and not(@type = 'noMatch') and ancestor-or-self::mei:*/@tstamp and ancestor-or-self::mei:*/@tstamp2]">
-                <xsl:variable name="dur" select="number(ancestor-or-self::mei:*/@tstamp2[1]) - number(ancestor-or-self::mei:*/@tstamp[1])" as="xs:double"/>
+                <xsl:variable name="dur" select="number(ancestor-or-self::mei:*[@tstamp2][1]/@tstamp2[1]) - number(ancestor-or-self::mei:*[@tstamp][1]/@tstamp[1])" as="xs:double"/>
                 <xsl:value-of select="$dur"/>
             </xsl:for-each>
         </xsl:variable>
         
         <xsl:variable name="all.diff.durations" as="xs:double*">
             <xsl:for-each select=".//mei:note[@type = 'noMatch' and ancestor-or-self::mei:*/@tstamp and ancestor-or-self::mei:*/@tstamp2]">
-                <xsl:variable name="dur" select="number(ancestor-or-self::mei:*/@tstamp2[1]) - number(ancestor-or-self::mei:*/@tstamp[1])" as="xs:double"/>
+                <xsl:variable name="dur" select="number(ancestor-or-self::mei:*[@tstamp2][1]/@tstamp2[1]) - number(ancestor-or-self::mei:*[@tstamp][1]/@tstamp[1])" as="xs:double"/>
                 <xsl:value-of select="$dur"/>
             </xsl:for-each>
         </xsl:variable>

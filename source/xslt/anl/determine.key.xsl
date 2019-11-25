@@ -100,6 +100,38 @@
                     <xsl:apply-templates select="node()" mode="#current"/>
                 </xsl:copy>
             </xsl:when>
+            
+            <!-- transposed by a full octave -->
+            <xsl:when test="$relevant.scoreDef//mei:staffDef[@n = $current.n][@trans.semi = ('-12','12')][@trans.diat = ('-7','7')][@key.sig = $relevant.scoreDef/@key.sig]">
+                <xsl:variable name="staff.key.sig" select="$relevant.scoreDef//mei:staffDef[@n = $current.n]/@key.sig" as="xs:string"/>
+                <xsl:variable name="staff.trans.semi" select="$relevant.scoreDef//mei:staffDef[@n = $current.n]/@trans.semi" as="xs:string"/>
+                <xsl:variable name="staff.trans.diat" select="$relevant.scoreDef//mei:staffDef[@n = $current.n]/@trans.diat" as="xs:string"/>
+                
+                <xsl:variable name="relevant.key.elem" as="node()">
+                    <xsl:choose>
+                        <xsl:when test="$relevant.scoreDef/@key.mode='major'">
+                            <xsl:sequence select="$circle.of.fifths//key:major[@sig = $staff.key.sig]"/>
+                        </xsl:when>
+                        <xsl:when test="$relevant.scoreDef/@key.mode='minor'">
+                            <xsl:sequence select="$circle.of.fifths//key:minor[@sig = $staff.key.sig]"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:message terminate="yes" select="'ERROR: Currently, only major and minor modes are supported.'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>
+                <xsl:variable name="key" select="$relevant.key.elem/@name" as="xs:string">
+                    <!-- todo: here was a test if that's really the right key. We could look for a Krumhansl-Schmuckler-Evaluation -->
+                </xsl:variable>
+                
+                <xsl:copy>
+                    <xsl:apply-templates select="@*" mode="#current"/>
+                    <xsl:attribute name="staff.key" select="$key"/>
+                    <xsl:attribute name="trans.semi" select="$staff.trans.semi"/>
+                    <xsl:attribute name="trans.diat" select="$staff.trans.diat"/>
+                    <xsl:apply-templates select="node()" mode="#current"/>
+                </xsl:copy>
+            </xsl:when>
             <xsl:otherwise>
                 <xsl:next-match/>
             </xsl:otherwise>
