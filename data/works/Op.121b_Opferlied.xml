@@ -1534,7 +1534,7 @@
                                  <note xml:id="xcd5281b4-8c45-49b8-a3ec-5e8e1cf53423" pname="g"
                                     oct="5" dur="8" />
                                  <note xml:id="x52b85c65-130a-4f5b-9d84-383485e36e75" pname="f"
-                                    accid="s" oct="5" dur="8"  accid.ges="s"/>
+                                    accid="s" oct="5" dur="8"/>
                                  <note xml:id="x0d95e6d8-300b-4204-a3fb-0f8da4d14426" pname="e"
                                     oct="5" dur="8" />
                               </beam>
@@ -2517,7 +2517,7 @@
                                  dur="8" />
                               <rest xml:id="xa322a64d-62cd-4428-8bb5-1ad69d45c427" dur="8"/>
                               <note xml:id="x2bd267dc-7617-4b79-bc78-52db5b76c3ed" pname="f"
-                                 accid="s" oct="4" dur="8"  accid.ges="s"/>
+                                 accid="s" oct="4" dur="8"/>
                               <rest xml:id="xd8e29bdb-809a-4a36-bc12-7235bb7dada7" dur="8"/>
                            </layer>
                         </staff>
@@ -2698,7 +2698,7 @@
                                  <note xml:id="x2cdabe27-2503-49c2-8501-a283dea26bcc" pname="a"
                                     oct="5" dur="8" />
                                  <note xml:id="x6cb446b7-c78e-4473-bdbc-5cffa927d947" pname="f"
-                                    accid="s" oct="5" dur="8"  accid.ges="s"/>
+                                    accid="s" oct="5" dur="8"/>
                               </beam>
                            </layer>
                         </staff>
@@ -3877,7 +3877,7 @@
                                  <note xml:id="x62bfa2a8-8a15-4ae0-a2ab-70899de224a6" pname="e"
                                     oct="3" dur="8" />
                                  <note xml:id="xd0635a94-5586-4068-b1ea-de6f596f48ed" pname="g"
-                                    accid="s" oct="3" dur="8"  accid.ges="s"/>
+                                    accid="s" oct="3" dur="8"/>
                               </beam>
                               <rest xml:id="x377b9fc9-74af-4cbc-90e5-cd88aa3915a2" dur="8"/>
                               <beam xml:id="x664a353b-a262-4117-be3b-a0ed871936db">
@@ -4723,7 +4723,7 @@
                                  <note xml:id="x2e57706e-4cad-4802-920d-1fa7203ecede" pname="e"
                                     oct="3" dur="8" />
                                  <note xml:id="xfd20919f-942f-4e57-8de8-0bd70a91812f" pname="g"
-                                    accid="s" oct="3" dur="8"  accid.ges="s"/>
+                                    accid="s" oct="3" dur="8"/>
                               </beam>
                               <rest xml:id="x2f5f57b7-44ff-4aeb-8131-1e2076bc9567" dur="8"/>
                               <beam xml:id="x74cbbb41-3eb1-4f96-8b53-38800686eccd">
@@ -6558,7 +6558,7 @@
                                  <note xml:id="x49e0c62b-08db-4dd0-bf5c-c8ff8b43489d" pname="e"
                                     oct="2" dur="8" />
                                  <note xml:id="x16b408f2-0a4e-470a-afba-b4ccbd6a7b76" pname="g"
-                                    oct="2" dur="8"  accid.ges="s" accid="s"/>
+                                    oct="2" dur="8" accid="s"/>
                               </beam>
                            </layer>
                         </staff>
