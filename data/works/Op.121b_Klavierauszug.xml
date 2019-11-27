@@ -205,7 +205,6 @@
                      <staffDef xml:id="xf1bf2ebe-a8cd-4201-a383-38731514241e"
                                clef.shape="G"
                                clef.line="2"
-                               key.sig="4s"
                                n="1"
                                lines="5">
                         <label xml:id="xf6e95389-aaf0-4329-9947-6c6d917f98ef">Soprano solo</label>
@@ -215,7 +214,6 @@
                         <staffDef xml:id="x95d0ba52-e7de-4c6c-a112-013ce43c18e8"
                                   clef.shape="G"
                                   clef.line="2"
-                                  key.sig="4s"
                                   n="2"
                                   lines="5">
                            <label xml:id="xd93e32e8-0cda-4609-bed4-64551f8c70f9">Soprano</label>
@@ -224,7 +222,6 @@
                         <staffDef xml:id="x3603cbfb-8411-4463-9fa7-27e21266004b"
                                   clef.shape="G"
                                   clef.line="2"
-                                  key.sig="4s"
                                   n="3"
                                   lines="5">
                            <label xml:id="xf8be6676-b044-4e62-bce5-bd00ade9b011">Alto</label>
@@ -233,7 +230,6 @@
                         <staffDef xml:id="xe8c0208e-fb3b-4d8c-bf81-4f8d6b534ee1"
                                   clef.shape="G"
                                   clef.line="2"
-                                  key.sig="4s"
                                   n="4"
                                   lines="5">
                            <label xml:id="x29aa8f3a-5962-4e93-b154-ca9b99302c02">Tenore</label>
@@ -242,7 +238,6 @@
                         <staffDef xml:id="x7e59eaa4-a90d-4add-b434-cdfbef973bd8"
                                   clef.shape="F"
                                   clef.line="4"
-                                  key.sig="4s"
                                   n="5"
                                   lines="5">
                            <label xml:id="x9d02c15a-f9d1-4054-886f-947a6c5098be">Basso</label>
@@ -257,13 +252,11 @@
                         <staffDef xml:id="x0fa3baa4-15ef-46b8-b9d1-ae47aeb54a4d"
                                   clef.shape="G"
                                   clef.line="2"
-                                  key.sig="4s"
                                   n="6"
                                   lines="5"/>
                         <staffDef xml:id="xeb83a75d-3f73-4bfb-885d-0e89c073bbec"
                                   clef.shape="F"
                                   clef.line="4"
-                                  key.sig="4s"
                                   n="7"
                                   lines="5"/>
                      </staffGrp>
