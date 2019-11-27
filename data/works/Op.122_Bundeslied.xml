@@ -31932,17 +31932,14 @@
                             meter.count="2"
                             meter.unit="2"
                             meter.sym="cut"
-                            key.sig="0"
+                            key.sig="2f"
                             key.mode="major">
                      <staffGrp xml:id="xaa801fbe-dd9b-46e0-ae7f-c64ee8bd2416">
                         <staffDef n="1"
                                   xml:id="x7fe81dbc-ddbf-4ec4-a400-8ae9c53cd2ae"
                                   lines="5"
                                   clef.line="2"
-                                  key.sig="0"
-                                  trans.diat="-1"
-                                  trans.semi="-2"
-                                  clef.shape="G">
+                                  key.sig="0" key.mode="major" trans.diat="-1" trans.semi="-2" clef.shape="G">
                            <label xml:id="x7413ee08-90b6-438b-b76b-38befa147389">Corno I in B</label>
                            <labelAbbr xml:id="x21e7395c-c865-41a1-b118-f826725a5d6c">Cor I</labelAbbr>
                         </staffDef>
@@ -37443,13 +37440,13 @@
                             meter.count="2"
                             meter.unit="2"
                             meter.sym="cut"
-                            key.sig="0"
+                            key.sig="2f"
                             key.mode="major">
                      <staffGrp xml:id="x073c28c3-1240-45c7-8d86-8c23d4cee481">
                         <staffDef n="1"
                                   xml:id="x64bde55d-754c-407a-945d-a34ac15677da"
                                   lines="5"
-                                  key.sig="0"
+                                  key.sig="0" key.mode="major"
                                   trans.diat="-1"
                                   trans.semi="-2"
                                   clef.line="2"
@@ -54290,7 +54287,7 @@
                                     dur="4"
                                     >
                                  <verse xml:id="u6a61149f-e9a5-43a1-b668-b181be658867" n="1">
-                                    <syl xml:id="u69695f05-662b-4adf-a571-db84a5f8b9f5" wordpos="t" con="d">her</syl>
+                                    <syl xml:id="u69695f05-662b-4adf-a571-db84a5f8b9f5" wordpos="t">her</syl>
                                  </verse>
                               </note>
                               <note xml:id="xae105445-c60a-4e2d-827b-c0fa348db4a1"
