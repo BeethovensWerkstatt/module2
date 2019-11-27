@@ -118,7 +118,6 @@
                         <staffDef xml:id="x2bd78662-0b5f-458e-9e67-4d2a22da1a20"
                                   clef.shape="G"
                                   clef.line="2"
-                                  key.sig="2f"
                                   n="1"
                                   lines="5">
                            <label xml:id="x6d224887-ff8e-4c50-bfce-4070fc2b7bba">Sologesang I</label>
@@ -127,7 +126,6 @@
                         <staffDef xml:id="x191349df-aaab-4abf-bbd7-ac920c08edf4"
                                   clef.shape="G"
                                   clef.line="2"
-                                  key.sig="2f"
                                   n="2"
                                   lines="5">
                            <label xml:id="x92f5c5d2-aa79-43e7-84d3-fd18fb6e823e">Sologesang II</label>
@@ -136,7 +134,6 @@
                         <staffDef xml:id="xc2f957d0-e38e-45f9-8df3-02d44f00f246"
                                   clef.shape="G"
                                   clef.line="2"
-                                  key.sig="2f"
                                   n="3"
                                   lines="5">
                            <label xml:id="xeca67313-85e4-4458-b059-049d9f96081b">dreistimmiger Chor</label>
@@ -151,13 +148,11 @@
                         <staffDef xml:id="x0fd8bc94-cbc0-48ce-bd3c-51f455ab6c53"
                                   clef.shape="G"
                                   clef.line="2"
-                                  key.sig="2f"
                                   n="4"
                                   lines="5"/>
                         <staffDef xml:id="x775ac167-c4ef-4a09-a664-1bf589b5884b"
                                   clef.shape="F"
                                   clef.line="4"
-                                  key.sig="2f"
                                   n="5"
                                   lines="5"/>
                      </staffGrp>
@@ -21769,7 +21764,7 @@
                                  
                                  tstamp="1">
                               <verse xml:id="xebaa761f-9d14-4c41-a7ea-ece6cc09b606" n="1">
-                                 <syl xml:id="x27930271-0bf7-485f-a1bb-359c206ade9a" con="d" wordpos="t">knickt</syl>
+                                 <syl xml:id="x27930271-0bf7-485f-a1bb-359c206ade9a">knickt</syl>
                               </verse>
                            </note>
                            <note xml:id="x8e8dad54-7c5b-4a3a-a69a-e1ab08503d5b"
