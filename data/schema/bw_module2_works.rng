@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2019-11-26T14:46:23Z. .
+Schema generated from ODD source 2019-11-27T13:38:09Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -10330,7 +10330,7 @@ Suggested values include: 1] smufl</a:documentation>
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:staffDef">
                                 <sch:assert test="(@trans.diat and @trans.semi and @key.sig and @key.mode) or (not(@trans.diat) and not(@trans.semi) and not(@key.sig) and not(@key.mode))">
-                                    Transposing instruments need a staffDef with @trans.diat, @trans.semi, @key.sig and @key.mode. All other staffDefs may not use these.
+                                    Transposing instruments need a staffDef with @trans.diat, @trans.semi, @key.sig and @key.mode. All other staffDefs may not use these at all, not even single ones of these attributes.
                                 </sch:assert>
                             </sch:rule>
          </pattern>
@@ -10463,7 +10463,7 @@ Suggested values include: 1] smufl</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:syl">
-                                <sch:assert test="@con='d' and (@wordpos='i','m') or @con='u' or not(@con)">
+                                <sch:assert test="(@wordpos='i' and @con='d')                                      or (@wordpos='m' and @con='d')                                      or (@wordpos='t' and @con='u')                                     or (@wordpos='t' and not(@con))                                      or (not(@wordpos) and not(@con))">
                                     for attribute @con only 'd' is allowed. if syl is longer than one note, of course @con="u" is allowed.
                                 </sch:assert>
                             </sch:rule>

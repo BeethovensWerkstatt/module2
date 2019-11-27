@@ -111,11 +111,15 @@
                         <constraint>
                             <sch:rule context="mei:staffDef">
                                 <sch:assert test="(@trans.diat and @trans.semi and @key.sig and @key.mode) or (not(@trans.diat) and not(@trans.semi) and not(@key.sig) and not(@key.mode))">
-                                    Transposing instruments need a staffDef with @trans.diat, @trans.semi, @key.sig and @key.mode. All other staffDefs may not use these.
+                                    Transposing instruments need a staffDef with @trans.diat, @trans.semi, @key.sig and @key.mode. All other staffDefs may not use these at all, not even single ones of these attributes.
                                 </sch:assert>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
+                    
+                    
+                    
+                    
                     
                     
                     <constraintSpec ident="check_tstamp2" scheme="isoschematron" mode="add">
@@ -184,6 +188,10 @@
                         </constraint>
                     </constraintSpec>
                     
+                   
+                    
+                    
+                    
                     <constraintSpec ident="check_stem.dir_dur1" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:note">
@@ -197,7 +205,11 @@
                     <constraintSpec ident="check_text_attributes" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:syl">
-                                <sch:assert test="@con='d' and (@wordpos='i','m') or @con='u' or not(@con)">
+                                <sch:assert test="(@wordpos='i' and @con='d') 
+                                    or (@wordpos='m' and @con='d') 
+                                    or (@wordpos='t' and @con='u')
+                                    or (@wordpos='t' and not(@con)) 
+                                    or (not(@wordpos) and not(@con))">
                                     for attribute @con only 'd' is allowed. if syl is longer than one note, of course @con="u" is allowed.
                                 </sch:assert>
                             </sch:rule>
