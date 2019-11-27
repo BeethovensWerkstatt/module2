@@ -7363,7 +7363,7 @@
                </part>
                <part xml:id="xdd5192f2-61d2-42ba-97e4-5e29241b4020" label="Corno I in E">
                   <scoreDef xml:id="x77c9a2bb-8d1e-4fa9-ac59-acd3c30d179a" meter.count="4"
-                     meter.unit="4" meter.sym="common" key.sig="0" key.mode="major">
+                     meter.unit="4" meter.sym="common" key.sig="4s" key.mode="major">
                      <staffGrp xml:id="x48f30b14-fbb0-46cb-89f9-8af143f4b5e2">
                         <staffDef n="1" xml:id="xb4525e2f-5ecf-4190-8ca3-a825725f747f" lines="5"
                            clef.line="2" clef.shape="G" trans.semi="-8" trans.diat="-5" key.sig="0"
@@ -8864,7 +8864,7 @@
                </part>
                <part xml:id="xc7431075-aed1-4ae9-bb65-a0a33d9b7f52" label="Corno II in E">
                   <scoreDef xml:id="x01e94de6-5f72-453a-bbb9-d0d64fe338cb" meter.count="4"
-                     meter.unit="4" meter.sym="common" key.sig="0" key.mode="major">
+                     meter.unit="4" meter.sym="common" key.sig="4s" key.mode="major">
                      <staffGrp xml:id="x4edd30fa-4716-4609-92c3-9de221cf4d56">
                         <staffDef n="1" xml:id="x55fb94c7-975b-4ebe-a219-45a04b4ab02b" lines="5"
                            clef.line="2" clef.shape="G" trans.semi="-8" trans.diat="-5" key.sig="0"
@@ -10354,8 +10354,7 @@
                                  <note xml:id="x4cc30e5f-3ea6-4bdb-a7ae-5f6077dde26b" pname="a"
                                     oct="4" dur="8" >
                                     <verse xml:id="x142b448b-2b64-4c6d-b26d-f6f0ef0f2484" n="1">
-                                       <syl xml:id="xa4f35439-cbd7-4034-8643-4398332d7a78"
-                                          wordpos="i">Schein</syl>
+                                       <syl xml:id="xa4f35439-cbd7-4034-8643-4398332d7a78">Schein</syl>
                                     </verse>
                                  </note>
                                  <note xml:id="x732a071d-2f24-4d2d-a2e8-e8d315c2ea36" pname="g"
@@ -10830,7 +10829,7 @@
                                     oct="4" dur="8" >
                                     <verse xml:id="x5da52d82-73d0-4b64-8ddc-9a1c2a0d73db" n="1">
                                        <syl xml:id="x9c8471dd-b48b-4298-bd09-270b3b19d4d4"
-                                          wordpos="m">lings</syl>
+                                          wordpos="t">lings</syl>
                                     </verse>
                                  </note>
                                  <note xml:id="xfdffbc0c-8977-4db0-8881-3d1ed21f04ac" pname="c"
@@ -14156,7 +14155,7 @@
                                     oct="4" dur="8" >
                                     <verse xml:id="xf568a1fa-7390-4a4e-bad4-7f5e0fd32d16" n="1">
                                        <syl xml:id="x077921c3-d104-42e5-a101-20699ad67785"
-                                          wordpos="m">lings</syl>
+                                          wordpos="t">lings</syl>
                                     </verse>
                                  </note>
                                  <note xml:id="xd29a4ba8-cd8a-4c9e-999b-607aa6666e84" pname="a"
@@ -15245,7 +15244,7 @@
                                     oct="3" dur="8"  accid.ges="s">
                                     <verse xml:id="xa79d32cf-2b86-4fa0-b8e3-6bb85be130a4" n="1">
                                        <syl xml:id="xede37b65-b383-4049-9761-43dcf44b8c9b"
-                                          wordpos="i">lings</syl>
+                                          wordpos="t">lings</syl>
                                     </verse>
                                  </note>
                                  <note xml:id="xd0e32553-7444-4793-86e2-ec691f2fcbdf" pname="a"
