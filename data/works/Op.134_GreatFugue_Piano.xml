@@ -719,13 +719,13 @@
                   </chord>
                 </layer>
               </staff>
-              <fermata xml:id="xdccf9c1d-3b37-40d2-84ce-6573ea1c357b" staff="1" place="above"
+              <fermata xml:id="xdccf9c1d-3b37-40d2-84ce-6573ea1c357b" staff="1"
                 form="norm" startid="#x1833b666-4af8-4b95-809b-3a9d644f8372"/>
               <fermata xml:id="xe3c22c41-27a0-4c4a-aa00-38d71ebd919c" staff="2" place="below"
                 startid="#x11f2f83a-26d9-4d27-8a40-09edb3ef2364"/>
-              <fermata xml:id="xb0b3cb99-c755-49e0-850f-17f5a5ff20fb" staff="3" place="above"
+              <fermata xml:id="xb0b3cb99-c755-49e0-850f-17f5a5ff20fb" staff="3"
                 form="norm" startid="#x72908c15-ddf8-4fa3-9196-7bbbbf61f1be"/>
-              <fermata xml:id="xd91b6d9e-8be8-4a54-b8ff-77aeb74f9e4f" staff="4" place="above"
+              <fermata xml:id="xd91b6d9e-8be8-4a54-b8ff-77aeb74f9e4f" staff="4"
                 form="norm" startid="#xb653a81b-3788-44a8-84bb-dbdd663f00d3"/>
               <dynam xml:id="xc715bdc5-5251-48b4-8684-52c6aa2d26f6" staff="1" tstamp="1"
                 place="below">ff</dynam>
@@ -1014,9 +1014,9 @@
                     stem.dir="down"/>
                   <beam xml:id="x9910bfa5-0cab-4720-8721-3329aee4ffce">
                     <note xml:id="xbfae90c3-72a8-43c4-b22c-365d1307ce9f" grace="unknown"
-                      fontsize="small" pname="f" oct="6" dur="16" stem.dir="up" accid.ges="s"/>
+                       pname="f" oct="6" dur="16" stem.dir="up" accid.ges="s"/>
                     <note xml:id="x60e04fb9-1fbb-45c4-933c-d4253a055891" grace="unknown"
-                      fontsize="small" pname="g" oct="6" dur="16" stem.dir="up"/>
+                       pname="g" oct="6" dur="16" stem.dir="up"/>
                   </beam>
                   <rest xml:id="xcbc97224-9c89-4428-81b5-e31ad4c7f435" dur="8"/>
                   <rest xml:id="x2e6d4d3b-dc1e-4ad0-8497-d5658fdd3607" dur="4"/>
@@ -1028,9 +1028,9 @@
                     stem.dir="down"/>
                   <beam xml:id="xedf561eb-8ed3-4ecd-87dc-c94a87629f6b">
                     <note xml:id="x2d97e4f3-8a60-454e-b2c1-a8bb57c6a90e" grace="unknown"
-                      fontsize="small" pname="f" oct="5" dur="16" stem.dir="up" accid.ges="s"/>
+                       pname="f" oct="5" dur="16" stem.dir="up" accid.ges="s"/>
                     <note xml:id="xb4ece8b2-5736-4526-b9ab-b5cdc6892e05" grace="unknown"
-                      fontsize="small" pname="g" oct="5" dur="16" stem.dir="up"/>
+                       pname="g" oct="5" dur="16" stem.dir="up"/>
                   </beam>
                   <rest xml:id="x7173e759-da08-4784-9023-0cea8175611e" dur="8"/>
                   <rest xml:id="xf0d10935-0cdb-4d44-9d62-f95bc4ed48e0" dur="4"/>
@@ -1042,9 +1042,9 @@
                     stem.dir="down" accid="n"/>
                   <beam xml:id="x822baf7b-e48e-495c-a0ba-7789f2bd7150">
                     <note xml:id="xe256b15f-3276-4c88-87ce-134e4ef85547" grace="unknown"
-                      fontsize="small" pname="f" oct="4" dur="16" stem.dir="up" accid.ges="s"/>
+                       pname="f" oct="4" dur="16" stem.dir="up" accid.ges="s"/>
                     <note xml:id="xaf038463-aa36-4cd1-b170-ea29682e0d1d" grace="unknown"
-                      fontsize="small" pname="g" oct="4" dur="16" stem.dir="up"/>
+                       pname="g" oct="4" dur="16" stem.dir="up"/>
                   </beam>
                   <rest xml:id="x31a32220-2644-4c4e-a1be-8fc4f1ad258c" dur="8"/>
                   <rest xml:id="xa4eb1602-ebbe-4a1d-80d5-6eeef8f7ee40" dur="4" dots="1"/>
@@ -1067,13 +1067,13 @@
                 startid="#x15775658-0969-44fa-8bfe-e875386e6315"/>
               <trill xml:id="x8981568c-5179-418e-93bd-fcccc2d53a71" staff="3" place="above"
                 startid="#xfabfd146-3549-445b-8e52-f5a35ee93877"/>
-              <fermata xml:id="x98be6eb7-ae40-490d-9b3e-026f29247464" staff="1" place="above"
+              <fermata xml:id="x98be6eb7-ae40-490d-9b3e-026f29247464" staff="1"
                 form="norm" startid="#x2e6d4d3b-dc1e-4ad0-8497-d5658fdd3607"/>
-              <fermata xml:id="xae44dedf-6cad-4df8-8a27-36d8e1b1128c" staff="2" place="above"
+              <fermata xml:id="xae44dedf-6cad-4df8-8a27-36d8e1b1128c" staff="2"
                 form="norm" startid="#xf0d10935-0cdb-4d44-9d62-f95bc4ed48e0"/>
-              <fermata xml:id="xfc956a09-755e-453a-9753-eeb48939bf46" staff="3" place="above"
+              <fermata xml:id="xfc956a09-755e-453a-9753-eeb48939bf46" staff="3"
                 form="norm" startid="#xa4eb1602-ebbe-4a1d-80d5-6eeef8f7ee40"/>
-              <fermata xml:id="x14e055b0-bb3c-4dd4-b767-d201ff9def86" staff="4" place="above"
+              <fermata xml:id="x14e055b0-bb3c-4dd4-b767-d201ff9def86" staff="4"
                 form="norm" startid="#x0be77dff-2699-4e53-ab49-f0391d4e98b2"/>
             </measure>
             <measure n="13" xml:id="xbdd51022-74c8-4af6-bde9-103b3700a424">
@@ -1233,13 +1233,13 @@
                   <rest xml:id="x8f984246-0803-462f-a02c-68cf6ac8ffd5" dur="4" dots="1"/>
                 </layer>
               </staff>
-              <fermata xml:id="x1afb0bb8-9706-4105-befc-337711ccbf27" staff="1" place="above"
+              <fermata xml:id="x1afb0bb8-9706-4105-befc-337711ccbf27" staff="1"
                 form="norm" startid="#xb2bb0459-2278-4d77-815c-650f3e910746"/>
-              <fermata xml:id="x8f88f070-749c-45f9-b3dd-50353508dcf0" staff="2" place="above"
+              <fermata xml:id="x8f88f070-749c-45f9-b3dd-50353508dcf0" staff="2"
                 form="norm" startid="#x391a76d9-1d21-4fc3-a894-fa2f4825cf60"/>
-              <fermata xml:id="xb75028fe-c5ee-430d-b4ae-79c2b43f30f4" staff="3" place="above"
+              <fermata xml:id="xb75028fe-c5ee-430d-b4ae-79c2b43f30f4" staff="3"
                 form="norm" startid="#x57a05944-5fb2-4d78-b3d4-61e195e94844"/>
-              <fermata xml:id="xedc61ab8-1d32-4ec4-b9d3-2610750916fe" staff="4" place="above"
+              <fermata xml:id="xedc61ab8-1d32-4ec4-b9d3-2610750916fe" staff="4"
                 form="norm" startid="#x8f984246-0803-462f-a02c-68cf6ac8ffd5"/>
             </measure>
             <measure n="16" xml:id="x6580e05d-879d-4fd0-885b-6b136d153c0d">
@@ -1376,13 +1376,13 @@
                   <mRest xml:id="x5998c081-5941-416f-bcb4-a989c301fe1f" dur="2"/>
                 </layer>
               </staff>
-              <fermata xml:id="xca4d071c-f2e6-46a6-a9ef-f8a2307bc53b" staff="1" place="above"
+              <fermata xml:id="xca4d071c-f2e6-46a6-a9ef-f8a2307bc53b" staff="1"
                 form="norm" startid="#x84453f70-534d-415a-833f-917fa76e691f"/>
-              <fermata xml:id="xe785e223-f1b6-46c7-bd27-a80b473819b6" staff="2" place="above"
+              <fermata xml:id="xe785e223-f1b6-46c7-bd27-a80b473819b6" staff="2"
                 form="norm" startid="#xcb574342-f706-41ae-8f53-d0e97539ab5e"/>
-              <fermata xml:id="xc5ce3e9f-dd4d-49c0-beb1-8dd8c34e0fb8" staff="3" place="above"
+              <fermata xml:id="xc5ce3e9f-dd4d-49c0-beb1-8dd8c34e0fb8" staff="3"
                 form="norm" startid="#x541a4f30-ad54-4fa6-a7f9-1864a0aa6122"/>
-              <fermata xml:id="xa1770854-d51f-4afe-8c39-9f5e5a96fba6" staff="4" place="above"
+              <fermata xml:id="xa1770854-d51f-4afe-8c39-9f5e5a96fba6" staff="4"
                 form="norm" startid="#x5998c081-5941-416f-bcb4-a989c301fe1f"/>
             </measure>
           </section>
@@ -1811,13 +1811,13 @@
                   <rest xml:id="xb2dac3ea-b531-469e-99a5-a3c63ef2d5ba" dur="4"/>
                 </layer>
               </staff>
-              <fermata xml:id="xb776408b-11df-4aba-9cc7-5a628dd10518" staff="1" place="above"
+              <fermata xml:id="xb776408b-11df-4aba-9cc7-5a628dd10518" staff="1"
                 form="norm" startid="#x38fe0ecc-217d-4de0-a832-33878ca53a5c"/>
-              <fermata xml:id="xd00e5bb7-c9ff-4260-8b6b-a217a27851ea" staff="2" place="above"
+              <fermata xml:id="xd00e5bb7-c9ff-4260-8b6b-a217a27851ea" staff="2"
                 form="norm" startid="#xe0e67666-4dcd-4da5-ad9b-8737e8b82c29"/>
-              <fermata xml:id="x93be4712-a577-41f6-8219-1f0e02d462d8" staff="3" place="above"
+              <fermata xml:id="x93be4712-a577-41f6-8219-1f0e02d462d8" staff="3"
                 form="norm" startid="#x18ee44b4-206c-4ea5-88a9-18120df047ab"/>
-              <fermata xml:id="x6d145b9b-fda3-4a67-9135-14c5b582b460" staff="4" place="above"
+              <fermata xml:id="x6d145b9b-fda3-4a67-9135-14c5b582b460" staff="4"
                 form="norm" startid="#xb2dac3ea-b531-469e-99a5-a3c63ef2d5ba"/>
             </measure>
           </section>
@@ -2060,13 +2060,13 @@
                 tstamp="3.5">Fuga.</dir>
               <dir xml:id="x924f0f2f-c7cb-4d1b-b66c-c9c508b65468" staff="3" place="above"
                 tstamp="3.5">Fuga.</dir>
-              <fermata xml:id="x5081f842-1c80-4bc9-b39b-7975569bf4fa" staff="1" place="above"
+              <fermata xml:id="x5081f842-1c80-4bc9-b39b-7975569bf4fa" staff="1"
                 form="norm" startid="#x2533564f-fdcf-4432-abe9-a2a97fe22c6f"/>
-              <fermata xml:id="xf375a306-5107-4981-8dab-c9fa67054191" staff="2" place="above"
+              <fermata xml:id="xf375a306-5107-4981-8dab-c9fa67054191" staff="2"
                 form="norm" startid="#x4bd4a0e7-1345-47dc-ae8e-2f17be3cbf0f"/>
-              <fermata xml:id="xebc33141-677d-4225-9ee2-b7c41ae74c88" staff="3" place="above"
+              <fermata xml:id="xebc33141-677d-4225-9ee2-b7c41ae74c88" staff="3"
                 form="norm" startid="#xa86cb93c-d395-4170-9646-125df7761e15"/>
-              <fermata xml:id="xa572fd07-d902-44c4-833b-677a7ddcf093" staff="4" place="above"
+              <fermata xml:id="xa572fd07-d902-44c4-833b-677a7ddcf093" staff="4"
                 form="norm" startid="#x7388fa6c-68d7-4f64-b99a-492b50bbf771"/>
               <dynam xml:id="xa0b0401c-d40f-4c6c-8eaf-2ebc46fca77d" staff="1" tstamp="3.75"
                 place="below">ff</dynam>
@@ -19575,13 +19575,13 @@
               <hairpin xml:id="x50ad478b-650d-443b-82f2-a7f4f59e7b74" staff="4" form="dim"
                 place="below" tstamp="4.5" tstamp2="0m+5"/>
               <fermata xml:id="x40bc7d18-7f32-4e34-bf50-e82aeac581b0" staff="1"
-                startid="#x082b09bb-853d-4fe7-84fb-52235ef4cf8d" place="above"/>
+                startid="#x082b09bb-853d-4fe7-84fb-52235ef4cf8d"/>
               <fermata xml:id="x35cd4bc3-b6bd-4c7a-8722-d4d42ba6bf88" staff="2"
-                startid="#x63c96b7a-3fc2-4671-b562-c4e4d8b1976a" place="above"/>
+                startid="#x63c96b7a-3fc2-4671-b562-c4e4d8b1976a"/>
               <fermata xml:id="x64e6b9e4-a624-4aa9-9a79-d8f9101a51eb" staff="3"
-                startid="#x54009a52-35e3-4e1d-b280-d1862ce9d178" place="above"/>
+                startid="#x54009a52-35e3-4e1d-b280-d1862ce9d178"/>
               <fermata xml:id="x16b2b5a6-3b37-460e-b6a3-959fe81e284d" staff="4"
-                startid="#x62498c39-f633-488f-9013-792d8f209c66" place="above"/>
+                startid="#x62498c39-f633-488f-9013-792d8f209c66"/>
               <tie xml:id="x85164d0c-65b1-4f1c-ab61-31195d3ad3b5" staff="1"
                 startid="#xd0dac6b1-277e-4c90-a838-88e409a80b33"
                 endid="#xca3e574a-52fc-47dc-8290-84be56255455"/>
@@ -25984,9 +25984,9 @@
                     dots="1" stem.dir="up" accid.ges="f"/>
                   <beam xml:id="x9c310784-c6df-47f1-8ce8-fadd63f1fb47">
                     <note xml:id="x21cfc33c-9c9a-4b63-a4ae-e84eec8cb192" grace="unknown"
-                      fontsize="small" pname="d" oct="4" dur="16" stem.dir="up"/>
+                       pname="d" oct="4" dur="16" stem.dir="up"/>
                     <note xml:id="x2b4427e7-3b00-4001-86df-78a60a38f848" grace="unknown"
-                      fontsize="small" pname="e" oct="4" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="e" oct="4" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -26088,9 +26088,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="x6d1eab4b-b3cf-4fec-927e-19ad4d873968">
                     <note xml:id="xd9ebe984-7f92-4a52-9d88-358cfc4aefde" grace="unknown"
-                      fontsize="small" pname="d" oct="5" dur="16" stem.dir="up"/>
+                       pname="d" oct="5" dur="16" stem.dir="up"/>
                     <note xml:id="x47c7d8bf-da8d-4b22-bb0d-f656732aabea" grace="unknown"
-                      fontsize="small" pname="e" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="e" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -26130,9 +26130,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="x07224d79-c539-472d-a44c-21d76312163c">
                     <note xml:id="x1e65686a-a925-47dd-ac8d-4c04adc96852" grace="unknown"
-                      fontsize="small" pname="c" oct="5" dur="16" stem.dir="up"/>
+                       pname="c" oct="5" dur="16" stem.dir="up"/>
                     <note xml:id="xbdd69318-e0fa-40dc-ba2d-67ccfe70704a" grace="unknown"
-                      fontsize="small" pname="d" oct="5" dur="16" stem.dir="up"/>
+                       pname="d" oct="5" dur="16" stem.dir="up"/>
                   </beam>
                 </layer>
               </staff>
@@ -26764,9 +26764,9 @@
                     dots="1" stem.dir="up" accid.ges="f"/>
                   <beam xml:id="x3e0e7587-b94a-4610-8c1e-1206f6d8275d">
                     <note xml:id="x0644d705-4427-40da-b401-f5ee47889f70" pname="d" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                     <note xml:id="xde236765-eacb-4a60-85dc-a8e62409f82d" pname="e" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -26844,9 +26844,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="xfc4bd1e8-69b2-43e2-b5b7-154f9172c732">
                     <note xml:id="x42629b86-68f1-4014-8759-4abb22a2827f" grace="unknown"
-                      fontsize="small" pname="d" oct="6" dur="16" stem.dir="up"/>
+                       pname="d" oct="6" dur="16" stem.dir="up"/>
                     <note xml:id="x24b1d985-2d8c-4429-a0f0-71a3ed536547" grace="unknown"
-                      fontsize="small" pname="e" oct="6" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="e" oct="6" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -26898,9 +26898,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="xdacff47a-78f6-4287-9ea4-78e707927267">
                     <note xml:id="xbfc6cb67-9fcb-4c83-b1b6-e8e9bb451548" grace="unknown"
-                      fontsize="small" pname="c" oct="5" dur="16" stem.dir="up"/>
+                       pname="c" oct="5" dur="16" stem.dir="up"/>
                     <note xml:id="xde568f1e-b3ce-4ad0-a06f-0a0b2acd4d02" grace="unknown"
-                      fontsize="small" pname="d" oct="5" dur="16" stem.dir="up"/>
+                       pname="d" oct="5" dur="16" stem.dir="up"/>
                   </beam>
                 </layer>
               </staff>
@@ -27962,9 +27962,9 @@
                     dots="1" stem.dir="down" accid="f"/>
                   <beam xml:id="x323f0939-56e8-4637-b57d-b89202192068">
                     <note xml:id="x30b3dff9-568b-4f6c-907a-90d12d181eb8" pname="g" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                     <note xml:id="x8f94016b-214d-4a69-a7d5-088db6555b30" pname="a" accid.ges="f"
-                      oct="3" dur="16" stem.dir="up" fontsize="small" grace="unknown"/>
+                      oct="3" dur="16" stem.dir="up"  grace="unknown"/>
                   </beam>
                 </layer>
               </staff>
@@ -28280,9 +28280,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="xa5eca64e-caa7-43d5-aef8-bdc6e657ec33">
                     <note xml:id="x895ffd2b-f57f-449d-b0ae-13f2ccb4ca21" pname="c" oct="5" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                     <note xml:id="xd2abc9d8-d240-4e08-9b4d-e0d964cc040f" pname="d" oct="5" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -28599,9 +28599,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="xa03f6524-0dfd-4efc-8fd2-4d45f3878c24">
                     <note xml:id="xb6def5ae-a08b-4f53-83cf-d954b7fa1dd6" grace="unknown"
-                      fontsize="small" pname="g" oct="5" dur="16" stem.dir="up"/>
+                       pname="g" oct="5" dur="16" stem.dir="up"/>
                     <note xml:id="x310e2e43-9f71-413f-8ae4-8a8580064d55" grace="unknown"
-                      fontsize="small" pname="a" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="a" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -28983,9 +28983,9 @@
                     dots="1" stem.dir="down" accid="f"/>
                   <beam xml:id="xf5baf654-41ce-4d2a-afa4-72799577e24a">
                     <note xml:id="x5228039f-61ac-4c39-a21b-9ef280451ab4" grace="unknown"
-                      fontsize="small" pname="c" oct="6" dur="16" stem.dir="up"/>
+                       pname="c" oct="6" dur="16" stem.dir="up"/>
                     <note xml:id="x88e35c51-5c6a-416f-adbb-bc9cfcdb6f08" grace="unknown"
-                      fontsize="small" pname="d" oct="6" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="d" oct="6" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -29044,9 +29044,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="x56e3d178-cc52-440f-a060-d3945ca4b604">
                     <note xml:id="x194e7174-3cfd-440a-bf8f-d3b15a8574c7" grace="unknown"
-                      fontsize="small" pname="b" oct="4" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="b" oct="4" dur="16" stem.dir="up" accid.ges="f"/>
                     <note xml:id="x8ecafbf3-6f5c-4845-a092-4d61f0915642" grace="unknown"
-                      fontsize="small" pname="c" oct="5" dur="16" stem.dir="up"/>
+                       pname="c" oct="5" dur="16" stem.dir="up"/>
                   </beam>
                 </layer>
               </staff>
@@ -29086,9 +29086,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="x2699e9f8-b787-4842-8f0c-d332abd55e30">
                     <note xml:id="xbd169678-497b-441f-be37-5b7048c683df" grace="unknown"
-                      fontsize="small" pname="a" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="a" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                     <note xml:id="xa44aac4c-cefd-44e4-96c8-48a375f67a49" grace="unknown"
-                      fontsize="small" pname="b" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="b" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -29148,9 +29148,9 @@
                     dots="1" stem.dir="up" accid="n"/>
                   <beam xml:id="x2f728d31-5db6-4241-8431-5b1d1ce42703">
                     <note xml:id="xdc7fd73d-d0e9-442d-b8a3-7fb82520fc9b" grace="unknown"
-                      fontsize="small" pname="f" oct="4" dur="16" stem.dir="up"/>
+                       pname="f" oct="4" dur="16" stem.dir="up"/>
                     <note xml:id="x4ce5aa13-aa76-40e4-81f2-85f36f1f7ac3" grace="unknown"
-                      fontsize="small" pname="g" oct="4" dur="16" stem.dir="up"/>
+                       pname="g" oct="4" dur="16" stem.dir="up"/>
                   </beam>
                 </layer>
               </staff>
@@ -29189,9 +29189,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="x34836607-7717-4a5d-80b9-75dadc2af604">
                     <note xml:id="x36b2ae57-1211-4533-b5bb-fb90aa71a40b" grace="unknown"
-                      fontsize="small" pname="g" oct="5" dur="16" stem.dir="up"/>
+                       pname="g" oct="5" dur="16" stem.dir="up"/>
                     <note xml:id="xe4ca6d53-cf1f-45bd-94bd-492c2f1577df" grace="unknown"
-                      fontsize="small" pname="a" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="a" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -29330,9 +29330,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="xd483256a-3620-4dd5-80ba-e7f85b2d615d">
                     <note xml:id="xbaf1f6ae-bca2-4881-8bad-773bf438d0d2" grace="unknown"
-                      fontsize="small" pname="e" oct="5" dur="16" stem.dir="up" accid="n"/>
+                       pname="e" oct="5" dur="16" stem.dir="up" accid="n"/>
                     <note xml:id="x1ac68671-5a91-4376-9f81-b3aa3deb42f1" grace="unknown"
-                      fontsize="small" pname="f" oct="5" dur="16" stem.dir="up"/>
+                       pname="f" oct="5" dur="16" stem.dir="up"/>
                   </beam>
                 </layer>
               </staff>
@@ -30008,9 +30008,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="x876c13f0-6e94-4b56-b5a1-2dadafd73ed6">
                     <note xml:id="x3063e3e2-6d71-4348-8b5e-8e02da3139f4" grace="unknown"
-                      fontsize="small" pname="c" oct="6" dur="16" stem.dir="up"/>
+                       pname="c" oct="6" dur="16" stem.dir="up"/>
                     <note xml:id="x48ce2d1c-d859-4d6a-920b-37be07ae9ac5" grace="unknown"
-                      fontsize="small" pname="d" oct="6" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="d" oct="6" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30039,9 +30039,9 @@
                     dots="1" stem.dir="up" accid.ges="f"/>
                   <beam xml:id="x60eee087-83d0-4304-a126-c38fa454509b">
                     <note xml:id="x73d867c1-1ebe-46c9-aedb-29f93318d01b" pname="a" oct="2" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                     <note xml:id="xbae4cc09-623e-4cff-84ff-4750a2863f69" pname="b" oct="2" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30116,9 +30116,9 @@
                     dots="1" stem.dir="down" accid="f"/>
                   <beam xml:id="x1ef467cb-8446-475c-aeea-46f4469bd839">
                     <note xml:id="x997b5a22-7186-439d-8789-d594b547e8f2" grace="unknown"
-                      fontsize="small" pname="f" oct="5" dur="16" stem.dir="up"/>
+                       pname="f" oct="5" dur="16" stem.dir="up"/>
                     <note xml:id="x3c97ccbd-5a53-4afa-972e-234fcfe76d6e" grace="unknown"
-                      fontsize="small" pname="g" oct="5" dur="16" stem.dir="up"/>
+                       pname="g" oct="5" dur="16" stem.dir="up"/>
                   </beam>
                 </layer>
               </staff>
@@ -30128,9 +30128,9 @@
                     dots="1" stem.dir="up" accid.ges="f"/>
                   <beam xml:id="x9fe46a53-14f7-417f-88ac-65fa3e2b0328">
                     <note xml:id="xedd6c77a-308e-449b-9905-3e52af30bdd9" pname="d" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                     <note xml:id="x2602a522-1462-486b-8d4e-aed4b7edeaca" pname="e" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30203,9 +30203,9 @@
                     dots="1" stem.dir="down" accid="f"/>
                   <beam xml:id="xb44252f3-06a1-4cf9-8850-59f677f2eaa4">
                     <note xml:id="xa68b4265-9577-4829-9f81-48602ec7b3e7" grace="unknown"
-                      fontsize="small" pname="e" oct="6" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="e" oct="6" dur="16" stem.dir="up" accid.ges="f"/>
                     <note xml:id="xff71807a-40b6-4918-b05e-76d3387caa93" grace="unknown"
-                      fontsize="small" pname="f" oct="6" dur="16" stem.dir="up"/>
+                       pname="f" oct="6" dur="16" stem.dir="up"/>
                   </beam>
                 </layer>
               </staff>
@@ -30234,9 +30234,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="x637dbe8f-5859-4977-b450-85330888893c">
                     <note xml:id="x2bb64fba-4cd6-4e7b-8dad-9d5c2bd93756" pname="g" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="f"/>
+                      stem.dir="up"  grace="unknown" accid="f"/>
                     <note xml:id="xa5863440-d990-49a7-b69d-9f6728746f98" pname="a" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30308,9 +30308,9 @@
                     dots="1" stem.dir="down" accid="n"/>
                   <beam xml:id="x2f587f20-ea4f-44b7-9030-acd57e78ddfa">
                     <note xml:id="x5c562420-368c-4b70-8dfa-5bafb9686b17" grace="unknown"
-                      fontsize="small" pname="d" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="d" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                     <note xml:id="x16b43d7b-55be-4c6c-9d89-b011bf18a08f" grace="unknown"
-                      fontsize="small" pname="e" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="e" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30320,9 +30320,9 @@
                     dots="1" stem.dir="up" accid="s"/>
                   <beam xml:id="x501edb59-9644-47b0-a9e0-c37e9f14dca8">
                     <note xml:id="x4e1e61b7-0ebc-42a5-9b7e-8f143a867e1a" pname="b" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                     <note xml:id="x26319627-7049-4259-af2f-7bdb5811eca1" pname="c" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                   </beam>
                 </layer>
               </staff>
@@ -30404,9 +30404,9 @@
                     dots="1" stem.dir="down" accid="n"/>
                   <beam xml:id="xcd7ee260-2e1f-471c-bd7b-3c28850efba7">
                     <note xml:id="x3959cca8-0123-4e7b-b5e5-9426b223e331" grace="unknown"
-                      fontsize="small" pname="g" oct="5" dur="16" stem.dir="up" accid="s"/>
+                       pname="g" oct="5" dur="16" stem.dir="up" accid="s"/>
                     <note xml:id="xf2be0739-502e-452e-8c19-851c279a9830" grace="unknown"
-                      fontsize="small" pname="a" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="a" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30435,9 +30435,9 @@
                     dots="1" stem.dir="up" accid="s"/>
                   <beam xml:id="x672e13c4-3a72-42ed-95a9-2ec443b21cbe">
                     <note xml:id="x37e6880d-08d8-4a74-9a62-b48334644675" pname="e" oct="2" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="n"/>
+                      stem.dir="up"  grace="unknown" accid="n"/>
                     <note xml:id="x8f8e1a9f-1621-4f25-b0f5-f06748a56ded" pname="f" oct="2" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                   </beam>
                 </layer>
               </staff>
@@ -30511,9 +30511,9 @@
                     dots="1" stem.dir="down" accid="n"/>
                   <beam xml:id="xf8923a98-a1cc-4b71-9e92-bab68955d127">
                     <note xml:id="x8d79b460-691c-4500-8d70-9a1c13436ade" grace="unknown"
-                      fontsize="small" pname="c" oct="5" dur="16" stem.dir="up"/>
+                       pname="c" oct="5" dur="16" stem.dir="up"/>
                     <note xml:id="xe9666cfb-5503-49e1-9f04-b61421283015" grace="unknown"
-                      fontsize="small" pname="d" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="d" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30523,9 +30523,9 @@
                     dots="1" stem.dir="down" accid="n"/>
                   <beam xml:id="x6543d75f-fa91-47ea-b320-a3bf920eb31d">
                     <note xml:id="xcdfc6009-14c0-467d-be3d-140466f587d7" pname="a" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                     <note xml:id="xe8afb395-1341-49b2-9fe4-304c2675949f" pname="b" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30609,9 +30609,9 @@
                     dots="1" stem.dir="down" accid="n"/>
                   <beam xml:id="xbf34bc93-6d2c-439c-bdb5-30b3ed428202">
                     <note xml:id="x08b27d82-f2a7-4569-98b1-95d38a886b14" grace="unknown"
-                      fontsize="small" pname="f" oct="6" dur="16" stem.dir="up"/>
+                       pname="f" oct="6" dur="16" stem.dir="up"/>
                     <note xml:id="x60e0aae1-9e64-43a8-8623-c20151932d13" grace="unknown"
-                      fontsize="small" pname="g" oct="6" dur="16" stem.dir="up"/>
+                       pname="g" oct="6" dur="16" stem.dir="up"/>
                   </beam>
                 </layer>
               </staff>
@@ -30640,9 +30640,9 @@
                     dots="1" stem.dir="down" accid="n"/>
                   <beam xml:id="x43af796b-ba6f-447d-bdfb-b0481b407d0d">
                     <note xml:id="xb64166b8-b8b3-4f59-b38a-ff827b754173" pname="d" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="n"/>
+                      stem.dir="up"  grace="unknown" accid="n"/>
                     <note xml:id="x1e4cf875-afcc-4551-97b3-6335bf5a427c" pname="e" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30714,9 +30714,9 @@
                     dots="1" stem.dir="up" accid="s"/>
                   <beam xml:id="xc62a2c9a-a38c-41f9-b2e2-7f35a1c4facf">
                     <note xml:id="xfc6dd54b-0e40-46cd-918f-7df8a1cb0b2a" grace="unknown"
-                      fontsize="small" pname="e" oct="4" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="e" oct="4" dur="16" stem.dir="up" accid.ges="f"/>
                     <note xml:id="x17a2437a-4701-4fc7-9fa0-506e650a5adb" grace="unknown"
-                      fontsize="small" pname="f" oct="4" dur="16" stem.dir="up"/>
+                       pname="f" oct="4" dur="16" stem.dir="up"/>
                   </beam>
                 </layer>
               </staff>
@@ -30726,9 +30726,9 @@
                     dots="1" stem.dir="up"/>
                   <beam xml:id="x0bb68802-7886-48ed-9d16-46c2fb7b6fc2">
                     <note xml:id="x75583c30-f2d7-4948-9db6-6e3b47369257" pname="b" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="n"/>
+                      stem.dir="up"  grace="unknown" accid="n"/>
                     <note xml:id="x348c97e8-87e1-4947-b045-82850b9ee682" pname="c" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                   </beam>
                   <!-- Der Schlüssel sollte von der Position an letzter Stelle im Takt hinter den Vorschlag-Noten erscheinen! -->
                   <clef xml:id="xda01fa35-4c27-4be1-bb24-ebbeb99fe1ec" staff="3" shape="F" line="4"
@@ -30741,9 +30741,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="x813ead1b-e09c-4d01-878e-f92c998dc640">
                     <note xml:id="x9bc864d6-9355-4229-a59d-ceacb02ff9a2" pname="g" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                     <note xml:id="xe094af3c-5a02-439d-b1e9-6cc0513e7e40" pname="a" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30807,9 +30807,9 @@
                     dots="1" stem.dir="down" accid="n"/>
                   <beam xml:id="x6e2a3f2f-9d84-4a04-babc-7736d52fcc41">
                     <note xml:id="xe3b1937c-3066-4ed4-a745-c2bba52a1ac6" grace="unknown"
-                      fontsize="small" pname="a" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="a" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                     <note xml:id="x7babdd93-f2e9-44fe-8b1f-cd5b5fccafb9" grace="unknown"
-                      fontsize="small" pname="b" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="b" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30819,9 +30819,9 @@
                     dots="1" stem.dir="down" accid="n"/>
                   <beam xml:id="xff6acd2f-f0d3-451b-bba1-602e515a0fc1">
                     <note xml:id="xb75d4388-4dae-43a2-bdb4-96ff9190dd60" grace="unknown"
-                      fontsize="small" pname="c" oct="5" dur="16" stem.dir="up"/>
+                       pname="c" oct="5" dur="16" stem.dir="up"/>
                     <note xml:id="x54ae8e5b-6df7-4241-ae9c-fa4b8b580e97" grace="unknown"
-                      fontsize="small" pname="d" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="d" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30838,9 +30838,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="x061c0bce-5282-4535-bc38-5fceb81cbfe4">
                     <note xml:id="xf409ea3a-3371-48fc-bfa3-11e856de3133" pname="e" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="n"/>
+                      stem.dir="up"  grace="unknown" accid="n"/>
                     <note xml:id="x8736cd68-374b-4da3-82e3-1e519a9a558a" pname="f" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                   </beam>
                 </layer>
               </staff>
@@ -30908,9 +30908,9 @@
                     dots="1" stem.dir="up"/>
                   <beam xml:id="x66524dd0-fb77-4666-ab3f-2476c52d95fe">
                     <note xml:id="x0bc5be4a-aa29-4896-95b3-e9c54b0e57e0" grace="unknown"
-                      fontsize="small" pname="d" oct="4" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="d" oct="4" dur="16" stem.dir="up" accid.ges="f"/>
                     <note xml:id="x4e029a1d-d664-4907-b9aa-d5948171ef6b" grace="unknown"
-                      fontsize="small" pname="e" oct="4" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="e" oct="4" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30920,9 +30920,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="xcdc1c76a-8a81-4467-a290-fb044e055516">
                     <note xml:id="x4607df5d-c5b0-4b6e-8310-13c8690fc69e" pname="a" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="n"/>
+                      stem.dir="up"  grace="unknown" accid="n"/>
                     <note xml:id="xa672ca3a-d1b0-49e1-ab2b-ff78672f71d5" pname="b" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -30932,9 +30932,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="x2db7dc12-84c8-4101-8bbe-04e7347a3b58">
                     <note xml:id="x736bc237-bf3e-426f-8ed3-b207d54fe413" pname="f" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="n"/>
+                      stem.dir="up"  grace="unknown" accid="n"/>
                     <note xml:id="x8bb8c6c5-139e-4975-8825-47bdebd9a59a" pname="g" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                   </beam>
                 </layer>
               </staff>
@@ -30995,9 +30995,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="x27b53f51-8ebe-4590-a2ed-d002587b8dd4">
                     <note xml:id="x5f8f8a0b-892e-4eb8-a60e-16cabd367c4b" grace="unknown"
-                      fontsize="small" pname="g" oct="5" dur="16" stem.dir="up"/>
+                       pname="g" oct="5" dur="16" stem.dir="up"/>
                     <note xml:id="x063cb4ca-c5c9-4360-89f7-50f09fe39bc1" grace="unknown"
-                      fontsize="small" pname="a" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="a" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -31007,9 +31007,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="x9b92b930-6a6a-4b27-88b5-27e637bce7e7">
                     <note xml:id="x04e94d6a-7011-48e8-9ca7-68a6b4e91c68" grace="unknown"
-                      fontsize="small" pname="e" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
+                       pname="e" oct="5" dur="16" stem.dir="up" accid.ges="f"/>
                     <note xml:id="xcc7c2a43-f477-4c9a-89e6-b1347d4efe7e" grace="unknown"
-                      fontsize="small" pname="f" oct="5" dur="16" stem.dir="up"/>
+                       pname="f" oct="5" dur="16" stem.dir="up"/>
                   </beam>
                 </layer>
               </staff>
@@ -31098,9 +31098,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="x4ae6383d-47cd-43a7-8fc9-1551ac7d76fa">
                     <note xml:id="xb8d1e882-c92b-42ee-849f-a8b9735ba6e9" pname="g" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                     <note xml:id="xdb21205f-2ff6-444b-8d40-27a7e92d18af" pname="a" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -31110,9 +31110,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="xd21761a4-381c-49ea-be3e-e95ce48dc864">
                     <note xml:id="xf7558960-7a62-4fa2-b647-1f991905b3cf" pname="e" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="n"/>
+                      stem.dir="up"  grace="unknown" accid="n"/>
                     <note xml:id="x4073b43d-afce-49ad-9309-23bc36cc7600" pname="f" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                   </beam>
                 </layer>
               </staff>
@@ -31176,9 +31176,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="xddd5d1d5-cb8c-4e6e-bb44-edbd088a7232">
                     <note xml:id="x2988a19d-ecc3-4e2c-9b94-237213a7d364" grace="unknown"
-                      fontsize="small" pname="e" oct="5" dur="16" stem.dir="up" accid="n"/>
+                       pname="e" oct="5" dur="16" stem.dir="up" accid="n"/>
                     <note xml:id="x68fe9062-6568-4e9f-9faa-1f6409661bbc" grace="unknown"
-                      fontsize="small" pname="f" oct="5" dur="16" stem.dir="up"/>
+                       pname="f" oct="5" dur="16" stem.dir="up"/>
                   </beam>
                 </layer>
               </staff>
@@ -31216,9 +31216,9 @@
                     dots="1" stem.dir="up" accid="f"/>
                   <beam xml:id="x6c68c88f-3d85-451b-983a-a7b022f32859">
                     <note xml:id="xf376a8f4-a624-4968-ac60-11f52089813f" pname="c" oct="2" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                     <note xml:id="x2cc4a21e-a386-440b-b8c8-451de2b8e4c1" pname="d" oct="2" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -31393,9 +31393,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="xcf18f67c-f448-4055-8737-8088a460077a">
                     <note xml:id="x7bd62663-728a-4daa-a3b8-c0936207b62d" pname="b" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="n"/>
+                      stem.dir="up"  grace="unknown" accid="n"/>
                     <note xml:id="x1b8dfa93-4546-4093-b5cc-ca90aa1abd0c" pname="c" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                   </beam>
                 </layer>
               </staff>
@@ -31796,9 +31796,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="xc185c737-9882-4793-ad91-d39eb06cc06e">
                     <note xml:id="xdb1446ac-258e-47b0-ad78-05e82e771d0e" pname="a" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="n"/>
+                      stem.dir="up"  grace="unknown" accid="n"/>
                     <note xml:id="xfe23e40a-5397-4257-9ff3-a8f2aa7dbce4" pname="b" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -32976,7 +32976,7 @@
               <staff xml:id="xa7a1db4e-37a9-4957-ac4a-ab8a9d8c09e6" n="3">
                 <layer xml:id="x0ca7033c-71e2-47b7-b078-87ee8e2248b6" n="1">
                   <note xml:id="x8f194f5b-cb07-4544-ba6c-5763d6bce0a8" pname="g" oct="3" dur="16"
-                    stem.dir="up" fontsize="small" grace="unknown" accid="f"/>
+                    stem.dir="up"  grace="unknown" accid="f"/>
                   <note xml:id="x1d63cda2-c356-44f8-9b3a-3d2230d7f30d" pname="f" oct="3" dur="2"
                     dots="1" stem.dir="down"/>
                 </layer>
@@ -33240,7 +33240,7 @@
               <staff xml:id="xa4131af1-73fb-4a06-a3fa-c71863076e83" n="4">
                 <layer xml:id="xd84ba932-2c30-4a32-8f93-28e1f3e66197" n="1">
                   <note xml:id="x8de387e3-69bb-4e40-911b-1d8518ecfa8c" pname="c" oct="3" dur="16"
-                    stem.dir="up" grace="unknown" fontsize="small" accid="f"/>
+                    stem.dir="up" grace="unknown"  accid="f"/>
                   <note xml:id="x9cf69747-a46a-453c-8d4d-df56c87b0dbf" pname="b" oct="2" dur="2"
                     dots="1" stem.dir="up" accid.ges="f"/>
                 </layer>
@@ -33321,7 +33321,7 @@
               <staff xml:id="x543ba094-0acc-470b-86da-6f6c1e0bc279" n="3">
                 <layer xml:id="xbd8c293b-b184-471d-930d-5e1ea39a3b78" n="1">
                   <note xml:id="xc83f035b-80c4-427e-8632-49c2b320cc81" pname="d" oct="4" dur="8"
-                    stem.dir="up" stem.mod="1slash" fontsize="small" grace="unknown" accid="f"/>
+                    stem.dir="up" stem.mod="1slash"  grace="unknown" accid="f"/>
                   <!-- Der durchstrichene Notenhals wird von Verovio nicht angezeigt. -->
                   <note xml:id="xc07992a6-5af5-40f7-9faf-f6ff424c7e10" pname="c" oct="4" dur="2"
                     dots="1" stem.dir="down" accid="f"/>
@@ -33577,7 +33577,7 @@
               <staff xml:id="x8a8e907a-b641-4ebb-96a6-5bd9fbe29ccd" n="4">
                 <layer xml:id="x5fddf446-af2e-4e54-a501-985baf77fc00" n="1">
                   <note xml:id="x9ac923e7-5f44-418a-bb8b-a2202ffbd3f0" pname="g" oct="3" dur="16"
-                    stem.dir="up" fontsize="small" grace="unknown" accid="f"/>
+                    stem.dir="up"  grace="unknown" accid="f"/>
                   <note xml:id="xe841c843-c626-4af0-a16c-ebfd9732918a" pname="f" oct="3" dur="2"
                     dots="1" stem.dir="down"/>
                 </layer>
@@ -33654,7 +33654,7 @@
               <staff xml:id="x39f8f601-f0bf-477e-bc69-a03357ca6cec" n="3">
                 <layer xml:id="x12f6c99b-216e-49ec-a16b-9037490fd7cb" n="1">
                   <note xml:id="x38653fc6-33f5-410b-ac9f-e648f03ca0f0" pname="a" oct="3" dur="16"
-                    stem.dir="up" fontsize="small" grace="unknown" accid="f"/>
+                    stem.dir="up"  grace="unknown" accid="f"/>
                   <note xml:id="xbdedccd5-c780-407d-b3ca-2ee342f3441a" pname="g" oct="3" dur="2"
                     dots="1" stem.dir="down" accid="f"/>
                 </layer>
@@ -33766,9 +33766,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="xa0fda55e-4488-43f7-bf9b-32142a6bcdcf">
                     <note xml:id="xe2508045-7166-4fbe-a8a8-0207e603b626" pname="b" oct="5" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small" accid.ges="f"/>
+                      stem.dir="up" grace="unknown"  accid.ges="f"/>
                     <note xml:id="x0a72513f-185a-4427-ba7d-283956b6ae60" pname="c" oct="6" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small"/>
+                      stem.dir="up" grace="unknown" />
                   </beam>
                 </layer>
               </staff>
@@ -33877,9 +33877,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="x24b1b173-83b2-42bd-824a-4ad966957c2b">
                     <note xml:id="xc0408fc6-9ccb-4a64-ab11-2af67c3a59b8" pname="g" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="f"/>
+                      stem.dir="up"  grace="unknown" accid="f"/>
                     <note xml:id="x0794d71d-ad7f-40f3-aa70-fc72643b9551" pname="a" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -33889,9 +33889,9 @@
                     dots="1" stem.dir="up"/>
                   <beam xml:id="x4d172592-67a8-4669-9a75-fe5539217c1b">
                     <note xml:id="x20f3c160-53dc-40fb-bc87-0737e436a097" pname="e" oct="2" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                     <note xml:id="x2c199e86-db4a-453e-8c0f-fc05e4806cb7" pname="f" oct="2" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                   </beam>
                 </layer>
               </staff>
@@ -33953,9 +33953,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="x4926981a-2332-4184-a548-1956476d0cc3">
                     <note xml:id="xe84f8801-0b54-4d82-abf9-e8af85789e4b" pname="d" oct="5" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small" accid="n"/>
+                      stem.dir="up" grace="unknown"  accid="n"/>
                     <note xml:id="x0add8c50-6f16-4670-aab5-b75ef3f07621" pname="e" oct="5" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small" accid.ges="f"/>
+                      stem.dir="up" grace="unknown"  accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -33965,9 +33965,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="x2c49a443-fedc-4911-b2b3-fa04235301e5">
                     <note xml:id="x38f50ff1-a480-40da-b64f-0f4f5dad43e0" pname="a" oct="4" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small" accid="f"/>
+                      stem.dir="up" grace="unknown"  accid="f"/>
                     <note xml:id="x0a022386-0975-45c3-ab96-7930c16096aa" pname="b" oct="4" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small" accid.ges="f"/>
+                      stem.dir="up" grace="unknown"  accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -33977,9 +33977,9 @@
                     dots="1" stem.dir="up" accid.ges="f"/>
                   <beam xml:id="x88e258d8-ff55-4fe2-b8a2-8c46a2f90e8d">
                     <note xml:id="x5fb34f67-75f0-48a2-9cc0-ccf84c047f8d" pname="f" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                     <note xml:id="x1743d728-c193-4ce7-971e-46ebb4763489" pname="g" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                   </beam>
                 </layer>
               </staff>
@@ -34050,9 +34050,9 @@
                     dots="1" stem.dir="up" accid.ges="f"/>
                   <beam xml:id="x508e7de8-6248-4d78-b3b2-7ffa15319127">
                     <note xml:id="x23d8764c-80eb-4062-8255-0d444f2a4178" pname="b" oct="3" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                     <note xml:id="xf0bbff2e-cf02-42b1-8e46-c77cc2aeff90" pname="c" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                   </beam>
                 </layer>
               </staff>
@@ -34062,9 +34062,9 @@
                     dots="1" stem.dir="up" accid.ges="f"/>
                   <beam xml:id="x859c57fb-7884-4e40-a9e8-249b39f88fc1">
                     <note xml:id="xd8ab1e92-a5b5-44ca-b26d-bc9ffcd8e9a0" pname="g" oct="2" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="n"/>
+                      stem.dir="up"  grace="unknown" accid="n"/>
                     <note xml:id="x6c816ec7-93c2-42fe-b0be-8252d4f2f137" pname="a" oct="2" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -34125,9 +34125,9 @@
                     dots="1" stem.dir="down" accid.ges="n"/>
                   <beam xml:id="x188ab183-9340-44dc-938b-c306bffdc8da">
                     <note xml:id="xee0f6f55-5ce0-44df-9412-526f003f0a5d" pname="f" oct="5" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                     <note xml:id="xed8f570e-a0f3-4e85-b2a1-8e18da4cc1d0" pname="g" oct="5" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                   </beam>
                 </layer>
               </staff>
@@ -34137,9 +34137,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="x91a2c579-788f-4a77-adba-597653cdb197">
                     <note xml:id="x6b3bc004-ee9a-4bf9-be28-0a86c71cb868" pname="c" oct="5" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="f"/>
+                      stem.dir="up"  grace="unknown" accid="f"/>
                     <note xml:id="x94a5da7e-59af-4d19-aec8-e9d2493db752" pname="d" oct="5" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -34149,9 +34149,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="x9b947e37-bc89-4537-ac9a-a14b8ee392be">
                     <note xml:id="x522c4b85-5616-4d02-b7de-32215c6f3757" pname="a" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="f"/>
+                      stem.dir="up"  grace="unknown" accid="f"/>
                     <note xml:id="x820fc47c-c710-4ce5-b423-dc2c925e307f" pname="b" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -34201,9 +34201,9 @@
                     dots="1" stem.dir="up" accid.ges="f"/>
                   <beam xml:id="xe46a54bb-5aad-43c6-901b-f6aa566bbd02">
                     <note xml:id="x45ab10ed-9c66-4846-80e3-9cf146456248" pname="g" oct="2" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid="n"/>
+                      stem.dir="up"  grace="unknown" accid="n"/>
                     <note xml:id="x7025a61d-46a5-4482-8ec1-52143619ac60" pname="a" oct="2" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -40443,9 +40443,9 @@
                     dots="1" stem.dir="up" accid.ges="f"/>
                   <beam xml:id="x59f9243d-623f-41dd-a064-4c13a6050641">
                     <note xml:id="x7f83c1b1-42cc-47c3-b748-d5c1e2d1d841" pname="d" oct="4" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small"/>
+                      stem.dir="up" grace="unknown" />
                     <note xml:id="x76a65023-b02a-42ec-959e-4355690286c6" pname="e" oct="4" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small" accid.ges="f"/>
+                      stem.dir="up" grace="unknown"  accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -40546,9 +40546,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="x42533a03-1bca-4d9f-8755-9ce6f4f73881">
                     <note xml:id="x202a988f-3d91-486e-8d6d-b297dfb10902" pname="d" oct="5" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small"/>
+                      stem.dir="up" grace="unknown" />
                     <note xml:id="x0e02d0c6-548d-4cf4-9e40-632ae0abe3bb" pname="e" oct="5" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small" accid.ges="f"/>
+                      stem.dir="up" grace="unknown"  accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -40588,9 +40588,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="x07beb36c-e776-4257-a505-e161f34ec9a7">
                     <note xml:id="x332b7303-8a0e-40ad-97ad-3bd44f470d78" pname="c" oct="5" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small"/>
+                      stem.dir="up" grace="unknown" />
                     <note xml:id="x106ed4d1-2c4e-403a-9df5-12f882e22b92" pname="d" oct="5" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small"/>
+                      stem.dir="up" grace="unknown" />
                   </beam>
                 </layer>
               </staff>
@@ -41227,9 +41227,9 @@
                     dots="1" stem.dir="up" accid.ges="f"/>
                   <beam xml:id="x325e0339-d0cf-4683-b86c-868c0262d8cc">
                     <note xml:id="x0798a0b1-52d3-4a09-bb55-d70f86d546f1" pname="d" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                     <note xml:id="xa75c975a-8872-4f5e-8862-808e689ba714" pname="e" oct="4" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -41313,9 +41313,9 @@
                     dots="1" stem.dir="down" accid.ges="f"/>
                   <beam xml:id="x35b2aa4d-5612-4af8-9482-95e4dc7a1120">
                     <note xml:id="x9cd4c1b3-3b81-42e5-b011-ee8ad8195951" pname="d" oct="6" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                     <note xml:id="xda8449aa-9c77-4f46-ab36-726d05dd646c" pname="e" oct="6" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown" accid.ges="f"/>
+                      stem.dir="up"  grace="unknown" accid.ges="f"/>
                   </beam>
                 </layer>
               </staff>
@@ -41368,9 +41368,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="xfb7bb24b-5750-4804-a2aa-eea88f899d98">
                     <note xml:id="x486a350b-d13b-408d-bb59-797ad33471ed" pname="c" oct="5" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                     <note xml:id="xa0fa7368-6c50-4619-945e-6e969ecf1fef" pname="d" oct="5" dur="16"
-                      stem.dir="up" fontsize="small" grace="unknown"/>
+                      stem.dir="up"  grace="unknown"/>
                   </beam>
                 </layer>
               </staff>
@@ -42538,7 +42538,7 @@
               <staff xml:id="xf483d5af-3df5-49fb-8cd7-ac1dcbee43fe" n="2">
                 <layer xml:id="x1c1b6624-56b7-48a8-a2b8-c7467fb022f5" n="1">
                   <note xml:id="x8494970d-16eb-4ab4-aff5-c139cf59639e" grace="unknown"
-                    fontsize="small" pname="f" oct="5" dur="16" stem.dir="up"/>
+                     pname="f" oct="5" dur="16" stem.dir="up"/>
                   <note xml:id="xbd855aeb-099a-4d16-adda-2ee9c0f28bcb" pname="d" oct="5" dur="4"
                     dots="1" stem.dir="down"/>
                   <note xml:id="xa22916c4-a42d-45e9-b0a7-f1c3d591ae1d" pname="d" oct="5" dur="4"
@@ -46869,13 +46869,13 @@
               <tempo xml:id="x151a0046-ce06-4db2-88e6-10136a8882d4" staff="3" tstamp="1"
                 place="above">Allo.</tempo>
               <fermata xml:id="x7ddbd8f1-e04d-42ed-8064-21207135664e" staff="1"
-                startid="#x0a0fc236-3e51-4785-ad31-bab663c25031" place="above"/>
+                startid="#x0a0fc236-3e51-4785-ad31-bab663c25031"/>
               <fermata xml:id="x9bafd7e4-71e8-4326-bdad-fc5021c6dd92" staff="2"
-                startid="#x1fd2eb4e-1b0d-441d-94b1-2d3c769ca646" place="above"/>
+                startid="#x1fd2eb4e-1b0d-441d-94b1-2d3c769ca646"/>
               <fermata xml:id="xf908eacb-c5ea-4d84-b1cf-3a0b5f1d63c0" staff="3"
-                startid="#xf8ec2867-79fb-447b-b804-5ac576e13d25" place="above"/>
+                startid="#xf8ec2867-79fb-447b-b804-5ac576e13d25"/>
               <fermata xml:id="x25a4dac1-27ba-4e00-92b1-d34de124e773" staff="4"
-                startid="#x9bb7f282-4784-4e4b-8303-3358afaf414c" place="above"/>
+                startid="#x9bb7f282-4784-4e4b-8303-3358afaf414c"/>
             </measure>
 
             <staffDef xml:id="x9af1adae-c2d3-4492-a5a4-b1f604265d78" n="3" clef.line="2"
@@ -46977,13 +46977,13 @@
                 </layer>
               </staff>
               <fermata xml:id="x445186ba-fed9-435c-95aa-240ca0c9d179" staff="1"
-                startid="#x90cb25d3-f9e8-4985-9988-be03b32f95a9" place="above"/>
+                startid="#x90cb25d3-f9e8-4985-9988-be03b32f95a9"/>
               <fermata xml:id="x41c9c1fe-f4db-4a44-860d-01e88f887271" staff="2"
-                startid="#x71fc41d3-90f6-4e7a-b55d-eb2cfaa4cc91" place="above"/>
+                startid="#x71fc41d3-90f6-4e7a-b55d-eb2cfaa4cc91"/>
               <fermata xml:id="xecb7e4f5-1194-4842-9cf3-bbba8144da18" staff="3"
-                startid="#x5f0b4e6f-f25d-4299-9181-40b9b57a1cb6" place="above"/>
+                startid="#x5f0b4e6f-f25d-4299-9181-40b9b57a1cb6"/>
               <fermata xml:id="xacfa6812-9915-42f8-b298-30f8011694db" staff="4"
-                startid="#xee54ffd7-ae74-4337-94d7-8fb7c69730ea" place="above"/>
+                startid="#xee54ffd7-ae74-4337-94d7-8fb7c69730ea"/>
             </measure>
           </section>
           <section xml:id="x6fc6c6d7-36ed-4f76-ac12-c995829ba1a0" n="12">
@@ -47160,13 +47160,13 @@
                 startid="#xc910964c-4a04-434b-bcdb-b1a1fa13e36e"
                 endid="#x7e037948-606f-4d33-82b9-832f6ef9c337" />
               <fermata xml:id="x20bb2a85-fea8-4a46-bd22-fcc17f888d06" staff="1"
-                startid="#x41ab23c7-d7b8-47ad-ba55-8515c3b8fb9e" place="above"/>
+                startid="#x41ab23c7-d7b8-47ad-ba55-8515c3b8fb9e"/>
               <fermata xml:id="x0097e47b-8f31-4c0e-8b23-16b6383e48a9" staff="2"
-                startid="#x9a6f9c00-ca20-43a4-9460-136a0d8d3acd" place="above"/>
+                startid="#x9a6f9c00-ca20-43a4-9460-136a0d8d3acd"/>
               <fermata xml:id="x7d5cd848-d73c-411d-ad72-716a550aa3ef" staff="3"
-                startid="#x4d603eae-c9b2-484c-aca1-4e236e1d286b" place="above"/>
+                startid="#x4d603eae-c9b2-484c-aca1-4e236e1d286b"/>
               <fermata xml:id="xd0ee27b2-111c-4d34-a8bc-e2f32fb4bd2c" staff="4"
-                startid="#x633df130-28e4-499a-aa94-90e00c4d6436" place="above"/>
+                startid="#x633df130-28e4-499a-aa94-90e00c4d6436"/>
             </measure>
           </section>
           <section xml:id="xce6292c0-eb8e-4fed-ab72-522895599f33" n="14">
@@ -47852,7 +47852,7 @@
                     <note xml:id="x60b6b211-6fd7-44e4-804d-0f833ae06ad1" pname="f" oct="2"/>
                   </chord>
                   <note xml:id="xc51858ce-6832-4ac1-9e08-0c40dffaa3f3" pname="e" oct="2" dur="4"
-                    dots="1" fontsize="small" stem.dir="down" accid.ges="f"/>
+                    dots="1"  stem.dir="down" accid.ges="f"/>
                 </layer>
               </staff>
               <dynam xml:id="x965371df-6300-4bfe-a846-262c4405e681" staff="1" tstamp="4"
@@ -48242,9 +48242,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="xb564d4ed-11f0-437c-8728-ee4d0ed34d17">
                     <note xml:id="xb55561cd-ec01-4e87-a634-d8b796b99c78" pname="b" oct="5" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small" accid.ges="f"/>
+                      stem.dir="up" grace="unknown"  accid.ges="f"/>
                     <note xml:id="x99c00e17-d93d-44c5-a642-88ce52b658a0" pname="c" oct="6" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small"/>
+                      stem.dir="up" grace="unknown" />
                   </beam>
                 </layer>
               </staff>
@@ -48254,9 +48254,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="x4bf4bd99-e8ad-4987-9e24-b758d40abe0c">
                     <note xml:id="x2bcbcf71-c911-4c4f-82fc-ee1baa51e271" pname="b" oct="4" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small" accid.ges="f"/>
+                      stem.dir="up" grace="unknown"  accid.ges="f"/>
                     <note xml:id="x1cd040fb-dc59-46c1-a549-de67d0a276b6" pname="c" oct="5" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small"/>
+                      stem.dir="up" grace="unknown" />
                   </beam>
                 </layer>
               </staff>
@@ -48272,9 +48272,9 @@
                   </chord>
                   <beam xml:id="x8f950e93-5276-46d9-a788-cd69a9e0ab8a">
                     <note xml:id="xcbaf72fe-ddbf-446a-b59a-84e8163c54c2" pname="b" oct="3" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small" accid.ges="f"/>
+                      stem.dir="up" grace="unknown"  accid.ges="f"/>
                     <note xml:id="xff0bd359-e256-47e5-adb1-c990d78dfc36" pname="c" oct="4" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small"/>
+                      stem.dir="up" grace="unknown" />
                   </beam>
                 </layer>
               </staff>
@@ -48284,9 +48284,9 @@
                     dots="1" stem.dir="down"/>
                   <beam xml:id="xa7862790-6c77-45f8-8071-403976a7e973">
                     <note xml:id="x58036ba1-8a37-411d-b9c8-d685595c94f5" pname="b" oct="1" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small" accid.ges="f"/>
+                      stem.dir="up" grace="unknown"  accid.ges="f"/>
                     <note xml:id="x03e0e6c4-3da2-43a0-aaba-f673730fbf4b" pname="c" oct="2" dur="16"
-                      stem.dir="up" grace="unknown" fontsize="small"/>
+                      stem.dir="up" grace="unknown" />
                   </beam>
                 </layer>
               </staff>
@@ -51451,13 +51451,13 @@
                 </layer>
               </staff>
               <fermata xml:id="x6d80b7af-a793-4f16-b4e2-9a6a4633fd1c" staff="1"
-                startid="#xadc17460-6ef4-4bc1-87aa-df66a7bf4fa8" place="above"/>
+                startid="#xadc17460-6ef4-4bc1-87aa-df66a7bf4fa8"/>
               <fermata xml:id="x6122ff23-e774-4dff-96c5-f86aca7fe434" staff="2"
-                startid="#xb3e18d41-7726-4ed4-be4f-246054ebaa40" place="above"/>
+                startid="#xb3e18d41-7726-4ed4-be4f-246054ebaa40"/>
               <fermata xml:id="x4b809260-81a2-4260-bba3-d780bc331a6e" staff="3"
-                startid="#xe76dc087-4b0a-4aeb-8179-ad81a9aaad25" place="above"/>
+                startid="#xe76dc087-4b0a-4aeb-8179-ad81a9aaad25"/>
               <fermata xml:id="x46a462c9-05db-44f6-a500-e5bd85d3a6a2" staff="4"
-                startid="#xfe98a84a-d575-4015-b6a5-2407df99239b" place="above"/>
+                startid="#xfe98a84a-d575-4015-b6a5-2407df99239b"/>
             </measure>
           </section>
         </score>
