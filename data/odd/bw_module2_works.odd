@@ -230,7 +230,7 @@
                     <constraintSpec ident="check_chord" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:chord">
-                                <sch:assert test="not(@tie) and not(tstamp) and not(tstamp2)">
+                                <sch:assert test="not(@tie) and not(@tstamp) and not(@tstamp2)">
                                     chords are not allowed to have @tie, @tstamp and @tstamp2
                                 </sch:assert>
                             </sch:rule>

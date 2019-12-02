@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2019-12-02T13:10:27Z. .
+Schema generated from ODD source 2019-12-02T13:49:35Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -10496,7 +10496,7 @@ Suggested values include: 1] smufl</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:chord">
-                                <sch:assert test="not(@tie) and not(tstamp) and not(tstamp2)">
+                                <sch:assert test="not(@tie) and not(@tstamp) and not(@tstamp2)">
                                     chords are not allowed to have @tie, @tstamp and @tstamp2
                                 </sch:assert>
                             </sch:rule>
