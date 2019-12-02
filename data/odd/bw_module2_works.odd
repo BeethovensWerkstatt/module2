@@ -117,11 +117,6 @@
                         </constraint>
                     </constraintSpec>
                     
-                    
-                    
-                    
-                    
-                    
                     <constraintSpec ident="check_tstamp2" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="@tstamp2">
@@ -188,10 +183,6 @@
                         </constraint>
                     </constraintSpec>
                     
-                   
-                    
-                    
-                    
                     <constraintSpec ident="check_stem.dir_dur1" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:note">
@@ -225,6 +216,116 @@
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
+                    
+                    <constraintSpec ident="check_notes" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:note">
+                                <sch:assert test="not(@fontsize) and not(@visible) and not(@tie) and not(@tstamp) and not(@tstamp2)">
+                                    notes are not allowed to have @fontsize, @visible, @tie, @tstamp and @tstamp2
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_chord" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:chord">
+                                <sch:assert test="not(@tie) and not(tstamp) and not(tstamp2)">
+                                    chords are not allowed to have @tie, @tstamp and @tstamp2
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_fermata_form_shape" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:fermata">
+                                <sch:assert test="not(form) and not(shape)">
+                                    fermata is not allowed to have @form and @shape
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_fermata_place" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:fermata">
+                                <sch:assert test="not(@place) or @place='below'">
+                                generally @place for fermata is not needed, only @place="below" is allowed if the fermata stands below
+                                </sch:assert>
+                        </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_beam" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:beam">
+                                <sch:assert test="not(@place)">
+                                    beam is not allowed to have a @place
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_octave" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:octave">
+                                <sch:assert test="not(@wavy)">
+                                    octave is not allowed to have @wavy
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_dir" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:dir">
+                                <sch:assert test="not(@label)">
+                                    dir is not allowed to have @label
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_reh" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:reh">
+                                <sch:assert test="not(@label)">
+                                    reh is not allowed to have @label
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_dynam" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:dynam">
+                                <sch:assert test="not(@label)">
+                                    dynam is not allowed to have @label
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <constraintSpec ident="check_rest" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:rest">
+                                <sch:assert test="not(@ploc) and not(@oloc) and not(@tstamp) and not(@tstamp2)">
+                                    rest is not allowed to have @ploc, @oloc, @tstamp and @tstamp2 
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                   <constraintSpec ident="check_mrest" scheme="isoschematron" mode="add">
+                       <constraint>
+                           <sch:rule context="mei:mrest">
+                               <sch:assert test="not(@tstamp) and not(@tstamp2)">
+                                   mrest is not allowed to have @tstamp and @tstamp2
+                               </sch:assert>
+                           </sch:rule>
+                       </constraint>
+                   </constraintSpec> 
                     
                 </elementSpec>
                 
