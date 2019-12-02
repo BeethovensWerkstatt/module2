@@ -16,6 +16,7 @@
                     <resp>In collaboration with</resp>
                     <name xml:id="BRA">Bernhard R. Appel</name>
                     <name xml:id="SC">Susanne Cox</name>
+                    <name xml:id="RM">Ran Mo</name>
                     <name xml:id="AM">Andreas Münzmay</name>
                     <name xml:id="EN">Elisa Novara</name>
                     <name xml:id="RS">Richard Sänger</name>
@@ -270,8 +271,8 @@
                     <constraintSpec ident="check_octave" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:octave">
-                                <sch:assert test="not(@wavy)">
-                                    octave is not allowed to have @wavy
+                                <sch:assert test="not(@lform) and @startid and @endid and not(@tstamp) and not(@tstamp2)">
+                                    octave is not allowed to have @lform; octave must have @startid and @endid, but is not allowed to have @tstamp and @tstamp2
                                 </sch:assert>
                             </sch:rule>
                         </constraint>
@@ -336,6 +337,8 @@
                            </sch:rule>
                        </constraint>
                    </constraintSpec>
+                    
+                   <constraintSpec ident="check_octave" scheme=""></constraintSpec>
                     
                 </elementSpec>
                 
