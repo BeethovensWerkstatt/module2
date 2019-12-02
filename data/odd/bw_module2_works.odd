@@ -327,6 +327,16 @@
                        </constraint>
                    </constraintSpec> 
                     
+                   <constraintSpec ident="check_mdiv" scheme="isoschematron" mode="add">
+                       <constraint>
+                           <sch:rule context="mei:mdiv">
+                               <sch:assert test="@n">
+                                   mdiv must have @n
+                               </sch:assert>
+                           </sch:rule>
+                       </constraint>
+                   </constraintSpec>
+                    
                 </elementSpec>
                 
                 <classSpec type="atts" ident="att.note.anl.cmn" mode="delete"> 
