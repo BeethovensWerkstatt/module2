@@ -1057,23 +1057,17 @@
                                     pname="b"
                                     grace="unknown"
                                     oct="2"
-                                    dur="32"
-                                    
-                                    fontsize="small"/>
+                                    dur="32"/>
                               <note xml:id="x220b0af5-5c94-40ca-9b0e-2155cc9ed25d"
                                     pname="e"
                                     grace="unknown"
                                     oct="3"
-                                    dur="32"
-                                    
-                                    fontsize="small"/>
+                                    dur="32"/>
                               <note xml:id="x81702cb3-e5a9-45d0-b3df-72d458aaabfe"
                                     pname="g"
                                     grace="unknown"
                                     oct="3"
-                                    dur="32"
-                                    
-                                    fontsize="small"/>
+                                    dur="32"/>
                            </beam>
                            <note xml:id="xd9fac4af-8c25-4833-85ff-4967d75893af"
                                  pname="b"
@@ -2808,30 +2802,23 @@
                                     pname="d"
                                     oct="5"
                                     dur="16"
-                                    
-                                    grace="unknown"
-                                    fontsize="small"/>
+                                    grace="unknown"/>
                               <note xml:id="xd9d5c257-acae-40db-a9a1-9145e728e3cd"
                                     pname="e"
                                     oct="5"
                                     dur="16"
-                                    
-                                    grace="unknown"
-                                    fontsize="small"/>
+                                    grace="unknown"/>
                               <note xml:id="x8aeae04f-1ae8-4a34-a0a9-70969300f363"
                                     pname="f"
                                     oct="5"
                                     dur="16"
-                                    
-                                    grace="unknown"
-                                    fontsize="small"/>
+                                    grace="unknown"/>
                            </beam>
                            <beam xml:id="x7a3f606c-5555-4971-8cfb-f70b3f898387">
                               <note xml:id="x6f42051b-ffc7-4761-bbdc-0a014281a557"
                                     pname="e"
                                     oct="5"
-                                    dur="8" stem.dir="up"
-                                    />
+                                    dur="8" stem.dir="up"/>
                               <note xml:id="xb12c213d-1400-4292-b93e-3baa31ec0eb4"
                                     pname="d"
                                     oct="5"
@@ -11535,24 +11522,18 @@
                               <note xml:id="xa196417a-ddfa-4d61-b06d-6662966a83c9"
                                     pname="b"
                                     oct="2"
-                                    
                                     dur="16"
-                                    grace="unknown"
-                                    fontsize="small"/>
+                                    grace="unknown"/>
                               <note xml:id="xb710ec55-b562-4d4a-9f5d-37ad7ba92d6f"
                                     pname="e"
                                     oct="3"
-                                    
                                     dur="16"
-                                    grace="unknown"
-                                    fontsize="small"/>
+                                    grace="unknown"/>
                               <note xml:id="xfdf57343-a31e-4df9-a42b-7e1752a00e45"
                                     pname="g"
                                     oct="3"
-                                    
                                     dur="16"
-                                    grace="unknown"
-                                    fontsize="small"/>
+                                    grace="unknown"/>
                            </beam>
                            <note xml:id="x2e7e8761-ab8c-42b5-b0bc-8ccdb41dfefb"
                                  pname="b"
@@ -13351,22 +13332,16 @@
                                     pname="g"
                                     oct="5"
                                     dur="16"
-                                    
-                                    fontsize="small"
                                     grace="unknown"/>
                               <note xml:id="x4016cc55-3295-4d0c-963c-5b39af4ebded"
                                     pname="a"
                                     oct="5"
                                     dur="16"
-                                    
-                                    fontsize="small"
                                     grace="unknown"/>
                               <note xml:id="x2b41aa6b-73f2-42ae-a5f8-a78f52b43d1b"
                                     pname="b"
                                     oct="5"
                                     dur="16"
-                                    
-                                    fontsize="small"
                                     grace="unknown"/>
                            </beam>
                            <beam xml:id="xa56ce3a4-bb7e-4bea-813d-59513dcee371">
@@ -20143,12 +20118,10 @@
                      <fermata xml:id="x221cd1f2-7a19-420b-8a97-5a3423632a6f"
                               staff="1"
                               startid="#x0847e4ef-d4f4-4884-843d-3f96a21dd8d2"
-                              place="above"
                               form="norm"/>
                      <fermata xml:id="xcc0df4f2-410e-43c6-bdf9-3a9bcd0b6175"
                               staff="2"
                               startid="#x0847e4ef-d4f4-4884-843d-3f96a21dd8d2"
-                              place="above"
                               form="norm"/>
                         <dynam xml:id="x86337e9d-31f8-4c29-98d2-c460f3c56a8c"
                               staff="1 2"
@@ -24233,12 +24206,10 @@
                      <fermata xml:id="x6d87f90b-3745-4a6e-aeec-be7ec0bd43e3"
                               staff="1"
                               startid="#x01ef8042-9d0a-418e-9836-fb6a2c26fc8a"
-                              place="above"
                               form="norm"/>
                      <fermata xml:id="xb4ff66d0-db0c-49b7-9a96-bb2fa17145ec"
                               staff="2"
                               startid="#x6070dc21-5477-4814-8bfd-81e38c6c5262"
-                              place="above"
                               form="norm"/>
                         <dir xml:id="x8bfb9071-65fa-4d91-8776-68e4a90180a5"
                               staff="1"
@@ -24950,12 +24921,10 @@
                      </staff>
                      <fermata xml:id="x8f79383e-d829-4d50-a0e8-239232c35f9f"
                               staff="1"
-                              startid="#x0de52503-45e0-4679-9d9d-fc912169a7c9"
-                              place="above"/>
+                              startid="#x0de52503-45e0-4679-9d9d-fc912169a7c9"/>
                      <fermata xml:id="x93eaedba-46cd-4599-97db-4103e07754c2"
                               staff="2"
-                              startid="#x2c0038ea-fe5f-48dc-b7e7-2cbb407caabe"
-                              place="above"/>
+                              startid="#x2c0038ea-fe5f-48dc-b7e7-2cbb407caabe"/>
                   </measure>
                </section>
             </score>
@@ -27882,12 +27851,10 @@
                      <fermata xml:id="x8ab53fea-925c-4958-883f-606e9dc938b2"
                               staff="1"
                               startid="#x966c309f-bc0d-46ef-b186-27cc08105905"
-                              place="above"
                               form="norm"/>
                      <fermata xml:id="xd9146d8f-8d50-49ed-a0a8-be904cf3eceb"
                               staff="2"
                               startid="#x5174094b-fa5d-4bb1-9f05-37f49ca6b8e2"
-                              place="above"
                               form="norm"/>
                   </measure>
                   <measure n="31" xml:id="x2f86bded-4607-499d-9f14-255bc08d0dae">
@@ -33973,8 +33940,8 @@
                            </tuplet>
                         </layer>
                      </staff>
-                     <fermata xml:id="x08c359a0-a7ad-4e7c-86b5-8b140fd14794" staff="1" startid="#xdfcdb679-7378-4678-82c5-04b7217a7b3f" place="above" form="norm"/>
-                     <fermata xml:id="x52aa5ac8-f936-4406-82ee-520bb609ae08" staff="2" startid="#x5d1d3996-34d4-4ffe-bf0d-e2209dbf0a73" place="above" form="norm"/>
+                     <fermata xml:id="x08c359a0-a7ad-4e7c-86b5-8b140fd14794" staff="1" startid="#xdfcdb679-7378-4678-82c5-04b7217a7b3f" form="norm"/>
+                     <fermata xml:id="x52aa5ac8-f936-4406-82ee-520bb609ae08" staff="2" startid="#x5d1d3996-34d4-4ffe-bf0d-e2209dbf0a73" form="norm"/>
                         <dynam xml:id="x287203cc-3153-4158-a42c-29d991ef8df9" staff="1 2" tstamp="2" place="between">p</dynam>
                         <slur xml:id="x66dde532-fedc-4b7c-a44e-556b1212b60a"
                               startid="#x1a175cf8-db13-4e46-b052-96ff981effcb"
@@ -36209,12 +36176,10 @@
                         <fermata xml:id="x5fc53843-6504-446c-8a03-d57188dca41b"
                               staff="1"
                               startid="#x3dacd64d-d388-4e17-bbdd-d1df344dcb18"
-                              place="above"
                               form="norm"/>
                         <fermata xml:id="x20abd3df-d22c-47f6-8591-c66c22877b4d"
                               staff="2"
                               startid="#xf3e9d82b-7bac-4ffe-982a-4cacc482593d"
-                              place="above"
                               form="norm"/>
                      <tie xml:id="x0ae1d462-18dc-42f4-b186-553664068ffa"
                           staff="1"
@@ -37865,12 +37830,10 @@
                         <fermata xml:id="x7be5d672-ff22-4672-b38d-49af92906cbe"
                               staff="1"
                               startid="#x37ff47d6-5b21-4a4d-8bb9-ff602da97edf"
-                              place="above"
                               form="norm"/>
                         <fermata xml:id="x3ac2ddfe-6b37-4335-8ac2-e9c53ad42265"
                               staff="2"
                               startid="#x3b8d7520-df46-4186-b366-0aa9c70fa584"
-                              place="above"
                               form="norm"/>
                      <dynam xml:id="x422c4b6d-ee75-4411-ad29-128f440cacb3"
                             staff="1 2"
