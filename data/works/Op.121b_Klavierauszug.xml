@@ -8,6 +8,10 @@
             <title type="main">Op. 121b - Opferlied (Klavierauszug)</title>
             <title type="subordinate">an electronic transcription</title>
             <respStmt>
+               <persName role="edt led" xml:id="SC">Susanne Cox</persName>
+               <corpName role="edt" xml:id="BW">Beethovens Werkstatt</corpName>
+            </respStmt>
+            <respStmt>
                <resp auth.uri="http://id.loc.gov/vocabulary/relators.html" codedval="cmp"/>
                <persName auth.uri="http://d-nb.info/gnd" codedval="118508288">Ludwig van
                   Beethoven</persName>
