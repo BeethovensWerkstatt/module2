@@ -348,21 +348,32 @@
                        </constraint>
                    </constraintSpec>
                      
-                  <constraintSpec ident="check_key_in_scoreDef" scheme="isoschematron" mode="add">
+                     
+                    <constraintSpec ident="check_key_in_scoreDef" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:scoreDef">
+                                <sch:let name="first.in.score" value="parent::mei:score and count(preceding-sibling::mei:*) = 0"/>
+                                <sch:let name="first.in.part" value="parent::mei:part and count(preceding-sibling::mei:*) = 0"/>
+                                <sch:let name="has.all.info" value="@key.sig and @key.mode"/>
+                                <sch:let name="parent.section" value="exists(parent::mei:section)"/>
+                                <sch:let name="has.preceding" value="exists(preceding-sibling::mei:scoreDef) and exists(parent::mei:score)"/>
+                                <sch:let name="all.or.nothing" value="(@key.sig and @key.mode) or (not(@key.sig) and not(@key.mode))"/>
+                                <sch:assert test="($first.in.score and $has.all.info) or ($first.in.part and $has.all.info) or (($parent.section or $has.preceding) and $all.or.nothing)">
+                                    scoreDef in score must have @key.sig and @key.mode; scoreDef in section must have @key.sig and @key.mode together or none of both (but not only one of this two attributes)
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>   
+                    
+                  <constraintSpec ident="check_keysig.showchange" scheme="isoschematron" mode="add">
                       <constraint>
-                          <sch:rule context="mei:scoreDef">
-                              <sch:let name="first.in.score" value="parent::mei:score and count(preceding-sibling::mei:*) = 0"/>
-                              <sch:let name="has.all.info" value="@key.sig and @key.mode"/>
-                              <sch:let name="parent.section" value="exists(parent::mei:section)"/>
-                              <sch:let name="has.preceding" value="exists(preceding-sibling::mei:scoreDef) and exists(parent::mei:score)"/>
-                              <sch:let name="all.or.nothing" value="(@key.sig and @key.mode) or (not(@key.sig) and not(@key.mode))"/>
-                              <sch:assert test="($first.in.score and $has.all.info) or (($parent.section or $has.preceding) and $all.or.nothing)">
-                                  scoreDef in score must have @key.sig and @key.mode; scoreDef in section must have @key.sig and @key.mode together or none of both (but not only one of this two attributes)
+                          <sch:rule context="mei:staffDef">
+                              <sch:assert test="not(@keysig.showchange)">
+                                  at staffDef @keysig.showchange is not allowed (use it in scoreDef)
                               </sch:assert>
                           </sch:rule>
                       </constraint>
                   </constraintSpec>
-                    
                  
                     
                 </elementSpec>
