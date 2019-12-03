@@ -106,13 +106,24 @@
                 <xsl:variable name="lowest.octave.notes"
                     select="$notes[@oct = string(min($notes/number(@oct)))]" as="node()+"/>
                 <xsl:variable name="lowest.note"
-                    select="
-                        $pnames.indizes[min(for $note in $lowest.octave.notes
-                        return
-                            (index-of($pnames.indizes, $note/@pname)))]"
+                    select="$pnames.indizes[min(for $note in $lowest.octave.notes return (index-of($pnames.indizes, $note/@pname)))]"
                     as="xs:string"/>
                 <xsl:value-of select="$lowest.note"/>
             </xsl:variable>
+
+
+            <!-- determine if bass tone has an accidental -->
+            <!--<xsl:template match="temp:chord/@bass" mode="identify.bass.accid">
+                <xsl:variable name="bass.note" select="$bass.tone" as="node()"/>
+                <xsl:variable name="bass.accid"
+                    select="if ($bass.note/@accid) then ($bass.note/@accid) else if ($bass.note/@accid.ges) then ($bass.note/@accid.ges) else ('')"
+                    as="xs:string"/>
+                <xsl:variable name="i17n.accid"
+                    select=" if ($bass.accid = 'f') then('♭') else if ($bass.accid = 's') then ('♯') else ('')"
+                    as="xs:string"/>
+                <xsl:attribute name="bass" select=". || $i17n.accid"/>
+            </xsl:template>-->
+
 
             <!--<xsl:variable name="bass.tone" as="xs:string">
                 <xsl:variable name="pnames.indizes" select="('c','d','e','f','g','a','b')" as="xs:string+"/>
@@ -187,8 +198,21 @@
                 <xsl:variable name="root.dur"
                     select="max($notes[.//@pname = $current.row/@*[. = '0']/local-name()]/(max(.//@tstamp2/number(.)) - min(.//@tstamp/number(.))))"
                     as="xs:double?"/>
+                <xsl:variable name="bass.accid" as="xs:string">
+                    <xsl:choose>
+                        <xsl:when test="$notes//mei:note[@pname = $bass.tone]//mei:accid/@accid.ges">
+                            <xsl:value-of select="$notes//mei:note[@pname = $bass.tone]//mei:accid/@accid.ges"/>
+                        </xsl:when>
+                        <xsl:when test="$notes//mei:note[@pname = $bass.tone]//mei:accid/@accid">
+                            <xsl:value-of select="$notes//mei:note[@pname = $bass.tone]//mei:accid/@accid"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="'n'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>
 
-                <temp:chord root="{$current.pname}" bass="{$bass.tone}"
+                <temp:chord root="{$current.pname}" bass="{$bass.tone}" bass.accid="{$bass.accid}"
                     bass.index="{$notes//mei:note[@pname = $bass.tone]/ancestor::temp:tone/@func}"
                     inversion="{$inversion}" accented.tstamp="{string($isAccented)}"
                     highest.cost="{max($notes/xs:integer(@cost))}" root.dur="{$root.dur}">
@@ -267,8 +291,8 @@
             <harm type="mfunc" xmlns="http://www.music-encoding.org/ns/mei">
                 <xsl:choose>
 
-                    <!-- compare root-note with bass tone, when they dont have the same pname and accid/accid.ges, copy root note and add a / with the bass tone after that-->
-                    <xsl:when test="$current.interpretation/@root ne $current.interpretation/@bass">
+                    <!-- compare root-note with bass tone, when they dont have the same pname, copy root note and add a / with the bass tone after that-->
+                    <xsl:when test="substring($current.interpretation/@root,1,1) ne upper-case($current.interpretation/@bass)">
 
                         <rend type="root">
                             <xsl:value-of select="$current.interpretation/@root"/>
@@ -279,10 +303,7 @@
                                     satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct7')">
                             <rend rend="sup" type="ct7">7</rend>
                         </xsl:if>
-                        <xsl:if
-                            test="
-                                some $func in $current.interpretation/temp:tone/@func
-                                    satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct9')">
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct9')">
                             <rend rend="sup" type="ct9">9</rend>
                         </xsl:if>
                         <rend type="bass">
@@ -301,7 +322,7 @@
 
 
                     <!-- when root note and bass note are of the same pname and accid/accid.ges, just copy root note -->
-                    <xsl:when test="$current.interpretation/@root eq $current.interpretation/@bass">
+                    <xsl:when test="substring($current.interpretation/@root,1,1) eq upper-case($current.interpretation/@bass)">
                         <xsl:variable name="is.mod" select="matches(., '[a-z]+')" as="xs:boolean"/>
                         <rend type="root">
                             <xsl:value-of select="$current.interpretation/@root"/>
@@ -1169,32 +1190,15 @@
 
     <!-- determine if chord root has an accidental -->
     <xsl:template match="temp:chord/@root" mode="identify.root.accid">
-        <xsl:variable name="note" select="parent::temp:chord/temp:tone[@func = '1']/mei:note[1]"
-            as="node()"/>
+        <xsl:variable name="note" select="parent::temp:chord/temp:tone[@func = '1']/mei:note[1]" as="node()"/>
         <xsl:variable name="accid"
-            select="
-                if ($note/@accid) then
-                    ($note/@accid)
-                else
-                    if ($note/@accid.ges) then
-                        ($note/@accid.ges)
-                    else
-                        ('')"
+            select="if ($note/@accid) then ($note/@accid) else if ($note/@accid.ges) then ($note/@accid.ges) else ('')"
             as="xs:string"/>
         <xsl:variable name="i18n.accid"
-            select="
-                if ($accid = 'f') then
-                    ('♭')
-                else
-                    if ($accid = 's') then
-                        ('♯')
-                    else
-                        ('')"
+            select=" if ($accid = 'f') then('♭') else if ($accid = 's') then ('♯') else ('')"
             as="xs:string"/>
         <xsl:attribute name="root" select=". || $i18n.accid"/>
     </xsl:template>
-
-
 
 
     <xsl:template match="temp:chord/@root" mode="identify.intervals">
@@ -1295,8 +1299,10 @@
             </xsl:when>
             <!--only ct1 and ct7: should be deleted later in a cleanup-xslt-->
             <xsl:when test="$root.note and $seventh.note and not($third.note) and not($fifth.note)">
-                <xsl:attribute name="root" select="'ciao'"/>
+                <xsl:attribute name="root" select="upper-case(substring(., 1, 1)) || substring(., 2) || 'ciao'"/>
             </xsl:when>
+            
+           
             <!--<xsl:when test="$third.dist = 4 and $fifth.dist = 7 and $ninth.note">
                 <xsl:attribute name="root" select="'ciaoi'"/>
             </xsl:when>-->
@@ -1350,6 +1356,8 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:if>-->
+        
+        
     </xsl:template>
 
 
