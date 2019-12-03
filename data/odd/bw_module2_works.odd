@@ -338,7 +338,15 @@
                        </constraint>
                    </constraintSpec>
                     
-                   <constraintSpec ident="check_octave" scheme=""></constraintSpec>
+                   <constraintSpec ident="check_clef" scheme="isoschematron" mode="add">
+                       <constraint>
+                           <sch:rule context="mei:clef">
+                               <sch:assert test="not(@tstamp) and not(@tstamp2)">
+                                   clefs in a measure are not allowed to have @tstamp and @tstamp2
+                               </sch:assert>
+                           </sch:rule>
+                       </constraint>
+                   </constraintSpec>
                     
                 </elementSpec>
                 
