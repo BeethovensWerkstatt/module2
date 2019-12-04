@@ -246,10 +246,6 @@
             <xsl:apply-templates select="$identified.root.accid" mode="identify.intervals"/>
         </xsl:variable>
 
-        <!--<xsl:if test="1 = 1">
-            <xsl:message select="'hallo hier:'"/>
-            <xsl:message select="$identified.mode" terminate="yes"/>
-        </xsl:if>-->
 
         <xsl:for-each select="$identified.intervals">
             <xsl:variable name="current.interpretation" select="." as="node()"/>
