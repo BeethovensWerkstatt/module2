@@ -32,6 +32,8 @@
         'matchFile2'
         'C'
     -->
+    <xsl:param name="hidden.staves"/>
+    <!-- a list of hidden staves (by @n), separated by comma. Empty string if full score shall be shown -->
 
     <xsl:include href="tools/pick.mdiv.xsl"/>
     <xsl:include href="tools/rescore.parts.xsl"/>
@@ -50,6 +52,7 @@
     <xsl:include href="anl/insert.harmonies.xsl"/>
     <xsl:include href="anl/determine.chords.xsl"/>
     <xsl:include href="anl/resolve.duplicate.harms.xsl"/>
+    <xsl:include href="tools/disable.staves.xsl"/>
 
     <xsl:include href="data/circleOf5.xsl"/>
 
@@ -62,8 +65,13 @@
         <xsl:variable name="rescored.parts" as="node()">
             <xsl:apply-templates select="$picked.mdiv" mode="rescore.parts"/>
         </xsl:variable>
+        <xsl:variable name="disabled.staves" as="node()">
+            <xsl:apply-templates select="$rescored.parts" mode="disable.staves">
+                <xsl:with-param name="hidden.staves" select="$hidden.staves" tunnel="yes"/>
+            </xsl:apply-templates>
+        </xsl:variable>
         <xsl:variable name="added.ids" as="node()">
-            <xsl:apply-templates select="$rescored.parts" mode="add.id"/>
+            <xsl:apply-templates select="$disabled.staves" mode="add.id"/>
         </xsl:variable>
         <xsl:variable name="added.tstamps" as="node()">
             <xsl:apply-templates select="$added.ids" mode="add.tstamps"/>
