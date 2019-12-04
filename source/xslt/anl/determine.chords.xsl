@@ -256,30 +256,32 @@
 
                     <!-- compare root-note with bass tone, when they dont have the same pname, copy root note and add a / with the bass tone after that-->
                     <xsl:when test="substring($current.interpretation/@root,1,1) ne upper-case($current.interpretation/@bass)">
-
                         <rend type="root">
                             <xsl:value-of select="$current.interpretation/@root"/>
                         </rend>
-                        <xsl:if
-                            test="
-                                some $func in $current.interpretation/temp:tone/@func
-                                    satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct7')">
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct7')">
                             <rend rend="sup" type="ct7">7</rend>
                         </xsl:if>
                         <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct9')">
                             <rend rend="sup" type="ct9">9</rend>
                         </xsl:if>
                         <rend type="bass">
-                            <xsl:value-of
-                                select="concat('/', upper-case($current.interpretation/@bass))"/>
+                            <xsl:value-of select="concat('/', upper-case($current.interpretation/@bass))"/>
                         </rend>
-                        <xsl:if
-                            test="
-                                some $func in $current.interpretation/temp:tone/@func
-                                    satisfies (string(tools:resolveMFuncByNumber($func)) eq '43sus')">
-                            <!--'[a-z]+'-->
-                            <rend type="mod43sus">43sus</rend>
-                            <!--<rend type="mod {tools:resolveMFuncByNumber(.)}" fontstyle="italic"><xsl:value-of select="."/></rend>-->
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '43sus')">
+                            <rend type="mod43sus" rend="sup" fontstyle="italic">43sus</rend>
+                        </xsl:if>
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '65sus')">
+                            <rend type="mod65sus" rend="sup" fontstyle="italic">65sus</rend>
+                        </xsl:if>
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '98sus')">
+                            <rend type="mod98sus" rend="sup" fontstyle="italic">98sus</rend>
+                        </xsl:if>
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '23ret')">
+                            <rend type="mod23ret" rend="sup" fontstyle="italic">23ret</rend>
+                        </xsl:if>
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '78ret')">
+                            <rend type="mod78ret" rend="sup" fontstyle="italic">78ret</rend>
                         </xsl:if>
                     </xsl:when>
 
@@ -302,11 +304,20 @@
                                     satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct9')">
                             <rend rend="sup" type="ct9">9</rend>
                         </xsl:if>
-                        <xsl:if test="$is.mod">
-                            <rend type="mod {tools:resolveMFuncByNumber(.)}" fontsize="70%"
-                                fontstyle="italic">
-                                <xsl:value-of select="."/>
-                            </rend>
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '43sus')">
+                            <rend type="mod43sus" rend="sup" fontstyle="italic">43sus</rend>
+                        </xsl:if>
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '65sus')">
+                            <rend type="mod65sus" rend="sup" fontstyle="italic">65sus</rend>
+                        </xsl:if>
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '98sus')">
+                            <rend type="mod98sus" rend="sup" fontstyle="italic">98sus</rend>
+                        </xsl:if>
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '23ret')">
+                            <rend type="mod23ret" rend="sup" fontstyle="italic">23ret</rend>
+                        </xsl:if>
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '78ret')">
+                            <rend type="mod78ret" rend="sup" fontstyle="italic">78ret</rend>
                         </xsl:if>
                     </xsl:when>
                 </xsl:choose>
@@ -1262,7 +1273,7 @@
             </xsl:when>
             <!--only ct1 and ct7: should be deleted later in a cleanup-xslt-->
             <xsl:when test="$root.note and $seventh.note and not($third.note) and not($fifth.note)">
-                <xsl:attribute name="root" select="upper-case(substring(., 1, 1)) || substring(., 2) || 'ciao'"/>
+                <xsl:attribute name="root" select="'ciao'"/>
             </xsl:when>
             
            
@@ -1409,7 +1420,7 @@
         </xsl:copy>
     </xsl:template>
 
-    <!-- MODE resolve.arpeggios: this template  -->
+    <!-- MODE resolve.arpeggios -->
     <xsl:template
         match="mei:beam[count(descendant::mei:note[not(@grace) and not(@cue) and @tstamp]) gt 2]"
         mode="resolve.arpeggios">
