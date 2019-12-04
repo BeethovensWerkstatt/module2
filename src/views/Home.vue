@@ -25,6 +25,7 @@
           <p>In order to start, you need to select a mode of comparison on the left side.</p>
         </div>
       </div>
+      <StaffSelectionModal/>
     </div>
   </div>
 </template>
@@ -36,6 +37,7 @@ import ModeSelection from '@/components/ModeSelection.vue'
 import Analysis from '@/components/Analysis.vue'
 import NavigationTop from '@/components/NavigationTop.vue'
 import SearchPane from '@/components/SearchPane.vue'
+import StaffSelectionModal from '@/components/StaffSelectionModal.vue'
 
 export default {
   name: 'home',
@@ -44,7 +46,8 @@ export default {
     ModeSelection,
     Analysis,
     NavigationTop,
-    SearchPane
+    SearchPane,
+    StaffSelectionModal
   },
   computed: {
     introVisible: function() {

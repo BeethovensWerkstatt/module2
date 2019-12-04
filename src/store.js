@@ -12,8 +12,17 @@ const environment = 'local' // 'local' or 'live'
 const api = (environment === 'local') ? 'http://localhost:8080/exist/apps/bw-module2/' : 'https://dev.beethovens-werkstatt.de/'
 
 const buildRequest = (comparison, methodLink, mdiv, transpose) => {
+  console.log('beginning')
+  console.log(mdiv)
+
+  let disabledStavesWork1 = []
+  let disabledStavesWork2 = []
+  mdiv.staves.filter(staff => staff.disabled === true).forEach(staff => disabledStavesWork1.push(staff.n))
+  mdiv.newStaves.filter(staff => staff.disabled === true).forEach(staff => disabledStavesWork2.push(staff.n))
+
+  let staffParam = (disabledStavesWork1.length > 0 || disabledStavesWork2.length > 0) ? ('?hideStaves=' + disabledStavesWork1.join() + '-' + disabledStavesWork2.join()) : ''
   // return 'resources/xql/getAnalysis.xql?comparisonId=' + comparison + '&method=' + method + '&mdiv=' + mdiv + '&transpose=' + transpose
-  return 'data/' + comparison + '/mdiv/' + mdiv + '/transpose/' + transpose + '/' + methodLink + '.xml'
+  return 'data/' + comparison + '/mdiv/' + mdiv.n + '/transpose/' + transpose + '/' + methodLink + '.xml' + staffParam
 }
 
 Vue.use(Vuex)
@@ -36,6 +45,8 @@ export default new Vuex.Store({
     loading: [],
     networkErrorMsg: null,
     navigationVisible: true, // this is the sidebar with work and mode selection
+    staffSelectionVisible: false,
+    proposedDisabledStaves: [[], []],
     search: {
       active: false,
       selectionStarted: false,
@@ -124,6 +135,85 @@ export default new Vuex.Store({
     },
     DEACTIVATE_SEARCH_SELECTION (state) {
       state.search = { ...state.search, selectionStarted: false }
+    },
+    ACTIVATE_STAFF_SELECTION (state) {
+      state.staffSelectionVisible = true
+    },
+    DEACTIVATE_STAFF_SELECTION (state) {
+      state.staffSelectionVisible = false
+    },
+    PROPOSE_DISABLE_STAFF (state, payload) {
+      let disabledWork1 = [...state.proposedDisabledStaves[0]]
+      let disabledWork2 = [...state.proposedDisabledStaves[1]]
+
+      let staff = payload.staff
+      let activeMovement = state.comparisons[state.activeComparison].movements[state.activeMovement - 1]
+
+      let staffCount = (payload.work === 1) ? activeMovement.staves.length : activeMovement.newStaves.length
+      let alreadyDisabledStaves = (payload.work === 1) ? disabledWork1 : disabledWork2
+
+      let canBeOmitted = (alreadyDisabledStaves.length < (staffCount - 1)) && (alreadyDisabledStaves.indexOf(staff) === -1)
+
+      if (canBeOmitted) {
+        alreadyDisabledStaves.push(staff)
+        let newState = (payload.work === 1) ? [alreadyDisabledStaves, disabledWork2] : [disabledWork1, alreadyDisabledStaves]
+        // console.log(newState)
+        state.proposedDisabledStaves = newState
+      }
+    },
+    PROPOSE_ENABLE_STAFF (state, payload) {
+      let disabledWork1 = [...state.proposedDisabledStaves[0]]
+      let disabledWork2 = [...state.proposedDisabledStaves[1]]
+
+      let staff = payload.staff
+      let disabledStaves = (payload.work === 1) ? disabledWork1 : disabledWork2
+
+      let pos = disabledStaves.indexOf(staff)
+      // console.log('enabling ' + staff + ' at pos ' + pos)
+      if (pos !== -1) {
+        disabledStaves.splice(pos, 1)
+        let newState = (payload.work === 1) ? [disabledStaves, disabledWork2] : [disabledWork1, disabledStaves]
+        // console.log(newState)
+        state.proposedDisabledStaves = newState
+      }
+    },
+    ACCEPT_PROPOSED_STAFF_SETUP (state) {
+      // let newMovement = Object.assing({}, )
+
+      let comparisons = { ...state.comparisons }
+
+      // not sure if the following is really necessary
+      comparisons = JSON.parse(JSON.stringify(comparisons))
+
+      let mdiv = comparisons[state.activeComparison].movements[state.activeMovement - 1]
+      mdiv.staves.forEach(staff => {
+        staff.disabled = state.proposedDisabledStaves[0].indexOf(staff.n) !== -1
+      })
+      mdiv.newStaves.forEach(staff => {
+        staff.disabled = state.proposedDisabledStaves[1].indexOf(staff.n) !== -1
+      })
+
+      state.comparisons = comparisons
+    },
+    REJECT_PROPOSED_STAFF_SETUP (state) {
+      try {
+        let oldStaves = state.comparisons[state.activeComparison].movements[state.activeMovement - 1].staves
+        let newStaves = state.comparisons[state.activeComparison].movements[state.activeMovement - 1].newStaves
+        let oldArr = []
+        let newArr = []
+
+        oldStaves.forEach(staff => {
+          if (staff.disabled) {
+            oldArr.push(staff.n)
+          }
+        })
+        newStaves.forEach(staff => {
+          if (staff.disabled) {
+            newArr.push(staff.n)
+          }
+        })
+        state.proposedDisabledStaves = [oldArr, newArr]
+      } catch (err) {}
     }
   },
   actions: {
@@ -151,7 +241,15 @@ export default new Vuex.Store({
       })
     },
     fetchMEI ({ commit, state }) {
-      let request = buildRequest(state.activeComparison, state.modes[state.activeMode].apiLink, state.activeMovement, state.transpose)
+      let movement
+
+      try {
+        movement = state.comparisons[state.activeComparison].movements[state.activeMovement - 1]
+      } catch (err) {
+        return null
+      }
+
+      let request = buildRequest(state.activeComparison, state.modes[state.activeMode].apiLink, movement, state.transpose)
 
       // console.log('fetching has started')
       return new Promise(resolve => {
@@ -194,10 +292,12 @@ export default new Vuex.Store({
       // todo: check if comparison with that id is available
       commit('ACTIVATE_COMPARISON', id)
       commit('SET_PAGE', 1)
+      commit('REJECT_PROPOSED_STAFF_SETUP')
     },
     activateMovement ({ commit }, n) {
       commit('ACTIVATE_MOVEMENT', n)
       commit('SET_PAGE', 1)
+      commit('REJECT_PROPOSED_STAFF_SETUP')
     },
     activateMode ({ commit }, id) {
       // todo: check if mode with that id is available
@@ -241,7 +341,7 @@ export default new Vuex.Store({
     setMaxPage ({ commit }, n) {
       commit('SET_MAX_PAGE', n)
     },
-    setTranpose ({ commit }, transpose) {
+    setTranspose ({ commit }, transpose) {
       commit('SET_TRANSPOSE', transpose)
     },
     showSearchPane ({ commit }) {
@@ -255,6 +355,24 @@ export default new Vuex.Store({
     },
     deactivateSearchSelection ({ commit }) {
       commit('DEACTIVATE_SEARCH_SELECTION')
+    },
+    activateStaffSelection ({ commit }) {
+      commit('ACTIVATE_STAFF_SELECTION')
+    },
+    deactivateStaffSelection ({ commit }) {
+      commit('DEACTIVATE_STAFF_SELECTION')
+    },
+    acceptProposedStaffSetup ({ commit }) {
+      commit('ACCEPT_PROPOSED_STAFF_SETUP')
+    },
+    rejectProposedStaffSetup ({ commit }) {
+      commit('REJECT_PROPOSED_STAFF_SETUP')
+    },
+    proposeEnabledStaff ({ commit }, payload) {
+      commit('PROPOSE_ENABLE_STAFF', payload)
+    },
+    proposeDisabledStaff ({ commit }, payload) {
+      commit('PROPOSE_DISABLE_STAFF', payload)
     }
   },
   getters: {
@@ -277,6 +395,34 @@ export default new Vuex.Store({
     },
     activeMovement: state => {
       return state.activeMovement
+    },
+    activeMovementObject: state => {
+      if (state.activeComparison === null) {
+        return null
+      }
+      return state.comparisons[state.activeComparison].movements[state.activeMovement - 1]
+    },
+    oldStaves: state => {
+      if (state.activeComparison === null) {
+        return []
+      }
+      try {
+        return state.comparisons[state.activeComparison].movements[state.activeMovement - 1].staves
+      } catch (err) {
+        console.log('oldStaves is err: ' + err + ' | state.activeMovement: ' + state.activeMovement + ' | state.activeComparison: ' + state.activeComparison)
+        return []
+      }
+    },
+    newStaves: state => {
+      if (state.activeComparison === null) {
+        return []
+      }
+      try {
+        return state.comparisons[state.activeComparison].movements[state.activeMovement - 1].newStaves
+      } catch (err) {
+        console.log('newStaves is err: ' + err + ' | state.activeMovement: ' + state.activeMovement + ' | state.activeComparison: ' + state.activeComparison)
+        return []
+      }
     },
     modes: state => {
       const keys = Object.keys(state.modes)
@@ -313,7 +459,15 @@ export default new Vuex.Store({
         return null
       }
 
-      let request = buildRequest(state.activeComparison, state.modes[state.activeMode].apiLink, state.activeMovement, state.transpose)
+      let movement
+
+      try {
+        movement = state.comparisons[state.activeComparison].movements[state.activeMovement - 1]
+      } catch (err) {
+        return null
+      }
+
+      let request = buildRequest(state.activeComparison, state.modes[state.activeMode].apiLink, movement, state.transpose)
 
       return request
     },
@@ -326,7 +480,15 @@ export default new Vuex.Store({
         return null
       }
 
-      let request = buildRequest(state.activeComparison, state.modes[state.activeMode].apiLink, state.activeMovement, state.transpose)
+      let movement
+
+      try {
+        movement = state.comparisons[state.activeComparison].movements[state.activeMovement - 1]
+      } catch (err) {
+        return null
+      }
+
+      let request = buildRequest(state.activeComparison, state.modes[state.activeMode].apiLink, movement, state.transpose)
 
       if (typeof state.cachedRequests[request] === 'undefined') {
         return null
@@ -357,6 +519,12 @@ export default new Vuex.Store({
     },
     searchSelectionActive: state => {
       return state.search.selectionStarted
+    },
+    staffSelectionVisible: state => {
+      return state.staffSelectionVisible
+    },
+    proposedDisabledStaves: state => {
+      return state.proposedDisabledStaves
     }
   }
 })
