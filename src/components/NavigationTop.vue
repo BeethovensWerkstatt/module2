@@ -4,7 +4,7 @@
           <PageNavigation/>
           <ZoomControl/>
           <StaffSelectionButton/>
-          <span>Transposition, Satzkern</span>
+          <TransposeButton/>
       </section>
 
       <section class="navbar-section">
@@ -19,6 +19,7 @@ import PageNavigation from '@/components/PageNavigation.vue'
 import ZoomControl from '@/components/ZoomControl.vue'
 import SearchButton from '@/components/SearchButton.vue'
 import StaffSelectionButton from '@/components/StaffSelectionButton.vue'
+import TransposeButton from '@/components/TransposeButton.vue'
 
 export default {
   name: 'NavigationTop',
@@ -26,7 +27,8 @@ export default {
     PageNavigation,
     ZoomControl,
     SearchButton,
-    StaffSelectionButton
+    StaffSelectionButton,
+    TransposeButton
   }
 }
 </script>

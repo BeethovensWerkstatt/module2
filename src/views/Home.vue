@@ -26,6 +26,7 @@
         </div>
       </div>
       <StaffSelectionModal/>
+      <TransposeModal/>
     </div>
   </div>
 </template>
@@ -38,6 +39,7 @@ import Analysis from '@/components/Analysis.vue'
 import NavigationTop from '@/components/NavigationTop.vue'
 import SearchPane from '@/components/SearchPane.vue'
 import StaffSelectionModal from '@/components/StaffSelectionModal.vue'
+import TransposeModal from '@/components/TransposeModal.vue'
 
 export default {
   name: 'home',
@@ -47,7 +49,8 @@ export default {
     Analysis,
     NavigationTop,
     SearchPane,
-    StaffSelectionModal
+    StaffSelectionModal,
+    TransposeModal
   },
   computed: {
     introVisible: function() {

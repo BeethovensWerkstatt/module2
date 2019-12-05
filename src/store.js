@@ -12,9 +12,6 @@ const environment = 'local' // 'local' or 'live'
 const api = (environment === 'local') ? 'http://localhost:8080/exist/apps/bw-module2/' : 'https://dev.beethovens-werkstatt.de/'
 
 const buildRequest = (comparison, methodLink, mdiv, transpose) => {
-  console.log('beginning')
-  console.log(mdiv)
-
   let disabledStavesWork1 = []
   let disabledStavesWork2 = []
   mdiv.staves.filter(staff => staff.disabled === true).forEach(staff => disabledStavesWork1.push(staff.n))
@@ -47,6 +44,8 @@ export default new Vuex.Store({
     navigationVisible: true, // this is the sidebar with work and mode selection
     staffSelectionVisible: false,
     proposedDisabledStaves: [[], []],
+    transposeSelectionVisible: false,
+    proposedTranspose: 'none',
     search: {
       active: false,
       selectionStarted: false,
@@ -97,6 +96,21 @@ export default new Vuex.Store({
     },
     SET_TRANSPOSE (state, transpose) {
       state.transpose = transpose
+    },
+    ACTIVATE_TRANSPOSE_SELECTION (state) {
+      state.transposeSelectionVisible = true
+    },
+    DEACTIVATE_TRANSPOSE_SELECTION (state) {
+      state.transposeSelectionVisible = false
+    },
+    SET_PROPOSED_TRANSPOSE (state, transpose) {
+      state.proposedTranspose = transpose
+    },
+    ACCEPT_PROPOSED_TRANSPOSE (state) {
+      state.transpose = state.proposedTranspose
+    },
+    REJECT_PROPOSED_TRANSPOSE (state) {
+      state.proposedTranspose = state.transpose
     },
     CACHE_REQUEST (state, { request, mei }) {
       // state.cachedRequests[request] = mei
@@ -344,6 +358,21 @@ export default new Vuex.Store({
     setTranspose ({ commit }, transpose) {
       commit('SET_TRANSPOSE', transpose)
     },
+    setProposedTranspose ({ commit }, transpose) {
+      commit('SET_PROPOSED_TRANSPOSE', transpose)
+    },
+    activateTransposeSelection ({ commit }) {
+      commit('ACTIVATE_TRANSPOSE_SELECTION')
+    },
+    deactivateTransposeSelection ({ commit }) {
+      commit('DEACTIVATE_TRANSPOSE_SELECTION')
+    },
+    acceptProposedTranspose ({ commit }) {
+      commit('ACCEPT_PROPOSED_TRANSPOSE')
+    },
+    rejectProposedTranspose ({ commit }) {
+      commit('REJECT_PROPOSED_TRANSPOSE')
+    },
     showSearchPane ({ commit }) {
       commit('SHOW_SEARCH_PANE')
     },
@@ -441,6 +470,9 @@ export default new Vuex.Store({
     transpose: state => {
       return state.transpose
     },
+    proposedTranspose: state => {
+      return state.proposedTranspose
+    },
     introVisible: state => {
       return state.introVisible
     },
@@ -522,6 +554,9 @@ export default new Vuex.Store({
     },
     staffSelectionVisible: state => {
       return state.staffSelectionVisible
+    },
+    transposeSelectionVisible: state => {
+      return state.transposeSelectionVisible
     },
     proposedDisabledStaves: state => {
       return state.proposedDisabledStaves
