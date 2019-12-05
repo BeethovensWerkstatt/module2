@@ -15,9 +15,12 @@ if(ends-with($exist:path,'/comparisons.json')) then (
     </dispatch>
     
 (: retrieves the MEI for a basic comparion (used for plain, single-note and genetic comparison) :)    
-) else if(matches($exist:path,'/data/[\da-zA-Z-_\.]+/mdiv/[\d]+/transpose/[\da-zA-Z-_\.]+/basic.xml$')) then (
+) else if(matches($exist:path,'/data/[\da-zA-Z-_\.]+/mdiv/[\d]+/transpose/[\da-zA-Z-_\.]+/basic.xml')) then (
     
     response:set-header("Access-Control-Allow-Origin", "*"),
+    
+    let $hiddenStaves := request:get-parameter('hideStaves', '')
+    return
     
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
         <forward url="{$exist:controller}/resources/xql/getAnalysis.xql">
@@ -25,6 +28,7 @@ if(ends-with($exist:path,'/comparisons.json')) then (
             <add-parameter name="method" value="comparison"/>
             <add-parameter name="mdiv" value="{tokenize($exist:path,'/')[last() - 3]}"/>
             <add-parameter name="transpose" value="{tokenize($exist:path,'/')[last() - 1]}"/>
+            <add-parameter name="hiddenStaves" value="{$hiddenStaves}"/>
         </forward>
     </dispatch>
 

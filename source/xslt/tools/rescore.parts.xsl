@@ -45,7 +45,7 @@
     </xsl:template>
     <xsl:template match="mei:measure[.//mei:multiRest]" mode="rescore.parts.prep">
         <xsl:variable name="this.measure" select="." as="node()"/>
-        <xsl:variable name="measure.count" select="number((.//mei:multiRest)[1]/@num) cast as xs:integer" as="xs:integer"/>
+        <xsl:variable name="measure.count" select="xs:integer((.//mei:multiRest)[1]/@num)" as="xs:integer"/>
         <xsl:next-match/>
         <xsl:if test="$measure.count gt 1">
             <xsl:for-each select="2 to $measure.count">

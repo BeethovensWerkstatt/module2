@@ -99,6 +99,21 @@
             <xsl:apply-templates select="node()" mode="#current"/>
         </xsl:copy>
     </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>move artic-attributes from artic-elements to chord-elements</xd:desc>
+    </xd:doc>    
+    <xsl:template match="mei:chord">
+        <xsl:copy>
+            <xsl:if test=".//@artic">
+                <xsl:attribute name="artic" select=".//@artic"/>
+            </xsl:if>
+            <xsl:apply-templates select="node() | @*" mode="#current"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    
+    
     <xd:doc>
         <xd:desc>delete accid-elements</xd:desc>
     </xd:doc>
