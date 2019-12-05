@@ -8568,9 +8568,9 @@
                       stem.dir="up"/>
                     <rest xml:id="xa638897a-4015-413d-8776-2e1647468857" dur="16"/>
                     <clef xml:id="x70d15849-9a13-400c-a8cd-aa3ff82c38f7" shape="F" line="4"/>
-                    <note xml:id="x04875dc9-4d80-486e-b4cc-13a442e7cb4c" pname="g" oct="3" dur="16"
+                    <note xml:id="x04875dc9-4d80-486e-b4cc-13a442e7cb4c" pname="f" oct="3" dur="16"
                       stem.dir="up"/>
-                    <!-- N.B. Fehler in OA! Hier (T. 83, Secondo, l. H., 6. Note sollte f sein, kein g -->
+                    <!-- N.B. Fehler in OA! Hier (T. 83, Secondo, l. H., 6. Note sollte g sein, kein f -->
                   </beam>
                   <beam xml:id="xb5d2630b-eab8-4c4b-9922-a5f67ee65a7a">
                     <note xml:id="x8c2e3d59-4722-4e2f-b2ec-69c11e3fa001" pname="b" oct="3" dur="8"
@@ -9250,8 +9250,9 @@
                     <note xml:id="x44333abf-4117-4452-8a9e-9fe65465be34" pname="c" oct="3" dur="8"
                       stem.dir="up"/>
                     <rest xml:id="x694ed358-7195-48dc-bae7-8e4de778dc92" dur="16"/>
-                    <note xml:id="xd1eabd64-983d-4bd5-b175-1cfc8327558c" pname="b" oct="3" dur="16"
+                    <note xml:id="xd1eabd64-983d-4bd5-b175-1cfc8327558c" pname="b" oct="2" dur="16"
                       stem.dir="up" accid.ges="f"/>
+                    <!-- Fehler in OA: T. 87, Secondo l. H., letzte Note sollte c statt B-->
                   </beam>
                 </layer>
               </staff>
@@ -16505,7 +16506,8 @@
                 <layer xml:id="xd3e64dad-97b2-4189-a84b-1b071e926d9b" n="1">
                   <rest xml:id="x3d9fb933-e377-4057-803f-0442208cd858" dur="2"/>
                   <rest xml:id="xec43cecb-08b1-49ff-9e43-5c9e1a600276" dur="4"/>
-                  <tuplet xml:id="x3354c1f7-91a9-48aa-8402-8fde3f60b061" num="3" numbase="2">
+                  <tuplet xml:id="x3354c1f7-91a9-48aa-8402-8fde3f60b061" num="3" numbase="2" 
+                    bracket.visible="false" num.visible="true">
                     <rest xml:id="x494ea892-4df8-4614-8374-91be5e9bedff" dur="8"/>
                     <beam xml:id="xb42abf62-3936-4b13-bdae-9a87dfc1915b">
                       <note xml:id="x47cacb14-2886-42f0-8a56-abc678dd9e8c" pname="b" oct="3" dur="8"
@@ -16547,8 +16549,8 @@
                   <mRest xml:id="x43f805d0-1d5f-4e91-901a-c5499f932354" dur="1"/>
                 </layer>
               </staff>
-              <slur xml:id="x97cd83d4-0e8a-4cb8-9d52-be472d09e122"  staff="2"
-                startid="#x494ea892-4df8-4614-8374-91be5e9bedff"
+              <slur xml:id="xa4ee5858-65ac-4952-8607-2597e2ac8367" staff="2"
+                startid="#x47cacb14-2886-42f0-8a56-abc678dd9e8c"
                 endid="#xcbdc230f-a1b5-42b3-8d5d-6d29659b428b"/>
               <slur xml:id="x62f54754-2206-41b2-bcfc-6a66aff9dba5"  staff="3"
                 startid="#x5b0b67f4-4a1c-4799-bdf8-e8f6c64f3e16"
@@ -16820,7 +16822,7 @@
                   <rest xml:id="x2c0a4894-cbdf-4786-92ff-f5be786f3bee" dur="8"/>
                   <rest xml:id="xf40a8894-abfe-4ea7-9719-8ebbe0491090" dur="8"/>
                   <clef xml:id="x22078c17-f998-45fb-a5e2-87acdb962ed7" shape="F" line="4"/>
-                  <tuplet xml:id="x79984221-a4c7-4fac-9f94-45e5667a1c9d" num="3" numbase="2">
+                  <tuplet xml:id="x79984221-a4c7-4fac-9f94-45e5667a1c9d" num="3" numbase="2" bracket.visible="false">
                     <!-- in OA steht die 3 oberhalb der Noten -->
                     <rest xml:id="xa5bd8059-5ff5-412f-8b81-b2c23977cef5" dur="8"/>
                     <beam xml:id="xf7700730-3ea1-41d4-b73a-0127d10eee5a">
@@ -17154,7 +17156,7 @@
                 <layer xml:id="x1d3f48c7-328a-42a7-a012-f4c816e9c937" n="1">
                   <rest xml:id="x94229a65-de46-400d-a838-4ee692030322" dur="2"/>
                   <rest xml:id="x84d482a5-b14d-4450-bd36-97d1177d6208" dur="4"/>
-                  <tuplet xml:id="xf4cdbc8c-46e2-4602-8b23-1c767a61a50c" num="3" numbase="2">
+                  <tuplet xml:id="xf4cdbc8c-46e2-4602-8b23-1c767a61a50c" num="3" numbase="2" bracket.visible="false">
                     <rest xml:id="x6b410ea7-2142-4342-8df2-25c400d9e837" dur="8"/>
                     <beam xml:id="x44bca5b6-b8a7-46dc-a6d5-803d71f8b4c6">
                       <note xml:id="x437868d2-073e-444d-9299-dff8a8e2daea" pname="b" oct="1" dur="8"
@@ -17168,6 +17170,9 @@
               <slur xml:id="xb624b1bb-333c-4490-b971-42cf258f1b6e"  staff="2"
                 startid="#x1cd95a77-3279-45e2-8772-da6b9b7216ee"
                 endid="#xb5b71027-0a4d-4787-9f00-6c47e666885a"/>
+              <slur xml:id="x6501115a-17a9-47e4-877b-293f374f8274" staff="4"
+                startid="#x437868d2-073e-444d-9299-dff8a8e2daea"
+                endid="#x309804b1-f9c2-4f02-837f-939fd226809f"/>
               <dynam xml:id="xabf8ec03-53ec-44a2-ab35-b4dab5d1e523" staff="2" tstamp="1"
                 place="below">f </dynam>
               <dynam xml:id="xd0e4202e-bd83-498d-8aba-27f9e1dfeffe" staff="2" tstamp="2.5"
@@ -17405,7 +17410,7 @@
               <staff xml:id="x6de7b422-9eee-4e59-8e83-4e65ce740194" n="2">
                 <layer xml:id="x6b900ed6-2b24-47b7-b1f1-ba3e794b886c" n="1">
                   <tuplet xml:id="x7371e73c-7a10-482c-85af-2fd4f2d641d8" num="3" numbase="2"
-                    num.visible="true" bracket.visible="true">
+                    num.visible="true" bracket.visible="false">
                     <rest xml:id="x9ff3f27a-3e44-4311-b0ba-970baa52a01a" dur="8"/>
                     <beam xml:id="xf6ed3432-124d-45b3-bbaf-a8d6356ee3a5">
                       <note xml:id="x4f17cfaa-fe83-48f2-bbe1-bc5d0a78a676" pname="g" oct="5" dur="8"
@@ -17554,6 +17559,9 @@
               <tie xml:id="xc1234f82-4a13-427c-8cb0-1e76bc22d30e" staff="1"
                 startid="#x760aa264-d6f8-4885-a6b7-9b5b33769152"
                 endid="#x56e6c32f-db6e-40d1-8061-364189cf6ee7"/>
+              <slur xml:id="x1b295cd8-1c07-4ead-bbe0-8d5f3485a36f" staff="2"
+                startid="#x4f17cfaa-fe83-48f2-bbe1-bc5d0a78a676"
+                endid="#xc272bb75-25c3-47cd-ac9c-c5b2906e0ed3"/>
             </measure>
             <measure n="149" xml:id="xa9ba769a-0a82-4f11-bb3f-f5989a6cd8a2">
               <staff xml:id="x54178e2f-1c48-42d0-9614-db4439a74113" n="1">
@@ -17803,7 +17811,7 @@
               <staff xml:id="x3d28988a-a126-44f8-a886-5a45d21a0242" n="2">
                 <layer xml:id="xd6e737cd-9fd0-4076-af50-33cc987ade44" n="1">
                   <tuplet xml:id="x60597fd3-a6e2-4e45-ae67-541f6a2d793a" num="3" numbase="2"
-                    bracket.visible="true" num.visible="true">
+                    bracket.visible="false" num.visible="false">
                     <note xml:id="x8cd793bf-98ed-42ec-9548-2712e68cac65" pname="g" oct="5" dur="8"
                       stem.dir="down"/>
                     <beam xml:id="x2fd753bb-7c70-4dc2-a0f1-9bec4ad41f7b">
@@ -18068,6 +18076,7 @@
                         stem.dir="up" accid="f"/>
                       <note xml:id="x3d23a2f4-0313-4a18-a3aa-91efed18f694" pname="a" oct="2" dur="8"
                         stem.dir="up"/>
+                      <!-- Hier vermutlich Fehler in OA: T. 151, Secondo, r. H. B bei der letzten Note fehlt -->
                     </tuplet>
                   </beam>
                 </layer>
