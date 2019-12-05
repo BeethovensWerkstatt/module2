@@ -53,6 +53,7 @@
     <xsl:include href="anl/determine.chords.xsl"/>
     <xsl:include href="anl/resolve.duplicate.harms.xsl"/>
     <xsl:include href="tools/disable.staves.xsl"/>
+    <xsl:include href="anl/clean.up.xsl"/>
 
     <xsl:include href="data/circleOf5.xsl"/>
 
@@ -125,7 +126,11 @@
                             <xsl:with-param name="all.keys" select="'C'" as="xs:string*" tunnel="yes"/>
                         </xsl:apply-templates>    
                     </xsl:variable>
-                    <xsl:copy-of select="$inserted.harmonies"/>
+                    <xsl:variable name="cleaned.harmonies" as="node()*">
+                        <xsl:apply-templates select="$inserted.harmonies" mode="clean.harmonies">
+                        </xsl:apply-templates>    
+                    </xsl:variable>
+                    <xsl:copy-of select="$cleaned.harmonies"/>
                 </xsl:when>
                 
                 <xsl:otherwise>

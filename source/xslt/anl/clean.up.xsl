@@ -17,26 +17,24 @@
     
     
     
-    <xsl:template match="/">
-        <xsl:apply-templates select="node()"/>
-    </xsl:template>
+    
     
     <!-- delete all wrapping choice-elements -->
-    <xsl:template match="mei:choice[@type='harmInterpretation']">
+    <xsl:template match="mei:choice[@type='harmInterpretation']" mode="clean.harmonies">
         <xsl:copy-of select="mei:harm"/>
     </xsl:template>
     
     
     <!--delete all choice-elements that have a rend elements that contains the word "ciao"-->
-    <xsl:template match="mei:choice[descendant::mei:rend[@type='root' and text()='ciao']]"/>
+    <xsl:template match="mei:choice[descendant::mei:rend[@type='root' and text()='ciao']]" mode="clean.harmonies"/>
     
    
     
-    <xsl:template match="node() | @*">
+    <!--<xsl:template match="node() | @*">
         <xsl:copy>
             <xsl:apply-templates select="node() | @*"/>
         </xsl:copy>
-    </xsl:template>
+    </xsl:template>-->
     
     
 </xsl:stylesheet>
