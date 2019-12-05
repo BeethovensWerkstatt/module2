@@ -9,6 +9,10 @@
          <titleStmt>
             <title type="main">Streichquartett F-Dur, op. 14/1</title>
             <title type="subordinate">an electronic transcription</title>
+               <respStmt>
+                     <persName role="edt led" xml:id="SC">Susanne Cox</persName>
+                     <corpName role="edt" xml:id="BW">Beethovens Werkstatt</corpName>
+               </respStmt>
             <respStmt>
                <resp auth.uri="http://id.loc.gov/vocabulary/relators.html" codedval="cmp"/>
                <persName auth.uri="http://d-nb.info/gnd" codedval="118508288">Ludwig van Beethoven</persName>
@@ -276,8 +280,7 @@
                         <dynam xml:id="x1494e948-4432-4ac5-abd5-be59731ee86e"
                                tstamp="3"
                                place="below"
-                               staff="1"
-                               label="words">cres</dynam>
+                               staff="1">cres</dynam>
                      </measure>
                      <measure n="4" xml:id="xc76dad38-51df-4527-a9d3-625e40a3b45b">
                         <staff xml:id="xa3e3cd9e-3d4a-4e42-a724-79c281988114" n="1">
@@ -309,12 +312,9 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x362d038e-cb35-4916-b06e-0b440e6348de"
-                               label="direction"
                                tstamp="1"
                                place="below"
-                               staff="1">
-                           sf
-                        </dynam>
+                               staff="1">sf</dynam>
                         <slur xml:id="xd1ffece9-48ce-45a0-9b29-46fbe38d8cc9"
                               startid="#xf1612e8e-e95e-420c-88e4-cb281ab02ad0"
                               
@@ -379,7 +379,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x0bac7b06-e2ef-44f1-94b1-499529ae70a5"
-                               label="direction"
+                               
                                tstamp="1"
                                place="below"
                                staff="1">
@@ -459,24 +459,18 @@
                                        grace="unknown"
                                        pname="d"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="x01f514cf-f9ac-444c-b94d-82b70d04c38f"
                                        grace="unknown"
                                        pname="c"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="x9f2769ff-badd-4a5b-ba46-d3fedcfb3e3c"
                                        grace="unknown"
                                        pname="b"
                                        accid="n"
                                        oct="4"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                               </beam>
                               <beam xml:id="x0e411080-c1ba-4d0e-a23a-645e12d6f6b8">
                                  <note xml:id="xa12a4dc6-d96d-4588-9445-100198c85a49"
@@ -651,7 +645,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xf1058d96-7a05-425e-85ed-7b6e49ad6c13"
-                               label="direction"
+                               
                                tstamp="1"
                                place="below"
                                staff="1">p</dynam>
@@ -696,7 +690,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x9c8a9a72-610f-4016-af6c-5ad3981839af"
-                               label="direction"
+                               
                                tstamp="1"
                                place="below"
                                staff="1">p</dynam>
@@ -772,7 +766,7 @@
                               endid="#xc5d0e470-fce7-4443-bd6e-221b20001fda"
                               staff="1"/>
                         <dynam xml:id="x39ba1bd3-41aa-4bf9-9349-c87df0e5ab5e"
-                               label="direction"
+                               
                                tstamp="3"
                                place="below"
                                staff="1">sf</dynam>
@@ -1139,23 +1133,17 @@
                                        grace="unknown"
                                        pname="e"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="xd80cc483-c2c6-437d-98c1-7b67ff26a29f"
                                        grace="unknown"
                                        pname="f"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="xb1489145-6f31-4240-9ed6-601888be4569"
                                        grace="unknown"
                                        pname="g"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                               </beam>
                               <beam xml:id="x645a4fbc-1a1d-4c50-a0b3-f6e933dd3c71">
                                  <note xml:id="xd3e7cd49-6b19-4b23-8a0a-64b716443306"
@@ -3700,24 +3688,18 @@
                                        pname="d"
                                        oct="5"
                                        dur="16"
-                                       
-                                       grace="unknown"
-                                       fontsize="small"/>
+                                       grace="unknown"/>
                                  <note xml:id="x5a3dff65-aa5e-4a7f-b7db-21096f0fdbce"
                                        pname="c"
                                        oct="5"
                                        dur="16"
-                                       
-                                       grace="unknown"
-                                       fontsize="small"/>
+                                       grace="unknown"/>
                                  <note xml:id="x766a86a4-5429-4d56-a329-7f06338eacc4"
                                        pname="b"
                                        accid="n"
                                        oct="4"
                                        dur="16"
-                                       
-                                       grace="unknown"
-                                       fontsize="small"/>
+                                       grace="unknown"/>
                               </beam>
                               <beam xml:id="x9c247182-18dd-4d77-adb9-74504f3d25dd">
                                  <note xml:id="x8c05e7de-7ba7-41f2-b464-c877865e2cdd"
@@ -3849,7 +3831,7 @@
                                tstamp="1"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                         <tie xml:id="x29ff1802-97e3-4051-9d16-bdcef4478056"
                              staff="1"
                              startid="#xa62128e5-a15d-48ef-9242-38033a018dae"
@@ -4577,30 +4559,23 @@
                                     pname="b"
                                     oct="5"
                                     dur="4"
-                                    
                                     accid.ges="f"/>
                               <beam xml:id="xb4426bb0-0c6f-412f-9f2d-190766d36e47">
                                  <note xml:id="x6fcc7006-45d5-4a88-a971-f99d530123db"
                                        grace="unknown"
                                        pname="a"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="xf54a1e2f-3120-4b35-bcea-3b800a2915c3"
                                        grace="unknown"
                                        pname="b"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="x9980e753-cc70-4515-a47c-7f9cea5d4d71"
                                        grace="unknown"
                                        pname="c"
                                        oct="6"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                               </beam>
                               <beam xml:id="x74059a5d-cf09-498b-a3a6-5da5afe64c6e">
                                  <note xml:id="x289b0373-6030-43ed-b24d-d2d30a2803ec"
@@ -4752,29 +4727,21 @@
                                        grace="unknown"
                                        pname="a"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="x283ccfc1-1e70-42db-8394-179470532ddb"
                                        grace="unknown"
                                        pname="b"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="xed4e1785-d861-4eb3-b4c3-3c01d887a7ef"
                                        grace="unknown"
                                        pname="c"
-                                       oct="6"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       oct="6"/>
                               </beam>
                               <note xml:id="xf50bb857-be38-4124-9873-24d0402f40eb"
                                     pname="b"
                                     oct="5"
                                     dur="4"
-                                    
                                     accid.ges="f"/>
                               <note xml:id="xeb934d2c-6e56-47d3-bc42-e49634353991"
                                     pname="a"
@@ -4786,7 +4753,6 @@
                         </staff>
                         <slur xml:id="x05254e4f-7fc0-4c6a-a5c1-c69067e6cd25"
                               startid="#xf50bb857-be38-4124-9873-24d0402f40eb"
-                              
                               endid="#xeb934d2c-6e56-47d3-bc42-e49634353991"
                               staff="1"/>
                      </measure>
@@ -7715,7 +7681,7 @@
                               endid="#x4fd7551c-41a7-43d2-a120-ce7e43ab5e18"
                               staff="1"/>
                         <dynam xml:id="x5905b5cc-e748-4ed5-a560-8ec1e48a9574"
-                               label="direction"
+                               
                                tstamp="3"
                                place="below"
                                staff="1">sf</dynam>
@@ -7938,7 +7904,7 @@
                                tstamp="2"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                      </measure>
                      <measure n="53" xml:id="x8ba14634-f436-4209-90df-29c795ed4f33">
                         <staff xml:id="x2000372c-b2bf-4886-8293-ec11447833d9" n="1">
@@ -12903,7 +12869,7 @@
                               endid="#x0c07d3db-d9d0-4290-9961-23fb900c3e31"
                               staff="1"/>
                         <dynam xml:id="x455eb55e-e24f-43dd-b79a-2d9351303b2b"
-                               label="direction"
+                               
                                tstamp="2.5"
                                place="below"
                                staff="1"> p </dynam>
@@ -13460,7 +13426,7 @@
                                tstamp="2"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                      </measure>
                      <measure n="158" xml:id="xb35c1856-e015-4b3c-b5f9-b33306f82958">
                         <staff xml:id="x581b119c-2224-45c0-984d-b62a5848002f" n="1">
@@ -20319,7 +20285,7 @@
                                tstamp="2"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                      </measure>
                      <measure n="4" xml:id="xc16c64f6-7e3a-4a0b-abe4-0eab6998578a">
                         <staff xml:id="x4ab547c6-bf0c-49d7-8d7c-12da69d7b6c8" n="1">
@@ -20711,7 +20677,7 @@
                                tstamp="2"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                      </measure>
                      <measure n="16" xml:id="x3b51b492-3031-48d5-9a54-ff8ab61fcada">
                         <staff xml:id="x55acbe3c-dee8-417f-9e0d-98408341a70a" n="1">
@@ -24788,7 +24754,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x89206c3f-3073-49d1-a41e-6821884a7bc1"
-                               label="direction"
+                               
                                tstamp="3.5"
                                place="below"
                                staff="1">
@@ -24922,7 +24888,7 @@
                                tstamp="3.5"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                      </measure>
                      <measure n="136" xml:id="x8f49fd18-0d8a-4e0b-b56e-7f25b5673442">
                         <staff xml:id="x24b4b4e8-9362-486e-a695-6bb674d4b84d" n="1">
@@ -25483,7 +25449,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x919b08d6-3608-4e21-978b-22a22babc1c4"
-                               label="direction"
+                               
                                tstamp="3"
                                place="below"
                                staff="1">
@@ -26792,7 +26758,6 @@
                         <fermata xml:id="xf7e6c791-7005-4ccd-8220-3daa62fefda6"
                                  startid="#xc0b14ab8-b5b3-46f8-ae33-b17426859888"
                                  staff="1"
-                                 place="above"
                                  form="norm"/>
                      </measure>
                      <measure n="33" xml:id="xdbe50930-96eb-4007-9910-fecfb49b1189">
@@ -28701,7 +28666,6 @@
                         </staff>
                         <fermata xml:id="x8a8b29bc-af0d-4b49-9a95-6e1d48e4802c"
                                  staff="1"
-                                 place="above"
                                  startid="#xbf7d765f-36d3-4c14-9b71-8f248d2135ac"/>
                            <dir xml:id="x43aae218-5b61-4e96-9632-64ccc6dc01ef"
                                  staff="1"
@@ -29078,7 +29042,6 @@
                            </layer>
                         </staff>
                         <fermata xml:id="x0e8f8c8e-ac77-44c4-8b44-713cf8838aa6"
-                                 place="above"
                                  staff="1"
                                  form="norm"
                                  startid="#xeb20cf87-d728-40db-bc86-e43a74521b06"/>
@@ -29812,7 +29775,6 @@
                         <fermata xml:id="x5b2c73b1-eb68-4601-9687-0ac90a4df850"
                                  staff="1"
                                  startid="#x9736e3e2-2034-41c8-b1b6-55b76a90589f"
-                                 place="above"
                                  form="norm"/>
                            <dynam xml:id="x3ff5bae8-43d4-4bc8-b9be-5aa76015a52e"
                                tstamp="1"
@@ -29827,15 +29789,13 @@
                                     oct="3"
                                     dur="2"
                                     dots="1"
-                                    
                                     accid.ges="f"/>
                            </layer>
                         </staff>
                         <dynam xml:id="x0b6760bb-d4bd-46d1-bf90-93e41ead0258"
                                tstamp="1"
                                place="below"
-                               staff="1"
-                               label="words">cres</dynam>
+                               staff="1">cres</dynam>
                      </measure>
                      <measure n="34" xml:id="x6689a675-77e2-4590-8082-52f968489a64">
                         <staff xml:id="xf156e712-bb7c-43b1-955c-8d932df38736" n="1">
@@ -31390,7 +31350,6 @@
                            <fermata xml:id="x11dc17fb-81ab-422a-92db-b92daad55069"
                                  staff="1"
                                  startid="#x246dfb51-39e2-47c0-be88-d839b92837fa"
-                                 place="above"
                                  form="norm"/>
                            <dir xml:id="x2b69ecc9-60ae-47f5-9bf3-11e24c71ad97"
                                  staff="1"
@@ -31673,7 +31632,6 @@
                         </staff>
                         <fermata xml:id="x9494ae54-512d-44db-9969-ae109dc7e7c1"
                                  staff="1"
-                                 place="above"
                                  form="norm"
                                  startid="#xc4e38ea2-cf1b-4304-8f23-96f67f61c64d"/>
                      </measure>
@@ -32399,7 +32357,6 @@
                         <fermata xml:id="x16fb8d11-40a2-4df8-9608-4d785a273ced"
                                  staff="1"
                                  startid="#x6d50b858-db69-4619-a7f6-a562cac4307a"
-                                 place="above"
                                  form="norm"/>
                      </measure>
                      <measure n="33" xml:id="xc721bf21-b78c-49e8-896f-8e5dc1b609a9">
@@ -33802,7 +33759,6 @@
                         <fermata xml:id="x0e28e75b-cd02-4556-8fc4-8d67e3d04685"
                                  staff="1"
                                  startid="#xf8aa581a-305c-45ff-ab56-893b4d31bb91"
-                                 place="above"
                                  form="norm"/>
                            <dir xml:id="xb5b0b3d6-bb00-4b2c-a2d3-d6866dcdd5db"
                                  staff="1"
@@ -34077,7 +34033,6 @@
                         </staff>
                         <fermata xml:id="x8e2cbdb8-ad36-4f94-849b-6deb866c8ef0"
                                  staff="1"
-                                 place="above"
                                  startid="#xc380cab4-a488-40f5-9704-94831c3e3fc8"/>
                      </measure>
                   </section>
@@ -34769,13 +34724,11 @@
                         <fermata xml:id="xcd87f473-c1fe-4135-9799-76878ec14bd3"
                                  staff="1"
                                  startid="#x54cb44c2-075a-429e-a814-5ccb18ec30d8"
-                                 place="above"
                                  form="norm"/>
                            <dynam xml:id="xb95ae5c7-72cd-474b-87d2-22191bf1710c"
                                tstamp="1"
                                place="below"
-                               staff="1">p  </dynam>
-                           
+                               staff="1">p</dynam>
                      </measure>
                      <measure n="33" xml:id="x25552f7c-a7f0-45a9-bb14-70a3cb481b8d">
                         <staff xml:id="x8c83c63d-2d03-4d28-ae0e-f80fc2805fb1" n="1">
@@ -36339,7 +36292,6 @@
                         </staff>
                         <fermata xml:id="xa0a9ef6c-31b2-4d8e-84ff-bf8925a0d11c"
                                  form="norm"
-                                 place="above"
                                  staff="1"
                                  startid="#x6d6111c4-96d5-4504-853a-8a43ab452e66"/>
                      </measure>
@@ -37586,8 +37538,7 @@
                               staff="1"/>
                         <fermata xml:id="xa10e364d-f19b-4122-85d0-d6cf7da1c611"
                                  staff="1"
-                                 startid="#xf0fcc7af-dfed-40dc-99ab-a9b5aaf08261"
-                                 place="above"/>
+                                 startid="#xf0fcc7af-dfed-40dc-99ab-a9b5aaf08261"/>
                      </measure>
                      <measure n="31" xml:id="x527d55ec-9c8c-4fc8-b036-c9f4e710ea7c">
                         <staff xml:id="x640b4d4b-059a-46a5-af39-2c4618a96273" n="1">
@@ -42723,8 +42674,7 @@
                         </dynam>
                         <fermata xml:id="xcaec5966-64b5-4ab4-a46f-d714f8aeb0b1"
                                  staff="1"
-                                 startid="#x28b67db7-a1c0-4826-a7ae-2573259bfab6"
-                                 place="above"/>
+                                 startid="#x28b67db7-a1c0-4826-a7ae-2573259bfab6"/>
                      </measure>
                      <measure n="84" xml:id="x459c0452-17bf-4da4-ba2c-88efb347348d">
                         <staff xml:id="x098b367c-1917-44b2-bce8-cb48645a01e0" n="1">
@@ -43728,8 +43678,7 @@
                         </dynam>
                         <fermata xml:id="x6e0f19b9-5e0c-4f7d-a45c-aea4aa94e18a"
                                  staff="1"
-                                 startid="#x148ba44a-a717-40b1-936a-2f56c98c3563"
-                                 place="above"/>
+                                 startid="#x148ba44a-a717-40b1-936a-2f56c98c3563"/>
                         <tie xml:id="x10a4fd08-e216-4716-a7d1-94d62b348823"
                              staff="1"
                              startid="#x42c21dfd-209c-490d-8eb1-d93558b943b2"
@@ -44848,8 +44797,7 @@
                         </dynam>
                         <fermata xml:id="x6eb214e7-fe49-4d2f-94d9-3d684a3d60af"
                                  staff="1"
-                                 startid="#x4012281d-573a-4a86-b936-7968d3cbf4a5"
-                                 place="above"/>
+                                 startid="#x4012281d-573a-4a86-b936-7968d3cbf4a5"/>
                      </measure>
                      <measure n="122" xml:id="x9d6e2d2d-2c42-4ea6-946c-54c05a4f32bd">
                         <staff xml:id="xf90dd040-42ee-40dc-96e8-fb8adb2c7de2" n="1">
@@ -46128,7 +46076,7 @@
                                tstamp="1.2"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                         <slur xml:id="x2367a681-5543-4b00-974d-629e3ae1d53a"
                               startid="#x97651cd0-92cc-4c03-a63e-ca3942c29e6c"
                               
@@ -46448,8 +46396,7 @@
                         </dynam>
                         <fermata xml:id="xb4ca82ac-4bd5-49f2-a3fb-b0d373c35cb6"
                                  staff="1"
-                                 startid="#x01ecd152-d595-4231-abf1-849e62207610"
-                                 place="above"/>
+                                 startid="#x01ecd152-d595-4231-abf1-849e62207610"/>
                         <tie xml:id="x70aaffd4-012e-43f0-a19a-3b5fa922c169"
                              staff="1"
                              startid="#xd9e15363-eef4-45fd-8317-924963bb6d55"
@@ -48655,8 +48602,7 @@
                         
                         <fermata xml:id="x0a516697-bd08-409d-8f39-cb3899d7f3be"
                                  staff="1"
-                                 startid="#x894e58ac-c91b-4f40-9ff3-836ffa897a95"
-                                 place="above"/>
+                                 startid="#x894e58ac-c91b-4f40-9ff3-836ffa897a95"/>
                      </measure>
                      <measure n="84" xml:id="x4ab7df9b-621a-4e80-9516-3ee695f80198">
                         <staff xml:id="x2fa907c3-06d6-4ef6-8d1f-035501be952a" n="1">
@@ -49679,8 +49625,7 @@
                                staff="1">cres</dynam>
                         <fermata xml:id="x58039af9-b5e2-4c8c-9d1c-d4beecb80213"
                                  staff="1"
-                                 startid="#x97786190-6234-46c7-a1d4-6d19b764d6f2"
-                                 place="above"/>
+                                 startid="#x97786190-6234-46c7-a1d4-6d19b764d6f2"/>
                         <tie xml:id="xdbc6978c-07cc-4d00-80f9-22fd4a95989c"
                              staff="1"
                              startid="#x5de5ca29-7a9b-4f47-95ff-123b7bde15e8"
@@ -50759,7 +50704,7 @@
                                tstamp="2"
                                place="below"
                                staff="1"
-                               label="words">decres</dynam>
+                               >decres</dynam>
                         
                         
                      </measure>
@@ -50944,8 +50889,7 @@
                         </dynam>
                         <fermata xml:id="x7cfc962a-e42b-4520-93e8-963ef88891cc"
                                  staff="1"
-                                 startid="#xca2e690e-80ad-4527-9248-640a74423501"
-                                 place="above"/>
+                                 startid="#xca2e690e-80ad-4527-9248-640a74423501"/>
                      </measure>
                      <measure n="122" xml:id="x224f7745-d697-4e7a-a47c-45829a479dfb">
                         <staff xml:id="x638773c1-b597-453a-9232-ff21b9010ce2" n="1">
@@ -51199,7 +51143,7 @@
                                tstamp="1"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                         <dynam xml:id="xfc31df43-c2cb-4013-b9aa-0a36bc9302a0"
                                tstamp="2.1"
                                place="below"
@@ -52445,8 +52389,7 @@
                         </staff>
                         <fermata xml:id="x12a515e9-2b43-4410-ba3e-188f3284c422"
                                  staff="1"
-                                 startid="#xd2289b9e-5a1c-4602-a660-134b5f134c8a"
-                                 place="above"/>
+                                 startid="#xd2289b9e-5a1c-4602-a660-134b5f134c8a"/>
                            <dynam xml:id="xfee2b85e-b976-4675-8bd3-e4a83936fe2a"
                                tstamp="1"
                                place="below"
@@ -54562,8 +54505,7 @@
                               staff="1"/>
                         <fermata xml:id="x2c4d70fa-c8b2-47cf-b479-e65b14c3b4c1"
                                  staff="1"
-                                 startid="#xd133d916-20c9-4328-94cb-425514914e1d"
-                                 place="above"/>
+                                 startid="#xd133d916-20c9-4328-94cb-425514914e1d"/>
                            <dynam xml:id="x4948735e-bce2-4b8d-a019-c0433865b56c"
                                tstamp="2"
                                place="below"
@@ -55448,8 +55390,7 @@
                         
                         <fermata xml:id="x1a9dc93c-ff17-44f5-aaa6-302e16dcdf24"
                                  staff="1"
-                                 startid="#x337c2afe-7c5c-486f-833b-f282a21a1ec1"
-                                 place="above"/>
+                                 startid="#x337c2afe-7c5c-486f-833b-f282a21a1ec1"/>
                      </measure>
                      <measure n="109" xml:id="x67a126ad-2129-4ddc-8947-3411e95e8288">
                         <staff xml:id="xa92db3e3-6a81-407e-9e48-21b7504e79bd" n="1">
@@ -56155,8 +56096,7 @@
                         </dynam>
                         <fermata xml:id="x5a68897c-2561-43bd-a7a1-7dc24b073a00"
                                  staff="1"
-                                 startid="#x9514d1b3-d338-421a-9dd2-ce03481e983e"
-                                 place="above"/>
+                                 startid="#x9514d1b3-d338-421a-9dd2-ce03481e983e"/>
                         <tie xml:id="x328d5f24-c966-44cb-8acf-f0a6df459659"
                              staff="1"
                              startid="#xb2ebf99f-76b9-48ef-9e8c-db666a95b7d4"
@@ -57447,8 +57387,7 @@
                         </staff>
                         <fermata xml:id="xec3a8011-50b1-4cc0-afc7-c12e5ce55659"
                                  staff="1"
-                                 startid="#xf92937aa-82a8-4693-a4a9-183e8f979a31"
-                                 place="above"/>
+                                 startid="#xf92937aa-82a8-4693-a4a9-183e8f979a31"/>
                      </measure>
                      <measure n="31" xml:id="xdb14723d-a79e-4acc-9686-1187ba929dc6">
                         <staff xml:id="xd9baa703-0a34-4c2a-9268-fe1b10308372" n="1">
@@ -58855,8 +58794,7 @@
                         </staff>
                         <fermata xml:id="x43da11c6-d392-4e3d-8938-e57d35bb8a5c"
                                  staff="1"
-                                 startid="#x9d548620-8dac-4e51-a220-51f472339abe"
-                                 place="above"/>
+                                 startid="#x9d548620-8dac-4e51-a220-51f472339abe"/>
                      </measure>
                      <measure n="84" xml:id="x2ed9906b-ff38-4054-9169-f5fba705f882">
                         <staff xml:id="xa0e40a50-3020-4cd3-9abb-26ae09296428" n="1">
@@ -59444,8 +59382,7 @@
                         
                         <fermata xml:id="x79090de3-1817-4a04-9413-7009a4ea9275"
                                  staff="1"
-                                 startid="#x3dd30a5b-8790-4fed-8142-f63a7037d0ec"
-                                 place="above"/>
+                                 startid="#x3dd30a5b-8790-4fed-8142-f63a7037d0ec"/>
                      </measure>
                      <measure n="109" xml:id="x55710238-279d-41c5-a66f-06f224516596">
                         <staff xml:id="x7bf306ad-d038-4290-a4df-17f88e139821" n="1">
@@ -60088,17 +60025,13 @@
                                     pname="g"
                                     oct="2"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                               <note xml:id="xaa7d95b3-c63e-4543-9598-b1e10674482e"
                                     pname="g"
                                     oct="2"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                            </layer>
                         </staff>
@@ -60115,24 +60048,19 @@
                                     pname="a"
                                     oct="3"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                               <note xml:id="x6ca350df-f5c1-4630-886d-17e0a1779a2a"
                                     pname="g"
                                     oct="3"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                            </layer>
                         </staff>
                         <fermata xml:id="x974b48c5-7f1b-49ed-b79b-16206111ffad"
                                  staff="1"
-                                 startid="#xd39620fc-55bb-4b9e-9fb0-00ad0475e7cb"
-                                 place="above"/>
+                                 startid="#xd39620fc-55bb-4b9e-9fb0-00ad0475e7cb"/>
                            <dynam xml:id="xf4c6bb53-7a1d-4b74-b86e-1bfe0ff18482"
                                tstamp="1"
                                place="below"
@@ -60149,33 +60077,25 @@
                                     pname="f"
                                     oct="3"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                               <note xml:id="x8d78dd67-8f07-40c8-bffa-6635512da3b9"
                                     pname="e"
                                     oct="3"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                               <note xml:id="x2ca1d45a-6f3f-42e3-bad5-28adfa9f86ab"
                                     pname="d"
                                     oct="3"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                               <note xml:id="xcc6cb8a2-fdb0-47dc-84ed-6378cf37a5e1"
                                     pname="c"
                                     oct="3"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                            </layer>
                         </staff>

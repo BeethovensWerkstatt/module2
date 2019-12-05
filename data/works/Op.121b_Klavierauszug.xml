@@ -8,6 +8,11 @@
             <title type="main">Op. 121b - Opferlied (Klavierauszug)</title>
             <title type="subordinate">an electronic transcription</title>
             <respStmt>
+               <persName role="edt led" xml:id="SC">Susanne Cox</persName>
+               <persName role="edt" xml:id="EN">Elisa Novara</persName>
+               <corpName role="edt" xml:id="BW">Beethovens Werkstatt</corpName>
+            </respStmt>
+            <respStmt>
                <resp auth.uri="http://id.loc.gov/vocabulary/relators.html" codedval="cmp"/>
                <persName auth.uri="http://d-nb.info/gnd" codedval="118508288">Ludwig van
                   Beethoven</persName>
@@ -205,7 +210,6 @@
                      <staffDef xml:id="xf1bf2ebe-a8cd-4201-a383-38731514241e"
                                clef.shape="G"
                                clef.line="2"
-                               key.sig="4s"
                                n="1"
                                lines="5">
                         <label xml:id="xf6e95389-aaf0-4329-9947-6c6d917f98ef">Soprano solo</label>
@@ -215,7 +219,6 @@
                         <staffDef xml:id="x95d0ba52-e7de-4c6c-a112-013ce43c18e8"
                                   clef.shape="G"
                                   clef.line="2"
-                                  key.sig="4s"
                                   n="2"
                                   lines="5">
                            <label xml:id="xd93e32e8-0cda-4609-bed4-64551f8c70f9">Soprano</label>
@@ -224,7 +227,6 @@
                         <staffDef xml:id="x3603cbfb-8411-4463-9fa7-27e21266004b"
                                   clef.shape="G"
                                   clef.line="2"
-                                  key.sig="4s"
                                   n="3"
                                   lines="5">
                            <label xml:id="xf8be6676-b044-4e62-bce5-bd00ade9b011">Alto</label>
@@ -233,7 +235,6 @@
                         <staffDef xml:id="xe8c0208e-fb3b-4d8c-bf81-4f8d6b534ee1"
                                   clef.shape="G"
                                   clef.line="2"
-                                  key.sig="4s"
                                   n="4"
                                   lines="5">
                            <label xml:id="x29aa8f3a-5962-4e93-b154-ca9b99302c02">Tenore</label>
@@ -242,7 +243,6 @@
                         <staffDef xml:id="x7e59eaa4-a90d-4add-b434-cdfbef973bd8"
                                   clef.shape="F"
                                   clef.line="4"
-                                  key.sig="4s"
                                   n="5"
                                   lines="5">
                            <label xml:id="x9d02c15a-f9d1-4054-886f-947a6c5098be">Basso</label>
@@ -257,13 +257,11 @@
                         <staffDef xml:id="x0fa3baa4-15ef-46b8-b9d1-ae47aeb54a4d"
                                   clef.shape="G"
                                   clef.line="2"
-                                  key.sig="4s"
                                   n="6"
                                   lines="5"/>
                         <staffDef xml:id="xeb83a75d-3f73-4bfb-885d-0e89c073bbec"
                                   clef.shape="F"
                                   clef.line="4"
-                                  key.sig="4s"
                                   n="7"
                                   lines="5"/>
                      </staffGrp>
@@ -19010,28 +19008,22 @@
                             tstamp="3.5">pp</dynam>
                      <fermata xml:id="xabd560ab-fb0e-4aa7-9220-da0479bac621"
                               staff="1"
-                              startid="#x3f9489c8-fbc3-4040-8f64-b1edc5711e61"
-                              place="above"/>
+                              startid="#x3f9489c8-fbc3-4040-8f64-b1edc5711e61"/>
                      <fermata xml:id="x0405cb7b-239f-43ce-a9e3-adf74f1c221c"
                               staff="2"
-                              startid="#x064e7c17-5ce9-4d5a-9b49-de15d4db3a8d"
-                              place="above"/>
+                              startid="#x064e7c17-5ce9-4d5a-9b49-de15d4db3a8d"/>
                      <fermata xml:id="x02265c21-9b17-4dfc-94b1-1c29a20ace17"
                               staff="3" 
-                              startid="#xf6e96376-2512-46f2-9113-25dbd91bd69c" 
-                              place="above"/>
+                              startid="#xf6e96376-2512-46f2-9113-25dbd91bd69c"/>
                      <fermata xml:id="xa03a9bf1-3fe6-4f92-9f1f-26936611e953"
                               staff="4"
-                              startid="#xdd19cf93-4df1-49c4-8966-cca8b474abfc"
-                              place="above"/>
+                              startid="#xdd19cf93-4df1-49c4-8966-cca8b474abfc"/>
                      <fermata xml:id="xec83e089-887e-4baf-ae66-4101c2c054b3"
                               staff="5"
-                              startid="#x710f5216-ef9f-4d10-bfc5-e58eba04d07c"
-                              place="above"/>
+                              startid="#x710f5216-ef9f-4d10-bfc5-e58eba04d07c"/>
                      <fermata xml:id="x7815b223-0136-4a2d-a00d-f0b097e6469f"
                               staff="6"
-                              startid="#x83db2580-509a-4090-bf10-7364ea976de5"
-                              place="above"/>
+                              startid="#x83db2580-509a-4090-bf10-7364ea976de5"/>
                      <fermata xml:id="x9e966926-5e33-45f2-a2f6-36f2cf4073bf"
                               staff="7"
                               startid="#x193b5b01-312a-4f8d-811d-a1bf1d181970"
