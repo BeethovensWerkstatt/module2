@@ -18420,7 +18420,7 @@
               </staff>
               <tempo xml:id="xa54c4495-d0b1-47d5-95e0-3f240deecd59" tstamp="1" place="above"
                 staff="1">Meno mosso e moderato.</tempo>
-              <dynam xml:id="x9dd32a55-6328-4297-9d28-9fcfd3074d83" tstamp="0" place="below"
+              <dynam xml:id="x9dd32a55-6328-4297-9d28-9fcfd3074d83" tstamp="1" place="below"
                 staff="1"> pp </dynam>
               <slur xml:id="xc8c601c6-7fb7-4ea2-91cd-1af22ef94226"
                 startid="#x9d33f30f-b3e7-41fe-ab50-b05c6f407430"
@@ -22997,7 +22997,7 @@
                 startid="#x97043296-b3e4-4647-8e2b-e802503aaa7f"
                 endid="#x471085d8-d98c-4881-9219-d8ee8fb62ea9" staff="3"/>
               <dynam xml:id="x80b26bce-036e-4b25-b438-494572b611ca" tstamp="2.5" place="below"
-                staff="1" extender="true" tstamp2="2m+2">cresc.</dynam>
+                staff="1" extender="true" tstamp2="2m+1.5">cresc.</dynam>
               <slur xml:id="xb9ddcf51-41c8-4808-8f2f-eda9aa3d13a1"
                 startid="#xd5b2f5cd-b057-4e8f-8ba6-c24131bf2727"
                 endid="#x3c0ba6b1-ebab-43e6-ad30-495d994a69ec" staff="1"/>
@@ -24019,6 +24019,7 @@
                   <beam>
                     <note xml:id="d1e126892" pname="d" oct="4" dur="16" accid.ges="f"/>
                     <note xml:id="d1e126912" pname="c" oct="4" dur="16" accid.ges="f"/>
+                    <!-- Hier und bei folgenden Takten Fehler in OA: c sollte immer mit Auflösungszeichen sein -->
                     <note xml:id="d1e126932" pname="d" oct="4" dur="16" accid.ges="f"/>
                     <note xml:id="d1e126952" pname="c" oct="4" dur="16" accid.ges="f"/>
                   </beam>
@@ -24344,7 +24345,7 @@
               <dynam xml:id="xb2b20827-02de-4559-8104-80d387477a0b" tstamp="1" place="below"
                 staff="1"> ff </dynam>
               <tempo xml:id="x4c938f07-584e-4081-bbd6-17294b6c1701" tstamp="1" place="above"
-                staff="1">All(?) molto e con Brio.</tempo>
+                staff="1">Allo molto e con Brio.</tempo>
               <dynam xml:id="xd418802c-bec6-4178-8347-483bc31940ad" tstamp="1" place="below"
                 staff="2"> ff </dynam>
               <dynam xml:id="x01e1e7b5-e4cc-494e-a319-87c845a8ec1d" tstamp="1" place="below"
@@ -25319,6 +25320,8 @@
                   <note xml:id="x9d9e2648-bb38-48e5-ad5c-8d91847e076f" pname="g" oct="5" dur="4"/>
                   <note xml:id="x68641e71-0235-42a8-9039-e183dacb12f2" pname="b" oct="4" dur="8"
                     accid.ges="f"/>
+                  <!-- N.B. Fehler in OA: T. 256, Vl. II, b1 statt h -->
+                 
                   <note xml:id="xeb556cc4-d667-47ba-9f46-7451bc14ffcf" pname="c" oct="5" dur="4"/>
                   <note xml:id="x86b31835-368c-4a10-bd15-ee9939a21f7d" pname="a" oct="5" dur="8"
                     accid="n"/>
@@ -26836,11 +26839,8 @@
               <staff xml:id="xe9ecf9c0-2016-4633-9d0d-4ee35a0cbccc" n="2">
                 <layer xml:id="x7df1ac34-ed04-40f3-8c44-8126fbb94dcc" n="1">
                   <note xml:id="x0782365e-19bf-431d-8c57-5c337b2a82e4" pname="a" oct="4" dur="2"
-                    accid="n"
-                    ><!-- Der Punkt gibt es nicht in OA, irrtümlich. Ich kann es aber nicht als supplied ergänzen. Wie gehe ich weiter? 
-                              <supplied resp="Elisa Novara">
-                                 <dot dots="1" />
-                              </supplied> --></note>
+                    accid="n"/>
+                   <!-- OA: T. 294: Vl. II ohne Punkt -->
                 </layer>
               </staff>
               <staff xml:id="xf12b00c2-2e64-4769-9ea2-34ffe99be70f" n="3">
@@ -28775,6 +28775,7 @@
                     accid="n"/>
                   <note xml:id="x51c46fc4-06a3-4556-9f0e-9290e429b351" pname="a" oct="2" dur="8"
                     accid.ges="f"/>
+                  <!-- Fehler in oA: T. 336, Vc. Auflösungszeichen bei letzter Note fehlt -->
                 </layer>
               </staff>
               <trill xml:id="xa46be319-c512-45ab-a3b2-e4b0e89fcc89" staff="2"
@@ -29045,6 +29046,7 @@
                 <layer xml:id="x9779ab84-326b-4c65-ac7b-c596a548e5f7" n="1">
                   <note xml:id="xfaeb9daa-6402-4662-a0d3-e21fec596ef3" pname="d" oct="5" dur="2"
                     dots="1" accid.ges="f"/>
+                  <!-- Fehler in OA: T. 342, Vl. II, Auflösungszeichen bei d2 fehlt -->
                   <beam xml:id="xbebbabf1-d8d8-40e1-a5ec-ad9b9dee1433">
                     <note xml:id="x6ae5039b-56be-4393-bc40-4d6da3c5625c" grace="unknown" pname="c"
                       oct="5" dur="32"/>
@@ -30893,7 +30895,7 @@
               <staff xml:id="x6e58778e-13c8-45e1-b0e3-3d95f30d142b" n="4">
                 <layer xml:id="xd7e3bf4e-0b6f-4bf0-b7c8-adc419ed3520" n="1">
                   <note xml:id="xf3973fd6-b2a3-4f74-afaf-c0303304323c" pname="g" oct="3" dur="4"/>
-                  <!-- diese letzte Note sollte eigentlich accid="f" tragen, OA zeigt es aber nicht! -->
+                  <!-- Fehler in OA: T. 378: diese letzte Note sollte eigentlich accid="f" tragen, OA zeigt es aber nicht! -->
                   <rest xml:id="xd1d73885-9f5a-4bfb-ae15-1562c4578f61" dur="8"/>
                   <note xml:id="x099e8506-de6c-4975-9844-1adbac9f24bc" pname="f" oct="2" dur="4"
                     dots="1"/>
@@ -32787,8 +32789,8 @@
               </staff>
               <staff xml:id="x22657386-fb68-478e-b530-3757bec34c27" n="2">
                 <layer xml:id="x61c661eb-4a77-4790-8c6f-2d53693a4921" n="1">
-                  <note xml:id="xb5bf6784-fdd1-4057-a52d-5a27d841ecbe" pname="e" oct="5" dur="4"
-                    accid.ges="f"/>
+                  <note xml:id="xb5bf6784-fdd1-4057-a52d-5a27d841ecbe" pname="d" oct="5" dur="4"
+                    />
                   <note xml:id="x47206e78-a099-4e97-8f1d-5810533d9c60" pname="d" oct="5" dur="8"
                     accid="f"/>
                   <note xml:id="xd52dc530-0770-4909-a07e-370f7bb7c690" pname="c" oct="5" dur="4"/>
@@ -33049,7 +33051,8 @@
                 <layer xml:id="x4b524469-4b80-40a8-8c08-9b2d136398b3" n="1">
                   <note xml:id="xe03e7fa9-d78b-48ad-9561-6691cfc91b2a" pname="e" oct="4" dur="2"
                     accid.ges="f"/>
-                  <!-- Achtung: hier offensichtlicher Fehler in OA: Punkt fehlt und Verlängerungsbogen ist falsch. -->
+                  <!-- Achtung: hier offensichtlicher Fehler in OA: Punkt fehlt und Verlängerungsbogen ist falsch.
+                  T. 426, Vc.-->
                 </layer>
               </staff>
             </measure>
@@ -33832,6 +33835,7 @@
                       accid="n"/>
                     <note xml:id="x12e81249-94cc-40e9-be57-b22bc49b2c21" pname="f" oct="4" dur="8"/>
                     <note xml:id="x6163e1d0-6608-47a8-bbc2-6515a281a323" pname="d" oct="5" dur="8"/>
+                    <!--  Fehler in OA: T. 444, Va, vermutlich sollte hier des1 und nicht d1 sein -->
                   </beam>
                   <note xml:id="x582f7339-d041-47a7-9cc8-81eea6a9b91d" pname="d" oct="5" dur="4"
                     dots="1"/>
@@ -33866,6 +33870,7 @@
               <staff xml:id="x329cb301-8143-4752-8ee4-40fec0985135" n="1">
                 <layer xml:id="xd38d687a-30ae-4066-8708-a45797891a08" n="1">
                   <note xml:id="xd3c2d087-82c4-4633-8234-66bb69bc9141" pname="d" oct="6" dur="4"/>
+                  <!-- Fehler in OA: T. 445, Vl. I Erniedrigungszeichen bei 1. Note fehlt -->
                   <rest xml:id="x59c1ffe5-967e-49c4-a85a-cde84887ba94" dur="8"/>
                   <rest xml:id="x9a29028a-67ad-4bb3-8a1f-d5c4583750a1" dur="4"/>
                   <rest xml:id="x924c4d68-29b6-45e9-8824-b53da8fc4753" dur="8"/>
@@ -33966,6 +33971,8 @@
                 <layer xml:id="x6494658e-aa55-4a22-84f7-a4e12ea9093f" n="1">
                   <note xml:id="xdd7e3113-6d33-41ee-a320-f83597183b49" pname="a" oct="4" dur="4"
                     accid.ges="f"/>
+                  <!-- Fehler in OA: T. 447, Vl. II, OA ohne Auflösungszeichen bei a1 -->
+                 
                   <note xml:id="xf1b4b6ab-ca30-40ca-8f9f-7cf988f22cb5" pname="b" oct="4" dur="8"
                     accid.ges="f"/>
                   <note xml:id="x12d569b2-bcbf-4614-8b3e-9864c9fdc5e7" pname="b" oct="4" dur="4"
@@ -34553,6 +34560,7 @@
               <staff xml:id="xeffae116-e8c9-4811-ac6d-eecc22938a4e" n="3">
                 <layer xml:id="x98ed85c7-8214-42c9-9c92-0a3c11a78702" n="1">
                   <note xml:id="xca64333b-d456-403a-beec-57b8fc8475a8" pname="g" oct="4" dur="4"/>
+                  <!-- Fehler in OA: T. 462, Va, 1. Zz sollte ges1 wie im vorherigen Takt sein  -->
                   <note xml:id="x403da064-ea5d-4cf2-9b9d-eae1e070b832" pname="f" oct="4" dur="8"/>
                   <note xml:id="x42c45d38-e55b-48d0-871f-8e264667ff30" pname="f" oct="4" dur="4"/>
                   <note xml:id="x1dddb340-3188-475e-a5f0-b50e72d69d46" pname="e" oct="4" dur="8"
@@ -35254,8 +35262,10 @@
               <staff xml:id="x2c25c948-0476-4fdb-aeed-35a11e194418" n="2">
                 <layer xml:id="xea2e740a-0870-46d6-b4a3-f7060784568b" n="1">
                   <note xml:id="xcfcaad9f-53ed-433a-92ca-a8666a1809e6" pname="c" oct="6" dur="4"/>
+                  <!-- Fehler in OA: T. 478, Vl. II, 1. u. 2. Zz fehlt jeweils das Erniedrigungszeichen und das Auflösungszeichen-->
                   <note xml:id="x42b25371-673a-459d-987d-a7d1590083e7" pname="d" oct="4" dur="8"
                     accid.ges="f"/>
+                 
                   <note xml:id="x23302db8-2fa1-4874-9739-87d0e1a66c32" pname="c" oct="6" dur="4"/>
                   <note xml:id="x16fc90f8-0aa2-4105-8c78-25b8d98eac93" pname="c" oct="6" dur="8"/>
                 </layer>
@@ -35527,6 +35537,7 @@
                   <rest xml:id="x527dab41-95f0-434a-8378-11502f617d2c" dur="8"/>
                   <note xml:id="xd40e9fa4-dff7-4838-9cb7-4d2971659d2b" pname="f" oct="3" dur="8"/>
                   <note xml:id="x6f034cd3-3a07-4054-af6c-30d2da257dd7" pname="g" oct="3" dur="4"/>
+                  <!-- Fehler in OA: T. 483, Va., Erniedrigungszeichen bei g2 fehlt -->
                   <note xml:id="x31aa3e22-1d3f-4fa9-bde7-81ca201a81bd" pname="e" oct="4" dur="8"
                     accid.ges="f"/>
                 </layer>
@@ -37125,6 +37136,7 @@
                       accid.ges="f"/>
                     <note xml:id="x6aca92d6-d7ed-49a6-aec2-8ee68d3533b1" pname="d" oct="3" dur="16"
                       accid.ges="f"/>
+                    <!-- T. 507, Va, 2. Note in der BGA statt d als e umgedeutet-->
                     <note xml:id="x98003e74-5bf3-4ec3-94d3-6ea159543535" pname="g" oct="4" dur="16"/>
                     <note xml:id="x0b4138f9-c40e-4f27-a85c-7410c1da2851" pname="g" oct="4" dur="16"
                     />
@@ -43086,6 +43098,7 @@
                 <layer xml:id="x2a22de37-d1e8-49d6-a5db-1d1f8b1cd0ce" n="1">
                   <note xml:id="x3e9de1bd-eeb6-450f-be02-457bc66455c1" pname="g" oct="4" dur="4"
                     dots="1"/>
+                  <!-- Fehler in OA: T. 639, 640, Va., g1 sollte ges1 sein -->
                   <note xml:id="x5055d7f7-5c00-4241-ada6-1d0bdc6f56ab" pname="g" oct="4" dur="4"/>
                   <note xml:id="x523f92c4-31e0-4a0b-aec8-4efcc0a58513" pname="f" oct="4" dur="8"/>
                 </layer>
@@ -43330,6 +43343,7 @@
                   <note xml:id="x0582cf30-143e-4e00-b036-527c0de449e7" pname="f" oct="4" dur="8"/>
                   <note xml:id="xa939ee64-79fe-428e-b86a-c153134323ec" pname="g" oct="4" dur="4"
                     dots="1"/>
+                  <!-- Fehler in OA: T. 643, 644, Vc., g1 sollte ges1 sein -->
                 </layer>
               </staff>
               <dynam xml:id="xba225ebe-f00f-459f-b051-4d570d98b838" tstamp="1" place="below"
@@ -43569,6 +43583,7 @@
                 <layer xml:id="x8c7d3c32-f37e-4d0e-a5e5-7fde301c7dd6" n="1">
                   <note xml:id="xafbb0b4a-a35c-4d49-939b-8a5e17313268" pname="g" oct="6" dur="4"
                     dots="1"/>
+                  <!-- Fehler in OA: T. 647, Vl. I, 1. u. 2. Note sollten ges2 sein -->
                   <note xml:id="x545ea03b-325a-456a-801d-ba246f3682b5" pname="g" oct="6" dur="4"/>
                   <note xml:id="x333df085-a2fa-4043-8754-6b9256c8e94a" pname="f" oct="6" dur="8"/>
                 </layer>
@@ -44031,6 +44046,7 @@
               <staff xml:id="xc7983ac4-1671-4bac-99aa-a519f857c7b0" n="3">
                 <layer xml:id="xeaf51dc8-2467-45ea-bd9f-f028c7dc6c3a" n="1">
                   <note xml:id="xaeb34dff-638a-47f0-8fd8-f557c73184eb" pname="a" oct="3" dur="4"/>
+                  <!-- Fehler in OA: T. 654, Va., bei der 1. Note fehlt Erniedrigungszeichen-->
                   <note xml:id="x9c917796-d533-444d-9394-20892bfb6d73" pname="g" oct="3" dur="8"/>
                   <note xml:id="x702ead74-9a98-4bb2-b5d3-a86347948035" pname="f" oct="3" dur="4"/>
                   <note xml:id="x009f6c99-c3f1-499a-b37a-426b99a41237" pname="g" oct="3" dur="8"/>
@@ -46938,6 +46954,7 @@
                   <beam xml:id="x36678ef1-c4f5-42b8-9f36-990e17f00213">
                     <note xml:id="x1ed15923-c2cd-4c15-b33a-55f1021b3e41" pname="e" oct="4" dur="16"
                       accid.ges="f"/>
+                    <!-- Fehler in OA: T. 714, Violino I, Auflösungszeichen bei e1 fehlt -->
                     <note xml:id="x5fd2d1e8-8c2e-4c4b-8e83-9bf1c0f99d73" pname="f" oct="4" dur="16"
                     />
                   </beam>
