@@ -46,6 +46,7 @@ export default new Vuex.Store({
     proposedDisabledStaves: [[], []],
     transposeSelectionVisible: false,
     proposedTranspose: 'none',
+    comparisonDetailedColoration: false,
     search: {
       active: false,
       selectionStarted: false,
@@ -149,6 +150,9 @@ export default new Vuex.Store({
     },
     DEACTIVATE_SEARCH_SELECTION (state) {
       state.search = { ...state.search, selectionStarted: false }
+    },
+    TOGGLE_COMPARISON_DETAILED_COLORATION (state) {
+      state.comparisonDetailedColoration = !state.comparisonDetailedColoration
     },
     ACTIVATE_STAFF_SELECTION (state) {
       state.staffSelectionVisible = true
@@ -385,6 +389,9 @@ export default new Vuex.Store({
     deactivateSearchSelection ({ commit }) {
       commit('DEACTIVATE_SEARCH_SELECTION')
     },
+    toggleComparisonDetailedColoration ({ commit }) {
+      commit('TOGGLE_COMPARISON_DETAILED_COLORATION')
+    },
     activateStaffSelection ({ commit }) {
       commit('ACTIVATE_STAFF_SELECTION')
     },
@@ -560,6 +567,9 @@ export default new Vuex.Store({
     },
     proposedDisabledStaves: state => {
       return state.proposedDisabledStaves
+    },
+    comparisonDetailedColoration: state => {
+      return state.comparisonDetailedColoration
     }
   }
 })

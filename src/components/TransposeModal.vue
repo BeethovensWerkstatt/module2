@@ -1,5 +1,5 @@
 <template>
-  <div id="transposenModal" class="modal modal-sm" v-bind:class="{ 'active': transposeVisible }">
+  <div id="transposeModal" class="modal modal-sm" v-bind:class="{ 'active': transposeVisible }">
     <a href="#close" class="modal-overlay" aria-label="Close" v-on:click="toggleTransposePane($event)"></a>
     <div class="modal-container">
       <div class="modal-header">

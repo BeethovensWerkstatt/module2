@@ -63,7 +63,7 @@ export default {
       return this.$store.getters.activeModeId !== null
     },
     searchPaneVisible: function() {
-      return this.$store.getters.searchPaneVisible;
+      return this.$store.getters.searchPaneVisible
     }
   }
 }
