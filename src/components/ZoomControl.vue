@@ -1,9 +1,8 @@
 <template>
-    <span id="zoomControl">
-      Zoom
-      <button class="btn btn-primary btn-sm" v-on:click="decreaseZoom()">&lt;</button>
-      <input class="zoomnum" type="text" pattern="\d+" v-model="zoomModel">
-      <button class="btn btn-primary btn-sm" v-on:click="increaseZoom()">&gt;</button>
+    <span id="zoomControl" class="input-group">
+      <button class="btn btn-primary btn-sm btn-action input-group-btn" v-on:click="decreaseZoom()"><i class="fas fa-minus"></i></button>
+      <input class="zoomnum form-input input-sm" type="text" pattern="\d+" v-model="zoomModel">
+      <button class="btn btn-primary btn-sm btn-action input-group-btn" v-on:click="increaseZoom()"><i class="fas fa-plus"></i></button>
     </span>
 </template>
 
@@ -44,7 +43,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #zoomControl {
-  /*margin-right: .5rem;*/
+  margin-left: .8rem;
 
   .zoomnum {
     text-align: center;

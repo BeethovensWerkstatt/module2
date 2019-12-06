@@ -52,6 +52,10 @@ export default new Vuex.Store({
       selectionStarted: false,
       selectedIDs: [],
       pitchMode: 'strict'
+    },
+    customHighlighting: {
+      currentColor: 1,
+      showHighlighting: false
     }
     // searchPaneVisible: false,
     // searchSelectionActive: false
@@ -232,6 +236,26 @@ export default new Vuex.Store({
         })
         state.proposedDisabledStaves = [oldArr, newArr]
       } catch (err) {}
+    },
+    SET_CURRENT_HIGHTLIGHT_COLOR (state, num) {
+      state.customHighlighting = { ...state.customHighlighting, currentColor: num }
+    },
+    TOGGLE_HIGHLIGHTING (state) {
+      state.customHighlighting = { ...state.customHighlighting, showHighlighting: !state.customHighlighting.showHighlighting }
+    },
+    SET_CUSTOM_NOTE_COLOR (state, id) {
+      let comparisonId = state.activeComparison
+      let obj
+      if (typeof state.customHighlighting[comparisonId] === 'undefined') {
+        obj = state.customHighlighting[comparisonId] = {}
+      } else {
+        obj = state.customHighlighting[comparisonId]
+      }
+      obj = { ...obj }
+      obj[id] = state.customHighlighting.currentColor
+      let customHighlighting = { ...state.customHighlighting }
+      customHighlighting[comparisonId] = obj
+      state.customHighlighting = customHighlighting
     }
   },
   actions: {
@@ -409,6 +433,15 @@ export default new Vuex.Store({
     },
     proposeDisabledStaff ({ commit }, payload) {
       commit('PROPOSE_DISABLE_STAFF', payload)
+    },
+    setCurrentHighlightColor ({ commit }, num) {
+      commit('SET_CURRENT_HIGHTLIGHT_COLOR', num)
+    },
+    toggleHighlighting ({ commit }) {
+      commit('TOGGLE_HIGHLIGHTING')
+    },
+    setCustomNoteColor ({ commit }, id) {
+      commit('SET_CUSTOM_NOTE_COLOR', id)
     }
   },
   getters: {
@@ -570,6 +603,15 @@ export default new Vuex.Store({
     },
     comparisonDetailedColoration: state => {
       return state.comparisonDetailedColoration
+    },
+    currentHighlightColor: state => {
+      return state.customHighlighting.currentColor
+    },
+    highlightingVisible: state => {
+      return state.customHighlighting.showHighlighting
+    },
+    highlightedNotes: state => {
+      return state.customHighlighting[state.activeComparison]
     }
   }
 })

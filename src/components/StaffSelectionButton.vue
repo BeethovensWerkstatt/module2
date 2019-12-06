@@ -1,5 +1,5 @@
 <template>
-    <button class="btn" v-bind:class="{ 'btn-primary': staffSelectionVisible, 'btn-link': !staffSelectionVisible }" v-on:click="toggleStaffSelectionPane()">Besetzung</button>
+    <button class="btn btn-sm" v-bind:class="{ 'btn-primary': staffSelectionVisible}" v-on:click="toggleStaffSelectionPane()"><i class="fas fa-align-right"></i> Besetzung</button>
 </template>
 
 <script>
@@ -27,6 +27,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   .btn {
-    margin: 0 .5rem;
+    margin-left: .8rem;
   }
 </style>

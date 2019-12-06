@@ -1,8 +1,8 @@
 <template>
-    <span id="pageNavigation">
-      <button class="btn btn-primary btn-sm" v-on:click="decreasePage()">&lt;</button>
-      <input class="pagenum" type="text" pattern="\d+" v-model="pageModel">
-      <button class="btn btn-primary btn-sm" v-on:click="increasePage()">&gt;</button>
+    <span id="pageNavigation" class="input-group">
+      <button class="btn btn-primary btn-sm btn-action input-group-btn" v-on:click="decreasePage()"><i class="fas fa-caret-left"></i></button>
+      <input class="pagenum form-input input-sm" type="text" pattern="\d+" v-model="pageModel">
+      <button class="btn btn-primary btn-sm btn-action input-group-btn" v-on:click="increasePage()"><i class="fas fa-caret-right"></i></button>
     </span>
 </template>
 

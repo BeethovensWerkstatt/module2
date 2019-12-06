@@ -1,10 +1,11 @@
 <template>
-    <div id="navigationTop" v-if="1 == 1" class="navbar">
+    <div id="navigationTop" class="navbar">
       <section class="navbar-section">
           <PageNavigation/>
           <ZoomControl/>
           <StaffSelectionButton/>
           <TransposeButton/>
+          <ColorationButton v-if="mode === 'plain'"/>
       </section>
 
       <section class="navbar-section">
@@ -20,6 +21,7 @@ import ZoomControl from '@/components/ZoomControl.vue'
 import SearchButton from '@/components/SearchButton.vue'
 import StaffSelectionButton from '@/components/StaffSelectionButton.vue'
 import TransposeButton from '@/components/TransposeButton.vue'
+import ColorationButton from '@/components/ColorationButton.vue'
 
 export default {
   name: 'NavigationTop',
@@ -28,7 +30,13 @@ export default {
     ZoomControl,
     SearchButton,
     StaffSelectionButton,
-    TransposeButton
+    TransposeButton,
+    ColorationButton
+  },
+  computed: {
+    mode: function() {
+      return this.$store.getters.activeModeId
+    }
   }
 }
 </script>

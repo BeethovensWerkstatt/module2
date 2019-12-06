@@ -1,5 +1,5 @@
 <template>
-    <button class="btn" v-bind:class="{ 'btn-primary': transposeVisible, 'btn-link': !transposeVisible }" v-on:click="toggleTransposePane()">Transposition</button>
+    <button class="btn btn-sm" v-bind:class="{ 'btn-primary': transposeVisible}" v-on:click="toggleTransposePane()"><i class="fas fa-arrows-alt-v"></i> Transposition</button>
 </template>
 
 <script>
@@ -27,6 +27,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   .btn {
-    margin: 0 .5rem;
+    margin-left: .8rem;
   }
 </style>
