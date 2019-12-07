@@ -109,7 +109,7 @@ export default {
     }
   }
 
-  #viewSettings {
+  #analysisComparison #viewSettings {
     flex: 0 0 auto;
     background-color: #f5f5f5;
     border-bottom: .5px solid #999999;
