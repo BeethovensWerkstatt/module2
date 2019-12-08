@@ -5,13 +5,16 @@
         Optionen:
       </div>
       <div class="viewSettingItem">
-        <i class="fas fa-wave-square"></i> Identität
+        <button class="btn btn-sm" v-bind:class="{ 'btn-primary': showMelodicDurations}" v-on:click="toggleDurations()"><i class="fas fa-align-center fa-flip-vertical"></i> Tondauern</button>
       </div>
       <div class="viewSettingItem">
-        <i class="fas fa-align-center"></i> Oktavvarianz
+        <button class="btn btn-sm" v-bind:class="{ 'btn-primary': showMelodicDots}" v-on:click="toggleDots()"><i class="fas fa-align-center fa-music"></i> Noten</button>
+      </div>
+      <div class="viewSettingItem">
+        <button class="btn btn-sm" v-bind:class="{ 'btn-primary': showMelodicLines}" v-on:click="toggleLines()"><i class="fas fa-wave-square"></i> Stimmführung</button>
       </div>
     </div>
-    <div id="stagingArea">
+    <div id="stagingArea" v-bind:class="{'showDots': showMelodicDots, 'showIndividualLines': showMelodicDurations, 'showSemiConnectedLines': showMelodicLines}">
       stage
     </div>
   </div>
@@ -31,6 +34,17 @@ export default {
   },
   created () {
     this.$store.dispatch('fetchMEI')
+  },
+  computed: {
+    showMelodicDots: function() {
+      return this.$store.getters.showMelodicDots
+    },
+    showMelodicDurations: function() {
+      return this.$store.getters.showMelodicDurations
+    },
+    showMelodicLines: function() {
+      return this.$store.getters.showMelodicLines
+    }
   },
   mounted () {
     width = document.getElementById('analysis').clientWidth
@@ -73,6 +87,15 @@ export default {
     }
   },
   methods: {
+    toggleDots: function() {
+      this.$store.dispatch('toggleMelodicDots')
+    },
+    toggleDurations: function() {
+      this.$store.dispatch('toggleMelodicDurations')
+    },
+    toggleLines: function() {
+      this.$store.dispatch('toggleMelodicLines')
+    },
     displayMelodicComparison: function () {
 
       let rawData = this.$store.getters.currentMEI
@@ -202,8 +225,8 @@ export default {
       //console.log('displayMelodicComparison 7')
 
       this.drawIndividualLines(svg,line,duration,data)
-      // this.drawConnectedLines(svg,line,duration,data,x,y)
-      //-> this.drawSemiConnectedLines(svg,line,duration,data,x,y)
+      //this.drawConnectedLines(svg,line,duration,data,x,y)
+      this.drawSemiConnectedLines(svg,line,duration,data,x,y)
 
       this.drawDots(svg,data,x,y);
 
@@ -234,7 +257,7 @@ export default {
     },
     drawDots: function (svg, data, x, y) {
 
-        console.log('\ndrawDots start')
+        //console.log('\ndrawDots start')
 
         let variant1 = data.variants[0];
         let variant2 = data.variants[1];
@@ -329,11 +352,11 @@ export default {
 
             }
         }
-        console.log('drawDots end')
+        //console.log('drawDots end')
     },
     drawIndividualLines: function (svg,line,duration,data) {
 
-        console.log('\ndrawIndividualLines')
+        //console.log('\ndrawIndividualLines')
 
         let variant1 = data.variants[0];
         let variant2 = data.variants[1];
@@ -348,7 +371,7 @@ export default {
                     let noteData = [{x:note.start,y:note.pnum,id:note.id},{x:note.end,y:note.pnum,id:note.id}];
                     svg.append("path")
                         .datum(noteData)
-                        .attr("class","melodicContourNote variant1")
+                        .attr("class","melodicContourNote individualLine variant1")
                         .attr("d", line)
                 }
 
@@ -366,7 +389,7 @@ export default {
                     let noteData = [{x:note.start,y:note.pnum,id:note.id},{x:note.end,y:note.pnum,id:note.id}];
                     svg.append("path")
                         .datum(noteData)
-                        .attr("class","melodicContourNote variant2")
+                        .attr("class","melodicContourNote individualLine variant2")
                         .attr("d", line)
                 }
 
@@ -374,9 +397,11 @@ export default {
 
         }
 
-        console.log('\drawIndividualLines done')
+        //console.log('\drawIndividualLines done')
 
     },
+
+    // buggy:
     drawConnectedLines: function (svg,line,duration,data,x,y) {
 
         console.log('\ndrawConnectedLines')
@@ -395,7 +420,7 @@ export default {
 
             svg.append("path")
                 .datum(currentStaff.events)
-                .attr("class","melodicContourNote variant1")
+                .attr("class","melodicContourNote connectedLine variant1")
                 .attr("d", line)
         }
 
@@ -404,7 +429,7 @@ export default {
 
             svg.append("path")
                 .datum(currentStaff.events)
-                .attr("class","melodicContourNote variant2")
+                .attr("class","melodicContourNote connectedLine variant2")
                 .attr("d", line)
         }
 
@@ -413,15 +438,15 @@ export default {
     },
     drawSemiConnectedLines: function (svg,line,duration,data,x,y) {
 
-        console.log('\ndrawSemiConnectedLines')
+        //console.log('\ndrawSemiConnectedLines')
 
         line = d3.line()
             .defined(function(d) { return d.pnum !==''; })
             .x(function(d) { return x(d.start); })
             .y(function(d) { return y(d.pnum/*((d.pnum % 12) + 60)*/); })
             //.curve(d3.curveStepAfter)
-            .curve(d3.curveCatmullRom)
-            //.curve(d3.curveLinear)
+            //.curve(d3.curveCatmullRom)
+            .curve(d3.curveLinear)
 
         let variant1 = data.variants[0];
         let variant2 = data.variants[1];
@@ -481,7 +506,7 @@ export default {
 
             svg.append("path")
                 .datum(currentStaff.events)
-                .attr("class","melodicContourNote variant1")
+                .attr("class","melodicContourNote semiConnectedLine variant1")
                 .attr("d", line)
                 .on('mouseover',function(d,unknown,pathArray) {
                     pathArray[0].classList.add('hovering');
@@ -502,7 +527,7 @@ export default {
 
             svg.append("path")
                 .datum(currentStaff.events)
-                .attr("class","melodicContourNote variant2")
+                .attr("class","melodicContourNote semiConnectedLine variant2")
                 .attr("d", line)
                 .on('mouseover',function(d,unknown,pathArray) {
                     pathArray[0].classList.add('hovering');
@@ -521,7 +546,7 @@ export default {
                     .on("drag", dragged)
                     .on("end", dragended));*/
 
-        console.log('\drawSemiConnectedLines done')
+        //console.log('\drawSemiConnectedLines done')
 
     }
   }
@@ -558,6 +583,33 @@ export default {
   overflow: scroll;
   position: relative;
 
+  $color1: #f51d1d;
+  $color2: #0ebd16; /*#3ce644;*/
+
+  .semiConnectedLine {
+    visibility: hidden;
+  }
+
+  &.showSemiConnectedLines .semiConnectedLine {
+    visibility: visible;
+  }
+
+  .individualLine {
+    visibility: hidden;
+  }
+
+  &.showIndividualLines .individualLine {
+    visibility: visible;
+  }
+
+  .dot {
+    visibility: hidden;
+  }
+
+  &.showDots .dot {
+    visibility: visible;
+  }
+
   .melodicContourNote {
       /*opacity: .5;*/
 
@@ -568,11 +620,11 @@ export default {
       mix-blend-mode: color-burn;
 
       &.variant1 {
-          stroke: $colorVariant1;
+          stroke: $color1;
       }
 
       &.variant2 {
-          stroke: $colorVariant2;
+          stroke: $color2;
       }
   }
 

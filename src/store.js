@@ -56,6 +56,11 @@ export default new Vuex.Store({
     customHighlighting: {
       currentColor: 1,
       showHighlighting: false
+    },
+    melodicOptions: {
+      showDots: true,
+      showDurations: true,
+      showLines: false
     }
     // searchPaneVisible: false,
     // searchSelectionActive: false
@@ -256,6 +261,27 @@ export default new Vuex.Store({
       let customHighlighting = { ...state.customHighlighting }
       customHighlighting[comparisonId] = obj
       state.customHighlighting = customHighlighting
+    },
+    TOGGLE_MELODIC_DOTS (state) {
+      let value = state.melodicOptions.showDots
+      if (!value || state.melodicOptions.showDurations || state.melodicOptions.showLines) {
+        let newOpts = { ...state.melodicOptions, showDots: !value }
+        state.melodicOptions = newOpts
+      }
+    },
+    TOGGLE_MELODIC_DURATIONS (state) {
+      let value = state.melodicOptions.showDurations
+      if (!value || state.melodicOptions.showDots || state.melodicOptions.showLines) {
+        let newOpts = { ...state.melodicOptions, showDurations: !value }
+        state.melodicOptions = newOpts
+      }
+    },
+    TOGGLE_MELODIC_LINES (state) {
+      let value = state.melodicOptions.showLines
+      if (!value || state.melodicOptions.showDurations || state.melodicOptions.showDots) {
+        let newOpts = { ...state.melodicOptions, showLines: !value }
+        state.melodicOptions = newOpts
+      }
     }
   },
   actions: {
@@ -442,6 +468,15 @@ export default new Vuex.Store({
     },
     setCustomNoteColor ({ commit }, id) {
       commit('SET_CUSTOM_NOTE_COLOR', id)
+    },
+    toggleMelodicDots ({ commit }) {
+      commit('TOGGLE_MELODIC_DOTS')
+    },
+    toggleMelodicDurations ({ commit }) {
+      commit('TOGGLE_MELODIC_DURATIONS')
+    },
+    toggleMelodicLines ({ commit }) {
+      commit('TOGGLE_MELODIC_LINES')
     }
   },
   getters: {
@@ -612,6 +647,15 @@ export default new Vuex.Store({
     },
     highlightedNotes: state => {
       return state.customHighlighting[state.activeComparison]
+    },
+    showMelodicDots: state => {
+      return state.melodicOptions.showDots
+    },
+    showMelodicDurations: state => {
+      return state.melodicOptions.showDurations
+    },
+    showMelodicLines: state => {
+      return state.melodicOptions.showLines
     }
   }
 })

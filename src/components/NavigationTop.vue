@@ -1,15 +1,15 @@
 <template>
     <div id="navigationTop" class="navbar">
       <section class="navbar-section">
-          <PageNavigation/>
-          <ZoomControl/>
-          <StaffSelectionButton/>
-          <TransposeButton/>
-          <ColorationButton v-if="mode === 'plain'"/>
+          <PageNavigation v-if="modeObj.options.paging"/>
+          <ZoomControl v-if="modeObj.options.zoom"/>
+          <StaffSelectionButton v-if="modeObj.options.scoreDef"/>
+          <TransposeButton v-if="modeObj.options.transposition"/>
+          <ColorationButton v-if="modeObj.options.coloring"/>
       </section>
 
       <section class="navbar-section">
-          <SearchButton/>
+          <SearchButton v-if="modeObj.options.search"/>
       </section>
     </div>
 </template>
@@ -36,6 +36,9 @@ export default {
   computed: {
     mode: function() {
       return this.$store.getters.activeModeId
+    },
+    modeObj: function() {
+      return this.$store.getters.activeModeObject
     }
   }
 }
