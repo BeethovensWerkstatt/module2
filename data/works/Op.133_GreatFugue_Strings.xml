@@ -1259,6 +1259,7 @@
                     accid="s"/>
                   <note xml:id="xd047b4de-841a-498e-9953-05324c34e32c" pname="e" oct="3" dur="4"
                     accid="f"/>
+                  
                 </layer>
               </staff>
               <slur xml:id="xc255c6a5-eeea-4f7b-b2a9-c05630c1e75a"
@@ -1712,6 +1713,7 @@
                 <layer xml:id="x36d3fce6-03e3-4f17-b84b-8f12f83bbb22" n="1">
                   <beam xml:id="xa2e61f16-d2d7-4d7a-930f-812bd4d62e73">
                     <note xml:id="x769311de-5f8e-4b01-a65c-787e44c36109" pname="a" oct="5" dur="8"/>
+                    <!-- N.B. Fehler in OA -->
                     <rest xml:id="xd6e4bc53-a307-4e8d-af8e-e659b795192a" dur="16"  />
                     <note xml:id="xaad64b69-c067-46b1-912e-3f7ed586e22f" pname="g" oct="5" dur="16"
                     />
@@ -2396,9 +2398,8 @@
                     />
                   </beam>
                   <beam xml:id="x0c6d476b-83d4-43d4-881e-269eaa9c2ccc">
-                    <note xml:id="x79dd4080-9555-4bb1-adc5-7e902e9a715a" pname="a" oct="4" dur="8"/>
-                    <!-- Achtung: Fehler in OA: beim "a" sollte einen accid="f" hinzugefügt werden-->
-                    <rest xml:id="x6df2a00d-2dce-47cb-800c-a53d2999286d" dur="16"  />
+                    <note xml:id="x79dd4080-9555-4bb1-adc5-7e902e9a715a" pname="a" oct="4" dur="8" accid="f"/>
+                   <rest xml:id="x6df2a00d-2dce-47cb-800c-a53d2999286d" dur="16"  />
                     <note xml:id="x2ed8b068-ae5e-4333-b3ea-b03c9e2cd695" pname="a" oct="4" dur="16"
                       accid.ges="f"/>
                   </beam>
@@ -7647,7 +7648,7 @@
                   <beam xml:id="xd4bb6e92-98f2-4afa-8a9b-2d599d12ede2">
                     <note xml:id="x83af3e03-ce1b-4372-addb-b27f7f0bba43" pname="d" oct="5" dur="8"
                       accid.ges="f"/>
-                    <!-- N.B. Fehler in OA: T. 79, Va, erste Note sollte b statt d sein. In der NGA korrigiert. -->
+                    <!-- N.B. Fehler in OA: T. 81, Va, erste Note sollte b statt d sein. In der NGA korrigiert. -->
                     <rest xml:id="x8226c3ce-077a-4c59-a585-dbb870252db7" dur="16"/>
                     <note xml:id="xe0024175-0087-489e-af18-2f54571efbb9" pname="b" oct="3" dur="16"
                       accid.ges="f"/>
@@ -20553,6 +20554,7 @@
                     accid.ges="f"/>
                   <note xml:id="x49439f19-e0b6-446b-b620-d335282d2e03" pname="d" oct="5" dur="4"
                     accid.ges="f"/>
+                  <!-- Fehler in OA: bei dieser Note fehlt das Auflösungszeichen -->
                 </layer>
               </staff>
               <staff xml:id="xdd8780f0-c1f2-47cb-b4f1-ccea01a41572" n="2">
