@@ -47,6 +47,12 @@ export default {
     }
   },
   mounted () {
+
+    // initial rendition when data is already available
+    if (this.$store.getters.currentMEI !== null) {
+      this.displayMelodicComparison()
+    }
+
     width = document.getElementById('analysis').clientWidth
     height = document.getElementById('analysis').clientHeight
 
@@ -63,8 +69,7 @@ export default {
 
           // render data when already available
           if (this.$store.getters.currentMEI !== null) {
-            //do something with the data
-            console.log('---3')
+            this.displayMelodicComparison()
           }
         }
 
