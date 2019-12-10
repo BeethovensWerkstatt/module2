@@ -26,8 +26,6 @@ let $comparison.id := request:get-parameter('comparisonId','')
 let $comparison := (collection($data.basePath)//mei:meiCorpus[@xml:id = $comparison.id])[1]
 let $notes := $comparison//mei:meiHead/mei:workList/mei:work/mei:context
 
-let $xslPath := '../xsl/' 
-
 let $text := transform:transform($notes,
                doc(concat($xslPath,'tools/mei2html.xsl')), <parameters/>)
 

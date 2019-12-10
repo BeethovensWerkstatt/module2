@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" exclude-result-prefixes="xs math xd mei" version="3.0">
     <xd:doc scope="stylesheet">
         <xd:desc>
@@ -11,23 +10,10 @@
         </xd:desc>
     </xd:doc>
     <xsl:output indent="no" method="html"/>
-    <xsl:param name="purpose" as="xs:string"/>
     <xsl:template match="/">
-        <xsl:choose>
-            <xsl:when test="$purpose = 'getIntroduction'">
-                <div class="workIntroduction">
-                    <xsl:for-each select="//mei:annot[@type = 'introduction']">
-                        <xsl:sort select="@n" data-type="number"/>
-                        <xsl:apply-templates select="."/>
-                    </xsl:for-each>
-                </div>
-            </xsl:when>
-            <xsl:otherwise>
-                <div>
-                    <xsl:apply-templates/>
-                </div>
-            </xsl:otherwise>
-        </xsl:choose>
+        <div>
+            <xsl:apply-templates select="node()"/>
+        </div>
     </xsl:template>
     <xsl:template match="mei:annot">
         <div>
