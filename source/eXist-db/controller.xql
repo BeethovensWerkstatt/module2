@@ -85,6 +85,17 @@ if(ends-with($exist:path,'/comparisons.json')) then (
             <add-parameter name="hiddenStaves" value="{$hiddenStaves}"/>
         </forward>
     </dispatch>
+    
+(: retrieves the HTML introduction for a comparison :)    
+) else if(matches($exist:path,'/data/[\da-zA-Z-_\.]+/intro.html')) then (
+    
+    response:set-header("Access-Control-Allow-Origin", "*"),
+    
+    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
+        <forward url="{$exist:controller}/resources/xql/getTextIntroduction.xql">
+            <add-parameter name="comparisonId" value="{tokenize($exist:path,'/')[last() - 1]}"/>
+        </forward>
+    </dispatch>
 
 ) else if ($exist:path eq '') then (
     
