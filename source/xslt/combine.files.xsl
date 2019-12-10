@@ -208,7 +208,7 @@
         <xsl:variable name="pos" select="count(preceding::mei:scoreDef) + 1" as="xs:integer"/>
         
         <scoreDef xmlns="http://www.music-encoding.org/ns/mei">
-            <xsl:apply-templates select="@meter.count | @meter.unit" mode="#current"/>
+            <xsl:apply-templates select="@meter.count | @meter.unit | @meter.sym" mode="#current"/>
             <staffGrp label="" symbol="none" bar.thru="false">
                 <staffGrp symbol="bracket" bar.thru="true">
                     <xsl:apply-templates select="mei:staffGrp/node()" mode="first.pass"/>
