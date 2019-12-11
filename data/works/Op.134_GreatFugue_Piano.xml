@@ -215,6 +215,16 @@
         </changeDesc>
         <date isodate="2019-07-30"/>
       </change>
+      <change n="17">
+        <respStmt>
+          <persName auth.uri="https://github.com/"> Elisa Novara</persName>
+        </respStmt>
+        <changeDesc>
+          <p n="1"> Dynam und Hairpin nochmals kontrolliert ob "above" oder "below"</p>
+          <p n="1"> Fortsetzungstriche nochmals überprüft und ggf. hinzugefügt</p>
+        </changeDesc>
+        <date isodate="2019-12-11"/>
+      </change>
     </revisionDesc>
   </meiHead>
   <music>
@@ -8922,7 +8932,7 @@
               <dynam xml:id="x92384446-f9f3-43cf-94da-a46e79f685cd" staff="1" tstamp="2"
                 place="below">f </dynam>
               <dynam xml:id="x24646393-e43b-4f51-8f63-dd4113cddf0d" staff="1" tstamp="3"
-                place="above">f </dynam>
+                place="below">f </dynam>
               <tie xml:id="xcbe0ee57-f2e3-4f7c-a57e-11736849a5a0" staff="1"
                 startid="#xede5506e-ece8-4269-bc7b-8cea18939cc1"
                 endid="#xaa01af0b-34d3-40f8-9a33-fed0efe91806"/>
@@ -9265,7 +9275,7 @@
               <dynam xml:id="xf0fbba01-929b-4505-8fea-0892d1508786" staff="1" tstamp="2"
                 place="below">f </dynam>
               <dynam xml:id="x7cf13f3a-155c-471c-b2a5-c1d787619401" staff="1" tstamp="3"
-                place="above">f </dynam>
+                place="below">f </dynam>
               <tie xml:id="xda4f978b-ed2f-4210-b8cd-acec1622c9cb" staff="1"
                 startid="#x3af44190-a24b-4c51-a6cf-71f9aa5cc6fd"
                 endid="#x4c426793-a798-4e0c-b9be-27db5ad70cd0"/>
@@ -19592,7 +19602,7 @@
               <dynam xml:id="x021b3d85-8ae6-484d-ae09-fb3f7f836e06" staff="2" tstamp="4"
                 place="below">sf</dynam>
               <hairpin xml:id="xa0061d7a-e3ae-4672-beed-8734ced746f4" staff="1" form="dim"
-                place="above" tstamp="4" tstamp2="0m+4.5"/>
+                place="below" tstamp="4" tstamp2="0m+4.5"/>
               <hairpin xml:id="x7e65d00d-b9c0-4d6a-a600-268d8dc06af5" staff="2" form="dim"
                 place="below" tstamp="4.5" tstamp2="0m+5"/>
               <dynam xml:id="x4c6e1130-31f2-41ff-89e7-9ecad8b36070" staff="3" tstamp="4"
@@ -29251,7 +29261,7 @@
               <trill xml:id="x00b564f3-6a4f-4ebe-be02-f580c4a3084c" staff="1" place="above"
                 startid="#x3e9bbb27-ff77-4861-951a-d556e2768229"/>
               <dynam xml:id="x13812ee0-0854-48e8-9a07-518af46e97d8" staff="4" tstamp="3"
-                place="above">ff</dynam>
+                place="below">ff</dynam>
               <slur xml:id="x033ce94b-256a-462c-9d60-7752fea28dd9" staff="3"
                 startid="#xa9cb998a-fdec-4726-890b-d6c72c30f575"
                 endid="#xb5d4cf1c-e1f5-4774-93ea-e8462011b619"/>
@@ -30673,7 +30683,7 @@
               <trill xml:id="xfb6a4c70-cc55-4e9d-b776-81c68351e1b5" staff="4"
                 startid="#x4b920f8c-526b-45de-8985-4673d6908945" place="above" accidupper="s"/>
               <dynam xml:id="xfe12229e-1d3b-416d-97fe-df86aa52309f" staff="3" tstamp="3"
-                place="above">sf</dynam>
+                place="below">sf</dynam>
               <tie xml:id="xddbeff02-dbb4-4fde-877c-3626aadade08" staff="3"
                 startid="#x868f9e6b-595a-42e5-8127-03eb4407e352"
                 endid="#x7915b32c-414b-41c0-abcb-1b8051461de1"/>
@@ -31428,7 +31438,7 @@
                 </layer>
               </staff>
               <dynam xml:id="x3d7b8eae-e5e9-42bc-8913-695937039fea" staff="2" tstamp="4"
-                place="above">ff</dynam>
+                place="below">ff</dynam>
               <trill xml:id="x328dd372-39b6-4b5e-873c-14077a290b6f" staff="3"
                 startid="#x13a094ca-770a-43ba-944d-710bf0259165" place="above" accidupper="f"/>
               <tie xml:id="xe6082be6-d9f1-4804-a967-047ad20b7fb6" staff="2"
@@ -32887,7 +32897,7 @@
                 </layer>
               </staff>
               <dynam xml:id="xf1b46e9f-9efb-4fb3-b70e-dcdccd678679" staff="4" tstamp="1"
-                place="above">sf</dynam>
+                place="below">sf</dynam>
               <trill xml:id="xb7c78d8a-1320-484d-a370-3752220dd99e" staff="1"
                 startid="#x00b723c5-8bd4-44d9-83e4-6c281aef20fb" place="above"/>
               <trill xml:id="x4a79c649-d86c-44a3-9d13-9b14192d882f" staff="1"
@@ -33055,7 +33065,7 @@
                 </layer>
               </staff>
               <dynam xml:id="x4d565671-0e0e-42a5-abc8-08461f792484" staff="4" tstamp="1"
-                place="above">sf</dynam>
+                place="below">sf</dynam>
               <trill xml:id="x56d73135-a96d-411e-84a6-f3aca7671309" staff="1"
                 startid="#xe7b39089-f3f2-4290-9803-4d2e536bca5a" place="above"/>
               <tie xml:id="x0fd97a5d-d68f-4caf-92f7-08b3da39acc0" staff="3"
@@ -33225,7 +33235,7 @@
                 </layer>
               </staff>
               <dynam xml:id="x0c71e48f-ae21-4073-8c1a-2039c7298c38" staff="4" tstamp="1"
-                place="above">sf</dynam>
+                place="below">sf</dynam>
               <trill xml:id="x82c4dc49-7a60-4a66-b414-747d42a05480" staff="1"
                 startid="#xf4ec2bd2-a86b-48d5-b02d-b16c80087568" place="above"/>
               <tie xml:id="x98ebd2aa-3718-4a4b-80cc-090475f38c1e" staff="1"
@@ -34375,7 +34385,7 @@
                 </layer>
               </staff>
               <dynam xml:id="x491b6df0-1067-43db-8a41-384e646be880" staff="2" tstamp="3"
-                place="above">p</dynam>
+                place="below">p</dynam>
             </measure>
             <measure n="418" xml:id="x79d8f881-bf0e-4fbc-b5cd-efde3735d784">
               <staff xml:id="x9b9a45b0-9e7d-429f-b649-477ed25b2d6a" n="1">
@@ -39630,9 +39640,9 @@
               <trill xml:id="xdea4e559-860e-478b-9941-4f328ed45342" staff="4"
                 startid="#x1837ed16-9ebd-4594-a1a3-7737a9e0023c" place="below"/>
               <tempo xml:id="x337af8fb-45ac-49e1-ad4c-6248bb4977f0" staff="1" tstamp="1"
-                place="below">poco à poco sempre più Allegro</tempo>
+                place="above">poco à poco sempre più Allegro</tempo>
               <tempo xml:id="x7f1eba5d-0cab-45d4-9eb2-932ae67aee1b" staff="3" tstamp="1"
-                place="below">poco a poco sempre piu Allo</tempo>
+                place="above">poco a poco sempre piu Allo</tempo>
               <tie xml:id="x6dcbd39b-ed2c-4db9-b9fe-47f4a2c2f1ac" staff="1"
                 startid="#x436923c2-a73c-4a17-acb3-00294338b263"
                 endid="#xaeafb37b-fea0-4c90-8130-4c80a63b1a04"/>
@@ -39766,13 +39776,12 @@
                      accid.ges="f"/>
                 </layer>
               </staff>
-              <tempo xml:id="x199ba058-26ba-4534-9ae5-76457d427b76" staff="1" tstamp="1"
-                place="below">ed acceller: il tempo</tempo>
-              <!-- In OA Fortsetzungsstriche dieser Tempoangabe bis T. 534. -->
-              <tempo xml:id="x1aca7bd4-ed36-4bfa-9df2-214bb83c8472" staff="3" tstamp="1"
-                place="above">ed acceller: il tempo.</tempo>
+              <dynam xml:id="x199ba058-26ba-4534-9ae5-76457d427b76" staff="1" tstamp="1"
+                place="above" >ed acceller. il tempo</dynam>
+              <dynam xml:id="x1aca7bd4-ed36-4bfa-9df2-214bb83c8472" staff="3" tstamp="1"
+                place="above">ed acceller. il tempo.</dynam>
               <dynam xml:id="x5d35093a-d9c6-41bd-80eb-52da40a265b6" staff="1" tstamp="2"
-                place="below">diminuendo</dynam>
+                place="below" extender="true" tstamp2="18m+1" >diminuendo</dynam>
               <dynam xml:id="xdb9314fa-d4ff-4de7-a24c-bf41d5700ded" staff="1" tstamp="2"
                 place="below">f </dynam>
               <dynam xml:id="xc072eef5-b916-4ce3-87e5-1c9e4f549b66" staff="2" tstamp="2"
@@ -43013,8 +43022,8 @@
                 startid="#x146b1763-fbfa-43ae-b069-b37e03050cfd"
                 endid="#x293be068-299d-4440-94c3-b2ee0039dbc3"/>
               <dynam xml:id="x67e570bc-891d-4ea3-8bff-0ca7ef83bf3d" staff="1" tstamp="1"
-                place="within">dim</dynam>
-              <!-- Die Fortsetzungsstriche des dim: in staff 1, die bis T. 538 gehen, konnte ich nicht codieren. -->
+                place="within" tstamp2="2m+1" extender="true">dim</dynam>
+             
               <dynam xml:id="x94541d5b-bed8-489e-b4ba-799a2dcee719" staff="3" tstamp="1"
                 place="below">dim</dynam>
               <tie xml:id="x9c38eb5c-722a-48ff-aa26-32cd5c907e6d" staff="1"
@@ -45059,12 +45068,12 @@
               <tie xml:id="x8451a268-778f-46cf-ad56-2ec0afe736a5" staff="2"
                 startid="#xf9d90583-5fbc-425d-b296-a41c810bb3ad"
                 endid="#xc8f21acc-576f-4105-9207-2f51f0cda9ef"/>
-              <dynam xml:id="x7a851914-79c6-4976-80e9-8fe9917356db" staff="1" tstamp="1"
-                place="within">cres:</dynam>
+              <dynam xml:id="x7a851914-79c6-4976-80e9-8fe9917356db" staff="1" tstamp="1" tstamp2="3m+3"
+                place="within" extender="true">cresc.</dynam>
               <dynam xml:id="x913741de-ec98-4c7f-b7ac-c08b52e7be2f" staff="3" tstamp="1"
-                place="within">cres:</dynam>
-              <!-- Die Fortsetzungsstriche des cres: in staff 1 und 3, die bis T. 630 bzw. 631 gehen, konnte ich nicht codieren. -->
-            </measure>
+                tstamp2="3m+3"
+                place="within" extender="true">cresc.</dynam>
+             </measure>
             <measure n="629" xml:id="x27a96afc-f700-4b21-a61c-45983ca88aa3">
               <staff xml:id="x92bea6f4-2bfb-4f66-be9a-096698bd5f33" n="1">
                 <layer xml:id="xc625f922-a446-4e3e-8785-f1f1b551c27e" n="1">
@@ -45552,11 +45561,11 @@
               <dynam xml:id="x85bf22bc-a902-444e-8719-e736e1613c80" staff="1" tstamp="1"
                 place="below">p</dynam>
               <dynam xml:id="x46bb7ef9-c8c7-439b-b427-d0eadd873db1" staff="1" tstamp="3"
-                place="below">cres:</dynam>
+                place="below" extender="true" tstamp2="4m+1">cresc.</dynam>
               <dynam xml:id="xf99771e4-5746-4a07-aed7-c03d508eceaf" staff="3" tstamp="1"
                 place="below">p</dynam>
               <dynam xml:id="xd828073d-8365-4b85-a60c-85e799aa6b85" staff="3" tstamp="6"
-                place="below">cres:</dynam>
+                place="below" extender="true" tstamp2="4m+1">cresc.</dynam>
               <slur xml:id="x05e55deb-2543-4312-aa4d-c7a3fe040d44" staff="1"
                 startid="#x56f82680-9481-4972-9223-86e125ca7d1c"
                 endid="#x1aea12ed-f38e-4df2-80fb-98e1cbbb14dc"/>
@@ -45569,8 +45578,7 @@
               <tie xml:id="xcee178bf-d6a0-43e4-aeb4-03ea7d4c6a77" staff="2"
                 startid="#x1cdc2988-15bb-4594-9a7b-290d2c770bf2"
                 endid="#x2671d5cc-65a1-489b-b11c-aee879e710cf"/>
-              <!-- Die Fortsetzungsstriche des cres: in staff 1 und 3, die bis T. 642 gehen, konnte ich nicht codieren. -->
-              <tie xml:id="x6eff9e55-bfee-4c34-b203-a214480fae1d" staff="2"
+               <tie xml:id="x6eff9e55-bfee-4c34-b203-a214480fae1d" staff="2"
                 startid="#xeeec5a8e-ff7e-44dd-9f42-10e68f42e82f"
                 endid="#x8ed17b40-15b8-4a87-918a-a8d7e930bd3e"/>
               <tie xml:id="xde28ae12-c132-45df-9023-884d3abcf67c" staff="4"
@@ -45956,11 +45964,10 @@
                 startid="#x026b3ee7-1fb2-458e-a0b0-52551501dc70"
                 endid="#xad9b9958-924f-4ae2-9eb9-097c189bac0a"/>
               <dynam xml:id="x05e3d3e1-2e45-44f1-bf89-4137b0982bb5" staff="1" tstamp="1"
-                place="below">dim</dynam>
+                place="below">dim.</dynam>
               <dynam xml:id="x51aa7927-4e68-41c0-8e18-6340e4631d8c" staff="3" tstamp="1"
-                place="below">dim</dynam>
-              <!-- Fortsetzungsstriche des dim: in staff 3 (bis T. 646) nicht codiert. -->
-              <tie xml:id="xe90422b2-3856-4384-9bb6-6e6a757a00a1" staff="1"
+                place="below" extender="true" tstamp2="2m+4">dim.</dynam>
+            <tie xml:id="xe90422b2-3856-4384-9bb6-6e6a757a00a1" staff="1"
                 startid="#xc89a8940-bb4e-4b5a-823b-3590e6c46779"
                 endid="#xe5c60b85-689b-4c72-b0de-7ea8ab6d111a"/>
               <tie xml:id="x6ea536f4-fadc-4e1f-a74f-62f037df46cf" staff="2"
@@ -46103,10 +46110,10 @@
                 startid="#x2f1d3f8e-65ce-4b88-b3df-82534caff81b"
                 endid="#x84fe5b76-c779-43c7-8505-13541d07abe8"/>
               <dynam xml:id="x56c81ad2-7440-4036-b178-65c7d295e34c" staff="1" tstamp="1"
-                place="below">cres:</dynam>
+                place="below"  extender="true" tstamp2="4m+1">cresc.</dynam>
               <dynam xml:id="x90310c92-a8c4-4b49-9beb-a11032c5017e" staff="3" tstamp="1"
-                place="below">cres:</dynam>
-              <!-- Fortsetzungsstriche des cres: in staff 1 und 3 (bis T. 650) nicht codiert. -->
+                place="below" extender="true" tstamp2="5m+4">cresc.</dynam>
+           
               <tie xml:id="x72ba25e9-edeb-49e5-ba43-ad11df3ec48f" staff="1"
                 startid="#x609e27d9-512d-4861-b640-9c39c47b3d13"
                 endid="#x0c2687cf-209a-45e1-9755-5ff072ad0a10"/>
@@ -46647,8 +46654,7 @@
               <dynam xml:id="xe68a08b7-0f7c-451d-a5e4-52fb0b0f513e" staff="1" tstamp="1"
                 place="below">p</dynam>
               <dynam xml:id="x4b669421-ab96-4593-948a-16f5620d8a46" staff="3" tstamp="1"
-                place="below">più p</dynam>
-              <!-- Fortsetzungsstriche des piu P in staff 3 (bis T. 658) nicht codiert. -->
+                place="below" tstamp2="4m+3" extender="true">più p</dynam>
               <tie xml:id="x70f7a2e8-e48d-47d0-a859-65a37401ec86" staff="4"
                 startid="#xa544146e-1247-4f34-8350-4b2c514dc08a"
                 endid="#x51636ba7-edcc-4b77-bd11-8f6976a2965b"/>
@@ -50944,7 +50950,6 @@
                 place="within">il f più f</dynam>
               <dynam xml:id="xc90b18d7-c614-4a9b-886f-51ff6b7b1db6" staff="3" tstamp="1"
                 place="within">il f piu f</dynam>
-              <!-- Fortsetzungsstriche der Dynamik in staff 3 bis T. 737 -->
             </measure>
             <measure n="737" xml:id="x990409db-fd16-4b71-8ac9-fcadb41626e2">
               <staff xml:id="x637e26c8-8ab7-4cce-8a47-c61ef7a15fbb" n="1">
@@ -51163,7 +51168,7 @@
                 place="within">ff</dynam>
               <dynam xml:id="x595e3c1a-102c-470d-a993-6dd9761d669e" staff="3" tstamp="1"
                 place="within">ff</dynam>
-              <!-- Fortsetzungsstriche bis T. 739 -->
+            
             </measure>
 
             <measure n="740" xml:id="xef4933aa-7c4f-4967-bd18-cdde2e9c7947">
