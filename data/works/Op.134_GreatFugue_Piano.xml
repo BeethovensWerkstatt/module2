@@ -8588,7 +8588,7 @@
               <dynam xml:id="xd53b922b-d925-48e1-bf99-318d18466e8c" staff="1" tstamp="1.5"
                 place="above">f </dynam>
               <dynam xml:id="x1a89c3d9-2c5e-4279-882a-5c18f1957416" staff="1" tstamp="4"
-                place="above">f </dynam>
+                place="below">f </dynam>
               <slur xml:id="xb497d5da-a45a-4757-a2c0-6965916169f9" staff="1"
                 startid="#x58d1a6e0-a69a-4024-a371-58fcef5906c9"
                 endid="#x4f67143a-5660-4b47-bf4b-b2aba20391d4"/>
@@ -15176,7 +15176,7 @@
                 </layer>
               </staff>
               <dynam xml:id="x9ddea201-cba5-4eaf-b541-a9066f62e0c5" staff="1" tstamp="1.5"
-                place="above">ff</dynam>
+                place="below">ff</dynam>
               <dynam xml:id="x53172a93-5139-4551-9634-0429840ef85a" staff="1" tstamp="3.5"
                 place="below">sf</dynam>
               <dynam xml:id="x94a123d4-25b3-4b80-a8c8-8d54c41d92ed" staff="3" tstamp="2.5"
@@ -39772,7 +39772,7 @@
               <tempo xml:id="x1aca7bd4-ed36-4bfa-9df2-214bb83c8472" staff="3" tstamp="1"
                 place="above">ed acceller: il tempo.</tempo>
               <dynam xml:id="x5d35093a-d9c6-41bd-80eb-52da40a265b6" staff="1" tstamp="2"
-                place="above">diminuendo</dynam>
+                place="below">diminuendo</dynam>
               <dynam xml:id="xdb9314fa-d4ff-4de7-a24c-bf41d5700ded" staff="1" tstamp="2"
                 place="below">f </dynam>
               <dynam xml:id="xc072eef5-b916-4ce3-87e5-1c9e4f549b66" staff="2" tstamp="2"
@@ -40068,7 +40068,7 @@
               <dynam xml:id="xa45059ca-f2c0-45f5-8671-51909adfd81e" staff="1" tstamp="2"
                 place="below">più p</dynam>
               <dynam xml:id="x0eea11f6-0d42-455a-a472-9bd9d18ba415" staff="4" tstamp="2"
-                place="above">più p</dynam>
+                place="below">più p</dynam>
               <trill xml:id="x9efe14cd-9cb6-4a20-bfce-cf0f5d47038b" staff="4"
                 startid="#x5ffe4bd2-ba6c-4bc6-b7b6-7f25a8482066" place="above" accidlower="f"/>
             </measure>
@@ -43585,7 +43585,7 @@
                 startid="#x838aee57-e69b-462a-8f35-3730f34c7277"
                 endid="#x6fb6976b-3325-4705-99f2-cbb18d3bdf72"/>
               <dynam xml:id="xb67edaee-e2a9-4663-a390-8ab3ca7c3f72" staff="2" tstamp="1"
-                place="above">sempre pp</dynam>
+                place="below">sempre pp</dynam>
               <tie xml:id="x88935efd-e480-4aec-a656-2583c98ff5af" staff="3"
                 startid="#xd9a78f26-ed9a-4348-922c-2553ef92b391"
                 endid="#x6be6bac9-efbd-481f-88b9-a2fe2c111032"/>
@@ -44520,7 +44520,7 @@
               <dynam xml:id="x6459402d-1a04-48c0-a1ce-a263d39611b4" staff="1" tstamp="4"
                 place="below">pp</dynam>
               <dynam xml:id="xb7cf31b6-f50f-4a8b-be00-58df5a45e969" staff="2" tstamp="1"
-                place="above">pp</dynam>
+                place="below">pp</dynam>
               <dynam xml:id="x57783445-381c-4b18-8151-1d58f757be3f" staff="3" tstamp="1"
                 place="within">pp</dynam>
               <tie xml:id="x593d19e3-e8c7-499b-a892-2d6f990adae9" staff="4"
@@ -47823,7 +47823,7 @@
               <dynam xml:id="xf7cd33e5-c517-4549-8916-722c3c4d58d9" staff="1" tstamp="4"
                 place="below">f </dynam>
               <dynam xml:id="x0467bed5-8be3-4633-8842-072a15241857" staff="4" layer="2" tstamp="4"
-                place="above">f </dynam>
+                place="below">f </dynam>
               <tie xml:id="xce0c134d-6b75-4a31-85d4-365717317f59" staff="4" layer="1"
                 startid="#xa538dfc3-eb97-4f9e-9b48-548f5b510346"
                 endid="#xe9973317-7d11-41b5-ba60-068a7eb074f4"/>
