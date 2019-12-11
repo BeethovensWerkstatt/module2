@@ -204,7 +204,6 @@
             </xsl:choose>
         </xsl:variable>
         
-        <xsl:copy-of select="$output"/>
         <xsl:variable name="cleanedup.dynamics" as="node()">
             <xsl:apply-templates select="$output" mode="clean.dynamics"/>
         </xsl:variable>
