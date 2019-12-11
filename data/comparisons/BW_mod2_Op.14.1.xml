@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-model href="../schema/bw_module2_comparisons.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schema/bw_module2_comparisons.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="4.0.0" xml:id="x418650e0-d899-4e3d-bff3-f7d459e1d5d7">
    <meiHead>
       <fileDesc n="14">
@@ -38,7 +37,7 @@
                <p>
                   Im Falle von op. 14/1 und der Streichquartettversion bestehen größere Unterschiede zwischen beiden Fassungen, was nicht nur durch die Anpassung an veränderte spieltechnische Bedingungen bedingt ist, sondern auch mit der unterschiedlichen Satzart für Klavier bzw. Streichquartett zusammenhängt. Die <rend rend="bold">verschiedenen Perspektiven</rend> der <rend rend="italic">VideApp Arr</rend> versuchen, diese Strukturen aufzudecken: Im Einzelnotenvergleich zeigt sich beispielsweise, dass der Invarianz-Anteil im I. Satz ab der Durchführung sinkt, weil dort insbesondere die Begleitfiguren der übernommenen Melodieteile verändert worden sind. Die meisten strukturellen Unterschiede zwischen den Fassungen finden sich im Finalsatz, wo die klaviertypische Triolenbegleitung des Rondothemas in der Bearbeitung durch Skalen in den Streichern ersetzt wird.</p>
                
-               <p>Ausdrücklich sei darauf hingewiesen, dass die <rend rend="bold">Codierungen</rend> jeweils auf den Originalausgaben beruhen, Fehler der jeweiligen Vorlage übernommen wurden und so auch angezeigt (aber in der Beschreibung verzeichnet) werden. (Hinweis: Eine ausführlichere Beschreibung der vorgenannten Aspekte wird separat auf der Website des Projekts zur Verfügung gestellt.)</p>
+               <p>Ausdrücklich sei darauf hingewiesen, dass die <rend rend="bold">Codierungen</rend> jeweils auf den Originalausgaben beruhen, Fehler der jeweiligen Vorlage übernommen wurden und so auch angezeigt werden. (Hinweis: Ausführlichere Informationen zu Entstehungsgeschichte, Quellen, Bearbeitungsmaßnahmen und Codierung einschließlich ausgewählter Beispielstellen werden separat auf der Website des Projekts zur Verfügung gestellt.)</p>
             </context>
          </work>
       </workList>
