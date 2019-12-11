@@ -14,11 +14,7 @@
         </xd:desc>
     </xd:doc>
     
-    <xsl:output indent="yes" method="xml"/>
-    
-    <xsl:template match="/">
-        <xsl:apply-templates select="node()"/>
-    </xsl:template>
+   
     
     
     <xsl:template match="mei:dynam[@place='between'] | mei:hairpin[@place='between']" mode="clean.dynamics">
@@ -32,10 +28,6 @@
     </xsl:template>
     
     
-    <xsl:template match="node() | @*">
-        <xsl:copy>
-            <xsl:apply-templates select="node() | @*"/>
-        </xsl:copy>
-    </xsl:template>
+    
     
 </xsl:stylesheet>
