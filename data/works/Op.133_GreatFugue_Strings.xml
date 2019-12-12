@@ -212,6 +212,15 @@
         </changeDesc>
         <date isodate="2019-12-11"/>
       </change>
+      <change n="15">
+        <respStmt>
+          <persName>Elisa Novara</persName>
+        </respStmt>
+        <changeDesc>
+          <p n="1">labelAbbr zu den Instrumenten hinzugefügt </p>
+        </changeDesc>
+        <date isodate="2019-12-12"/>
+       </change>
     </revisionDesc>
   </meiHead>
   <music meiversion="4.0.0">
@@ -226,18 +235,22 @@
               <staffDef n="1" xml:id="xf28a24d7-a6d6-4b24-85c9-f7cebe73f316" lines="5" clef.line="2"
                 clef.shape="G">
                 <label xml:id="xce68025e-c1ff-4faa-a860-286d0b9df44e">Violin I</label>
+                <labelAbbr xml:id="x441fb8ea-3b28-41ad-a22a-559ee1c10e5c">V I</labelAbbr>
               </staffDef>
               <staffDef n="2" xml:id="xfccb48bb-53c0-45be-9065-3bb870c9f4ac" lines="5" clef.line="2"
                 clef.shape="G">
                 <label xml:id="x7ec9823f-a1cc-411d-b38e-a6c1d809a25b">Violin II</label>
+                <labelAbbr xml:id="x8ec3a3a9-c92b-4a11-9880-5c2abd8124eb">V II</labelAbbr>
               </staffDef>
               <staffDef n="3" xml:id="x3d655471-4813-4649-8679-8e35d91b8626" lines="5" clef.line="3"
                 clef.shape="C">
                 <label xml:id="x09f2323e-bc92-452c-b009-42b331c14d9f">Viola</label>
+                <labelAbbr xml:id="xe30333a9-f554-4ae7-b153-fc8ad8325bce">Va</labelAbbr>
               </staffDef>
               <staffDef n="4" xml:id="x34ab7013-a700-4576-af9b-83f69750b5ed" lines="5" clef.line="4"
                 clef.shape="F">
                 <label xml:id="x5e5786a2-52aa-4b9e-b929-fc99f0bd549f">Cello</label>
+                <labelAbbr xml:id="xb8b7cd0f-4df4-450f-81d8-df5eb76f7a0b">Vc</labelAbbr>
               </staffDef>
             </staffGrp>
           </scoreDef>
