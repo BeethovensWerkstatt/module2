@@ -1275,6 +1275,9 @@
             <xsl:when test="$root.note and $seventh.note and not($third.note) and not($fifth.note)">
                 <xsl:attribute name="root" select="'ciao'"/>
             </xsl:when>
+            <xsl:when test="$root.note and not($seventh.note) and not($third.note) and not($fifth.note)">
+                <xsl:attribute name="root" select="'ciao'"/>
+            </xsl:when>
             
            
             <!--<xsl:when test="$third.dist = 4 and $fifth.dist = 7 and $ninth.note">
@@ -1293,9 +1296,9 @@
             
             <xsl:otherwise>
                 <xsl:message
-                    select="'Unable to determine third at ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || '. Please help…'"/>
+                    select="'Unable to determine interval at ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || '. Please help…'"/>
                 <xsl:attribute name="root"
-                    select="upper-case(substring(., 1, 1)) || substring(., 2) || 'Hurz'"/>
+                    select="upper-case(substring(., 1, 1)) || substring(., 2) || '?'"/>
             </xsl:otherwise>
         </xsl:choose>
         <!-- toDo: handle the case when there are both minor and major thirds -->
