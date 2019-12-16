@@ -1231,9 +1231,9 @@
             </xsl:if>
         </xsl:variable>
 
-        <!-- determine classic triads -->
+        
         <xsl:choose>
-            <!--major triad-->
+            <!--minor triad:-->
             <xsl:when test="$third.dist = 3 and $fifth.dist = 7">
                 <xsl:variable name="is.minorThird" select="." as="xs:boolean"/>
                 <xsl:attribute name="root"
@@ -1244,39 +1244,64 @@
                 <xsl:attribute name="root"
                     select="upper-case(substring(., 1, 1)) || substring(., 2) || 'm'"/>
             </xsl:when>
-            <!--minor triad-->
+            <!--major triads:-->
             <xsl:when test="$third.dist = 4 and $fifth.dist = 7">
                 <xsl:attribute name="third" select="'major'"/>
                 <xsl:attribute name="root"
                     select="upper-case(substring(., 1, 1)) || substring(., 2)"/>
-                <!--toDO: move root-modification elsewhere -->
             </xsl:when>
             <xsl:when test="$third.dist = 4 and not($fifth.note)">
                 <xsl:attribute name="third" select="'major'"/>
                 <xsl:attribute name="root"
                     select="upper-case(substring(., 1, 1)) || substring(., 2)"/>
-                <!--toDO: move root-modification elsewhere -->
             </xsl:when>
+            <!-- augmented triads: -->
             <xsl:when test="$third.dist = 4 and $fifth.dist = 8">
                 <xsl:attribute name="root"
                     select="upper-case(substring(., 1, 1)) || substring(., 2) || '+'"/>
             </xsl:when>
+            <!-- diminished triads = verkürzter Akkord (kein Grundton) -->
             <xsl:when test="$third.dist = 3 and $fifth.dist = 6">
                 <xsl:attribute name="root"
                     select="upper-case(substring(., 1, 1)) || substring(., 2) || 'dim'"/>
-                <!--toDO: move root-modification elsewhere -->
             </xsl:when>
+            
+            <!-- crazy combinations -->
+            <!-- only major third and diminished fifth -->
+            <xsl:when test="$third.dist = 4 and $fifth.dist = 6 and not($seventh.note) and not($ninth.note)">
+                <xsl:attribute name="root"
+                    select="upper-case(substring(., 1, 1)) || substring(., 2) || '♭5'"/>
+            </xsl:when>
+            <!-- only minor third and augmented fifth -->
+            <xsl:when test="$third.dist = 3 and $fifth.dist = 8 and not($seventh.note) and not($ninth.note)">
+                <xsl:attribute name="root"
+                    select="upper-case(substring(., 1, 1)) || substring(., 2) || 'm♯5'"/>
+            </xsl:when>
+            
             <!--no third but perfect fifth-->
             <xsl:when test="not($third.note) and $fifth.dist = 7">
                 <xsl:attribute name="root"
                     select="upper-case(substring(., 1, 1)) || substring(., 2) || 'no3'"/>
             </xsl:when>
-            <!--only ct1 and ct7: should be deleted later in a cleanup-xslt-->
+            
+            
+            <!--Following interval combinations get a "ciao" and will be deleted in a cleanup-->
+            <!--only ct1 and ct7 -->
             <xsl:when test="$root.note and $seventh.note and not($third.note) and not($fifth.note)">
                 <xsl:attribute name="root" select="'ciao'"/>
             </xsl:when>
             <xsl:when test="$root.note and not($seventh.note) and not($third.note) and not($fifth.note)">
                 <xsl:attribute name="root" select="'ciao'"/>
+            </xsl:when>
+            <xsl:when test="not($third.note) and $fifth.dist = 6">
+                <xsl:attribute name="root" select="'ciao'"/>
+            </xsl:when>
+            <xsl:when test="not($third.note) and $fifth.dist = 8">
+                <xsl:attribute name="root" select="'ciao'"/>
+            </xsl:when>
+            <!-- if there is a diminished third -->
+            <xsl:when test="$third.dist = 2">
+                <xsl:attribute name="root" select="upper-case(substring(., 1, 1)) || substring(., 2) || 'ciao'"/>
             </xsl:when>
             
            
@@ -1286,17 +1311,17 @@
             <!-- gr. 3, r. 5, gr. 7 -->
             <!--<xsl:when test="$third.dist = 4 and $fifth.dist = 7 and $seventh.dist = 11">
                 <xsl:attribute name="root"
-                    select="upper-case(substring(., 1, 1)) || substring(., 2) || 'pups'"/>
+                    select="upper-case(substring(., 1, 1)) || substring(., 2) || ' '"/>
             </xsl:when>-->
             <!-- gr. 3, r. 5, kl. 7 -->
             <!--<xsl:when test="$third.dist = 3 and $fifth.dist = 7 and $seventh.dist = 10">
                 <xsl:attribute name="root"
-                    select="upper-case(substring(., 1, 1)) || substring(., 2) || 'oops'"/>
+                    select="upper-case(substring(., 1, 1)) || substring(., 2) || ' '"/>
             </xsl:when>-->
             
             <xsl:otherwise>
-                <xsl:message
-                    select="'Unable to determine interval at ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || '. Please help…'"/>
+                <!--<xsl:message
+                    select="'Unable to determine interval at ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || '. Please help…'"/>-->
                 <xsl:attribute name="root"
                     select="upper-case(substring(., 1, 1)) || substring(., 2) || '?'"/>
             </xsl:otherwise>
