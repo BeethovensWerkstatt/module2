@@ -140,6 +140,7 @@
                                     dynam elements are supposed to have a @tstamp only.
                                 </sch:assert>
                             </sch:rule>
+                            <!-- @todo fermata: add taktstrich regel-->
                             <sch:rule context="mei:fermata">
                                 <sch:let name="meter" value="preceding::mei:*[@meter.count][1]/xs:integer(@meter.count)"/>
                                 <sch:assert test="(not(@tstamp2) and not(@endid)) and ((@startid and not(@tstamp)) or (not(@startid) and @tstamp and number(@tstamp = $meter + 1)))">
@@ -247,6 +248,7 @@
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
+                    
                     
                     <constraintSpec ident="check_fermata_place" scheme="isoschematron" mode="add">
                         <constraint>
@@ -375,6 +377,49 @@
                       </constraint>
                   </constraintSpec>
                  
+                 <!-- @todo: warning-->
+                 <constraintSpec ident="check_ending_section_relationship" scheme="isoschematron" mode="add">
+                     <constraint>
+                         <sch:rule context="mei:score">
+                             <sch:report test="">
+                                 ending and section should be siblings
+                             </sch:report>
+                         </sch:rule>
+                     </constraint>
+                 </constraintSpec>
+                    
+                    <!-- @todo -->
+                    <constraintSpec ident="check_tie_similarity" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:measure">
+                                <sch:assert test="">
+                                    two notes connected with tie have to have the same @name and @oct or @oct.ges
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <!-- @todo -->
+                    <constraintSpec ident="check_hairpin_between_space" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:hairpin">
+                                <sch:assert test="">
+                                    if hairpin has @place=between, @staff must have a space
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    
+                    <!-- @todo -->
+                    <constraintSpec ident="check_dynam_between_space" scheme="isoschematron" mode="add">
+                        <constraint>
+                            <sch:rule context="mei:dynam">
+                                <sch:assert test="">
+                                    if dynam has @place=between, @staff must have a space
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
                     
                 </elementSpec>
                 
