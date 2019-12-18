@@ -165,16 +165,24 @@
                 <xsl:variable name="root.dur"
                     select="max($notes[.//@pname = $current.row/@*[. = '0']/local-name()]/(max(.//@tstamp2/number(.)) - min(.//@tstamp/number(.))))"
                     as="xs:double?"/>
+                
                 <xsl:variable name="bass.accid" as="xs:string">
                     <xsl:choose>
-                        <xsl:when test="$notes//mei:note[@pname = $bass.tone]//mei:accid/@accid.ges">
-                            <xsl:value-of select="$notes//mei:note[@pname = $bass.tone]//mei:accid/@accid.ges"/>
+                        <xsl:when test="$notes//mei:note[@pname = $bass.tone][@accid.ges = 'f']">
+                            <xsl:value-of select="'♭'"/>
                         </xsl:when>
-                        <xsl:when test="$notes//mei:note[@pname = $bass.tone]//mei:accid/@accid">
-                            <xsl:value-of select="$notes//mei:note[@pname = $bass.tone]//mei:accid/@accid"/>
+                        <xsl:when test="$notes//mei:note[@pname = $bass.tone][@accid = 'f']">
+                            <xsl:value-of select="'♭'"/>
                         </xsl:when>
+                        <xsl:when test="$notes//mei:note[@pname = $bass.tone][@accid.ges = 's']">
+                            <xsl:value-of select="'♯'"/>
+                        </xsl:when>
+                        <xsl:when test="$notes//mei:note[@pname = $bass.tone][@accid = 's']">
+                            <xsl:value-of select="'♯'"/>
+                        </xsl:when>
+                        
                         <xsl:otherwise>
-                            <xsl:value-of select="'n'"/>
+                            <xsl:value-of select="''"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:variable>
@@ -249,6 +257,8 @@
 
         <xsl:for-each select="$identified.intervals">
             <xsl:variable name="current.interpretation" select="." as="node()"/>
+            
+            
             <!--<xsl:variable name="is.mod" select="some $func in $current.interpretation/temp:tone/@func satisfies (.,'[a-z]+')" as="xs:boolean"/>-->
             <!-- insert chord symbol with additions of sevenths and/or bass tone after a slash (/) if it is not the root note -->
             <harm type="mfunc" xmlns="http://www.music-encoding.org/ns/mei">
@@ -266,7 +276,7 @@
                             <rend rend="sup" type="ct9">9</rend>
                         </xsl:if>
                         <rend type="bass">
-                            <xsl:value-of select="concat('/', upper-case($current.interpretation/@bass))"/>
+                            <xsl:value-of select="concat('/', upper-case($current.interpretation/@bass), $current.interpretation/@bass.accid)"/>
                         </rend>
                         <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '43sus')">
                             <rend type="mod43sus" rend="sup" fontstyle="italic">43sus</rend>
