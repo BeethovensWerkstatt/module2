@@ -1452,7 +1452,7 @@
     <xsl:template
         match="mei:beam[count(descendant::mei:note[not(@grace) and not(@cue) and @tstamp]) gt 2]"
         mode="resolve.arpeggios">
-        <xsl:variable name="has.chords" select="exists(child::mei:chord)" as="xs:boolean"/>
+        <xsl:variable name="has.chords" select="exists(descendant::mei:chord)" as="xs:boolean"/>
         <!-- gracenotes and cue-notes are ignored -->
         <xsl:variable name="notes"
             select="descendant::mei:note[not(@grace) and not(@cue) and @tstamp]" as="node()*"/>
@@ -1466,14 +1466,18 @@
         <xsl:variable name="minimal.cost.of.thirds"
             select="min($potential.chords//mei:annot[@type = 'mfunc.tonelist']/number(@cost))"
             as="xs:double"/>
-        <!-- collect the durations of all nots within the beam -->
-        <xsl:variable name="notes.dur" select="$notes/@dur" as="xs:string+"/>
+        <!-- collect the durations of all notes within the beam -->
+        <xsl:variable name="notes.dur" select="$notes/@dur" as="xs:string*"/>
+        
         <!--<xsl:variable name="chords.dur" select="$notes/parent::mei:chord/@dur" as="xs:string+"/>-->
 
         <xsl:choose>
             <!-- ignore when there is a chord within the beam -->
             <xsl:when test="$has.chords">
                 <xsl:next-match/>
+            </xsl:when>
+            <xsl:when test="count($notes.dur) = 0 and not($has.chords)">
+                <xsl:message select="$notes" terminate="yes"/>
             </xsl:when>
 
             <!-- ignore when the beam does not start on a full or 0.5-tstamp -->
