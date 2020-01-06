@@ -14,12 +14,17 @@
     <xsl:template match="mei:measure" mode="add.tstamps">
         <xsl:variable name="meter.count" select="preceding::mei:scoreDef[@meter.count][1]/xs:integer(@meter.count)" as="xs:integer"/>
         <xsl:variable name="meter.unit" select="preceding::mei:scoreDef[@meter.unit][1]/xs:integer(@meter.unit)" as="xs:integer"/>
+        <xsl:variable name="meter.sym" select="preceding::mei:scoreDef[@meter.sym][1]/@meter.sym" as="xs:string?"/>
         <xsl:copy>
             <xsl:attribute name="meter.count" select="$meter.count"/>
             <xsl:attribute name="meter.unit" select="$meter.unit"/>
+            <xsl:if test="exists($meter.sym)">
+                <xsl:attribute name="meter.sym" select="$meter.sym"/>
+            </xsl:if>
             <xsl:apply-templates select="node() | @*" mode="#current">
                 <xsl:with-param name="meter.count" select="$meter.count" tunnel="yes"/>
                 <xsl:with-param name="meter.unit" select="$meter.unit" tunnel="yes"/>
+                <xsl:with-param name="meter.sym" select="$meter.sym" tunnel="yes"/>
             </xsl:apply-templates>
         </xsl:copy>
     </xsl:template>
