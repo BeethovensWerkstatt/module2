@@ -51,10 +51,14 @@
                     as="node()*"/>
 
                 <xsl:variable name="is.accented"
-                    select="tools:isAccented($current.tstamp, $measure/@meter.count, $measure/@meter.unit)"
+                    select="tools:isAccented($current.tstamp, $measure/@meter.count, $measure/@meter.unit, $measure/@meter.sym)" 
                     as="xs:boolean"/>
+                
+                <!--to Do: nur harm unter Noten, die länger als Sechzehntel sind?-->
+                <!--<xsl:variable name="longer.duration" select="number($current.notes//@dur) lt 16" as="xs:boolean"/>-->
 
-                <xsl:if test="count(distinct-values($current.notes//@pname)) gt 1">
+
+                <xsl:if test="(count(distinct-values($current.notes//@pname)) gt 1) and $is.accented">
                     <xsl:variable name="harm"
                         select="tools:interpreteChord($current.notes, $is.accented, true())"
                         as="node()+"/>
@@ -302,16 +306,10 @@
                         <rend type="root">
                             <xsl:value-of select="$current.interpretation/@root"/>
                         </rend>
-                        <xsl:if
-                            test="
-                                some $func in $current.interpretation/temp:tone/@func
-                                    satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct7')">
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct7')">
                             <rend rend="sup" type="ct7">7</rend>
                         </xsl:if>
-                        <xsl:if
-                            test="
-                                some $func in $current.interpretation/temp:tone/@func
-                                    satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct9')">
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct9')">
                             <rend rend="sup" type="ct9">9</rend>
                         </xsl:if>
                         <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '43sus')">
@@ -1142,9 +1140,13 @@
         <xsl:param name="tstamp" as="xs:string"/>
         <xsl:param name="meter.count" as="xs:string"/>
         <xsl:param name="meter.unit" as="xs:string"/>
+        <xsl:param name="meter.sym" as="xs:string?"/>
 
         <xsl:choose>
             <xsl:when test="$meter.count = '2' and $meter.unit = '2' and $tstamp = ('1', '2')">
+                <xsl:value-of select="true()"/>
+            </xsl:when>
+            <xsl:when test="$meter.count = '2' and $meter.unit = '2' and $meter.sym = ('cut') and $tstamp = ('1', '1.5', '2', '2.5')">
                 <xsl:value-of select="true()"/>
             </xsl:when>
             <xsl:when test="$meter.count = '2' and $meter.unit = '4' and $tstamp = ('1', '2')">
@@ -1333,7 +1335,7 @@
                 <!--<xsl:message
                     select="'Unable to determine interval at ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || '. Please help…'"/>-->
                 <xsl:attribute name="root"
-                    select="upper-case(substring(., 1, 1)) || substring(., 2) || '?'"/>
+                    select="'(' || upper-case(substring(., 1, 1)) || substring(., 2) || ')'"/>
             </xsl:otherwise>
         </xsl:choose>
         <!-- toDo: handle the case when there are both minor and major thirds -->
