@@ -379,8 +379,13 @@
                  <!-- @todo: warning-->
                  <!--<constraintSpec ident="check_ending_section_relationship" scheme="isoschematron" mode="add">
                      <constraint>
-                         <sch:rule context="mei:score">
-                             <sch:report test="ending">
+                         <sch:rule context="mei:ending">
+                             <sch:assert role="warning" test="ending">
+                                 ending and section should be siblings
+                             </sch:report>
+                         </sch:rule>
+                         <sch:rule context="mei:section">
+                             <sch:assert role="warning" test="section">
                                  ending and section should be siblings
                              </sch:report>
                          </sch:rule>
