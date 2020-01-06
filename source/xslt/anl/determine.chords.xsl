@@ -1143,10 +1143,7 @@
         <xsl:param name="meter.sym" as="xs:string?"/>
 
         <xsl:choose>
-            <xsl:when test="$meter.count = '2' and $meter.unit = '2' and $tstamp = ('1', '2')">
-                <xsl:value-of select="true()"/>
-            </xsl:when>
-            <xsl:when test="$meter.count = '2' and $meter.unit = '2' and $meter.sym = ('cut') and $tstamp = ('1', '1.5', '2', '2.5')">
+            <xsl:when test="$meter.count = '2' and $meter.unit = '2' and $tstamp = ('1', '1.5', '2', '2.5')">
                 <xsl:value-of select="true()"/>
             </xsl:when>
             <xsl:when test="$meter.count = '2' and $meter.unit = '4' and $tstamp = ('1', '2')">
