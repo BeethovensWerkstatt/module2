@@ -273,6 +273,8 @@
                         <rend type="root">
                             <xsl:value-of select="$current.interpretation/@root"/>
                         </rend>
+                        
+                        <!--hier die Berechnung von Intervallabständen root->7 und root->9 wie unten?-->
                         <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct7')">
                             <rend rend="sup" type="ct7">7</rend>
                         </xsl:if>
