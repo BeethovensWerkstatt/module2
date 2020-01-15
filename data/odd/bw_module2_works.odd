@@ -376,32 +376,49 @@
                       </constraint>
                   </constraintSpec>
                  
-                 <!-- @todo: warning-->
-                 <!--<constraintSpec ident="check_ending_section_relationship" scheme="isoschematron" mode="add">
+                 <constraintSpec ident="check_ending_section_relationship" scheme="isoschematron" mode="add">
                      <constraint>
                          <sch:rule context="mei:ending">
-                             <sch:assert role="warning" test="ending">
-                                 ending and section should be siblings
-                             </sch:report>
+                             <sch:assert role="warning" test="not(ancestor::mei:section)">
+                                 A section should not contain ending elements.
+                             </sch:assert>
                          </sch:rule>
                          <sch:rule context="mei:section">
-                             <sch:assert role="warning" test="section">
-                                 ending and section should be siblings
-                             </sch:report>
+                             <sch:assert role="warning" test="not(ancestor::mei:ending)">
+                                 An ending should not contain section elements.
+                             </sch:assert>
                          </sch:rule>
                      </constraint>
-                 </constraintSpec>-->
+                 </constraintSpec>
                     
                     <!-- @todo -->
-                    <!--<constraintSpec ident="check_tie_similarity" scheme="isoschematron" mode="add">
+                    <constraintSpec ident="check_tie_similarity" scheme="isoschematron" mode="add">
                         <constraint>
-                            <sch:rule context="mei:measure">
-                                <sch:assert test="tie">
-                                    two notes connected with tie have to have the same @name and @oct or @oct.ges
+                            <sch:rule context="mei:tie">
+                                <sch:let name="mdiv" value="ancestor::mei:mdiv"/>
+                                <sch:let name="start.id" value="replace(@startid,'#','')"/>
+                                <sch:let name="start.note" value="$mdiv//mei:*[@xml:id = $start.id]"/>
+                                <sch:let name="end.id" value="replace(@endid,'#','')"/>
+                                <sch:let name="end.note" value="$mdiv//mei:*[@xml:id = $end.id]"/>
+                                <sch:let name="start.accid" value="if($start.note/@accid.ges) then($start.note/@accid.ges) else if($start.note/@accid) then($start.note/@accid) else('')"/>
+                                <sch:assert test="(local-name($start.note) = 'chord' and local-name($end.note) = 'chord') or ($start.note/@pname = $end.note/@pname)">
+                                    The start and end note of a tie need to have the same @pname ("<sch:value-of select="$start.note/@pname"/>" vs. "<sch:value-of select="$end.note/@pname"/>").
                                 </sch:assert>
+                                <sch:assert test="(local-name($start.note) = 'chord' and local-name($end.note) = 'chord') or ($start.note/@oct = $end.note/@oct)">
+                                    The start and end note of a tie need to have the same @oct  ("<sch:value-of select="$start.note/@oct"/>" vs. "<sch:value-of select="$end.note/@oct"/>").
+                                </sch:assert>
+                                <sch:assert test="($start.accid = '' and not($end.note/@accid)) or ($start.accid = $end.note/@accid.ges) or ($start.accid = 'n' and not($end.note/@accid))">
+                                    The start and end note of a tie need to have the same accidentals  ("<sch:value-of select="$start.accid"/>" vs. "<sch:value-of select="$end.note/@accid.ges"/>").
+                                </sch:assert>
+                                <sch:assert test="not(local-name($start.note) = 'chord' and local-name($end.note) = 'chord') or (count($start.note//mei:note) = count($end.note//mei:note))">
+                                    Tied chords need to have the same number of notes  (<sch:value-of select="count($start.note//mei:note)"/> vs. <sch:value-of select="count($end.note//mei:note)"/>).
+                                </sch:assert>
+                                <sch:report role="info" test="local-name($start.note) = 'chord' and local-name($end.note) = 'chord'">
+                                    Ties that connect chords need to be checked manually whether pitches conform.
+                                </sch:report>                                
                             </sch:rule>
                         </constraint>
-                    </constraintSpec>-->
+                    </constraintSpec>
                     
                     <constraintSpec ident="check_hairpin_between_space" scheme="isoschematron" mode="add">
                         <constraint>
