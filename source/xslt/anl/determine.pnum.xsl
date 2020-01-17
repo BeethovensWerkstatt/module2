@@ -58,7 +58,8 @@
         <xsl:param name="note" as="node()"/>
         <xsl:param name="trans.semi" as="xs:integer"/>
         
-        <xsl:variable name="oct" select="xs:integer($note/@oct) * 12" as="xs:integer"/>
+        <xsl:variable name="base.oct" select="if($note/@oct.ges) then($note/@oct.ges) else($note/@oct)" as="xs:string"/>
+        <xsl:variable name="oct" select="xs:integer($base.oct) * 12" as="xs:integer"/>
         <xsl:variable name="pname" as="xs:integer">
             <xsl:choose>
                 <xsl:when test="$note/@pname = 'c'">

@@ -35,6 +35,12 @@
     <xsl:param name="hidden.staves"/>
     <!-- a list of hidden staves (by @n), separated by comma. Empty string if full score shall be shown -->
 
+    <xsl:param name="resolve.arpegs" select="true()"/>
+    <!-- decide whether potential arpeggios shall be resolved for a harmonic analysis -->
+    
+    <xsl:param name="harmonize.important.tstamps.only" select="true()"/>
+    <!-- generate harm elements only for accented / important tstamps -->
+    
     <xsl:include href="tools/pick.mdiv.xsl"/>
     <xsl:include href="tools/rescore.parts.xsl"/>
     <xsl:include href="tools/addid.xsl"/>
@@ -109,18 +115,22 @@
                 </xsl:when>
                 
                 <xsl:when test="$mode = 'harmonicComparison'">
-                    <xsl:variable name="determined.key" as="node()">
-                        <xsl:apply-templates select="$added.tstamps" mode="determine.key"/>
-                    </xsl:variable>
-                    <xsl:variable name="determined.pitch" as="node()">
-                        <xsl:apply-templates select="$determined.key" mode="determine.pitch"/>
-                    </xsl:variable>
                     <xsl:variable name="added.next" as="node()*">
-                        <xsl:apply-templates select="$determined.pitch" mode="add.next"/>
+                        <xsl:apply-templates select="$added.tstamps" mode="add.next"/>
                     </xsl:variable>                    
                     <xsl:variable name="added.intm" as="node()*">
                         <xsl:apply-templates select="$added.next" mode="add.intm"/>
                     </xsl:variable>
+                    <xsl:variable name="determined.pnum" as="node()">
+                        <xsl:apply-templates select="$added.intm" mode="determine.pnum"/>
+                    </xsl:variable>
+                    <xsl:variable name="interpreted.harmonies" as="node()*">
+                        <xsl:apply-templates select="$determined.pnum" mode="interprete.harmonies">
+                            <xsl:with-param name="resolve.arpegs" select="$resolve.arpegs" tunnel="yes" as="xs:boolean"/>
+                            <xsl:with-param name="harmonize.important.tstamps.only" select="$harmonize.important.tstamps.only" tunnel="yes" as="xs:boolean"/>
+                        </xsl:apply-templates>
+                    </xsl:variable>
+                    
                     <xsl:variable name="inserted.harmonies" as="node()*">
                         <xsl:apply-templates select="$added.intm" mode="insert.harmonies">
                             <xsl:with-param name="all.keys" select="'C'" as="xs:string*" tunnel="yes"/>
