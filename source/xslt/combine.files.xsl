@@ -35,6 +35,7 @@
     
     <xsl:include href="compare/identify.identity.xsl"/>
     <xsl:include href="compare/compare.event.density.xsl"/>
+    <xsl:include href="compare/compare.harmonics.xsl"/>
     
     <xsl:include href="compare/determine.variation.xsl"/>
     
@@ -194,6 +195,15 @@
                         <xsl:apply-templates select="$merged.files" mode="compare.event.density"/>
                     </xsl:variable>
                     <xsl:copy-of select="$compared.event.density"/>
+                </xsl:when>
+                <xsl:when test="$method = 'harmonicComparison'">
+                    <xsl:variable name="merged.files" as="node()">
+                        <xsl:apply-templates select="$first.file" mode="first.pass"/>
+                    </xsl:variable>
+                    <xsl:variable name="compared.harmonics" as="node()">
+                        <xsl:apply-templates select="$merged.files" mode="compare.harmonics"/>
+                    </xsl:variable>
+                    <xsl:copy-of select="$compared.harmonics"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:variable name="merged.files" as="node()">
