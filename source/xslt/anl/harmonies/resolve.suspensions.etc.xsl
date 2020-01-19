@@ -15,93 +15,81 @@
     </xd:doc>
     
     <!-- Quartvorhalt / 43suspension -->
-    <xsl:template match="temp:tone[@cost = '5']" mode="resolve.suspensions">
+    <xsl:template match="mei:chordMember[@temp:cost = '5']" mode="resolve.suspensions">
         <!-- a @cost of 5 is a quarter above the root, it could be suspended to an effective cost of 1 -->
-        <xsl:variable name="comes.down"
-            select="
-                every $note in .//mei:note
-                    satisfies ($note/@intm and matches($note/@intm, '\-[mM]2'))"
-            as="xs:boolean"/>
-        <xsl:variable name="goes.down"
-            select="
-                every $note in .//mei:note
-                    satisfies ($note/@next.intm and matches($note/@next.intm, '\-[mM]2'))"
-            as="xs:boolean"/>
-
-        <xsl:variable name="fourth.durations"
-            select="
-                for $note in .//mei:note
-                return
-                    (number($note/ancestor-or-self::mei:*/@tstamp2) - number($note/ancestor-or-self::mei:*/@tstamp))"
-            as="xs:double+"/>
-
-        <xsl:variable name="root.notes" select="parent::temp:chord/temp:tone[@cost = '0']/mei:note"
-            as="node()*"/>
-        <xsl:variable name="fifth.notes" select="parent::temp:chord/temp:tone[@cost = '2']/mei:note"
-            as="node()*"/>
-
-        <xsl:variable name="root.longer.dur"
-            select="
-                some $note in $root.notes
-                    satisfies ((number($note/ancestor-or-self::mei:*/@tstamp2) - number($note/ancestor-or-self::mei:*/@tstamp))) gt max($fourth.durations)"
-            as="xs:boolean"/>
+        <xsl:param name="notes" tunnel="yes" as="node()+"/>
+        <xsl:variable name="chordMember" select="." as="node()"/>
+        <xsl:variable name="relevant.notes" select="$notes[@xml:id = tokenize(replace($chordMember/@corresp,'#',''))]" as="node()+"/>
+        
+        <xsl:variable name="root.chordMember" select="ancestor::mei:chordDef/mei:chordMember[@inth = 'P1']" as="node()"/>
+        <xsl:variable name="fifth.chordMember" select="ancestor::mei:chordDef/mei:chordMember[@inth='P5']" as="node()?"/>
+        
+        <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''))]" as="node()+"/>
+        <xsl:variable name="fifth.notes" select="if($fifth.chordMember) then($notes[@xml:id = tokenize(replace($fifth.chordMember/@corresp,'#',''))]) else()" as="node()*"/>
+        
+        <!-- conditions outside of the current notes  -->
         <xsl:variable name="root.continued"
             select="
-                some $note in $root.notes
-                    satisfies ($note/@next.intm = ('P1', '+P8', '-P8'))"
-            as="xs:boolean"/>
-        <xsl:variable name="fifth.longer.dur"
-            select="
-                some $note in $fifth.notes
-                    satisfies ((number($note/ancestor-or-self::mei:*/@tstamp2) - number($note/ancestor-or-self::mei:*/@tstamp))) gt max($fourth.durations)"
+            some $note in $root.notes
+            satisfies ($note/@next.intm = ('P1', '+P8', '-P8'))"
             as="xs:boolean"/>
         <xsl:variable name="fifth.continued"
             select="
-                some $note in $fifth.notes
-                    satisfies ($note/@next.intm = ('P1', '+P8', '-P8'))"
+            some $note in $fifth.notes
+            satisfies ($note/@next.intm = ('P1', '+P8', '-P8'))"
             as="xs:boolean"/>
-
-        <xsl:variable name="is.accented" select="xs:boolean(parent::temp:chord/@accented.tstamp)"
-            as="xs:boolean"/>
-
-        <xsl:variable name="test.id" select="''" as="xs:string"/>
-        <xsl:if test="$test.id != '' and $test.id = .//mei:note/@xml:id">
-            <xsl:message select="'testing for 43sus at ' || $test.id"/>
-            <xsl:message
-                select="'    $comes.down: ' || $comes.down || ', $goes.down: ' || $goes.down || ', $is.accented: ' || $is.accented"/>
-            <xsl:message
-                select="'    $root.notes: ' || count($root.notes) || ', $fifth.notes: ' || count($fifth.notes)"/>
-            <xsl:message
-                select="'    $root.longer.dur: ' || $root.longer.dur || ', $root.continued: ' || $root.continued"/>
-            <xsl:message
-                select="'    $fifth.longer.dur: ' || $fifth.longer.dur || ', $fifth.continued: ' || $fifth.continued"
-            />
-        </xsl:if>
-
+        
+        <!-- conditions on individual notes -->
+        <xsl:variable name="affected.notes" as="node()*">
+            <xsl:for-each select="$relevant.notes">
+                <xsl:variable name="current.note" select="." as="node()"/>
+                <xsl:variable name="comes.down" select="@intm and matches(@intm, '\-[mM]2')" as="xs:boolean"/>
+                <xsl:variable name="goes.down" select="@next.intm and matches(@next.intm, '\-[mM]2')" as="xs:boolean"/>
+                <xsl:variable name="this.dur" select="number(@tstamp2) - number(@tstamp)" as="xs:double"/>
+                <xsl:variable name="root.longer.dur" select="$root.chordMember/number(@temp:dur) gt $this.dur" as="xs:boolean"/>
+                <xsl:variable name="fifth.longer.dur" select="if($fifth.chordMember) then($fifth.chordMember/number(@temp:dur) gt $this.dur) else(false())" as="xs:boolean"/>
+                
+                <xsl:if test="$goes.down and $root.longer.dur">
+                    <xsl:sequence select="."/>
+                </xsl:if>
+                
+            </xsl:for-each>
+        </xsl:variable>
+        
         <xsl:choose>
-            <xsl:when
-                test="
-                    ($is.accented)
-                    and ($comes.down or true())
-                    and $goes.down
-                    and ($root.longer.dur or $root.continued)
-                    and ($fifth.longer.dur or $fifth.continued or true())">
-                <!-- ignoring fifths duration for now -->
-                <!--<xsl:message select="'[DETERMINE.CHORDS] Found a 43sus on note ' || string-join(.//mei:note/@xml:id,', ')"/>-->
-                <temp:tone func="43sus" cost="1" name="Quartvorhalt">
-                    <xsl:for-each select=".//mei:note">
-                        <xsl:copy>
-                            <xsl:apply-templates select="@*" mode="#current"/>
-                            <xsl:attribute name="mfunc" select="'43sus'"/>
-                            <xsl:apply-templates select="node()" mode="#current"/>
-                        </xsl:copy>
-                    </xsl:for-each>
-                </temp:tone>
-            </xsl:when>
-            <xsl:otherwise>
+            <!-- 43sus may only occur on accented timestamps -->
+            <xsl:when test="not(xs:boolean($chordMember/ancestor::mei:chordDef/@temp:accented))">
                 <xsl:next-match/>
+            </xsl:when>
+            <!-- no notes qualify as 43sus -->
+            <xsl:when test="count($affected.notes) = 0">
+                <xsl:next-match/>
+            </xsl:when>
+            <!-- all notes qualify as 43sus -->
+            <xsl:when test="count($affected.notes) = count($relevant.notes)">
+                <xsl:copy>
+                    <xsl:apply-templates select="@* except @temp:cost" mode="#current"/>
+                    <xsl:attribute name="temp:cost" select="1"/>
+                    <xsl:attribute name="type" select="'43sus'"/>
+                </xsl:copy>
+            </xsl:when>
+            <!-- some notes qualify as 43sus, some don't -->
+            <xsl:otherwise>
+                <xsl:message select="'only some notes qualify as 43sus'"></xsl:message>
+                <xsl:copy>
+                    <xsl:apply-templates select="@* except (@corresp, @temp:cost)" mode="#current"/>
+                    <xsl:attribute name="corresp" select="'#' || string-join($affected.notes/@xml:id,' #')"/>
+                    <xsl:attribute name="temp:cost" select="1"/>
+                    <xsl:attribute name="type" select="'43sus'"/>
+                </xsl:copy>
+                <xsl:copy>
+                    <xsl:apply-templates select="@* except @corresp" mode="#current"/>
+                    <xsl:variable name="remaining.notes" select="$relevant.notes[not(@xml:id) = $affected.notes/@xml:id]" as="node()+"/>
+                    <xsl:attribute name="corresp" select="'#' || string-join($remaining.notes/@xml:id,' #')"/>
+                </xsl:copy>
             </xsl:otherwise>
         </xsl:choose>
+        
     </xsl:template>
 
     <!-- Sextvorhalt | 65suspension -->

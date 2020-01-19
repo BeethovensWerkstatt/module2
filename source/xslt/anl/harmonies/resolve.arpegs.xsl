@@ -28,10 +28,10 @@
             as="xs:boolean"/>
         <!-- use the function interpreteChord that stacks all notes and calculates the costs (one third above the root = 1, two = 2 etc.) -->
         <xsl:variable name="potential.chords"
-            select="tools:interpreteChord($notes, true(), false())" as="node()+"/>
+            select="tools:generateStackOfThirds($notes, true(), false())" as="node()+"/>
         <!-- take the least costs of thirds -->
         <xsl:variable name="minimal.cost.of.thirds"
-            select="min($potential.chords//mei:annot[@type = 'mfunc.tonelist']/number(@cost))"
+            select="min($potential.chords/descendant-or-self::mei:chordDef/max(.//number(@temp:cost)))"
             as="xs:double"/>
         <!-- collect the durations of all notes within the beam -->
         <xsl:variable name="notes.dur" select="$notes/@dur" as="xs:string*"/>
@@ -58,10 +58,6 @@
             </xsl:when>
             
             <!-- ignore when there are different durations within the beam -->
-            <xsl:when test="count(distinct-values($notes.dur)) gt 1">
-                <xsl:next-match/>
-            </xsl:when>
-            
             <xsl:when test="count(distinct-values($notes.dur)) gt 1">
                 <xsl:next-match/>
             </xsl:when>

@@ -17,30 +17,30 @@
     
     <xsl:function name="tools:isAccented" as="xs:boolean">
         <xsl:param name="tstamp" as="xs:string"/>
-        <xsl:param name="meter.count" as="xs:string"/>
-        <xsl:param name="meter.unit" as="xs:string"/>
+        <xsl:param name="meter.count" as="xs:integer"/>
+        <xsl:param name="meter.unit" as="xs:integer"/>
         
         <xsl:choose>
-            <xsl:when test="$meter.count = '2' and $meter.unit = '2' and $tstamp = ('1', '1.5', '2', '2.5')">
+            <xsl:when test="$meter.count = 2 and $meter.unit = 2 and $tstamp = ('1', '1.5', '2', '2.5')">
                 <xsl:value-of select="true()"/>
             </xsl:when>
-            <xsl:when test="$meter.count = '2' and $meter.unit = '4' and $tstamp = ('1', '2')">
+            <xsl:when test="$meter.count = 2 and $meter.unit = 4 and $tstamp = ('1', '2')">
                 <xsl:value-of select="true()"/>
             </xsl:when>
-            <xsl:when test="$meter.count = '3' and $meter.unit = '4' and $tstamp = ('1', '2', '3')">
+            <xsl:when test="$meter.count = 3 and $meter.unit = 4 and $tstamp = ('1', '2', '3')">
                 <xsl:value-of select="true()"/>
             </xsl:when>
             <xsl:when
-                test="$meter.count = '4' and $meter.unit = '4' and $tstamp = ('1', '2', '3', '4')">
+                test="$meter.count = 4 and $meter.unit = 4 and $tstamp = ('1', '2', '3', '4')">
                 <xsl:value-of select="true()"/>
             </xsl:when>
-            <xsl:when test="$meter.count = '3' and $meter.unit = '8' and $tstamp = ('1')">
+            <xsl:when test="$meter.count = 3 and $meter.unit = 8 and $tstamp = ('1')">
                 <xsl:value-of select="true()"/>
             </xsl:when>
-            <xsl:when test="$meter.count = '6' and $meter.unit = '8' and $tstamp = ('1', '4')">
+            <xsl:when test="$meter.count = 6 and $meter.unit = 8 and $tstamp = ('1', '4')">
                 <xsl:value-of select="true()"/>
             </xsl:when>
-            <xsl:when test="$meter.count = '9' and $meter.unit = '8' and $tstamp = ('1', '4', '7')">
+            <xsl:when test="$meter.count = 9 and $meter.unit = 8 and $tstamp = ('1', '4', '7')">
                 <xsl:value-of select="true()"/>
             </xsl:when>
             <xsl:otherwise>

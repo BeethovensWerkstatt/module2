@@ -28,15 +28,13 @@
         </xsl:variable>
 
         <xsl:variable name="pnames" select="distinct-values($notes//@pname)" as="xs:string+"/>
-        <xsl:variable name="pnums" select="distinct-values($notes/@pnum/xs:integer(.))" as="xs:integer+"/>
-        <xsl:variable name="pclasses" select="distinct-values((for $pnum in $pnums return ($pnum mod 12)))" as="xs:integer+"/>
         
         <!-- this addresses the problem of a 'c' and a 'c#' in the same chord… -->
         <xsl:variable name="pname.pclass.combined" as="xs:string+">
             <xsl:for-each select="$pnames">
                 <xsl:variable name="current.pname" select="." as="xs:string"/>
-                <xsl:variable name="current.pclasses" select="for $pnum in $notes[@pname = $current.pname]/@pnum return xs:string(xs:integer($pnum) mod 12)" as="xs:string+"/>
-                <xsl:for-each select="distinct-values($current.pclasses)">
+                <xsl:variable name="current.pclasses" select="distinct-values($notes[@pname = $current.pname]/@pclass)" as="xs:string+"/>
+                <xsl:for-each select="$current.pclasses">
                     <xsl:value-of select="$current.pname || '-' ||."/>
                 </xsl:for-each>
             </xsl:for-each>
@@ -55,12 +53,13 @@
         </xsl:variable>
 
         <xsl:for-each select="$pname.pclass.combined">
-            <xsl:variable name="current.pname" select="substring-before(.,'-')" as="xs:string"/>
-            <xsl:variable name="current.pclass" select="substring-after(.,'-')" as="xs:string"/>
-            <xsl:variable name="current.row" select="$third.rows/descendant-or-self::row[@pname = $current.pname]"
-                as="node()"/>
+            <xsl:variable name="root.pname" select="substring-before(.,'-')" as="xs:string"/>
+            <xsl:variable name="root.pclass" select="substring-after(.,'-')" as="xs:string"/>
+            <xsl:variable name="root.int" select="xs:integer($root.pclass)" as="xs:integer"/>
+            <xsl:variable name="current.row" select="$third.rows/descendant-or-self::row[@pname = $root.pname]" as="node()"/>
             
-            <xsl:variable name="ct1" select="$notes[.//@pname = $current.row/@*[. = '0']/local-name()]" as="node()+"/>
+            <xsl:variable name="ct1" select="$notes[.//@pname = $current.row/@*[. = '0']/local-name() and .//@pclass = $root.pclass]" as="node()+"/>
+            <xsl:variable name="ct1.alt" select="$notes[.//@pname = $current.row/@*[. = '0']/local-name() and .//@pclass != $root.pclass]" as="node()*"/>
             <xsl:variable name="ct3" select="$notes[.//@pname = $current.row/@*[. = '1']/local-name()]" as="node()*"/>
             <xsl:variable name="ct5" select="$notes[.//@pname = $current.row/@*[. = '2']/local-name()]" as="node()*"/>
             <xsl:variable name="ct7" select="$notes[.//@pname = $current.row/@*[. = '3']/local-name()]" as="node()*"/>
@@ -68,90 +67,148 @@
             <xsl:variable name="ct11" select="$notes[.//@pname = $current.row/@*[. = '5']/local-name()]" as="node()*"/>
             <xsl:variable name="ct13" select="$notes[.//@pname = $current.row/@*[. = '6']/local-name()]" as="node()*"/>
 
-            <xsl:variable name="notes" as="node()+">
-                <chordMember xmlns="http://www.music-encoding.org/ns/mei" 
-                    inth="P1" 
-                    temp:cost="0" 
-                    corresp="#{string-join($ct1/@xml:id,' #')}" 
-                    pname="{$ct1[1]/@pname}" 
-                    accid.ges="f" 
-                    temp:dur=""/>
-                <xsl:if test="$current.row/@*[. = '1']/local-name() = $pnames">
-                    <annot xmlns="http://www.music-encoding.org/ns/mei" class="ct ct3" label="third" plist="{$notes[.//@pname = $current.row/@*[. = '1']/local-name()]}">
-                        <num type="cost">1</num>
-                    </annot>
-                </xsl:if>
-                <xsl:if test="$current.row/@*[. = '2']/local-name() = $pnames">
-                    <annot xmlns="http://www.music-encoding.org/ns/mei" class="ct ct5" label="fifth" plist="{$notes[.//@pname = $current.row/@*[. = '2']/local-name()]}">
-                        <num type="cost">2</num>
-                    </annot>
-                </xsl:if>
-                <xsl:if test="$current.row/@*[. = '3']/local-name() = $pnames">
-                    <annot xmlns="http://www.music-encoding.org/ns/mei" class="ct ct7" label="seventh" plist="{$notes[.//@pname = $current.row/@*[. = '3']/local-name()]}">
-                        <num type="cost">3</num>
-                    </annot>
-                </xsl:if>
-                <xsl:if test="$current.row/@*[. = '4']/local-name() = $pnames">
-                    <annot xmlns="http://www.music-encoding.org/ns/mei" class="ct ct9" label="ninth" plist="{$notes[.//@pname = $current.row/@*[. = '4']/local-name()]}">
-                        <num type="cost">4</num>
-                    </annot>
-                </xsl:if>
-                <xsl:if test="$current.row/@*[. = '5']/local-name() = $pnames">
-                    <annot xmlns="http://www.music-encoding.org/ns/mei" class="ct ct11" label="eleventh" plist="{$notes[.//@pname = $current.row/@*[. = '5']/local-name()]}">
-                        <num type="cost">5</num>
-                    </annot>
-                </xsl:if>
-                <xsl:if test="$current.row/@*[. = '6']/local-name() = $pnames">
-                    <annot xmlns="http://www.music-encoding.org/ns/mei" class="ct ct13" label="thirteenth" plist="{$notes[.//@pname = $current.row/@*[. = '6']/local-name()]}">
-                        <num type="cost">6</num>
-                    </annot>
-                </xsl:if>
-            </xsl:variable>
-
-            <xsl:variable name="inversion" select="xs:integer($current.row/@*[local-name() = $bass.tone])" as="xs:integer"/>
-            <xsl:variable name="root.dur"
-                select="max($notes[.//@pname = $current.row/@*[. = '0']/local-name()]/(max(.//@tstamp2/number(.)) - min(.//@tstamp/number(.))))"
-                as="xs:double?"/>
-
-            <xsl:variable name="bass.accid" as="xs:string">
-                <xsl:choose>
-                    <xsl:when test="$notes//mei:note[@pname = $bass.tone][@accid.ges = 'f']">
-                        <xsl:value-of select="'♭'"/>
-                    </xsl:when>
-                    <xsl:when test="$notes//mei:note[@pname = $bass.tone][@accid = 'f']">
-                        <xsl:value-of select="'♭'"/>
-                    </xsl:when>
-                    <xsl:when test="$notes//mei:note[@pname = $bass.tone][@accid.ges = 's']">
-                        <xsl:value-of select="'♯'"/>
-                    </xsl:when>
-                    <xsl:when test="$notes//mei:note[@pname = $bass.tone][@accid = 's']">
-                        <xsl:value-of select="'♯'"/>
-                    </xsl:when>
-
-                    <xsl:otherwise>
-                        <xsl:value-of select="''"/>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:variable>
-
-            <chord bass="{$bass.tone}" bass.accid="{$bass.accid}"
-                highest.cost="{max($notes/xs:integer(@cost))}"
-                >
-                <xsl:sequence select="$notes"/>
-            </chord>
-
-            <chordDef xmlns="http://www.music-encoding.org/ns/mei">
-                <chordMember inth="P1" temp:cost="0" corresp="ids…" pname="c" accid.ges="f" temp:dur=""/>
-                <chordMember inth="M3" temp:cost="1" corresp="ids…" pname="e" accid.ges="f" type="bass"/>
-                <chordMember inth="d5" corresp="ids…"/>
+            <chordDef xmlns="http://www.music-encoding.org/ns/mei" temp:root="{$root.pname}" temp:root.pclass="{$root.pclass}" temp:accented="{$isAccented}">
                 
-                <annot >
-                    <num type="cost">6</num>
-                </annot>
+                <!-- these are all root notes -->
+                <xsl:sequence select="tools:generateChordMember($ct1,0,'P1')"/>
+                
+                <!-- these are notes of the same pname as the root, but with different pclasses (e.g. "G" and "G#") -->
+                <xsl:for-each select="distinct-values($ct1.alt//@pclass)">
+                    <xsl:variable name="current.pclass" select="." as="xs:string"/>
+                    <xsl:variable name="current.notes" select="$ct1.alt[.//@pclass=$current.pclass]" as="node()+"/>
+                    <xsl:variable name="interval" select="if((xs:integer($current.pclass) + 15) gt (xs:integer($root.pclass) + 15)) then('A8') else('d8')" as="xs:string"/>
+                    
+                    <xsl:sequence select="tools:generateChordMember($current.notes,7,$interval)"/>
+                </xsl:for-each>
+                
+                <!-- these are thirds -->
+                <xsl:for-each select="distinct-values($ct3//@pclass)">
+                    <xsl:variable name="current.pclass" select="." as="xs:string"/>
+                    <xsl:variable name="current.notes" select="$ct3[.//@pclass=$current.pclass]" as="node()+"/>
+                    <xsl:variable name="pclass.int" select="xs:integer($current.pclass)" as="xs:integer"/>
+                    <xsl:variable name="dist" select="if($root.int lt $pclass.int) then($pclass.int - $root.int) else($pclass.int + 12 - $root.int)" as="xs:integer"/>
+                    <xsl:variable name="interval" as="xs:string">
+                        <xsl:choose>
+                            <xsl:when test="$dist lt 3"><xsl:value-of select="'d3'"/></xsl:when>
+                            <xsl:when test="$dist = 3"><xsl:value-of select="'m3'"/></xsl:when>
+                            <xsl:when test="$dist = 4"><xsl:value-of select="'M3'"/></xsl:when>
+                            <xsl:when test="$dist gt 4"><xsl:value-of select="'A3'"/></xsl:when>
+                        </xsl:choose>
+                    </xsl:variable>
+                    
+                    <xsl:sequence select="tools:generateChordMember($current.notes,1,$interval)"/>
+                </xsl:for-each>
+                
+                <!-- these are fifths -->
+                <xsl:for-each select="distinct-values($ct5//@pclass)">
+                    <xsl:variable name="current.pclass" select="." as="xs:string"/>
+                    <xsl:variable name="current.notes" select="$ct5[.//@pclass=$current.pclass]" as="node()+"/>
+                    <xsl:variable name="pclass.int" select="xs:integer($current.pclass)" as="xs:integer"/>
+                    <xsl:variable name="dist" select="if($root.int lt $pclass.int) then($pclass.int - $root.int) else($pclass.int + 12 - $root.int)" as="xs:integer"/>
+                    <xsl:variable name="interval" as="xs:string">
+                        <xsl:choose>
+                            <xsl:when test="$dist lt 7"><xsl:value-of select="'d5'"/></xsl:when>
+                            <xsl:when test="$dist = 7"><xsl:value-of select="'P5'"/></xsl:when>
+                            <xsl:when test="$dist gt 7"><xsl:value-of select="'A5'"/></xsl:when>
+                        </xsl:choose>
+                    </xsl:variable>
+                    
+                    <xsl:sequence select="tools:generateChordMember($current.notes,2,$interval)"/>
+                </xsl:for-each>
+                
+                <!-- these are sevenths -->
+                <xsl:for-each select="distinct-values($ct7//@pclass)">
+                    <xsl:variable name="current.pclass" select="." as="xs:string"/>
+                    <xsl:variable name="current.notes" select="$ct7[.//@pclass=$current.pclass]" as="node()+"/>
+                    <xsl:variable name="pclass.int" select="xs:integer($current.pclass)" as="xs:integer"/>
+                    <xsl:variable name="dist" select="if($root.int lt $pclass.int) then($pclass.int - $root.int) else($pclass.int + 12 - $root.int)" as="xs:integer"/>
+                    <xsl:variable name="interval" as="xs:string">
+                        <xsl:choose>
+                            <xsl:when test="$dist lt 10"><xsl:value-of select="'d7'"/></xsl:when>
+                            <xsl:when test="$dist = 10"><xsl:value-of select="'m7'"/></xsl:when>
+                            <xsl:when test="$dist = 11"><xsl:value-of select="'M7'"/></xsl:when>
+                            <xsl:when test="$dist gt 11"><xsl:value-of select="'A7'"/></xsl:when>
+                        </xsl:choose>
+                    </xsl:variable>
+                    
+                    <xsl:sequence select="tools:generateChordMember($current.notes,3,$interval)"/>
+                </xsl:for-each>
+                
+                <!-- these are ninths / seconds -->
+                <xsl:for-each select="distinct-values($ct9//@pclass)">
+                    <xsl:variable name="current.pclass" select="." as="xs:string"/>
+                    <xsl:variable name="current.notes" select="$ct9[.//@pclass=$current.pclass]" as="node()+"/>
+                    <xsl:variable name="pclass.int" select="xs:integer($current.pclass)" as="xs:integer"/>
+                    <xsl:variable name="dist" select="if($root.int lt $pclass.int) then($pclass.int - $root.int) else($pclass.int + 12 - $root.int)" as="xs:integer"/>
+                    <xsl:variable name="interval" as="xs:string">
+                        <xsl:choose>
+                            <xsl:when test="$dist = 1"><xsl:value-of select="'m2'"/></xsl:when>
+                            <xsl:when test="$dist = 2"><xsl:value-of select="'M2'"/></xsl:when>
+                            <xsl:when test="$dist gt 2"><xsl:value-of select="'A2'"/></xsl:when>
+                            <xsl:otherwise>
+                                <xsl:message select="'$pclass.int:' || $pclass.int || ', $root.int:' || $root.int" terminate="yes"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:variable>
+                    
+                    <xsl:sequence select="tools:generateChordMember($current.notes,4,$interval)"/>
+                </xsl:for-each>
+                
+                <!-- these are elevenths / quarters -->
+                <xsl:for-each select="distinct-values($ct11//@pclass)">
+                    <xsl:variable name="current.pclass" select="." as="xs:string"/>
+                    <xsl:variable name="current.notes" select="$ct11[.//@pclass=$current.pclass]" as="node()+"/>
+                    <xsl:variable name="pclass.int" select="xs:integer($current.pclass)" as="xs:integer"/>
+                    <xsl:variable name="dist" select="if($root.int lt $pclass.int) then($pclass.int - $root.int) else($pclass.int + 12 - $root.int)" as="xs:integer"/>
+                    <xsl:variable name="interval" as="xs:string">
+                        <xsl:choose>
+                            <xsl:when test="$dist lt 5"><xsl:value-of select="'d4'"/></xsl:when>
+                            <xsl:when test="$dist = 5"><xsl:value-of select="'P4'"/></xsl:when>
+                            <xsl:when test="$dist gt 5"><xsl:value-of select="'A4'"/></xsl:when>
+                        </xsl:choose>
+                    </xsl:variable>
+                    
+                    <xsl:sequence select="tools:generateChordMember($current.notes,5,$interval)"/>
+                </xsl:for-each>
+                
+                <!-- these are thirteenths / sixths -->
+                <xsl:for-each select="distinct-values($ct13//@pclass)">
+                    <xsl:variable name="current.pclass" select="." as="xs:string"/>
+                    <xsl:variable name="current.notes" select="$ct13[.//@pclass=$current.pclass]" as="node()+"/>
+                    <xsl:variable name="pclass.int" select="xs:integer($current.pclass)" as="xs:integer"/>
+                    <xsl:variable name="dist" select="if($root.int lt $pclass.int) then($pclass.int - $root.int) else($pclass.int + 12 - $root.int)" as="xs:integer"/>
+                    <xsl:variable name="interval" as="xs:string">
+                        <xsl:choose>
+                            <xsl:when test="$dist lt 8"><xsl:value-of select="'d6'"/></xsl:when>
+                            <xsl:when test="$dist = 8"><xsl:value-of select="'m6'"/></xsl:when>
+                            <xsl:when test="$dist = 9"><xsl:value-of select="'M6'"/></xsl:when>
+                            <xsl:when test="$dist gt 9"><xsl:value-of select="'A6'"/></xsl:when>
+                        </xsl:choose>
+                    </xsl:variable>
+                    
+                    <xsl:sequence select="tools:generateChordMember($current.notes,6,$interval)"/>
+                </xsl:for-each>
             </chordDef>
 
         </xsl:for-each>
 
+    </xsl:function>
+    
+    <xsl:function name="tools:generateChordMember" as="node()">
+        <xsl:param name="notes" as="node()+"/>
+        <xsl:param name="cost" as="xs:integer"/>
+        <xsl:param name="interval" as="xs:string"/>
+        
+        <xsl:variable name="dur" select="max($notes/(max(.//@tstamp2/number(.)) - min(.//@tstamp/number(.))))" as="xs:double"/>
+        
+        
+        <chordMember xmlns="http://www.music-encoding.org/ns/mei" 
+            inth="{$interval}" 
+            temp:cost="{xs:string($cost)}" 
+            corresp="#{string-join($notes/@xml:id,' #')}" 
+            pname="{$notes[1]/@pname}" 
+            accid.ges="{if($notes[1]/@accid.ges) then($notes[1]/@accid.ges) else if($notes[1]/@accid) then($notes[1]/@accid) else('')}" 
+            temp:dur="{$dur}"/>
     </xsl:function>
 
 </xsl:stylesheet>

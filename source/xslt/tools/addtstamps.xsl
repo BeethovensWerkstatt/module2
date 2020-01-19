@@ -47,10 +47,6 @@
                 </xsl:for-each>
             </xsl:for-each>
         </xsl:variable>
-        <xsl:if test="ancestor::mei:measure/@n = '1'">
-            <xsl:message select="'handling layer in staff ' || parent::mei:staff/@n"/>
-            <xsl:message select="$tstamps"/>
-        </xsl:if>
         <xsl:copy>
             <xsl:apply-templates select="node() | @*" mode="#current">
                 <xsl:with-param name="tstamps" select="$tstamps" tunnel="yes"/>

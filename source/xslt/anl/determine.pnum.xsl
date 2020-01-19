@@ -48,8 +48,11 @@
             </xsl:choose>
         </xsl:variable>
         
+        <xsl:variable name="pnum" select="custom:getPnum(.,$offset)" as="xs:string"/>
+        
         <xsl:copy>
-            <xsl:attribute name="pnum" select="custom:getPnum(.,$offset)"/>
+            <xsl:attribute name="pnum" select="$pnum"/>
+            <xsl:attribute name="pclass" select="custom:getPclass($pnum)"/>
             <xsl:apply-templates select="node() | @*" mode="#current"/>
         </xsl:copy>
     </xsl:template>
@@ -101,6 +104,12 @@
         <!-- the midi.offset is used to make @pnum compatible with MIDI piano numbers, where A0 = 1 -->
         <xsl:variable name="midi.offset" select="12" as="xs:integer"/>
         <xsl:value-of select="xs:string($pname + $oct + $accid + $trans.semi + $midi.offset)"/>
+    </xsl:function>
+    
+    <xsl:function name="custom:getPclass" as="xs:string">
+        <xsl:param name="pnum" as="xs:string"/>
+        <xsl:variable name="pnum.int" select="xs:integer($pnum)" as="xs:integer"/>
+        <xsl:value-of select="$pnum.int mod 12"/>
     </xsl:function>
     
 </xsl:stylesheet>
