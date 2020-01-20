@@ -27,8 +27,8 @@
         <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''))]" as="node()+"/>
         <xsl:variable name="fifth.notes" select="if($fifth.chordMember) then($notes[@xml:id = tokenize(replace($fifth.chordMember/@corresp,'#',''))]) else()" as="node()*"/>
         
-        <!-- conditions outside of the current notes  -->
-        <xsl:variable name="root.continued"
+        <!-- conditions outside of the current notes // unused -->
+        <!--<xsl:variable name="root.continued"
             select="
             some $note in $root.notes
             satisfies ($note/@next.intm = ('P1', '+P8', '-P8'))"
@@ -37,17 +37,17 @@
             select="
             some $note in $fifth.notes
             satisfies ($note/@next.intm = ('P1', '+P8', '-P8'))"
-            as="xs:boolean"/>
+            as="xs:boolean"/>-->
         
         <!-- conditions on individual notes -->
         <xsl:variable name="affected.notes" as="node()*">
             <xsl:for-each select="$relevant.notes">
                 <xsl:variable name="current.note" select="." as="node()"/>
-                <xsl:variable name="comes.down" select="@intm and matches(@intm, '\-[mM]2')" as="xs:boolean"/>
+                <!--<xsl:variable name="comes.down" select="@intm and matches(@intm, '\-[mM]2')" as="xs:boolean"/>-->
                 <xsl:variable name="goes.down" select="@next.intm and matches(@next.intm, '\-[mM]2')" as="xs:boolean"/>
                 <xsl:variable name="this.dur" select="number(@tstamp2) - number(@tstamp)" as="xs:double"/>
                 <xsl:variable name="root.longer.dur" select="$root.chordMember/number(@temp:dur) gt $this.dur" as="xs:boolean"/>
-                <xsl:variable name="fifth.longer.dur" select="if($fifth.chordMember) then($fifth.chordMember/number(@temp:dur) gt $this.dur) else(false())" as="xs:boolean"/>
+                <!--<xsl:variable name="fifth.longer.dur" select="if($fifth.chordMember) then($fifth.chordMember/number(@temp:dur) gt $this.dur) else(false())" as="xs:boolean"/>-->
                 
                 <xsl:if test="$goes.down and $root.longer.dur">
                     <xsl:sequence select="."/>
@@ -75,7 +75,7 @@
             </xsl:when>
             <!-- some notes qualify as 43sus, some don't -->
             <xsl:otherwise>
-                <xsl:message select="'only some notes qualify as 43sus'"></xsl:message>
+                <!--<xsl:message select="'only some notes qualify as 43sus'"></xsl:message>-->
                 <xsl:copy>
                     <xsl:apply-templates select="@* except (@corresp, @temp:cost)" mode="#current"/>
                     <xsl:attribute name="corresp" select="'#' || string-join($affected.notes/@xml:id,' #')"/>
