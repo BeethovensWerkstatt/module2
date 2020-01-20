@@ -109,19 +109,13 @@
                                 </xsl:apply-templates>
                             </xsl:variable>
                             
-                            <!-- identify passing tones -->
-                            <xsl:variable name="identified.passingtones" as="node()*">
-                                <xsl:apply-templates select="$identified.retardations" mode="resolve.passingtones">
+                            <!-- identify passing tones and neighbor tones -->
+                            <xsl:variable name="identified.passingtones.neighbors" as="node()*">
+                                <xsl:apply-templates select="$identified.retardations" mode="resolve.passingtones.neighbors">
                                     <xsl:with-param name="notes" select="$current.notes" tunnel="yes" as="node()+"/>
                                 </xsl:apply-templates>
                             </xsl:variable>
                             
-                            <!-- identify neighbors -->
-                            <xsl:variable name="identified.neighbors" as="node()*">
-                                <xsl:apply-templates select="$identified.passingtones" mode="resolve.neighbors">
-                                    <xsl:with-param name="notes" select="$current.notes" tunnel="yes" as="node()+"/>
-                                </xsl:apply-templates>
-                            </xsl:variable>
                             
                             <!-- simplifications finished -->
                             
