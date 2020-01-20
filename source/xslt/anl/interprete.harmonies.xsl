@@ -20,6 +20,7 @@
     <xsl:include href="harmonies/qualify.tstamp.as.important.xsl"/>
     <xsl:include href="harmonies/generate.stacks.of.thirds.xsl"/>
     <xsl:include href="harmonies/resolve.suspensions.etc.xsl"/>
+    <xsl:include href="harmonies/verbalize.chordDefs.xsl"/>
     
     <xsl:template match="mei:measure" mode="interprete.harmonies">
         <xsl:param name="resolve.arpegs" tunnel="yes" as="xs:boolean"/>
@@ -137,37 +138,66 @@
                             <!-- this is the most likely interpretation of the current chord -->
                             <xsl:variable name="best.explanations" select="$best.root.dur" as="node()+"/>
                             
-                            <!-- output the best explanation -->
+                            <!-- select output format -->
                             <xsl:choose>
-                                <xsl:when test="count($best.explanations) gt 1">
-                                    <choice>
-                                        <xsl:for-each select="$best.explanations">
-                                            <reg type="best.explanation">
-                                                <xsl:sequence select="."/>
-                                            </reg>
-                                        </xsl:for-each>
-                                    </choice>
+                                <xsl:when test="$harmonize.output = 'harm.thirds-based-chords.label.plain'">
+                                    <!-- output the best explanation(s) as plain label for thirds-based chords (default) -->
+                                    <xsl:choose>
+                                        <xsl:when test="count($best.explanations) gt 1">
+                                            <choice>
+                                                <xsl:for-each select="$best.explanations">
+                                                    <reg type="best.explanation">
+                                                        <xsl:apply-templates select="." mode="verbalize.chordDefs.thirds-based-chords.plain"/>
+                                                    </reg>
+                                                </xsl:for-each>
+                                            </choice>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:apply-templates select="$best.explanations" mode="verbalize.chordDefs.thirds-based-chords.plain"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:when>
+                                <xsl:when test="$harmonize.output = 'harm.thirds-based-chords.chordDef'">
+                                    <!-- output the best explanation(s) -->
+                                    <xsl:choose>
+                                        <xsl:when test="count($best.explanations) gt 1">
+                                            <choice>
+                                                <xsl:for-each select="$best.explanations">
+                                                    <reg type="best.explanation">
+                                                        <xsl:sequence select="."/>
+                                                    </reg>
+                                                </xsl:for-each>
+                                            </choice>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:sequence select="$best.explanations"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:sequence select="$best.explanations"/>
+                                    <!-- output the best explanation(s) as plain label for thirds-based chords (default) -->
+                                    <xsl:choose>
+                                        <xsl:when test="count($best.explanations) gt 1">
+                                            <choice>
+                                                <xsl:for-each select="$best.explanations">
+                                                    <reg type="best.explanation">
+                                                        <xsl:apply-templates select="." mode="verbalize.chordDefs.thirds-based-chords.plain"/>
+                                                    </reg>
+                                                </xsl:for-each>
+                                            </choice>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:apply-templates select="$best.explanations" mode="verbalize.chordDefs.thirds-based-chords.plain"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
                                 </xsl:otherwise>
+                                
                             </xsl:choose>
                             
-                            <!-- instead of outputting as chordDefs, translate to formatted strings inside harm -->
-                            <xsl:choose>
-                                <xsl:when test="count($best.explanations) gt 1">
-                                    <choice>
-                                        <xsl:for-each select="$best.explanations">
-                                            <reg type="best.explanation">
-                                                <xsl:apply-templates select="." mode="verbalize.chordDefs"/>
-                                            </reg>
-                                        </xsl:for-each>
-                                    </choice>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <xsl:apply-templates select="$best.explanations" mode="verbalize.chordDefs"/>
-                                </xsl:otherwise>
-                            </xsl:choose>
+                            
+                            
+                            
+                            
                             
                         </harm>
                         
@@ -187,25 +217,6 @@
             <xsl:apply-templates select="node() | @*" mode="#current"/>
             <xsl:sequence select="$harms"/>
         </xsl:copy>
-        
-    </xsl:template>
-    
-    
-    <xsl:template match="mei:note" mode="insert.harmonies">
-        <xsl:param name="unarpeggable.ids" tunnel="yes" as="xs:string*"/>
-        
-        <xsl:choose>
-            <xsl:when test="@xml:id = $unarpeggable.ids">
-                <xsl:copy>
-                    <xsl:apply-templates select="@* except @type" mode="#current"/>
-                    <xsl:attribute name="type" select="'Arpeg' || (if(@type) then(' ' || @type) else())"/>
-                    <xsl:apply-templates select="node()" mode="#current"/>
-                </xsl:copy>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:next-match/>
-            </xsl:otherwise>
-        </xsl:choose>
         
     </xsl:template>
     

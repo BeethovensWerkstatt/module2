@@ -16,30 +16,38 @@
         </xd:desc>
     </xd:doc>
     <xsl:output indent="yes" method="xml"/>
-    <xsl:param name="mode"/>
+    
     <!-- allowed values for param $mode are:
         'comparison' - files need to be "normalized" for a later check for identity 
         'melodicComparison' -
         'harmonicComparison' -
         'eventDensity' -
     -->
+    <xsl:param name="mode"/>
 
     <xsl:param name="mdiv"/>
-    <xsl:param name="transpose.mode"/>
     <!-- allowed values for param $transpose.mode are:
         'none'
         'matchFile1'
         'matchFile2'
         'C'
     -->
-    <xsl:param name="hidden.staves"/>
-    <!-- a list of hidden staves (by @n), separated by comma. Empty string if full score shall be shown -->
-
-    <xsl:param name="resolve.arpegs" select="true()"/>
-    <!-- decide whether potential arpeggios shall be resolved for a harmonic analysis -->
+    <xsl:param name="transpose.mode"/>
     
-    <xsl:param name="harmonize.important.tstamps.only" select="true()"/>
+    <!-- a list of hidden staves (by @n), separated by comma. Empty string if full score shall be shown -->
+    <xsl:param name="hidden.staves"/>
+
+    <!-- decide whether potential arpeggios shall be resolved for a harmonic analysis -->
+    <xsl:param name="resolve.arpegs" select="true()"/>
+    
     <!-- generate harm elements only for accented / important tstamps -->
+    <xsl:param name="harmonize.important.tstamps.only" select="true()"/>
+    
+    <!-- select the intended output of the harmonize functions. Currently allowed values are: 
+        'harm.thirds-based-chords.label.plain' (default)
+        'harm.thirds-based-chords.chordDef' (mostly for debugging purposes)
+    -->
+    <xsl:param name="harmonize.output" select="'harm.thirds-based-chords.label.plain'"/>
     
     <xsl:include href="tools/pick.mdiv.xsl"/>
     <xsl:include href="tools/rescore.parts.xsl"/>
@@ -55,7 +63,7 @@
     <xsl:include href="anl/extract.melodic.lines.xsl"/>
     <xsl:include href="tools/add.next.xsl"/>
     <xsl:include href="tools/add.intm.xsl"/>
-    <xsl:include href="anl/insert.harmonies.xsl"/>
+    <!--<xsl:include href="anl/insert.harmonies.xsl"/>-->
     <xsl:include href="anl/interprete.harmonies.xsl"/>
     <!--<xsl:include href="anl/determine.chords.xsl"/>-->
     <xsl:include href="anl/resolve.duplicate.harms.xsl"/>
@@ -125,11 +133,8 @@
                     <xsl:variable name="determined.pnum" as="node()">
                         <xsl:apply-templates select="$added.intm" mode="determine.pnum"/>
                     </xsl:variable>
-                    <xsl:variable name="determined.pclass" as="node()">
-                        <xsl:apply-templates select="$determined.pnum" mode="determine.pnum.pclass"/>
-                    </xsl:variable>
                     <xsl:variable name="interpreted.harmonies" as="node()*">
-                        <xsl:apply-templates select="$determined.pclass" mode="interprete.harmonies">
+                        <xsl:apply-templates select="$determined.pnum" mode="interprete.harmonies">
                             <xsl:with-param name="resolve.arpegs" select="$resolve.arpegs" tunnel="yes" as="xs:boolean"/>
                             <xsl:with-param name="harmonize.important.tstamps.only" select="$harmonize.important.tstamps.only" tunnel="yes" as="xs:boolean"/>
                         </xsl:apply-templates>

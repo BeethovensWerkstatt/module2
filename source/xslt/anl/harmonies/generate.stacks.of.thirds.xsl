@@ -40,16 +40,14 @@
             </xsl:for-each>
         </xsl:variable>
         
-        <xsl:variable name="bass.tone" as="xs:string">
+        <xsl:variable name="bass.notes" as="node()+">
             <xsl:variable name="pnames.indizes" select="('c', 'd', 'e', 'f', 'g', 'a', 'b')" as="xs:string+"/>
-            <xsl:variable name="lowest.octave.notes" select="$notes[@oct = string(min($notes/number(@oct)))]" as="node()+"/>
-            <xsl:variable name="lowest.note"
-                select="
-                    $pnames.indizes[min(for $note in $lowest.octave.notes
-                    return
-                        (index-of($pnames.indizes, $note/@pname)))]"
-                as="xs:string"/>
-            <xsl:value-of select="$lowest.note"/>
+            <xsl:variable name="lowest.pnum.notes" select="$notes[@pnum = string(min($notes/number(@pnum)))]" as="node()+"/>
+            <xsl:variable name="lowest.oct.notes" select="$lowest.pnum.notes[@oct = string(min($lowest.pnum.notes/number(@oct)))]" as="node()+"/>
+            <xsl:variable name="used.pnames" select="distinct-values($lowest.oct.notes/@pname)" as="xs:string+"/>
+            <xsl:variable name="lowest.index" select="min(for $pname in $used.pnames return index-of($pnames.indizes,$pname))" as="xs:integer"/>
+            <xsl:variable name="lowest.notes" select="$lowest.oct.notes[@pname = $pnames.indizes[$lowest.index]]" as="node()+"/>
+            <xsl:sequence select="$lowest.notes"/>
         </xsl:variable>
 
         <xsl:for-each select="$pname.pclass.combined">
@@ -67,7 +65,7 @@
             <xsl:variable name="ct11" select="$notes[.//@pname = $current.row/@*[. = '5']/local-name()]" as="node()*"/>
             <xsl:variable name="ct13" select="$notes[.//@pname = $current.row/@*[. = '6']/local-name()]" as="node()*"/>
 
-            <chordDef xmlns="http://www.music-encoding.org/ns/mei" temp:root="{$root.pname}" temp:root.pclass="{$root.pclass}" temp:accented="{$isAccented}">
+            <chordDef xmlns="http://www.music-encoding.org/ns/mei" temp:root="{$root.pname}" temp:root.pclass="{$root.pclass}" temp:bass="{$bass.notes[1]/@pname}" temp:bass.pclass="{$bass.notes[1]/@pclass}" temp:accented="{$isAccented}">
                 
                 <!-- these are all root notes -->
                 <xsl:sequence select="tools:generateChordMember($ct1,0,'P1')"/>
@@ -208,6 +206,7 @@
             corresp="#{string-join($notes/@xml:id,' #')}" 
             pname="{$notes[1]/@pname}" 
             accid.ges="{if($notes[1]/@accid.ges) then($notes[1]/@accid.ges) else if($notes[1]/@accid) then($notes[1]/@accid) else('')}" 
+            temp:pclass="{$notes[1]/@pclass}"
             temp:dur="{$dur}"/>
     </xsl:function>
 
