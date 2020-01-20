@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-model href="http://www.music-encoding.org/schema/current/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="3.0.0" xml:id="x938319e7-7485-477a-993f-1ab18a658fe6">
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="4.0.0" xml:id="x938319e7-7485-477a-993f-1ab18a658fe6">
     <meiHead>
         <fileDesc n="122">
             <titleStmt>
@@ -32,10 +32,10 @@
                 <title></title>
                 <context>
                     <head>Einführung</head>
-                    <p>Beethovens <rend rend="bold">Bundeslied op. 122 entstand</rend> in den Jahren 1822–1825 parallel mit dem Opferlied op. 121b. Die Frühfassung vom Dezember 1822 arbeitete er Mitte 1824 zu einer endgültigen Fassung um, die dann im Juli 1825 im Druck erschien. Auch die Bearbeitung für Klavier des ursprünglich für zwei Solostimmen, Chor und Blasinstrumente komponierten Liedes nahm Beethoven selbst vor.</p>
-                    <p>Beethoven reduziert dazu den sechsstimmigen Bläsersatz (2 Klarinetten, 2 Fagotte, 2 Hörner), um ihn für das Klavier spielbar zu gestalten. Die Singstimmen behält er unverändert bei. Anhand der <rend rend="bold">verschiedenen Perspektiven</rend> wird schnell deutlich, welche der Bläserstimmen Beethoven dabei unverändert übernimmt, welche er leicht verändert und welche er umstrukturiert, um dem Klaviersatz gerecht zu werden. Auch idiomatische Anpassungen nimmt er in den Allegro-Takten im Schlussteil des Liedes in seiner Bearbeitung vor.</p>
-                    <p>Insgesamt verdeutlicht der <rend rend="bold">Vergleich zwischen Originalfassung und Bearbeitung</rend> des Bundesliedes op. 122 mit Hilfe der unterschiedlichen Perspektiven, dass die Fassung des Bundesliedes für Klavier dem Idealtypus eines Klavierauszugs sehr nahe kommt: Beethoven reduziert den Bläsersatz und sieht von kreativen und strukturellen Eingriffen nahezu völlig ab. Der Großteil des Notentextes der Klavierfassung entstammt dabei seiner Vorlage (Invarianz). Nur ein sehr kleiner Teil wurde verändert (Varianz), wobei sich die meisten Änderungen schnell als Oktavtranspositionen erkennen lassen. Solcherlei Bearbeitungen dienten vor allem der Popularisierung und wurden daher sowohl von Komponisten als auch Verlegern gerne als Mittel zur Verbreitung genutzt.</p>
-                    <p>Ausdrücklich sei darauf hingewiesen, dass in der <rend rend="bold">Codierung</rend> alle Fehler, Defizite und Unregelmäßigkeiten der jeweiligen Vorlagen getreu übernommen wurden und so auch angezeigt (aber in der Beschreibung verzeichnet) werden. (Hinweis: Eine ausführlichere Beschreibung der vorgenannten Aspekte wird separat auf der Website des Projekts zur Verfügung gestellt.)</p>
+                    <p>Beethovens <rend rend="bold">Bundeslied op. 122 entstand</rend> in den Jahren 1822–1825 parallel mit dem Opferlied op. 121b. Die Frühfassung vom Dezember 1822 arbeitete er Mitte 1824 zur endgültigen Fassung um, die dann im Juli 1825 im Druck erschien. Auch die Bearbeitung für Klavier des ursprünglich für zwei Solostimmen, Chor und Blasinstrumente komponierten Liedes nahm Beethoven selbst vor.</p>
+                    <p>Beethoven nimmt eine klavierspezifische Adaption des sechsstimmigen Bläsersatzes (2 Klarinetten, 2 Fagotte, 2 Hörner) vor, während die Singstimmen unverändert übernommen sind. Anhand der <rend rend="bold">verschiedenen Perspektiven</rend> wird schnell deutlich, welche der Bläserstimmen Beethoven dabei unverändert übernimmt, welche er leicht verändert und welche er umstrukturiert, um dem Klaviersatz gerecht zu werden. Auch idiomatische Anpassungen nimmt er in den Allegro-Takten im Schlussteil des Liedes in seiner Bearbeitung vor.</p>
+                    <p>Insgesamt verdeutlicht der <rend rend="bold">Vergleich zwischen Originalfassung und Bearbeitung</rend> des Bundesliedes op. 122 mit Hilfe der unterschiedlichen Perspektiven, dass die Fassung des Bundesliedes für Klavier dem Idealtypus eines Klavierauszugs sehr nahe kommt: Beethoven reduziert den Bläsersatz und sieht von kreativen und strukturellen Eingriffen nahezu völlig ab. Der Großteil des Notentextes der Klavierfassung entstammt dabei seiner Vorlage (Invarianz). Nur ein sehr kleiner Teil wurde verändert (Varianz), wobei sich die meisten Änderungen schnell als Oktavtranspositionen identifizieren lassen. Solcherlei Bearbeitungen dienten vor allem der Popularisierung und wurden daher sowohl von Komponisten als auch Verlegern gerne als Mittel zur Verbreitung genutzt.</p>
+                    <p>Ausdrücklich sei darauf hingewiesen, dass die <rend rend="bold">Codierungen</rend> jeweils auf den Originalausgaben beruhen, Fehler übernommen und so auch angezeigt werden. Eine ausführlichere Beschreibung der vorgenannten Aspekte wird separat auf der Website des Projekts zur Verfügung gestellt.</p>
                 </context>
             </work>
         </workList>
@@ -47,9 +47,11 @@
             <change n="1" isodate="2018-07-03">
                 <respStmt>
                     <persName>JK</persName>
+                    <persName>RS</persName>
                 </respStmt>
                 <changeDesc>
                     <p>File created</p>
+                    <p>Added a description "Einführung".</p>
                 </changeDesc>
             </change>
         </revisionDesc>

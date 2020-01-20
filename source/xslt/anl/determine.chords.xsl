@@ -51,10 +51,14 @@
                     as="node()*"/>
 
                 <xsl:variable name="is.accented"
-                    select="tools:isAccented($current.tstamp, $measure/@meter.count, $measure/@meter.unit)"
+                    select="tools:isAccented($current.tstamp, $measure/@meter.count, $measure/@meter.unit, $measure/@meter.sym)" 
                     as="xs:boolean"/>
+                
+                <!--to Do: nur harm unter Noten, die länger als Sechzehntel sind?-->
+                <!--<xsl:variable name="longer.duration" select="number($current.notes//@dur) lt 16" as="xs:boolean"/>-->
 
-                <xsl:if test="count(distinct-values($current.notes//@pname)) gt 1">
+
+                <xsl:if test="(count(distinct-values($current.notes//@pname)) gt 1) and $is.accented">
                     <xsl:variable name="harm"
                         select="tools:interpreteChord($current.notes, $is.accented, true())"
                         as="node()+"/>
@@ -165,16 +169,24 @@
                 <xsl:variable name="root.dur"
                     select="max($notes[.//@pname = $current.row/@*[. = '0']/local-name()]/(max(.//@tstamp2/number(.)) - min(.//@tstamp/number(.))))"
                     as="xs:double?"/>
+                
                 <xsl:variable name="bass.accid" as="xs:string">
                     <xsl:choose>
-                        <xsl:when test="$notes//mei:note[@pname = $bass.tone]//mei:accid/@accid.ges">
-                            <xsl:value-of select="$notes//mei:note[@pname = $bass.tone]//mei:accid/@accid.ges"/>
+                        <xsl:when test="$notes//mei:note[@pname = $bass.tone][@accid.ges = 'f']">
+                            <xsl:value-of select="'♭'"/>
                         </xsl:when>
-                        <xsl:when test="$notes//mei:note[@pname = $bass.tone]//mei:accid/@accid">
-                            <xsl:value-of select="$notes//mei:note[@pname = $bass.tone]//mei:accid/@accid"/>
+                        <xsl:when test="$notes//mei:note[@pname = $bass.tone][@accid = 'f']">
+                            <xsl:value-of select="'♭'"/>
                         </xsl:when>
+                        <xsl:when test="$notes//mei:note[@pname = $bass.tone][@accid.ges = 's']">
+                            <xsl:value-of select="'♯'"/>
+                        </xsl:when>
+                        <xsl:when test="$notes//mei:note[@pname = $bass.tone][@accid = 's']">
+                            <xsl:value-of select="'♯'"/>
+                        </xsl:when>
+                        
                         <xsl:otherwise>
-                            <xsl:value-of select="'n'"/>
+                            <xsl:value-of select="''"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:variable>
@@ -249,6 +261,8 @@
 
         <xsl:for-each select="$identified.intervals">
             <xsl:variable name="current.interpretation" select="." as="node()"/>
+            
+            
             <!--<xsl:variable name="is.mod" select="some $func in $current.interpretation/temp:tone/@func satisfies (.,'[a-z]+')" as="xs:boolean"/>-->
             <!-- insert chord symbol with additions of sevenths and/or bass tone after a slash (/) if it is not the root note -->
             <harm type="mfunc" xmlns="http://www.music-encoding.org/ns/mei">
@@ -259,6 +273,8 @@
                         <rend type="root">
                             <xsl:value-of select="$current.interpretation/@root"/>
                         </rend>
+                        
+                        <!--hier die Berechnung von Intervallabständen root->7 und root->9 wie unten?-->
                         <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct7')">
                             <rend rend="sup" type="ct7">7</rend>
                         </xsl:if>
@@ -266,7 +282,7 @@
                             <rend rend="sup" type="ct9">9</rend>
                         </xsl:if>
                         <rend type="bass">
-                            <xsl:value-of select="concat('/', upper-case($current.interpretation/@bass))"/>
+                            <xsl:value-of select="concat('/', upper-case($current.interpretation/@bass), $current.interpretation/@bass.accid)"/>
                         </rend>
                         <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '43sus')">
                             <rend type="mod43sus" rend="sup" fontstyle="italic">43sus</rend>
@@ -292,16 +308,10 @@
                         <rend type="root">
                             <xsl:value-of select="$current.interpretation/@root"/>
                         </rend>
-                        <xsl:if
-                            test="
-                                some $func in $current.interpretation/temp:tone/@func
-                                    satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct7')">
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct7')">
                             <rend rend="sup" type="ct7">7</rend>
                         </xsl:if>
-                        <xsl:if
-                            test="
-                                some $func in $current.interpretation/temp:tone/@func
-                                    satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct9')">
+                        <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq 'ct9')">
                             <rend rend="sup" type="ct9">9</rend>
                         </xsl:if>
                         <xsl:if test="some $func in $current.interpretation/temp:tone/@func satisfies (string(tools:resolveMFuncByNumber($func)) eq '43sus')">
@@ -1132,9 +1142,10 @@
         <xsl:param name="tstamp" as="xs:string"/>
         <xsl:param name="meter.count" as="xs:string"/>
         <xsl:param name="meter.unit" as="xs:string"/>
+        <xsl:param name="meter.sym" as="xs:string?"/>
 
         <xsl:choose>
-            <xsl:when test="$meter.count = '2' and $meter.unit = '2' and $tstamp = ('1', '2')">
+            <xsl:when test="$meter.count = '2' and $meter.unit = '2' and $tstamp = ('1', '1.5', '2', '2.5')">
                 <xsl:value-of select="true()"/>
             </xsl:when>
             <xsl:when test="$meter.count = '2' and $meter.unit = '4' and $tstamp = ('1', '2')">
@@ -1231,9 +1242,9 @@
             </xsl:if>
         </xsl:variable>
 
-        <!-- determine classic triads -->
+        
         <xsl:choose>
-            <!--major triad-->
+            <!--minor triad:-->
             <xsl:when test="$third.dist = 3 and $fifth.dist = 7">
                 <xsl:variable name="is.minorThird" select="." as="xs:boolean"/>
                 <xsl:attribute name="root"
@@ -1244,36 +1255,64 @@
                 <xsl:attribute name="root"
                     select="upper-case(substring(., 1, 1)) || substring(., 2) || 'm'"/>
             </xsl:when>
-            <!--minor triad-->
+            <!--major triads:-->
             <xsl:when test="$third.dist = 4 and $fifth.dist = 7">
                 <xsl:attribute name="third" select="'major'"/>
                 <xsl:attribute name="root"
                     select="upper-case(substring(., 1, 1)) || substring(., 2)"/>
-                <!--toDO: move root-modification elsewhere -->
             </xsl:when>
             <xsl:when test="$third.dist = 4 and not($fifth.note)">
                 <xsl:attribute name="third" select="'major'"/>
                 <xsl:attribute name="root"
                     select="upper-case(substring(., 1, 1)) || substring(., 2)"/>
-                <!--toDO: move root-modification elsewhere -->
             </xsl:when>
+            <!-- augmented triads: -->
             <xsl:when test="$third.dist = 4 and $fifth.dist = 8">
                 <xsl:attribute name="root"
                     select="upper-case(substring(., 1, 1)) || substring(., 2) || '+'"/>
             </xsl:when>
+            <!-- diminished triads = verkürzter Akkord (kein Grundton) -->
             <xsl:when test="$third.dist = 3 and $fifth.dist = 6">
                 <xsl:attribute name="root"
                     select="upper-case(substring(., 1, 1)) || substring(., 2) || 'dim'"/>
-                <!--toDO: move root-modification elsewhere -->
             </xsl:when>
+            
+            <!-- crazy combinations -->
+            <!-- only major third and diminished fifth -->
+            <xsl:when test="$third.dist = 4 and $fifth.dist = 6 and not($seventh.note) and not($ninth.note)">
+                <xsl:attribute name="root"
+                    select="upper-case(substring(., 1, 1)) || substring(., 2) || '♭5'"/>
+            </xsl:when>
+            <!-- only minor third and augmented fifth -->
+            <xsl:when test="$third.dist = 3 and $fifth.dist = 8 and not($seventh.note) and not($ninth.note)">
+                <xsl:attribute name="root"
+                    select="upper-case(substring(., 1, 1)) || substring(., 2) || 'm♯5'"/>
+            </xsl:when>
+            
             <!--no third but perfect fifth-->
             <xsl:when test="not($third.note) and $fifth.dist = 7">
                 <xsl:attribute name="root"
                     select="upper-case(substring(., 1, 1)) || substring(., 2) || 'no3'"/>
             </xsl:when>
-            <!--only ct1 and ct7: should be deleted later in a cleanup-xslt-->
+            
+            
+            <!--Following interval combinations get a "ciao" and will be deleted in a cleanup-->
+            <!--only ct1 and ct7 -->
             <xsl:when test="$root.note and $seventh.note and not($third.note) and not($fifth.note)">
                 <xsl:attribute name="root" select="'ciao'"/>
+            </xsl:when>
+            <xsl:when test="$root.note and not($seventh.note) and not($third.note) and not($fifth.note)">
+                <xsl:attribute name="root" select="'ciao'"/>
+            </xsl:when>
+            <xsl:when test="not($third.note) and $fifth.dist = 6">
+                <xsl:attribute name="root" select="'ciao'"/>
+            </xsl:when>
+            <xsl:when test="not($third.note) and $fifth.dist = 8">
+                <xsl:attribute name="root" select="'ciao'"/>
+            </xsl:when>
+            <!-- if there is a diminished third -->
+            <xsl:when test="$third.dist = 2">
+                <xsl:attribute name="root" select="upper-case(substring(., 1, 1)) || substring(., 2) || 'ciao'"/>
             </xsl:when>
             
            
@@ -1283,19 +1322,19 @@
             <!-- gr. 3, r. 5, gr. 7 -->
             <!--<xsl:when test="$third.dist = 4 and $fifth.dist = 7 and $seventh.dist = 11">
                 <xsl:attribute name="root"
-                    select="upper-case(substring(., 1, 1)) || substring(., 2) || 'pups'"/>
+                    select="upper-case(substring(., 1, 1)) || substring(., 2) || ' '"/>
             </xsl:when>-->
             <!-- gr. 3, r. 5, kl. 7 -->
             <!--<xsl:when test="$third.dist = 3 and $fifth.dist = 7 and $seventh.dist = 10">
                 <xsl:attribute name="root"
-                    select="upper-case(substring(., 1, 1)) || substring(., 2) || 'oops'"/>
+                    select="upper-case(substring(., 1, 1)) || substring(., 2) || ' '"/>
             </xsl:when>-->
             
             <xsl:otherwise>
-                <xsl:message
-                    select="'Unable to determine third at ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || '. Please help…'"/>
+                <!--<xsl:message
+                    select="'Unable to determine interval at ' || ancestor::mei:measure/@n || ' at tstamp ' || $root.note/@tstamp || '. Please help…'"/>-->
                 <xsl:attribute name="root"
-                    select="upper-case(substring(., 1, 1)) || substring(., 2) || 'Hurz'"/>
+                    select="'(' || upper-case(substring(., 1, 1)) || substring(., 2) || ')'"/>
             </xsl:otherwise>
         </xsl:choose>
         <!-- toDo: handle the case when there are both minor and major thirds -->
@@ -1424,7 +1463,7 @@
     <xsl:template
         match="mei:beam[count(descendant::mei:note[not(@grace) and not(@cue) and @tstamp]) gt 2]"
         mode="resolve.arpeggios">
-        <xsl:variable name="has.chords" select="exists(child::mei:chord)" as="xs:boolean"/>
+        <xsl:variable name="has.chords" select="exists(descendant::mei:chord)" as="xs:boolean"/>
         <!-- gracenotes and cue-notes are ignored -->
         <xsl:variable name="notes"
             select="descendant::mei:note[not(@grace) and not(@cue) and @tstamp]" as="node()*"/>
@@ -1438,14 +1477,18 @@
         <xsl:variable name="minimal.cost.of.thirds"
             select="min($potential.chords//mei:annot[@type = 'mfunc.tonelist']/number(@cost))"
             as="xs:double"/>
-        <!-- collect the durations of all nots within the beam -->
-        <xsl:variable name="notes.dur" select="$notes/@dur" as="xs:string+"/>
+        <!-- collect the durations of all notes within the beam -->
+        <xsl:variable name="notes.dur" select="$notes/@dur" as="xs:string*"/>
+        
         <!--<xsl:variable name="chords.dur" select="$notes/parent::mei:chord/@dur" as="xs:string+"/>-->
 
         <xsl:choose>
             <!-- ignore when there is a chord within the beam -->
             <xsl:when test="$has.chords">
                 <xsl:next-match/>
+            </xsl:when>
+            <xsl:when test="count($notes.dur) = 0 and not($has.chords)">
+                <xsl:message select="$notes" terminate="yes"/>
             </xsl:when>
 
             <!-- ignore when the beam does not start on a full or 0.5-tstamp -->

@@ -18132,6 +18132,8 @@
                   <staffGrp xml:id="x1574603f-aee4-49ba-bdc3-12b050e5fc51"
                             symbol="bracket"
                             bar.thru="false">
+                        <label xml:id="x90e956fc-677d-42d3-b447-b28f203bdc88">Pianoforte</label>
+                        <labelAbbr xml:id="x0a4f69f7-3308-4e7d-b7bc-3fabaa53aec8">Pfte</labelAbbr>
                      <staffDef n="1"
                                xml:id="x29d22af7-ace4-46d0-bbe0-834d79c2ba00"
                                lines="5"
@@ -24946,7 +24948,8 @@
                   <staffGrp xml:id="xb16e855c-7d16-4c3e-b56b-a78abebed6e3"
                             bar.thru="false"
                             symbol="bracket">
-                     <label xml:id="x747898ec-93f5-445e-a8a4-84bf3765ce34">Rondo Allegro Comodo</label>
+                        <label xml:id="x90e956fc-677d-42d3-b447-b28f203bdc88">Pianoforte</label>
+                        <labelAbbr xml:id="x0a4f69f7-3308-4e7d-b7bc-3fabaa53aec8">Pfte</labelAbbr>
                      <staffDef n="1"
                                xml:id="x68ba43ec-218d-427e-a231-a3db6a892862"
                                lines="5"
