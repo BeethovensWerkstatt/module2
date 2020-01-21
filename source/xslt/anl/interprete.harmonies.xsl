@@ -121,7 +121,7 @@
                             
                             <!-- determine "cheapest" interpretations after all suspensions etc. are found -->
                             <xsl:variable name="least.base.costs" 
-                                select="$identified.neighbors/descendant-or-self::mei:chordDef[max(.//@temp:cost/number(.)) = min($identified.neighbors/descendant-or-self::mei:chordDef/max(.//@temp:cost/number(.)))]"
+                                select="$identified.passingtones.neighbors/descendant-or-self::mei:chordDef[max(.//@temp:cost/number(.)) = min($identified.passingtones.neighbors/descendant-or-self::mei:chordDef/max(.//@temp:cost/number(.)))]"
                                 as="node()+"/>
                             
                             <!-- prefer interpretations with longer root notes -->
