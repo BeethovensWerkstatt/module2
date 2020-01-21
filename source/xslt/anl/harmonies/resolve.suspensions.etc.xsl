@@ -85,7 +85,7 @@
                 </xsl:copy>
                 <xsl:copy>
                     <xsl:apply-templates select="@* except @corresp" mode="#current"/>
-                    <xsl:variable name="remaining.notes" select="$relevant.notes[not(@xml:id) = $affected.notes/@xml:id]" as="node()+"/>
+                    <xsl:variable name="remaining.notes" select="$relevant.notes[not(@xml:id = $affected.notes/@xml:id)]" as="node()+"/>
                     <xsl:attribute name="corresp" select="'#' || string-join($remaining.notes/@xml:id,' #')"/>
                 </xsl:copy>
             </xsl:otherwise>
@@ -149,7 +149,7 @@
                 </xsl:copy>
                 <xsl:copy>
                     <xsl:apply-templates select="@* except @corresp" mode="#current"/>
-                    <xsl:variable name="remaining.notes" select="$relevant.notes[not(@xml:id) = $affected.notes/@xml:id]" as="node()+"/>
+                    <xsl:variable name="remaining.notes" select="$relevant.notes[not(@xml:id = $affected.notes/@xml:id)]" as="node()+"/>
                     <xsl:attribute name="corresp" select="'#' || string-join($remaining.notes/@xml:id,' #')"/>
                 </xsl:copy>
             </xsl:otherwise>
@@ -209,7 +209,7 @@
                 </xsl:copy>
                 <xsl:copy>
                     <xsl:apply-templates select="@* except @corresp" mode="#current"/>
-                    <xsl:variable name="remaining.notes" select="$relevant.notes[not(@xml:id) = $affected.notes/@xml:id]" as="node()+"/>
+                    <xsl:variable name="remaining.notes" select="$relevant.notes[not(@xml:id = $affected.notes/@xml:id)]" as="node()+"/>
                     <xsl:attribute name="corresp" select="'#' || string-join($remaining.notes/@xml:id,' #')"/>
                 </xsl:copy>
             </xsl:otherwise>
@@ -267,7 +267,7 @@
                 </xsl:copy>
                 <xsl:copy>
                     <xsl:apply-templates select="@* except @corresp" mode="#current"/>
-                    <xsl:variable name="remaining.notes" select="$relevant.notes[not(@xml:id) = $affected.notes/@xml:id]" as="node()+"/>
+                    <xsl:variable name="remaining.notes" select="$relevant.notes[not(@xml:id = $affected.notes/@xml:id)]" as="node()+"/>
                     <xsl:attribute name="corresp" select="'#' || string-join($remaining.notes/@xml:id,' #')"/>
                 </xsl:copy>
             </xsl:otherwise>
@@ -287,7 +287,7 @@
         <xsl:variable name="affected.notes" as="node()*">
             <xsl:for-each select="$relevant.notes">
                 <xsl:variable name="current.note" select="." as="node()"/>
-                <xsl:variable name="goes.up" select="@next.intm and matches(@next.intm, '+m2')" as="xs:boolean"/>
+                <xsl:variable name="goes.up" select="exists(@next.intm) and @next.intm = '+m2'" as="xs:boolean"/>
                 <xsl:variable name="this.dur" select="number(@tstamp2) - number(@tstamp)" as="xs:double"/>
                 <xsl:variable name="root.longer.dur" select="$root.chordMember/number(@temp:dur) gt $this.dur" as="xs:boolean"/>
                 
@@ -326,7 +326,7 @@
                 </xsl:copy>
                 <xsl:copy>
                     <xsl:apply-templates select="@* except @corresp" mode="#current"/>
-                    <xsl:variable name="remaining.notes" select="$relevant.notes[not(@xml:id) = $affected.notes/@xml:id]" as="node()+"/>
+                    <xsl:variable name="remaining.notes" select="$relevant.notes[not(@xml:id = $affected.notes/@xml:id)]" as="node()+"/>
                     <xsl:attribute name="corresp" select="'#' || string-join($remaining.notes/@xml:id,' #')"/>
                 </xsl:copy>
             </xsl:otherwise>
