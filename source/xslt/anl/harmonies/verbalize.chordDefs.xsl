@@ -36,7 +36,7 @@
         
         
         <!--minor chords-->
-        <xsl:if test="mei:chordMember[@inth='m3'] and mei:chordMember[@inth='P5']">
+        <xsl:if test="mei:chordMember[@inth='m3'] and not(mei:chordMember[@inth=('A5', 'd5')])">
             <rend xmlns="http://www.music-encoding.org/ns/mei" type="minor">m</rend>
         </xsl:if>
         <!--no third but perfect fifth-->
