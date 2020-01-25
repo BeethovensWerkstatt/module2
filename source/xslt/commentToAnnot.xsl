@@ -15,6 +15,7 @@
                 <xd:b>Created on:</xd:b>Jan 23 2020</xd:p>
             <xd:p>
                 <xd:b>Author:</xd:b> Johannes Kepper, Ran Mo</xd:p>
+            <xd:p>This XSL converts comment into annot element</xd:p>
         </xd:desc>
     </xd:doc>
     
@@ -37,7 +38,7 @@
                 <xsl:attribute name="xml:id" select="'x' || uuid:randomUUID()"/>
                 <xsl:attribute name="type" select="'sic'"/>
                 <xsl:attribute name="resp" select="'#BW'"/>
-                <xsl:value-of select="$text"/>
+                <xsl:value-of select="normalize-space(replace($text, 'annot', ''))"/>
             </xsl:element>
         </xsl:when>
         <xsl:otherwise>
