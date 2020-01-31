@@ -34,6 +34,7 @@
         <!-- generates the actual output -->
         <rend xmlns="http://www.music-encoding.org/ns/mei" type="root"><xsl:value-of select="$root"/></rend>
         
+        <!--everything else than major triads:-->
         
         <!--minor chords-->
         <xsl:if test="mei:chordMember[@inth='m3'] and not(mei:chordMember[@inth=('A5', 'd5')])">
@@ -54,11 +55,11 @@
         
         
         <!--7th chord-->
-        <xsl:if test="mei:chordMember[@inth='m7']">
+        <xsl:if test="mei:chordMember[@inth='m7'] not(mei:chordMember[@temp:cost='4']">
             <rend xmlns="http://www.music-encoding.org/ns/mei" rend="sup" type="ct7">7</rend>
         </xsl:if>
         <!--major-7th chord-->
-        <xsl:if test="mei:chordMember[@inth='M7']">
+        <xsl:if test="mei:chordMember[@inth='M7'] and not(mei:chordMember[@temp:cost='4'])">
             <rend xmlns="http://www.music-encoding.org/ns/mei" rend="sup" type="ct7">maj7</rend>
         </xsl:if>
         <!--7th chord + dim 5th-->
@@ -86,7 +87,7 @@
             <rend xmlns="http://www.music-encoding.org/ns/mei" rend="sup" type="ct9">♯9</rend>
         </xsl:if>
         <!--9 added to a triad without 7th-->
-        <xsl:if test="not(mei:chordMember[@temp:cost='1']) and mei:chordMember[@inth='M2']">
+        <xsl:if test="not(mei:chordMember[@temp:cost='3']) and mei:chordMember[@inth='M2']">
             <rend xmlns="http://www.music-encoding.org/ns/mei" rend="sup" type="ct9">add9</rend>
         </xsl:if>
         <!--chord with 7th, 9th and 11th-->
