@@ -55,7 +55,7 @@
         
         
         <!--7th chord-->
-        <xsl:if test="mei:chordMember[@inth='m7'] not(mei:chordMember[@temp:cost='4']">
+        <xsl:if test="mei:chordMember[@inth='m7'] and not(mei:chordMember[@temp:cost='4'])">
             <rend xmlns="http://www.music-encoding.org/ns/mei" rend="sup" type="ct7">7</rend>
         </xsl:if>
         <!--major-7th chord-->
