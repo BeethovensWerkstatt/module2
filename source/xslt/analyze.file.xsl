@@ -49,6 +49,9 @@
     -->
     <xsl:param name="harmonize.output" select="'harm.thirds-based-chords.label.plain'"/>
     
+    <!--  -->
+    <xsl:param name="harmonize.suppress.duplicates" select="true()"/>
+    
     <xsl:include href="tools/pick.mdiv.xsl"/>
     <xsl:include href="tools/rescore.parts.xsl"/>
     <xsl:include href="tools/addid.xsl"/>
@@ -66,7 +69,6 @@
     <!--<xsl:include href="anl/insert.harmonies.xsl"/>-->
     <xsl:include href="anl/interprete.harmonies.xsl"/>
     <!--<xsl:include href="anl/determine.chords.xsl"/>-->
-    <xsl:include href="anl/resolve.duplicate.harms.xsl"/>
     <xsl:include href="tools/disable.staves.xsl"/>
     <xsl:include href="anl/clean.up.xsl"/>
 

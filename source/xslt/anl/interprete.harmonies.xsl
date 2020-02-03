@@ -181,15 +181,17 @@
                                             <choice>
                                                 <xsl:for-each select="$best.explanations">
                                                     <reg type="best.explanation">
+                                                        <!--<xsl:sequence select="."/>--><!--  -->
                                                         <xsl:apply-templates select="." mode="verbalize.chordDefs.thirds-based-chords.plain"/>
                                                     </reg>
                                                 </xsl:for-each>
                                             </choice>
                                         </xsl:when>
                                         <xsl:otherwise>
+                                            <!--<xsl:sequence select="$best.explanations"/>--><!--  -->
                                             <xsl:apply-templates select="$best.explanations" mode="verbalize.chordDefs.thirds-based-chords.plain"/>
                                         </xsl:otherwise>
-                                    </xsl:choose>
+                                    </xsl:choose>                                    
                                 </xsl:when>
                                 <xsl:when test="$harmonize.output = 'harm.thirds-based-chords.chordDef'">
                                     <!-- output the best explanation(s) -->
@@ -225,31 +227,48 @@
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:otherwise>
-                                
                             </xsl:choose>
-                            
-                            
-                            
-                            
-                            
-                            
                         </harm>
-                        
                     </xsl:when>
                 </xsl:choose>
-                
             </xsl:for-each>
         </xsl:variable>
         
         <!-- todo:problem here is that this might be dependent on a sequence of harms
             – maybe we should do that earlier in the pipe -->
-        <!--<xsl:variable name="resolved.duplicate.harms" as="node()">
-            <xsl:apply-templates select="$harms" mode="resolve.duplicate.harms"/>
-        </xsl:variable>-->
+        <xsl:variable name="resolved.duplicate.harms" as="node()*">
+            <xsl:choose>
+                <xsl:when test="$harmonize.suppress.duplicates">
+                    
+                    <xsl:sequence select="$harms[mei:rend][1]"/>
+                    <xsl:for-each select="(2 to count($harms[mei:rend]))">
+                        <xsl:variable name="i" select="." as="xs:integer"/>
+                        
+                        <xsl:variable name="this.rends" select="$harms[mei:rend][$i]/mei:rend/text()" as="xs:string*"/>
+                        <xsl:variable name="prev.rends" select="$harms[mei:rend][$i -1]/mei:rend/text()" as="xs:string*"/>
+                        
+                        <xsl:choose>
+                            <xsl:when test="not(count($this.rends) = count($prev.rends))">
+                                <xsl:sequence select="$harms[mei:rend][$i]"/>
+                            </xsl:when>
+                            <xsl:when test="every $i in (1 to count($this.rends)) satisfies ($this.rends[$i] = $prev.rends[$i])">
+                                <!-- do nothing -->
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:sequence select="$harms[mei:rend][$i]"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:for-each>                            
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:sequence select="$harms[mei:rend]"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
         
         <xsl:copy>
             <xsl:apply-templates select="node() | @*" mode="#current"/>
-            <xsl:sequence select="$harms"/>
+            <xsl:sequence select="$resolved.duplicate.harms"/>
         </xsl:copy>
         
     </xsl:template>
