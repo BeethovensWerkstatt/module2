@@ -42,7 +42,30 @@
         
         <!-- transposing instruments are resolved to their sounding pitches -->
         <xsl:variable name="resolved.transposing.instruments" as="node()">
-            <xsl:apply-templates select="$inherited.tstamps" mode="resolve.transposing.instruments"/>
+            
+            <!-- we need to extract the scoreDef here, because it's not reachable in the following mode anymore -->
+            <xsl:variable name="section" select="(ancestor::mei:section | ancestor::mei:ending)[1]" as="node()"/>
+            
+            <xsl:variable name="relevant.scoreDef" as="node()">
+                <xsl:choose>
+                    <xsl:when test="$section/child::mei:scoreDef[@key.sig][count(preceding-sibling::mei:*[not(local-name() = 'annot')]) = 0]">
+                        <xsl:sequence select="$section/child::mei:scoreDef[@key.sig][count(preceding-sibling::mei:*[not(local-name() = 'annot')]) = 0]"/>
+                    </xsl:when>
+                    <xsl:when test="$section/preceding-sibling::mei:*[(local-name() = 'scoreDef' and @key.sig) or (local-name() = ('section','ending') and child::mei:scoreDef[@key.sig])]">
+                        <xsl:sequence select="$section/preceding-sibling::mei:*[(local-name() = 'scoreDef' and @key.sig) or (local-name() = ('section','ending') and child::mei:scoreDef[@key.sig])][1]/descendant-or-self::mei:scoreDef[@key.sig][1]"/>
+                    </xsl:when>
+                    <xsl:when test="$section/ancestor-or-self::mei:*[local-name() = ('section','ending')]/preceding-sibling::mei:scoreDef[@key.sig]">
+                        <xsl:sequence select="$section/ancestor-or-self::mei:*[local-name() = ('section','ending')]/preceding-sibling::mei:scoreDef[@key.sig][1]"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:message terminate="yes" select="'ERROR: Unable to find scoreDef at ' || ($section/descendant-or-self::mei:*[@xml:id])[1]/@xml:id"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:variable>
+            
+            <xsl:apply-templates select="$inherited.tstamps" mode="resolve.transposing.instruments">
+                <xsl:with-param name="relevant.scoreDef" select="$relevant.scoreDef" tunnel="yes" as="node()"/>
+            </xsl:apply-templates>
         </xsl:variable>
         
         <!-- if $resolve.arpegs, arpeggios are treated as chords -->
@@ -134,6 +157,23 @@
                             
                             <!-- select output format -->
                             <xsl:choose>
+                                <!-- debug -->
+                                <xsl:when test="1 = 2">
+                                    <xsl:choose>
+                                        <xsl:when test="count($plain.thirds) gt 1">
+                                            <choice>
+                                                <xsl:for-each select="$plain.thirds">
+                                                    <reg type="plain.thirds">
+                                                        <xsl:apply-templates select="." mode="#current"/>
+                                                    </reg>
+                                                </xsl:for-each>
+                                            </choice>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:apply-templates select="$plain.thirds" mode="#current"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:when>
                                 <xsl:when test="$harmonize.output = 'harm.thirds-based-chords.label.plain'">
                                     <!-- output the best explanation(s) as plain label for thirds-based chords (default) -->
                                     <xsl:choose>

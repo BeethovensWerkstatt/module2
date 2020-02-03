@@ -52,7 +52,7 @@
         
         <xsl:copy>
             <xsl:attribute name="pnum" select="$pnum"/>
-            <xsl:attribute name="pclass" select="custom:getPclass($pnum)"/>
+            <xsl:attribute name="pclass" select="custom:getPclass($pnum,$offset)"/>
             <xsl:apply-templates select="node() | @*" mode="#current"/>
         </xsl:copy>
     </xsl:template>
@@ -108,6 +108,8 @@
     
     <xsl:function name="custom:getPclass" as="xs:string">
         <xsl:param name="pnum" as="xs:string"/>
+        <xsl:param name="trans.semi" as="xs:integer"/>
+        
         <xsl:variable name="pnum.int" select="xs:integer($pnum)" as="xs:integer"/>
         <xsl:value-of select="$pnum.int mod 12"/>
     </xsl:function>
