@@ -157,7 +157,7 @@
                             
                             <!-- select output format -->
                             <xsl:choose>
-                                <!-- debug -->
+                                <!-- debug: 1 = 1 = show me all plain thirds-->
                                 <xsl:when test="1 = 2">
                                     <xsl:choose>
                                         <xsl:when test="count($plain.thirds) gt 1">
@@ -181,14 +181,14 @@
                                             <choice>
                                                 <xsl:for-each select="$best.explanations">
                                                     <reg type="best.explanation">
-                                                        <!--<xsl:sequence select="."/>--><!--  -->
+                                                        <xsl:sequence select="."/><!--  -->
                                                         <xsl:apply-templates select="." mode="verbalize.chordDefs.thirds-based-chords.plain"/>
                                                     </reg>
                                                 </xsl:for-each>
                                             </choice>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <!--<xsl:sequence select="$best.explanations"/>--><!--  -->
+                                            <xsl:sequence select="$best.explanations"/><!--  -->
                                             <xsl:apply-templates select="$best.explanations" mode="verbalize.chordDefs.thirds-based-chords.plain"/>
                                         </xsl:otherwise>
                                     </xsl:choose>                                    
