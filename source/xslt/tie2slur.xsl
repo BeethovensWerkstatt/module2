@@ -31,9 +31,17 @@
         
         <xsl:variable name="start.m" select="ancestor::mei:measure[//$start.note]/@n"/>
         <xsl:variable name="end.m" select="ancestor::mei:measure[//$end.note]/@n"/>
-            
+        
+        <xsl:variable name="start.beam" select="preceding::mei:note[@xml:id = $start.id]/ancestor::mei:beam/@xml:id"/>
+        <xsl:variable name="end.beam" select="preceding::mei:note[@xml:id = $end.id]/ancestor::mei:beam/@xml:id"/>
+        
+        
+        <xsl:if test="($start.m eq $end.m) and ($start.beam eq $end.beam)">
+            <xsl:message select="'m:' || ancestor::mei:measure/@n || ': startnote: ' || $start.id || ' /endnote: ' || $end.id || ' /beam: ' || $start.beam "  terminate="no"></xsl:message>
+        </xsl:if>
+        
         <xsl:choose>
-            <xsl:when test="$start.m eq $end.m">
+            <xsl:when test="($start.m eq $end.m) and ($start.beam eq $end.beam)">
                 <xsl:element name="slur" xmlns="http://www.music-encoding.org/ns/mei">
                     <xsl:copy-of select="@*"/>
                 </xsl:element>
@@ -43,10 +51,8 @@
             </xsl:otherwise>
         </xsl:choose>
         
-        <xsl:if test="$start.m eq $end.m">
-            <xsl:message select="'tie2slur, m:' || ancestor::mei:measure/@n || ' - @startid: ' || $start.id"  terminate="no"></xsl:message>
-        </xsl:if>
-            
+        
+        
     </xsl:template>
     
     
