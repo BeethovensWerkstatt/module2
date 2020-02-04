@@ -307,7 +307,7 @@
                 endid="#x1aea252f-4ed0-4dc5-9bea-53f2fdd40746"/>
               <tie xml:id="xb8f23ee2-934c-43ea-bf39-22f9fafb1146" staff="2"
                 startid="#x5ae87724-745f-4448-930c-b3607113d505"
-                endid="#xf871e5e4-1e26-411e-9f92-37f2039de5ce"/>
+                endid="#xa547b28c-de72-4309-a0be-0916ba890ad4"/>
               <tie xml:id="xf78eb4b7-a721-423c-b97a-27ab08b0ffad" staff="2"
                 startid="#xb6b1f7f3-c99b-4512-a87f-1f6072a0a168"
                 endid="#xf871e5e4-1e26-411e-9f92-37f2039de5ce"/>
@@ -46227,7 +46227,7 @@
               <slur xml:id="x6f338bbe-36aa-4ac9-b02d-f99a5b88f4a4"
                 startid="#xccb4f78d-0d3e-48d9-9e22-9da4abe1cb97"
                 endid="#x89a2d4cf-251a-47f9-b50d-c8c00cd4fd9d" staff="1"/>
-              <tie xml:id="x9eef8a09-7298-4165-bc43-22d1f144ba97"
+              <slur xml:id="x9eef8a09-7298-4165-bc43-22d1f144ba97"
                 startid="#x9dd03fad-0bed-470e-bc5d-f3f08bb98fc3"
                 endid="#xbed238c1-c2b6-4f28-8d40-fb49c6e8b530" staff="3"/>
               <tie xml:id="xeea1c8bc-07b2-4c1b-a8d8-5e69c92f5dc2"
@@ -46449,7 +46449,7 @@
               </staff>
               <staff xml:id="xe7576409-ceb3-4c09-899b-c6f4d927f901" n="3">
                 <layer xml:id="xd6d837a4-7449-40df-989d-34372566220d" n="1">
-                  <note xml:id="x0c10f7df-a8e5-468a-b7df-69a32751f11b" pname="a" oct="3" dur="4"/>
+                  <note xml:id="x0c10f7df-a8e5-468a-b7df-69a32751f11b" pname="a" accid.ges="n" oct="3" dur="4"/>
                   <beam xml:id="x5c72d4ed-7e52-4fa1-af58-fbbad6162afe">
                     <note xml:id="xf5f3a081-74e2-4566-8760-683c5736ae88" pname="g" oct="3" dur="16"
                       accid="n"/>
