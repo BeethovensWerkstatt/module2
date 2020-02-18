@@ -8,7 +8,7 @@ LABEL maintainer="Johannes Kepper"
 
 ENV MODULE2_BUILD_HOME="/opt/module2-build"
 
-ADD https://deb.nodesource.com/setup_8.x /tmp/nodejs_setup 
+ADD https://deb.nodesource.com/setup_12.x /tmp/nodejs_setup 
 
 WORKDIR ${MODULE2_BUILD_HOME}
 
