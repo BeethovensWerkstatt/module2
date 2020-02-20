@@ -1968,7 +1968,7 @@
                                     oct="4"
                                     dur="4"
                                     
-                                    artic="stacc">
+                                    artic="stacc" accid.ges="n">
                                  
                               </note>
                               <note xml:id="x629e566a-dbd2-4b38-9f97-3e95a9d6ac73"
@@ -5325,7 +5325,7 @@
                               <note xml:id="xe4bbf7c8-1859-42aa-814f-43f7e9bf25dd"
                                     pname="d"
                                     oct="5"
-                                    dur="4"
+                                    dur="4" accid.ges="n"
                                     />
                               <note xml:id="xb1e7cfa0-e5ad-41ae-81bb-bf656881648f"
                                     pname="c"
@@ -5398,7 +5398,7 @@
                               <note xml:id="xa47e9d27-1673-40ea-a21a-9f87f65e1316"
                                     pname="d"
                                     oct="5"
-                                    dur="4"
+                                    dur="4" accid.ges="n"
                                     />
                               <note xml:id="x92edeb2e-d1ad-43ee-a91c-967a6456b132"
                                     pname="c"
@@ -7093,7 +7093,7 @@
                               <note xml:id="xc18f6cab-2077-42f8-a977-ed654caa3876"
                                     pname="g"
                                     oct="4"
-                                    dur="4"
+                                    dur="4" accid.ges="n"
                                     />
                               <note xml:id="xe34989a4-ada3-4d75-bee3-45fe947d4389"
                                     pname="f"
@@ -7261,7 +7261,7 @@
                               <note xml:id="xba5562bb-10e2-4f28-8367-02c9d7fafa5d"
                                     pname="f"
                                     oct="4"
-                                    dur="4"
+                                    dur="4" accid.ges="n"
                                     />
                               <note xml:id="x3521664b-8be5-461a-ad59-81f2972c9d5b"
                                     pname="e"
@@ -14565,7 +14565,7 @@
                               <note xml:id="xc4f6029d-c934-43d5-8a6e-0e12ce30e3c8"
                                     pname="c"
                                     oct="5"
-                                    dur="4"
+                                    dur="4" accid.ges="s"
                                     />
                               <note xml:id="x9c773d20-1491-48ba-93e7-2eedf346e40e"
                                     pname="d"
@@ -14665,7 +14665,7 @@
                                     oct="4"
                                     dur="4"
                                     
-                                    accid.ges="f"/>
+                                    accid.ges="n"/>
                               <note xml:id="xf707eb86-2db5-40b6-841b-d288f9feaf1a"
                                     pname="c"
                                     oct="5"
@@ -18588,7 +18588,7 @@
                               <note xml:id="xe33fe134-971d-4c3d-95f5-bf40465e23cb"
                                     pname="c"
                                     oct="5"
-                                    dur="4"
+                                    dur="4" accid.ges="n"
                                     />
                               <note xml:id="x8110860e-7141-40c0-a53a-9f00e2b27320"
                                     pname="b"
@@ -18718,7 +18718,7 @@
                               <note xml:id="x63a962f8-3064-4576-8bc4-915e8b9fd279"
                                     pname="b"
                                     oct="4"
-                                    dur="4"
+                                    dur="4" accid.ges="n"
                                     />
                               <note xml:id="xf22ee321-79cc-46d5-b8c0-d3c1a2b43450"
                                     pname="c"
@@ -47550,19 +47550,19 @@
                                            dur="8"
                                            >
                                        <note xml:id="xccf5af01-9ff2-47b4-a6d9-bad375216c45" pname="g" oct="3"/>
-                                       <note xml:id="xec0870c2-389d-46eb-a53d-2e5c7a6eedc4" pname="e" oct="4"/>
+                                       <note xml:id="xec0870c2-389d-46eb-a53d-2e5c7a6eedc4" pname="e" oct="4" accid.ges="f"/>
                                     </chord>
                                     <chord xml:id="xb21fbbe7-b33a-424f-809d-e40464e15b13"
                                            dur="8"
                                            >
                                        <note xml:id="xdd263eaf-4231-4f17-911c-15737e650a32" pname="g" oct="3"/>
-                                          <note xml:id="x548c87d3-d3bd-45a5-b05b-fbdd901d434e" pname="e" oct="4"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                          <note xml:id="x548c87d3-d3bd-45a5-b05b-fbdd901d434e" pname="e" oct="4" accid.ges="f"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                                     </chord>
                                     <chord xml:id="x7fc775f4-9803-480d-bbb5-ec3dde355e21"
                                            dur="8"
                                            >
                                        <note xml:id="x4ad768cd-6d9c-4913-bc7d-9146e56e3719" pname="g" oct="3"/>
-                                       <note xml:id="x8fe667f1-359f-4eae-8908-a8d21321c6de" pname="e" oct="4"/>
+                                       <note xml:id="x8fe667f1-359f-4eae-8908-a8d21321c6de" pname="e" oct="4" accid.ges="f"/>
                                     </chord>
                                  </tuplet>
                                  
@@ -47578,19 +47578,19 @@
                                            dur="8"
                                            >
                                        <note xml:id="x25df5e19-1b35-4b11-99a6-33824e4e4496" pname="g" oct="3"/>
-                                       <note xml:id="x6cfff2ce-431e-42cc-b5b7-a332fcd394ef" pname="e" oct="4"/>
+                                       <note xml:id="x6cfff2ce-431e-42cc-b5b7-a332fcd394ef" pname="e" oct="4" accid.ges="f"/>
                                     </chord>
                                     <chord xml:id="x8f097375-e6c3-4636-98c6-56d830e2b910"
                                            dur="8"
                                            >
                                        <note xml:id="xb71b886c-4be9-4f44-ba14-38137de94b84" pname="g" oct="3"/>
-                                       <note xml:id="x3671cb58-b933-41f6-b69d-c963ec1d2194" pname="e" oct="4"/>
+                                       <note xml:id="x3671cb58-b933-41f6-b69d-c963ec1d2194" pname="e" oct="4" accid.ges="f"/>
                                     </chord>
                                     <chord xml:id="x3772a2b5-4230-4374-a72d-0149989f52f5"
                                            dur="8"
                                            >
                                        <note xml:id="x03b6f312-62a1-42e9-829e-e6413243c286" pname="g" oct="3"/>
-                                       <note xml:id="x0e9394ee-523e-430c-a041-c4e57334563d" pname="e" oct="4"/>
+                                       <note xml:id="x0e9394ee-523e-430c-a041-c4e57334563d" pname="e" oct="4" accid.ges="f"/>
                                     </chord>
                                  </tuplet>
                                  
@@ -47606,19 +47606,19 @@
                                            dur="8"
                                            >
                                        <note xml:id="xa645d5e8-3df9-415d-a24f-67319490a6ce" pname="g" oct="3"/>
-                                       <note xml:id="x8f94bb0a-8db8-41d3-a35f-2820147341c5" pname="e" oct="4"/>
+                                       <note xml:id="x8f94bb0a-8db8-41d3-a35f-2820147341c5" pname="e" oct="4" accid.ges="f"/>
                                     </chord>
                                     <chord xml:id="xba81e3d7-c258-4a7c-8566-494bd3524591"
                                            dur="8"
                                            >
                                        <note xml:id="xe4f70bdd-75a5-4476-a6cb-b72b155dfb26" pname="g" oct="3"/>
-                                       <note xml:id="xfcab57bf-e065-451a-8292-16f768b27ded" pname="e" oct="4"/>
+                                       <note xml:id="xfcab57bf-e065-451a-8292-16f768b27ded" pname="e" oct="4" accid.ges="f"/>
                                     </chord>
                                     <chord xml:id="x12c44bc2-f668-440f-8049-5d65a62f1789"
                                            dur="8"
                                            >
                                        <note xml:id="x30b87737-a5d7-4ddd-8fb9-504ce49d7d9a" pname="g" oct="3"/>
-                                       <note xml:id="x39c95dc4-b3f5-48f7-b05b-16ca180c656e" pname="e" oct="4"/>
+                                       <note xml:id="x39c95dc4-b3f5-48f7-b05b-16ca180c656e" pname="e" oct="4" accid.ges="f"/>
                                     </chord>
                                  </tuplet>
                                  
@@ -47634,19 +47634,19 @@
                                            dur="8"
                                            >
                                        <note xml:id="xf446e77c-d23b-4e13-a11b-487e74c6c4bd" pname="g" oct="3"/>
-                                       <note xml:id="x69f42e14-2145-4ef1-adc0-14d233cc59e6" pname="e" oct="4"/>
+                                       <note xml:id="x69f42e14-2145-4ef1-adc0-14d233cc59e6" pname="e" oct="4" accid.ges="f"/>
                                     </chord>
                                     <chord xml:id="xa2e171c9-dd25-466b-bc09-e93f62831b8d"
                                            dur="8"
                                            >
                                        <note xml:id="x502128c4-5d8b-403d-bb4e-4704beef9a2f" pname="g" oct="3"/>
-                                       <note xml:id="x816e729e-ec5d-4f84-8840-c4c0e4a3617c" pname="e" oct="4"/>
+                                       <note xml:id="x816e729e-ec5d-4f84-8840-c4c0e4a3617c" pname="e" oct="4" accid.ges="f"/>
                                     </chord>
                                     <chord xml:id="x9a468d1f-7043-4e2f-87ad-fe365e01b0f4"
                                            dur="8"
                                            >
                                        <note xml:id="xa7054413-b434-403b-96cd-6bdcb09c24fb" pname="g" oct="3"/>
-                                       <note xml:id="x93f2e03a-bf87-4e52-a0dd-3be708085047" pname="e" oct="4"/>
+                                       <note xml:id="x93f2e03a-bf87-4e52-a0dd-3be708085047" pname="e" oct="4" accid.ges="f"/>
                                     </chord>
                                  </tuplet>
                                  
@@ -47694,19 +47694,19 @@
                                     <chord xml:id="xec90768b-a7b0-42d5-9c18-2ff93bf791db"
                                            dur="8"
                                            >
-                                       <note xml:id="x6fa9db07-af4e-4e61-9e0b-897fe17ce23b" pname="a" oct="3"/>
+                                       <note xml:id="x6fa9db07-af4e-4e61-9e0b-897fe17ce23b" pname="a" oct="3" accid.ges="f"/>
                                        <note xml:id="x9a9263a1-fe87-4214-9d50-16f8e9f7ff98" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="x068888ed-20a8-4e3b-b214-6308514ea102"
                                            dur="8"
                                            >
-                                          <note xml:id="x4822e25e-b9d0-4f11-8ec8-77e810ce4d81" pname="a" oct="3"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                          <note xml:id="x4822e25e-b9d0-4f11-8ec8-77e810ce4d81" pname="a" oct="3" accid.ges="f"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                                           <note xml:id="x5f43bffd-c7a6-4c17-bbac-1cca5e309580" pname="e" oct="4"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
                                     </chord>
                                     <chord xml:id="x50c37aff-90cc-4776-8dcc-284610c92f69"
                                            dur="8"
                                            >
-                                       <note xml:id="x09b6e774-346f-4d61-94e7-5724fd32fd87" pname="a" oct="3"/>
+                                          <note xml:id="x09b6e774-346f-4d61-94e7-5724fd32fd87" pname="a" oct="3" accid.ges="f"/>
                                        <note xml:id="x8ca7e043-f63d-417b-8bb6-4f03409ddccc" pname="e" oct="4"/>
                                     </chord>
                                  </tuplet>
@@ -47722,19 +47722,19 @@
                                     <chord xml:id="x02ab806f-05d3-40e7-8877-e61db764bc89"
                                            dur="8"
                                            >
-                                       <note xml:id="xefbf2a81-a748-44f1-8f5c-8e2a4f5dc75e" pname="a" oct="3"/>
+                                          <note xml:id="xefbf2a81-a748-44f1-8f5c-8e2a4f5dc75e" pname="a" oct="3" accid.ges="f"/>
                                        <note xml:id="x918903ca-8d71-4425-a19a-7f5638d0304f" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="x06670271-7e41-40c3-a659-42489d5ef0bb"
                                            dur="8"
                                            >
-                                       <note xml:id="xd64d8c4d-15a1-4d73-a834-c34977d18bd7" pname="a" oct="3"/>
+                                          <note xml:id="xd64d8c4d-15a1-4d73-a834-c34977d18bd7" pname="a" oct="3" accid.ges="f"/>
                                        <note xml:id="x210a6e52-31e0-40bb-8e7c-9ac97a88b3ed" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="xce14b53d-e16f-4da9-88c5-47e2e205669a"
                                            dur="8"
                                            >
-                                       <note xml:id="xd9517561-6e05-4750-9cd4-474d20dd39c1" pname="a" oct="3"/>
+                                          <note xml:id="xd9517561-6e05-4750-9cd4-474d20dd39c1" pname="a" oct="3" accid.ges="f"/>
                                        <note xml:id="x2e941e47-c415-4a95-8a53-f119e7c22513" pname="e" oct="4"/>
                                     </chord>
                                  </tuplet>
@@ -47750,19 +47750,19 @@
                                     <chord xml:id="x89d416ad-b9e0-44da-9f77-5fefde18dd3a"
                                            dur="8"
                                            >
-                                       <note xml:id="xfe5f5af7-2350-44a2-821b-b6828e5e2b33" pname="a" oct="3"/>
+                                          <note xml:id="xfe5f5af7-2350-44a2-821b-b6828e5e2b33" pname="a" oct="3" accid.ges="f"/>
                                        <note xml:id="x5a0faab3-8f24-4d3c-82ec-29488acf2f67" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="x79cedd34-a1b9-4f09-80c6-50e59f07b322"
                                            dur="8"
                                            >
-                                       <note xml:id="x140b1fb1-fc52-4c00-970f-092818cc2c7d" pname="a" oct="3"/>
+                                          <note xml:id="x140b1fb1-fc52-4c00-970f-092818cc2c7d" pname="a" oct="3" accid.ges="f"/>
                                        <note xml:id="xe31df344-a12d-4cf6-9d7e-07b3b7b72f54" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="xc522e02c-629d-4738-8f00-2634e68c9786"
                                            dur="8"
                                            >
-                                       <note xml:id="xa99b87cc-cc0b-4a35-90ff-9c2d880d9a8c" pname="a" oct="3"/>
+                                          <note xml:id="xa99b87cc-cc0b-4a35-90ff-9c2d880d9a8c" pname="a" oct="3" accid.ges="f"/>
                                        <note xml:id="x7492171c-0a62-436c-a97d-f5acd0d03d5e" pname="e" oct="4"/>
                                     </chord>
                                  </tuplet>
@@ -47778,19 +47778,19 @@
                                     <chord xml:id="x1f9bd141-6148-424c-a24b-6046a33dabcd"
                                            dur="8"
                                            >
-                                       <note xml:id="x6c485529-16f4-4c8b-aedb-a2464ca39ed5" pname="a" oct="3"/>
+                                          <note xml:id="x6c485529-16f4-4c8b-aedb-a2464ca39ed5" pname="a" oct="3" accid.ges="f"/>
                                        <note xml:id="x04fdf7af-5df4-49e4-b392-c7f65971b9bb" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="x4964b97e-35e5-46e4-9690-604c67ab65e7"
                                            dur="8"
                                            >
-                                       <note xml:id="xfd88e17e-c668-41b6-a0c2-d470e533988e" pname="a" oct="3"/>
+                                          <note xml:id="xfd88e17e-c668-41b6-a0c2-d470e533988e" pname="a" oct="3" accid.ges="f"/>
                                        <note xml:id="x30604b0f-3df9-4ae8-ad29-05bddc8d4279" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="x6492c6ff-e8c7-4f8c-a853-46805eac7771"
                                            dur="8"
                                            >
-                                       <note xml:id="xadea535b-5c8b-456d-bcbe-60dd149939af" pname="a" oct="3"/>
+                                          <note xml:id="xadea535b-5c8b-456d-bcbe-60dd149939af" pname="a" oct="3" accid.ges="f"/>
                                        <note xml:id="xfd170220-3c83-4a07-a303-fd63c48209ac" pname="e" oct="4"/>
                                     </chord>
                                  </tuplet>
