@@ -34,7 +34,7 @@
                 
             </xsl:when>
             
-            <!-- transposed by a full octave -->
+            <!-- transposed by a full octave, add @oct.ges -->
             <xsl:when test="$relevant.scoreDef//mei:staffDef[@n = $current.n][@trans.semi = ('-12','12')][@trans.diat = ('-7','7')][@key.sig = $relevant.scoreDef/@key.sig]">
                 <xsl:variable name="staff.key.sig" select="$relevant.scoreDef//mei:staffDef[@n = $current.n]/@key.sig" as="xs:string"/>
                 <xsl:variable name="staff.trans.semi" select="xs:integer($relevant.scoreDef//mei:staffDef[@n = $current.n]/@trans.semi)" as="xs:integer"/>
@@ -65,8 +65,23 @@
             <xsl:when test="$trans.diat = 0 and $trans.semi = 0">
                 <xsl:next-match/>
             </xsl:when>
+            
+            <xsl:when test="$trans.diat = 7 and $trans.semi = 12">
+                <xsl:copy>
+                    <xsl:attribute name="oct.ges" select="./@oct + 1"/>
+                    <xsl:apply-templates select="node() | @*" mode="#current"/>
+                </xsl:copy>
+            </xsl:when>
+            <xsl:when test="$trans.diat = -7 and $trans.semi = -12">
+                <xsl:copy>
+                    <xsl:attribute name="oct.ges" select="./@oct - 1"/>
+                    <xsl:apply-templates select="node() | @*" mode="#current"/>
+                </xsl:copy>
+            </xsl:when>
+            
             <xsl:otherwise>
                 <xsl:copy>
+                  <!-- to do: pname.ges ergänzen und ggf. oct verändern-->
                     <xsl:variable name="this" select="." as="node()"/>
                     
                     <xsl:variable name="diat.pitches" select="('c', 'd', 'e', 'f', 'g', 'a', 'b')"
@@ -76,15 +91,11 @@
                     <xsl:variable name="new.diat" select="(7 + $diat.index + $trans.diat) mod 7"
                         as="xs:integer"/>
                     <xsl:variable name="new.pname"
-                        select="
-                        $diat.pitches[if ($new.diat = 0) then
-                        (7)
-                        else
-                        ($new.diat)]"
-                        as="xs:string"/>
+                        select=" $diat.pitches[if ($new.diat = 0) then (7) else ($new.diat)]" as="xs:string"/>
                     
                     <xsl:attribute name="pname" select="$new.pname"/>
-                    
+                   
+                   <!--change @accid/@accid.ges-->
                     <xsl:variable name="semi.pitches" select="(1, 3, 5, 6, 8, 10, 12)" as="xs:integer+"/>
                     <xsl:variable name="semi.base.value" select="$semi.pitches[$diat.index]" as="xs:integer"/>
                     <xsl:variable name="accid.offset" as="xs:integer">
@@ -133,12 +144,11 @@
                     </xsl:if>
                     
                     <!-- debug -->
-                    <!--<xsl:message select="'transposing ' || $this/@xml:id || ' from ' || $this/@pname || $this/@accid || $this/@accid.ges || ' to ' || $new.pname || $new.accid || ' (trans.diat:' || $trans.diat || ', trans.semi:' || $trans.semi || ')'"/>-->
+                    <xsl:message select="'transposing ' || $this/@xml:id || ' from ' || $this/@pname || $this/@accid || $this/@accid.ges || ' to ' || $new.pname || $new.accid || ' (trans.diat:' || $trans.diat || ', trans.semi:' || $trans.semi || ')'"/>
                     
-                    <!-- todo: if time permits, we should adjust @oct and @oct.ges as well… -->
+                
+                    <xsl:apply-templates select="node() | (@* except (@pname, @accid, @accid.ges))" mode="#current"/>
                     
-                    <xsl:apply-templates select="node() | (@* except (@pname, @accid, @accid.ges))"
-                        mode="#current"/>
                 </xsl:copy>        
             </xsl:otherwise>
         </xsl:choose>
