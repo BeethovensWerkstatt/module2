@@ -81,10 +81,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Quarter-tone flat.</a:documentation>
          <value>fd</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Three quarter-tones flat.</a:documentation>
-         <value>nf</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Natural + flat; used to cancel preceding double flat.</a:documentation>
-         <value>ns</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Natural + sharp; used to cancel preceding double sharp.</a:documentation>
       </choice>
    </define>
    <define name="mei_data.ARTICULATION">
