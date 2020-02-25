@@ -52,7 +52,7 @@
                 
                 <moduleRef key="MEI"/>
                 <moduleRef key="MEI.analytical"/>
-                <moduleRef key="MEI.cmn" except="beamSpan beatRpt bend bracketSpan halfmRpt meterSig meterSigGrp mRpt mRpt2 mSpace multiRpt tupletSpan"/>
+                <moduleRef key="MEI.cmn" except="beamSpan beatRpt bend bracketSpan halfmRpt meterSig meterSigGrp mRpt mRpt2 mSpace multiRpt tupletSpan bTrem"/>
                 <moduleRef key="MEI.cmnOrnaments"/>
                 <moduleRef key="MEI.frbr"/>
                 <moduleRef key="MEI.gestural"/>
@@ -292,8 +292,8 @@
                     <constraintSpec ident="check_reh" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:reh">
-                                <sch:assert test="not(@label)">
-                                    reh is not allowed to have @label
+                                <sch:assert test="not(@label) and @tstamp and not(@endid) and not(@startid)">
+                                    reh should only contain a tstamp and is not allowed to have @label
                                 </sch:assert>
                             </sch:rule>
                         </constraint>
