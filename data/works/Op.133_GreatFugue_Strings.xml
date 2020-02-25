@@ -221,6 +221,15 @@
         </changeDesc>
         <date isodate="2019-12-12"/>
        </change>
+      <change n="16">
+        <respStmt>
+          <persName>Anes Seipelt</persName>
+        </respStmt>
+        <changeDesc>
+          <p n="1">changed tempo into dir-elements</p>
+        </changeDesc>
+        <date isodate="2020-2-25"/>
+      </change>
     </revisionDesc>
   </meiHead>
   <music meiversion="4.0.0">
@@ -294,8 +303,8 @@
               </staff>
               <dynam xml:id="x6ab7a65a-31d8-4648-9d6a-1028f8b2c7dc" tstamp="1" place="below"
                 staff="1">f</dynam>
-              <tempo xml:id="x72791868-2b54-4a6b-a5f6-d9918f2c0aca" tstamp="1" place="above"
-                staff="1">OVERTURA. Allegro.</tempo>
+              <dir xml:id="x72791868-2b54-4a6b-a5f6-d9918f2c0aca" tstamp="1" place="above"
+                staff="1">OVERTURA. Allegro.</dir>
               <dynam xml:id="x148e5d84-634d-4339-991c-ba43fa0d9924" tstamp="1" place="below"
                 staff="2">f</dynam>
               <dynam xml:id="x3c67d46e-4270-4691-bed8-c4206b0827df" tstamp="1" place="below"
@@ -1081,8 +1090,8 @@
                   <mRest xml:id="x92581642-a969-432f-bdfd-d74fcdef01a7" dur="2"/>
                 </layer>
               </staff>
-              <tempo xml:id="x34d4b230-c611-46a3-94e9-3a52cfa96a0e" tstamp="1" place="above"
-                staff="1">Meno mosso e moderato.</tempo>
+              <dir xml:id="x34d4b230-c611-46a3-94e9-3a52cfa96a0e" tstamp="1" place="above"
+                staff="1">Meno mosso e moderato.</dir>
               <dynam xml:id="x022d34d9-f4e0-4557-9e13-a14914ad10b9" tstamp="2" place="below"
                 staff="1">p</dynam>
               <!--  EN: In OA fehlt ein Bogen. -->
@@ -1468,8 +1477,8 @@
                   <mRest xml:id="xc9f238a3-0a0e-4fa3-bc98-adee59423621" dur="1"/>
                 </layer>
               </staff>
-              <tempo xml:id="xa0aca074-9a52-4038-bc5d-b6810495ab16" tstamp="1" place="above"
-                staff="1">Allegro</tempo>
+              <dir xml:id="xa0aca074-9a52-4038-bc5d-b6810495ab16" tstamp="1" place="above"
+                staff="1">Allegro</dir>
               <dynam xml:id="x9c5e35be-dc9e-433c-8e65-8ed0ca7bf269" tstamp="2" place="below"
                 staff="1"> pp </dynam>
               <slur xml:id="x9527b2df-0ff9-4caa-ba11-12d8c57b978c"
@@ -18435,8 +18444,8 @@
                   <mRest xml:id="x6ba69247-90bf-4e1e-afd7-6cf1767d92ca" dur="2"/>
                 </layer>
               </staff>
-              <tempo xml:id="xa54c4495-d0b1-47d5-95e0-3f240deecd59" tstamp="1" place="above"
-                staff="1">Meno mosso e moderato.</tempo>
+              <dir xml:id="xa54c4495-d0b1-47d5-95e0-3f240deecd59" tstamp="1" place="above"
+                staff="1">Meno mosso e moderato.</dir>
               <dynam xml:id="x9dd32a55-6328-4297-9d28-9fcfd3074d83" tstamp="1" place="below"
                 staff="1"> pp </dynam>
               <slur xml:id="xc8c601c6-7fb7-4ea2-91cd-1af22ef94226"
@@ -24362,8 +24371,8 @@
               </staff>
               <dynam xml:id="xb2b20827-02de-4559-8104-80d387477a0b" tstamp="1" place="below"
                 staff="1"> ff </dynam>
-              <tempo xml:id="x4c938f07-584e-4081-bbd6-17294b6c1701" tstamp="1" place="above"
-                staff="1">Allo molto e con Brio.</tempo>
+              <dir xml:id="x4c938f07-584e-4081-bbd6-17294b6c1701" tstamp="1" place="above"
+                staff="1">Allo molto e con Brio.</dir>
               <dynam xml:id="xd418802c-bec6-4178-8347-483bc31940ad" tstamp="1" place="below"
                 staff="2"> ff </dynam>
               <dynam xml:id="x01e1e7b5-e4cc-494e-a319-87c845a8ec1d" tstamp="1" place="below"
@@ -36116,8 +36125,8 @@
                   <rest xml:id="x604a093d-b1ab-41a4-b1b0-c34062272331" dur="4"/>
                 </layer>
               </staff>
-              <tempo xml:id="x98ddbeb2-987b-425d-be44-648d6c5c472f" tstamp="1" place="above"
-                staff="1">Meno mosso e moderato.</tempo>
+              <dir xml:id="x98ddbeb2-987b-425d-be44-648d6c5c472f" tstamp="1" place="above"
+                staff="1">Meno mosso e moderato.</dir>
               <slur xml:id="x71f2766d-d231-4939-bbd5-75dda30d75bd"
                 startid="#x9843a989-7e55-4bcf-a8be-0462eb9bd305"
                 endid="#x812741be-a091-4f5f-abe9-52c415007ccf" staff="2"/>
@@ -38259,8 +38268,8 @@
               </staff>
               <dynam xml:id="x76f14d2d-80b2-4707-87a2-00b769d62281" tstamp="1" place="below"
                 staff="1"> fp </dynam>
-              <tempo xml:id="x590b0c7c-1ddd-4d29-95bd-3572c87497d3" tstamp="1" place="above"
-                staff="1">Allegro molto e con brio.</tempo>
+              <dir xml:id="x590b0c7c-1ddd-4d29-95bd-3572c87497d3" tstamp="1" place="above"
+                staff="1">Allegro molto e con brio.</dir>
               <dynam xml:id="x48f73c2b-a1a4-495e-91ce-329a6bf975fd" tstamp="1" place="below"
                 staff="2"> fp </dynam>
               <dynam xml:id="x3bee39f8-3704-4655-be53-68989ca77e1a" tstamp="1" place="below"
@@ -44280,8 +44289,8 @@
                   <rest xml:id="xdb689554-a6ca-4fb0-82ce-2d92253b404c" dur="2"/>
                 </layer>
               </staff>
-              <tempo xml:id="x1b9a27dc-97d2-4549-b33f-19c1cb9c943e" tstamp="3" place="above"
-                staff="1">Allegro</tempo>
+              <dir xml:id="x1b9a27dc-97d2-4549-b33f-19c1cb9c943e" tstamp="3" place="above"
+                staff="1">Allegro</dir>
               <!-- ich habe tstamp falsch codiert? "Allegro" wird immer am Anfang des Taktes gezeigt, sollte aber auf der ersten 16telnote sein -->
               <fermata xml:id="x384a1752-d786-44cc-b720-18f8e96bea50" staff="1"
                 startid="#x47eab17f-d574-4b56-a023-74439e458efe" form="norm"/>
@@ -44440,8 +44449,8 @@
                   <mRest xml:id="xbaef609b-a01e-4cf3-b6d6-b4b8797f798a" dur="2"/>
                 </layer>
               </staff>
-              <tempo xml:id="x8f741fd8-b8ce-4d45-b5b6-a490ad6e14f6" tstamp="1" place="above"
-                staff="1">Meno mosso e moderato.</tempo>
+              <dir xml:id="x8f741fd8-b8ce-4d45-b5b6-a490ad6e14f6" tstamp="1" place="above"
+                staff="1">Meno mosso e moderato.</dir>
               <dynam xml:id="x704d1fcd-0020-4a99-977e-15c628c11cfb" tstamp="1.5" place="below"
                 staff="1"> pp </dynam>
               <slur xml:id="x97b9b191-5799-4477-94d7-f68c049db738"
@@ -44612,8 +44621,8 @@
               </staff>
               <dynam xml:id="x9582e5c4-06f7-4aff-9604-828eb12a8df6" tstamp="1" place="below"
                 staff="1"> ff </dynam>
-              <tempo xml:id="xe85f5707-9095-4422-8e4a-1c0779940782" tstamp="1" place="above"
-                staff="1">Allegro molto e con brio.</tempo>
+              <dir xml:id="xe85f5707-9095-4422-8e4a-1c0779940782" tstamp="1" place="above"
+                staff="1">Allegro molto e con brio.</dir>
               <dynam xml:id="x65a62557-87d8-4360-9f1e-80081410077f" tstamp="1" place="below"
                 staff="2"> ff </dynam>
               <dynam xml:id="x5353f5ef-8fcf-4e77-8216-552c88b100cf" tstamp="1" place="below"

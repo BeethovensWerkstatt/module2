@@ -196,6 +196,15 @@
             </changeDesc>
             <date isodate="2019-10-02"/>
          </change>
+         <change n="15">
+            <respStmt>
+               <persName>Anes Seipelt</persName>
+            </respStmt>
+            <changeDesc>
+               <p n="1">deleted unnecessary, empty tempo-elements</p>
+            </changeDesc>
+            <date isodate="2020-2-25"/>
+         </change>
       </revisionDesc>
    </meiHead>
    <music>
@@ -229,7 +238,6 @@
                            langsamer Bewegung. </dir>
                         <dynam xml:id="x4daafc45-6e57-4d38-a771-74677ed0bf11" 
                            tstamp="1" place="below" staff="1"> p </dynam>
-                        <tempo xml:id="x5fc636a6-78da-44d9-86d7-abcf2d99d6c0" tstamp="1" staff="1"/>
                      </measure>
                      <measure n="1" xml:id="xd4723fe6-ad79-4816-9cf9-7e7ba38de6f7">
                         <staff xml:id="x39438c36-b68e-4b17-8343-37e8812afaae" n="1">
@@ -2030,7 +2038,6 @@
                            langsamer Bewegung. </dir>
                         <dynam xml:id="x95185411-819f-4b9f-9529-d57b60f07994" 
                            tstamp="1" place="below" staff="1"> p </dynam>
-                        <tempo xml:id="x68a31bd2-4888-4041-9197-7e8eeb293df8" tstamp="1" staff="1"/>
                         <tie xml:id="x53adc200-e371-4471-9854-6b16937e82b0" staff="1"
                            startid="#x86dfea45-0838-42a5-ab34-332084e8ff63"
                            endid="#x5ddd5398-e8e3-4568-9f3b-84002ad222aa"/>
@@ -3740,7 +3747,6 @@
                            langsamer Bewegung. </dir>
                         <dynam xml:id="x8bd7a87f-ea18-48a8-8627-588eda6fdea4" 
                            tstamp="1" place="below" staff="1"> p </dynam>
-                        <tempo xml:id="x71673bfc-6c80-46d1-b4f2-3e522d314c4a" tstamp="1" staff="1"/>
                         <tie xml:id="xb0aa40f3-62a5-4bf5-b5fa-fd304f7120f3" staff="1"
                            startid="#xca381acf-5130-4ea9-aee0-cbae6ff62c80"
                            endid="#x8998810e-17d0-49d5-b337-702827301918"/>
@@ -5575,11 +5581,10 @@
                            </layer>
                         </staff>
                         <dir xml:id="x7da9b8ef-5c2b-44d2-a87c-7cfdde683901" tstamp="1" place="above"
-                           staff="1" > Mit innigem andächtigem Gefühl, in ziemlich
-                           langsamer Bewegung. </dir>
+                           staff="1"> Mit innigem andächtigem Gefühl, in ziemlich
+                           langsamer Bewegung.</dir>
                         <dynam xml:id="x01e4e56f-d09f-4b53-a590-757139859d4a" 
                            tstamp="1" place="below" staff="1"> p </dynam>
-                        <tempo xml:id="xb6c1b663-630f-4b09-9309-4be6518ec107" tstamp="1" staff="1"/>
                         <tie xml:id="x17f657e6-7afa-4b18-9c87-75db40a469c1" staff="1"
                            startid="#x65cf1b1a-1ac6-449b-8167-4f584cd8efd4"
                            endid="#xcc7456d3-0564-402a-8bc6-63067e0bd9c1"/>
@@ -7389,11 +7394,10 @@
                            </layer>
                         </staff>
                         <dir xml:id="x83fa428d-9919-41b1-9851-3f80f90e3bd1" tstamp="1" place="above"
-                           staff="1" > Mit innigem andächtigem Gefühl, in ziemlich
-                           langsamer Bewegung. </dir>
+                           staff="1">Mit innigem andächtigem Gefühl, in ziemlich
+                           langsamer Bewegung.</dir>
                         <dynam xml:id="x57147a00-dfa5-4380-8f47-e3a1213cc026" 
                            tstamp="1" place="below" staff="1"> p </dynam>
-                        <tempo xml:id="xd72fd352-0b82-455c-9f97-b4378e64c766" tstamp="1" staff="1"/>
                         <tie xml:id="x0437a78a-629d-4488-a2e2-43658bfec524" staff="1"
                            startid="#x753cc8e7-4406-4775-871a-b9d8ff879a16"
                            endid="#xb121e557-a275-40a4-b269-56808fc58615"/>
@@ -8890,11 +8894,10 @@
                            </layer>
                         </staff>
                         <dir xml:id="x4bcd3035-ca4e-41e1-bcac-1ac54c68c319" tstamp="1" place="above"
-                           staff="1" > Mit innigem andächtigem Gefühl, in ziemlich
-                           langsamer Bewegung. </dir>
+                           staff="1">Mit innigem andächtigem Gefühl, in ziemlich
+                           langsamer Bewegung.</dir>
                         <dynam xml:id="xcebc2303-2505-4f7e-925a-184f92cc1218" 
                            tstamp="1" place="below" staff="1"> p </dynam>
-                        <tempo xml:id="x7f605b2a-87a4-4013-960c-edb81de60167" tstamp="1" staff="1"/>
                         <tie xml:id="x2c9a96f6-cdba-4e13-80fe-af5d9b4b6a4b" staff="1"
                            startid="#xb87cb68e-04e4-40fe-84d5-b32d865bc79d"
                            endid="#x04f8fc72-854b-49d6-b190-e3bd77afc041"/>
@@ -18637,7 +18640,6 @@
                               <rest xml:id="x3f1ad680-b681-477b-95d7-9f8f8c382519" dur="8"/>
                            </layer>
                         </staff>
-                        <tempo xml:id="x6d0eac2d-9bb0-4c0c-91e0-91b2a48fdfcc" tstamp="1" staff="1"/>
                      </measure>
                      <measure n="1" xml:id="xa984cff5-aab1-4bd7-9c15-bb34f570d75d">
                         <staff xml:id="xf72608e0-e03b-4d6b-a844-a2302781724c" n="1">
@@ -20423,9 +20425,8 @@
                            </layer>
                         </staff>
                         <dir xml:id="xd7bfb6e6-3192-458b-b12a-84ff5eeb944a" tstamp="1" place="above"
-                           staff="1"> Mit innigem andächtigen Gefühl, in ziemlich langsamer
-                           Bewegung. </dir>
-                        <tempo xml:id="xbdb9cdbf-055b-4bdd-a82d-c717c20f8c97" tstamp="1" staff="1"/>
+                           staff="1">Mit innigem andächtigen Gefühl, in ziemlich langsamer
+                           Bewegung.</dir>
                      </measure>
                      <measure n="1" xml:id="x2f971e16-462a-4d5f-9b09-cf4217d23cc2">
                         <staff xml:id="x7e7eb1b2-452d-4ecc-adaf-9c70c9832b3a" n="1">
