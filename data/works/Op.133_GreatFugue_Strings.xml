@@ -26617,33 +26617,6 @@
                   <note xml:id="x7c36ed01-7120-49a0-9473-d9253eb458ab" pname="d" oct="5" dur="2"
                     dots="1" accid="f"/>
                 </layer>
-                <!-- Muss es sein das hier unten?? 
-                         <layer n="2">
-                           <note xml:id="d1e140112" visible="false" pname="e" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140129" visible="false" pname="d" accid="f" oct="5"
-                              dur="16" size="cue" stem.len="0"/>
-                           <note xml:id="d1e140148" visible="false" pname="e" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140165" visible="false" pname="d" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140182" visible="false" pname="e" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140199" visible="false" pname="d" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140217" visible="false" pname="e" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140234" visible="false" pname="d" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140251" visible="false" pname="e" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140268" visible="false" pname="d" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140285" visible="false" pname="c" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140300" visible="false" pname="d" oct="5" dur="16"
-                              size="cue" stem.len="0"/> 
-                        </layer>  -->
               </staff>
               <staff xml:id="xd6fe0169-fb39-4539-9800-79e1054233fb" n="4">
                 <layer xml:id="xf9e38619-0990-4295-8a07-89355df7c9df" n="1">
@@ -44291,7 +44264,6 @@
               </staff>
               <dir xml:id="x1b9a27dc-97d2-4549-b33f-19c1cb9c943e" tstamp="3" place="above"
                 staff="1">Allegro</dir>
-              <!-- ich habe tstamp falsch codiert? "Allegro" wird immer am Anfang des Taktes gezeigt, sollte aber auf der ersten 16telnote sein -->
               <fermata xml:id="x384a1752-d786-44cc-b720-18f8e96bea50" staff="1"
                 startid="#x47eab17f-d574-4b56-a023-74439e458efe" form="norm"/>
               <fermata xml:id="xb32c3272-5ac9-438d-9e9f-4601fafadfa9" staff="2"
@@ -44584,15 +44556,13 @@
             </measure>
           </section>
           <section xml:id="x01d9a29e-a62e-44bd-859f-a4d3661f394c" n="13">
-            <scoreDef xml:id="x67091b88-6505-4695-8704-6927d1d1c474" meter.count="6" meter.unit="8"
-              key.sig="2f" key.mode="major">
+            <scoreDef xml:id="x67091b88-6505-4695-8704-6927d1d1c474" meter.count="6" meter.unit="8">
               <staffGrp xml:id="x486fd106-b0c1-4ab5-88fb-b93e58fcc932" symbol="bracket"
                 bar.thru="true">
                 <staffDef xml:id="x41b432b2-1299-4596-9ad8-01aa7f1c81cd" n="2"/>
                 <staffDef xml:id="x66dfe3f4-0bb6-465e-b1cf-fd76d97678fa" n="3"/>
                 <staffDef xml:id="x9b832762-9fc2-4508-943e-8815dc1318ac" n="4"/>
               </staffGrp>
-              <!-- ich habe hier immer ein Problem mit "key.sig." (siehe oben meine andere Kommentare): Verovio zeigt in diesem Fall die neuen Akzidentien, weil vorher eine andere "key.sig." codiert worden ist! Es sollte aber immer gleich bleiben... -->
             </scoreDef>
             <measure n="662" xml:id="x91387d3a-923a-42c0-8938-8e62f5b978ab">
               <staff xml:id="x8166a35d-2228-46fc-8394-4992cf195154" n="1">
