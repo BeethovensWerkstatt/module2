@@ -93,6 +93,7 @@
                     <xsl:variable name="new.pname"
                         select=" $diat.pitches[if ($new.diat = 0) then (7) else ($new.diat)]" as="xs:string"/>
                     
+                    <!-- todo@agnes: this should be pname.ges instead, as soon as @pname.ges is considered from here on… -->
                     <xsl:attribute name="pname" select="$new.pname"/>
                    
                    <!--change @accid/@accid.ges-->
@@ -146,7 +147,7 @@
                     <!-- debug -->
                     <xsl:message select="'transposing ' || $this/@xml:id || ' from ' || $this/@pname || $this/@accid || $this/@accid.ges || ' to ' || $new.pname || $new.accid || ' (trans.diat:' || $trans.diat || ', trans.semi:' || $trans.semi || ')'"/>
                     
-                
+                    <!-- todo@agnes: don't drop @pname as soon as @pname.ges is considered from here on… -->
                     <xsl:apply-templates select="node() | (@* except (@pname, @accid, @accid.ges))" mode="#current"/>
                     
                 </xsl:copy>        
