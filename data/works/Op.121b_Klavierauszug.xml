@@ -733,7 +733,7 @@
                      <staff xml:id="x5f027b01-5007-40a4-96af-b65f72fbf912" n="7">
                         <layer xml:id="xf545df28-a2cf-4a4a-a4af-0627e5b2edff" n="3">
                            <annot type="sic" resp="#BW" plist="#x0a059b3e-6f6c-49ee-b5a1-c0695bacbbf0">
-                              Wrong duration of the last note, it should be "8" instead of "4".
+                              Wrong duration of the last note, it should be 8 instead of 4.
                            </annot>
                            <space xml:id="xe65b1e1b-a4ee-4b3e-bda2-c89b8de7e95f" dur="2"/>
                            <space xml:id="x64161531-e74f-43e8-a8a0-f62c4f8491f8" dur="4"/>
@@ -2248,7 +2248,7 @@
                      <staff xml:id="x0561d341-2cdf-41e2-ae7f-7f5db865e011" n="6">
                         <layer xml:id="xbc73198f-2c58-4cf6-b099-f37310b6c32e" n="1">
                            <annot type="sic" resp="#BW" plist="#x69d29f3c-4782-4a14-8450-9d102caf9d2f">
-                              First note in the following chord should be "a sharp".
+                              First note in the following chord should be a-sharp.
                            </annot>
                            <chord xml:id="x35670b48-0ef1-4ebc-a50b-2cfcf799011e"
                                   dur="8"
@@ -2515,7 +2515,7 @@
                      <staff xml:id="xddea9489-210f-4212-828f-bea6dec6e018" n="6">
                         <layer xml:id="xd27358c8-e46c-47b8-94af-a86c6856f5a7" n="1">
                            <annot type="sic" resp="#BW" plist="#xdc3ea037-5a6c-4468-8447-4806f3346d47">
-                              First note in the following beam should be "a sharp".
+                              First note in the following beam should be a-sharp.
                            </annot>
                            <beam xml:id="x3669d80b-c9ae-43e4-99ec-55b19e66c7a8">
                               <note xml:id="xdc3ea037-5a6c-4468-8447-4806f3346d47"

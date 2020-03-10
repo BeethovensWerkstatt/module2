@@ -1291,7 +1291,7 @@
                         <staff xml:id="xa7352099-c33e-4fa0-ac00-68e2014523ea" n="1">
                            <layer xml:id="xcf75a8d6-19dc-444a-8cef-ed9d7d56bca0" n="1">
                               <annot type="sic" resp="#BW" plist="#xefa3febd-5acb-4299-a8c6-38d1d02951b3">
-                                 First note in the following beam should be "c sharp".
+                                 First note in the following beam should be c-sharp.
                               </annot>
                               <beam xml:id="xf07ebeaa-bed7-4539-986a-2f8dc511631a">
                                  <note xml:id="xefa3febd-5acb-4299-a8c6-38d1d02951b3" pname="c"
@@ -2295,7 +2295,7 @@
                         <staff xml:id="xbc50a1bb-8633-42a3-8507-ec4f19748156" n="1">
                            <layer xml:id="x58b36c0b-b6e1-42d7-ba75-8645e55fcced" n="1">
                               <annot type="sic" resp="#BW" plist="#xfae0d0e9-bd40-4c2f-ae48-3e389634d2fc">
-                                 Following note should be "c sharp".
+                                 Following note should be c-sharp.
                               </annot>
                               <note xml:id="xfae0d0e9-bd40-4c2f-ae48-3e389634d2fc" pname="c" oct="5"
                                  dur="8" />
@@ -5375,7 +5375,7 @@
                         <staff xml:id="xe347fded-338a-4237-8bbe-ed0ba46ff584" n="1">
                            <layer xml:id="x5916c86a-ad3f-46d3-a49d-34a5941b2528" n="1">
                               <annot type="sic" resp="#BW" plist="#x5ae2f88a-449f-4e83-a648-f93e3276acc0">
-                                 Wrong duration of the third note, it should be "8" instead of "4".
+                                 Wrong duration of the third note, it should be 8 instead of 4.
                               </annot>
                               <note xml:id="xffb43078-655e-48cc-8663-ee0ad8199f01" pname="d" oct="4"
                                  dur="4"  accid.ges="s"/>

@@ -2840,12 +2840,15 @@
                      <measure n="73" xml:id="x0507ee7a-a38b-465a-bc28-27dee1c20bef">
                         <staff xml:id="xb02fa0fb-c248-4361-9869-6ba6814f1cdc" n="1">
                            <layer xml:id="x65e92c3b-df97-495e-a42f-bdf1566e547e" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x0576ad6d-9437-43bf-b09a-df54a05ae69a">
+                                       Following note should be d-flat.
+                                 </annot>
                               <note xml:id="x0576ad6d-9437-43bf-b09a-df54a05ae69a"
                                     pname="d"
                                     oct="6"
                                     dur="2"
                                     dots="1"
-                                    /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                    />
                               <beam xml:id="x84cd1785-93ad-427d-960d-29cb5c58bfc8">
                                  <note xml:id="x826cbc94-406d-46dd-94fb-c6d145efae12"
                                        pname="e"
@@ -7482,13 +7485,16 @@
                      <measure n="42" xml:id="x411b3444-935b-4483-9be6-ba77dfa881f2">
                         <staff xml:id="xfacb84dc-7a76-4c40-a8c2-15504857bf25" n="1">
                            <layer xml:id="x5f953da7-1db9-40a4-a9e1-08ab593e5c7e" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xfe5b1e0a-bafb-4cb0-9cd8-0ca0711c3af1">
+                                       First note in the following beam: natural is missing.
+                                 </annot>
                               <beam xml:id="x43ab5124-e19f-44bb-8b61-2cb29fb2feb7">
                                  <note xml:id="xfe5b1e0a-bafb-4cb0-9cd8-0ca0711c3af1"
                                        pname="b"
                                        oct="4"
                                        dur="8"
                                        
-                                       accid.ges="f"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                       accid.ges="f"/>
                                  <note xml:id="xac671e0b-239e-4f1a-9f0c-7f6d1b2717e2"
                                        pname="d"
                                        oct="5"
@@ -9120,19 +9126,20 @@
                      <measure n="69" xml:id="xd82dc4e5-b893-4702-9b75-624633f47067">
                         <staff xml:id="xa795c704-fead-4cbb-b055-fb09f2b46367" n="1">
                            <layer xml:id="xb1a6a486-6699-472c-9169-4d1786c73cf5" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x8cf8783c-a96a-4f12-9a93-b69b9678e39d #x57e9f6fa-a34f-4b30-9a22-b4da5c6c08a8">
+                                       Wrong pitches of the first and second chord in the following beam, it should be b-flat instead of a.
+                                 </annot>
                               <beam xml:id="xdd77f989-6c45-4486-b63c-678b0ea3cafa">
                                  <chord xml:id="xa1645e39-793f-4ba2-b7aa-745cab049c12"
                                         dur="16"
                                         >
-                                    <note xml:id="x8cf8783c-a96a-4f12-9a93-b69b9678e39d" pname="a" oct="3"/> <!-- Fehler in OA: 
-                                          Tonhöhe müsste b statt a sein -->
+                                    <note xml:id="x8cf8783c-a96a-4f12-9a93-b69b9678e39d" pname="a" oct="3"/>
                                     <note xml:id="xaef24486-9c32-43fb-a8db-b7eb2ada52db" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="x6324e22e-b332-4a34-aa8e-69d2928832d9"
                                         dur="16"
                                         >
-                                       <note xml:id="x57e9f6fa-a34f-4b30-9a22-b4da5c6c08a8" pname="a" oct="3"/> <!-- Fehler in OA: 
-                                          Tonhöhe müsste b statt a sein -->
+                                       <note xml:id="x57e9f6fa-a34f-4b30-9a22-b4da5c6c08a8" pname="a" oct="3"/>
                                     <note xml:id="x97691942-cf21-4cc7-a883-ec1b6a3635a6" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="xe5833c35-3576-4c29-9661-a10f14e135e7"
@@ -9564,6 +9571,9 @@
                      <measure n="72" xml:id="x359bf494-430b-42a4-98e2-100fceb92d9a">
                         <staff xml:id="xe2899c4a-ad84-4e42-8f62-74f615e9e3f5" n="1">
                            <layer xml:id="xd353005f-eabb-4e51-bf47-aab7cfe04d0d" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x5ba40224-5dde-4553-a12b-0957ec91d3a5">
+                                       Second note of the following chord should be e-flat.
+                                 </annot>
                               <beam xml:id="x45626f3f-5972-446c-92d3-9fd29d84ad89">
                                  <chord xml:id="x310159a1-8867-4c28-928b-464016a1cd9f"
                                         dur="16"
@@ -9572,7 +9582,7 @@
                                           pname="b"
                                           oct="3"
                                           accid.ges="f"/>
-                                    <note xml:id="x5ba40224-5dde-4553-a12b-0957ec91d3a5" pname="e" oct="4"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                    <note xml:id="x5ba40224-5dde-4553-a12b-0957ec91d3a5" pname="e" oct="4"/>
                                  </chord>
                                  <chord xml:id="x85c2dde2-e232-4e78-b381-3047465e0349"
                                         dur="16"
@@ -10248,11 +10258,14 @@
                      <measure n="76" xml:id="x662f25de-1313-4a05-968f-f5d2c26d7be5">
                         <staff xml:id="x77cc3e6e-d533-42fc-86e1-07469f369e08" n="1">
                            <layer xml:id="xa4edc223-ee57-42fd-9628-c347f5c5738a" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x516597bd-07d6-40a8-a5bd-fea3f97f3bb2">
+                                       First note of the following chord should be a-flat.
+                                 </annot>
                               <beam xml:id="na21af48e-d5ba-4ad2-90d1-d5ea0b30d656">
                                  <chord xml:id="xc050c425-ee14-416c-90f5-ec1fa870dcee"
                                         dur="16"
                                         >
-                                    <note xml:id="x516597bd-07d6-40a8-a5bd-fea3f97f3bb2" pname="a" oct="3"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt, so auch bis T. 80 -->
+                                    <note xml:id="x516597bd-07d6-40a8-a5bd-fea3f97f3bb2" pname="a" oct="3"/>
                                     <note xml:id="x62b7ff76-72a8-4f61-b780-a1a3994ee269" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="n7515d09a-122b-48ae-b29c-82f859e57743"
@@ -10358,12 +10371,14 @@
                      <measure n="77" xml:id="xf6cf3031-5b11-46fb-a384-1160cf0e1279">
                         <staff xml:id="xf3be4443-adcc-4e7a-a333-eff90669c81b" n="1">
                            <layer xml:id="x60b4ae08-cf2d-4148-9c7e-46a471226775" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x1eb9dcb8-f1bd-44ed-9888-7dafa76c69d3">
+                                       First note of the following chord should be a-flat.
+                                 </annot>
                               <beam xml:id="n0199040c-ed18-470c-b08d-6959fc82c591">
                                  <chord xml:id="xe7d80632-adaf-400f-8bea-38ae572532a7"
                                         dur="16"
                                         >
-                                    <note xml:id="x1eb9dcb8-f1bd-44ed-9888-7dafa76c69d3" pname="a" oct="3"/> <!-- Fehler in OA:
-                                    Erniedrigungszeichen fehlt-->
+                                    <note xml:id="x1eb9dcb8-f1bd-44ed-9888-7dafa76c69d3" pname="a" oct="3"/>
                                     <note xml:id="xb2eb06d5-1168-486d-b7b1-7eaa23ecf6e2" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="nb6821029-12c3-4603-9230-a0a1029678af"
@@ -10473,12 +10488,14 @@
                      <measure n="78" xml:id="x6580d137-0ccb-4033-9b46-1cb59e42e30b">
                         <staff xml:id="x2950b4ff-7288-450e-9f47-d6c3203771c3" n="1">
                            <layer xml:id="x18b4152e-dcdf-4f25-b794-dbba9847110e" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x36358ca8-fca4-45aa-89dc-ee441a39a5d6">
+                                       First note of the following chord should be a-flat.
+                                 </annot>
                               <beam xml:id="nb4978604-da7a-4b8e-b5f8-c19f2077ecb9">
                                  <chord xml:id="x5d00ae21-c625-40a3-a11d-ab27d7a69c2c"
                                         dur="16"
                                         >
-                                       <note xml:id="x36358ca8-fca4-45aa-89dc-ee441a39a5d6" pname="a" oct="3"/> <!-- Fehler in OA:
-                                    Erniedrigungszeichen fehlt-->
+                                       <note xml:id="x36358ca8-fca4-45aa-89dc-ee441a39a5d6" pname="a" oct="3"/>
                                     <note xml:id="x95d18d52-79b3-49c6-bcd0-d14a5105df82" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="nef88da17-3c1d-472c-8eb8-181f1a616868"
@@ -10584,12 +10601,14 @@
                      <measure n="79" xml:id="xca764ea2-1fbd-4352-aacb-1af4ef336440">
                         <staff xml:id="x0d06b149-7a81-4d2b-b7f5-f55133b813e5" n="1">
                            <layer xml:id="x8da132a6-1dbe-4402-a7b2-9ab089269c34" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x07961590-ca5d-47b9-aa64-6eeacb9adecb">
+                                       First note of the following chord should be a-flat.
+                                 </annot>
                               <beam xml:id="xb89bc69f-0560-45ab-9ccd-d06afa2944af">
                                  <chord xml:id="x011d4010-e71e-47d9-99b5-932859523bc9"
                                         dur="16"
                                         >
-                                       <note xml:id="x07961590-ca5d-47b9-aa64-6eeacb9adecb" pname="a" oct="3"/> <!-- Fehler in OA:
-                                    Erniedrigungszeichen fehlt-->
+                                       <note xml:id="x07961590-ca5d-47b9-aa64-6eeacb9adecb" pname="a" oct="3"/>
                                     <note xml:id="xeb5f9a36-cffa-4c92-85c8-cc475d5b128c" pname="f" oct="4"/>
                                  </chord>
                                  <note xml:id="x5ad71027-667d-48cc-902c-9537b5c40abf"
@@ -10699,13 +10718,15 @@
                      <measure n="80" xml:id="x1e3907ee-bd95-453a-9541-8d6d76442777">
                         <staff xml:id="x10b7e955-9739-4897-ab47-0f10d10422ee" n="1">
                            <layer xml:id="xa72da27a-b68b-4075-9b39-e2e34c58bce4" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x99edb815-4ab3-4f01-b31a-716cf79f0b99">
+                                       Following note should be a-flat.
+                                 </annot>
                               <beam xml:id="ndb4ea8ec-fc0f-4afd-b1e2-6ec794ef3938">
                                  <note xml:id="x99edb815-4ab3-4f01-b31a-716cf79f0b99"
                                        pname="a"
                                        oct="4"
                                        dur="16"
-                                 /> <!-- Fehler in OA:
-                                    Erniedrigungszeichen fehlt-->
+                                       />
                                  <note xml:id="n04e29c06-3591-4c16-91d2-08feb53ae240"
                                        pname="a"
                                        oct="4"
@@ -14341,14 +14362,16 @@
                      <measure n="21" xml:id="x26df496e-f0a8-4d64-90fe-393091f98eb6">
                         <staff xml:id="x4267fbd1-0907-4dd1-be46-3070208bd02f" n="1">
                            <layer xml:id="x4f4356e4-2c96-40ea-88c0-3afeab6e5fa2" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xb0fe88b5-314d-40fd-aef1-f8b84d484d8a">
+                                       Following note: natural is missing.
+                                 </annot>
                               <note xml:id="xb0fe88b5-314d-40fd-aef1-f8b84d484d8a"
                                     pname="b"
                                     oct="4"
                                     dur="4"
                                     
                                     accid.ges="f"
-                                    artic="stacciss"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
-                                 
+                                    artic="stacciss">
                               </note>
                               <rest xml:id="xe2161250-4279-43ae-9b01-3fc5014c6c52" dur="4"/>
                               <chord xml:id="xa058c777-1c04-4b07-891f-d0055bc11203"
@@ -16411,12 +16434,15 @@
                      <measure n="71" xml:id="xa9b09b20-1467-43a8-bba6-89f2075b7b2e">
                         <staff xml:id="x8ac3527f-9904-42bb-baf9-61d623873d4b" n="1">
                            <layer xml:id="xc243bc3e-919d-4254-b8b3-9e29969eb2de" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xd91d6f2c-2f5d-4888-9ee0-6f91b3179c8c">
+                                       First note of the following beam should be d-flat.
+                                 </annot>
                               <beam xml:id="xf188d7c2-e402-4de4-b972-14904239a16b">
                                  <note xml:id="xd91d6f2c-2f5d-4888-9ee0-6f91b3179c8c"
                                        pname="d"
                                        oct="4"
                                        dur="16"
-                                       /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                       />
                                  <note xml:id="xf18dcc98-3a4d-4ddb-adc2-c94e8eb8bfde"
                                        pname="d"
                                        oct="4"
@@ -16511,12 +16537,15 @@
                      <measure n="72" xml:id="xb85a4110-2722-40d6-91d1-785886f00096">
                         <staff xml:id="xaec3deb2-3391-45a7-9097-dc55bf9a0a58" n="1">
                            <layer xml:id="xa0ff2b41-694a-4dc6-8df8-d339ba6744c2" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x1e751896-0ce0-4317-a0f0-a916a9914d1f">
+                                       First note of the following beam should be d-flat.
+                                 </annot>
                               <beam xml:id="x3dc1ec14-5291-4c01-b9b3-9808959ddcc7">
                                  <note xml:id="x1e751896-0ce0-4317-a0f0-a916a9914d1f"
                                        pname="d"
                                        oct="4"
                                        dur="16"
-                                       /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                       />
                                  <note xml:id="x94a734df-b225-487f-99d0-5b7d2cdd3091"
                                        pname="d"
                                        oct="4"
@@ -21500,6 +21529,9 @@
                                        dur="8"
                                        />
                               </beam>
+                                 <annot type="sic" resp="#BW" plist="#x34834c28-8dee-4807-8e80-1ea94bf25db5">
+                                       Wrong pitch of the third note in the following beam: it should be g instead of a.
+                                 </annot>
                               <beam xml:id="x68dbbdb2-5e15-4785-acfa-0b0cd5fa884d">
                                  <note xml:id="x7df1d0ed-4af3-46bb-9a3f-61899a45f0d2"
                                        pname="c"
@@ -21515,7 +21547,7 @@
                                        pname="a"
                                        oct="3"
                                        dur="8"
-                                       /> <!-- Fehler in OA: Tonhöhe müsste g statt a lauten -->
+                                       />
                                  <note xml:id="xad0a8d0a-b1fb-427b-8cfe-fd6a61e189a0"
                                        pname="e"
                                        oct="3"
@@ -22215,6 +22247,9 @@
                      <measure n="63" xml:id="xfee43517-cad6-4e3c-b270-5ff9eeb54f5c">
                         <staff xml:id="x185ef9e7-b6a0-4670-81e0-d05489b93202" n="1">
                            <layer xml:id="x23798fb0-7b9a-4b03-a326-e47730a14a3c" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xa2a6df64-3bcf-4fba-bd7a-0dc71b4d5826">
+                                       Second note of the following beam should be e-flat.
+                                 </annot>
                               <beam xml:id="x447297d6-c6cc-4386-b370-baa2b4ad95d0">
                                  <note xml:id="xf1e76336-5be1-4a04-a6fd-9cd64d820472"
                                        pname="e"
@@ -22226,7 +22261,7 @@
                                        pname="e"
                                        oct="4"
                                        dur="8"
-                                       /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                       />
                                  <note xml:id="x69ffd7f2-dcb1-4742-ba8b-ab02328824e0"
                                        pname="e"
                                        oct="4"
@@ -22408,6 +22443,9 @@
                      <measure n="67" xml:id="xc720f8dc-d594-4938-aa2b-79ce39dd8de4">
                         <staff xml:id="x21fa9d86-1bca-4fa0-b575-6bdd81249bb2" n="1">
                            <layer xml:id="x5643c7a2-a55e-40d5-aeb5-65b53ba1ef23" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x1b3b1f9c-40ed-4355-b03d-7633d8df6723">
+                                       Second note of the following beam should be e-flat.
+                                 </annot>
                               <beam xml:id="xa12b1ea0-2d4b-46b5-b8f6-5d5a429156a9">
                                  <note xml:id="x3cce3948-a0f0-4e6d-a138-8ae99c8ceebd"
                                        pname="e"
@@ -22423,7 +22461,7 @@
                                        oct="2"
                                        dur="8"
                                        
-                                       artic="stacc"> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                       artic="stacc">
                                     
                                  </note>
                                  <note xml:id="x8429d4e0-d490-408b-b6c8-b1252b73fca5"
@@ -26165,6 +26203,9 @@
                      <measure n="10" xml:id="xdc4210bd-fbe4-431c-b471-d5ed36b2267f">
                         <staff xml:id="x28fb6a89-2462-4518-8c5f-2a1a70ecd794" n="1">
                            <layer xml:id="x9b25b5be-81e9-4f63-9737-5f8deac6f5b8" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xd0e73614-a01f-420d-ba2f-627aa988aee8">
+                                       Second note: natural is missing.
+                                 </annot>
                               <note xml:id="x23a67def-cc3e-436e-b09a-99c135a9155d"
                                     pname="f"
                                     oct="5"
@@ -26177,7 +26218,7 @@
                                     dur="8"
                                     
                                     accid.ges="f"
-                                    artic="stacc"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                    artic="stacc">
                                  
                               </note>
                               <note xml:id="x67f4603e-5582-418c-99ab-04535716ad89"
@@ -29197,13 +29238,16 @@
                      <measure n="8" xml:id="xc3247231-26d6-42e4-87cd-a837741ec6ff">
                         <staff xml:id="x0032ced8-a3ca-44c8-9693-0bf243d6849a" n="1">
                            <layer xml:id="x1a351d60-3eb4-4f89-8337-85029fb517b8" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x288e70ae-0db0-4ac3-b387-1e37ebaca349">
+                                       Following note: natural is missing.
+                                 </annot>
                               <note xml:id="x288e70ae-0db0-4ac3-b387-1e37ebaca349"
                                     pname="e"
                                     oct="4"
                                     dur="4"
                                     
                                     accid.ges="f"
-                                    artic="stacc"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                    artic="stacc">
                                  
                               </note>
                               <rest xml:id="x9556fd76-828a-4065-9ba8-045ab23910a6" dur="4"/>
@@ -30312,6 +30356,9 @@
                                     artic="stacc">
                                  
                               </note>
+                                 <annot type="sic" resp="#BW" plist="#x9b332a29-dea4-4c52-9e36-bec1ec03b651">
+                                       Second note in the following beam: natural is missing.
+                                 </annot>
                               <beam xml:id="x97a79fb3-c0c9-48ab-bf91-ed86b5113a60">
                                  <note xml:id="x03bd0e1e-f0da-400a-83eb-c092b3c73cb7"
                                        pname="c"
@@ -30323,7 +30370,7 @@
                                        oct="4"
                                        dur="8"
                                        
-                                       accid.ges="f"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                       accid.ges="f"/>
                                  <note xml:id="xda3da910-9c6d-4f6d-bf92-8aa70a54039a"
                                        pname="c"
                                        oct="5"
@@ -30418,14 +30465,17 @@
                      </measure>
                      <measure n="53" xml:id="xdf30c38e-df93-4ace-a67c-30915733ce6f">
                         <staff xml:id="x09d549c3-039f-4ecb-a60b-2b6246160354" n="1">
-                           <layer xml:id="x58c1f87d-6928-4212-a817-58ffd2d686c3" n="1">
+                              <layer xml:id="x58c1f87d-6928-4212-a817-58ffd2d686c3" n="1">
+                                    <annot type="sic" resp="#BW" plist="#x16b23135-fa47-4c43-b027-49fd6b72e865">
+                                    Following note: natural is missing.
+                              </annot>
                               <note xml:id="x16b23135-fa47-4c43-b027-49fd6b72e865"
                                     pname="a"
                                     oct="4"
                                     dur="4"
                                     
                                     accid.ges="f"
-                                    artic="stacc"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                    artic="stacc">
                                  
                               </note>
                               <rest xml:id="xc88ca7c2-5789-48c9-80ff-ff1bea6504fe" dur="4"/>
@@ -30582,14 +30632,16 @@
                      <measure n="58" xml:id="x6663ec92-8408-4372-95de-1bc56938e5fd">
                         <staff xml:id="x77fcb6ba-661f-4cdc-9640-e5f6f3f2eee9" n="1">
                            <layer xml:id="xcc417de9-be65-401a-9329-3256cd675406" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xaf70c727-fa63-4695-b1b8-c8a4f1044efb">
+                                       Following note: natural is missing.
+                                 </annot>
                               <note xml:id="xaf70c727-fa63-4695-b1b8-c8a4f1044efb"
                                     pname="a"
                                     oct="4"
                                     dur="4"
                                     
                                     accid.ges="f"
-                                    artic="stacc"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
-                                 
+                                    artic="stacc">
                               </note>
                               <beam xml:id="x661d3e18-ffdc-4646-b014-e5a135dba937">
                                  <note xml:id="x3028a93d-7d39-43e3-a9da-3ae2166f5959"
@@ -30653,12 +30705,15 @@
                      <measure n="60" xml:id="xb4a09d07-7e1a-43be-92bc-fc39edfcff9e">
                         <staff xml:id="x33b68fbd-f0a1-4ac1-9fd8-5f7d6392eca2" n="1">
                            <layer xml:id="x43823721-2e1e-41fc-bc86-3fe9f426fe59" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xe34cc933-96cb-4191-81ae-0c15f52f0388">
+                                       Following note: natural is missing.
+                                 </annot>
                               <note xml:id="xe34cc933-96cb-4191-81ae-0c15f52f0388"
                                     pname="a"
                                     oct="4"
                                     dur="4"
                                     
-                                    accid.ges="f"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                    accid.ges="f"/>
                               <rest xml:id="x760ce045-87ec-46bf-95bb-0b802177ad11" dur="4"/>
                               <rest xml:id="xf170446a-8b1b-41af-aafb-cd4f54c24082" dur="4"/>
                            </layer>
@@ -30923,12 +30978,15 @@
                      <measure n="74" xml:id="x0cc96869-3bd6-43de-a2ba-a49851167d54">
                         <staff xml:id="x37ac9667-f628-4e8a-848f-e98c739921c3" n="1">
                            <layer xml:id="xc157f331-035c-4d87-8ac5-4735e81d2268" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x8331f29a-60d4-4706-a7b5-d2d1f6db9ca2">
+                                       Following note: natural is missing.
+                                 </annot>
                               <note xml:id="x8331f29a-60d4-4706-a7b5-d2d1f6db9ca2"
                                     pname="g"
                                     oct="4"
                                     dur="2"
                                     
-                                    accid.ges="f"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                    accid.ges="f"/>
                               <note xml:id="xfe7f2824-057a-4ce6-bfd7-9709bda16b08"
                                     pname="a"
                                     oct="4"
@@ -33108,9 +33166,12 @@
                   <section xml:id="x15be20d2-75be-4ffd-bd81-47264322cefd"
                            n="2"
                            label="Maggiore">
+                        <annot type="sic" resp="#BW" plist="#xa303225c-be1c-4dfb-a6d9-87b02e0e9848">
+                              Metercount and meterunit are missing in the original edition. Corrected here.
+                        </annot> <!-- anders formulieren? -->
                      <scoreDef xml:id="xa303225c-be1c-4dfb-a6d9-87b02e0e9848"
                                key.sig="5f"
-                               key.mode="major" keysig.showchange="true" meter.count="3" meter.unit="4"> <!-- Fehler in OA: Taktart-Angabe 3/4 fehlt, hier hinzugefügt -->
+                               key.mode="major" keysig.showchange="true" meter.count="3" meter.unit="4">
                         <staffGrp xml:id="x753ede68-1c0e-44fc-afde-3508f6804516">
                               <staffDef xml:id="x38714861-eca9-4ec5-9b71-3833331ecdf2" n="1" 
                                     />

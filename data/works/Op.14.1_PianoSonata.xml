@@ -18317,12 +18317,15 @@
                                        da Punktierung im 2. layer fehlt -->
                         </layer>
                         <layer xml:id="x2d12b12a-6b4e-420f-8816-9ea321adcd40" n="2">
+                              <annot type="sic" resp="#BW" plist="#x9ded0855-cdd3-4dd1-aeac-40e8d435c72e">
+                                    Following note should have a dot.
+                              </annot>
                            <note xml:id="x9ded0855-cdd3-4dd1-aeac-40e8d435c72e"
                                  pname="c"
                                  oct="3"
                                  dur="2"
                                  />
-                              <space dur="4"/> <!-- Fehler in OA: Punktierung fehlt -->
+                              <space xml:id="xb0f6488d-5f99-4bed-a1cb-b366ece28bb6" dur="4"/>
                         </layer>
                      </staff>
                      <slur xml:id="xcf867b96-9b53-41be-bba9-185a4e2cb459"
@@ -23078,7 +23081,10 @@
                            right="rptend">
                      <staff xml:id="x0436cc0c-bc4f-47a6-8fff-99f368caaf1f" n="1">
                         <layer xml:id="xbc49352e-d860-4c02-82b2-f7ef0fa68b0a" n="1">
-                           <space xml:id="x5edabc1c-7e3f-4f9f-902d-57dca4581ffc" dur="2" dots="1"/> <!-- Fehler in OA, müsste mRest sein -->
+                              <annot type="sic" resp="#BW" plist="#x5edabc1c-7e3f-4f9f-902d-57dca4581ffc">
+                                    mRest is missing.
+                              </annot>
+                           <space xml:id="x5edabc1c-7e3f-4f9f-902d-57dca4581ffc" dur="2" dots="1"/>
                         </layer>
                      </staff>
                      <staff xml:id="x27caafb4-2e1f-47e3-be1a-b8a5eea5b71d" n="2">
@@ -24253,8 +24259,10 @@
                               tstamp="1">D.C. Allto e poi la Coda</dir>
                   </measure>
                </section>
-               <section xml:id="x92ad47f4-cd67-4321-bc26-39396a17fc5a" n="3" label="Coda"> <!-- Fehler in OA: Tonartwechsel nicht angezeigt. 
-                     In Codierung hinzugefügt. -->
+               <section xml:id="x92ad47f4-cd67-4321-bc26-39396a17fc5a" n="3" label="Coda">
+                     <annot type="sic" resp="#BW" plist="#x69231d57-46fd-48d4-87c5-a409e92f18eb">
+                           Key signature is missing in the original edition. Corrected here.
+                     </annot> <!-- anders formulieren? -->
                      <scoreDef xml:id="x69231d57-46fd-48d4-87c5-a409e92f18eb"
                            key.sig="1s" key.mode="minor" keysig.showchange="true"/>
                      <measure xml:id="x9b4e826f-a0a1-4855-8c3b-6dc89d541e38" n="101">
@@ -24278,7 +24286,7 @@
                               <note xml:id="x686cb9f8-acd3-4bd0-bafe-e28ef5f536b1"
                                  pname="c"
                                  oct="3" dur="2" dots="1" 
-                                 stem.dir="down"/> <!-- stimDir hinzugefügt, um Stimmführung zu verdeutlichen -->
+                                 stem.dir="down"/> <!-- stemDir hinzugefügt, um Stimmführung zu verdeutlichen -->
                         </layer>
                            <layer xml:id="x2e0c7b7c-0888-479b-976d-accc19fbc5ef" n="2">
                                  <note xml:id="xaef574be-d61b-44de-81a0-b9e13c786f9f"
