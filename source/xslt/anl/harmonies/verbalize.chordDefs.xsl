@@ -57,11 +57,11 @@
                 </xsl:if>
                 <!--no third but perfect fifth-->
                 <xsl:if test="not(mei:chordMember[@temp:cost='1']) and mei:chordMember[@inth='P5']">
-                    <rend xmlns="http://www.music-encoding.org/ns/mei" type="noThird">no3</rend>
+                    <rend xmlns="http://www.music-encoding.org/ns/mei" type="noThird" fontsize="small">no3</rend>
                 </xsl:if>
                 <!--diminished chord-->
                 <xsl:if test="mei:chordMember[@inth = 'm3'] and mei:chordMember[@inth = 'd5']">
-                    <rend xmlns="http://www.music-encoding.org/ns/mei" type="dim">dim</rend>
+                    <rend xmlns="http://www.music-encoding.org/ns/mei" type="dim" fontsize="small">dim</rend>
                 </xsl:if>
                 <!--augmented chord-->
                 <xsl:if test="mei:chordMember[@inth = 'M3'] and mei:chordMember[@inth = 'A5']">
@@ -70,7 +70,7 @@
                 
                 
                 <!--7th chord-->
-                <xsl:if test="mei:chordMember[@inth='m7' and not(@type='78ret')] and not(mei:chordMember[@temp:cost='4'])">
+                <xsl:if test="mei:chordMember[@inth='m7' and not(@type='78ret')] and not(mei:chordMember[@temp:cost='4']) and not(mei:chordMember[@inth='d5'])">
                     <rend xmlns="http://www.music-encoding.org/ns/mei" rend="sup" type="ct7">7</rend>
                 </xsl:if>
                 <!--major-7th chord-->
