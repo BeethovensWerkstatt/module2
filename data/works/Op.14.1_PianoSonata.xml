@@ -205,6 +205,15 @@
                   </changeDesc>
                   <date isodate="2019-07-17"/>
             </change>
+            <change n="17">
+                  <respStmt>
+                        <persName auth.uri="https://github.com/" codedval="Susanne Cox">Susanne Cox</persName>
+                  </respStmt>
+                  <changeDesc>
+                        <p>Fehler der OA als annot eingearbeitet.</p>
+                  </changeDesc>
+                  <date isodate="2020-03-11"/>
+            </change>
       </revisionDesc>
    </meiHead>
    <music>
@@ -2849,6 +2858,9 @@
                                  dur="2"
                                  
                                  accid.ges="s"/>
+                              <annot type="sic" resp="#BW" plist="#x0400a24f-2a03-4e9e-acbf-58c536c0be81">
+                                    Rest dur=2 is missing.
+                              </annot>
                            <space xml:id="x0400a24f-2a03-4e9e-acbf-58c536c0be81" dur="2"/> <!-- Fehler in OA: Halbe Pause fehlt, 
                                  deshalb stemDirs hinzugefügt -->
                         </layer>
@@ -13410,6 +13422,9 @@
                                        dur="2"
                                        
                                        accid.ges="s"/>
+                                 <annot type="sic" resp="#BW" plist="#x017a2f3f-5234-49c9-9e18-4f9903cb1fd0">
+                                       Rest dur=2 is missing.
+                                 </annot>
                                  <space xml:id="x017a2f3f-5234-49c9-9e18-4f9903cb1fd0" dur="2"/> <!-- Fehler in OA: halbe Pause fehlt, deshalb stem.dirs hinzugefügt -->
                            </layer>
                      </staff>
@@ -29341,6 +29356,9 @@
                                     dur="16"
                                     />
                            </beam>
+                              <annot type="sic" resp="#BW" plist="#xd5c69391-1407-4efa-9162-9ee32d5cc82b">
+                                    Last note in the following beam: natural is missing.
+                              </annot>
                            <beam xml:id="x7ab6875e-d3df-4fdb-97c6-0ede37b74051">
                               <note xml:id="xfa1f7208-647c-4ff1-96a8-3ca21a52219c"
                                     pname="c"
@@ -29362,7 +29380,7 @@
                                     pname="g" accid.ges="s"
                                     oct="4"
                                     dur="16"
-                              /> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                              />
                            </beam>
                         </layer>
                         <layer xml:id="x986fb8f9-e55e-4179-998f-f87755f7c6b2" n="2">
@@ -29388,12 +29406,15 @@
                                  oct="2"
                                  dur="4"
                                  />
+                              <annot type="sic" resp="#BW" plist="#x2d884363-945c-47d2-bc51-c2d9f4a424c0">
+                                    Following note: natural is missing.
+                              </annot>
                            <note xml:id="x2d884363-945c-47d2-bc51-c2d9f4a424c0"
-                                 pname="d"
+                                 pname="d" accid.ges="s"
                                  oct="3"
                                  dur="2"
                                  dots="1"
-                                 /> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                 />
                         </layer>
                         <layer xml:id="x4c7ede48-c21f-4d49-b8b6-dd0de9302157" n="2">
                            <note xml:id="x4eef1beb-9cb2-4028-86cf-d43ac1195984"
@@ -29548,6 +29569,9 @@
                                  oct="4"
                                  dur="2"
                                  />
+                              <annot type="sic" resp="#BW" plist="#x50fcd027-b850-4387-a805-e3e9a4a1fdc9">
+                                    Last note in the following beam: natural is missing.
+                              </annot>
                            <beam xml:id="x4fc01a2b-f543-425d-8125-f4773d8a0010">
                               <note xml:id="xbbd04b93-901c-45fd-9ef5-a6e98df66347"
                                     pname="g"
@@ -29570,7 +29594,7 @@
                                     pname="d" accid.ges="s"
                                     oct="4"
                                     dur="16"
-                              /> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                              />
                            </beam>
                            <beam xml:id="xcb86b234-7447-4a8a-8c3d-59df65c649d5">
                               <note xml:id="xc2c74839-6938-40a3-ba43-04e1812f1b09"
@@ -32978,12 +33002,15 @@
                            </chord>
                            <rest xml:id="x3e3d0983-353e-43f6-b64e-a95c3fe53e59" dur="4"/>
                            <rest xml:id="xc9a78d87-dc60-4784-8f0a-9af4b62ec94b" dur="4"/>
+                              <annot type="sic" resp="#BW" plist="#x75a3c698-49b8-43f8-95d4-4bfcd99736e8">
+                                    First note of the following chord should be g-sharp.
+                              </annot>
                            <chord xml:id="x59bd6027-edd2-4944-8791-783bdc4e3ac1"
                                   dur="4"
                                   >
                               <note xml:id="x75a3c698-49b8-43f8-95d4-4bfcd99736e8"
                                     pname="g"
-                                    oct="1"/> <!-- Fehler OA: accid=s fehlt -->
+                                    oct="1"/>
                               <note xml:id="xf256312f-e65d-4281-a1cf-416ed1b384fd"
                                     pname="g"
                                     accid="s"
@@ -35837,11 +35864,14 @@
                         </layer>
                         <layer xml:id="x8679e60b-c854-4ad1-bff5-a914a5cda594" n="2">
                            <space xml:id="x9e17190e-968e-41c4-a495-313db84f583a" dur="2"/>
+                              <annot type="sic" resp="#BW" plist="#x74b28ae3-911c-4083-a9f6-06cc9970a60f">
+                                    Following note: natural is missing.
+                              </annot>
                            <note xml:id="x74b28ae3-911c-4083-a9f6-06cc9970a60f"
-                                 pname="d"
+                                 pname="d" accid.ges="s"
                                  oct="4"
                                  dur="2"
-                                 /> <!-- Fehler OA: accid=n fehlt -->
+                                 />
                         </layer>
                      </staff>
                      <staff xml:id="x02d0037e-e347-4306-be38-a2ca2564a161" n="2">
@@ -35979,6 +36009,9 @@
                   <measure n="106" xml:id="x9f908045-10b4-4412-9293-30a1dc3fc06a">
                      <staff xml:id="xa25dee41-23a1-4ce2-bcd3-74de88679d16" n="1">
                         <layer xml:id="xe2c18ffa-73e5-4957-adec-c81d437001d7" n="1">
+                              <annot type="sic" resp="#BW" plist="#x125a14b6-c5d6-4903-9b94-e5a7b46e98f6">
+                                    Third note of the following chord: natural is missing.
+                              </annot>
                            <chord xml:id="x3362d13e-0e16-4fe7-a8e3-5c5bd920a476"
                                   dur="2"
                                   >
@@ -35990,7 +36023,7 @@
                               <note xml:id="x125a14b6-c5d6-4903-9b94-e5a7b46e98f6"
                                     pname="f"
                                     accid.ges="s"
-                                    oct="4"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                    oct="4"/>
                            </chord>
                            <chord xml:id="x8e821f02-45a0-41ad-90e7-0a66e92ba2c9"
                                   dur="2"
@@ -36007,16 +36040,19 @@
                      <staff xml:id="x342f3801-3b3e-43b6-a48f-c8f7d20711cc" n="2">
                         <layer xml:id="x27919ebd-d438-4ae0-a241-7029b9eea8d9" n="1">
                            <rest xml:id="x04aea948-12f1-4c80-a52c-ac769f9874bf" dur="4"/>
+                              <annot type="sic" resp="#BW" plist="#x8f0623c9-fc1a-43eb-bc03-f9476bccf510 #x3582b31a-fe20-4061-bb6b-a1c0e6db3171">
+                                    Notes of the following chord: naturals are missing.
+                              </annot>
                            <chord xml:id="x1180327a-a904-4eb9-8df9-067802d30c96"
                                   dur="4"
                                   >
                               
                               <note xml:id="x8f0623c9-fc1a-43eb-bc03-f9476bccf510"
-                                    pname="f"
+                                    pname="f" accid.ges="s"
                                     oct="2"/>
                               <note xml:id="x3582b31a-fe20-4061-bb6b-a1c0e6db3171"
-                                    pname="f"
-                                    oct="3"/> <!-- Fehler OA: bei beiden Noten fehlt accid=n -->
+                                    pname="f" accid.ges="s"
+                                    oct="3"/>
                            </chord>
                            <rest xml:id="xaa084538-55a3-404e-8e4f-d21eb66baa1b" dur="4"/>
                            <chord xml:id="x045c6694-e7a7-4ab2-97b1-4a7501eac15e"
@@ -36025,12 +36061,12 @@
                               
                               <note xml:id="xe4db34fa-d9f0-46d2-ba6d-5c7bffd08378"
                                     pname="f"
-                                    oct="2"
-                                    accid.ges="n"/>
+                                    oct="2" accid.ges="s"
+                                    />
                               <note xml:id="xd9b6c2ec-4318-4588-a588-66934330f737"
                                     pname="f"
-                                    oct="3"
-                                    accid.ges="n"/>
+                                    oct="3" accid.ges="s"
+                                    />
                            </chord>
                         </layer>
                      </staff>
@@ -38962,7 +38998,10 @@
                               <note xml:id="xa6bce6fb-2a72-4022-9317-02c9af5a5e54" pname="e" oct="5"/>
                            </chord>
                            <rest xml:id="xf63c86d1-8dac-496d-9320-adf59667f055" dur="4"/>
-                           <rest xml:id="x5346e961-12f2-4718-ae68-efbf702f007e" dur="2"/> <!-- Fehler in OA: Pause zu viel -->
+                              <annot type="sic" resp="#BW" plist="#x5346e961-12f2-4718-ae68-efbf702f007e">
+                                    The following rest is incorrect.
+                              </annot>
+                           <rest xml:id="x5346e961-12f2-4718-ae68-efbf702f007e" dur="2"/>
                         </layer>
                      </staff>
                      <staff xml:id="x4d6cef5f-e2f8-4782-ab4c-52c48dd3f16e" n="2">
@@ -38974,7 +39013,10 @@
                               <note xml:id="x6d2452c0-96b7-4c5b-95f9-eaf4bdbd91ce" pname="e" oct="3"/>
                            </chord>
                            <rest xml:id="x9c68b926-8581-4e15-9143-c0f65d4984ed" dur="4"/>
-                              <rest xml:id="x17b7e3f0-c035-4319-bab9-c7d6a8c1f925" dur="2"/> <!-- Fehler in OA: Pause zu viel -->
+                              <annot type="sic" resp="#BW" plist="#x17b7e3f0-c035-4319-bab9-c7d6a8c1f925">
+                                    The following rest is incorrect.
+                              </annot>
+                              <rest xml:id="x17b7e3f0-c035-4319-bab9-c7d6a8c1f925" dur="2"/>
                         </layer>
                      </staff>
                   </measure>

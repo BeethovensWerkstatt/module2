@@ -9183,7 +9183,10 @@
                                  />
                            <rest xml:id="xbecb33a7-0e13-4fae-bfa3-993133fd0d65"
                                  dur="8"/>
-                           <space xml:id="x68c3aee6-007e-45be-9546-c3812df6be00" dur="4"/> <!-- Fehler in OA: Viertelpause fehlt -->
+                           <annot type="sic" resp="#BW" plist="#x68c3aee6-007e-45be-9546-c3812df6be00">
+                              Rest dur=4 is missing.
+                           </annot>
+                           <space xml:id="x68c3aee6-007e-45be-9546-c3812df6be00" dur="4"/>
                            <beam xml:id="xd19dc1ea-d9a1-4d86-9d73-74ce985d10c3">
                               <chord xml:id="x1ff72fcd-7774-4443-ba13-ff2059f5e9ff"
                                      dur="8"
