@@ -244,7 +244,7 @@
         </xsl:variable>
         
         <xsl:copy>
-            <xsl:apply-templates select="node() | @*" mode="#current">
+            <xsl:apply-templates select="$resolved.transposing.instruments/node() | $resolved.transposing.instruments/@*" mode="#current">
                 <xsl:with-param name="chordDefs" select="$harms.all.chordMembers" tunnel="yes" as="node()*"/>                    
             </xsl:apply-templates>
             <xsl:sequence select="$resolved.duplicate.harms"/>
