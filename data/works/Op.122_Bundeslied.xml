@@ -111,6 +111,7 @@
                <p n="22">Smaller corrections.</p>
                <p n="23">Smaller corrections and annotations</p>
                <p n="24">Small correction in Sologesang II m. 175, 196 and Sologesang I m. 196.</p>
+               <p n="25">Added the annot-Elements to the code.</p>
             </changeDesc>
             <date isodate="2019-03-06"/>
          </change>
@@ -32767,6 +32768,7 @@
                                     oct="5"
                                     dur="4"
                                     />
+                              <annot type="sic" resp="#BW" plist="#x3fbcf7f1-d2ae-4a76-ad64-fb426e386fbd">Possibly a mistake of the last note "f" which is an "e" in the autograph. The new NGA also writes "e" following the autograph.</annot>
                               <note xml:id="x3fbcf7f1-d2ae-4a76-ad64-fb426e386fbd"
                                     pname="f"
                                     oct="5"
@@ -33703,6 +33705,7 @@
                                     oct="5"
                                     dur="4"
                                     />
+                              <annot type="sic" resp="#BW" plist="#x9e17ad03-691f-4013-b777-75e02047b4a1">Possibly a mistake of the last note "f" which is an "e" in the autograph. The new NGA also writes "e" following the autograph.</annot>
                               <note xml:id="x9e17ad03-691f-4013-b777-75e02047b4a1"
                                     pname="f"
                                     oct="5"
@@ -34639,6 +34642,7 @@
                                     oct="5"
                                     dur="4"
                                     />
+                              <annot type="sic" resp="#BW" plist="#x51307a02-86fa-4afa-9010-e72b831298ea">Possibly a mistake of the last note "f" which is an "e" in the autograph. The new NGA also writes "e" following the autograph.</annot>
                               <note xml:id="x51307a02-86fa-4afa-9010-e72b831298ea"
                                     pname="f"
                                     oct="5"
@@ -35575,6 +35579,7 @@
                                     oct="5"
                                     dur="4"
                                     />
+                              <annot type="sic" resp="#BW" plist="#x0d7c537c-c5c1-424d-b01f-2ec65d9547d4">Possibly a mistake of the last note "f" which is an "e" in the autograph. The new NGA also writes "e" following the autograph.</annot>
                               <note xml:id="x0d7c537c-c5c1-424d-b01f-2ec65d9547d4"
                                     pname="f"
                                     oct="5"
@@ -47134,6 +47139,7 @@
                                  </verse>
                               </note>
                               <!-- Die folgende Note ist von Rhythmus wegen des Dots zwar eindeutig falsch, steht aber so in der OA -->
+                              <annot type="sic" resp="#BW" plist="#xc04202dc-0d77-45e8-a17e-2dccb4889960">Duration of the note is a quarter note with dot by mistake instead of a simple quarter note.</annot>
                               <note xml:id="xc04202dc-0d77-45e8-a17e-2dccb4889960"
                                     pname="b"
                                     oct="4"
