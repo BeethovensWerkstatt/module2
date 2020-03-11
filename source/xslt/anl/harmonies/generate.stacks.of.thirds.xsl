@@ -63,19 +63,18 @@
             <xsl:variable name="ct1" select="$notes[((not(.//@pname.ges) and .//@pname = $current.row/@*[. = '0']/local-name()) or (.//@pname.ges = $current.row/@*[. = '0']/local-name())) and .//@pclass = $root.pclass]" as="node()+"/>
             
             <xsl:variable name="ct1.alt" select="$notes[((not(.//@pname.ges) and .//@pname = $current.row/@*[. = '0']/local-name()) or (.//@pname.ges = $current.row/@*[. = '0']/local-name())) and .//@pclass != $root.pclass]" as="node()*"/>
+                        
+            <xsl:variable name="ct3" select="$notes[((not(.//@pname.ges) and .//@pname = $current.row/@*[. = '1']/local-name()) or (.//@pname.ges = $current.row/@*[. = '1']/local-name())) and .//@pclass != $root.pclass]" as="node()*"/>
             
-            <!-- todo@agnes: weiter: -->
-            <xsl:variable name="ct3" select="$notes[.//@pname = $current.row/@*[. = '1']/local-name()]" as="node()*"/>
+            <xsl:variable name="ct5" select="$notes[((not(.//@pname.ges) and .//@pname = $current.row/@*[. = '2']/local-name()) or (.//@pname.ges = $current.row/@*[. = '2']/local-name())) and .//@pclass != $root.pclass]" as="node()*"/>
             
-            <xsl:variable name="ct5" select="$notes[.//@pname = $current.row/@*[. = '2']/local-name()]" as="node()*"/>
+            <xsl:variable name="ct7" select="$notes[((not(.//@pname.ges) and .//@pname = $current.row/@*[. = '3']/local-name()) or (.//@pname.ges = $current.row/@*[. = '3']/local-name())) and .//@pclass != $root.pclass]" as="node()*"/>
             
-            <xsl:variable name="ct7" select="$notes[.//@pname = $current.row/@*[. = '3']/local-name()]" as="node()*"/>
+            <xsl:variable name="ct9" select="$notes[((not(.//@pname.ges) and .//@pname = $current.row/@*[. = '4']/local-name()) or (.//@pname.ges = $current.row/@*[. = '4']/local-name())) and .//@pclass != $root.pclass]" as="node()*"/>
             
-            <xsl:variable name="ct9" select="$notes[.//@pname = $current.row/@*[. = '4']/local-name()]" as="node()*"/>
+            <xsl:variable name="ct11" select="$notes[((not(.//@pname.ges) and .//@pname = $current.row/@*[. = '5']/local-name()) or (.//@pname.ges = $current.row/@*[. = '5']/local-name())) and .//@pclass != $root.pclass]" as="node()*"/>
             
-            <xsl:variable name="ct11" select="$notes[.//@pname = $current.row/@*[. = '5']/local-name()]" as="node()*"/>
-            
-            <xsl:variable name="ct13" select="$notes[.//@pname = $current.row/@*[. = '6']/local-name()]" as="node()*"/>
+            <xsl:variable name="ct13" select="$notes[((not(.//@pname.ges) and .//@pname = $current.row/@*[. = '6']/local-name()) or (.//@pname.ges = $current.row/@*[. = '6']/local-name())) and .//@pclass != $root.pclass]" as="node()*"/>
             
 
             <chordDef xmlns="http://www.music-encoding.org/ns/mei" temp:root="{$root.pname}" temp:root.pclass="{$root.pclass}" temp:bass="{$bass.notes[1]/@pname}" temp:bass.pclass="{$bass.notes[1]/@pclass}" temp:accented="{$isAccented}">
