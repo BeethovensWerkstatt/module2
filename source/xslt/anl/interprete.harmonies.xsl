@@ -278,6 +278,7 @@
             <xsl:value-of select="string-join(distinct-values($raw),' or ')"/>
         </xsl:variable>
         <xsl:copy>
+            <!--todo: add @mfunc="arp" to arpeggiated notes-->
             <xsl:apply-templates select="@*" mode="#current"/>
             <xsl:if test="count($inth) gt 0">
                 <xsl:attribute name="inth" select="string-join(distinct-values($inth),' or ')"/>

@@ -67,6 +67,9 @@
                 <xsl:next-match/>
             </xsl:when>-->
             
+            
+            <!--toDo: add @mfunc="arp" to all notes that fit to these conditions-->
+            
             <!-- lest.thirds less than 3 means only third, fifth and seventh above the root are allowed -->
             <xsl:when test="$minimal.cost.of.thirds le 2">
                 <xsl:variable name="start" select="$notes[1]/@tstamp" as="xs:string"/>
@@ -98,7 +101,8 @@
                 <xsl:next-match/>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
+        
+            </xsl:template>
     
     <!-- change tstamps of the notes that took part of the arpeggio and are now in a chord-element -->
     <xsl:template match="@tstamp" mode="resolve.arpegs.change.tstamps">
