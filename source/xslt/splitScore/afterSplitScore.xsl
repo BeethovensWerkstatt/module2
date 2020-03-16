@@ -21,30 +21,30 @@
     
     <xsl:output indent="yes" method="xml"/>
     
-    <xsl:template match="/">
+    <!--<xsl:template match="/">
         <xsl:apply-templates select="node()"/>
-    </xsl:template> 
+    </xsl:template>-->
   
   
-    <xsl:template match="mei:scoreDef/@xml:id | /mei:staffGrp/@xml:id | mei:section/@xml:id | mei:measure/@xml:id" ><!-- mode="cleanup" -->
+    <xsl:template match="mei:scoreDef/@xml:id | /mei:staffGrp/@xml:id | mei:section/@xml:id | mei:measure/@xml:id" mode="cleanup">
         <xsl:attribute name="xml:id" select="'x'||uuid:randomUUID()"/>
     </xsl:template>
   
-    <xsl:template match="@staff" ><!-- mode="cleanup" -->
+  <xsl:template match="@staff" mode="cleanup">
       <xsl:attribute name="staff" select="xs:integer(1)"/>
   </xsl:template>
     
-    <xsl:template match="//mei:staff/@n" ><!-- mode="cleanup" -->
+    <xsl:template match="//mei:staff/@n" mode="cleanup">
         <xsl:attribute name="n" select="xs:integer(1)"/>
     </xsl:template>
     
     
     <!-- copies xml nodes -->
-    <xsl:template match="node() | @*">
+    <!--<xsl:template match="node() | @*">
         <xsl:copy>
             <xsl:apply-templates select="node() | @*"/>
         </xsl:copy>
-    </xsl:template>
+    </xsl:template>-->
     
     
 </xsl:stylesheet>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-model href="../schema/bw_module2_comparisons.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schema/bw_module2_comparisons.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="4.0.0" xml:id="x418650e0-d899-4e3d-bff3-f7d459e1d5d7">
    <meiHead>
       <fileDesc n="14">
@@ -28,6 +27,21 @@
             <source xml:id="x202a68a8-99f3-46b7-a6d5-41f8395f84a9" target="../works/Op.14.1_StringQuartet.xml"/>
          </sourceDesc>
       </fileDesc>
+      <workList>
+         <work>
+            <title></title>
+            <context>
+               <head>Einführung</head>
+               <p>
+                  Die <rend rend="bold">Klaviersonate E-Dur Op. 14 Nr. 1 entstand</rend> 1798/99 und wurde von Beethoven 1802 als Streichquartett in F-Dur bearbeitet. Beethoven hat die Sonate zunächst als eigenständiges Werk konzipiert und es erst danach in ein Streichquartett umgearbeitet. Zu dieser Umarbeitung, die für ihn alles andere als eine mechanische Bearbeitung bedeutete, bemerkte Beethoven: „ich weiß gewiß, das macht mir nicht so leicht ein andrer nach.“ Auch bezeichnete er seine Bearbeitungsmaßnahmen selbst mit den Begriffen <rend rend="italic">hinzufügen</rend>, <rend rend="italic">umändern</rend> und <rend rend="italic">weglassen</rend> – diese drei Grundoperationen decken sich mit drei formalen Kategorien der Variantenbildung: <rend rend="italic">Erweiterung</rend>, <rend rend="italic">Ersetzung</rend> und <rend rend="italic">Tilgung</rend>.</p>
+               <p>
+                  Im Falle von op. 14/1 und der Streichquartettversion bestehen größere Unterschiede zwischen beiden Fassungen, was nicht nur mit der Anpassung an veränderte spieltechnische Bedingungen, sondern auch mit der unterschiedlichen Satzart für Klavier bzw. Streichquartett zusammenhängt. Die <rend rend="bold">verschiedenen Perspektiven</rend> der <rend rend="italic">VideApp Arr</rend> versuchen, diese Strukturen aufzudecken: Im Einzelnotenvergleich zeigt sich beispielsweise, dass der Invarianz-Anteil im I. Satz ab der Durchführung sinkt, weil dort insbesondere die Begleitfiguren der übernommenen Melodieteile verändert worden sind. Die meisten strukturellen Unterschiede zwischen den Fassungen finden sich im Finalsatz, wo die klaviertypische Triolenbegleitung des Rondothemas in der Bearbeitung durch Skalen in den Streichern ersetzt wird.</p>
+               
+               <p>Ausdrücklich sei darauf hingewiesen, dass die <rend rend="bold">Codierungen</rend> jeweils auf den Originalausgaben beruhen, Fehler der jeweiligen Vorlage übernommen wurden und so auch angezeigt werden. Eine ausführlichere Beschreibung der vorgenannten Aspekte wird separat auf der Website des Projekts zur Verfügung gestellt.</p>
+            </context>
+         </work>
+      </workList>
+      
       
       <!-- todo: clarify if we consider these "things" as independent frbr:works, or just as different expressions -->
       <!--<workDesc>
@@ -40,6 +54,14 @@
             </respStmt>
             <changeDesc>
                <p>File created</p>
+            </changeDesc>
+         </change>
+         <change n="2" isodate="2019-12-11">
+            <respStmt>
+               <persName>SC</persName>
+            </respStmt>
+            <changeDesc>
+               <p>Einführungstext hinzugefügt</p>
             </changeDesc>
          </change>
       </revisionDesc>

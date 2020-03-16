@@ -26,6 +26,9 @@ let $comparison.id := request:get-parameter('comparisonId','')
 let $method := request:get-parameter('method','')
 let $mdiv := request:get-parameter('mdiv','')
 let $transpose.mode := request:get-parameter('transpose','')
+let $hidden.staves.param := request:get-parameter('hiddenStaves','')
+let $doc1.hidden.staves := if(contains($hidden.staves.param,'-')) then(substring-before($hidden.staves.param,'-')) else('')
+let $doc2.hidden.staves := if(contains($hidden.staves.param,'-')) then(substring-after($hidden.staves.param,'-')) else('')
 
 let $comparison := (collection($data.basePath)//mei:meiCorpus[@xml:id = $comparison.id])[1]
 
@@ -43,6 +46,7 @@ let $doc1.analyzed := transform:transform($doc1,
                    <param name="mode" value="{$method}"/>
                    <param name="mdiv" value="{$mdiv}"/>
                    <param name="transpose.mode" value="{$transpose.mode}"/>
+                   <param name="hidden.staves" value="{$doc1.hidden.staves}"/>
                </parameters>)
                
 let $doc2.analyzed := transform:transform($doc2,
@@ -50,6 +54,7 @@ let $doc2.analyzed := transform:transform($doc2,
                    <param name="mode" value="{$method}"/>
                    <param name="mdiv" value="{$mdiv}"/>
                    <param name="transpose.mode" value="{$transpose.mode}"/>
+                   <param name="hidden.staves" value="{$doc2.hidden.staves}"/>
                </parameters>)               
 
 let $merged.files := transform:transform(<root>{$doc1.analyzed}{$doc2.analyzed}{$comparison}</root>,

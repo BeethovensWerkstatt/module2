@@ -1,4 +1,4 @@
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:key="none" xmlns:custom="none" xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:uuid="http://www.uuid.org" xmlns:xlink="http://www.w3.org/1999/xlink" exclude-result-prefixes="xs math xd mei custom uuid xlink" version="3.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:custom="none" xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:uuid="http://www.uuid.org" xmlns:key="none" xmlns:xlink="http://www.w3.org/1999/xlink" exclude-result-prefixes="xs math xd mei custom uuid xlink" version="3.0">
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p>
@@ -29,7 +29,7 @@
                     <xsl:variable name="ends" select=".//mei:staff//@tstamp2[string(number(.)) != 'NaN']/number(.)" as="xs:double*"/>
                     
                     <xsl:variable name="solution1" select="number(@meter.count)" as="xs:double"/>
-                    <xsl:variable name="solution2" select="max($ends) - 1" as="xs:double"/>
+                    <xsl:variable name="solution2" select="if(count($ends) gt 0) then(max($ends) - 1) else(0)" as="xs:double"/>
                     
                     <custom:dur id="{@xml:id}" dur="{((if(position() = 1) then($solution2) else($solution1))) div number(@meter.unit)}"/>
                 </xsl:for-each>
@@ -77,14 +77,7 @@
                 <xsl:variable name="tstamp" select="number($note/ancestor-or-self::mei:*[@tstamp][1]/@tstamp)"/>
                 <xsl:variable name="tstamp2" select="number($note/ancestor-or-self::mei:*[@tstamp2][1]/@tstamp2)"/>
                 
-                <event xsl:exclude-result-prefixes="xlink"
-                    pnum="{$note/@pnum}" 
-                    start="{$dur.offset + ($tstamp div number($meter.unit))}" 
-                    end="{$dur.offset + ($tstamp2 div number($meter.unit))}"
-                    staff="{$staff}"
-                    tstamp="{$tstamp}"
-                    tstamp2="{$tstamp2}"
-                    id="{$note/@xml:id}"/>
+                <event xsl:exclude-result-prefixes="xlink" pnum="{$note/@pnum}" start="{$dur.offset + ($tstamp div number($meter.unit))}" end="{$dur.offset + ($tstamp2 div number($meter.unit))}" staff="{$staff}" tstamp="{$tstamp}" tstamp2="{$tstamp2}" id="{$note/@xml:id}"/>
             </xsl:for-each>
         </xsl:copy>
     </xsl:template>
@@ -115,6 +108,6 @@
             </xsl:for-each-group>
         </mdiv>
     </xsl:template>
-        
+    
     
 </xsl:stylesheet>

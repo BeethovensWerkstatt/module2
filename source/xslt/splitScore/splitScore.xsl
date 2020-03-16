@@ -25,11 +25,28 @@
         <xsl:apply-templates select="node()"/>
     </xsl:template>
   
+    <xsl:template match="mei:*[parent::mei:measure and not(local-name() = 'staff') and not(@staff)]" mode="first.run">
+        <xsl:variable name="startid" select="replace(@startid,'#','')" as="xs:string"/><!-- slur, tie -->
+        <xsl:variable name="startnote" select="ancestor::mei:measure//mei:*[@xml:id = $startid]" as="node()?"/>
+        
+        <xsl:if test="not($startnote)">
+            <xsl:message select="." terminate="yes"/>
+        </xsl:if> 
+        
+        <xsl:variable name="staff.n" select="$startnote/ancestor::mei:staff/xs:integer(@n)" as="xs:integer"/>
+        
+        <xsl:copy>
+            <xsl:apply-templates select="@*"/>
+            <xsl:attribute name="staff" select="$staff.n"/>
+        </xsl:copy>
+        
+    </xsl:template>
+    
     
     <xd:doc>
         <xd:desc>split score into parts</xd:desc>
     </xd:doc>
-    <xsl:template match="mei:score" ><!-- mode="splitScore" -->
+    <xsl:template match="mei:score" mode="splitScore">
         <xsl:element name="parts" xmlns="http://www.music-encoding.org/ns/mei">
             <xsl:attribute name="xml:id" select="'x'||uuid:randomUUID()"/>
             <xsl:for-each select="mei:scoreDef/mei:staffGrp/*[local-name()='staffDef' or
@@ -81,7 +98,7 @@
     </xsl:template>
     
     
-    <xsl:template match="mei:section|mei:ending" ><!-- mode="splitScore" -->
+    <xsl:template match="mei:section|mei:ending" mode="splitScore">
         <xsl:variable name="sectionOrEnding">
             <xsl:value-of select="local-name(.)"/>
         </xsl:variable>
@@ -93,29 +110,34 @@
     </xsl:template>
     
     
-    <xsl:template match="mei:staff" ><!-- mode="splitScore" -->
+    <xsl:template match="mei:staff" mode="splitScore">
         <xsl:param name="staves" as="xs:string+" tunnel="yes"/>
         <xsl:if test="@n = $staves">
             <xsl:next-match/>
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="mei:*[@staff]" ><!-- mode="splitScore" -->
+    <xsl:template match="mei:*[@staff]" mode="splitScore">
         <xsl:param name="staves" as="xs:string+" tunnel="yes"/>
         <xsl:if test="@staff = $staves">
             <xsl:next-match/>
         </xsl:if>
     </xsl:template>
     
+ <!--   <xsl:template match="mei:scoreDef/@xml:id | /mei:staffGrp/@xml:id | mei:sction/@xml:id | mei:measure/@xml:id">
+        <xsl:attribute name="xml:id" select="'x'||uuid:randomUUID()"/>
+    </xsl:template>-->
     
     
     
-<!--     copies xml nodes 
--->    <xsl:template match="node() | @*">
+    
+    
+    <!-- copies xml nodes -->
+  <!--  <xsl:template match="node() | @*">
         <xsl:copy>
             <xsl:apply-templates select="node() | @*"/>
         </xsl:copy>
-    </xsl:template>
+    </xsl:template>-->
     
     
 </xsl:stylesheet>

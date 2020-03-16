@@ -35,8 +35,13 @@
     
     <xsl:include href="compare/identify.identity.xsl"/>
     <xsl:include href="compare/compare.event.density.xsl"/>
+    <xsl:include href="compare/compare.harmonics.xsl"/>
     
     <xsl:include href="compare/determine.variation.xsl"/>
+    
+    <xsl:include href="compare/adjust.rel.oct.xsl"/>
+    
+    <xsl:include href="compare/cleanupDynam.xsl"/>
     
     <xsl:variable name="first.file" as="node()">
         
@@ -139,8 +144,11 @@
                     <xsl:variable name="merged.files" as="node()">
                         <xsl:apply-templates select="$first.file" mode="first.pass"/>
                     </xsl:variable>
+                    <xsl:variable name="adjusted.rel.oct" as="node()">
+                        <xsl:apply-templates select="$merged.files" mode="adjust.rel.oct"/>
+                    </xsl:variable>
                     <xsl:variable name="identified.identity" as="node()">
-                        <xsl:apply-templates select="$merged.files" mode="add.invariance"/>
+                        <xsl:apply-templates select="$adjusted.rel.oct" mode="add.invariance"/>
                     </xsl:variable>
                     <xsl:variable name="determined.variation" as="node()">
                         <xsl:apply-templates select="$identified.identity" mode="determine.variation"/>
@@ -188,6 +196,15 @@
                     </xsl:variable>
                     <xsl:copy-of select="$compared.event.density"/>
                 </xsl:when>
+                <xsl:when test="$method = 'harmonicComparison'">
+                    <xsl:variable name="merged.files" as="node()">
+                        <xsl:apply-templates select="$first.file" mode="first.pass"/>
+                    </xsl:variable>
+                    <xsl:variable name="compared.harmonics" as="node()">
+                        <xsl:apply-templates select="$merged.files" mode="compare.harmonics"/>
+                    </xsl:variable>
+                    <xsl:copy-of select="$compared.harmonics"/>
+                </xsl:when>
                 <xsl:otherwise>
                     <xsl:variable name="merged.files" as="node()">
                         <xsl:apply-templates select="$first.file" mode="first.pass"/>
@@ -196,27 +213,25 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:copy-of select="$output"/>
+        
+        <xsl:variable name="cleanedup.dynamics" as="node()">
+            <xsl:apply-templates select="$output" mode="clean.dynamics"/>
+        </xsl:variable>
+        <xsl:copy-of select="$cleanedup.dynamics"/>
     </xsl:template>
     
     <xsl:template match="mei:score/mei:scoreDef" mode="first.pass">
         <xsl:variable name="pos" select="count(preceding::mei:scoreDef) + 1" as="xs:integer"/>
         
         <scoreDef xmlns="http://www.music-encoding.org/ns/mei">
-            <xsl:apply-templates select="@meter.count | @meter.unit" mode="#current"/>
+            <xsl:apply-templates select="@meter.count | @meter.unit | @meter.sym" mode="#current"/>
             <staffGrp label="" symbol="none" bar.thru="false">
-                <staffGrp symbol="brace" bar.thru="true">
-                    <xsl:apply-templates select=".//mei:label | .//mei:labelAbbr | .//mei:staffDef" mode="first.pass"/>
+                <staffGrp symbol="bracket" bar.thru="true">
+                    <xsl:apply-templates select="mei:staffGrp/node()" mode="first.pass"/>
                 </staffGrp>
-                <staffGrp symbol="brace" bar.thru="true">
+                <staffGrp symbol="bracket" bar.thru="true">
                     <xsl:variable name="second.file.staffDefs" select="($second.file//mei:scoreDef)[$pos]//mei:staffDef" as="node()+"/>
-                    <xsl:apply-templates select="($second.file//mei:scoreDef)[$pos]/mei:staffGrp/(mei:label | mei:labelAbbr)" mode="first.pass.file.2"/>
-                    <xsl:apply-templates select="($second.file.staffDefs)[1]" mode="first.pass.file.2">
-                        <xsl:with-param name="add.spacing" select="true()" as="xs:boolean" tunnel="yes"/>
-                    </xsl:apply-templates>
-                    <xsl:apply-templates select="($second.file.staffDefs)[position() gt 1]" mode="first.pass.file.2">
-                        <xsl:with-param name="add.spacing" select="false()" as="xs:boolean" tunnel="yes"/>
-                    </xsl:apply-templates>
+                    <xsl:apply-templates select="($second.file//mei:scoreDef)[$pos]/mei:staffGrp/node()" mode="first.pass.file.2"/>
                 </staffGrp>
             </staffGrp>
         </scoreDef>
@@ -231,9 +246,8 @@
     </xsl:template>
     
     <xsl:template match="mei:staffDef" mode="first.pass.file.2">
-        <xsl:param name="add.spacing" tunnel="yes" as="xs:boolean?"/>
         <xsl:copy>
-            <xsl:if test="exists($add.spacing) and $add.spacing = true()">
+            <xsl:if test="@n = '1'">
                 <xsl:attribute name="spacing" select="'40vu'"/>
             </xsl:if>
             <xsl:apply-templates select="ancestor::mei:scoreDef/@key.sig" mode="#current"/>

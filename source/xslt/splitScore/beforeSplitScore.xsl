@@ -28,7 +28,7 @@
      <xd:doc>
          <xd:desc>give @staff attribute to elements that have no @staff attribue</xd:desc>
      </xd:doc>
-    <xsl:template match="mei:*[parent::mei:measure and not(local-name() = 'staff') and not(@staff)]"><!-- mode="giveStaffNo" -->
+    <xsl:template match="mei:*[parent::mei:measure and not(local-name() = 'staff') and not(@staff)]" mode="giveStaffNo">
     <xsl:variable name="startid" select="replace(@startid,'#','')" as="xs:string"/><!-- slur, tie -->
     <xsl:variable name="startnote" select="ancestor::mei:measure//mei:*[@xml:id = $startid]" as="node()?"/>
     
@@ -37,11 +37,6 @@
     </xsl:if> 
     
     <xsl:variable name="staff.n" select="$startnote/ancestor::mei:staff/xs:integer(@n)" as="xs:integer"/>
-        
-        
-      <xsl:if test="mei:slur[not(@staff)]">
-          <xsl:message select="./parent::mei:measure/@n"></xsl:message>
-      </xsl:if>
     
     <xsl:copy>
         <xsl:apply-templates select="@*"/>
@@ -55,11 +50,11 @@
     
     
     <!-- copies xml nodes -->
-    <xsl:template match="node() | @*">
+    <!--<xsl:template match="node() | @*">
         <xsl:copy>
             <xsl:apply-templates select="node() | @*"/>
         </xsl:copy>
-    </xsl:template>
+    </xsl:template>-->
     
     
 </xsl:stylesheet>

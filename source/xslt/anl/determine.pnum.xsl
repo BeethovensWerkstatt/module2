@@ -1,4 +1,4 @@
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:key="none" xmlns:custom="none" xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:uuid="http://www.uuid.org" exclude-result-prefixes="xs math xd mei custom uuid" version="3.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:custom="none" xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:uuid="http://www.uuid.org" xmlns:key="none" exclude-result-prefixes="xs math xd mei custom uuid" version="3.0">
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p>
@@ -11,12 +11,15 @@
     
     <!-- requires circleOf5.xsl -->
     
-    <xsl:template match="mei:staff">
+    <xsl:template match="mei:staff" mode="determine.pnum">
         <xsl:variable name="n" select="@n" as="xs:string"/>
         
         <xsl:variable name="staffDef" select="preceding::mei:staffDef[@n = $n and @trans.semi][1]" as="node()?"/>
         <xsl:variable name="trans.semi" as="xs:integer">
             <xsl:choose>
+                <xsl:when test="@trans.semi">
+                    <xsl:value-of select="xs:integer(@trans.semi)"/>
+                </xsl:when>
                 <xsl:when test="exists($staffDef)">
                     <xsl:value-of select="xs:integer($staffDef/@trans.semi)"/>
                 </xsl:when>
@@ -25,6 +28,7 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
+        
         <xsl:next-match>
             <xsl:with-param name="trans.semi" select="$trans.semi" as="xs:integer" tunnel="yes"/>
         </xsl:next-match>

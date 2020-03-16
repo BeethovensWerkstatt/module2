@@ -9,6 +9,10 @@
          <titleStmt>
             <title type="main">Streichquartett F-Dur, op. 14/1</title>
             <title type="subordinate">an electronic transcription</title>
+               <respStmt>
+                     <persName role="edt led" xml:id="SC">Susanne Cox</persName>
+                     <corpName role="edt" xml:id="BW">Beethovens Werkstatt</corpName>
+               </respStmt>
             <respStmt>
                <resp auth.uri="http://id.loc.gov/vocabulary/relators.html" codedval="cmp"/>
                <persName auth.uri="http://d-nb.info/gnd" codedval="118508288">Ludwig van Beethoven</persName>
@@ -182,6 +186,15 @@
                   </changeDesc>
                   <date isodate="2019-07-18"/>
             </change>
+            <change n="15">
+                  <respStmt>
+                        <persName auth.uri="https://github.com/" codedval="Susanne Cox">Susanne Cox</persName>
+                  </respStmt>
+                  <changeDesc>
+                        <p>Fehler der OA als annot eingearbeitet.</p>
+                  </changeDesc>
+                  <date isodate="2020-03-11"/>
+            </change>
       </revisionDesc>
    </meiHead>
    <music meiversion="4.0.0">
@@ -276,8 +289,7 @@
                         <dynam xml:id="x1494e948-4432-4ac5-abd5-be59731ee86e"
                                tstamp="3"
                                place="below"
-                               staff="1"
-                               label="words">cres</dynam>
+                               staff="1">cres</dynam>
                      </measure>
                      <measure n="4" xml:id="xc76dad38-51df-4527-a9d3-625e40a3b45b">
                         <staff xml:id="xa3e3cd9e-3d4a-4e42-a724-79c281988114" n="1">
@@ -309,12 +321,9 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x362d038e-cb35-4916-b06e-0b440e6348de"
-                               label="direction"
                                tstamp="1"
                                place="below"
-                               staff="1">
-                           sf
-                        </dynam>
+                               staff="1">sf</dynam>
                         <slur xml:id="xd1ffece9-48ce-45a0-9b29-46fbe38d8cc9"
                               startid="#xf1612e8e-e95e-420c-88e4-cb281ab02ad0"
                               
@@ -379,7 +388,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x0bac7b06-e2ef-44f1-94b1-499529ae70a5"
-                               label="direction"
+                               
                                tstamp="1"
                                place="below"
                                staff="1">
@@ -459,24 +468,18 @@
                                        grace="unknown"
                                        pname="d"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="x01f514cf-f9ac-444c-b94d-82b70d04c38f"
                                        grace="unknown"
                                        pname="c"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="x9f2769ff-badd-4a5b-ba46-d3fedcfb3e3c"
                                        grace="unknown"
                                        pname="b"
                                        accid="n"
                                        oct="4"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                               </beam>
                               <beam xml:id="x0e411080-c1ba-4d0e-a23a-645e12d6f6b8">
                                  <note xml:id="xa12a4dc6-d96d-4588-9445-100198c85a49"
@@ -651,7 +654,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="xf1058d96-7a05-425e-85ed-7b6e49ad6c13"
-                               label="direction"
+                               
                                tstamp="1"
                                place="below"
                                staff="1">p</dynam>
@@ -696,7 +699,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x9c8a9a72-610f-4016-af6c-5ad3981839af"
-                               label="direction"
+                               
                                tstamp="1"
                                place="below"
                                staff="1">p</dynam>
@@ -772,7 +775,7 @@
                               endid="#xc5d0e470-fce7-4443-bd6e-221b20001fda"
                               staff="1"/>
                         <dynam xml:id="x39ba1bd3-41aa-4bf9-9349-c87df0e5ab5e"
-                               label="direction"
+                               
                                tstamp="3"
                                place="below"
                                staff="1">sf</dynam>
@@ -1139,23 +1142,17 @@
                                        grace="unknown"
                                        pname="e"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="xd80cc483-c2c6-437d-98c1-7b67ff26a29f"
                                        grace="unknown"
                                        pname="f"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="xb1489145-6f31-4240-9ed6-601888be4569"
                                        grace="unknown"
                                        pname="g"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                               </beam>
                               <beam xml:id="x645a4fbc-1a1d-4c50-a0b3-f6e933dd3c71">
                                  <note xml:id="xd3e7cd49-6b19-4b23-8a0a-64b716443306"
@@ -1980,7 +1977,7 @@
                                     oct="4"
                                     dur="4"
                                     
-                                    artic="stacc">
+                                    artic="stacc" accid.ges="n">
                                  
                               </note>
                               <note xml:id="x629e566a-dbd2-4b38-9f97-3e95a9d6ac73"
@@ -2852,12 +2849,15 @@
                      <measure n="73" xml:id="x0507ee7a-a38b-465a-bc28-27dee1c20bef">
                         <staff xml:id="xb02fa0fb-c248-4361-9869-6ba6814f1cdc" n="1">
                            <layer xml:id="x65e92c3b-df97-495e-a42f-bdf1566e547e" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x0576ad6d-9437-43bf-b09a-df54a05ae69a">
+                                       Following note should be d-flat.
+                                 </annot>
                               <note xml:id="x0576ad6d-9437-43bf-b09a-df54a05ae69a"
                                     pname="d"
                                     oct="6"
                                     dur="2"
                                     dots="1"
-                                    /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                    />
                               <beam xml:id="x84cd1785-93ad-427d-960d-29cb5c58bfc8">
                                  <note xml:id="x826cbc94-406d-46dd-94fb-c6d145efae12"
                                        pname="e"
@@ -3700,24 +3700,18 @@
                                        pname="d"
                                        oct="5"
                                        dur="16"
-                                       
-                                       grace="unknown"
-                                       fontsize="small"/>
+                                       grace="unknown"/>
                                  <note xml:id="x5a3dff65-aa5e-4a7f-b7db-21096f0fdbce"
                                        pname="c"
                                        oct="5"
                                        dur="16"
-                                       
-                                       grace="unknown"
-                                       fontsize="small"/>
+                                       grace="unknown"/>
                                  <note xml:id="x766a86a4-5429-4d56-a329-7f06338eacc4"
                                        pname="b"
                                        accid="n"
                                        oct="4"
                                        dur="16"
-                                       
-                                       grace="unknown"
-                                       fontsize="small"/>
+                                       grace="unknown"/>
                               </beam>
                               <beam xml:id="x9c247182-18dd-4d77-adb9-74504f3d25dd">
                                  <note xml:id="x8c05e7de-7ba7-41f2-b464-c877865e2cdd"
@@ -3849,7 +3843,7 @@
                                tstamp="1"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                         <tie xml:id="x29ff1802-97e3-4051-9d16-bdcef4478056"
                              staff="1"
                              startid="#xa62128e5-a15d-48ef-9242-38033a018dae"
@@ -4577,30 +4571,23 @@
                                     pname="b"
                                     oct="5"
                                     dur="4"
-                                    
                                     accid.ges="f"/>
                               <beam xml:id="xb4426bb0-0c6f-412f-9f2d-190766d36e47">
                                  <note xml:id="x6fcc7006-45d5-4a88-a971-f99d530123db"
                                        grace="unknown"
                                        pname="a"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="xf54a1e2f-3120-4b35-bcea-3b800a2915c3"
                                        grace="unknown"
                                        pname="b"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="x9980e753-cc70-4515-a47c-7f9cea5d4d71"
                                        grace="unknown"
                                        pname="c"
                                        oct="6"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                               </beam>
                               <beam xml:id="x74059a5d-cf09-498b-a3a6-5da5afe64c6e">
                                  <note xml:id="x289b0373-6030-43ed-b24d-d2d30a2803ec"
@@ -4752,29 +4739,22 @@
                                        grace="unknown"
                                        pname="a"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="x283ccfc1-1e70-42db-8394-179470532ddb"
                                        grace="unknown"
                                        pname="b"
                                        oct="5"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                                  <note xml:id="xed4e1785-d861-4eb3-b4c3-3c01d887a7ef"
                                        grace="unknown"
                                        pname="c"
                                        oct="6"
-                                       dur="16"
-                                       
-                                       fontsize="small"/>
+                                       dur="16"/>
                               </beam>
                               <note xml:id="xf50bb857-be38-4124-9873-24d0402f40eb"
                                     pname="b"
                                     oct="5"
                                     dur="4"
-                                    
                                     accid.ges="f"/>
                               <note xml:id="xeb934d2c-6e56-47d3-bc42-e49634353991"
                                     pname="a"
@@ -4786,7 +4766,6 @@
                         </staff>
                         <slur xml:id="x05254e4f-7fc0-4c6a-a5c1-c69067e6cd25"
                               startid="#xf50bb857-be38-4124-9873-24d0402f40eb"
-                              
                               endid="#xeb934d2c-6e56-47d3-bc42-e49634353991"
                               staff="1"/>
                      </measure>
@@ -5358,7 +5337,7 @@
                               <note xml:id="xe4bbf7c8-1859-42aa-814f-43f7e9bf25dd"
                                     pname="d"
                                     oct="5"
-                                    dur="4"
+                                    dur="4" accid.ges="n"
                                     />
                               <note xml:id="xb1e7cfa0-e5ad-41ae-81bb-bf656881648f"
                                     pname="c"
@@ -5431,7 +5410,7 @@
                               <note xml:id="xa47e9d27-1673-40ea-a21a-9f87f65e1316"
                                     pname="d"
                                     oct="5"
-                                    dur="4"
+                                    dur="4" accid.ges="n"
                                     />
                               <note xml:id="x92edeb2e-d1ad-43ee-a91c-967a6456b132"
                                     pname="c"
@@ -7126,7 +7105,7 @@
                               <note xml:id="xc18f6cab-2077-42f8-a977-ed654caa3876"
                                     pname="g"
                                     oct="4"
-                                    dur="4"
+                                    dur="4" accid.ges="n"
                                     />
                               <note xml:id="xe34989a4-ada3-4d75-bee3-45fe947d4389"
                                     pname="f"
@@ -7294,7 +7273,7 @@
                               <note xml:id="xba5562bb-10e2-4f28-8367-02c9d7fafa5d"
                                     pname="f"
                                     oct="4"
-                                    dur="4"
+                                    dur="4" accid.ges="n"
                                     />
                               <note xml:id="x3521664b-8be5-461a-ad59-81f2972c9d5b"
                                     pname="e"
@@ -7515,13 +7494,16 @@
                      <measure n="42" xml:id="x411b3444-935b-4483-9be6-ba77dfa881f2">
                         <staff xml:id="xfacb84dc-7a76-4c40-a8c2-15504857bf25" n="1">
                            <layer xml:id="x5f953da7-1db9-40a4-a9e1-08ab593e5c7e" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xfe5b1e0a-bafb-4cb0-9cd8-0ca0711c3af1">
+                                       First note in the following beam: natural is missing.
+                                 </annot>
                               <beam xml:id="x43ab5124-e19f-44bb-8b61-2cb29fb2feb7">
                                  <note xml:id="xfe5b1e0a-bafb-4cb0-9cd8-0ca0711c3af1"
                                        pname="b"
                                        oct="4"
                                        dur="8"
                                        
-                                       accid.ges="f"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                       accid.ges="f"/>
                                  <note xml:id="xac671e0b-239e-4f1a-9f0c-7f6d1b2717e2"
                                        pname="d"
                                        oct="5"
@@ -7715,7 +7697,7 @@
                               endid="#x4fd7551c-41a7-43d2-a120-ce7e43ab5e18"
                               staff="1"/>
                         <dynam xml:id="x5905b5cc-e748-4ed5-a560-8ec1e48a9574"
-                               label="direction"
+                               
                                tstamp="3"
                                place="below"
                                staff="1">sf</dynam>
@@ -7938,7 +7920,7 @@
                                tstamp="2"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                      </measure>
                      <measure n="53" xml:id="x8ba14634-f436-4209-90df-29c795ed4f33">
                         <staff xml:id="x2000372c-b2bf-4886-8293-ec11447833d9" n="1">
@@ -9153,19 +9135,20 @@
                      <measure n="69" xml:id="xd82dc4e5-b893-4702-9b75-624633f47067">
                         <staff xml:id="xa795c704-fead-4cbb-b055-fb09f2b46367" n="1">
                            <layer xml:id="xb1a6a486-6699-472c-9169-4d1786c73cf5" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x8cf8783c-a96a-4f12-9a93-b69b9678e39d #x57e9f6fa-a34f-4b30-9a22-b4da5c6c08a8">
+                                       Wrong pitches of the first and second chord in the following beam, it should be b-flat instead of a.
+                                 </annot>
                               <beam xml:id="xdd77f989-6c45-4486-b63c-678b0ea3cafa">
                                  <chord xml:id="xa1645e39-793f-4ba2-b7aa-745cab049c12"
                                         dur="16"
                                         >
-                                    <note xml:id="x8cf8783c-a96a-4f12-9a93-b69b9678e39d" pname="a" oct="3"/> <!-- Fehler in OA: 
-                                          Tonhöhe müsste b statt a sein -->
+                                    <note xml:id="x8cf8783c-a96a-4f12-9a93-b69b9678e39d" pname="a" oct="3"/>
                                     <note xml:id="xaef24486-9c32-43fb-a8db-b7eb2ada52db" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="x6324e22e-b332-4a34-aa8e-69d2928832d9"
                                         dur="16"
                                         >
-                                       <note xml:id="x57e9f6fa-a34f-4b30-9a22-b4da5c6c08a8" pname="a" oct="3"/> <!-- Fehler in OA: 
-                                          Tonhöhe müsste b statt a sein -->
+                                       <note xml:id="x57e9f6fa-a34f-4b30-9a22-b4da5c6c08a8" pname="a" oct="3"/>
                                     <note xml:id="x97691942-cf21-4cc7-a883-ec1b6a3635a6" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="xe5833c35-3576-4c29-9661-a10f14e135e7"
@@ -9597,6 +9580,9 @@
                      <measure n="72" xml:id="x359bf494-430b-42a4-98e2-100fceb92d9a">
                         <staff xml:id="xe2899c4a-ad84-4e42-8f62-74f615e9e3f5" n="1">
                            <layer xml:id="xd353005f-eabb-4e51-bf47-aab7cfe04d0d" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x5ba40224-5dde-4553-a12b-0957ec91d3a5">
+                                       Second note of the following chord should be e-flat.
+                                 </annot>
                               <beam xml:id="x45626f3f-5972-446c-92d3-9fd29d84ad89">
                                  <chord xml:id="x310159a1-8867-4c28-928b-464016a1cd9f"
                                         dur="16"
@@ -9605,7 +9591,7 @@
                                           pname="b"
                                           oct="3"
                                           accid.ges="f"/>
-                                    <note xml:id="x5ba40224-5dde-4553-a12b-0957ec91d3a5" pname="e" oct="4"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                    <note xml:id="x5ba40224-5dde-4553-a12b-0957ec91d3a5" pname="e" oct="4"/>
                                  </chord>
                                  <chord xml:id="x85c2dde2-e232-4e78-b381-3047465e0349"
                                         dur="16"
@@ -10281,11 +10267,14 @@
                      <measure n="76" xml:id="x662f25de-1313-4a05-968f-f5d2c26d7be5">
                         <staff xml:id="x77cc3e6e-d533-42fc-86e1-07469f369e08" n="1">
                            <layer xml:id="xa4edc223-ee57-42fd-9628-c347f5c5738a" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x516597bd-07d6-40a8-a5bd-fea3f97f3bb2">
+                                       First note of the following chord should be a-flat.
+                                 </annot>
                               <beam xml:id="na21af48e-d5ba-4ad2-90d1-d5ea0b30d656">
                                  <chord xml:id="xc050c425-ee14-416c-90f5-ec1fa870dcee"
                                         dur="16"
                                         >
-                                    <note xml:id="x516597bd-07d6-40a8-a5bd-fea3f97f3bb2" pname="a" oct="3"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt, so auch bis T. 80 -->
+                                    <note xml:id="x516597bd-07d6-40a8-a5bd-fea3f97f3bb2" pname="a" oct="3"/>
                                     <note xml:id="x62b7ff76-72a8-4f61-b780-a1a3994ee269" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="n7515d09a-122b-48ae-b29c-82f859e57743"
@@ -10391,12 +10380,14 @@
                      <measure n="77" xml:id="xf6cf3031-5b11-46fb-a384-1160cf0e1279">
                         <staff xml:id="xf3be4443-adcc-4e7a-a333-eff90669c81b" n="1">
                            <layer xml:id="x60b4ae08-cf2d-4148-9c7e-46a471226775" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x1eb9dcb8-f1bd-44ed-9888-7dafa76c69d3">
+                                       First note of the following chord should be a-flat.
+                                 </annot>
                               <beam xml:id="n0199040c-ed18-470c-b08d-6959fc82c591">
                                  <chord xml:id="xe7d80632-adaf-400f-8bea-38ae572532a7"
                                         dur="16"
                                         >
-                                    <note xml:id="x1eb9dcb8-f1bd-44ed-9888-7dafa76c69d3" pname="a" oct="3"/> <!-- Fehler in OA:
-                                    Erniedrigungszeichen fehlt-->
+                                    <note xml:id="x1eb9dcb8-f1bd-44ed-9888-7dafa76c69d3" pname="a" oct="3"/>
                                     <note xml:id="xb2eb06d5-1168-486d-b7b1-7eaa23ecf6e2" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="nb6821029-12c3-4603-9230-a0a1029678af"
@@ -10506,12 +10497,14 @@
                      <measure n="78" xml:id="x6580d137-0ccb-4033-9b46-1cb59e42e30b">
                         <staff xml:id="x2950b4ff-7288-450e-9f47-d6c3203771c3" n="1">
                            <layer xml:id="x18b4152e-dcdf-4f25-b794-dbba9847110e" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x36358ca8-fca4-45aa-89dc-ee441a39a5d6">
+                                       First note of the following chord should be a-flat.
+                                 </annot>
                               <beam xml:id="nb4978604-da7a-4b8e-b5f8-c19f2077ecb9">
                                  <chord xml:id="x5d00ae21-c625-40a3-a11d-ab27d7a69c2c"
                                         dur="16"
                                         >
-                                       <note xml:id="x36358ca8-fca4-45aa-89dc-ee441a39a5d6" pname="a" oct="3"/> <!-- Fehler in OA:
-                                    Erniedrigungszeichen fehlt-->
+                                       <note xml:id="x36358ca8-fca4-45aa-89dc-ee441a39a5d6" pname="a" oct="3"/>
                                     <note xml:id="x95d18d52-79b3-49c6-bcd0-d14a5105df82" pname="f" oct="4"/>
                                  </chord>
                                  <chord xml:id="nef88da17-3c1d-472c-8eb8-181f1a616868"
@@ -10617,12 +10610,14 @@
                      <measure n="79" xml:id="xca764ea2-1fbd-4352-aacb-1af4ef336440">
                         <staff xml:id="x0d06b149-7a81-4d2b-b7f5-f55133b813e5" n="1">
                            <layer xml:id="x8da132a6-1dbe-4402-a7b2-9ab089269c34" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x07961590-ca5d-47b9-aa64-6eeacb9adecb">
+                                       First note of the following chord should be a-flat.
+                                 </annot>
                               <beam xml:id="xb89bc69f-0560-45ab-9ccd-d06afa2944af">
                                  <chord xml:id="x011d4010-e71e-47d9-99b5-932859523bc9"
                                         dur="16"
                                         >
-                                       <note xml:id="x07961590-ca5d-47b9-aa64-6eeacb9adecb" pname="a" oct="3"/> <!-- Fehler in OA:
-                                    Erniedrigungszeichen fehlt-->
+                                       <note xml:id="x07961590-ca5d-47b9-aa64-6eeacb9adecb" pname="a" oct="3"/>
                                     <note xml:id="xeb5f9a36-cffa-4c92-85c8-cc475d5b128c" pname="f" oct="4"/>
                                  </chord>
                                  <note xml:id="x5ad71027-667d-48cc-902c-9537b5c40abf"
@@ -10732,13 +10727,15 @@
                      <measure n="80" xml:id="x1e3907ee-bd95-453a-9541-8d6d76442777">
                         <staff xml:id="x10b7e955-9739-4897-ab47-0f10d10422ee" n="1">
                            <layer xml:id="xa72da27a-b68b-4075-9b39-e2e34c58bce4" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x99edb815-4ab3-4f01-b31a-716cf79f0b99">
+                                       Following note should be a-flat.
+                                 </annot>
                               <beam xml:id="ndb4ea8ec-fc0f-4afd-b1e2-6ec794ef3938">
                                  <note xml:id="x99edb815-4ab3-4f01-b31a-716cf79f0b99"
                                        pname="a"
                                        oct="4"
                                        dur="16"
-                                 /> <!-- Fehler in OA:
-                                    Erniedrigungszeichen fehlt-->
+                                       />
                                  <note xml:id="n04e29c06-3591-4c16-91d2-08feb53ae240"
                                        pname="a"
                                        oct="4"
@@ -12903,7 +12900,7 @@
                               endid="#x0c07d3db-d9d0-4290-9961-23fb900c3e31"
                               staff="1"/>
                         <dynam xml:id="x455eb55e-e24f-43dd-b79a-2d9351303b2b"
-                               label="direction"
+                               
                                tstamp="2.5"
                                place="below"
                                staff="1"> p </dynam>
@@ -13460,7 +13457,7 @@
                                tstamp="2"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                      </measure>
                      <measure n="158" xml:id="xb35c1856-e015-4b3c-b5f9-b33306f82958">
                         <staff xml:id="x581b119c-2224-45c0-984d-b62a5848002f" n="1">
@@ -14374,14 +14371,16 @@
                      <measure n="21" xml:id="x26df496e-f0a8-4d64-90fe-393091f98eb6">
                         <staff xml:id="x4267fbd1-0907-4dd1-be46-3070208bd02f" n="1">
                            <layer xml:id="x4f4356e4-2c96-40ea-88c0-3afeab6e5fa2" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xb0fe88b5-314d-40fd-aef1-f8b84d484d8a">
+                                       Following note: natural is missing.
+                                 </annot>
                               <note xml:id="xb0fe88b5-314d-40fd-aef1-f8b84d484d8a"
                                     pname="b"
                                     oct="4"
                                     dur="4"
                                     
                                     accid.ges="f"
-                                    artic="stacciss"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
-                                 
+                                    artic="stacciss">
                               </note>
                               <rest xml:id="xe2161250-4279-43ae-9b01-3fc5014c6c52" dur="4"/>
                               <chord xml:id="xa058c777-1c04-4b07-891f-d0055bc11203"
@@ -14598,7 +14597,7 @@
                               <note xml:id="xc4f6029d-c934-43d5-8a6e-0e12ce30e3c8"
                                     pname="c"
                                     oct="5"
-                                    dur="4"
+                                    dur="4" accid.ges="s"
                                     />
                               <note xml:id="x9c773d20-1491-48ba-93e7-2eedf346e40e"
                                     pname="d"
@@ -14698,7 +14697,7 @@
                                     oct="4"
                                     dur="4"
                                     
-                                    accid.ges="f"/>
+                                    accid.ges="n"/>
                               <note xml:id="xf707eb86-2db5-40b6-841b-d288f9feaf1a"
                                     pname="c"
                                     oct="5"
@@ -16444,12 +16443,15 @@
                      <measure n="71" xml:id="xa9b09b20-1467-43a8-bba6-89f2075b7b2e">
                         <staff xml:id="x8ac3527f-9904-42bb-baf9-61d623873d4b" n="1">
                            <layer xml:id="xc243bc3e-919d-4254-b8b3-9e29969eb2de" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xd91d6f2c-2f5d-4888-9ee0-6f91b3179c8c">
+                                       First note of the following beam should be d-flat.
+                                 </annot>
                               <beam xml:id="xf188d7c2-e402-4de4-b972-14904239a16b">
                                  <note xml:id="xd91d6f2c-2f5d-4888-9ee0-6f91b3179c8c"
                                        pname="d"
                                        oct="4"
                                        dur="16"
-                                       /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                       />
                                  <note xml:id="xf18dcc98-3a4d-4ddb-adc2-c94e8eb8bfde"
                                        pname="d"
                                        oct="4"
@@ -16544,12 +16546,15 @@
                      <measure n="72" xml:id="xb85a4110-2722-40d6-91d1-785886f00096">
                         <staff xml:id="xaec3deb2-3391-45a7-9097-dc55bf9a0a58" n="1">
                            <layer xml:id="xa0ff2b41-694a-4dc6-8df8-d339ba6744c2" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x1e751896-0ce0-4317-a0f0-a916a9914d1f">
+                                       First note of the following beam should be d-flat.
+                                 </annot>
                               <beam xml:id="x3dc1ec14-5291-4c01-b9b3-9808959ddcc7">
                                  <note xml:id="x1e751896-0ce0-4317-a0f0-a916a9914d1f"
                                        pname="d"
                                        oct="4"
                                        dur="16"
-                                       /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                       />
                                  <note xml:id="x94a734df-b225-487f-99d0-5b7d2cdd3091"
                                        pname="d"
                                        oct="4"
@@ -18621,7 +18626,7 @@
                               <note xml:id="xe33fe134-971d-4c3d-95f5-bf40465e23cb"
                                     pname="c"
                                     oct="5"
-                                    dur="4"
+                                    dur="4" accid.ges="n"
                                     />
                               <note xml:id="x8110860e-7141-40c0-a53a-9f00e2b27320"
                                     pname="b"
@@ -18751,7 +18756,7 @@
                               <note xml:id="x63a962f8-3064-4576-8bc4-915e8b9fd279"
                                     pname="b"
                                     oct="4"
-                                    dur="4"
+                                    dur="4" accid.ges="n"
                                     />
                               <note xml:id="xf22ee321-79cc-46d5-b8c0-d3c1a2b43450"
                                     pname="c"
@@ -20319,7 +20324,7 @@
                                tstamp="2"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                      </measure>
                      <measure n="4" xml:id="xc16c64f6-7e3a-4a0b-abe4-0eab6998578a">
                         <staff xml:id="x4ab547c6-bf0c-49d7-8d7c-12da69d7b6c8" n="1">
@@ -20711,7 +20716,7 @@
                                tstamp="2"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                      </measure>
                      <measure n="16" xml:id="x3b51b492-3031-48d5-9a54-ff8ab61fcada">
                         <staff xml:id="x55acbe3c-dee8-417f-9e0d-98408341a70a" n="1">
@@ -21533,6 +21538,9 @@
                                        dur="8"
                                        />
                               </beam>
+                                 <annot type="sic" resp="#BW" plist="#x34834c28-8dee-4807-8e80-1ea94bf25db5">
+                                       Wrong pitch of the third note in the following beam: it should be g instead of a.
+                                 </annot>
                               <beam xml:id="x68dbbdb2-5e15-4785-acfa-0b0cd5fa884d">
                                  <note xml:id="x7df1d0ed-4af3-46bb-9a3f-61899a45f0d2"
                                        pname="c"
@@ -21548,7 +21556,7 @@
                                        pname="a"
                                        oct="3"
                                        dur="8"
-                                       /> <!-- Fehler in OA: Tonhöhe müsste g statt a lauten -->
+                                       />
                                  <note xml:id="xad0a8d0a-b1fb-427b-8cfe-fd6a61e189a0"
                                        pname="e"
                                        oct="3"
@@ -22248,6 +22256,9 @@
                      <measure n="63" xml:id="xfee43517-cad6-4e3c-b270-5ff9eeb54f5c">
                         <staff xml:id="x185ef9e7-b6a0-4670-81e0-d05489b93202" n="1">
                            <layer xml:id="x23798fb0-7b9a-4b03-a326-e47730a14a3c" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xa2a6df64-3bcf-4fba-bd7a-0dc71b4d5826">
+                                       Second note of the following beam should be e-flat.
+                                 </annot>
                               <beam xml:id="x447297d6-c6cc-4386-b370-baa2b4ad95d0">
                                  <note xml:id="xf1e76336-5be1-4a04-a6fd-9cd64d820472"
                                        pname="e"
@@ -22259,7 +22270,7 @@
                                        pname="e"
                                        oct="4"
                                        dur="8"
-                                       /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                       />
                                  <note xml:id="x69ffd7f2-dcb1-4742-ba8b-ab02328824e0"
                                        pname="e"
                                        oct="4"
@@ -22441,6 +22452,9 @@
                      <measure n="67" xml:id="xc720f8dc-d594-4938-aa2b-79ce39dd8de4">
                         <staff xml:id="x21fa9d86-1bca-4fa0-b575-6bdd81249bb2" n="1">
                            <layer xml:id="x5643c7a2-a55e-40d5-aeb5-65b53ba1ef23" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x1b3b1f9c-40ed-4355-b03d-7633d8df6723">
+                                       Second note of the following beam should be e-flat.
+                                 </annot>
                               <beam xml:id="xa12b1ea0-2d4b-46b5-b8f6-5d5a429156a9">
                                  <note xml:id="x3cce3948-a0f0-4e6d-a138-8ae99c8ceebd"
                                        pname="e"
@@ -22456,7 +22470,7 @@
                                        oct="2"
                                        dur="8"
                                        
-                                       artic="stacc"> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                       artic="stacc">
                                     
                                  </note>
                                  <note xml:id="x8429d4e0-d490-408b-b6c8-b1252b73fca5"
@@ -24788,7 +24802,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x89206c3f-3073-49d1-a41e-6821884a7bc1"
-                               label="direction"
+                               
                                tstamp="3.5"
                                place="below"
                                staff="1">
@@ -24922,7 +24936,7 @@
                                tstamp="3.5"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                      </measure>
                      <measure n="136" xml:id="x8f49fd18-0d8a-4e0b-b56e-7f25b5673442">
                         <staff xml:id="x24b4b4e8-9362-486e-a695-6bb674d4b84d" n="1">
@@ -25483,7 +25497,7 @@
                            </layer>
                         </staff>
                         <dynam xml:id="x919b08d6-3608-4e21-978b-22a22babc1c4"
-                               label="direction"
+                               
                                tstamp="3"
                                place="below"
                                staff="1">
@@ -26198,6 +26212,9 @@
                      <measure n="10" xml:id="xdc4210bd-fbe4-431c-b471-d5ed36b2267f">
                         <staff xml:id="x28fb6a89-2462-4518-8c5f-2a1a70ecd794" n="1">
                            <layer xml:id="x9b25b5be-81e9-4f63-9737-5f8deac6f5b8" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xd0e73614-a01f-420d-ba2f-627aa988aee8">
+                                       Second note: natural is missing.
+                                 </annot>
                               <note xml:id="x23a67def-cc3e-436e-b09a-99c135a9155d"
                                     pname="f"
                                     oct="5"
@@ -26210,7 +26227,7 @@
                                     dur="8"
                                     
                                     accid.ges="f"
-                                    artic="stacc"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                    artic="stacc">
                                  
                               </note>
                               <note xml:id="x67f4603e-5582-418c-99ab-04535716ad89"
@@ -26792,7 +26809,6 @@
                         <fermata xml:id="xf7e6c791-7005-4ccd-8220-3daa62fefda6"
                                  startid="#xc0b14ab8-b5b3-46f8-ae33-b17426859888"
                                  staff="1"
-                                 place="above"
                                  form="norm"/>
                      </measure>
                      <measure n="33" xml:id="xdbe50930-96eb-4007-9910-fecfb49b1189">
@@ -28701,7 +28717,6 @@
                         </staff>
                         <fermata xml:id="x8a8b29bc-af0d-4b49-9a95-6e1d48e4802c"
                                  staff="1"
-                                 place="above"
                                  startid="#xbf7d765f-36d3-4c14-9b71-8f248d2135ac"/>
                            <dir xml:id="x43aae218-5b61-4e96-9632-64ccc6dc01ef"
                                  staff="1"
@@ -28752,11 +28767,14 @@
                                     dur="4"
                                     
                                     accid.ges="f"/>
+                                 <annot type="sic" resp="#BW" plist="#x82c0fd82-3dd1-42ac-a882-76e1fca68c0f">
+                                       Following note should be g-flat.
+                                 </annot>
                               <note xml:id="x82c0fd82-3dd1-42ac-a882-76e1fca68c0f"
                                     pname="g"
                                     oct="4"
                                     dur="4"
-                                    /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                    />
                               <note xml:id="xe58c597c-43fe-4931-8e90-e5f7e3e58f1e"
                                     pname="c"
                                     oct="4"
@@ -28866,11 +28884,14 @@
                                     dur="4"
                                     
                                     accid.ges="f"/>
+                                 <annot type="sic" resp="#BW" plist="#xedd1a4bf-c381-4bec-9f5f-4bc09a915769">
+                                       Following note should be g-flat.
+                                 </annot>
                               <note xml:id="xedd1a4bf-c381-4bec-9f5f-4bc09a915769"
                                     pname="g"
                                     oct="5"
                                     dur="4"
-                              /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                              />
                               <note xml:id="xfacfbc8d-e458-4b7a-b013-f4de3b62f2f3"
                                     pname="c"
                                     oct="5"
@@ -29078,7 +29099,6 @@
                            </layer>
                         </staff>
                         <fermata xml:id="x0e8f8c8e-ac77-44c4-8b44-713cf8838aa6"
-                                 place="above"
                                  staff="1"
                                  form="norm"
                                  startid="#xeb20cf87-d728-40db-bc86-e43a74521b06"/>
@@ -29233,13 +29253,16 @@
                      <measure n="8" xml:id="xc3247231-26d6-42e4-87cd-a837741ec6ff">
                         <staff xml:id="x0032ced8-a3ca-44c8-9693-0bf243d6849a" n="1">
                            <layer xml:id="x1a351d60-3eb4-4f89-8337-85029fb517b8" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x288e70ae-0db0-4ac3-b387-1e37ebaca349">
+                                       Following note: natural is missing.
+                                 </annot>
                               <note xml:id="x288e70ae-0db0-4ac3-b387-1e37ebaca349"
                                     pname="e"
                                     oct="4"
                                     dur="4"
                                     
                                     accid.ges="f"
-                                    artic="stacc"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                    artic="stacc">
                                  
                               </note>
                               <rest xml:id="x9556fd76-828a-4065-9ba8-045ab23910a6" dur="4"/>
@@ -29812,7 +29835,6 @@
                         <fermata xml:id="x5b2c73b1-eb68-4601-9687-0ac90a4df850"
                                  staff="1"
                                  startid="#x9736e3e2-2034-41c8-b1b6-55b76a90589f"
-                                 place="above"
                                  form="norm"/>
                            <dynam xml:id="x3ff5bae8-43d4-4bc8-b9be-5aa76015a52e"
                                tstamp="1"
@@ -29827,15 +29849,13 @@
                                     oct="3"
                                     dur="2"
                                     dots="1"
-                                    
                                     accid.ges="f"/>
                            </layer>
                         </staff>
                         <dynam xml:id="x0b6760bb-d4bd-46d1-bf90-93e41ead0258"
                                tstamp="1"
                                place="below"
-                               staff="1"
-                               label="words">cres</dynam>
+                               staff="1">cres</dynam>
                      </measure>
                      <measure n="34" xml:id="x6689a675-77e2-4590-8082-52f968489a64">
                         <staff xml:id="xf156e712-bb7c-43b1-955c-8d932df38736" n="1">
@@ -30351,6 +30371,9 @@
                                     artic="stacc">
                                  
                               </note>
+                                 <annot type="sic" resp="#BW" plist="#x9b332a29-dea4-4c52-9e36-bec1ec03b651">
+                                       Second note in the following beam: natural is missing.
+                                 </annot>
                               <beam xml:id="x97a79fb3-c0c9-48ab-bf91-ed86b5113a60">
                                  <note xml:id="x03bd0e1e-f0da-400a-83eb-c092b3c73cb7"
                                        pname="c"
@@ -30362,7 +30385,7 @@
                                        oct="4"
                                        dur="8"
                                        
-                                       accid.ges="f"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                       accid.ges="f"/>
                                  <note xml:id="xda3da910-9c6d-4f6d-bf92-8aa70a54039a"
                                        pname="c"
                                        oct="5"
@@ -30457,14 +30480,17 @@
                      </measure>
                      <measure n="53" xml:id="xdf30c38e-df93-4ace-a67c-30915733ce6f">
                         <staff xml:id="x09d549c3-039f-4ecb-a60b-2b6246160354" n="1">
-                           <layer xml:id="x58c1f87d-6928-4212-a817-58ffd2d686c3" n="1">
+                              <layer xml:id="x58c1f87d-6928-4212-a817-58ffd2d686c3" n="1">
+                                    <annot type="sic" resp="#BW" plist="#x16b23135-fa47-4c43-b027-49fd6b72e865">
+                                    Following note: natural is missing.
+                              </annot>
                               <note xml:id="x16b23135-fa47-4c43-b027-49fd6b72e865"
                                     pname="a"
                                     oct="4"
                                     dur="4"
                                     
                                     accid.ges="f"
-                                    artic="stacc"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                    artic="stacc">
                                  
                               </note>
                               <rest xml:id="xc88ca7c2-5789-48c9-80ff-ff1bea6504fe" dur="4"/>
@@ -30621,14 +30647,16 @@
                      <measure n="58" xml:id="x6663ec92-8408-4372-95de-1bc56938e5fd">
                         <staff xml:id="x77fcb6ba-661f-4cdc-9640-e5f6f3f2eee9" n="1">
                            <layer xml:id="xcc417de9-be65-401a-9329-3256cd675406" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xaf70c727-fa63-4695-b1b8-c8a4f1044efb">
+                                       Following note: natural is missing.
+                                 </annot>
                               <note xml:id="xaf70c727-fa63-4695-b1b8-c8a4f1044efb"
                                     pname="a"
                                     oct="4"
                                     dur="4"
                                     
                                     accid.ges="f"
-                                    artic="stacc"> <!-- Fehler in OA: Auflösungszeichen fehlt -->
-                                 
+                                    artic="stacc">
                               </note>
                               <beam xml:id="x661d3e18-ffdc-4646-b014-e5a135dba937">
                                  <note xml:id="x3028a93d-7d39-43e3-a9da-3ae2166f5959"
@@ -30692,12 +30720,15 @@
                      <measure n="60" xml:id="xb4a09d07-7e1a-43be-92bc-fc39edfcff9e">
                         <staff xml:id="x33b68fbd-f0a1-4ac1-9fd8-5f7d6392eca2" n="1">
                            <layer xml:id="x43823721-2e1e-41fc-bc86-3fe9f426fe59" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xe34cc933-96cb-4191-81ae-0c15f52f0388">
+                                       Following note: natural is missing.
+                                 </annot>
                               <note xml:id="xe34cc933-96cb-4191-81ae-0c15f52f0388"
                                     pname="a"
                                     oct="4"
                                     dur="4"
                                     
-                                    accid.ges="f"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                    accid.ges="f"/>
                               <rest xml:id="x760ce045-87ec-46bf-95bb-0b802177ad11" dur="4"/>
                               <rest xml:id="xf170446a-8b1b-41af-aafb-cd4f54c24082" dur="4"/>
                            </layer>
@@ -30962,12 +30993,15 @@
                      <measure n="74" xml:id="x0cc96869-3bd6-43de-a2ba-a49851167d54">
                         <staff xml:id="x37ac9667-f628-4e8a-848f-e98c739921c3" n="1">
                            <layer xml:id="xc157f331-035c-4d87-8ac5-4735e81d2268" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x8331f29a-60d4-4706-a7b5-d2d1f6db9ca2">
+                                       Following note: natural is missing.
+                                 </annot>
                               <note xml:id="x8331f29a-60d4-4706-a7b5-d2d1f6db9ca2"
                                     pname="g"
                                     oct="4"
                                     dur="2"
                                     
-                                    accid.ges="f"/> <!-- Fehler in OA: Auflösungszeichen fehlt -->
+                                    accid.ges="f"/>
                               <note xml:id="xfe7f2824-057a-4ce6-bfd7-9709bda16b08"
                                     pname="a"
                                     oct="4"
@@ -31390,7 +31424,6 @@
                            <fermata xml:id="x11dc17fb-81ab-422a-92db-b92daad55069"
                                  staff="1"
                                  startid="#x246dfb51-39e2-47c0-be88-d839b92837fa"
-                                 place="above"
                                  form="norm"/>
                            <dir xml:id="x2b69ecc9-60ae-47f5-9bf3-11e24c71ad97"
                                  staff="1"
@@ -31497,12 +31530,15 @@
                      <measure n="106" xml:id="x1c4f561e-e23e-4e29-9dea-3ed94820bdf7">
                         <staff xml:id="x2eafd933-323b-474c-b6be-4958e18dc9e7" n="1">
                            <layer xml:id="x035f639d-a902-4e84-b7cf-a0b0f9b3a662" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x132d75a9-61d5-45b9-b8b6-15964c9715d3">
+                                       Following note should be g-flat.
+                                 </annot>
                               <note xml:id="x132d75a9-61d5-45b9-b8b6-15964c9715d3"
                                     pname="g"
                                     oct="4"
                                     dur="2"
                                     dots="1"
-                              /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                              />
                            </layer>
                         </staff>
                         <slur xml:id="x04618b56-4a2f-45bf-8219-cdc54246fc52"
@@ -31673,7 +31709,6 @@
                         </staff>
                         <fermata xml:id="x9494ae54-512d-44db-9969-ae109dc7e7c1"
                                  staff="1"
-                                 place="above"
                                  form="norm"
                                  startid="#xc4e38ea2-cf1b-4304-8f23-96f67f61c64d"/>
                      </measure>
@@ -32399,7 +32434,6 @@
                         <fermata xml:id="x16fb8d11-40a2-4df8-9608-4d785a273ced"
                                  staff="1"
                                  startid="#x6d50b858-db69-4619-a7f6-a562cac4307a"
-                                 place="above"
                                  form="norm"/>
                      </measure>
                      <measure n="33" xml:id="xc721bf21-b78c-49e8-896f-8e5dc1b609a9">
@@ -33150,9 +33184,12 @@
                   <section xml:id="x15be20d2-75be-4ffd-bd81-47264322cefd"
                            n="2"
                            label="Maggiore">
+                        <annot type="sic" resp="#BW" plist="#xa303225c-be1c-4dfb-a6d9-87b02e0e9848">
+                              Metercount and meterunit are missing in the original edition. Corrected here.
+                        </annot> <!-- anders formulieren? -->
                      <scoreDef xml:id="xa303225c-be1c-4dfb-a6d9-87b02e0e9848"
                                key.sig="5f"
-                               key.mode="major" keysig.showchange="true" meter.count="3" meter.unit="4"> <!-- Fehler in OA: Taktart-Angabe 3/4 fehlt, hier hinzugefügt -->
+                               key.mode="major" keysig.showchange="true" meter.count="3" meter.unit="4">
                         <staffGrp xml:id="x753ede68-1c0e-44fc-afde-3508f6804516">
                               <staffDef xml:id="x38714861-eca9-4ec5-9b71-3833331ecdf2" n="1" 
                                     />
@@ -33802,7 +33839,6 @@
                         <fermata xml:id="x0e28e75b-cd02-4556-8fc4-8d67e3d04685"
                                  staff="1"
                                  startid="#xf8aa581a-305c-45ff-ab56-893b4d31bb91"
-                                 place="above"
                                  form="norm"/>
                            <dir xml:id="xb5b0b3d6-bb00-4b2c-a2d3-d6866dcdd5db"
                                  staff="1"
@@ -33849,12 +33885,15 @@
                      <measure n="102" xml:id="xdff6522e-814a-499f-b90e-5a69f7ccfcf8">
                         <staff xml:id="xfb5206b9-220d-4f30-ad09-9a1a970ebeec" n="1">
                            <layer xml:id="x8690de4c-7038-4aa0-bd04-28b8d3adc7f2" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x2068e5a2-a61a-4d4d-98be-cadd58e862c3">
+                                       Following note should be g-flat.
+                                 </annot>
                               <note xml:id="x2068e5a2-a61a-4d4d-98be-cadd58e862c3"
                                     pname="g"
                                     oct="3"
                                     dur="2"
                                     dots="1"
-                                    /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                    />
                            </layer>
                         </staff>
                      </measure>
@@ -34077,7 +34116,6 @@
                         </staff>
                         <fermata xml:id="x8e2cbdb8-ad36-4f94-849b-6deb866c8ef0"
                                  staff="1"
-                                 place="above"
                                  startid="#xc380cab4-a488-40f5-9704-94831c3e3fc8"/>
                      </measure>
                   </section>
@@ -34769,13 +34807,11 @@
                         <fermata xml:id="xcd87f473-c1fe-4135-9799-76878ec14bd3"
                                  staff="1"
                                  startid="#x54cb44c2-075a-429e-a814-5ccb18ec30d8"
-                                 place="above"
                                  form="norm"/>
                            <dynam xml:id="xb95ae5c7-72cd-474b-87d2-22191bf1710c"
                                tstamp="1"
                                place="below"
-                               staff="1">p  </dynam>
-                           
+                               staff="1">p</dynam>
                      </measure>
                      <measure n="33" xml:id="x25552f7c-a7f0-45a9-bb14-70a3cb481b8d">
                         <staff xml:id="x8c83c63d-2d03-4d28-ae0e-f80fc2805fb1" n="1">
@@ -36339,7 +36375,6 @@
                         </staff>
                         <fermata xml:id="xa0a9ef6c-31b2-4d8e-84ff-bf8925a0d11c"
                                  form="norm"
-                                 place="above"
                                  staff="1"
                                  startid="#x6d6111c4-96d5-4504-853a-8a43ab452e66"/>
                      </measure>
@@ -37586,8 +37621,7 @@
                               staff="1"/>
                         <fermata xml:id="xa10e364d-f19b-4122-85d0-d6cf7da1c611"
                                  staff="1"
-                                 startid="#xf0fcc7af-dfed-40dc-99ab-a9b5aaf08261"
-                                 place="above"/>
+                                 startid="#xf0fcc7af-dfed-40dc-99ab-a9b5aaf08261"/>
                      </measure>
                      <measure n="31" xml:id="x527d55ec-9c8c-4fc8-b036-c9f4e710ea7c">
                         <staff xml:id="x640b4d4b-059a-46a5-af39-2c4618a96273" n="1">
@@ -39877,7 +39911,10 @@
                                  </tuplet>
                                  
                                  
-                              </beam>
+                              </beam> 
+                                 <annot type="sic" resp="#BW" plist="#xc90cd0e2-d844-4732-8c96-835b9ae96623">
+                                    Second note of the following beam should be e-flat.
+                              </annot>
                               <beam xml:id="xd9349a06-2e64-4cf5-bc9b-806fa84a6b4f">
                                  <tuplet xml:id="x3da9cd96-fece-47e0-b297-fe40c444e588"
                                          num="3"
@@ -39893,7 +39930,7 @@
                                           pname="e"
                                           oct="5"
                                           dur="8"
-                                          /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                          />
                                     <note xml:id="x48976c16-3408-4e4c-8baa-2fcb32e59059"
                                           pname="g"
                                           oct="5"
@@ -40129,11 +40166,14 @@
                                  
                                  
                               </beam>
+                                 <annot type="sic" resp="#BW" plist="#x9ebb5ca0-ecbe-4142-804d-5aaee383f5f1">
+                                       Following note should be d-flat.
+                                 </annot>
                               <note xml:id="x9ebb5ca0-ecbe-4142-804d-5aaee383f5f1"
                                     pname="d"
                                     oct="6"
                                     dur="4"
-                              /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                              />
                               <rest xml:id="x4b1d8be8-5937-4213-a4c6-c6a8baa73b2c" dur="4"/>
                            </layer>
                         </staff>
@@ -42723,8 +42763,7 @@
                         </dynam>
                         <fermata xml:id="xcaec5966-64b5-4ab4-a46f-d714f8aeb0b1"
                                  staff="1"
-                                 startid="#x28b67db7-a1c0-4826-a7ae-2573259bfab6"
-                                 place="above"/>
+                                 startid="#x28b67db7-a1c0-4826-a7ae-2573259bfab6"/>
                      </measure>
                      <measure n="84" xml:id="x459c0452-17bf-4da4-ba2c-88efb347348d">
                         <staff xml:id="x098b367c-1917-44b2-bce8-cb48645a01e0" n="1">
@@ -43728,8 +43767,7 @@
                         </dynam>
                         <fermata xml:id="x6e0f19b9-5e0c-4f7d-a45c-aea4aa94e18a"
                                  staff="1"
-                                 startid="#x148ba44a-a717-40b1-936a-2f56c98c3563"
-                                 place="above"/>
+                                 startid="#x148ba44a-a717-40b1-936a-2f56c98c3563"/>
                         <tie xml:id="x10a4fd08-e216-4716-a7d1-94d62b348823"
                              staff="1"
                              startid="#x42c21dfd-209c-490d-8eb1-d93558b943b2"
@@ -44848,8 +44886,7 @@
                         </dynam>
                         <fermata xml:id="x6eb214e7-fe49-4d2f-94d9-3d684a3d60af"
                                  staff="1"
-                                 startid="#x4012281d-573a-4a86-b936-7968d3cbf4a5"
-                                 place="above"/>
+                                 startid="#x4012281d-573a-4a86-b936-7968d3cbf4a5"/>
                      </measure>
                      <measure n="122" xml:id="x9d6e2d2d-2c42-4ea6-946c-54c05a4f32bd">
                         <staff xml:id="xf90dd040-42ee-40dc-96e8-fb8adb2c7de2" n="1">
@@ -46128,7 +46165,7 @@
                                tstamp="1.2"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                         <slur xml:id="x2367a681-5543-4b00-974d-629e3ae1d53a"
                               startid="#x97651cd0-92cc-4c03-a63e-ca3942c29e6c"
                               
@@ -46448,8 +46485,7 @@
                         </dynam>
                         <fermata xml:id="xb4ca82ac-4bd5-49f2-a3fb-b0d373c35cb6"
                                  staff="1"
-                                 startid="#x01ecd152-d595-4231-abf1-849e62207610"
-                                 place="above"/>
+                                 startid="#x01ecd152-d595-4231-abf1-849e62207610"/>
                         <tie xml:id="x70aaffd4-012e-43f0-a19a-3b5fa922c169"
                              staff="1"
                              startid="#xd9e15363-eef4-45fd-8317-924963bb6d55"
@@ -47592,6 +47628,9 @@
                      <measure n="61" xml:id="xc51cc124-d9ec-4366-8af6-7d90b0acaf12">
                         <staff xml:id="x3e4f6563-6e63-4736-b217-02ca9f41eb65" n="1">
                            <layer xml:id="x6a0caa4d-3e45-4784-a028-52dc3803ac16" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x548c87d3-d3bd-45a5-b05b-fbdd901d434e">
+                                       Second note of the second chord in the following beam should be e-flat.
+                                 </annot>
                               <beam xml:id="x74382d0f-729f-430d-a94c-343c57ed617f">
                                  <tuplet xml:id="x9a2fa6b5-3711-4630-b672-dc4d28138555"
                                          num="3"
@@ -47602,13 +47641,13 @@
                                            dur="8"
                                            >
                                        <note xml:id="xccf5af01-9ff2-47b4-a6d9-bad375216c45" pname="g" oct="3"/>
-                                       <note xml:id="xec0870c2-389d-46eb-a53d-2e5c7a6eedc4" pname="e" oct="4"/>
+                                       <note xml:id="xec0870c2-389d-46eb-a53d-2e5c7a6eedc4" pname="e" oct="4" accid.ges="f"/>
                                     </chord>
                                     <chord xml:id="xb21fbbe7-b33a-424f-809d-e40464e15b13"
                                            dur="8"
                                            >
                                        <note xml:id="xdd263eaf-4231-4f17-911c-15737e650a32" pname="g" oct="3"/>
-                                          <note xml:id="x548c87d3-d3bd-45a5-b05b-fbdd901d434e" pname="e" oct="4"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                          <note xml:id="x548c87d3-d3bd-45a5-b05b-fbdd901d434e" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="x7fc775f4-9803-480d-bbb5-ec3dde355e21"
                                            dur="8"
@@ -47630,19 +47669,19 @@
                                            dur="8"
                                            >
                                        <note xml:id="x25df5e19-1b35-4b11-99a6-33824e4e4496" pname="g" oct="3"/>
-                                       <note xml:id="x6cfff2ce-431e-42cc-b5b7-a332fcd394ef" pname="e" oct="4"/>
+                                       <note xml:id="x6cfff2ce-431e-42cc-b5b7-a332fcd394ef" pname="e" oct="4" />
                                     </chord>
                                     <chord xml:id="x8f097375-e6c3-4636-98c6-56d830e2b910"
                                            dur="8"
                                            >
                                        <note xml:id="xb71b886c-4be9-4f44-ba14-38137de94b84" pname="g" oct="3"/>
-                                       <note xml:id="x3671cb58-b933-41f6-b69d-c963ec1d2194" pname="e" oct="4"/>
+                                       <note xml:id="x3671cb58-b933-41f6-b69d-c963ec1d2194" pname="e" oct="4" />
                                     </chord>
                                     <chord xml:id="x3772a2b5-4230-4374-a72d-0149989f52f5"
                                            dur="8"
                                            >
                                        <note xml:id="x03b6f312-62a1-42e9-829e-e6413243c286" pname="g" oct="3"/>
-                                       <note xml:id="x0e9394ee-523e-430c-a041-c4e57334563d" pname="e" oct="4"/>
+                                       <note xml:id="x0e9394ee-523e-430c-a041-c4e57334563d" pname="e" oct="4" />
                                     </chord>
                                  </tuplet>
                                  
@@ -47658,19 +47697,19 @@
                                            dur="8"
                                            >
                                        <note xml:id="xa645d5e8-3df9-415d-a24f-67319490a6ce" pname="g" oct="3"/>
-                                       <note xml:id="x8f94bb0a-8db8-41d3-a35f-2820147341c5" pname="e" oct="4"/>
+                                       <note xml:id="x8f94bb0a-8db8-41d3-a35f-2820147341c5" pname="e" oct="4" />
                                     </chord>
                                     <chord xml:id="xba81e3d7-c258-4a7c-8566-494bd3524591"
                                            dur="8"
                                            >
                                        <note xml:id="xe4f70bdd-75a5-4476-a6cb-b72b155dfb26" pname="g" oct="3"/>
-                                       <note xml:id="xfcab57bf-e065-451a-8292-16f768b27ded" pname="e" oct="4"/>
+                                       <note xml:id="xfcab57bf-e065-451a-8292-16f768b27ded" pname="e" oct="4" />
                                     </chord>
                                     <chord xml:id="x12c44bc2-f668-440f-8049-5d65a62f1789"
                                            dur="8"
                                            >
                                        <note xml:id="x30b87737-a5d7-4ddd-8fb9-504ce49d7d9a" pname="g" oct="3"/>
-                                       <note xml:id="x39c95dc4-b3f5-48f7-b05b-16ca180c656e" pname="e" oct="4"/>
+                                       <note xml:id="x39c95dc4-b3f5-48f7-b05b-16ca180c656e" pname="e" oct="4" />
                                     </chord>
                                  </tuplet>
                                  
@@ -47686,19 +47725,19 @@
                                            dur="8"
                                            >
                                        <note xml:id="xf446e77c-d23b-4e13-a11b-487e74c6c4bd" pname="g" oct="3"/>
-                                       <note xml:id="x69f42e14-2145-4ef1-adc0-14d233cc59e6" pname="e" oct="4"/>
+                                       <note xml:id="x69f42e14-2145-4ef1-adc0-14d233cc59e6" pname="e" oct="4" />
                                     </chord>
                                     <chord xml:id="xa2e171c9-dd25-466b-bc09-e93f62831b8d"
                                            dur="8"
                                            >
                                        <note xml:id="x502128c4-5d8b-403d-bb4e-4704beef9a2f" pname="g" oct="3"/>
-                                       <note xml:id="x816e729e-ec5d-4f84-8840-c4c0e4a3617c" pname="e" oct="4"/>
+                                       <note xml:id="x816e729e-ec5d-4f84-8840-c4c0e4a3617c" pname="e" oct="4" />
                                     </chord>
                                     <chord xml:id="x9a468d1f-7043-4e2f-87ad-fe365e01b0f4"
                                            dur="8"
                                            >
                                        <note xml:id="xa7054413-b434-403b-96cd-6bdcb09c24fb" pname="g" oct="3"/>
-                                       <note xml:id="x93f2e03a-bf87-4e52-a0dd-3be708085047" pname="e" oct="4"/>
+                                       <note xml:id="x93f2e03a-bf87-4e52-a0dd-3be708085047" pname="e" oct="4" />
                                     </chord>
                                  </tuplet>
                                  
@@ -47710,12 +47749,15 @@
                      <measure n="62" xml:id="xf70c6356-d1ab-4393-b3cd-f3653e049f7b">
                         <staff xml:id="x1a3385c8-ca9a-46d2-8a8b-bced4f543554" n="1">
                            <layer xml:id="xc6005ff8-1cfe-43cc-89e7-d1118f7bb1da" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x20ae7db0-df98-44c3-abca-983d7574bfb4">
+                                       Second note of the following chord should be e-flat.
+                                 </annot>
                               <chord xml:id="x01480612-386b-4f3a-99d0-dc08c1ba4b8b" dur="1">
                                  <note xml:id="x2e1dc0f5-2132-45d8-9ea7-63f8417193d4"
                                        pname="a"
                                        accid="f"
                                        oct="3"/>
-                                    <note xml:id="x20ae7db0-df98-44c3-abca-983d7574bfb4" pname="e" oct="4"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                    <note xml:id="x20ae7db0-df98-44c3-abca-983d7574bfb4" pname="e" oct="4"/>
                               </chord>
                            </layer>
                         </staff>
@@ -47737,6 +47779,9 @@
                      <measure n="63" xml:id="x1e336dbe-506d-404b-947b-80dc3a4ce934">
                         <staff xml:id="xba3e637d-290f-46be-9bed-47695eca2503" n="1">
                            <layer xml:id="x4efe1b17-0489-4f2b-9f59-aaa942f92b1f" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x4822e25e-b9d0-4f11-8ec8-77e810ce4d81 #x5f43bffd-c7a6-4c17-bbac-1cca5e309580">
+                                       First and second note of the second chord in the following beam should be a-flat and e-flat.
+                                 </annot>
                               <beam xml:id="x72c3af74-67eb-4af9-8ffd-0b2db274d9fa">
                                  <tuplet xml:id="x48e4bf2b-4f9d-4e5e-a42d-ad245705c799"
                                          num="3"
@@ -47746,19 +47791,19 @@
                                     <chord xml:id="xec90768b-a7b0-42d5-9c18-2ff93bf791db"
                                            dur="8"
                                            >
-                                       <note xml:id="x6fa9db07-af4e-4e61-9e0b-897fe17ce23b" pname="a" oct="3"/>
+                                       <note xml:id="x6fa9db07-af4e-4e61-9e0b-897fe17ce23b" pname="a" oct="3" accid.ges="f"/>
                                        <note xml:id="x9a9263a1-fe87-4214-9d50-16f8e9f7ff98" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="x068888ed-20a8-4e3b-b214-6308514ea102"
                                            dur="8"
                                            >
-                                          <note xml:id="x4822e25e-b9d0-4f11-8ec8-77e810ce4d81" pname="a" oct="3"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
-                                          <note xml:id="x5f43bffd-c7a6-4c17-bbac-1cca5e309580" pname="e" oct="4"/> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                          <note xml:id="x4822e25e-b9d0-4f11-8ec8-77e810ce4d81" pname="a" oct="3"/>
+                                          <note xml:id="x5f43bffd-c7a6-4c17-bbac-1cca5e309580" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="x50c37aff-90cc-4776-8dcc-284610c92f69"
                                            dur="8"
                                            >
-                                       <note xml:id="x09b6e774-346f-4d61-94e7-5724fd32fd87" pname="a" oct="3"/>
+                                          <note xml:id="x09b6e774-346f-4d61-94e7-5724fd32fd87" pname="a" oct="3"/>
                                        <note xml:id="x8ca7e043-f63d-417b-8bb6-4f03409ddccc" pname="e" oct="4"/>
                                     </chord>
                                  </tuplet>
@@ -47774,19 +47819,19 @@
                                     <chord xml:id="x02ab806f-05d3-40e7-8877-e61db764bc89"
                                            dur="8"
                                            >
-                                       <note xml:id="xefbf2a81-a748-44f1-8f5c-8e2a4f5dc75e" pname="a" oct="3"/>
+                                          <note xml:id="xefbf2a81-a748-44f1-8f5c-8e2a4f5dc75e" pname="a" oct="3"/>
                                        <note xml:id="x918903ca-8d71-4425-a19a-7f5638d0304f" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="x06670271-7e41-40c3-a659-42489d5ef0bb"
                                            dur="8"
                                            >
-                                       <note xml:id="xd64d8c4d-15a1-4d73-a834-c34977d18bd7" pname="a" oct="3"/>
+                                          <note xml:id="xd64d8c4d-15a1-4d73-a834-c34977d18bd7" pname="a" oct="3"/>
                                        <note xml:id="x210a6e52-31e0-40bb-8e7c-9ac97a88b3ed" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="xce14b53d-e16f-4da9-88c5-47e2e205669a"
                                            dur="8"
                                            >
-                                       <note xml:id="xd9517561-6e05-4750-9cd4-474d20dd39c1" pname="a" oct="3"/>
+                                          <note xml:id="xd9517561-6e05-4750-9cd4-474d20dd39c1" pname="a" oct="3"/>
                                        <note xml:id="x2e941e47-c415-4a95-8a53-f119e7c22513" pname="e" oct="4"/>
                                     </chord>
                                  </tuplet>
@@ -47802,19 +47847,19 @@
                                     <chord xml:id="x89d416ad-b9e0-44da-9f77-5fefde18dd3a"
                                            dur="8"
                                            >
-                                       <note xml:id="xfe5f5af7-2350-44a2-821b-b6828e5e2b33" pname="a" oct="3"/>
+                                          <note xml:id="xfe5f5af7-2350-44a2-821b-b6828e5e2b33" pname="a" oct="3"/>
                                        <note xml:id="x5a0faab3-8f24-4d3c-82ec-29488acf2f67" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="x79cedd34-a1b9-4f09-80c6-50e59f07b322"
                                            dur="8"
                                            >
-                                       <note xml:id="x140b1fb1-fc52-4c00-970f-092818cc2c7d" pname="a" oct="3"/>
+                                          <note xml:id="x140b1fb1-fc52-4c00-970f-092818cc2c7d" pname="a" oct="3"/>
                                        <note xml:id="xe31df344-a12d-4cf6-9d7e-07b3b7b72f54" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="xc522e02c-629d-4738-8f00-2634e68c9786"
                                            dur="8"
                                            >
-                                       <note xml:id="xa99b87cc-cc0b-4a35-90ff-9c2d880d9a8c" pname="a" oct="3"/>
+                                          <note xml:id="xa99b87cc-cc0b-4a35-90ff-9c2d880d9a8c" pname="a" oct="3"/>
                                        <note xml:id="x7492171c-0a62-436c-a97d-f5acd0d03d5e" pname="e" oct="4"/>
                                     </chord>
                                  </tuplet>
@@ -47830,19 +47875,19 @@
                                     <chord xml:id="x1f9bd141-6148-424c-a24b-6046a33dabcd"
                                            dur="8"
                                            >
-                                       <note xml:id="x6c485529-16f4-4c8b-aedb-a2464ca39ed5" pname="a" oct="3"/>
+                                          <note xml:id="x6c485529-16f4-4c8b-aedb-a2464ca39ed5" pname="a" oct="3"/>
                                        <note xml:id="x04fdf7af-5df4-49e4-b392-c7f65971b9bb" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="x4964b97e-35e5-46e4-9690-604c67ab65e7"
                                            dur="8"
                                            >
-                                       <note xml:id="xfd88e17e-c668-41b6-a0c2-d470e533988e" pname="a" oct="3"/>
+                                          <note xml:id="xfd88e17e-c668-41b6-a0c2-d470e533988e" pname="a" oct="3"/>
                                        <note xml:id="x30604b0f-3df9-4ae8-ad29-05bddc8d4279" pname="e" oct="4"/>
                                     </chord>
                                     <chord xml:id="x6492c6ff-e8c7-4f8c-a853-46805eac7771"
                                            dur="8"
                                            >
-                                       <note xml:id="xadea535b-5c8b-456d-bcbe-60dd149939af" pname="a" oct="3"/>
+                                          <note xml:id="xadea535b-5c8b-456d-bcbe-60dd149939af" pname="a" oct="3"/>
                                        <note xml:id="xfd170220-3c83-4a07-a303-fd63c48209ac" pname="e" oct="4"/>
                                     </chord>
                                  </tuplet>
@@ -48655,8 +48700,7 @@
                         
                         <fermata xml:id="x0a516697-bd08-409d-8f39-cb3899d7f3be"
                                  staff="1"
-                                 startid="#x894e58ac-c91b-4f40-9ff3-836ffa897a95"
-                                 place="above"/>
+                                 startid="#x894e58ac-c91b-4f40-9ff3-836ffa897a95"/>
                      </measure>
                      <measure n="84" xml:id="x4ab7df9b-621a-4e80-9516-3ee695f80198">
                         <staff xml:id="x2fa907c3-06d6-4ef6-8d1f-035501be952a" n="1">
@@ -49679,8 +49723,7 @@
                                staff="1">cres</dynam>
                         <fermata xml:id="x58039af9-b5e2-4c8c-9d1c-d4beecb80213"
                                  staff="1"
-                                 startid="#x97786190-6234-46c7-a1d4-6d19b764d6f2"
-                                 place="above"/>
+                                 startid="#x97786190-6234-46c7-a1d4-6d19b764d6f2"/>
                         <tie xml:id="xdbc6978c-07cc-4d00-80f9-22fd4a95989c"
                              staff="1"
                              startid="#x5de5ca29-7a9b-4f47-95ff-123b7bde15e8"
@@ -50759,7 +50802,7 @@
                                tstamp="2"
                                place="below"
                                staff="1"
-                               label="words">decres</dynam>
+                               >decres</dynam>
                         
                         
                      </measure>
@@ -50944,8 +50987,7 @@
                         </dynam>
                         <fermata xml:id="x7cfc962a-e42b-4520-93e8-963ef88891cc"
                                  staff="1"
-                                 startid="#xca2e690e-80ad-4527-9248-640a74423501"
-                                 place="above"/>
+                                 startid="#xca2e690e-80ad-4527-9248-640a74423501"/>
                      </measure>
                      <measure n="122" xml:id="x224f7745-d697-4e7a-a47c-45829a479dfb">
                         <staff xml:id="x638773c1-b597-453a-9232-ff21b9010ce2" n="1">
@@ -51199,7 +51241,7 @@
                                tstamp="1"
                                place="below"
                                staff="1"
-                               label="words">cres</dynam>
+                               >cres</dynam>
                         <dynam xml:id="xfc31df43-c2cb-4013-b9aa-0a36bc9302a0"
                                tstamp="2.1"
                                place="below"
@@ -52445,8 +52487,7 @@
                         </staff>
                         <fermata xml:id="x12a515e9-2b43-4410-ba3e-188f3284c422"
                                  staff="1"
-                                 startid="#xd2289b9e-5a1c-4602-a660-134b5f134c8a"
-                                 place="above"/>
+                                 startid="#xd2289b9e-5a1c-4602-a660-134b5f134c8a"/>
                            <dynam xml:id="xfee2b85e-b976-4675-8bd3-e4a83936fe2a"
                                tstamp="1"
                                place="below"
@@ -53292,6 +53333,9 @@
                                     oct="4"
                                     dur="2"
                                     />
+                                 <annot type="sic" resp="#BW" plist="#x77660273-7a86-4529-80f0-f1b351365e1b">
+                                       Wrong duration of the second note in the following beam, it should be 16 instead of 8.
+                                 </annot>
                               <beam xml:id="x974b214c-2810-4548-b3f8-af99b911f6fe">
                                  <note xml:id="xc02d6f31-0bfd-401b-8fc7-7a75e6f4a041"
                                        pname="c"
@@ -53304,7 +53348,7 @@
                                        accid="f"
                                        oct="4"
                                        dur="8"
-                                       /> <!-- Fehler OA: müsste 16tel sein -->
+                                       />
                               </beam>
                            </layer>
                         </staff>
@@ -54150,11 +54194,14 @@
                                     oct="5"
                                     dur="4"
                                     />
+                                 <annot type="sic" resp="#BW" plist="#x85dae0b6-7f47-40e1-870c-ba0510d40d69">
+                                       Following note should be d-flat.
+                                 </annot>
                               <note xml:id="x85dae0b6-7f47-40e1-870c-ba0510d40d69"
                                     pname="d"
                                     oct="4"
                                     dur="2"
-                                    /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                    />
                               <note xml:id="x25e4245b-5a90-40c6-ae91-457cb8c74c82"
                                     pname="f"
                                     oct="4"
@@ -54562,8 +54609,7 @@
                               staff="1"/>
                         <fermata xml:id="x2c4d70fa-c8b2-47cf-b479-e65b14c3b4c1"
                                  staff="1"
-                                 startid="#xd133d916-20c9-4328-94cb-425514914e1d"
-                                 place="above"/>
+                                 startid="#xd133d916-20c9-4328-94cb-425514914e1d"/>
                            <dynam xml:id="x4948735e-bce2-4b8d-a019-c0433865b56c"
                                tstamp="2"
                                place="below"
@@ -55300,11 +55346,14 @@
                      <measure n="105" xml:id="x6dd76794-3996-42e7-a021-062329f32184">
                         <staff xml:id="x009cddec-80d0-403e-bafc-8177a8ffc98c" n="1">
                            <layer xml:id="x16c34e0d-08c1-440d-8672-3acd3dafe80d" n="1">
+                                 <annot type="sic" resp="#BW" plist="#x54ebf828-91f1-4ee6-8a83-8c8fc19cae5e">
+                                       Following note should be g-flat.
+                                 </annot>
                               <note xml:id="x54ebf828-91f1-4ee6-8a83-8c8fc19cae5e"
                                     pname="g"
                                     oct="4"
                                     dur="2"
-                                    /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                    />
                               <note xml:id="x3bbb02d8-b28e-4e99-8edc-de2362ed3171"
                                     pname="f"
                                     oct="4"
@@ -55448,8 +55497,7 @@
                         
                         <fermata xml:id="x1a9dc93c-ff17-44f5-aaa6-302e16dcdf24"
                                  staff="1"
-                                 startid="#x337c2afe-7c5c-486f-833b-f282a21a1ec1"
-                                 place="above"/>
+                                 startid="#x337c2afe-7c5c-486f-833b-f282a21a1ec1"/>
                      </measure>
                      <measure n="109" xml:id="x67a126ad-2129-4ddc-8947-3411e95e8288">
                         <staff xml:id="xa92db3e3-6a81-407e-9e48-21b7504e79bd" n="1">
@@ -56155,8 +56203,7 @@
                         </dynam>
                         <fermata xml:id="x5a68897c-2561-43bd-a7a1-7dc24b073a00"
                                  staff="1"
-                                 startid="#x9514d1b3-d338-421a-9dd2-ce03481e983e"
-                                 place="above"/>
+                                 startid="#x9514d1b3-d338-421a-9dd2-ce03481e983e"/>
                         <tie xml:id="x328d5f24-c966-44cb-8acf-f0a6df459659"
                              staff="1"
                              startid="#xb2ebf99f-76b9-48ef-9e8c-db666a95b7d4"
@@ -57447,8 +57494,7 @@
                         </staff>
                         <fermata xml:id="xec3a8011-50b1-4cc0-afc7-c12e5ce55659"
                                  staff="1"
-                                 startid="#xf92937aa-82a8-4693-a4a9-183e8f979a31"
-                                 place="above"/>
+                                 startid="#xf92937aa-82a8-4693-a4a9-183e8f979a31"/>
                      </measure>
                      <measure n="31" xml:id="xdb14723d-a79e-4acc-9686-1187ba929dc6">
                         <staff xml:id="xd9baa703-0a34-4c2a-9268-fe1b10308372" n="1">
@@ -58514,11 +58560,14 @@
                      <measure n="73" xml:id="x59861a8d-c339-43aa-b515-58748993f79a">
                         <staff xml:id="xb4ff87de-a13f-4baf-b50f-c9beb1802ced" n="1">
                            <layer xml:id="x57ec148d-0f7d-41fe-8a73-961c8d1800d9" n="1">
+                                 <annot type="sic" resp="#BW" plist="#xf0bc7d89-2e91-4e30-9bdf-49bd51c93ade">
+                                       Following note should be d-flat.
+                                 </annot>
                               <note xml:id="xf0bc7d89-2e91-4e30-9bdf-49bd51c93ade"
                                     pname="d"
                                     oct="3"
                                     dur="4"
-                                    /> <!-- Fehler in OA: Erniedrigungszeichen fehlt -->
+                                    />
                               <rest xml:id="xfa016d61-e401-487c-b538-92641b86d93f" dur="4"/>
                               <rest xml:id="x2a0dc19a-e39c-41dc-b5f1-773d68c3e8c2" dur="4"/>
                               <note xml:id="x13105529-cfda-4720-834e-42b7722d040f"
@@ -58855,8 +58904,7 @@
                         </staff>
                         <fermata xml:id="x43da11c6-d392-4e3d-8938-e57d35bb8a5c"
                                  staff="1"
-                                 startid="#x9d548620-8dac-4e51-a220-51f472339abe"
-                                 place="above"/>
+                                 startid="#x9d548620-8dac-4e51-a220-51f472339abe"/>
                      </measure>
                      <measure n="84" xml:id="x2ed9906b-ff38-4054-9169-f5fba705f882">
                         <staff xml:id="xa0e40a50-3020-4cd3-9abb-26ae09296428" n="1">
@@ -59209,7 +59257,10 @@
                                     
                                     accid.ges="f"/>
                               <rest xml:id="x3af8f667-897e-43c1-9a9c-1e2e8d7efccd" dur="4"/>
-                              <rest xml:id="xc73ed8d6-0ecd-4b3b-9d66-aa0e125d26c4" dur="4"/> <!-- Fehler OA: müsste halbe Pause statt Viertelpause sein -->
+                                 <annot type="sic" resp="#BW" plist="#xc73ed8d6-0ecd-4b3b-9d66-aa0e125d26c4">
+                                       Wrong duration of the following rest, it should be 2 instead of 4.
+                                 </annot>
+                              <rest xml:id="xc73ed8d6-0ecd-4b3b-9d66-aa0e125d26c4" dur="4"/>
                                  <space xml:id="xed04db8d-9a09-4197-ba1d-cdf10f9cf5b8" dur="4"/>
                            </layer>
                         </staff>
@@ -59444,8 +59495,7 @@
                         
                         <fermata xml:id="x79090de3-1817-4a04-9413-7009a4ea9275"
                                  staff="1"
-                                 startid="#x3dd30a5b-8790-4fed-8142-f63a7037d0ec"
-                                 place="above"/>
+                                 startid="#x3dd30a5b-8790-4fed-8142-f63a7037d0ec"/>
                      </measure>
                      <measure n="109" xml:id="x55710238-279d-41c5-a66f-06f224516596">
                         <staff xml:id="x7bf306ad-d038-4290-a4df-17f88e139821" n="1">
@@ -60088,17 +60138,13 @@
                                     pname="g"
                                     oct="2"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                               <note xml:id="xaa7d95b3-c63e-4543-9598-b1e10674482e"
                                     pname="g"
                                     oct="2"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                            </layer>
                         </staff>
@@ -60115,24 +60161,19 @@
                                     pname="a"
                                     oct="3"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                               <note xml:id="x6ca350df-f5c1-4630-886d-17e0a1779a2a"
                                     pname="g"
                                     oct="3"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                            </layer>
                         </staff>
                         <fermata xml:id="x974b48c5-7f1b-49ed-b79b-16206111ffad"
                                  staff="1"
-                                 startid="#xd39620fc-55bb-4b9e-9fb0-00ad0475e7cb"
-                                 place="above"/>
+                                 startid="#xd39620fc-55bb-4b9e-9fb0-00ad0475e7cb"/>
                            <dynam xml:id="xf4c6bb53-7a1d-4b74-b86e-1bfe0ff18482"
                                tstamp="1"
                                place="below"
@@ -60149,33 +60190,25 @@
                                     pname="f"
                                     oct="3"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                               <note xml:id="x8d78dd67-8f07-40c8-bffa-6635512da3b9"
                                     pname="e"
                                     oct="3"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                               <note xml:id="x2ca1d45a-6f3f-42e3-bad5-28adfa9f86ab"
                                     pname="d"
                                     oct="3"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                               <note xml:id="xcc6cb8a2-fdb0-47dc-84ed-6378cf37a5e1"
                                     pname="c"
                                     oct="3"
                                     dur="4"
-                                    
                                     artic="stacc">
-                                 
                               </note>
                            </layer>
                         </staff>
