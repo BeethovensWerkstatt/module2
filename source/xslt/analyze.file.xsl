@@ -58,10 +58,10 @@
     <xsl:include href="tools/addtstamps.xsl"/>
     <xsl:include href="anl/determine.pitch.xsl"/>
     <xsl:include href="anl/determine.pnum.xsl"/>
-    <xsl:include href="anl/determine.roman.numerals.xsl"/>
-    <xsl:include href="anl/examine.roman.base.numerals.xsl"/>
+    <!--<xsl:include href="anl/determine.roman.numerals.xsl"/>-->
+    <!--<xsl:include href="anl/examine.roman.base.numerals.xsl"/>-->
     <xsl:include href="anl/determine.key.xsl"/>
-    <xsl:include href="anl/krumhansl.schmuckler.xsl"/>
+    <!--<xsl:include href="anl/krumhansl.schmuckler.xsl"/>-->
     <xsl:include href="anl/determine.event.density.xsl"/>
     <xsl:include href="anl/extract.melodic.lines.xsl"/>
     <xsl:include href="tools/add.next.xsl"/>
@@ -70,7 +70,7 @@
     <xsl:include href="anl/interprete.harmonies.xsl"/>
     <!--<xsl:include href="anl/determine.chords.xsl"/>-->
     <xsl:include href="tools/disable.staves.xsl"/>
-    <xsl:include href="anl/clean.up.xsl"/>
+    <!--<xsl:include href="anl/clean.up.xsl"/>-->
 
     <xsl:include href="data/circleOf5.xsl"/>
 
