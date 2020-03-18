@@ -215,6 +215,11 @@
             – maybe we should do that earlier in the pipe -->
         <xsl:variable name="resolved.duplicate.harms" as="node()*">
             <xsl:choose>
+                <!-- when chordDef is chosen as parameter, output output.harms without restriction -->
+                <xsl:when test="$harmonize.output = 'harm.thirds-based-chords.chordDef'">
+                    <xsl:sequence select="$output.harms"/>
+                </xsl:when>
+                
                 <xsl:when test="$harmonize.suppress.duplicates">
                     
                     <xsl:sequence select="$output.harms[mei:rend][1]"/>
@@ -238,6 +243,8 @@
                     </xsl:for-each>                            
                 </xsl:when>
                 <xsl:otherwise>
+                    <!-- only consider output harms that have a rend-element (=verbalized harms) -->
+                    
                     <xsl:sequence select="$output.harms[mei:rend]"/>
                 </xsl:otherwise>
             </xsl:choose>
