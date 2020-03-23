@@ -11278,7 +11278,7 @@
                                  />
                            <rest xml:id="x6e5e07b0-aec7-4ef1-b170-445e3d7ee579" dur="4"/>
                               <annot type="sic" resp="#BW" plist="#x9406b9c2-826a-44db-a474-3f938f6342da">
-                                    The following clef is missing in the original edition.
+                                    The following clef is missing in the original edition. Corrected here.
                               </annot> <!-- Fehler in OA: Violinschlüssel fehlt. In Codierung hinzugefügt. Andere Art von annot? -->
                               <clef xml:id="x9406b9c2-826a-44db-a474-3f938f6342da" shape="G" line="2"/> 
                         </layer>
@@ -39014,7 +39014,7 @@
                            </chord>
                            <rest xml:id="x9c68b926-8581-4e15-9143-c0f65d4984ed" dur="4"/>
                               <annot type="sic" resp="#BW" plist="#x17b7e3f0-c035-4319-bab9-c7d6a8c1f925">
-                                    The following rest is incorrect.
+                                    The following rest should be deleted.
                               </annot>
                               <rest xml:id="x17b7e3f0-c035-4319-bab9-c7d6a8c1f925" dur="2"/>
                         </layer>
