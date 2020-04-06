@@ -91,7 +91,7 @@
                     <xsl:variable name="new.diat" select="(7 + $diat.index + $trans.diat) mod 7"
                         as="xs:integer"/>
                     <xsl:variable name="new.pname"
-                        select=" $diat.pitches[if ($new.diat = 0) then (7) else ($new.diat)]" as="xs:string"/>
+                        select="$diat.pitches[if ($new.diat = 0) then (7) else ($new.diat)]" as="xs:string"/>
                     
                     <xsl:attribute name="pname.ges" select="$new.pname"/>
                     
@@ -155,7 +155,9 @@
                     
                     <!-- debug -->
                     <xsl:message select="'transposing ' || $this/@xml:id || ' from ' || $this/@pname || $this/@accid || $this/@accid.ges || ' to ' || $new.pname || $new.accid || ' (trans.diat:' || $trans.diat || ', trans.semi:' || $trans.semi || ')'"/>
-                    
+
+                    <!--<xsl:apply-templates select="node() | (@* except (@accid, @accid.ges))" mode="#current"/>-->
+
                     <xsl:apply-templates select="node() | (@* except (@accid, @accid.ges))" mode="#current"/>
                     
                 </xsl:copy>        
