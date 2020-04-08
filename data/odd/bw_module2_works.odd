@@ -20,6 +20,7 @@
                     <name xml:id="AM">Andreas Münzmay</name>
                     <name xml:id="EN">Elisa Novara</name>
                     <name xml:id="RS">Richard Sänger</name>
+                    <name xml:id="AS">Agnes Seipelt</name>
                     <name xml:id="JV">Joachim Veit</name>
                 </respStmt>
             </titleStmt>
@@ -34,10 +35,194 @@
             <change n="1" when="2019-01-28" who="#KH #JK">
                 <desc>Initial setup of the ODD.</desc>
             </change>
+            <change n="2" from="2019-02" to="2020-04" who="#AS #JK #KH #RM">
+                <desc>continous extensions and adjustments due to the work on modul 2 of the project beethovens werkstatt</desc>
+            </change>
+            <change n="3" when="2020-04" who="#KH #AS">
+                <desc>add Transkriptions- und Codierungsrichtlinien, prepared by Agnes Seipelt</desc>
+            </change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
+            <table rows="28" cols="4">
+                <head type="main"><hi rend="bold">Transkriptions- und Codierungsrichtlinien</hi></head>
+                <head type="sub">(Sortierung alphabetisch nach fettgedruckten Phänomenen)</head>
+                <row role="label">
+                    <cell>Phänomen</cell>
+                    <cell>Transkription</cell>
+                    <cell>Codierungsbeispiel</cell>
+                    <cell>im Schema beschrieben?</cell>
+                </row>
+                <row role="data">
+                    <cell><hi rend="bold">8</hi>va-Zeichen</cell>
+                    <cell>nach Vorlage<lb/>keine Angaben zur Linienform</cell>
+                    <cell>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <octave xml:id="x879c7e1e" startid="#xffc0650f" endid="#xf5c9eb5d" staff="4"  dis.place="above" dis="8"/></egXML>
+                        @oct.ges an betreffenden Noten 
+                        kein @lform
+                    </cell>
+                    <cell>ja</cell>
+                </row>
+                <row role="data">
+                    <cell><hi rend="bold">Abgekürzte</hi> und alte Schreibweisen</cell>
+                    <cell>werden aufgelöst und/oder normalisiert</cell>
+                    <cell>z.B. <att>bTrem</att>, <att>multiRpt</att>, <att>beatRpt</att> etc. nicht erlaubt</cell>
+                    <cell>ja</cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <!-- @agnes: nur als test -->
+                    <cell><ref target="#check_tstamp2">check_tstamp2</ref></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+                <row role="data">
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+            </table>
             <schemaSpec ident="mei" start="mei" prefix="mei_" ns="http://www.music-encoding.org/ns/mei">
                 
                 <!-- Declare MEI and XLink namespaces for use in Schematron -->
@@ -118,7 +303,7 @@
                         </constraint>
                     </constraintSpec>
                     
-                    <constraintSpec ident="check_tstamp2" scheme="isoschematron" mode="add">
+                    <constraintSpec xml:id="check_tstamp2" ident="check_tstamp2" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="@tstamp2">
                                 <sch:assert test="contains(.,'m+')">
