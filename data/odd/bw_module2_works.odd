@@ -56,35 +56,36 @@
                 </row>
                 <row role="data">
                     <cell><hi rend="bold">8</hi>va-Zeichen</cell>
-                    <cell>nach Vorlage<lb/>keine Angaben zur Linienform</cell>
+                    <cell>nach Vorlage<lb/>keine Angaben zur Linienform<lb/>wird mit <att>startid</att> an Noten oder Akkorde geknüpft<lb/><att>tstamp</att> ist nicht erlaubt<lb/><att>oct.ges</att> an betreffenden Noten/Akkorde ergänzen<lb/>
+                    </cell>
                     <cell>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <octave xml:id="x879c7e1e" startid="#xffc0650f" endid="#xf5c9eb5d" staff="4"  dis.place="above" dis="8"/></egXML>
-                        <tag>@oct.ges</tag> an betreffenden Noten 
-                        kein <tag>@lform</tag>
                     </cell>
-                    <cell>ja</cell>
+                    <cell>
+                        <ref target="#check_octave">check_octave</ref>
+                    </cell>
                 </row>
                 <row role="data">
                     <cell><hi rend="bold">Abgekürzte</hi> und alte Schreibweisen</cell>
                     <cell>werden aufgelöst und/oder normalisiert</cell>
                     <cell>z.B. <tag>bTrem</tag>, <tag>multiRpt</tag>, <tag>beatRpt</tag> etc. nicht erlaubt</cell>
-                    <cell>ja</cell>
+                    <cell><ref target="#mei_cmn">mei_cmn</ref></cell>
                 </row>
                 <row role="data">
                     <cell><hi rend="bold">Artikulation</hi></cell>
                     <cell>nach Vorlage</cell>
-                    <cell>z.B.
+                    <cell> 
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <dir xml:id="xb45e5d31-61f4-4b7b-a9a4-2ee60065f48c" layer="1" staff="3" place="below" tstamp="1">
                                 sempre staccato</dir></egXML>
                     </cell>
-                    <cell>?</cell>
+                    <cell><ref target="#check_dir">check_dir</ref></cell>
                 </row>
                 <row role="data">
                     <cell><hi rend="bold">Bindebögen</hi></cell>
-                    <cell>Nach Vorlage </cell>
-                    <cell>z.B.
+                    <cell>nach Vorlage </cell>
+                    <cell> 
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <slur xml:id="x93b9272b" layer="1" staff="2" startid="#x278f22e5" endid="#x6adaacfe"/>
                         </egXML>
@@ -95,32 +96,31 @@
                     <cell><hi rend="bold">Bindebögen - Bogenrichtung</hi></cell>
                     <cell>nicht explizit angeben</cell>
                     <cell><att>curvedir</att> nur in Ausnahmefällen (Lesbarkeit)</cell>
-                    <cell>nein</cell>
+                    <cell></cell>
                 </row>
                 <row role="data">
                     <cell><hi rend="bold">Dynamikangaben</hi>:<lb/>
                         <hi rend="latintype">f, p, sf</hi>, etc.,
                         <hi rend="latintype">cresc.</hi> und <hi rend="latintype">decresc.</hi>
                     </cell>
-                    <cell>Nach Vorlage<lb/>
-                        <att>label</att> ist nicht erlaubt<lb/>
-                        In op.133 und 134 wurden Dynamikangaben normalisiert (z.B. F: zu f)<lb/> In allen Stimmen unterhalb, außer bei Singstimme: dort oberhalb wegen des Singtexts
+                    <cell>nach Vorlage<lb/>
+                        <att>label</att> ist nicht erlaubt<lb/>in op.133 und 134 wurden Dynamikangaben normalisiert (z.B. F: zu f)<lb/>in allen Stimmen unterhalb, außer bei Singstimme: dort oberhalb wegen des Singtexts
                     </cell>
-                    <cell> z.B.
+                    <cell>  
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <dynam xml:id="xe7fae01c" tstamp="2" place="below" staff="1">p</dynam>
                         </egXML><lb/>
-                        <att>tstamp2</att> nur, wenn <att>extender</att>=true vorhanden, z.B. bei crescendo-Fortsetzungsstrichen
+                        <att>tstamp2</att> nur, wenn <att>extender</att>=true vorhanden,   bei crescendo-Fortsetzungsstrichen
                     </cell>
                     <cell>
                         <ref target="#check_dynam">check_dynam</ref><lb/>
-                        <ref target="#controlevents_dynam">controlevents_dynam</ref><lb/>
+                        <ref target="#controlevents_dynam">controlevents_dynam</ref>
                     </cell>
                 </row>
                 <row role="data">
                     <cell><hi rend="bold">Dynamikangaben</hi>, die sich zwischen den beiden Klaviersystemen befinden und sich auf beide beziehen</cell>
                     <cell>Zählzeit nach Vorlage, Angabe beider staves </cell>
-                    <cell>z.B.
+                    <cell> 
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <dynam xml:id="x557e0add" place="between" staff="6 7" tstamp="3" tstamp2="0m+5" extender="true">cres</dynam>
                         </egXML>
@@ -131,7 +131,7 @@
                 </row>
                 <row role="data">
                     <cell><hi rend="bold">Fermaten</hi></cell>
-                    <cell>Nach Vorlage<lb/>Nur <att>startid</att> ist erlaubt, außer die Fermate steht auf einem Taktstrich, dann ist auch <att>tstamp</att> erlaubt<lb/>Keine Ortsangabe nötig, außer wenn sie unterhalb des Systems steht, dann <att>place</att>="below"<lb/><att>form</att> und <att>shape</att> sind nicht erlaubt
+                    <cell>nach Vorlage<lb/>nur <att>startid</att> ist erlaubt, außer die Fermate steht auf einem Taktstrich, dann ist auch <att>tstamp</att> erlaubt<lb/>keine Ortsangabe nötig, außer wenn sie unterhalb des Systems steht, dann <att>place</att>="below"<lb/><att>form</att> und <att>shape</att> sind nicht erlaubt
                     </cell>
                     <cell>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -148,9 +148,9 @@
                     </cell>
                 </row>
                 <row role="data">
-                    <cell>Gravierende <hi rend="bold">Fehler</hi>/Inkonsistenzen, die viele Folgefehler produzieren, z.B. fehlender Notenschlüssel</cell>
+                    <cell>Gravierende <hi rend="bold">Fehler</hi>/Inkonsistenzen, die viele Folgefehler produzieren,   fehlender Notenschlüssel</cell>
                     <cell>werden korrigiert, in den Daten markiert und mit der betreffenden Stelle verknüpft</cell>
-                    <cell>z.B.
+                    <cell> 
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <annot type="sic" resp="#BW" plist="#note_x0a0ks359b3e">missing clef change in the first edition; corrected</annot>
                     </egXML>
@@ -160,7 +160,7 @@
                 <row role="data">
                     <cell>Lokale, offensichtliche <hi rend="bold">Fehler</hi>, die keine Folgefehler hervorrufen (z.B. fehlende Pause, Punkt oder Vorzeichen</cell>
                     <cell>werden nicht korrigiert aber in den Daten markiert</cell>
-                    <cell>z.B.
+                    <cell> 
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <annot type="sic" resp="#BW" plist="#note_49ee-b5a1">Wrong duration of the last note, it should be 8 instead of 4; not corrected</annot>
                     </egXML>
@@ -169,9 +169,9 @@
                 </row>
                 <row role="data">
                     <cell>cresc.u. decresc.-<hi rend="bold">Gabeln</hi></cell>
-                    <cell>nach Vorlage<lb/>nur <att>tstamp</att> und <att>tstamp2</att> erlaubt<lb/>cresc.u. decresc.-Gabeln, die sich auf zwei KLaviersysteme beziehen, bekommen die Angabe beider Systeme, s.o. Dynamikangaben
+                    <cell>nach Vorlage<lb/>nur <att>tstamp</att> und <att>tstamp2</att> erlaubt<lb/>cresc.u. decresc.-Gabeln, die sich auf zwei Klaviersysteme beziehen, bekommen die Angabe beider Systeme, s.o. Dynamikangaben
                     </cell>
-                    <cell>z.B.
+                    <cell> 
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <hairpin xml:id="x0e0f7bfa" staff="2" tstamp="2.5" tstamp2="0m+2.75" form="dim" place="below"/>
                     </egXML>
@@ -183,8 +183,8 @@
                 </row>
                 <row role="data">
                     <cell>Noten<hi rend="bold">halsrichtung</hi></cell>
-                    <cell>Keine explizite Angabe, außer in Fällen, wo es zur Überlagerung der Stimmen/schlechte Lesbarkeit der Stimmführung im Klavier führen würde<lb/>Ganze Noten dürfen keine Angabe der Halsrichtung bekommen</cell>
-                    <cell>z.B.
+                    <cell>keine explizite Angabe, außer in Fällen, wo es zur Überlagerung der Stimmen/schlechte Lesbarkeit der Stimmführung im Klavier führen würde<lb/>ganze Noten dürfen keine Angabe der Halsrichtung bekommen</cell>
+                    <cell> 
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <note xml:id="x329b8ef8" stem.dir="down"
                             pname="e" oct="5" dur="16" accid.ges="f"/>
@@ -193,23 +193,23 @@
                     <cell><ref target="#check_stem.dir_dur1">check_stem.dir_dur1</ref></cell>
                 </row>
                 <row role="data">
-                    <cell>Haltebögen</cell>
-                    <cell>werden mit einem Element codiert<lb/>Werden mit <att>startid</att> und <att>endid</att> an jeweilige noten oder Akkorde geknüpft</cell>
-                    <cell>z.B.
+                    <cell><hi rend="bold">Haltebögen</hi></cell>
+                    <cell>werden mit einem Element codiert<lb/>werden mit <att>startid</att> und <att>endid</att> an jeweilige noten oder Akkorde geknüpft</cell>
+                    <cell> 
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <tie xml:id="xb2f614ee" staff="4" startid="#x07a8ae91" endid="#xd600c086"/>
                     </egXML>
                     </cell>
                     <cell>
                         <ref target="#controlevents_tie">controlevents_tie</ref><lb/>
-                        <ref target="#check_notes">check_notes</ref>
+                        <ref target="#check_notes">check_notes</ref><lb/>
                         <ref target="#check_chords">check_chords</ref>
                     </cell>
                 </row>
                 <row role="data">
                     <cell><hi rend="bold">Metrum</hi> z.B. 4/4 oder C</cell>
                     <cell>nach Vorlage<lb/>Metrumangaben in der ersten <tag>scoreDef</tag> eines <tag>mDiv</tag> sind obligatorisch<lb/>Metrumangaben in der <tag>staffDef</tag> sind nicht erlaubt</cell>
-                    <cell>z.B.
+                    <cell> 
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <scoreDef xml:id="xf25244be" meter.count="2" meter.unit="2" meter.sym="cut"/>
                         </egXML>
@@ -219,69 +219,139 @@
                     </cell>
                 </row>
                 <row role="data">
-                    <cell></cell>
-                    <cell></cell>
+                    <cell><hi rend="bold">Schlüssel</hi> und Schlüsselwechsel</cell>
+                    <cell>nach Vorlage<lb/><att>tstamp</att> und <att>tstamp2</att> nicht erlaubt</cell>
+                    <cell>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <clef xml:id="xecf5be6d" shape="F" line="4"/>
+                    </egXML>
+                    </cell>
+                    <cell><ref target="#check_clef">check_clef</ref></cell>
+                </row>
+                <row role="data">
+                    <cell><hi rend="bold">Singtext</hi></cell>
+                    <cell>wird auch in den Stimmen hinzugefügt, selbst wenn er in der Vorlage nicht steht (z.B. beim Klavierauszug der OA Op. 122)</cell>
+                    <cell>mit <tag>verse</tag>- und <tag>syl</tag>-Elementen in <tag>note</tag>:<lb/>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <note xml:id="xb48a118d" dur="8" oct="2" pname="b">
+                            <verse xml:id="587267ef1779" n="1">
+                                <syl xml:id="02c207c3e59c">Gieb</syl>
+                            </verse>
+                        </note>
+                    </egXML>
+                    </cell>
+                    <cell><ref target="#check_text_attributes">check_text_attributes</ref></cell>
+                </row>
+                <row role="data">
+                    <cell><hi rend="bold">Singtext</hi><lb/>Silbentrennung<lb/>Rechtschreibung<lb/>Verlängerungsstriche
+                    </cell>
+                    <cell>nach Vorlage; normierte Silbentrennung im Fall von Platzmangel ergänzt<lb/>nach Vorlage<lb/>werden nicht codiert (graphische Variante)
+                    
+                    </cell>
                     <cell></cell>
                     <cell></cell>
                 </row>
                 <row role="data">
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                </row>
-                <row role="data">
-                    <cell></cell>
-                    <cell></cell>
+                    <cell>Bezeichnung der <hi rend="bold">Stimmen</hi></cell>
+                    <cell>Nach der NBA</cell>
                     <cell></cell>
                     <cell></cell>
                 </row>
                 <row role="data">
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
+                    <cell><hi rend="bold">Studierzeichen</hi></cell>
+                    <cell>nach Vorlage</cell>
+                    <cell>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <reh xml:id="x07512ac9" tstamp="1" staff="1" place="above">A</reh> 
+                        </egXML>
+                    </cell>
+                    <cell><ref target="#check_reh">check_reh</ref></cell>
+                </row>
+                <row role="data">
+                    <cell><hi rend="bold">Tempoangaben</hi></cell>
+                    <cell>nach Vorlage<lb/>mit <tag>dir</tag>-Element</cell>
+                    <cell>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <dir xml:id="x926d2a72" tstamp="1" place="above" staff="1">Allegretto</dir> 
+                        </egXML>
+                    </cell>
+                    <cell>
+                        <ref target="#check_dir">check_dir</ref>
+                    </cell>
+                </row>
+                <row role="data">
+                    <cell><hi rend="bold">Tonartwechsel</hi></cell>
+                    <cell>nach Vorlage</cell>
+                    <cell>In neuer <tag>scoreDef</tag>:<lb/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <scoreDef xml:id="x1ab89" meter.count="3"
+                                meter.unit="4" key.sig="0" key.mode="major"
+                                keysig.showchange="true">
+                                <staffGrp xml:id="xb7d0e" symbol="bracket"
+                                    bar.thru="false">
+                                    <staffDef xml:id="xa028f " n="1">
+                                        <label xml:id="xb3d76c">piano</label>
+                                    </staffDef>
+                                    <staffDef xml:id="xa6c32" n="2">
+                                        <label xml:id="x9f39">piano</label>
+                                    </staffDef>
+                                </staffGrp>
+                            </scoreDef> 
+                        </egXML>
+                    </cell>
                     <cell></cell>
                 </row>
                 <row role="data">
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
+                    <cell><hi rend="bold">Triller</hi></cell>
+                    <cell>nach Vorlage<lb/>werden mit <att>startid</att> mit einer Note verknüpft</cell>
+                    <cell>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <trill xml:id="x885bc" staff="1" startid="#note_xcv6 " place="above"/> 
+                        </egXML>
+                    </cell>
+                    <cell>
+                        <ref target="#controlevents_trill">controlevents_trill</ref>
+                    </cell>
+                </row>
+                <row role="data">
+                    <cell><hi rend="bold">Triolen</hi></cell>
+                    <cell>nach Vorlage<lb/><tag>tupletSpan</tag> nicht erlaubt</cell>
+                    <cell>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <tuplet xml:id="x40c" num="3" numbase="2" num.place="above">
+                                <note xml:id="x7a0c8" dur="8" oct="3"
+                                    pname="f"/>
+                                <note xml:id="xd9e3" dur="8" oct="3"
+                                    pname="g"/>
+                                <note xml:id="x7325" dur="8" oct="3"
+                                    pname="a"/>
+                            </tuplet>
+                        </egXML>
+                    </cell>
                     <cell></cell>
                 </row>
                 <row role="data">
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
+                    <cell><hi rend="bold">Vorschlagsnoten</hi></cell>
+                    <cell>nach Vorlage<lb/>nur <att>grace</att>="unknown" erlaubt</cell>
+                    <cell>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <note xml:id="x2d35" grace="unknown" pname="a" oct="5" dur="32" accid="n"/>
+                        </egXML>
+                    </cell>
+                    <cell>
+                        <ref target="#check_gracenote">check_gracenote</ref>
+                    </cell>
                 </row>
                 <row role="data">
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                </row>
-                <row role="data">
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                </row>
-                <row role="data">
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                </row>
-                <row role="data">
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                </row>
-                <row role="data">
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
+                    <cell><hi rend="bold">Vorzeichen</hi>/Versetzungszeichen</cell>
+                    <cell>nach Vorlage<lb/></cell>
+                    <cell>mit <att>accid</att> an Noten<lb/>
+                        Doppelkreuz in OA wird folgendermaßen codiert:<lb/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <note xml:id="x420db " pname="f" accid="x"
+                                oct="5" dur="4" artic="stacc"/> 
+                        </egXML>
+                    </cell>
                     <cell></cell>
                 </row>
                 <row role="data">
@@ -305,7 +375,7 @@
                 
                 <moduleRef key="MEI"/>
                 <moduleRef key="MEI.analytical"/>
-                <moduleRef key="MEI.cmn" except="beamSpan beatRpt bend bracketSpan halfmRpt meterSig meterSigGrp mRpt mRpt2 mSpace multiRpt tupletSpan bTrem"/>
+                <moduleRef key="MEI.cmn" xml:id="mei_cmn" except="beamSpan beatRpt bend bracketSpan halfmRpt meterSig meterSigGrp mRpt mRpt2 mSpace multiRpt tupletSpan bTrem"/>
                 <moduleRef key="MEI.cmnOrnaments"/>
                 <moduleRef key="MEI.frbr"/>
                 <moduleRef key="MEI.gestural"/>
@@ -315,7 +385,7 @@
                 <moduleRef key="MEI.namesdates" include="corpName geogName persName roleName"/>
                 <moduleRef key="MEI.ptrref"/>
                 <moduleRef key="MEI.shared"
-                    include="address annot barLine bibl biblList biblScope biblStruct body castGrp castItem castList chord clef clefGrp date desc dir dynam ending expansion head identifier label labelAbbr layer layerDef mdiv mei music name note p part parts physLoc pubPlace relation relationList repository resp respStmt rest role roleDesc score scoreDef section space staff staffDef staffGrp syl tempo title titlePage"/>
+                    include="address annot barLine bibl biblList biblScope biblStruct body castGrp castItem castList chord clef clefGrp date desc dir dynam ending expansion head identifier label labelAbbr layer layerDef mdiv mei music name note p part parts physLoc pubPlace relation relationList repository resp respStmt rest role roleDesc score scoreDef section space staff staffDef staffGrp syl title titlePage"/>
                 <moduleRef key="MEI.visual"/>
                 
                 <elementSpec ident="mdiv" module="MEI.shared" mode="change">
@@ -409,17 +479,12 @@
                                     slur elements are supposed to have a @startid and @endid.
                                 </sch:assert>
                             </sch:rule>
-                            <sch:rule context="mei:tempo">
-                                <sch:assert test="not(@tstamp2) and @tstamp and not(@endid) and not(@startid)">
-                                    tempo elements are supposed to have a @tstamp only.
-                                </sch:assert>
-                            </sch:rule>
                             <sch:rule xml:id="controlevents_tie" context="mei:tie">
                                 <sch:assert test="not(@tstamp2) and not(@tstamp) and @endid and @startid">
                                     tie elements are supposed to have a @startid and @endid.
                                 </sch:assert>
                             </sch:rule>
-                            <sch:rule context="mei:trill">
+                            <sch:rule xml:id="controlevents_trill" context="mei:trill">
                                 <sch:assert test="not(@tstamp2) and not(@tstamp) and (not(@endid) or @extender='true') and @startid">
                                     trill elements are supposed to have a @startid only.
                                 </sch:assert>
@@ -447,7 +512,7 @@
                         </constraint>
                     </constraintSpec>
                     
-                    <constraintSpec ident="check_text_attributes" scheme="isoschematron" mode="add">
+                    <constraintSpec xml:id="check_text_attributes" ident="check_text_attributes" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:syl">
                                 <sch:assert test="(@wordpos='i' and @con='d') 
@@ -461,7 +526,7 @@
                         </constraint>
                     </constraintSpec>
                     
-                    <constraintSpec ident="check_gracenote" scheme="isoschematron" mode="add">
+                    <constraintSpec xml:id="check_gracenote" ident="check_gracenote" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:note">
                                 <sch:assert test="not(@grace) or @grace='unknown'">
@@ -522,7 +587,7 @@
                         </constraint>
                     </constraintSpec>
                     
-                    <constraintSpec ident="check_octave" scheme="isoschematron" mode="add">
+                    <constraintSpec xml:id="check_octave" ident="check_octave" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:octave">
                                 <sch:assert test="not(@lform) and @startid and @endid and not(@tstamp) and not(@tstamp2)">
@@ -532,7 +597,7 @@
                         </constraint>
                     </constraintSpec>
                     
-                    <constraintSpec ident="check_dir" scheme="isoschematron" mode="add">
+                    <constraintSpec xml:id="check_dir" ident="check_dir" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:dir">
                                 <sch:assert test="not(@label)">
@@ -542,7 +607,7 @@
                         </constraint>
                     </constraintSpec>
                     
-                    <constraintSpec ident="check_reh" scheme="isoschematron" mode="add">
+                    <constraintSpec xml:id="check_reh" ident="check_reh" scheme="isoschematron" mode="add">
                         <constraint>
                             <sch:rule context="mei:reh">
                                 <sch:assert test="not(@label) and @tstamp and not(@endid) and not(@startid)">
@@ -592,7 +657,7 @@
                        </constraint>
                    </constraintSpec>
                     
-                   <constraintSpec ident="check_clef" scheme="isoschematron" mode="add">
+                   <constraintSpec xml:id="check_clef" ident="check_clef" scheme="isoschematron" mode="add">
                        <constraint>
                            <sch:rule context="mei:clef">
                                <sch:assert test="not(@tstamp) and not(@tstamp2)">
