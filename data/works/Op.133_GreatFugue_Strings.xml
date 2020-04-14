@@ -221,6 +221,15 @@
         </changeDesc>
         <date isodate="2019-12-12"/>
        </change>
+      <change n="16">
+        <respStmt>
+          <persName>Anes Seipelt</persName>
+        </respStmt>
+        <changeDesc>
+          <p n="1">changed tempo into dir-elements</p>
+        </changeDesc>
+        <date isodate="2020-2-25"/>
+      </change>
     </revisionDesc>
   </meiHead>
   <music meiversion="4.0.0">
@@ -294,8 +303,8 @@
               </staff>
               <dynam xml:id="x6ab7a65a-31d8-4648-9d6a-1028f8b2c7dc" tstamp="1" place="below"
                 staff="1">f</dynam>
-              <tempo xml:id="x72791868-2b54-4a6b-a5f6-d9918f2c0aca" tstamp="1" place="above"
-                staff="1">OVERTURA. Allegro.</tempo>
+              <dir xml:id="x72791868-2b54-4a6b-a5f6-d9918f2c0aca" tstamp="1" place="above"
+                staff="1">OVERTURA. Allegro.</dir>
               <dynam xml:id="x148e5d84-634d-4339-991c-ba43fa0d9924" tstamp="1" place="below"
                 staff="2">f</dynam>
               <dynam xml:id="x3c67d46e-4270-4691-bed8-c4206b0827df" tstamp="1" place="below"
@@ -307,7 +316,7 @@
                 endid="#x1aea252f-4ed0-4dc5-9bea-53f2fdd40746"/>
               <tie xml:id="xb8f23ee2-934c-43ea-bf39-22f9fafb1146" staff="2"
                 startid="#x5ae87724-745f-4448-930c-b3607113d505"
-                endid="#xf871e5e4-1e26-411e-9f92-37f2039de5ce"/>
+                endid="#xa547b28c-de72-4309-a0be-0916ba890ad4"/>
               <tie xml:id="xf78eb4b7-a721-423c-b97a-27ab08b0ffad" staff="2"
                 startid="#xb6b1f7f3-c99b-4512-a87f-1f6072a0a168"
                 endid="#xf871e5e4-1e26-411e-9f92-37f2039de5ce"/>
@@ -1081,8 +1090,8 @@
                   <mRest xml:id="x92581642-a969-432f-bdfd-d74fcdef01a7" dur="2"/>
                 </layer>
               </staff>
-              <tempo xml:id="x34d4b230-c611-46a3-94e9-3a52cfa96a0e" tstamp="1" place="above"
-                staff="1">Meno mosso e moderato.</tempo>
+              <dir xml:id="x34d4b230-c611-46a3-94e9-3a52cfa96a0e" tstamp="1" place="above"
+                staff="1">Meno mosso e moderato.</dir>
               <dynam xml:id="x022d34d9-f4e0-4557-9e13-a14914ad10b9" tstamp="2" place="below"
                 staff="1">p</dynam>
               <!--  EN: In OA fehlt ein Bogen. -->
@@ -1468,8 +1477,8 @@
                   <mRest xml:id="xc9f238a3-0a0e-4fa3-bc98-adee59423621" dur="1"/>
                 </layer>
               </staff>
-              <tempo xml:id="xa0aca074-9a52-4038-bc5d-b6810495ab16" tstamp="1" place="above"
-                staff="1">Allegro</tempo>
+              <dir xml:id="xa0aca074-9a52-4038-bc5d-b6810495ab16" tstamp="1" place="above"
+                staff="1">Allegro</dir>
               <dynam xml:id="x9c5e35be-dc9e-433c-8e65-8ed0ca7bf269" tstamp="2" place="below"
                 staff="1"> pp </dynam>
               <slur xml:id="x9527b2df-0ff9-4caa-ba11-12d8c57b978c"
@@ -2342,7 +2351,7 @@
                 startid="#xc66204f9-9552-4c2f-a639-1c74dd2cc9d2"
                 endid="#x8646c532-bc34-4afe-9670-fce6b32f007d" staff="1"/>
               <dynam xml:id="xf74a723a-41d2-4fd2-9d7d-f1bd938eb72f" tstamp="4" place="below"
-                staff="4"> F </dynam>
+                staff="4"> f </dynam>
               <slur xml:id="x7cd29474-e505-4989-89ad-91d0fcfe14e1"
                 startid="#x80be0ec4-f5ef-4503-be2d-888a1b363e8b"
                 endid="#x22086b04-d4c2-4891-9182-27d43acb01be" staff="4"/>
@@ -18435,8 +18444,8 @@
                   <mRest xml:id="x6ba69247-90bf-4e1e-afd7-6cf1767d92ca" dur="2"/>
                 </layer>
               </staff>
-              <tempo xml:id="xa54c4495-d0b1-47d5-95e0-3f240deecd59" tstamp="1" place="above"
-                staff="1">Meno mosso e moderato.</tempo>
+              <dir xml:id="xa54c4495-d0b1-47d5-95e0-3f240deecd59" tstamp="1" place="above"
+                staff="1">Meno mosso e moderato.</dir>
               <dynam xml:id="x9dd32a55-6328-4297-9d28-9fcfd3074d83" tstamp="1" place="below"
                 staff="1"> pp </dynam>
               <slur xml:id="xc8c601c6-7fb7-4ea2-91cd-1af22ef94226"
@@ -24362,8 +24371,8 @@
               </staff>
               <dynam xml:id="xb2b20827-02de-4559-8104-80d387477a0b" tstamp="1" place="below"
                 staff="1"> ff </dynam>
-              <tempo xml:id="x4c938f07-584e-4081-bbd6-17294b6c1701" tstamp="1" place="above"
-                staff="1">Allo molto e con Brio.</tempo>
+              <dir xml:id="x4c938f07-584e-4081-bbd6-17294b6c1701" tstamp="1" place="above"
+                staff="1">Allo molto e con Brio.</dir>
               <dynam xml:id="xd418802c-bec6-4178-8347-483bc31940ad" tstamp="1" place="below"
                 staff="2"> ff </dynam>
               <dynam xml:id="x01e1e7b5-e4cc-494e-a319-87c845a8ec1d" tstamp="1" place="below"
@@ -26608,33 +26617,6 @@
                   <note xml:id="x7c36ed01-7120-49a0-9473-d9253eb458ab" pname="d" oct="5" dur="2"
                     dots="1" accid="f"/>
                 </layer>
-                <!-- Muss es sein das hier unten?? 
-                         <layer n="2">
-                           <note xml:id="d1e140112" visible="false" pname="e" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140129" visible="false" pname="d" accid="f" oct="5"
-                              dur="16" size="cue" stem.len="0"/>
-                           <note xml:id="d1e140148" visible="false" pname="e" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140165" visible="false" pname="d" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140182" visible="false" pname="e" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140199" visible="false" pname="d" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140217" visible="false" pname="e" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140234" visible="false" pname="d" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140251" visible="false" pname="e" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140268" visible="false" pname="d" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140285" visible="false" pname="c" oct="5" dur="16"
-                              size="cue" stem.len="0"/>
-                           <note xml:id="d1e140300" visible="false" pname="d" oct="5" dur="16"
-                              size="cue" stem.len="0"/> 
-                        </layer>  -->
               </staff>
               <staff xml:id="xd6fe0169-fb39-4539-9800-79e1054233fb" n="4">
                 <layer xml:id="xf9e38619-0990-4295-8a07-89355df7c9df" n="1">
@@ -36116,8 +36098,8 @@
                   <rest xml:id="x604a093d-b1ab-41a4-b1b0-c34062272331" dur="4"/>
                 </layer>
               </staff>
-              <tempo xml:id="x98ddbeb2-987b-425d-be44-648d6c5c472f" tstamp="1" place="above"
-                staff="1">Meno mosso e moderato.</tempo>
+              <dir xml:id="x98ddbeb2-987b-425d-be44-648d6c5c472f" tstamp="1" place="above"
+                staff="1">Meno mosso e moderato.</dir>
               <slur xml:id="x71f2766d-d231-4939-bbd5-75dda30d75bd"
                 startid="#x9843a989-7e55-4bcf-a8be-0462eb9bd305"
                 endid="#x812741be-a091-4f5f-abe9-52c415007ccf" staff="2"/>
@@ -38259,8 +38241,8 @@
               </staff>
               <dynam xml:id="x76f14d2d-80b2-4707-87a2-00b769d62281" tstamp="1" place="below"
                 staff="1"> fp </dynam>
-              <tempo xml:id="x590b0c7c-1ddd-4d29-95bd-3572c87497d3" tstamp="1" place="above"
-                staff="1">Allegro molto e con brio.</tempo>
+              <dir xml:id="x590b0c7c-1ddd-4d29-95bd-3572c87497d3" tstamp="1" place="above"
+                staff="1">Allegro molto e con brio.</dir>
               <dynam xml:id="x48f73c2b-a1a4-495e-91ce-329a6bf975fd" tstamp="1" place="below"
                 staff="2"> fp </dynam>
               <dynam xml:id="x3bee39f8-3704-4655-be53-68989ca77e1a" tstamp="1" place="below"
@@ -44280,9 +44262,8 @@
                   <rest xml:id="xdb689554-a6ca-4fb0-82ce-2d92253b404c" dur="2"/>
                 </layer>
               </staff>
-              <tempo xml:id="x1b9a27dc-97d2-4549-b33f-19c1cb9c943e" tstamp="3" place="above"
-                staff="1">Allegro</tempo>
-              <!-- ich habe tstamp falsch codiert? "Allegro" wird immer am Anfang des Taktes gezeigt, sollte aber auf der ersten 16telnote sein -->
+              <dir xml:id="x1b9a27dc-97d2-4549-b33f-19c1cb9c943e" tstamp="3" place="above"
+                staff="1">Allegro</dir>
               <fermata xml:id="x384a1752-d786-44cc-b720-18f8e96bea50" staff="1"
                 startid="#x47eab17f-d574-4b56-a023-74439e458efe" form="norm"/>
               <fermata xml:id="xb32c3272-5ac9-438d-9e9f-4601fafadfa9" staff="2"
@@ -44440,8 +44421,8 @@
                   <mRest xml:id="xbaef609b-a01e-4cf3-b6d6-b4b8797f798a" dur="2"/>
                 </layer>
               </staff>
-              <tempo xml:id="x8f741fd8-b8ce-4d45-b5b6-a490ad6e14f6" tstamp="1" place="above"
-                staff="1">Meno mosso e moderato.</tempo>
+              <dir xml:id="x8f741fd8-b8ce-4d45-b5b6-a490ad6e14f6" tstamp="1" place="above"
+                staff="1">Meno mosso e moderato.</dir>
               <dynam xml:id="x704d1fcd-0020-4a99-977e-15c628c11cfb" tstamp="1.5" place="below"
                 staff="1"> pp </dynam>
               <slur xml:id="x97b9b191-5799-4477-94d7-f68c049db738"
@@ -44575,15 +44556,13 @@
             </measure>
           </section>
           <section xml:id="x01d9a29e-a62e-44bd-859f-a4d3661f394c" n="13">
-            <scoreDef xml:id="x67091b88-6505-4695-8704-6927d1d1c474" meter.count="6" meter.unit="8"
-              key.sig="2f" key.mode="major">
+            <scoreDef xml:id="x67091b88-6505-4695-8704-6927d1d1c474" meter.count="6" meter.unit="8">
               <staffGrp xml:id="x486fd106-b0c1-4ab5-88fb-b93e58fcc932" symbol="bracket"
                 bar.thru="true">
                 <staffDef xml:id="x41b432b2-1299-4596-9ad8-01aa7f1c81cd" n="2"/>
                 <staffDef xml:id="x66dfe3f4-0bb6-465e-b1cf-fd76d97678fa" n="3"/>
                 <staffDef xml:id="x9b832762-9fc2-4508-943e-8815dc1318ac" n="4"/>
               </staffGrp>
-              <!-- ich habe hier immer ein Problem mit "key.sig." (siehe oben meine andere Kommentare): Verovio zeigt in diesem Fall die neuen Akzidentien, weil vorher eine andere "key.sig." codiert worden ist! Es sollte aber immer gleich bleiben... -->
             </scoreDef>
             <measure n="662" xml:id="x91387d3a-923a-42c0-8938-8e62f5b978ab">
               <staff xml:id="x8166a35d-2228-46fc-8394-4992cf195154" n="1">
@@ -44612,8 +44591,8 @@
               </staff>
               <dynam xml:id="x9582e5c4-06f7-4aff-9604-828eb12a8df6" tstamp="1" place="below"
                 staff="1"> ff </dynam>
-              <tempo xml:id="xe85f5707-9095-4422-8e4a-1c0779940782" tstamp="1" place="above"
-                staff="1">Allegro molto e con brio.</tempo>
+              <dir xml:id="xe85f5707-9095-4422-8e4a-1c0779940782" tstamp="1" place="above"
+                staff="1">Allegro molto e con brio.</dir>
               <dynam xml:id="x65a62557-87d8-4360-9f1e-80081410077f" tstamp="1" place="below"
                 staff="2"> ff </dynam>
               <dynam xml:id="x5353f5ef-8fcf-4e77-8216-552c88b100cf" tstamp="1" place="below"
@@ -46227,7 +46206,7 @@
               <slur xml:id="x6f338bbe-36aa-4ac9-b02d-f99a5b88f4a4"
                 startid="#xccb4f78d-0d3e-48d9-9e22-9da4abe1cb97"
                 endid="#x89a2d4cf-251a-47f9-b50d-c8c00cd4fd9d" staff="1"/>
-              <tie xml:id="x9eef8a09-7298-4165-bc43-22d1f144ba97"
+              <slur xml:id="x9eef8a09-7298-4165-bc43-22d1f144ba97"
                 startid="#x9dd03fad-0bed-470e-bc5d-f3f08bb98fc3"
                 endid="#xbed238c1-c2b6-4f28-8d40-fb49c6e8b530" staff="3"/>
               <tie xml:id="xeea1c8bc-07b2-4c1b-a8d8-5e69c92f5dc2"
@@ -46449,7 +46428,7 @@
               </staff>
               <staff xml:id="xe7576409-ceb3-4c09-899b-c6f4d927f901" n="3">
                 <layer xml:id="xd6d837a4-7449-40df-989d-34372566220d" n="1">
-                  <note xml:id="x0c10f7df-a8e5-468a-b7df-69a32751f11b" pname="a" oct="3" dur="4"/>
+                  <note xml:id="x0c10f7df-a8e5-468a-b7df-69a32751f11b" pname="a" accid.ges="n" oct="3" dur="4"/>
                   <beam xml:id="x5c72d4ed-7e52-4fa1-af58-fbbad6162afe">
                     <note xml:id="xf5f3a081-74e2-4566-8760-683c5736ae88" pname="g" oct="3" dur="16"
                       accid="n"/>
@@ -48333,24 +48312,24 @@
                 </layer>
               </staff>
               <dynam xml:id="xc4298253-4e63-487d-ab34-a9fcb72165ef" tstamp="1" place="below"
-                staff="2">il F</dynam>
+                staff="2">il f</dynam>
               <dynam xml:id="x47de8fea-1ec8-4541-aed1-cac62fae0da5" tstamp="1" place="below"
                 staff="1"> f </dynam>
               <dynam xml:id="x993268d7-68c0-4490-9710-b1b1d93aee84" tstamp="1" place="below"
-                staff="3">il F</dynam>
+                staff="3">il f</dynam>
               <dynam xml:id="x4279092f-9d2d-4e7a-8f3a-ba1309c10dfa" tstamp="1" place="below"
                 staff="4"> f </dynam>
               <slur xml:id="x938b8102-fc7c-445d-881a-adc5e26d4ca0"
                 startid="#x2886cef9-6356-4702-98c7-72e7d1647f95"
                 endid="#x1644ad43-4ef6-4347-a31d-97898826bf2b" staff="1"/>
               <dynam xml:id="xd31b5749-ea37-47b2-b0d8-a9d93ef03681" tstamp="4" place="below"
-                staff="1">più F</dynam>
+                staff="1">più f</dynam>
               <dynam xml:id="x8cb9352c-cca0-4712-a407-a498977b72d8" tstamp="4" place="below"
-                staff="2">più F</dynam>
+                staff="2">più f</dynam>
               <dynam xml:id="xa94aaa0d-90c9-4911-aaa8-eb8b702ff9c8" tstamp="4" place="below"
-                staff="3">più F</dynam>
+                staff="3">più f</dynam>
               <dynam xml:id="xbe848ea4-79d3-4ebb-988b-54486fec54ea" tstamp="4" place="below"
-                staff="4">più F</dynam>
+                staff="4">più f</dynam>
             </measure>
             <measure n="734" xml:id="x5da2431b-f621-4c68-9d5e-e5301b315d9c">
               <staff xml:id="x4844af0d-c7bd-47da-91fe-1cf5e5a9d0a9" n="1">

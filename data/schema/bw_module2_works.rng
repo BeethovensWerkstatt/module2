@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2020-01-15T17:03:53Z. .
+Schema generated from ODD source 2020-01-29T14:31:04Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -10690,14 +10690,26 @@ Suggested values include: 1] smufl</a:documentation>
                                 <sch:let name="end.note" value="$mdiv//mei:*[@xml:id = $end.id]"/>
                                 <sch:let name="start.accid"
                         value="if($start.note/@accid.ges) then($start.note/@accid.ges) else if($start.note/@accid) then($start.note/@accid) else('')"/>
-                                <sch:assert test="(local-name($start.note) = 'chord' and local-name($end.note) = 'chord') or ($start.note/@pname = $end.note/@pname)">
+                                <sch:let name="end.accid"
+                        value="if($end.note/@accid.ges) then($end.note/@accid.ges) else if($end.note/@accid) then($end.note/@accid) else('')"/>
+                                <sch:let name="end.is.explicit" value="$end.note/@accid"/>
+                                <sch:let name="start.is.chord" value="local-name($start.note) = 'chord'"/>
+                                <sch:let name="end.is.chord" value="local-name($end.note) = 'chord'"/>
+                                <sch:let name="both.ends.are.chords" value="$start.is.chord and $end.is.chord"/>
+                                <sch:let name="has.one.chord"
+                        value="$start.is.chord or $end.is.chord and $start.is.chord ne $end.is.chord"/>
+                                <sch:assert test="$both.ends.are.chords or $has.one.chord or ($start.note/@pname = $end.note/@pname)">
                                     The start and end note of a tie need to have the same @pname ("<sch:value-of select="$start.note/@pname"/>" vs. "<sch:value-of select="$end.note/@pname"/>").
                                 </sch:assert>
-                                <sch:assert test="(local-name($start.note) = 'chord' and local-name($end.note) = 'chord') or ($start.note/@oct = $end.note/@oct)">
+                                <sch:assert test="$both.ends.are.chords or $has.one.chord or ($start.note/@oct = $end.note/@oct)">
                                     The start and end note of a tie need to have the same @oct  ("<sch:value-of select="$start.note/@oct"/>" vs. "<sch:value-of select="$end.note/@oct"/>").
                                 </sch:assert>
-                                <sch:assert test="($start.accid = '' and not($end.note/@accid)) or ($start.accid = $end.note/@accid.ges) or ($start.accid = 'n' and not($end.note/@accid))">
-                                    The start and end note of a tie need to have the same accidentals  ("<sch:value-of select="$start.accid"/>" vs. "<sch:value-of select="$end.note/@accid.ges"/>").
+                                <sch:assert test="$both.ends.are.chords or $has.one.chord or ($start.accid = $end.accid)">
+                                    The start and end note of a tie need to have the same accidental settings  ("<sch:value-of select="$start.accid"/>" vs. "<sch:value-of select="$end.accid"/>").
+                                </sch:assert>
+                                <sch:assert test="$both.ends.are.chords or $has.one.chord or (($start.accid = $end.accid) and not($end.is.explicit))"
+                           role="info">
+                                    The accidental of the end note of the tie is an @acc, not an @acc.ges as it is common, it may occured because of a page break or system break in the source
                                 </sch:assert>
                                 <sch:assert test="not(local-name($start.note) = 'chord' and local-name($end.note) = 'chord') or (count($start.note//mei:note) = count($end.note//mei:note))">
                                     Tied chords need to have the same number of notes  (<sch:value-of select="count($start.note//mei:note)"/> vs. <sch:value-of select="count($end.note//mei:note)"/>).

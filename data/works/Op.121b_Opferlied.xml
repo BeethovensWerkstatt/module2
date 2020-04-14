@@ -196,6 +196,24 @@
             </changeDesc>
             <date isodate="2019-10-02"/>
          </change>
+         <change n="15">
+            <respStmt>
+               <persName>Anes Seipelt</persName>
+            </respStmt>
+            <changeDesc>
+               <p n="1">deleted unnecessary, empty tempo-elements</p>
+            </changeDesc>
+            <date isodate="2020-2-25"/>
+         </change>
+         <change n="16">
+            <respStmt>
+               <persName auth.uri="https://github.com/" codedval="susannecox">Susanne Cox</persName>
+            </respStmt>
+            <changeDesc>
+               <p>Fehler der OA als annot eingearbeitet.</p>
+            </changeDesc>
+            <date isodate="2020-04-03"/>
+         </change>
       </revisionDesc>
    </meiHead>
    <music>
@@ -229,7 +247,6 @@
                            langsamer Bewegung. </dir>
                         <dynam xml:id="x4daafc45-6e57-4d38-a771-74677ed0bf11" 
                            tstamp="1" place="below" staff="1"> p </dynam>
-                        <tempo xml:id="x5fc636a6-78da-44d9-86d7-abcf2d99d6c0" tstamp="1" staff="1"/>
                      </measure>
                      <measure n="1" xml:id="xd4723fe6-ad79-4816-9cf9-7e7ba38de6f7">
                         <staff xml:id="x39438c36-b68e-4b17-8343-37e8812afaae" n="1">
@@ -1273,9 +1290,12 @@
                      <measure n="45" xml:id="xd8ab5202-3b8b-4e6c-9d69-09b17e8e244f">
                         <staff xml:id="xa7352099-c33e-4fa0-ac00-68e2014523ea" n="1">
                            <layer xml:id="xcf75a8d6-19dc-444a-8cef-ed9d7d56bca0" n="1">
+                              <annot type="sic" resp="#BW" plist="#xefa3febd-5acb-4299-a8c6-38d1d02951b3">
+                                 First note in the following beam should be c-sharp.
+                              </annot>
                               <beam xml:id="xf07ebeaa-bed7-4539-986a-2f8dc511631a">
                                  <note xml:id="xefa3febd-5acb-4299-a8c6-38d1d02951b3" pname="c"
-                                    oct="5" dur="8" /> <!-- Fehler in OA: # fehlt -->
+                                    oct="5" dur="8" />
                                  <note xml:id="xd446860b-a9c0-4284-9e1d-3e9e284ec86d" pname="e"
                                     oct="5" dur="8" />
                                  <note xml:id="x74b66d5c-5f31-42f2-a081-7501bb6fd16b" pname="d"
@@ -2030,7 +2050,6 @@
                            langsamer Bewegung. </dir>
                         <dynam xml:id="x95185411-819f-4b9f-9529-d57b60f07994" 
                            tstamp="1" place="below" staff="1"> p </dynam>
-                        <tempo xml:id="x68a31bd2-4888-4041-9197-7e8eeb293df8" tstamp="1" staff="1"/>
                         <tie xml:id="x53adc200-e371-4471-9854-6b16937e82b0" staff="1"
                            startid="#x86dfea45-0838-42a5-ab34-332084e8ff63"
                            endid="#x5ddd5398-e8e3-4568-9f3b-84002ad222aa"/>
@@ -2275,8 +2294,11 @@
                      <measure n="10" xml:id="xc0230ac6-3b34-4847-a800-24846348c5b7">
                         <staff xml:id="xbc50a1bb-8633-42a3-8507-ec4f19748156" n="1">
                            <layer xml:id="x58b36c0b-b6e1-42d7-ba75-8645e55fcced" n="1">
+                              <annot type="sic" resp="#BW" plist="#xfae0d0e9-bd40-4c2f-ae48-3e389634d2fc">
+                                 Following note should be c-sharp.
+                              </annot>
                               <note xml:id="xfae0d0e9-bd40-4c2f-ae48-3e389634d2fc" pname="c" oct="5"
-                                 dur="8" /> <!-- Fehler in OA: # fehlt -->
+                                 dur="8" />
                               <rest xml:id="xcd4b23ca-97a6-494b-9ea4-d8e80e26dae3" dur="8"/>
                               <beam xml:id="xbc536c40-1654-4d19-aaae-67c15ac56306">
                                  <note xml:id="xeeaea750-2cbe-47a3-8c6f-297139e38f25" pname="d"
@@ -3103,11 +3125,14 @@
                      <measure n="47" xml:id="xdcbae48f-9b16-4221-833e-58e1657f41d5">
                         <staff xml:id="xd9acb1d7-67c7-49fc-a641-c4f87ce13452" n="1">
                            <layer xml:id="x91d160c6-afad-49d9-9ca8-bbf75e24e007" n="1">
+                              <annot type="sic" resp="#BW" plist="#x4eb9fbdc-f073-434c-bfe0-341c50ca91cd">
+                                 Wrong pitch of the second note: it should be g instead of a.
+                              </annot>
                               <beam xml:id="x7d8f50f0-28d7-47ac-8d3f-744ec5c8cc3f">
                                  <note xml:id="xc08f7fd5-1924-46b7-9a5f-03c0efb5e7ce" pname="g"
                                     oct="5" dur="8" />
                                  <note xml:id="x4eb9fbdc-f073-434c-bfe0-341c50ca91cd" pname="a"
-                                    oct="4" dur="8" /> <!-- Fehler in OA: Tonhöhe müsste g statt a lauten -->
+                                    oct="4" dur="8" />
                               </beam>
                               <rest xml:id="x8c607e66-2b62-4efc-8079-7606bf3511c2" dur="8"/>
                               <note xml:id="xe736a4d0-bc15-4a36-bff3-8034163a9802" pname="g" oct="4"
@@ -3740,7 +3765,6 @@
                            langsamer Bewegung. </dir>
                         <dynam xml:id="x8bd7a87f-ea18-48a8-8627-588eda6fdea4" 
                            tstamp="1" place="below" staff="1"> p </dynam>
-                        <tempo xml:id="x71673bfc-6c80-46d1-b4f2-3e522d314c4a" tstamp="1" staff="1"/>
                         <tie xml:id="xb0aa40f3-62a5-4bf5-b5fa-fd304f7120f3" staff="1"
                            startid="#xca381acf-5130-4ea9-aee0-cbae6ff62c80"
                            endid="#x8998810e-17d0-49d5-b337-702827301918"/>
@@ -5350,12 +5374,15 @@
                      <measure n="67" xml:id="x2aa92bfc-469c-4cc6-a558-b714d1cfd087">
                         <staff xml:id="xe347fded-338a-4237-8bbe-ed0ba46ff584" n="1">
                            <layer xml:id="x5916c86a-ad3f-46d3-a49d-34a5941b2528" n="1">
+                              <annot type="sic" resp="#BW" plist="#x5ae2f88a-449f-4e83-a648-f93e3276acc0">
+                                 Wrong duration of the third note, it should be 8 instead of 4.
+                              </annot>
                               <note xml:id="xffb43078-655e-48cc-8663-ee0ad8199f01" pname="d" oct="4"
                                  dur="4"  accid.ges="s"/>
                               <note xml:id="x084226de-2b4a-4ebd-abfd-2cf3596d31ef" pname="e" oct="4"
                                  dur="4" />
                               <note xml:id="x5ae2f88a-449f-4e83-a648-f93e3276acc0" pname="e"
-                                    oct="4" dur="4" /> <!-- Fehler in OA: Fähnchen fehlt, müsste 8tel statt 4tel sein -->
+                                    oct="4" dur="4" />
                               <beam xml:id="xb89c23a8-f440-4f41-9003-44ccf1b7cd5e">
                                  <note xml:id="x6c5b0e9d-3403-4ebd-9778-8d644396827d" pname="b"
                                     oct="3" dur="8" />
@@ -5575,11 +5602,10 @@
                            </layer>
                         </staff>
                         <dir xml:id="x7da9b8ef-5c2b-44d2-a87c-7cfdde683901" tstamp="1" place="above"
-                           staff="1" > Mit innigem andächtigem Gefühl, in ziemlich
-                           langsamer Bewegung. </dir>
+                           staff="1"> Mit innigem andächtigem Gefühl, in ziemlich
+                           langsamer Bewegung.</dir>
                         <dynam xml:id="x01e4e56f-d09f-4b53-a590-757139859d4a" 
                            tstamp="1" place="below" staff="1"> p </dynam>
-                        <tempo xml:id="xb6c1b663-630f-4b09-9309-4be6518ec107" tstamp="1" staff="1"/>
                         <tie xml:id="x17f657e6-7afa-4b18-9c87-75db40a469c1" staff="1"
                            startid="#x65cf1b1a-1ac6-449b-8167-4f584cd8efd4"
                            endid="#xcc7456d3-0564-402a-8bc6-63067e0bd9c1"/>
@@ -5905,8 +5931,11 @@
                      <measure n="13" xml:id="x854296dd-0b2c-41af-805d-5f7c81ac2615">
                         <staff xml:id="xbe652734-21ba-4027-8e57-75d63ae90577" n="1">
                            <layer xml:id="x784d7a6b-5fea-484d-8609-52018616eeff" n="1">
+                              <annot type="sic" resp="#BW" plist="#xc3afbb2d-2551-404b-b617-2a4529aa29f2">
+                                 Wrong pitch of the following note: it should be e instead of d.
+                              </annot>
                               <note xml:id="xc3afbb2d-2551-404b-b617-2a4529aa29f2" pname="d" oct="3"
-                                 dur="8"  accid.ges="s"/> <!-- Fehler in OA: müsste e sein -->
+                                 dur="8"  accid.ges="s"/>
                               <rest xml:id="x9260773f-05d9-4bb5-9ec5-647c3f4f4537" dur="8"/>
                               <note xml:id="x4682a603-8ae9-4c24-91fb-489d58708fb6" pname="a" oct="2"
                                  dur="8" />
@@ -7389,11 +7418,10 @@
                            </layer>
                         </staff>
                         <dir xml:id="x83fa428d-9919-41b1-9851-3f80f90e3bd1" tstamp="1" place="above"
-                           staff="1" > Mit innigem andächtigem Gefühl, in ziemlich
-                           langsamer Bewegung. </dir>
+                           staff="1">Mit innigem andächtigem Gefühl, in ziemlich
+                           langsamer Bewegung.</dir>
                         <dynam xml:id="x57147a00-dfa5-4380-8f47-e3a1213cc026" 
                            tstamp="1" place="below" staff="1"> p </dynam>
-                        <tempo xml:id="xd72fd352-0b82-455c-9f97-b4378e64c766" tstamp="1" staff="1"/>
                         <tie xml:id="x0437a78a-629d-4488-a2e2-43658bfec524" staff="1"
                            startid="#x753cc8e7-4406-4775-871a-b9d8ff879a16"
                            endid="#xb121e557-a275-40a4-b269-56808fc58615"/>
@@ -7788,9 +7816,11 @@
                      <measure n="21" xml:id="x688e780f-8921-4ead-a25d-fed2dc35f103">
                         <staff xml:id="xddd39bbb-754f-4c8c-8e39-127b225a7060" n="1">
                            <layer xml:id="xe7349c6e-ad96-43e2-82fa-f6090a92e152" n="1">
+                              <annot type="sic" resp="#BW" plist="#x48e50e76-37e0-4d03-8a80-27deda851a37">
+                                 Rest dur=4 is missing.
+                              </annot>
                               <rest xml:id="x2bdf6c1c-9ad5-48cb-ad7c-f58f784d92af" dur="4"/>
                               <space xml:id="x48e50e76-37e0-4d03-8a80-27deda851a37" dur="4"/>
-                              <!-- Fehler in OA: Viertelpause fehlt -->
                               <rest xml:id="x045592d8-bdf3-415d-93da-bd453682fe4e" dur="8"/>
                               <beam xml:id="x1243c847-a888-4371-b037-7e682b93a719">
                                  <note xml:id="x53fc8700-7471-4025-8d4e-737c5508f248" pname="g"
@@ -8890,11 +8920,10 @@
                            </layer>
                         </staff>
                         <dir xml:id="x4bcd3035-ca4e-41e1-bcac-1ac54c68c319" tstamp="1" place="above"
-                           staff="1" > Mit innigem andächtigem Gefühl, in ziemlich
-                           langsamer Bewegung. </dir>
+                           staff="1">Mit innigem andächtigem Gefühl, in ziemlich
+                           langsamer Bewegung.</dir>
                         <dynam xml:id="xcebc2303-2505-4f7e-925a-184f92cc1218" 
                            tstamp="1" place="below" staff="1"> p </dynam>
-                        <tempo xml:id="x7f605b2a-87a4-4013-960c-edb81de60167" tstamp="1" staff="1"/>
                         <tie xml:id="x2c9a96f6-cdba-4e13-80fe-af5d9b4b6a4b" staff="1"
                            startid="#xb87cb68e-04e4-40fe-84d5-b32d865bc79d"
                            endid="#x04f8fc72-854b-49d6-b190-e3bd77afc041"/>
@@ -11670,11 +11699,14 @@
                      <measure n="55" xml:id="xdf464abb-c744-433c-a2fd-47a39847b2aa">
                         <staff xml:id="x81ebee27-60ef-4231-ba98-8930092be96e" n="1">
                            <layer xml:id="xbf9fdb19-bb4b-4216-b649-bcb92663b5d9" n="1">
+                              <annot type="sic" resp="#BW" plist="#xdd9b65ae-c1f6-4ef9-bac8-0538ddaf9daa">
+                                 Wrong pitch of the second note: it should be d-sharp instead of e.
+                              </annot>
                               <note xml:id="xef1c3aac-b792-406a-a1c4-5bb5601e59bf" pname="e" oct="5"
                                  dur="4" />
                               <beam xml:id="xbbc93a8e-56a6-4a8e-8f39-2b5c106a72de">
                                  <note xml:id="xdd9b65ae-c1f6-4ef9-bac8-0538ddaf9daa" pname="e"
-                                    oct="5" dur="8" > <!-- Fehler in OA: Tonhöhe müsste dis statt e lauten -->
+                                    oct="5" dur="8" >
                                     <verse xml:id="xeba4c065-a184-4860-a830-89a001db3b74" n="1">
                                        <syl xml:id="x4e4609f2-8e30-4a8c-a4f8-81a9affb591d"
                                           wordpos="t">ne</syl>
@@ -18637,7 +18669,6 @@
                               <rest xml:id="x3f1ad680-b681-477b-95d7-9f8f8c382519" dur="8"/>
                            </layer>
                         </staff>
-                        <tempo xml:id="x6d0eac2d-9bb0-4c0c-91e0-91b2a48fdfcc" tstamp="1" staff="1"/>
                      </measure>
                      <measure n="1" xml:id="xa984cff5-aab1-4bd7-9c15-bb34f570d75d">
                         <staff xml:id="xf72608e0-e03b-4d6b-a844-a2302781724c" n="1">
@@ -19449,6 +19480,9 @@
                      <measure n="49" xml:id="xbf208a8f-24f7-41f8-84ee-7d8416ce178d">
                         <staff xml:id="xa9114bf8-e5fd-48a3-a8f8-970bf841483d" n="1">
                            <layer xml:id="x7dcffe84-b098-4c98-bad7-cbbbdfbea135" n="1">
+                              <annot type="sic" resp="#BW" plist="#x3df3404f-4871-49d4-84e0-0c7355287d6e">
+                                 Wrong pitch of the fourth note: it should be a instead of g.
+                              </annot>
                               <beam xml:id="x22b1522b-9b25-4bb5-94ab-08c2785f6f18">
                                  <note xml:id="xc7936fc4-fc4b-4969-8e0e-8336e51223da" pname="f"
                                     oct="4" dur="8" dots="1"  accid.ges="s"/>
@@ -19457,7 +19491,7 @@
                                  <note xml:id="x2b5f3ef5-1143-41e9-a2c1-b98896626a77" pname="b"
                                     oct="3" dur="8" dots="1" />
                                  <note xml:id="x3df3404f-4871-49d4-84e0-0c7355287d6e" pname="g"
-                                    oct="4" dur="16"  accid.ges="s"/> <!-- Fehler in OA: müsste a statt gis lauten -->
+                                    oct="4" dur="16"  accid.ges="s"/>
                               </beam>
                               <beam xml:id="x2f12f30c-7fb4-4303-ba03-997ed5d4eba0">
                                  <note xml:id="x9fbb1c43-8860-459b-bbec-7874f27892a4" pname="b"
@@ -20423,9 +20457,8 @@
                            </layer>
                         </staff>
                         <dir xml:id="xd7bfb6e6-3192-458b-b12a-84ff5eeb944a" tstamp="1" place="above"
-                           staff="1"> Mit innigem andächtigen Gefühl, in ziemlich langsamer
-                           Bewegung. </dir>
-                        <tempo xml:id="xbdb9cdbf-055b-4bdd-a82d-c717c20f8c97" tstamp="1" staff="1"/>
+                           staff="1">Mit innigem andächtigen Gefühl, in ziemlich langsamer
+                           Bewegung.</dir>
                      </measure>
                      <measure n="1" xml:id="x2f971e16-462a-4d5f-9b09-cf4217d23cc2">
                         <staff xml:id="x7e7eb1b2-452d-4ecc-adaf-9c70c9832b3a" n="1">
