@@ -34,7 +34,7 @@
         
     </xsl:template>
     
-    <xsl:template match="mei:note[not(@grace) and not(@cue) and not(@next)]" mode="add.next">
+    <xsl:template match="mei:note[not(@grace) and not(@cue) and not(@next)][not(ancestor::mei:chord[@grace])]" mode="add.next">
         <xsl:variable name="current.layer" select="ancestor::mei:layer" as="node()"/>
         <xsl:variable name="current.staff" select="ancestor::mei:staff" as="node()"/>
         
