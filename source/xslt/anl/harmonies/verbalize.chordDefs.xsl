@@ -86,7 +86,7 @@
                     <rend xmlns="http://www.music-encoding.org/ns/mei" rend="sup" type="ct7aug5">7♯5</rend>
                 </xsl:if>
                 <!-- major 9th chord-->
-                <xsl:if test="mei:chordMember[@inth='m7' and not(@type='78ret')] and mei:chordMember[@inth='M2' and not(@type='98sus')]">
+                <xsl:if test="mei:chordMember[@inth='m7' and not(@type='78ret')] and mei:chordMember[@inth='M2' and not(@type='98sus') and not(@type='23ret')]">
                     <rend xmlns="http://www.music-encoding.org/ns/mei" rend="sup" type="ct9">9</rend>
                 </xsl:if>
                 <!--major 7th and maj 9th chord-->
