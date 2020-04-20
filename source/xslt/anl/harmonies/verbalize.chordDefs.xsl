@@ -102,7 +102,7 @@
                     <rend xmlns="http://www.music-encoding.org/ns/mei" rend="sup" type="ct9">♯9</rend>
                 </xsl:if>
                 <!--9 added to a triad without 7th-->
-                <xsl:if test="not(mei:chordMember[@temp:cost='3']) and mei:chordMember[@inth='M2' and not(@type='98sus')]">
+                <xsl:if test="not(mei:chordMember[@temp:cost='3']) and mei:chordMember[@inth='M2'] and not(mei:chordMember[@type='98sus']) and not(mei:chordMember[@type='23ret'])">
                     <rend xmlns="http://www.music-encoding.org/ns/mei" rend="sup" type="ct9">add9</rend>
                 </xsl:if>
                 <!--chord with 7th, 9th and 11th-->
