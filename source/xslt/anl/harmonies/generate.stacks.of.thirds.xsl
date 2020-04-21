@@ -58,6 +58,7 @@
             <xsl:variable name="root.pname" select="substring-before(.,'-')" as="xs:string"/>
             <xsl:variable name="root.pclass" select="substring-after(.,'-')" as="xs:string"/>
             <xsl:variable name="root.int" select="xs:integer($root.pclass)" as="xs:integer"/>
+            <xsl:variable name="bass.pname" select="if($bass.notes[1]/@pname.ges) then($bass.notes[1]/@pname.ges) else($bass.notes[1]/@pname)" as="xs:string"/>
             <xsl:variable name="current.row" select="$third.rows/descendant-or-self::row[@pname = $root.pname]" as="node()"/>
             
             <xsl:variable name="ct1" select="$notes[((not(.//@pname.ges) and .//@pname = $current.row/@*[. = '0']/local-name()) or (.//@pname.ges = $current.row/@*[. = '0']/local-name())) and .//@pclass = $root.pclass]" as="node()+"/>
@@ -77,7 +78,7 @@
             <xsl:variable name="ct13" select="$notes[((not(.//@pname.ges) and .//@pname = $current.row/@*[. = '6']/local-name()) or (.//@pname.ges = $current.row/@*[. = '6']/local-name())) and .//@pclass != $root.pclass]" as="node()*"/>
             
 
-            <chordDef xmlns="http://www.music-encoding.org/ns/mei" temp:root="{$root.pname}" temp:root.pclass="{$root.pclass}" temp:bass="{$bass.notes[1]/@pname}" temp:bass.pclass="{$bass.notes[1]/@pclass}" temp:accented="{$isAccented}">
+            <chordDef xmlns="http://www.music-encoding.org/ns/mei" temp:root="{$root.pname}" temp:root.pclass="{$root.pclass}" temp:bass="{$bass.pname}" temp:bass.pclass="{$bass.notes[1]/@pclass}" temp:accented="{$isAccented}">
                 
                 <!-- these are all root notes -->
                 <xsl:sequence select="tools:generateChordMember($ct1,0,'P1')"/>
@@ -212,11 +213,12 @@
         <xsl:variable name="dur" select="max($notes/(max(.//@tstamp2/number(.)) - min(.//@tstamp/number(.))))" as="xs:double"/>
         
         
+        
         <chordMember xmlns="http://www.music-encoding.org/ns/mei" 
             inth="{$interval}" 
             temp:cost="{xs:string($cost)}" 
             corresp="#{string-join($notes/@xml:id,' #')}" 
-            pname="{$notes[1]/@pname}" 
+            pname="{if($notes[1]/@pname.ges) then ($notes[1]/@pname.ges) else ($notes[1]/@pname)}" 
             accid.ges="{if($notes[1]/@accid.ges) then($notes[1]/@accid.ges) else if($notes[1]/@accid) then($notes[1]/@accid) else('')}" 
             temp:pclass="{$notes[1]/@pclass}"
             temp:dur="{$dur}"/>
