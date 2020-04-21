@@ -16,6 +16,8 @@
         <xsl:param name="isAccented" as="xs:boolean"/>
         <xsl:param name="allowSimplification" as="xs:boolean"/>
 
+        
+
         <!-- static: how many thirds does it take to get somewhere -->
         <xsl:variable name="third.rows" as="node()+">
             <row pname="c" c="0" d="4" e="1" f="5" g="2" a="6" b="3"/>
@@ -53,7 +55,7 @@
             <xsl:variable name="lowest.notes" select="$lowest.oct.notes[(not(@pname.ges) and @pname = $pnames.indizes[$lowest.index]) or @pname.ges = $pnames.indizes[$lowest.index]]" as="node()+"/>
             <xsl:sequence select="$lowest.notes"/>
         </xsl:variable>
-
+        
         <xsl:for-each select="$pname.pclass.combined">
             <xsl:variable name="root.pname" select="substring-before(.,'-')" as="xs:string"/>
             <xsl:variable name="root.pclass" select="substring-after(.,'-')" as="xs:string"/>
