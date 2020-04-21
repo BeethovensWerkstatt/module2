@@ -99,8 +99,10 @@
                 
                 <xsl:variable name="distinct.pnames" select="distinct-values(for $note in $current.notes/descendant-or-self::mei:note[@pname] return (if($note/@pname.ges) then($note/@pname.ges) else($note/@pname)))" as="xs:string*"/>
                 
+                <xsl:variable name="distinct.pclasses" select="distinct-values(for $note in $current.notes/descendant-or-self::mei:note[@pclass] return($note/(xs:integer(@pclass) mod 12)))" as="xs:integer+"/>
+                
                 <!-- interprete harmonies only when there are at least two different pitch names -->
-                <xsl:if test="count($distinct.pnames) gt 1">
+                <xsl:if test="count($distinct.pnames) gt 1 and count($distinct.pclasses) gt 1">
                     <!-- here we have the sequence of harm interpretations, which are constantly revised for different aspects -->
                     <harm xmlns="http://www.music-encoding.org/ns/mei" type="analysis.result" tstamp="{$current.tstamp}" staff="{count($this.measure/mei:staff)}" place="below">
                         
