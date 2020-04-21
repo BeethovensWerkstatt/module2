@@ -336,6 +336,7 @@
 
 
 
+     <!-- WARNUNG: alter Code! -->
     <!-- Durchgangsnote (unaccented passing tone (upt)) and Wechselnoten (upper/lower neighbor)-->
     <!-- todo:handle the case of two passingtones -->
     <xsl:template match="mei:chordMember[@temp:cost = '4', '5', '6']" mode="resolve.passingtones.neighbors">

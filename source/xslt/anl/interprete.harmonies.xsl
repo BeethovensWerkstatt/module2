@@ -130,10 +130,12 @@
                         </xsl:variable>
                         
                         <!-- identify passing tones and neighbor tones -->
+                        <!--toDo: Übergangslösung; durchgangstöne reparieren-->
                         <xsl:variable name="identified.passingtones.neighbors" as="node()*">
-                            <xsl:apply-templates select="$identified.retardations" mode="resolve.passingtones.neighbors">
+                            <xsl:sequence select="$identified.retardations"/>
+                            <!--<xsl:apply-templates select="$identified.retardations" mode="resolve.passingtones.neighbors">
                                 <xsl:with-param name="notes" select="$current.notes" tunnel="yes" as="node()+"/>
-                            </xsl:apply-templates>
+                            </xsl:apply-templates>-->
                         </xsl:variable>
                         
                         
