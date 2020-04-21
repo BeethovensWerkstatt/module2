@@ -20,13 +20,11 @@
         
         <xsl:if test="count($bass.chordMember) = 0">
             <xsl:message select="'Anfang Problem ' || ancestor::mei:measure/@n"/>
-            <xsl:message select="$chordDef"/>
             <xsl:message select="$chordDef" terminate="yes"/>
         </xsl:if>
         
         <xsl:if test="count($bass.chordMember) gt 1">
             <xsl:message select="'Anfang Problem ' || ancestor::mei:measure/@n"/>
-            <xsl:message select="$chordDef"/>
             <xsl:message select="$chordDef" terminate="yes"/>
         </xsl:if>
         
