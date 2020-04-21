@@ -154,7 +154,7 @@
                     </xsl:if>
                     
                     <!-- debug -->
-                    <xsl:message select="'transposing ' || $this/@xml:id || ' from ' || $this/@pname || $this/@accid || $this/@accid.ges || ' to ' || $new.pname || $new.accid || ' (trans.diat:' || $trans.diat || ', trans.semi:' || $trans.semi || ')'"/>
+                    <!--<xsl:message select="'transposing ' || $this/@xml:id || ' from ' || $this/@pname || $this/@accid || $this/@accid.ges || ' to ' || $new.pname || $new.accid || ' (trans.diat:' || $trans.diat || ', trans.semi:' || $trans.semi || ')'"/>-->
 
                     <!--<xsl:apply-templates select="node() | (@* except (@accid, @accid.ges))" mode="#current"/>-->
 
