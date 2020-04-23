@@ -83,21 +83,20 @@
                     <cell><ref target="#check_dir">check_dir</ref></cell>
                 </row>
                 <row role="data">
-                    <cell><hi rend="bold">Bindebögen</hi></cell>
-                    <cell>nach Vorlage </cell>
-                    <cell> 
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <cell>
+                        <hi rend="bold">Bogensetzung</hi><lb/>Bindebögen werden in Beethovens Werkstatt mit dem Element <gi>slur</gi> codiert<lb/>Haltebögen werden mit dem Element <gi>tie</gi> codiert. 
+                    </cell>
+                    <cell>nach Vorlage; Bogenrichtung wird nur in Ausnahmefällen (Lesbarkeit) explizit mit <att>curvedir</att> angegeben</cell>
+                    <cell><egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <slur xml:id="x93b9272b" layer="1" staff="2" startid="#x278f22e5" endid="#x6adaacfe"/>
+                        </egXML><lb/><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <tie xml:id="xb2f614ee" staff="4" startid="#x07a8ae91" endid="#xd600c086"/>
                         </egXML>
                     </cell>
-                    <cell></cell>
+                    <cell><ref target="#controlevents_slur">controlevents_slur</ref><lb/><ref target="#controlevents_tie">controlevents_tie</ref><lb/><ref target="#check_notes">check_notes</ref><lb/><ref target="#check_chords">check_chords</ref>
+                    </cell>
                 </row>
-                <row role="data">
-                    <cell><hi rend="bold">Bindebögen - Bogenrichtung</hi></cell>
-                    <cell>nicht explizit angeben</cell>
-                    <cell><att>curvedir</att> nur in Ausnahmefällen (Lesbarkeit)</cell>
-                    <cell></cell>
-                </row>
+                
                 <row role="data">
                     <cell><hi rend="bold">Dynamikangaben</hi>:<lb/>
                         <hi rend="latintype">f, p, sf</hi>, etc.,
@@ -148,22 +147,22 @@
                     </cell>
                 </row>
                 <row role="data">
-                    <cell>Gravierende <hi rend="bold">Fehler</hi>/Inkonsistenzen, die viele Folgefehler produzieren,   fehlender Notenschlüssel</cell>
-                    <cell>werden korrigiert, in den Daten markiert und mit der betreffenden Stelle verknüpft</cell>
+                    <cell><hi rend="bold">Fehler</hi><lb/>
+                       <list>
+                           <item>Gravierende Fehler/Inkonsistenzen, die viele Folgefehler produzieren, z.B. fehlender Notenschlüssel</item><item>Lokale, offensichtliche Fehler, die keine Folgefehler hervorrufen (z.B. fehlende Pause, Punkt oder Vorzeichen</item></list>
+                    </cell>
+                    <cell>
+                        <list>
+                            <item>werden korrigiert, in den Daten markiert und mit der betreffenden Stelle verknüpft</item>
+                            <item>werden nicht korrigiert aber in den Daten markiert</item>
+                        </list></cell>
                     <cell> 
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <annot type="sic" resp="#BW" plist="#note_x0a0ks359b3e">missing clef change in the first edition; corrected</annot>
-                    </egXML>
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row role="data">
-                    <cell>Lokale, offensichtliche <hi rend="bold">Fehler</hi>, die keine Folgefehler hervorrufen (z.B. fehlende Pause, Punkt oder Vorzeichen</cell>
-                    <cell>werden nicht korrigiert aber in den Daten markiert</cell>
-                    <cell> 
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <annot type="sic" resp="#BW" plist="#note_49ee-b5a1">Wrong duration of the last note, it should be 8 instead of 4; not corrected</annot>
-                    </egXML>
+                    </egXML><lb/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <annot type="sic" resp="#BW" plist="#note_49ee-b5a1">Wrong duration of the last note, it should be 8 instead of 4; not corrected</annot>
+                        </egXML>
                     </cell>
                     <cell></cell>
                 </row>
@@ -191,20 +190,6 @@
                     </egXML>
                     </cell>
                     <cell><ref target="#check_stem.dir_dur1">check_stem.dir_dur1</ref></cell>
-                </row>
-                <row role="data">
-                    <cell><hi rend="bold">Haltebögen</hi></cell>
-                    <cell>werden mit einem Element codiert<lb/>werden mit <att>startid</att> und <att>endid</att> an jeweilige noten oder Akkorde geknüpft</cell>
-                    <cell> 
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <tie xml:id="xb2f614ee" staff="4" startid="#x07a8ae91" endid="#xd600c086"/>
-                    </egXML>
-                    </cell>
-                    <cell>
-                        <ref target="#controlevents_tie">controlevents_tie</ref><lb/>
-                        <ref target="#check_notes">check_notes</ref><lb/>
-                        <ref target="#check_chords">check_chords</ref>
-                    </cell>
                 </row>
                 <row role="data">
                     <cell><hi rend="bold">Metrum</hi> z.B. 4/4 oder C</cell>
@@ -474,7 +459,7 @@
                                     hairpin elements are supposed to have a @tstamp and @tstamp2.
                                 </sch:assert>
                             </sch:rule>
-                            <sch:rule context="mei:slur">
+                            <sch:rule xml:id="controlevents_slur" context="mei:slur">
                                 <sch:assert test="not(@tstamp2) and not(@tstamp) and @endid and @startid">
                                     slur elements are supposed to have a @startid and @endid.
                                 </sch:assert>
