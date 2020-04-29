@@ -160,26 +160,27 @@
                         </egXML>
                         <p><ref target="#controlevents">controlevents_slur</ref></p>
                     </div>
+                    <div type="bogenrichtung">
+                        <head type="sub_2">Bogenrichtung</head>
+                        <list>
+                            <item>In <name type="org">Beethovens Werkstatt</name> wird die Bogenrichtung nicht explizit angegeben</item>
+                            <item>Ausnahme: Wenn es zu schlechter Lesbarkeit der Stimmführung im Klavier führen würde, dann wird sie mit <att>curvedir</att> angegeben</item>
+                        </list>
+                    </div>
+                    <div type="haltebogen">
+                        <head type="sub_2">Haltebögen</head>
+                        <list>
+                            <item>In <name type="org">Beethovens Werkstatt</name> werden Haltebögen nach Vorlage mit dem Element <tag>tie</tag> codiert</item>
+                            <item>Haltebögen werden mit <att>startid</att> und <att>endid</att> an jeweilige Noten oder Akkorde geknüpft
+                            </item>
+                        </list>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <tie xml:id="xb2f614ee" staff="4" startid="#x07a8ae91" endid="#xd600c086"/>
+                        </egXML>
+                        <p><ref target="#controlevents">controlevents_tie</ref><ref target="#check_notes">check_notes</ref><ref target="#check_chords">check_chords</ref></p>
+                    </div>
                 </div>
-                <div type="bogenrichtung">
-                    <head type="sub_2">Bogenrichtung</head>
-                    <list>
-                        <item>In <name type="org">Beethovens Werkstatt</name> wird die Bogenrichtung nicht explizit angegeben</item>
-                        <item>Ausnahme: Wenn es zu schlechter Lesbarkeit der Stimmführung im Klavier führen würde, dann wird sie mit <att>curvedir</att> angegeben</item>
-                    </list>
-                </div>
-                <div type="haltebogen">
-                    <head type="sub_2">Haltebögen</head>
-                    <list>
-                        <item>In <name type="org">Beethovens Werkstatt</name> werden Haltebögen nach Vorlage mit dem Element <tag>tie</tag> codiert</item>
-                        <item>Haltebögen werden mit <att>startid</att> und <att>endid</att> an jeweilige Noten oder Akkorde geknüpft
-                        </item>
-                    </list>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <tie xml:id="xb2f614ee" staff="4" startid="#x07a8ae91" endid="#xd600c086"/>
-                    </egXML>
-                    <p><ref target="#controlevents">controlevents_tie</ref><ref target="#check_notes">check_notes</ref><ref target="#check_chords">check_chords</ref></p>
-                </div>
+                
                 <div type="dynamik">
                     <head type="sub_1">Dynamik</head>
                     <div type="dynamikangaben">
