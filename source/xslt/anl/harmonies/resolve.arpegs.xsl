@@ -71,7 +71,7 @@
             <!--toDo: add @mfunc="arp" to all notes that fit to these conditions-->
             
             <!-- lest.thirds less than 3 means only third, fifth and seventh above the root are allowed -->
-            <xsl:when test="$minimal.cost.of.thirds le 2">
+            <xsl:when test="$minimal.cost.of.thirds le 3">
                 <xsl:variable name="start" select="$notes[1]/@tstamp" as="xs:string"/>
                 <xsl:variable name="end" select="$notes[last()]/@tstamp2" as="xs:string"/>
                 <chord xmlns="http://www.music-encoding.org/ns/mei" type="resolved.arpeggio">
