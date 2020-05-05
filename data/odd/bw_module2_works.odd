@@ -182,10 +182,10 @@
                 
                 <div type="sub_1">
                 <head type="sub_1" xml:id="m2a538a69-022e-4fb2-a96e-6cb1ca0df039">Sekundäre Notation / controlevents</head>
-                    <div type="sub_1">
-                    <head type="sub_1" xml:id="xb18142fb-cd6c-4f70-9a90-7f5752f70494">Bogensetzung</head>
                     <div type="sub_2">
-                        <head type="sub_2" xml:id="x0ea35e47-b8c8-4a71-bc3a-ecdb79f23787">Bindebögen</head>
+                    <head type="sub_2" xml:id="xb18142fb-cd6c-4f70-9a90-7f5752f70494">Bogensetzung</head>
+                    <div type="sub_3">
+                        <head type="sub_3" xml:id="x0ea35e47-b8c8-4a71-bc3a-ecdb79f23787">Bindebögen</head>
                         <list>
                             <item>In <name type="org">Beethovens Werkstatt</name> werden Bindebögen nach Vorlage mit dem Element <tag>slur</tag> codiert</item>
                             <item>Bindebögen werden mit <att>startid</att> und <att>endid</att> an die jeweiligen Noten oder Akkorde geknüpft</item>
@@ -195,15 +195,15 @@
                         </egXML>
                         <p><ref target="#controlevents">controlevents_slur</ref></p>
                     </div>
-                    <div type="sub_2">
-                        <head type="sub_2" xml:id="x03024728-65f4-4dcd-b5b3-8a6940d1a5c3">Bogenrichtung</head>
+                    <div type="sub_3">
+                        <head type="sub_3" xml:id="x03024728-65f4-4dcd-b5b3-8a6940d1a5c3">Bogenrichtung</head>
                         <list>
                             <item>In <name type="org">Beethovens Werkstatt</name> wird die Bogenrichtung nicht explizit angegeben</item>
                             <item>Ausnahme: Wenn es zu schlechter Lesbarkeit der Stimmführung im Klavier führen würde, dann wird sie mit <att>curvedir</att> angegeben</item>
                         </list>
                     </div>
-                    <div type="sub_2">
-                        <head type="sub_2" xml:id="x9a008f68-b61c-4600-97e8-5d28dd71f32c">Haltebögen</head>
+                    <div type="sub_3">
+                        <head type="sub_3" xml:id="x9a008f68-b61c-4600-97e8-5d28dd71f32c">Haltebögen</head>
                         <list>
                             <item>In <name type="org">Beethovens Werkstatt</name> werden Haltebögen nach Vorlage mit dem Element <tag>tie</tag> codiert</item>
                             <item>Haltebögen werden mit <att>startid</att> und <att>endid</att> an jeweilige Noten oder Akkorde geknüpft
@@ -216,10 +216,10 @@
                     </div>
                 </div>
                 
-                <div type="sub_1">
-                    <head type="sub_1" xml:id="x9a936376-082d-4827-8c38-5c4157e3c56f">Dynamik</head>
-                    <div type="sub_1">
-                        <head type="sub_2" xml:id="xfbcb3dbe-47a8-4658-8865-800ea944e8d5">Dynamikangaben</head>
+                <div type="sub_2">
+                    <head type="sub_2" xml:id="x9a936376-082d-4827-8c38-5c4157e3c56f">Dynamik</head>
+                    <div type="sub_3">
+                        <head type="sub_3" xml:id="xfbcb3dbe-47a8-4658-8865-800ea944e8d5">Dynamikangaben</head>
                         <list>
                             <item>z.B. <hi rend="italic">f</hi>, <hi rend="italic">p</hi>, <hi rend="italic">sf</hi>, etc., <hi rend="italic">cresc</hi>. und <hi rend="italic">decresc</hi>.</item>
                             <item>In <name type="org">Beethovens Werkstatt</name> werden Dynamikangaben nach Vorlage mit dem Element <tag>dynam</tag> codiert</item>
@@ -246,8 +246,8 @@
                         
                         <p><ref target="#check_dynam_between_space">check_dynam_between_space</ref></p>
                     </div>
-                    <div type="sub_2">
-                        <head type="sub_2" xml:id="xdbc3dca2-13ed-43f6-866f-d145acfcc02d">Crescendo- und decrescendo-Gabeln</head>
+                    <div type="sub_3">
+                        <head type="sub_3" xml:id="xdbc3dca2-13ed-43f6-866f-d145acfcc02d">Crescendo- und decrescendo-Gabeln</head>
                         <list>
                             <item>In <name type="org">Beethovens Werkstatt</name> werden Crescendo- und decrescendo-Gabeln nach Vorlage mit dem Element <tag>hairpin</tag> codiert</item>
                             <item>nur <att>tstamp</att> und <att>tstamp2</att> sind erlaubt</item>
@@ -264,8 +264,8 @@
                         </p>
                     </div>
                 </div>
-                    <div type="sub_1">
-                        <head type="sub_1" xml:id="xc7eabadd-55ce-4bfd-9cfa-60d96331662d">Fermaten</head>
+                    <div type="sub_2">
+                        <head type="sub_2" xml:id="xc7eabadd-55ce-4bfd-9cfa-60d96331662d">Fermaten</head>
                         <list>
                             <item>In <name type="org">Beethovens Werkstatt</name> werden Fermaten nach Vorlage mit dem Element <tag>fermata</tag> codiert</item>
                             <item>nur <att>startid</att> ist erlaubt, außer die Fermate steht auf einem Taktstrich, dann ist auch <att>tstamp</att> erlaubt</item>
@@ -286,8 +286,8 @@
                             <ref target="#fermata_form_shape">check_fermata_form_shape</ref>
                         </p>
                     </div>
-                    <div type="sub_1">
-                        <head type="sub_1" xml:id="x98f43989-437a-4b2e-9c05-a79c517b7f89">Oktavierung</head>
+                    <div type="sub_2">
+                        <head type="sub_2" xml:id="x98f43989-437a-4b2e-9c05-a79c517b7f89">Oktavierung</head>
                         <list>
                             <item>In <name type="org">Beethovens Werkstatt</name> werden 8va-Zeichen nach Vorlage mit dem Element <tag>octave</tag> codiert</item>
                             <item>Es gibt keine Angaben zur Linienform</item>
@@ -296,8 +296,8 @@
                             <item><att>oct.ges</att> müssen betreffenden Noten/Akkorde ergänzt werden</item>
                         </list>
                     </div>
-                <div type="sub_1">
-                    <head type="sub_1" xml:id="x9c043f6a-546b-4c88-9686-3ece733ea71c">Artikulation</head>
+                <div type="sub_2">
+                    <head type="sub_2" xml:id="x9c043f6a-546b-4c88-9686-3ece733ea71c">Artikulation</head>
                     <list>
                         <item>In <name type="org">Beethovens Werkstatt</name> wird Artikulation nach Vorlage mit dem Element <tag>dir</tag> codiert</item>
                     </list>
@@ -310,8 +310,8 @@
                         <ref target="#check_dir">check_dir</ref>
                     </p>
                 </div>
-                    <div type="sub_1">
-                        <head type="sub_1" xml:id="x7c531aa3-595c-44a9-8279-7697907ff5ef">Tempoangaben</head>
+                    <div type="sub_2">
+                        <head type="sub_2" xml:id="x7c531aa3-595c-44a9-8279-7697907ff5ef">Tempoangaben</head>
                         <list>
                             <item>In <name type="org">Beethovens Werkstatt</name> werden Tempoangaben nach Vorlage mit dem Element <tag>dir</tag> codiert</item>
                         </list>
@@ -323,8 +323,8 @@
                         <p><ref target="#check_dir">check_dir</ref></p>
                     </div>
                 
-                <div type="sub_1">
-                    <head type="sub_1" xml:id="xfa88c5ae-9faf-48d9-9c66-db6556034220">Studierzeichen</head>
+                <div type="sub_2">
+                    <head type="sub_2" xml:id="xfa88c5ae-9faf-48d9-9c66-db6556034220">Studierzeichen</head>
                     <list>
                         <item>In <name type="org">Beethovens Werkstatt</name> werden Studierzeichen nach Vorlage mit dem Element <tag>reh</tag> codiert</item>
                     </list>
@@ -336,8 +336,8 @@
                     <p><ref target="#check_reh">check_reh</ref></p>
                 </div>
                 
-                <div type="sub_1">
-                    <head type="sub_1" xml:id="xc00ee2dc-9177-40db-943c-f1732102a5a6">Triller</head>
+                <div type="sub_2">
+                    <head type="sub_2" xml:id="xc00ee2dc-9177-40db-943c-f1732102a5a6">Triller</head>
                     <list>
                         <item>In <name type="org">Beethovens Werkstatt</name> werden Triller nach Vorlage mit dem Element <tag>trill</tag> codiert</item>
                         <item>Triller werden mit <att>startid</att> mit einer Note verknüpft</item>
