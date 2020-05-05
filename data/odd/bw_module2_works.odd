@@ -49,10 +49,13 @@
             <div type="main">
                 <head type="main">Transkriptions- und Codierungsrichtlinien</head>
                 <div type="sub_1">
-                    <head type="sub_1" xml:id="x0204f956-9fac-4394-a65f-c20ba8a7b7a6">Allgemeine Angaben</head>
+                <head type="sub_1" xml:id="m546ea305-7899-4d7b-8575-43a6e6c2df07">Primäre Notation / events</head>
                     <div type="sub_2">
+                    <head type="sub_2" xml:id="x0204f956-9fac-4394-a65f-c20ba8a7b7a6">Rahmennotation</head>
+                    
+                    <div type="sub_3">
                         <!--<div type="metrum">-->
-                        <head type="sub_2" xml:id="x5e118354-38c2-454c-928a-14ff91a5a175">Metrum</head>
+                        <head type="sub_3" xml:id="x5e118354-38c2-454c-928a-14ff91a5a175">Metrum</head>
                         <list type="transkription">
                                 <item>In <name type="org">Beethovens Werkstatt</name> wird das Metrum nach Vorlage in der <tag>scoreDef</tag> codiert
                                 </item>
@@ -65,9 +68,8 @@
                         </egXML></p>
                         <p><ref target="#check_meter">check_meter</ref></p>
                     </div>
-                 
-                    <div type="sub_2">
-                        <head type="sub_2" xml:id="x3bf50c62-400d-41f1-b3c0-919354aa7644">Schlüssel und Schlüsselwechsel</head>
+                    <div type="sub_3">
+                        <head type="sub_3" xml:id="x3bf50c62-400d-41f1-b3c0-919354aa7644">Schlüssel und Schlüsselwechsel</head>
                         <list type="transkription">
                             <item>In <name type="org">Beethovens Werkstatt</name> werden Schlüssel und Schlüsselwechsel nach Vorlage mit dem Element <tag>clef</tag> codiert</item>
                             <item><att>tstamp</att> und <att>tstamp2</att> sind nicht erlaubt
@@ -80,8 +82,8 @@
                             <ref target="#check_clef">check_clef</ref>
                         </p>
                     </div>
-                    <div type="sub_2">
-                        <head type="sub_2" xml:id="x55cb0212-1241-4e50-8950-814cefd821cf">Tonartwechsel</head>
+                    <div type="sub_3">
+                        <head type="sub_3" xml:id="x55cb0212-1241-4e50-8950-814cefd821cf">Tonartwechsel</head>
                         <list type="transkription">
                             <item>In <name type="org">Beethovens Werkstatt</name> werden Tonartwechsel nach Vorlage in einer neuen <tag>scoreDef</tag> codiert
                             </item>
@@ -102,17 +104,18 @@
                             </scoreDef> 
                         </egXML></p>
                     </div>
-                    <div type="sub_2">
+                    <div type="sub_3">
                         <head type="sub_2" xml:id="xe111fe91-fd37-4628-8f4e-fad4e9aca0b1">Stimmbezeichnung</head>
                         <list>
                             <item>Die Bezeichnung der Stimmen richtet sich nach der Neuen Beethoven Gesamtausgabe</item>
                         </list>
                     </div>
                 </div>
-                <div type="sub_1">
-                    <head type="sub_1" xml:id="x50598ddd-4af9-4c6d-9ba2-840bb8666507">Noten</head>
+                    
+                <div type="sub_2">
+                    <head type="sub_2" xml:id="x50598ddd-4af9-4c6d-9ba2-840bb8666507">Noten</head>
                     <div type="vorschlagsnoten">
-                        <head type="sub_2" xml:id="xab100033-2a55-4e0c-b3a5-5f0142d59e53">Vorschlagsnoten</head>
+                        <head type="sub_3" xml:id="xab100033-2a55-4e0c-b3a5-5f0142d59e53">Vorschlagsnoten</head>
                         <list>
                             <item>In <name type="org">Beethovens Werkstatt</name> werden Vorschlagsnoten nach Vorlage mit dem Attribut <att>grace</att> codiert</item>
                             <item>nur der Wert "unknown" ist erlaubt</item>
@@ -122,8 +125,8 @@
                         </egXML>
                         <p><ref target="#check_gracenote">check_gracenote</ref></p>
                     </div>
-                    <div type="sub_2">
-                        <head type="sub_2" xml:id="x380ba72c-0861-4681-8896-b9bae57402ea">Vorzeichen und Versetzungszeichen</head>
+                    <div type="sub_3">
+                        <head type="sub_3" xml:id="x380ba72c-0861-4681-8896-b9bae57402ea">Vorzeichen und Versetzungszeichen</head>
                         <list>
                             <item>In <name type="org">Beethovens Werkstatt</name> werden Vorzeichen und Versetzungszeichen nach Vorlage codiert</item>
                             <item>Versetzungszeichen werden mit dem Attribut <att>accid</att> an den Noten angegeben</item>
@@ -134,8 +137,8 @@
                                 oct="5" dur="4" artic="stacc"/> 
                         </egXML>
                     </div>
-                    <div type="sub_2">
-                        <head type="sub_2" xml:id="xcacad184-aee7-4e7c-9224-5289639f805c">Notenhalsrichtung</head>
+                    <div type="sub_3">
+                        <head type="sub_3" xml:id="xcacad184-aee7-4e7c-9224-5289639f805c">Notenhalsrichtung</head>
                         <list>
                             <item>In <name type="org">Beethovens Werkstatt</name> wird die Notenhalsrichtung nicht explizit codiert</item>
                             <item>Ausnahme: Wenn es zu Überlagerung der Stimmen/schlechte Lesbarkeit der Stimmführung im Klavier führen würde</item>
@@ -147,9 +150,39 @@
                         </egXML>
                         <p><ref target="#check_stem.dir_dur1">check_stem.dir_dur1</ref></p>
                     </div>
-                    
+                    <div type="sub_3">
+                        <head type="sub_3" xml:id="x4a3670e6-2e74-4577-9697-491698242e81">Triolen</head>
+                        <list>
+                            <item>In <name type="org">Beethovens Werkstatt</name> werden Triolen nach Vorlage mit dem Element <tag>tuplet</tag> codiert</item>
+                            <item><tag>tupletSpan</tag> ist nicht erlaubt</item>
+                        </list>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <tuplet xml:id="x40c" num="3" numbase="2" num.place="above">
+                                <note xml:id="x7a0c8" dur="8" oct="3"
+                                    pname="f"/>
+                                <note xml:id="xd9e3" dur="8" oct="3"
+                                    pname="g"/>
+                                <note xml:id="x7325" dur="8" oct="3"
+                                    pname="a"/>
+                            </tuplet>
+                        </egXML>
+                    </div>
                 </div>
+                <div type="sub_2">
+                    <head type="sub_2" xml:id="x1ab5affd-f90d-44dd-ad85-5425bc5fa16b">Singtext</head>
+                    <list>
+                        <item>In <name type="org">Beethovens Werkstatt</name> wird der Singtext mit den Elementen <tag>verse</tag> und <tag>syl</tag> innerhalb einer Note codiert</item>
+                        <item>Singtext wird in den Stimmen hinzugefügt, auch wenn er in der Vorlage nicht steht (z.B. beim Klavierauszug der OA von op. 122)</item>
+                        <item>Silbentrennung geschieht nach Vorlage; normierte Silbentrennung im Fall von Platzmangel ergänzt</item>
+                        <item>Rechtschreibung geschieht nach Vorlage</item>
+                        <item>Verlängerungsstriche werden nicht codiert (graphische Variante)</item>
+                    </list>
+                </div>
+                </div>
+                
                 <div type="sub_1">
+                <head type="sub_1" xml:id="m2a538a69-022e-4fb2-a96e-6cb1ca0df039">Sekundäre Notation / controlevents</head>
+                    <div type="sub_1">
                     <head type="sub_1" xml:id="xb18142fb-cd6c-4f70-9a90-7f5752f70494">Bogensetzung</head>
                     <div type="sub_2">
                         <head type="sub_2" xml:id="x0ea35e47-b8c8-4a71-bc3a-ecdb79f23787">Bindebögen</head>
@@ -231,23 +264,38 @@
                         </p>
                     </div>
                 </div>
-                <div type="sub_1">
-                    <head type="sub_1" xml:id="x4a3670e6-2e74-4577-9697-491698242e81">Triolen</head>
-                    <list>
-                        <item>In <name type="org">Beethovens Werkstatt</name> werden Triolen nach Vorlage mit dem Element <tag>tuplet</tag> codiert</item>
-                        <item><tag>tupletSpan</tag> ist nicht erlaubt</item>
-                    </list>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <tuplet xml:id="x40c" num="3" numbase="2" num.place="above">
-                            <note xml:id="x7a0c8" dur="8" oct="3"
-                                pname="f"/>
-                            <note xml:id="xd9e3" dur="8" oct="3"
-                                pname="g"/>
-                            <note xml:id="x7325" dur="8" oct="3"
-                                pname="a"/>
-                        </tuplet>
-                    </egXML>
-                </div>
+                    <div type="sub_1">
+                        <head type="sub_1" xml:id="xc7eabadd-55ce-4bfd-9cfa-60d96331662d">Fermaten</head>
+                        <list>
+                            <item>In <name type="org">Beethovens Werkstatt</name> werden Fermaten nach Vorlage mit dem Element <tag>fermata</tag> codiert</item>
+                            <item>nur <att>startid</att> ist erlaubt, außer die Fermate steht auf einem Taktstrich, dann ist auch <att>tstamp</att> erlaubt</item>
+                            <item>keine Ortsangabe nötig, außer wenn sie unterhalb des Systems steht, dann <att>place</att>=“below“</item>
+                            <item><att>form</att> und <att>shape</att> sind nicht erlaubt</item>
+                        </list>
+                        
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <fermata xml:id="x02265c21" staff="3" startid="#xf6e96376"/> 
+                        </egXML>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <fermata xml:id="xeb595273" staff="7" tstamp="3" place="below"/>
+                        </egXML>
+                        
+                        <p>
+                            <ref target="#controlevents">controlevents_fermata</ref><lb/>
+                            <ref target="#check_fermata_place">check_fermata_place</ref><lb/>
+                            <ref target="#fermata_form_shape">check_fermata_form_shape</ref>
+                        </p>
+                    </div>
+                    <div type="sub_1">
+                        <head type="sub_1" xml:id="x98f43989-437a-4b2e-9c05-a79c517b7f89">Oktavierung</head>
+                        <list>
+                            <item>In <name type="org">Beethovens Werkstatt</name> werden 8va-Zeichen nach Vorlage mit dem Element <tag>octave</tag> codiert</item>
+                            <item>Es gibt keine Angaben zur Linienform</item>
+                            <item>8va-Zeichen werden mit <att>startid</att> an Noten oder Akkorde geknüpft</item>
+                            <item><att>tstamp</att> ist nicht erlaubt</item>
+                            <item><att>oct.ges</att> müssen betreffenden Noten/Akkorde ergänzt werden</item>
+                        </list>
+                    </div>
                 <div type="sub_1">
                     <head type="sub_1" xml:id="x9c043f6a-546b-4c88-9686-3ece733ea71c">Artikulation</head>
                     <list>
@@ -262,24 +310,19 @@
                         <ref target="#check_dir">check_dir</ref>
                     </p>
                 </div>
-                <div type="sub_1">
-                    <head type="sub_1" xml:id="x98f43989-437a-4b2e-9c05-a79c517b7f89">8va-Zeichen</head>
-                    <list>
-                        <item>In <name type="org">Beethovens Werkstatt</name> werden 8va-Zeichen nach Vorlage mit dem Element <tag>octave</tag> codiert</item>
-                        <item>Es gibt keine Angaben zur Linienform</item>
-                        <item>8va-Zeichen werden mit <att>startid</att> an Noten oder Akkorde geknüpft</item>
-                        <item><att>tstamp</att> ist nicht erlaubt</item>
-                        <item><att>oct.ges</att> müssen betreffenden Noten/Akkorde ergänzt werden</item>
-                    </list>
-                </div>
-                <div type="sub_1">
-                    <head type="sub_1" xml:id="xf48025ff-793c-4a99-9c78-1c215f7c0e4e">Abgekürzte und alte Schreibweisen</head>
-                    <list>
-                        <item>werden aufgelöst und/oder normalisiert</item>
-                        <item>z.B. <tag>bTrem</tag>, <tag>multiRpt</tag>, <tag>beatRpt</tag> etc. sind nicht erlaubt</item>
-                    </list>
-                    <p><ref target="#mei_cmn">mei_cmn</ref></p>
-                </div>
+                    <div type="sub_1">
+                        <head type="sub_1" xml:id="x7c531aa3-595c-44a9-8279-7697907ff5ef">Tempoangaben</head>
+                        <list>
+                            <item>In <name type="org">Beethovens Werkstatt</name> werden Tempoangaben nach Vorlage mit dem Element <tag>dir</tag> codiert</item>
+                        </list>
+                        
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <dir xml:id="x926d2a72" tstamp="1" place="above" staff="1">Allegretto</dir> 
+                        </egXML>
+                        
+                        <p><ref target="#check_dir">check_dir</ref></p>
+                    </div>
+                
                 <div type="sub_1">
                     <head type="sub_1" xml:id="xfa88c5ae-9faf-48d9-9c66-db6556034220">Studierzeichen</head>
                     <list>
@@ -292,18 +335,7 @@
                     
                     <p><ref target="#check_reh">check_reh</ref></p>
                 </div>
-                <div type="sub_1">
-                    <head type="sub_1" xml:id="x7c531aa3-595c-44a9-8279-7697907ff5ef">Tempoangaben</head>
-                    <list>
-                        <item>In <name type="org">Beethovens Werkstatt</name> werden Tempoangaben nach Vorlage mit dem Element <tag>dir</tag> codiert</item>
-                    </list>
-                    
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <dir xml:id="x926d2a72" tstamp="1" place="above" staff="1">Allegretto</dir> 
-                    </egXML>
-                    
-                    <p><ref target="#check_dir">check_dir</ref></p>
-                </div>
+                
                 <div type="sub_1">
                     <head type="sub_1" xml:id="xc00ee2dc-9177-40db-943c-f1732102a5a6">Triller</head>
                     <list>
@@ -317,61 +349,44 @@
                     
                     <p><ref target="#controlevents">controlevents_trill</ref></p>
                 </div>
-                <div type="sub_1">
-                    <head type="sub_1" xml:id="xc7eabadd-55ce-4bfd-9cfa-60d96331662d">Fermaten</head>
-                    <list>
-                        <item>In <name type="org">Beethovens Werkstatt</name> werden Fermaten nach Vorlage mit dem Element <tag>fermata</tag> codiert</item>
-                        <item>nur <att>startid</att> ist erlaubt, außer die Fermate steht auf einem Taktstrich, dann ist auch <att>tstamp</att> erlaubt</item>
-                        <item>keine Ortsangabe nötig, außer wenn sie unterhalb des Systems steht, dann <att>place</att>=“below“</item>
-                        <item><att>form</att> und <att>shape</att> sind nicht erlaubt</item>
-                    </list>
+                
                     
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <fermata xml:id="x02265c21" staff="3" startid="#xf6e96376"/> 
-                    </egXML>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <fermata xml:id="xeb595273" staff="7" tstamp="3" place="below"/>
-                    </egXML>
-                    
-                    <p>
-                        <ref target="#controlevents">controlevents_fermata</ref><lb/>
-                        <ref target="#check_fermata_place">check_fermata_place</ref><lb/>
-                        <ref target="#fermata_form_shape">check_fermata_form_shape</ref>
-                    </p>
+                
                 </div>
                 <div type="sub_1">
-                    <head type="sub_1" xml:id="x1ab5affd-f90d-44dd-ad85-5425bc5fa16b">Singtext</head>
-                    <list>
-                        <item>In <name type="org">Beethovens Werkstatt</name> wird der Singtext mit den Elementen <tag>verse</tag> und <tag>syl</tag> innerhalb einer Note codiert</item>
-                        <item>Singtext wird in den Stimmen hinzugefügt, auch wenn er in der Vorlage nicht steht (z.B. beim Klavierauszug der OA von op. 122)</item>
-                        <item>Silbentrennung geschieht nach Vorlage; normierte Silbentrennung im Fall von Platzmangel ergänzt</item>
-                        <item>Rechtschreibung geschieht nach Vorlage</item>
-                        <item>Verlängerungsstriche werden nicht codiert (graphische Variante)</item>
-                    </list>
-                </div>
-                <div type="sub_1">
-                    <head type="sub_1" xml:id="x677b52ff-e693-4abe-abe9-86e44e7a9efd">Fehler</head>
+                    <head type="sub_1" xml:id="m9a5088c3-2099-481e-9c0a-b75400e7bf92">Editorische Entscheidungen</head>
                     <div type="sub_2">
-                        <head type="sub_2" xml:id="x77edf5b2-2a62-458b-8157-195584afa94b">Gravierende Fehler/Inkonsistenzen</head>
+                        <head type="sub_2" xml:id="xf48025ff-793c-4a99-9c78-1c215f7c0e4e">Abgekürzte und alte Schreibweisen</head>
                         <list>
-                            <item>Fehler, die Folgefehler produzieren, z.B. fehlender Notenschlüssel, werden korrigiert, in den Daten markiert und mit der betreffenden Stelle verknüpft</item>
+                            <item>werden aufgelöst und/oder normalisiert</item>
+                            <item>z.B. <tag>bTrem</tag>, <tag>multiRpt</tag>, <tag>beatRpt</tag> etc. sind nicht erlaubt</item>
                         </list>
-                        
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annot type="sic" resp="#BW" plist="#note_x0a0ks359b3e">missing clef change in the first edition; corrected</annot>
-                        </egXML>
-                        
+                        <p><ref target="#mei_cmn">mei_cmn</ref></p>
                     </div>
                     <div type="sub_2">
-                        <head type="sub_2" xml:id="xff1c89cc-bbba-4039-a007-a9a5a89adeba">Lokale, offensichtliche Fehler</head>
-                        <list>
-                            <item>Fehler, die keine Folgefehler hervorrufen (z.B. fehlende Pause, Punkt oder Vorzeichen werden nicht korrigiert, aber in den Daten markiert</item>
-                        </list>
-                        
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annot type="sic" resp="#BW" plist="#note_49ee-b5a1">Wrong duration of the last note, it should be 8 instead of 4; not corrected</annot>
-                        </egXML>
-                        
+                        <head type="sub_2" xml:id="x677b52ff-e693-4abe-abe9-86e44e7a9efd">Fehler</head>
+                        <div type="sub_3">
+                            <head type="sub_3" xml:id="x77edf5b2-2a62-458b-8157-195584afa94b">Gravierende Fehler/Inkonsistenzen</head>
+                            <list>
+                                <item>Fehler, die Folgefehler produzieren, z.B. fehlender Notenschlüssel, werden korrigiert, in den Daten markiert und mit der betreffenden Stelle verknüpft</item>
+                            </list>
+                            
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <annot type="sic" resp="#BW" plist="#note_x0a0ks359b3e">missing clef change in the first edition; corrected</annot>
+                            </egXML>
+                            
+                        </div>
+                        <div type="sub_3">
+                            <head type="sub_3" xml:id="xff1c89cc-bbba-4039-a007-a9a5a89adeba">Lokale, offensichtliche Fehler</head>
+                            <list>
+                                <item>Fehler, die keine Folgefehler hervorrufen (z.B. fehlende Pause, Punkt oder Vorzeichen werden nicht korrigiert, aber in den Daten markiert</item>
+                            </list>
+                            
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <annot type="sic" resp="#BW" plist="#note_49ee-b5a1">Wrong duration of the last note, it should be 8 instead of 4; not corrected</annot>
+                            </egXML>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
