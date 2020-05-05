@@ -13,15 +13,16 @@
     <xsl:template match="mei:harm[@type = 'analysis.result']" mode="compare.harmonics">
         <xsl:variable name="tstamp" select="@tstamp" as="xs:string"/>
         <xsl:variable name="is.file.1" select="if(number(@staff) le $first.file.staff.count) then(true()) else(false())" as="xs:boolean"/>
+        <xsl:variable name="content" select="string-join(.//text(),'')" as="xs:string"/>
         
         <!-- TODO: We need to check if these harms are identical, and not just if they're available… -->
         <xsl:variable name="match" as="node()*">
             <xsl:choose>
                 <xsl:when test="$is.file.1">
-                    <xsl:sequence select="parent::mei:*/mei:harm[@type = 'analysis.result' and @tstamp = $tstamp and number(@staff) gt $first.file.staff.count]"/>
+                    <xsl:sequence select="parent::mei:*/mei:harm[@type = 'analysis.result' and @tstamp = $tstamp and number(@staff) gt $first.file.staff.count] and string-join(.//text(),'') = $content"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:sequence select="parent::mei:*/mei:harm[@type = 'analysis.result' and @tstamp = $tstamp and number(@staff) le $first.file.staff.count]"/>
+                    <xsl:sequence select="parent::mei:*/mei:harm[@type = 'analysis.result' and @tstamp = $tstamp and number(@staff) le $first.file.staff.count] and string-join(.//text(),'') = $content"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
@@ -32,7 +33,7 @@
             <xsl:when test="$is.file.1 and not($match)">
                 <xsl:copy>
                     <xsl:apply-templates select="@* except @type" mode="#current"/>
-                    <xsl:attribute name="type" select="'analysis.result file1only'"/>
+                    <xsl:attribute name="type" select="'analysis.result difference file1only'"/>
                     <xsl:apply-templates select="node()" mode="#current"/>
                 </xsl:copy>
             </xsl:when>
@@ -49,7 +50,7 @@
                     <xsl:apply-templates select="@* except (@staff | @place | @type)" mode="#current"/>
                     <xsl:attribute name="staff" select="($first.file.staff.count + 1)"/>
                     <xsl:attribute name="place" select="'above'"/>
-                    <xsl:attribute name="type" select="'analysis.result file2only'"/>
+                    <xsl:attribute name="type" select="'analysis.result difference file2only'"/>
                     <xsl:apply-templates select="node()" mode="#current"/>
                 </xsl:copy>
             </xsl:when>
