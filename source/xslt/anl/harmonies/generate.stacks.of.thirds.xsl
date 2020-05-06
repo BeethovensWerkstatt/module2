@@ -205,10 +205,7 @@
                 </xsl:for-each>
             </chordDef></xsl:variable>
             <xsl:sequence select="$chordDef"/>
-            <xsl:if test="'xc3ba4b1a-6eb4-42b0-8c41-05e158d1699f' = $notes/@xml:id and $allowSimplification">
-                <xsl:message select="'hallo hier'"></xsl:message>
-                <xsl:message select="$chordDef"/>
-            </xsl:if>
+            
         </xsl:for-each>
 
     </xsl:function>
