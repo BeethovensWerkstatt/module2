@@ -80,7 +80,9 @@
             <xsl:variable name="ct13" select="$notes[((not(.//@pname.ges) and .//@pname = $current.row/@*[. = '6']/local-name()) or (.//@pname.ges = $current.row/@*[. = '6']/local-name())) and .//@pclass != $root.pclass]" as="node()*"/>
             
 
-            <chordDef xmlns="http://www.music-encoding.org/ns/mei" temp:root="{$root.pname}" temp:root.pclass="{$root.pclass}" temp:bass="{$bass.pname}" temp:bass.pclass="{$bass.notes[1]/@pclass}" temp:accented="{$isAccented}">
+            <xsl:variable name="chordDef">
+               
+                <chordDef xmlns="http://www.music-encoding.org/ns/mei" temp:root="{$root.pname}" temp:root.pclass="{$root.pclass}" temp:bass="{$bass.pname}" temp:bass.pclass="{$bass.notes[1]/@pclass}" temp:accented="{$isAccented}">
                 
                 <!-- these are all root notes -->
                 <xsl:sequence select="tools:generateChordMember($ct1,0,'P1')"/>
@@ -201,8 +203,12 @@
                     
                     <xsl:sequence select="tools:generateChordMember($current.notes,6,$interval)"/>
                 </xsl:for-each>
-            </chordDef>
-
+            </chordDef></xsl:variable>
+            <xsl:sequence select="$chordDef"/>
+            <xsl:if test="'xc3ba4b1a-6eb4-42b0-8c41-05e158d1699f' = $notes/@xml:id and $allowSimplification">
+                <xsl:message select="'hallo hier'"></xsl:message>
+                <xsl:message select="$chordDef"/>
+            </xsl:if>
         </xsl:for-each>
 
     </xsl:function>

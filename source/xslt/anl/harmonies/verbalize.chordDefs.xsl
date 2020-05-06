@@ -16,7 +16,7 @@
     <xsl:template match="mei:chordDef" mode="verbalize.chordDefs.thirds-based-chords.plain">
         <xsl:variable name="chordDef" select="." as="node()"/>
         <xsl:variable name="root.chordMember" select="mei:chordMember[@inth = 'P1' and @temp:cost = '0']" as="node()"/>
-        <xsl:variable name="bass.chordMember" select="mei:chordMember[@pname = $chordDef/@temp:bass and @temp:pclass = $chordDef/@temp:bass.pclass]" as="node()*"/>
+        <xsl:variable name="bass.chordMember" select="mei:chordMember[@pname = $chordDef/@temp:bass and @temp:pclass = $chordDef/@temp:bass.pclass][1]" as="node()?"/>
         
         <xsl:if test="count($bass.chordMember) = 0">
             <xsl:message select="'Anfang Problem ' || ancestor::mei:measure/@n"/>
