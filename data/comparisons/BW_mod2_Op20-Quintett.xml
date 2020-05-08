@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="4.0.0" xml:id="x7d5cd5db-afd5-4aed-a17c-ea8a0f3cf3aa">
+    <meiHead>
+        <fileDesc n="20">
+            <titleStmt>
+                <title type="main">Septett Op.20</title>
+                <title type="target">und Fremdbearbeitung als Streichquintett (F.A.Hoffmeister)</title>
+                <respStmt>
+                    <corpName role="res">Beethovens Werkstatt</corpName>
+                </respStmt>
+            </titleStmt>
+            <pubStmt/>
+            <seriesStmt>
+                <title>Beethovens Werkstatt – Second Module</title>
+                <contents>
+                    <p> This series of files holds information about Beethoven's arrangements of his own works. While all these works are encoded independently, each pair is addressed by a separate
+                        meiCorpus file, which points to the related works and holds information about their relations. </p>
+                </contents>
+            </seriesStmt>
+            <sourceDesc>
+                <source target="../works/Op.20_Septett.xml"/>
+                <source target="../works/Quintett.xml"/>
+            </sourceDesc>
+        </fileDesc>
+        <workList>
+            <work>
+                <title/>
+                <context>
+                    <head>Einführung</head>
+                    <p>Die lange Frist zwischen der am 20. April 1801 erfolgten Übersendung der Stichvorlage des Septetts op. 20 und seiner Publikation im Juni 1802 nutzte Beethovens Verleger Franz
+                        Anton Hoffmeister, um fast gleichzeitig mit dem Erstdruck eine ebenfalls in zwei „Partien“ (Nr. I–III und IV-VI) publizierte <rend rend="bold">Bearbeitung für
+                            Streichquintett</rend> (2 Violinen, 2 Violen, Violoncello) vorzulegen: Sie erschien im Juli 1802 (zusammen mit einer Quintettbearbeitung der 1. Sinfonie op. 21) bei
+                        Hoffmeister ohne Nennung des Bearbeiters (wohl Hoffmeister selbst), so dass die Käufer Beethoven als Urheber der Bearbeitung ansehen mussten.</p>
+                    <p>Dagegen setzte sich der Komponist im Herbst 1802 mit Anzeigen in der <rend rend="italic">Wiener Zeitung</rend> und der <rend rend="italic">Leipziger Allgemeinen musikalischen
+                            Zeitung</rend> zur Wehr und wies darauf hin, dass es sich nicht um „Original-Quintetten“, sondern „nur um Übersetzungen“ des Verlegers handele.</p>
+                    <p>Anhand dieser Bearbeitung lassen sich durch die verschiedenen Perspektiven der VideApp-Arr die Unterschiede zu Beethovens Praxis des Arrangierens für eine andere Besetzung
+                        anschaulich nachvollziehen. Auch wenn Hoffmeister nie substantiell, sondern allenfalls in eher nebensächlichen von der Vorlage abweicht, wird deutlich, dass er immer wieder
+                        bemüht war, die Klangfarbenwechsel des Originals in der auf eine reine Streicherbesetzung reduzierten Version durch eine besondere Verteilung der Stimmen nachzuahmen.</p>
+                    <p>Für die Codierung wurde der Erstdruck von 1802 herangezogen. Fehler, Defizite und Unregelmäßigkeiten der Stimmenvorlage wurden übernommen (aber in der Beschreibung verzeichnet).
+                        Eine ausführliche Beschreibung dieser Bearbeitung ist separat auf der Website des Projekts bereitgestellt.</p>
+                </context>
+            </work>
+        </workList>
+
+        <!-- todo: clarify if we consider these "things" as independent frbr:works, or just as different expressions -->
+        <!--<workDesc>
+           
+       </workDesc>-->
+        <revisionDesc>
+            <change n="1" isodate="2019-11-12">
+                <respStmt>
+                    <persName auth.uri="https://github.com/" codedval="krHERO">Kristin Herold</persName>
+                </respStmt>
+                <changeDesc>
+                    <p>File created</p>
+                </changeDesc>
+            </change>
+            <change n="1" isodate="2020-02-26">
+                <respStmt>
+                    <persName auth.uri="https://github.com/" codedval="cmvweber ">Joachim Veit</persName>
+                </respStmt>
+                <changeDesc>
+                    <p>add Einführungstext</p>
+                </changeDesc>
+            </change>
+        </revisionDesc>
+    </meiHead>
+</meiCorpus>
