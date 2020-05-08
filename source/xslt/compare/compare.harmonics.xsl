@@ -33,7 +33,7 @@
             <xsl:when test="$is.file.1 and not($match)">
                 <xsl:copy>
                     <xsl:apply-templates select="@* except @type" mode="#current"/>
-                    <xsl:attribute name="type" select="'analysis.result difference file1only'"/>
+                    <xsl:attribute name="type" select="'anl diff file1only'"/>
                     <xsl:apply-templates select="node()" mode="#current"/>
                 </xsl:copy>
             </xsl:when>
@@ -50,7 +50,7 @@
                     <xsl:apply-templates select="@* except (@staff | @place | @type)" mode="#current"/>
                     <xsl:attribute name="staff" select="($first.file.staff.count + 1)"/>
                     <xsl:attribute name="place" select="'above'"/>
-                    <xsl:attribute name="type" select="'analysis.result difference file2only'"/>
+                    <xsl:attribute name="type" select="'anl diff file2only'"/>
                     <xsl:apply-templates select="node()" mode="#current"/>
                 </xsl:copy>
             </xsl:when>
