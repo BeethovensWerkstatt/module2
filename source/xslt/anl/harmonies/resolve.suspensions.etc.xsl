@@ -20,13 +20,13 @@
         <!-- a @cost of 5 is a quarter above the root, it could be suspended to an effective cost of 1 -->
         <xsl:param name="notes" tunnel="yes" as="node()+"/>
         <xsl:variable name="chordMember" select="." as="node()"/>
-        <xsl:variable name="relevant.notes" select="$notes[@xml:id = tokenize(replace($chordMember/@corresp,'#',''))]" as="node()+"/>
+        <xsl:variable name="relevant.notes" select="$notes[@xml:id = tokenize(replace($chordMember/@corresp,'#',''), '\s+')]" as="node()+"/>
         
         <xsl:variable name="root.chordMember" select="ancestor::mei:chordDef/mei:chordMember[@inth = 'P1']" as="node()"/>
         <xsl:variable name="fifth.chordMember" select="ancestor::mei:chordDef/mei:chordMember[@inth='P5']" as="node()?"/>
         
-        <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''))]" as="node()+"/>
-        <xsl:variable name="fifth.notes" select="if($fifth.chordMember) then($notes[@xml:id = tokenize(replace($fifth.chordMember/@corresp,'#',''))]) else()" as="node()*"/>
+        <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''), '\s+')]" as="node()+"/>
+        <xsl:variable name="fifth.notes" select="if($fifth.chordMember) then($notes[@xml:id = tokenize(replace($fifth.chordMember/@corresp,'#',''), '\s+')]) else()" as="node()*"/>
         
         <!-- conditions outside of the current notes // unused -->
         <!--<xsl:variable name="root.continued"
@@ -98,13 +98,13 @@
         <!-- a @cost of 6 is a sixth above the root, it could be suspended to an effective cost of 2 -->
         <xsl:param name="notes" tunnel="yes" as="node()+"/>
         <xsl:variable name="chordMember" select="." as="node()"/>
-        <xsl:variable name="relevant.notes" select="$notes[@xml:id = tokenize(replace($chordMember/@corresp,'#',''))]" as="node()+"/>
+        <xsl:variable name="relevant.notes" select="$notes[@xml:id = tokenize(replace($chordMember/@corresp,'#',''), '\s+')]" as="node()+"/>
         
         <xsl:variable name="root.chordMember" select="ancestor::mei:chordDef/mei:chordMember[@inth = 'P1']" as="node()"/>
         <xsl:variable name="fifth.chordMember" select="ancestor::mei:chordDef/mei:chordMember[@inth='P5']" as="node()?"/>
         
-        <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''))]" as="node()+"/>
-        <xsl:variable name="fifth.notes" select="if($fifth.chordMember) then($notes[@xml:id = tokenize(replace($fifth.chordMember/@corresp,'#',''))]) else()" as="node()*"/>
+        <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''), '\s+')]" as="node()+"/>
+        <xsl:variable name="fifth.notes" select="if($fifth.chordMember) then($notes[@xml:id = tokenize(replace($fifth.chordMember/@corresp,'#',''), '\s+')]) else()" as="node()*"/>
         
         
         <xsl:variable name="affected.notes" as="node()*">
@@ -162,9 +162,9 @@
         <!-- a @cost of 4 is a ninth above the root, it could be suspended to an effective cost of 0 (octave) -->
         <xsl:param name="notes" tunnel="yes" as="node()+"/>
         <xsl:variable name="chordMember" select="." as="node()"/>
-        <xsl:variable name="relevant.notes" select="$notes[@xml:id = tokenize(replace($chordMember/@corresp,'#',''))]" as="node()+"/>
+        <xsl:variable name="relevant.notes" select="$notes[@xml:id = tokenize(replace($chordMember/@corresp,'#',''), '\s+')]" as="node()+"/>
         <xsl:variable name="root.chordMember" select="ancestor::mei:chordDef/mei:chordMember[@inth = 'P1']" as="node()"/>
-        <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''))]" as="node()+"/>
+        <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''), '\s+')]" as="node()+"/>
         
         
         <xsl:variable name="affected.notes" as="node()*">
@@ -221,9 +221,9 @@
         <!-- a @cost of 4 is a major/minor2 above the root, it could be suspended to an effective cost of 1 (third) -->
         <xsl:param name="notes" tunnel="yes" as="node()+"/>
         <xsl:variable name="chordMember" select="." as="node()"/>
-        <xsl:variable name="relevant.notes" select="$notes[@xml:id = tokenize(replace($chordMember/@corresp,'#',''))]" as="node()+"/>
+        <xsl:variable name="relevant.notes" select="$notes[@xml:id = tokenize(replace($chordMember/@corresp,'#',''), '\s+')]" as="node()+"/>
         <xsl:variable name="root.chordMember" select="ancestor::mei:chordDef/mei:chordMember[@inth = 'P1']" as="node()"/>
-        <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''))]" as="node()+"/>
+        <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''), '\s+')]" as="node()+"/>
                 
         <xsl:variable name="affected.notes" as="node()*">
             <xsl:for-each select="$relevant.notes">
@@ -280,9 +280,9 @@
         <!-- a @cost of 3 is a seventh above the root, it could be suspended to an effective cost of 0 (octave) -->
         <xsl:param name="notes" tunnel="yes" as="node()+"/>
         <xsl:variable name="chordMember" select="." as="node()"/>
-        <xsl:variable name="relevant.notes" select="$notes[@xml:id = tokenize(replace($chordMember/@corresp,'#',''))]" as="node()+"/>
+        <xsl:variable name="relevant.notes" select="$notes[@xml:id = tokenize(replace($chordMember/@corresp,'#',''), '\s+')]" as="node()+"/>
         <xsl:variable name="root.chordMember" select="ancestor::mei:chordDef/mei:chordMember[@inth = 'P1']" as="node()"/>
-        <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''))]" as="node()+"/>
+        <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''), '\s+')]" as="node()+"/>
         
         <xsl:variable name="affected.notes" as="node()*">
             <xsl:for-each select="$relevant.notes">
@@ -343,9 +343,9 @@
         <!--passingtones are non-chord tones that bridge two chord tones going up or down-->
         <xsl:param name="notes" tunnel="yes" as="node()+"/>
         <xsl:variable name="chordMember" select="." as="node()"/>
-        <xsl:variable name="relevant.notes" select="$notes[@xml:id = tokenize(replace($chordMember/@corresp,'#',''))]" as="node()+"/>
+        <xsl:variable name="relevant.notes" select="$notes[@xml:id = tokenize(replace($chordMember/@corresp,'#',''), '\s+')]" as="node()+"/>
         <xsl:variable name="root.chordMember" select="ancestor::mei:chordDef/mei:chordMember[@inth = 'P1']" as="node()"/>
-        <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''))]" as="node()+"/>
+        <xsl:variable name="root.notes" select="$notes[@xml:id = tokenize(replace($root.chordMember/@corresp,'#',''), '\s+')]" as="node()+"/>
         
         <xsl:variable name="qualified.notes" as="node()*">
             <xsl:for-each select="$relevant.notes">
