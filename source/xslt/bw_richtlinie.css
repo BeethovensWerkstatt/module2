@@ -1,0 +1,88 @@
+            h1 {
+            text-align: center;
+            }
+            h5 {
+            font-size: 100%;
+            }
+            .contents{
+            display:inline-block;
+            background: #F1F1F1;
+            padding: 20px;
+            
+            }
+            dt{
+            font-size: 105%;
+            font-weight: normal;
+            padding-bottom: 5px;
+            
+            }
+            .toc_1 {
+            padding-top: 0.5em;
+            padding-bottom: 0.3em;
+            font-size: 110%;
+            }
+            .toc_1_1 {
+            padding-left:5%;
+            }
+            .toc_1_1_1 {
+            padding-left:10%;
+            }
+            
+            ul.contents a:link { color: black; text-decoration: none;}
+            ul.contents a:visited { color: black; text-decoration: none;}
+            ul.contents a:hover {  text-decoration: underline;}
+            .att{
+            font-weight: bold;
+            }
+            ul.contents{
+            
+            list-style:none;
+            }
+            div {
+            margin-left: 10px; 
+            }
+            
+            div.sub_2 {
+                
+             padding-bottom:1em;
+            }
+            .pre {
+            white-space: pre-wrap;
+            }
+            li>.element {font-style: normal;
+            }
+           
+           li>.element a:link { color: darkblue; text-decoration: none;}
+           li>.element a:visited { color: darkblue; text-decoration: none;}
+           li>.element a:hover {  text-decoration: underline;}
+            
+            
+            .name{
+            font-style: italic;
+            }
+            
+            /* egXML */
+            .indent1{
+           box-shadow: 1px 1px 5px gray;
+            background-color:#F3F3F3;
+            display:inline-block;
+            overflow:auto; 
+            padding:3px;
+            margin:10px;
+            font-size:0.9em;
+            font-family: monospace;
+            white-space:pre;
+            }
+            
+            div.indent > .element {
+                color: darkblue;
+            }
+            
+             .attribute {
+                color: #008080;
+            }
+            
+             .attributevalue {
+                color: #800080;
+            }
+            

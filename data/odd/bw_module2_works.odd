@@ -63,9 +63,9 @@
                             <item>Metrumangaben in der <tag>staffDef</tag> sind nicht erlaubt</item>
                                 
                             </list>
-                        <p><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <scoreDef xml:id="xf25244be" meter.count="2" meter.unit="2" meter.sym="cut"/>
-                        </egXML></p>
+                        </egXML>
                         <p><ref target="#check_meter">check_meter</ref></p>
                     </div>
                     <div type="sub_3">
@@ -88,21 +88,16 @@
                             <item>In <name type="org">Beethovens Werkstatt</name> werden Tonartwechsel nach Vorlage in einer neuen <tag>scoreDef</tag> codiert
                             </item>
                         </list>
-                        <p><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <scoreDef xml:id="x1ab89" meter.count="3"
-                                meter.unit="4" key.sig="0" key.mode="major"
-                                keysig.showchange="true">
-                                <staffGrp xml:id="xb7d0e" symbol="bracket"
-                                    bar.thru="false">
-                                    <staffDef xml:id="xa028f " n="1">
-                                        <label xml:id="xb3d76c">piano</label>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples"><scoreDef xml:id="x1ab89" meter.count="3" meter.unit="4" key.sig="0" key.mode="major" keysig.showchange="true">
+                            <staffGrp xml:id="xb7d0e" symbol="bracket" bar.thru="false">
+                                <staffDef xml:id="xa028f " n="1">
+                                    <label xml:id="xb3d76c">piano</label>
                                     </staffDef>
-                                    <staffDef xml:id="xa6c32" n="2">
+                            <staffDef xml:id="xa6c32" n="2">
                                         <label xml:id="x9f39">piano</label>
                                     </staffDef>
-                                </staffGrp>
-                            </scoreDef> 
-                        </egXML></p>
+                                </staffGrp> 
+                        </scoreDef></egXML>
                     </div>
                     <div type="sub_3">
                         <head type="sub_3" xml:id="xe111fe91-fd37-4628-8f4e-fad4e9aca0b1">Stimmbezeichnung</head>
@@ -303,8 +298,7 @@
                     </list>
                     
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <dir xml:id="xb45e5d31-61f4-4b7b-a9a4-2ee60065f48c" layer="1" staff="3" place="below" tstamp="1">
-                            sempre staccato</dir></egXML>
+                        <dir xml:id="xb45e5d31" layer="1" staff="3" place="below" tstamp="1">sempre staccato</dir></egXML>
                     
                     <p>
                         <ref target="#check_dir">check_dir</ref>
