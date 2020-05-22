@@ -16,7 +16,7 @@
         <xsl:variable name="content" select="string-join(.//text(),'')" as="xs:string"/>
         
         <!-- TODO: We need to check if these harms are identical, and not just if they're available… -->
-        <xsl:variable name="match" as="node()*">
+        <xsl:variable name="match" as="xs:boolean">
             <xsl:choose>
                 <xsl:when test="$is.file.1">
                     <xsl:sequence select="parent::mei:*/mei:harm[@type = 'analysis.result' and @tstamp = $tstamp and number(@staff) gt $first.file.staff.count] and string-join(.//text(),'') = $content"/>
