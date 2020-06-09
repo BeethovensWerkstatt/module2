@@ -288,7 +288,7 @@
                             <item>Es gibt keine Angaben zur Linienform</item>
                             <item>8va-Zeichen werden mit <att>startid</att> an Noten oder Akkorde geknüpft</item>
                             <item><att>tstamp</att> ist nicht erlaubt</item>
-                            <item><att>oct.ges</att> müssen betreffenden Noten/Akkorde ergänzt werden</item>
+                            <item><att>oct.ges</att> muss an betreffenden Noten bzw. Akkorden ergänzt werden</item>
                         </list>
                     </div>
                 <div type="sub_2">
@@ -373,7 +373,7 @@
                         <div type="sub_3">
                             <head type="sub_3" xml:id="xff1c89cc-bbba-4039-a007-a9a5a89adeba">Lokale, offensichtliche Fehler</head>
                             <list>
-                                <item>Fehler, die keine Folgefehler hervorrufen (z.B. fehlende Pause, Punkt oder Vorzeichen werden nicht korrigiert, aber in den Daten markiert</item>
+                                <item>Fehler, die keine Folgefehler hervorrufen (z.B. fehlende Pause, Punkt oder Vorzeichen) werden nicht korrigiert, aber in den Daten markiert</item>
                             </list>
                             
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
