@@ -18,7 +18,11 @@
         </xd:desc>
     </xd:doc>
     
-    <xsl:output method="html" indent="yes" doctype-system="about:legacy-compat"/>
+    <xsl:output method="html" indent="yes" doctype-system="about:legacy-compat" use-character-maps="CharMap"/>
+    
+    <xsl:character-map name="CharMap">
+        <xsl:output-character character="&quot;" string="&amp;quot;"/>
+    </xsl:character-map>
     
     
     <xsl:template match="/"> 
@@ -123,6 +127,7 @@
             font-size:0.9em;
             font-family: monospace;
             white-space:pre;
+            color: black;
             }
             
             div.indent > .element {
@@ -362,7 +367,7 @@
     </xsl:template>
     
     <!-- in order to preserve spacing, it is important that the following template is kept on one line -->
-    <xsl:template match="@*" mode="preserveSpace" priority="1"><xsl:value-of select="' '"/><span class="attribute"><xsl:value-of select="name()"/>=</span><span class="attributevalue">"<xsl:value-of select="string(.)"/>"</span></xsl:template>
+    <xsl:template match="@*" mode="preserveSpace" priority="1"><xsl:value-of select="' '"/><span class="attribute"><xsl:value-of select="name()"/>=</span><span class="attributevalue"><xsl:text>&quot;</xsl:text><xsl:value-of select="string(.)"/><xsl:text>&quot;</xsl:text></span></xsl:template>
     
     
     <!--<xsl:template match="@mode[not(ancestor::teix:egXML)]" mode="preserveSpace" priority="2">
