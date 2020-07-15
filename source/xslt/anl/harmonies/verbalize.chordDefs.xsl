@@ -141,7 +141,7 @@
             <xsl:if test="count(mei:chordMember[contains(@type,'sus') or contains(@type,'ret')]) gt 1"> 
                 <xsl:variable name="many_rends">
                     <xsl:if test="mei:chordMember[@type='43sus']">
-                        <rend xmlns="http://www.music-encoding.org/ns/mei" rend="italic" type="mod43sus">4-3</rend>
+                        <rend xmlns="http://www.music-encoding.org/ns/mei" rend="sup" type="mod43sus">4-3</rend>
                     </xsl:if>
                     <xsl:if test="mei:chordMember[@type='65sus']">
                         <rend xmlns="http://www.music-encoding.org/ns/mei" rend="sup" type="mod65sus">6-5</rend>
