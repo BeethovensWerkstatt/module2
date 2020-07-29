@@ -1756,7 +1756,7 @@
             <measure n="32" xml:id="xa91b3331-5780-4b77-b917-db2708cd2b98">
               <staff xml:id="x4abc5c65-7b9f-4338-9b62-285231de3fa1" n="1">
                 <layer xml:id="x36d3fce6-03e3-4f17-b84b-8f12f83bbb22" n="1">
-                  <annot type="sic" resp="#BW" plist="#x769311de-5f8e-4b01-a65c-787e44c36109"> in
+                  <annot type="sic" resp="#BW" plist="#x769311de-5f8e-4b01-a65c-787e44c36109"> In
                     the first printed edition without flat </annot>
                   <beam xml:id="xa2e61f16-d2d7-4d7a-930f-812bd4d62e73">
                     <note xml:id="x769311de-5f8e-4b01-a65c-787e44c36109" pname="a" oct="5" dur="8"/>
@@ -2797,7 +2797,7 @@
               </staff>
               <staff xml:id="x10ed51a0-6903-4e7d-87ca-6719b38fa84c" n="4">
                 <layer xml:id="xdb0b67d1-4ba6-4d98-af6e-ad4ac06e853d" n="1">
-                  <annot type="sic" resp="#BW" plist="#x24fc5278-1a6b-495e-98f0-dc5912b0853e"> in
+                  <annot type="sic" resp="#BW" plist="#x24fc5278-1a6b-495e-98f0-dc5912b0853e"> In
                     the first edition without dot in the eighth pause, thereby rhythm incomplete> </annot>
                   <beam xml:id="xd8908393-f515-4e38-907b-5233e1a9fc18">
                     <note xml:id="x8db40c44-a081-4189-91d0-39f73e4035e0" pname="a" oct="3" dur="8"/>
@@ -4824,11 +4824,11 @@
               </staff>
               <staff xml:id="xde952947-0fc9-402d-bef1-995eb36bdb86" n="2">
                 <layer xml:id="x6a6ed266-979d-49ba-aeca-8c245c2bdd98" n="1">
+                  <annot type="sic" resp="#BW" plist="#xb8cea18a-a80a-4d7a-9c3d-947885c054a7">
+                    Here there is an error in the first edition, as the first note should be a
+                    D-Flat 
+                  </annot>
                   <beam xml:id="xa455321a-ffb4-4559-b56e-8706bf18e05b">
-                    <annot type="sic" resp="#BW" plist="#xb8cea18a-a80a-4d7a-9c3d-947885c054a7">
-                      Here there is an error in the first edition, as following note should be a
-                      D-Flat 
-                    </annot>
                     <!-- NB: Fehler in OA: bei der Note "d" sollte eigentlich einen accid="f" sein -->
                     <note xml:id="xb8cea18a-a80a-4d7a-9c3d-947885c054a7" pname="d" oct="5" dur="8"/>
                     <rest xml:id="x0a4756b4-ebb0-4e4f-a15e-145947674b70" dur="16"/>
@@ -7670,10 +7670,10 @@
               </staff>
               <staff xml:id="x29f57ea2-fb7e-4e74-8bdc-31aaebe61d8e" n="3">
                 <layer xml:id="xffb088a5-c537-4901-a2a5-4d6d324df20a" n="1">
+                  <annot type="sic" resp="#BW" plist="#x83af3e03-ce1b-4372-addb-b27f7f0bba43">
+                    Error in the first edition: this note should be a B and not a D. Error
+                    corrected in the new critical edition </annot>
                   <beam xml:id="xd4bb6e92-98f2-4afa-8a9b-2d599d12ede2">
-                    <annot type="sic" resp="#BW" plist="#x83af3e03-ce1b-4372-addb-b27f7f0bba43">
-                      Error in the first edition: this note should be a B and not a D. Error
-                      corrected in the new critical edition </annot>
                     <!-- N.B. Fehler in OA: T. 81, Va, erste Note sollte b statt d sein. In der NGA korrigiert. -->
                     <note xml:id="x83af3e03-ce1b-4372-addb-b27f7f0bba43" pname="d" oct="5" dur="8"
                       accid.ges="f"/>
@@ -10218,11 +10218,11 @@
               </staff>
               <staff xml:id="x9acb7f3c-bf4e-4393-9e86-ada32db52f25" n="2">
                 <layer xml:id="x82dba691-7cb7-4c69-b7d5-b2b6969611ae" n="1">
+                  <annot type="sic" resp="#BW" plist="#x1ddcdae5-5385-43de-8720-fae71b768115">
+                    Probably engraving error in the first edition here, since all other sources
+                    are differing: Vl II, first note should be C not A </annot>
                   <rest xml:id="x2c6e8825-b558-478f-bf4a-7f5f21c1618b" dur="8" dots="1"/>
                   <beam xml:id="x0fe25d94-e6c2-42a8-b9a2-3a9e4c3d9852">
-                    <annot type="sic" resp="#BW" plist="#x1ddcdae5-5385-43de-8720-fae71b768115">
-                      Probably engraving error in the first edition here, since all other sources
-                      are differing: Vl II, first note should be C not A </annot>
                     <!-- Achtung! Hier vermutlich Stichfehler, da alle andere Quellen abweichen: Vl II, erste Note soll c nicht a sein!-->
                     <note xml:id="x1ddcdae5-5385-43de-8720-fae71b768115" pname="a" oct="4" dur="16"
                       accid="n"/>
@@ -10511,13 +10511,13 @@
             <measure n="102" xml:id="xfd0e96c6-bf7e-400f-b568-529c1b94cb80">
               <staff xml:id="x06e14c31-e4fb-4cdc-a41c-b4a8d1fdc9d1" n="1">
                 <layer xml:id="xe17478dc-d740-47cb-9fb3-b3c6ac89ae0c" n="1">
+                  <annot type="sic" resp="#BW" plist="#xd76ccec1-f716-46ee-b194-e0ff83524a7f">
+                    Error in the first edition, where naturals on E in the first violin are
+                    missing </annot>
                   <beam xml:id="x752444b0-682e-43d5-b6ec-d35a1cedfc54">
                     <note xml:id="xa4067a37-38f4-41a7-8e65-6230e649a0bb" pname="b" oct="5" dur="8"
                       accid.ges="f"/>
                     <rest xml:id="x2abec46e-3b2b-472c-a801-5a903cba6faa" dur="16"/>
-                    <annot type="sic" resp="#BW" plist="#xd76ccec1-f716-46ee-b194-e0ff83524a7f">
-                      Error in the first edition, where naturals on E in the first violin are
-                      missing </annot>
                     <!-- N.B. Hier Fehler in OA: Auflösungszeichen bei e fehlt. -->
                     <note xml:id="xd76ccec1-f716-46ee-b194-e0ff83524a7f" pname="e" oct="4" dur="16"
                       accid.ges="f"/>
@@ -20584,10 +20584,11 @@
             <measure n="189" xml:id="xf561a48b-ab8f-437f-baaf-ef2dc5312f1a">
               <staff xml:id="xd03e48c5-9131-431c-b175-f41be024119b" n="1">
                 <layer xml:id="x78744e77-9b2e-458b-99c7-61622de75038" n="1">
+                  <annot type="sic" resp="#BW" plist="#x49439f19-e0b6-446b-b620-d335282d2e03"> Error
+                    in the first edition, where natural on  D5 is missing </annot>
                   <note xml:id="x00bd1b8c-20d6-4baf-ac43-143916f42f52" pname="b" oct="5" dur="4"
                     accid.ges="f"/>
-                  <annot type="sic" resp="#BW" plist="#x49439f19-e0b6-446b-b620-d335282d2e03"> Error
-                    in the first edition, where natural on following D is missing </annot>
+              
                   <note xml:id="x49439f19-e0b6-446b-b620-d335282d2e03" pname="d" oct="5" dur="4"
                     accid.ges="f"/>
                   <!-- Fehler in OA: bei dieser Note fehlt das Auflösungszeichen -->
@@ -21391,9 +21392,9 @@
             <measure n="201" xml:id="x990201c8-efb2-4e14-a726-ba27af7446af">
               <staff xml:id="x62e3d5d7-7e28-4fbd-8eb6-65b99ea9cd2c" n="1">
                 <layer xml:id="xc5fb9d97-850e-4125-aa7b-0daff41c5a4b" n="1">
+                  <annot type="sic" resp="#BW" plist="#x3b489c27-1164-4a45-83fc-6cc5438439d5">
+                    Error in the first edition, where natural in the following C is missing </annot>
                   <beam xml:id="xc9059311-861a-4a75-8229-13076d12c0ef">
-                    <annot type="sic" resp="#BW" plist="#x3b489c27-1164-4a45-83fc-6cc5438439d5">
-                      Error in the first edition, where natural in the following C is missing </annot>
                     <!-- Achtung, bei der nächsten Note Fehler in OA: c muss mit Auslösungszeichen sein! -->
                     <note xml:id="x3b489c27-1164-4a45-83fc-6cc5438439d5" pname="c" oct="5" dur="16"
                       accid.ges="f"/>
@@ -21472,6 +21473,9 @@
             <measure n="202" xml:id="x3c85be80-522e-49c6-962b-22dc00808a0d">
               <staff xml:id="x32db5e68-e710-4054-8fe9-9f9503a939cf" n="1">
                 <layer xml:id="xad92ab21-1307-4871-b83f-90fa3bc78589" n="1">
+                  <annot type="sic" resp="#BW" plist="#x6af16e1c-81ae-4434-8c24-821df1882117">
+                    Error in the first edition, where natural in the first D of measure 202, first
+                    violin, is missing </annot>
                   <beam xml:id="x488dc25b-e614-4b05-bf0b-b76d3ca91c44">
                     <note xml:id="x866bd01e-1d97-406c-b60e-e91f39a66df6" pname="c" oct="4" dur="16"
                       accid="n"/>
@@ -21479,9 +21483,6 @@
                       accid.ges="f"/>
                     <note xml:id="x50f50f7d-a19a-4a9c-9d86-af69496fd7b1" pname="e" oct="4" dur="16"
                       accid.ges="f"/>
-                    <annot type="sic" resp="#BW" plist="#x6af16e1c-81ae-4434-8c24-821df1882117">
-                      Error in the first edition, where natural in the first D of measure 202, first
-                      violin, is missing </annot>
                     <note xml:id="x6af16e1c-81ae-4434-8c24-821df1882117" pname="d" oct="4" dur="16"
                       accid.ges="f"/>
                   </beam>
@@ -24064,10 +24065,10 @@
             <measure n="230" xml:id="x75886af7-0180-40ed-abbf-385d78bff6e2">
               <staff xml:id="x82508f42-e54f-423d-839f-103501076787" n="1">
                 <layer xml:id="x02f97af9-9b27-4d02-a83e-60d557fba5db" n="1">
+                  <annot type="sic" resp="#BW" plist="#d1e126912"> Here and in the following
+                    measures 230–232 errors in the first edition: C should always be natural </annot>
                   <beam>
                     <note xml:id="d1e126892" pname="d" oct="4" dur="16" accid.ges="f"/>
-                    <annot type="sic" resp="#BW" plist="#d1e126912"> Here and in the following
-                      measures 230–232 errors in the first edition: C should always be natural </annot>
                     <!-- Hier und bei folgenden Takten Fehler in OA: c sollte immer mit Auflösungszeichen sein -->
                     <note xml:id="d1e126912" pname="c" oct="4" dur="16" accid.ges="f"/>
 
@@ -25368,10 +25369,11 @@
               </staff>
               <staff xml:id="x0d2e4431-96b5-4104-812f-9b46ba87caa4" n="2">
                 <layer xml:id="xf3b669c1-485a-4ee7-873f-5d6642961da5" n="1">
-                  <note xml:id="x9d9e2648-bb38-48e5-ad5c-8d91847e076f" pname="g" oct="5" dur="4"/>
                   <annot type="sic" resp="#BW" plist="#x68641e71-0235-42a8-9039-e183dacb12f2"> Error
                     in the firs edition, where the natural on the second note of this measure is
                     missing </annot>
+                  <note xml:id="x9d9e2648-bb38-48e5-ad5c-8d91847e076f" pname="g" oct="5" dur="4"/>
+                  
                   <!-- N.B. Fehler in OA: T. 256, Vl. II, b1 statt h -->
                   <note xml:id="x68641e71-0235-42a8-9039-e183dacb12f2" pname="b" oct="4" dur="8"
                     accid.ges="f"/>
@@ -33866,12 +33868,12 @@
               </staff>
               <staff xml:id="x64168ee4-837f-48bf-9b63-556c669dcff2" n="3">
                 <layer xml:id="xee64e191-1219-4b56-b0ca-0d75d6451769" n="1">
+                  <annot type="sic" resp="#BW" plist="#x6163e1d0-6608-47a8-bbc2-6515a281a323">
+                    Flat on third note of this beam is missing in the first edition </annot>
                   <beam xml:id="xc886158f-5279-4de7-a5d5-bfdb3711dade">
                     <note xml:id="x13b7e32b-5746-4476-b2e8-bc91f6b74963" pname="e" oct="4" dur="8"
                       accid="n"/>
                     <note xml:id="x12e81249-94cc-40e9-be57-b22bc49b2c21" pname="f" oct="4" dur="8"/>
-                    <annot type="sic" resp="#BW" plist="#x6163e1d0-6608-47a8-bbc2-6515a281a323">
-                      Flat on following note is missing in the first edition </annot>
                     <note xml:id="x6163e1d0-6608-47a8-bbc2-6515a281a323" pname="d" oct="5" dur="8"/>
                     <!--  Fehler in OA: T. 444, Va, vermutlich sollte hier des1 und nicht d1 sein -->
                   </beam>
@@ -37180,11 +37182,12 @@
               </staff>
               <staff xml:id="x077c4762-c061-44dc-9d99-b8339222294e" n="3">
                 <layer xml:id="x888818ba-cb0d-432e-b33a-7d7f2e1c69d4" n="1">
+                  <annot type="sic" resp="#BW" plist="#x6aca92d6-d7ed-49a6-aec2-8ee68d3533b1"> In
+                    the new critical edition D3 is corrected in E </annot>
                   <beam xml:id="x6cf1dbd4-30a1-40c9-a11c-d088e605af40">
                     <note xml:id="x0081ec79-110d-494d-b0e4-0c7ff33ab53d" pname="b" oct="3" dur="16"
                       accid.ges="f"/>
-                    <annot type="sic" resp="#BW" plist="#x6aca92d6-d7ed-49a6-aec2-8ee68d3533b1"> In
-                      the new critical edition following note is corrected in E </annot>
+                  
                     <note xml:id="x6aca92d6-d7ed-49a6-aec2-8ee68d3533b1" pname="d" oct="3" dur="16"
                       accid.ges="f"/>
                     <!-- T. 507, Va, 2. Note in der NGA statt d als e umgedeutet-->
@@ -47009,10 +47012,11 @@
             <measure n="714" xml:id="x463a3dd7-8023-433b-b77e-733b755a67d0">
               <staff xml:id="xb10e8a4c-3292-4388-a4c9-f01bbe36c3fe" n="1">
                 <layer xml:id="x21513ff0-9e65-497d-851d-85ee8fe51515" n="1">
+                  <annot type="sic" resp="#BW" plist="#x1ed15923-c2cd-4c15-b33a-55f1021b3e41"> In
+                    the first edition natural on E is missing </annot>
                   <note xml:id="x9b60016d-1260-43ad-9b85-8683ed2c37cb" pname="f" oct="4" dur="4"/>
                   <beam xml:id="x36678ef1-c4f5-42b8-9f36-990e17f00213">
-                    <annot type="sic" resp="#BW" plist="#x1ed15923-c2cd-4c15-b33a-55f1021b3e41"> In
-                      the first edition natural on E is missing </annot>
+                   
                     <note xml:id="x1ed15923-c2cd-4c15-b33a-55f1021b3e41" pname="e" oct="4" dur="16"
                       accid.ges="f"/>
                     <!-- Fehler in OA: T. 714, Violino I, Auflösungszeichen bei e1 fehlt -->
