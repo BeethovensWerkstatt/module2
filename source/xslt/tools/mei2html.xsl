@@ -32,7 +32,7 @@
     </xsl:template>
     <xsl:template match="mei:ref">
         <xsl:choose>
-            <xsl:when test="@target and starts-with(@target,'http://')">
+            <xsl:when test="@target and (starts-with(@target,'http://') or starts-with(@target,'https://'))">
                 <a href="{@target}" target="_blank" class="externalLink">
                     <xsl:apply-templates select="node()"/>
                 </a>
