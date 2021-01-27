@@ -15,11 +15,8 @@
          <seriesStmt>
             <title>Beethovens Werkstatt – Second Module</title>
             <contents>
-               <p>
-                  This series of files holds information about Beethoven's arrangements of his own works.
-                  While all these works are encoded independently, each pair is addressed by a separate 
-                  meiCorpus file, which points to the related works and holds information about their relations. 
-               </p>
+               <p> This series of files holds information about Beethoven's arrangements of his own works. While all these works are encoded independently, each pair is addressed by a separate
+                  meiCorpus file, which points to the related works and holds information about their relations. </p>
             </contents>
          </seriesStmt>
          <sourceDesc>
@@ -29,19 +26,25 @@
       </fileDesc>
       <workList>
          <work>
-            <title></title>
+            <title/>
             <context>
                <head>Einführung</head>
-               <p>
-                  Beethovens <rend rend="bold">Opferlied op. 121b entstand</rend> in den Jahren 1822–1825 parallel mit dem Bundeslied op. 122. Die Frühfassung vom Dezember 1822 arbeitete er Ende 1824 zu einer endgültigen Version um, die dann im Juli 1825 im Druck erschien. Auch den Klavierauszug des ursprünglich für eine Solostimme (Sopran), Chor und Orchester komponierten Liedes stellte Beethoven selbst her.</p>
-               <p>
-                  Dazu musste er den vielstimmigen Orchestersatz für das Klavier reduzieren. Die Singstimmen wurden unverändert übernommen. Der <rend rend="bold">Vergleich zwischen Originalfassung und Bearbeitung</rend> des Opferlieds verdeutlicht mit Hilfe der unterschiedlichen Perspektiven, dass die Fassung des Opferlieds für Klavier dem Idealtypus eines Klavierauszugs sehr nahe kommt. Das Lied hat zwei Strophen, die jeweils aus einem Solo- und einem Chorabschnitt bestehen. Während die Soloabschnitte (T. 1–21 und 37–56) nur von den Blasinstrumenten begleitet werden, treten in den Chorabschnitten (T. 22–35 und 57–72) noch die Streicher hinzu. Aufgrund der kleineren Besetzung können in den Soloabschnitten (fast) alle Stimmen in den Klavierauszug übernommen werden. Dies ist in den größer besetzten Chorabschnitten nicht möglich, weshalb sich das Klavier an den Streichern orientiert und die Bläserstimmen zum Großteil wegfallen.</p>
-               
-               <p>Ausdrücklich sei darauf hingewiesen, dass die <rend rend="bold">Codierungen</rend> jeweils auf den Originalausgaben beruhen, Fehler der jeweiligen Vorlage übernommen wurden und so auch angezeigt werden. Eine ausführlichere Beschreibung der vorgenannten Aspekte wird separat auf der Website des Projekts zur Verfügung gestellt.</p>
+               <p> Beethovens <rend rend="bold">Opferlied op. 121b entstand</rend> in den Jahren 1822–1825 parallel mit dem Bundeslied op. 122. Die Frühfassung vom Dezember 1822 arbeitete er Ende 1824
+                  zu einer endgültigen Version um, die dann im Juli 1825 im Druck erschien. Auch den Klavierauszug des ursprünglich für eine Solostimme (Sopran), Chor und Orchester komponierten Liedes
+                  stellte Beethoven selbst her.</p>
+               <p> Dazu musste er den vielstimmigen Orchestersatz für das Klavier reduzieren. Die Singstimmen wurden unverändert übernommen. Der <rend rend="bold">Vergleich zwischen Originalfassung
+                     und Bearbeitung</rend> des Opferlieds verdeutlicht mit Hilfe der unterschiedlichen Perspektiven, dass die Fassung des Opferlieds für Klavier dem Idealtypus eines Klavierauszugs
+                  sehr nahe kommt. Das Lied hat zwei Strophen, die jeweils aus einem Solo- und einem Chorabschnitt bestehen. Während die Soloabschnitte (T. 1–21 und 37–56) nur von den Blasinstrumenten
+                  begleitet werden, treten in den Chorabschnitten (T. 22–35 und 57–72) noch die Streicher hinzu. Aufgrund der kleineren Besetzung können in den Soloabschnitten (fast) alle Stimmen in
+                  den Klavierauszug übernommen werden. Dies ist in den größer besetzten Chorabschnitten nicht möglich, weshalb sich das Klavier an den Streichern orientiert und die Bläserstimmen zum
+                  Großteil wegfallen.</p>
+               <p>Ausdrücklich sei darauf hingewiesen, dass die <rend rend="bold">Codierungen</rend> jeweils auf den Originalausgaben beruhen, Fehler der jeweiligen Vorlage übernommen wurden und so
+                  auch angezeigt werden. </p>
+               <p><rend rend="bold">Hinweis:</rend> Eine ausführlichere Beschreibung der vorgenannten Aspekte ist separat auf der <ref target="https://beethovens-werkstatt.de/vergleich-121b/">Website des Projekts</ref> zur Verfügung gestellt.</p>
             </context>
          </work>
       </workList>
-      
+
       <!-- todo: clarify if we consider these "things" as independent frbr:works, or just as different expressions -->
       <!--<workDesc>
            
@@ -66,4 +69,3 @@
       </revisionDesc>
    </meiHead>
 </meiCorpus>
-

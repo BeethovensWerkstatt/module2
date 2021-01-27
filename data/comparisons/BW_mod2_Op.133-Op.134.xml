@@ -1,63 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <meiCorpus xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="4.0.0" xml:id="x68ad7295-58c5-48a0-a321-fcf8a779551f">
-   <meiHead>
-       <fileDesc n="133">
-           <titleStmt>
-               <title type="main">Große Fuge Op.133</title>
-               <title type="target">und Bearbeitung für Klavier à 4 Op.134</title>
-               <title>String Quartet to 4hd Piano</title>
-               <respStmt>
-                   <corpName role="res">Beethovens Werkstatt</corpName>
-               </respStmt>
-           </titleStmt>
-           <pubStmt/>
-           <seriesStmt>
-               <title>Beethovens Werkstatt – Second Module</title>
-               <contents>
-                   <p>
-                       This series of files holds information about Beethoven's arrangements of his own works.
-                       While all these works are encoded independently, each pair is addressed by a separate 
-                       meiCorpus file, which points to the related works and holds information about their relations. 
-                   </p>
-               </contents>
-           </seriesStmt>
-           <sourceDesc>
-               <source xml:id="x74402d98-d785-4fb5-b678-c7302ad7c8a9" target="../works/Op.133_GreatFugue_Strings.xml"/>
-               <source xml:id="x202a68a8-99f3-46b7-a6d5-41f8395f84a9" target="../works/Op.134_GreatFugue_Piano.xml">
-                   <notesStmt>
-                       <annot type="additional.measures" plist="../works/Op.134_GreatFugue_Piano.xml#xd05fcfd8-38ab-42e4-9344-f405866f16b6 ../works/Op.134_GreatFugue_Piano.xml#x95c34e4c-6d36-4143-9d8e-48d25b9bc38b ../works/Op.134_GreatFugue_Piano.xml#xa55ade1c-08d5-4047-b244-350bc51fd183"/>
-                   </notesStmt>
-               </source>
-           </sourceDesc>
-       </fileDesc>
-       <workList>
-           <work>
-               <title></title>
-               <context>
-                   <head>Einführung</head>
-                   <p> Als letzten Satz des Streichquartetts op. 130 komponierte Beethoven im Dezember 1825 die Fuga in B-Dur. <rend rend="bold"> Im August 1826 entstand </rend> seine Bearbeitung dieses Satzes für Klavier zu vier Händen. In der Streichquartettfassung wurde das Fugenfinale im Anschluss an die erste öffentliche Aufführung des Quartetts am 21. März 1826 stark kritisiert; der Verleger Mathias Artaria wandte sich kurz danach an den Komponisten mit der Bitte, die Fuge zusammen mit einer zusätzlichen vierhändigen Klavierbearbeitung separat zu veröffentlichen. Zuerst lehnte Beethoven den Vorschlag ab, die Klavierbearbeitung selber zu übernehmen, so dass sie dem Pianisten und Komponisten Anton Halm übertragen wurde. Doch nachdem Halms Bearbeitung schon hergestellt und honoriert worden war, entschied sich Beethoven – offensichtlich unzufrieden mit dem Ergebnis – noch eine eigene Bearbeitung vorzunehmen. </p>
-                   <p> Beethovens vierhändige Klavierbearbeitung wurde mit einer eigenen Opuszahl 134 veröffentlicht; die abgetrennte Streichquartettfassung wurde zu op. 133. Beide Fassungen sind postum im Mai 1827 veröffentlicht worden und Beethovens Mäzen Erzherzog Rudolph gewidmet.</p>     
-                   <p>Bei dieser <rend rend="bold"> Bearbeitung </rend> handelt es sich nicht um einen bloßen Klavierauszug, d. h. eine Reduktion des Werkes für Klavier; ebenso wenig handelt es sich um eine bloße aufführungspraktische Alternative der Streichquartettfassung. Vielmehr ist Beethovens Klavierfassung der Fuge spieltechnisch gleich schwierig, wenn nicht schwieriger als die Quartettfassung: der Komponist hat hier versucht, das Partiturbild der Streichquartettfassung so treu wie möglich beizubehalten. Bis auf wenige Ausnahmen werden die vier Streicherstimmen auf die vier Klaviersysteme übertragen und wo möglich in höherer und tieferer Oktave verdoppelt: Dabei stellt die Oktavierung das auffälligste Veränderungsmerkmal der Großen Fuge dar. In der <rend rend="italic">VideApp Arr</rend> ist dies am besten durch die Ansicht des Einzelnotenvergleichs nachzuvollziehen. Dagegen wird durch den Stimmenkonturvergleich ein abstrahierter Blick auf die meist invariant gebliebene Stimmführung möglich. </p>
-                   <p> Ausdrücklich sei darauf hingewiesen, dass die <rend rend="bold">Codierungen</rend> jeweils auf den Originalausgaben beruhen, Fehler übernommen und so auch angezeigt werden – In diesen Fällen kann die App durch ihre Varianzanzeige Fehler sichtbar machen, die in der ausführlichen Beschreibung aufgelistet (und in der Neue Beethoven Gesamtausgabe schon emendiert) sind.</p>
-                   <p>Eine ausführlichere Beschreibung der vorgenannten Aspekte wird separat auf der Website des Projekts zur Verfügung gestellt. </p>
-               </context>
-           </work>
-       </workList>
-       <!-- todo: clarify if we consider these "things" as independent frbr:works, or just as different expressions -->
-       <!--<workDesc>
+    <meiHead>
+        <fileDesc n="133">
+            <titleStmt>
+                <title type="main">Große Fuge Op.133</title>
+                <title type="target">und Bearbeitung für Klavier à 4 Op.134</title>
+                <title>String Quartet to 4hd Piano</title>
+                <respStmt>
+                    <corpName role="res">Beethovens Werkstatt</corpName>
+                </respStmt>
+            </titleStmt>
+            <pubStmt/>
+            <seriesStmt>
+                <title>Beethovens Werkstatt – Second Module</title>
+                <contents>
+                    <p> This series of files holds information about Beethoven's arrangements of his own works. While all these works are encoded independently, each pair is addressed by a separate
+                        meiCorpus file, which points to the related works and holds information about their relations. </p>
+                </contents>
+            </seriesStmt>
+            <sourceDesc>
+                <source xml:id="x74402d98-d785-4fb5-b678-c7302ad7c8a9" target="../works/Op.133_GreatFugue_Strings.xml"/>
+                <source xml:id="x202a68a8-99f3-46b7-a6d5-41f8395f84a9" target="../works/Op.134_GreatFugue_Piano.xml">
+                    <notesStmt>
+                        <annot type="additional.measures"
+                            plist="../works/Op.134_GreatFugue_Piano.xml#xd05fcfd8-38ab-42e4-9344-f405866f16b6 ../works/Op.134_GreatFugue_Piano.xml#x95c34e4c-6d36-4143-9d8e-48d25b9bc38b ../works/Op.134_GreatFugue_Piano.xml#xa55ade1c-08d5-4047-b244-350bc51fd183"
+                        />
+                    </notesStmt>
+                </source>
+            </sourceDesc>
+        </fileDesc>
+        <workList>
+            <work>
+                <title/>
+                <context>
+                    <head>Einführung</head>
+                    <p> Als letzten Satz des Streichquartetts op. 130 komponierte Beethoven im Dezember 1825 die Fuga in B-Dur. <rend rend="bold"> Im August 1826 entstand </rend> seine Bearbeitung
+                        dieses Satzes für Klavier zu vier Händen. In der Streichquartettfassung wurde das Fugenfinale im Anschluss an die erste öffentliche Aufführung des Quartetts am 21. März 1826
+                        stark kritisiert; der Verleger Mathias Artaria wandte sich kurz danach an den Komponisten mit der Bitte, die Fuge zusammen mit einer zusätzlichen vierhändigen
+                        Klavierbearbeitung separat zu veröffentlichen. Zuerst lehnte Beethoven den Vorschlag ab, die Klavierbearbeitung selber zu übernehmen, so dass sie dem Pianisten und Komponisten
+                        Anton Halm übertragen wurde. Doch nachdem Halms Bearbeitung schon hergestellt und honoriert worden war, entschied sich Beethoven – offensichtlich unzufrieden mit dem Ergebnis –
+                        noch eine eigene Bearbeitung vorzunehmen. </p>
+                    <p> Beethovens vierhändige Klavierbearbeitung wurde mit einer eigenen Opuszahl 134 veröffentlicht; die abgetrennte Streichquartettfassung wurde zu op. 133. Beide Fassungen sind
+                        postum im Mai 1827 veröffentlicht worden und Beethovens Mäzen Erzherzog Rudolph gewidmet.</p>
+                    <p>Bei dieser <rend rend="bold"> Bearbeitung </rend> handelt es sich nicht um einen bloßen Klavierauszug, d. h. eine Reduktion des Werkes für Klavier; ebenso wenig handelt es sich
+                        um eine bloße aufführungspraktische Alternative der Streichquartettfassung. Vielmehr ist Beethovens Klavierfassung der Fuge spieltechnisch gleich schwierig, wenn nicht
+                        schwieriger als die Quartettfassung: der Komponist hat hier versucht, das Partiturbild der Streichquartettfassung so treu wie möglich beizubehalten. Bis auf wenige Ausnahmen
+                        werden die vier Streicherstimmen auf die vier Klaviersysteme übertragen und wo möglich in höherer und tieferer Oktave verdoppelt: Dabei stellt die Oktavierung das auffälligste
+                        Veränderungsmerkmal der Großen Fuge dar. In der <rend rend="italic">VideApp Arr</rend> ist dies am besten durch die Ansicht des Einzelnotenvergleichs nachzuvollziehen. Dagegen
+                        wird durch den Stimmenkonturvergleich ein abstrahierter Blick auf die meist invariant gebliebene Stimmführung möglich. </p>
+                    <p> Ausdrücklich sei darauf hingewiesen, dass die <rend rend="bold">Codierungen</rend> jeweils auf den Originalausgaben beruhen, Fehler übernommen und so auch angezeigt werden – In
+                        diesen Fällen kann die App durch ihre Varianzanzeige Fehler sichtbar machen, die in der ausführlichen Beschreibung aufgelistet (und in der Neue Beethoven Gesamtausgabe schon
+                        emendiert) sind.</p>
+                    <p><rend rend="bold">Hinweis:</rend> Eine ausführlichere Beschreibung der vorgenannten Aspekte ist separat auf der <ref target="https://beethovens-werkstatt.de/vergleich-133-134/">Website des Projekts</ref> zur Verfügung gestellt. </p>
+                </context>
+            </work>
+        </workList>
+        <!-- todo: clarify if we consider these "things" as independent frbr:works, or just as different expressions -->
+        <!--<workDesc>
            
        </workDesc>-->
-       <revisionDesc>
-           <change n="1" isodate="2018-04-10">
-               <respStmt>
-                   <persName>JK</persName>
-               </respStmt>
-               <changeDesc>
-                   <p>File created</p>
-               </changeDesc>
-           </change>
-       </revisionDesc>
-   </meiHead>
+        <revisionDesc>
+            <change n="1" isodate="2018-04-10">
+                <respStmt>
+                    <persName>JK</persName>
+                </respStmt>
+                <changeDesc>
+                    <p>File created</p>
+                </changeDesc>
+            </change>
+        </revisionDesc>
+    </meiHead>
 </meiCorpus>
-

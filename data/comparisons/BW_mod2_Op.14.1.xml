@@ -15,11 +15,8 @@
          <seriesStmt>
             <title>Beethovens Werkstatt – Second Module</title>
             <contents>
-               <p>
-                  This series of files holds information about Beethoven's arrangements of his own works.
-                  While all these works are encoded independently, each pair is addressed by a separate 
-                  meiCorpus file, which points to the related works and holds information about their relations. 
-               </p>
+               <p> This series of files holds information about Beethoven's arrangements of his own works. While all these works are encoded independently, each pair is addressed by a separate
+                  meiCorpus file, which points to the related works and holds information about their relations. </p>
             </contents>
          </seriesStmt>
          <sourceDesc>
@@ -29,20 +26,27 @@
       </fileDesc>
       <workList>
          <work>
-            <title></title>
+            <title/>
             <context>
                <head>Einführung</head>
-               <p>
-                  Die <rend rend="bold">Klaviersonate E-Dur Op. 14 Nr. 1 entstand</rend> 1798/99 und wurde von Beethoven 1802 als Streichquartett in F-Dur bearbeitet. Beethoven hat die Sonate zunächst als eigenständiges Werk konzipiert und es erst danach in ein Streichquartett umgearbeitet. Zu dieser Umarbeitung, die für ihn alles andere als eine mechanische Bearbeitung bedeutete, bemerkte Beethoven: „ich weiß gewiß, das macht mir nicht so leicht ein andrer nach.“ Auch bezeichnete er seine Bearbeitungsmaßnahmen selbst mit den Begriffen <rend rend="italic">hinzufügen</rend>, <rend rend="italic">umändern</rend> und <rend rend="italic">weglassen</rend> – diese drei Grundoperationen decken sich mit drei formalen Kategorien der Variantenbildung: <rend rend="italic">Erweiterung</rend>, <rend rend="italic">Ersetzung</rend> und <rend rend="italic">Tilgung</rend>.</p>
-               <p>
-                  Im Falle von op. 14/1 und der Streichquartettversion bestehen größere Unterschiede zwischen beiden Fassungen, was nicht nur mit der Anpassung an veränderte spieltechnische Bedingungen, sondern auch mit der unterschiedlichen Satzart für Klavier bzw. Streichquartett zusammenhängt. Die <rend rend="bold">verschiedenen Perspektiven</rend> der <rend rend="italic">VideApp Arr</rend> versuchen, diese Strukturen aufzudecken: Im Einzelnotenvergleich zeigt sich beispielsweise, dass der Invarianz-Anteil im I. Satz ab der Durchführung sinkt, weil dort insbesondere die Begleitfiguren der übernommenen Melodieteile verändert worden sind. Die meisten strukturellen Unterschiede zwischen den Fassungen finden sich im Finalsatz, wo die klaviertypische Triolenbegleitung des Rondothemas in der Bearbeitung durch Skalen in den Streichern ersetzt wird.</p>
-               
-               <p>Ausdrücklich sei darauf hingewiesen, dass die <rend rend="bold">Codierungen</rend> jeweils auf den Originalausgaben beruhen, Fehler der jeweiligen Vorlage übernommen wurden und so auch angezeigt werden. Eine ausführlichere Beschreibung der vorgenannten Aspekte wird separat auf der Website des Projekts zur Verfügung gestellt.</p>
+               <p> Die <rend rend="bold">Klaviersonate E-Dur Op. 14 Nr. 1 entstand</rend> 1798/99 und wurde von Beethoven 1802 als Streichquartett in F-Dur bearbeitet. Beethoven hat die Sonate
+                  zunächst als eigenständiges Werk konzipiert und es erst danach in ein Streichquartett umgearbeitet. Zu dieser Umarbeitung, die für ihn alles andere als eine mechanische Bearbeitung
+                  bedeutete, bemerkte Beethoven: „ich weiß gewiß, das macht mir nicht so leicht ein andrer nach.“ Auch bezeichnete er seine Bearbeitungsmaßnahmen selbst mit den Begriffen <rend
+                     rend="italic">hinzufügen</rend>, <rend rend="italic">umändern</rend> und <rend rend="italic">weglassen</rend> – diese drei Grundoperationen decken sich mit drei formalen
+                  Kategorien der Variantenbildung: <rend rend="italic">Erweiterung</rend>, <rend rend="italic">Ersetzung</rend> und <rend rend="italic">Tilgung</rend>.</p>
+               <p> Im Falle von op. 14/1 und der Streichquartettversion bestehen größere Unterschiede zwischen beiden Fassungen, was nicht nur mit der Anpassung an veränderte spieltechnische
+                  Bedingungen, sondern auch mit der unterschiedlichen Satzart für Klavier bzw. Streichquartett zusammenhängt. Die <rend rend="bold">verschiedenen Perspektiven</rend> der <rend
+                     rend="italic">VideApp Arr</rend> versuchen, diese Strukturen aufzudecken: Im Einzelnotenvergleich zeigt sich beispielsweise, dass der Invarianz-Anteil im I. Satz ab der
+                  Durchführung sinkt, weil dort insbesondere die Begleitfiguren der übernommenen Melodieteile verändert worden sind. Die meisten strukturellen Unterschiede zwischen den Fassungen
+                  finden sich im Finalsatz, wo die klaviertypische Triolenbegleitung des Rondothemas in der Bearbeitung durch Skalen in den Streichern ersetzt wird.</p>
+               <p>Ausdrücklich sei darauf hingewiesen, dass die <rend rend="bold">Codierungen</rend> jeweils auf den Originalausgaben beruhen, Fehler der jeweiligen Vorlage übernommen wurden und so
+                  auch angezeigt werden. </p>
+               <p><rend rend="bold">Hinweis:</rend> Eine ausführlichere Beschreibung der vorgenannten Aspekte ist separat auf der <ref target="https://beethovens-werkstatt.de/vergleich-14/">Website des Projekts</ref> zur Verfügung gestellt.</p>
             </context>
          </work>
       </workList>
-      
-      
+
+
       <!-- todo: clarify if we consider these "things" as independent frbr:works, or just as different expressions -->
       <!--<workDesc>
            
@@ -67,4 +71,3 @@
       </revisionDesc>
    </meiHead>
 </meiCorpus>
-
