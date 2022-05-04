@@ -3,22 +3,15 @@
 # 1. set up the build environment and build the expath-package
 # 2. run the eXist-db
 #########################
-FROM openjdk:8-jdk as builder
+FROM node:10 as builder
 LABEL maintainer="Johannes Kepper"
 
 ENV MODULE2_BUILD_HOME="/opt/module2-build"
 
-ADD https://deb.nodesource.com/setup_10.x /tmp/nodejs_setup 
-
 WORKDIR ${MODULE2_BUILD_HOME}
 
 RUN apt-get update \
-    && apt-get install -y --force-yes git \
-    # installing nodejs
-    && chmod 755 /tmp/nodejs_setup; sync \
-    && /tmp/nodejs_setup \
-    && apt-get install -y nodejs \
-    && ln -s /usr/bin/nodejs /usr/local/bin/node
+    && apt-get install -y --force-yes git
 
 COPY . .
 
