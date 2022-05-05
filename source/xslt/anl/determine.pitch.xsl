@@ -1,4 +1,4 @@
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:custom="none" xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:uuid="http://www.uuid.org" xmlns:key="none" exclude-result-prefixes="xs math xd mei custom uuid" version="3.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:custom="none" xmlns:mat="http://www.w3.org/2005/xpath-functions/mat" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:uuid="http://www.uuid.org" xmlns:key="none" exclude-result-prefixes="xs mat xd mei custom uuid" version="3.0">
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p>
@@ -59,7 +59,7 @@
     </xsl:template>
     
     <!-- required only as exist-db doesn't support the regular math:pow function: bug! -->
-    <xsl:function name="math:pow">
+    <xsl:function name="mat:pow">
         <xsl:param name="base"/>
         <xsl:param name="power"/>
         <xsl:choose>
@@ -70,7 +70,7 @@
                 <xsl:value-of select="1"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:value-of select="$base * math:pow($base, $power - 1)"/>
+                <xsl:value-of select="$base * mat:pow($base, $power - 1)"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:function>
