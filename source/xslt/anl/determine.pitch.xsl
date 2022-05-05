@@ -193,26 +193,38 @@
         
         <!-- approach 3 -->
         <xsl:variable name="trans.mod.new" as="xs:integer">
-            <xsl:choose>
-                <xsl:when test="$key = $base.key and $trans.diat = -7">
-                    <xsl:value-of select="-1"/>
-                </xsl:when>
-                <xsl:when test="$key = $base.key and $trans.diat = 7">
-                    <xsl:value-of select="1"/>
-                </xsl:when>
-                <xsl:when test="$key = $base.key">
-                    <xsl:value-of select="0"/>
-                </xsl:when>
-                <xsl:when test="$trans.dir = -1 and $index.of.key lt $index.of.base.key">
-                    <xsl:value-of select="-1"/>
-                </xsl:when>
-                <xsl:when test="$trans.dir = 1 and $index.of.key gt $index.of.base.key">
-                    <xsl:value-of select="1"/>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:value-of select="0"/>
-                </xsl:otherwise>
-            </xsl:choose>
+            <xsl:variable name="step1" as="xs:integer">
+                <xsl:choose>
+                    <xsl:when test="$key = $base.key and $trans.diat = -7">
+                        <xsl:value-of select="-1"/>
+                    </xsl:when>
+                    <xsl:when test="$key = $base.key and $trans.diat = 7">
+                        <xsl:value-of select="1"/>
+                    </xsl:when>
+                    <xsl:when test="$key = $base.key">
+                        <xsl:value-of select="0"/>
+                    </xsl:when>
+                    <xsl:when test="$trans.dir = -1 and $index.of.key lt $index.of.base.key">
+                        <xsl:value-of select="-1"/>
+                    </xsl:when>
+                    <xsl:when test="$trans.dir = 1 and $index.of.key gt $index.of.base.key">
+                        <xsl:value-of select="1"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="0"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:variable>
+            <xsl:variable name="step2" as="xs:integer">
+                <xsl:choose>
+                    <xsl:when test="$trans.diat ge 14"><xsl:value-of select="2"/></xsl:when>
+                    <xsl:when test="$trans.diat ge 8"><xsl:value-of select="1"/></xsl:when><!-- a value of 7 is already covered above -->
+                    <xsl:when test="$trans.diat le -14"><xsl:value-of select="-2"/></xsl:when>
+                    <xsl:when test="$trans.diat le -8"><xsl:value-of select="-1"/></xsl:when><!-- a value of 7 is already covered above -->
+                    <xsl:otherwise><xsl:value-of select="0"/></xsl:otherwise>
+                </xsl:choose>
+            </xsl:variable>
+            <xsl:value-of select="$step1 + $step2"/>
         </xsl:variable>
         
         <!--<xsl:if test="$trans.mod.new != 0">
